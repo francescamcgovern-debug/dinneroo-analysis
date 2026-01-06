@@ -622,13 +622,14 @@
                                 <th>Orders</th>
                                 <th>Partners</th>
                                 <th>Cuisines</th>
+                                <th>Dishes</th>
                                 <th>MVP Status</th>
                                 <th>Missing Cuisines</th>
                                 <th>Priority</th>
                             </tr>
                         </thead>
                         <tbody id="zone-tbody">
-                            <tr><td colspan="7" class="loading">Loading zones...</td></tr>
+                            <tr><td colspan="8" class="loading">Loading zones...</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -1104,7 +1105,7 @@
         function renderZoneTable() {
             const tbody = document.getElementById('zone-tbody');
             if (!zoneData.length) {
-                tbody.innerHTML = '<tr><td colspan="7" class="loading">No zone data available</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" class="loading">No zone data available</td></tr>';
                 return;
             }
             
@@ -1119,7 +1120,7 @@
             });
             
             if (!filtered.length) {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; color: var(--text-muted); padding: 40px;">No zones match your filters</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: var(--text-muted); padding: 40px;">No zones match your filters</td></tr>';
                 return;
             }
             
@@ -1137,6 +1138,7 @@
                         <td style="font-family: 'JetBrains Mono', monospace;">${zone.orders.toLocaleString()}</td>
                         <td style="font-family: 'JetBrains Mono', monospace;">${zone.partners}</td>
                         <td style="font-family: 'JetBrains Mono', monospace;">${zone.cuisines_count}</td>
+                        <td style="font-family: 'JetBrains Mono', monospace;">${zone.unique_dishes || 0}</td>
                         <td><span class="badge ${mvpClass}">${zone.is_mvp ? 'MVP Ready' : 'Not MVP'}</span></td>
                         <td style="font-size: 12px; max-width: 200px;">
                             ${zone.missing_cuisines.length ? zone.missing_cuisines.join(', ') : '-'}

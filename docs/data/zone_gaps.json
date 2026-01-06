@@ -6,6 +6,7 @@
       "orders": 2349,
       "partners": 13,
       "cuisines_count": 9,
+      "unique_dishes": 533,
       "cuisines_available": [
         "Japanese/Asian",
         "Vietnamese",
@@ -34,6 +35,7 @@
       "orders": 2262,
       "partners": 8,
       "cuisines_count": 8,
+      "unique_dishes": 431,
       "cuisines_available": [
         "Japanese/Asian",
         "Japanese",
@@ -62,6 +64,7 @@
       "orders": 1734,
       "partners": 10,
       "cuisines_count": 8,
+      "unique_dishes": 665,
       "cuisines_available": [
         "Vietnamese",
         "British",
@@ -90,6 +93,7 @@
       "orders": 1534,
       "partners": 4,
       "cuisines_count": 3,
+      "unique_dishes": 223,
       "cuisines_available": [
         "Indian",
         "Vietnamese",
@@ -119,6 +123,7 @@
       "orders": 1501,
       "partners": 7,
       "cuisines_count": 5,
+      "unique_dishes": 456,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "Japanese",
@@ -147,6 +152,7 @@
       "orders": 1478,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 210,
       "cuisines_available": [
         "Vietnamese",
         "Indian",
@@ -176,6 +182,7 @@
       "orders": 1403,
       "partners": 8,
       "cuisines_count": 7,
+      "unique_dishes": 554,
       "cuisines_available": [
         "Vietnamese",
         "British",
@@ -203,6 +210,7 @@
       "orders": 1358,
       "partners": 5,
       "cuisines_count": 5,
+      "unique_dishes": 353,
       "cuisines_available": [
         "Vietnamese",
         "Italian",
@@ -233,6 +241,7 @@
       "orders": 1332,
       "partners": 8,
       "cuisines_count": 7,
+      "unique_dishes": 509,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "British",
@@ -260,6 +269,7 @@
       "orders": 1318,
       "partners": 10,
       "cuisines_count": 6,
+      "unique_dishes": 555,
       "cuisines_available": [
         "Mexican",
         "Vietnamese",
@@ -287,6 +297,7 @@
       "orders": 1314,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 134,
       "cuisines_available": [
         "Indian",
         "Middle Eastern",
@@ -322,6 +333,7 @@
       "orders": 1314,
       "partners": 8,
       "cuisines_count": 7,
+      "unique_dishes": 505,
       "cuisines_available": [
         "Italian",
         "Japanese/Asian",
@@ -352,6 +364,7 @@
       "orders": 1280,
       "partners": 11,
       "cuisines_count": 8,
+      "unique_dishes": 553,
       "cuisines_available": [
         "Vietnamese",
         "French",
@@ -383,6 +396,7 @@
       "orders": 1240,
       "partners": 6,
       "cuisines_count": 5,
+      "unique_dishes": 247,
       "cuisines_available": [
         "Vietnamese",
         "Indian",
@@ -413,6 +427,7 @@
       "orders": 1226,
       "partners": 9,
       "cuisines_count": 7,
+      "unique_dishes": 382,
       "cuisines_available": [
         "Japanese/Asian",
         "Indian",
@@ -443,6 +458,7 @@
       "orders": 1202,
       "partners": 7,
       "cuisines_count": 7,
+      "unique_dishes": 265,
       "cuisines_available": [
         "Japanese/Asian",
         "Indian",
@@ -472,6 +488,7 @@
       "orders": 1173,
       "partners": 8,
       "cuisines_count": 6,
+      "unique_dishes": 414,
       "cuisines_available": [
         "Vietnamese",
         "Thai/Southeast Asian",
@@ -499,6 +516,7 @@
       "orders": 1156,
       "partners": 8,
       "cuisines_count": 7,
+      "unique_dishes": 499,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "Vietnamese",
@@ -529,6 +547,7 @@
       "orders": 1139,
       "partners": 4,
       "cuisines_count": 3,
+      "unique_dishes": 131,
       "cuisines_available": [
         "Indian",
         "Middle Eastern",
@@ -564,6 +583,7 @@
       "orders": 1122,
       "partners": 6,
       "cuisines_count": 5,
+      "unique_dishes": 342,
       "cuisines_available": [
         "Indian",
         "Japanese",
@@ -595,6 +615,7 @@
       "orders": 1050,
       "partners": 6,
       "cuisines_count": 5,
+      "unique_dishes": 448,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "Vietnamese",
@@ -624,6 +645,7 @@
       "orders": 969,
       "partners": 6,
       "cuisines_count": 6,
+      "unique_dishes": 431,
       "cuisines_available": [
         "Vietnamese",
         "Japanese/Asian",
@@ -653,6 +675,7 @@
       "orders": 962,
       "partners": 7,
       "cuisines_count": 6,
+      "unique_dishes": 329,
       "cuisines_available": [
         "Italian",
         "Healthy/Fresh",
@@ -683,6 +706,7 @@
       "orders": 961,
       "partners": 4,
       "cuisines_count": 4,
+      "unique_dishes": 151,
       "cuisines_available": [
         "Indian",
         "Chinese",
@@ -718,6 +742,7 @@
       "orders": 904,
       "partners": 5,
       "cuisines_count": 5,
+      "unique_dishes": 334,
       "cuisines_available": [
         "Japanese/Asian",
         "Japanese",
@@ -746,6 +771,7 @@
       "orders": 853,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 145,
       "cuisines_available": [
         "Indian",
         "Japanese/Asian",
@@ -774,6 +800,7 @@
       "orders": 850,
       "partners": 10,
       "cuisines_count": 7,
+      "unique_dishes": 447,
       "cuisines_available": [
         "Japanese/Asian",
         "Vietnamese",
@@ -805,6 +832,7 @@
       "orders": 797,
       "partners": 5,
       "cuisines_count": 4,
+      "unique_dishes": 300,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "Japanese/Asian",
@@ -834,6 +862,7 @@
       "orders": 793,
       "partners": 10,
       "cuisines_count": 7,
+      "unique_dishes": 423,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "Healthy/Fresh",
@@ -864,6 +893,7 @@
       "orders": 782,
       "partners": 6,
       "cuisines_count": 5,
+      "unique_dishes": 383,
       "cuisines_available": [
         "Indian",
         "Chinese",
@@ -895,6 +925,7 @@
       "orders": 772,
       "partners": 8,
       "cuisines_count": 6,
+      "unique_dishes": 351,
       "cuisines_available": [
         "Japanese",
         "Vietnamese",
@@ -925,6 +956,7 @@
       "orders": 759,
       "partners": 7,
       "cuisines_count": 5,
+      "unique_dishes": 381,
       "cuisines_available": [
         "Vietnamese",
         "British",
@@ -952,6 +984,7 @@
       "orders": 729,
       "partners": 8,
       "cuisines_count": 6,
+      "unique_dishes": 405,
       "cuisines_available": [
         "Italian",
         "British",
@@ -980,6 +1013,7 @@
       "orders": 725,
       "partners": 7,
       "cuisines_count": 5,
+      "unique_dishes": 391,
       "cuisines_available": [
         "British",
         "Thai/Southeast Asian",
@@ -1007,6 +1041,7 @@
       "orders": 722,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 145,
       "cuisines_available": [
         "Vietnamese",
         "Thai/Southeast Asian",
@@ -1036,6 +1071,7 @@
       "orders": 689,
       "partners": 9,
       "cuisines_count": 7,
+      "unique_dishes": 423,
       "cuisines_available": [
         "Japanese/Asian",
         "Thai/Southeast Asian",
@@ -1065,6 +1101,7 @@
       "orders": 676,
       "partners": 7,
       "cuisines_count": 4,
+      "unique_dishes": 289,
       "cuisines_available": [
         "French",
         "Italian",
@@ -1099,6 +1136,7 @@
       "orders": 665,
       "partners": 5,
       "cuisines_count": 4,
+      "unique_dishes": 269,
       "cuisines_available": [
         "Japanese/Asian",
         "Italian",
@@ -1127,6 +1165,7 @@
       "orders": 647,
       "partners": 9,
       "cuisines_count": 7,
+      "unique_dishes": 461,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "Italian",
@@ -1156,6 +1195,7 @@
       "orders": 634,
       "partners": 4,
       "cuisines_count": 3,
+      "unique_dishes": 257,
       "cuisines_available": [
         "Italian",
         "Japanese/Asian",
@@ -1184,6 +1224,7 @@
       "orders": 615,
       "partners": 5,
       "cuisines_count": 5,
+      "unique_dishes": 206,
       "cuisines_available": [
         "French",
         "Vietnamese",
@@ -1214,6 +1255,7 @@
       "orders": 585,
       "partners": 4,
       "cuisines_count": 4,
+      "unique_dishes": 337,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "Japanese/Asian",
@@ -1240,6 +1282,7 @@
       "orders": 574,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 204,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "Vietnamese",
@@ -1269,6 +1312,7 @@
       "orders": 562,
       "partners": 6,
       "cuisines_count": 6,
+      "unique_dishes": 358,
       "cuisines_available": [
         "Japanese",
         "Japanese/Asian",
@@ -1301,6 +1345,7 @@
       "orders": 559,
       "partners": 4,
       "cuisines_count": 4,
+      "unique_dishes": 318,
       "cuisines_available": [
         "British",
         "Japanese",
@@ -1331,6 +1376,7 @@
       "orders": 542,
       "partners": 5,
       "cuisines_count": 5,
+      "unique_dishes": 234,
       "cuisines_available": [
         "Vietnamese",
         "Mexican",
@@ -1358,6 +1404,7 @@
       "orders": 541,
       "partners": 6,
       "cuisines_count": 5,
+      "unique_dishes": 335,
       "cuisines_available": [
         "Japanese/Asian",
         "Thai/Southeast Asian",
@@ -1390,6 +1437,7 @@
       "orders": 535,
       "partners": 6,
       "cuisines_count": 4,
+      "unique_dishes": 250,
       "cuisines_available": [
         "Italian",
         "Japanese",
@@ -1419,6 +1467,7 @@
       "orders": 534,
       "partners": 7,
       "cuisines_count": 6,
+      "unique_dishes": 314,
       "cuisines_available": [
         "Vietnamese",
         "Japanese/Asian",
@@ -1448,6 +1497,7 @@
       "orders": 519,
       "partners": 4,
       "cuisines_count": 3,
+      "unique_dishes": 215,
       "cuisines_available": [
         "Italian",
         "Japanese/Asian",
@@ -1477,6 +1527,7 @@
       "orders": 517,
       "partners": 6,
       "cuisines_count": 4,
+      "unique_dishes": 278,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "Japanese/Asian",
@@ -1507,6 +1558,7 @@
       "orders": 512,
       "partners": 5,
       "cuisines_count": 4,
+      "unique_dishes": 270,
       "cuisines_available": [
         "Vietnamese",
         "Japanese/Asian",
@@ -1535,6 +1587,7 @@
       "orders": 506,
       "partners": 8,
       "cuisines_count": 5,
+      "unique_dishes": 276,
       "cuisines_available": [
         "Healthy/Fresh",
         "Italian",
@@ -1566,6 +1619,7 @@
       "orders": 483,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 249,
       "cuisines_available": [
         "Japanese/Asian",
         "Mexican",
@@ -1593,6 +1647,7 @@
       "orders": 475,
       "partners": 6,
       "cuisines_count": 5,
+      "unique_dishes": 258,
       "cuisines_available": [
         "Vietnamese",
         "Japanese/Asian",
@@ -1621,6 +1676,7 @@
       "orders": 470,
       "partners": 5,
       "cuisines_count": 4,
+      "unique_dishes": 281,
       "cuisines_available": [
         "British",
         "Mexican",
@@ -1650,6 +1706,7 @@
       "orders": 470,
       "partners": 9,
       "cuisines_count": 7,
+      "unique_dishes": 393,
       "cuisines_available": [
         "Mexican",
         "Japanese",
@@ -1677,6 +1734,7 @@
       "orders": 465,
       "partners": 4,
       "cuisines_count": 3,
+      "unique_dishes": 216,
       "cuisines_available": [
         "Japanese",
         "Japanese/Asian",
@@ -1705,6 +1763,7 @@
       "orders": 464,
       "partners": 4,
       "cuisines_count": 4,
+      "unique_dishes": 249,
       "cuisines_available": [
         "Japanese/Asian",
         "British",
@@ -1736,6 +1795,7 @@
       "orders": 442,
       "partners": 4,
       "cuisines_count": 3,
+      "unique_dishes": 205,
       "cuisines_available": [
         "Vietnamese",
         "Italian",
@@ -1764,6 +1824,7 @@
       "orders": 435,
       "partners": 7,
       "cuisines_count": 5,
+      "unique_dishes": 294,
       "cuisines_available": [
         "Italian",
         "Japanese/Asian",
@@ -1790,6 +1851,7 @@
       "orders": 434,
       "partners": 4,
       "cuisines_count": 3,
+      "unique_dishes": 106,
       "cuisines_available": [
         "Indian",
         "Italian",
@@ -1821,6 +1883,7 @@
       "orders": 434,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 214,
       "cuisines_available": [
         "Italian",
         "Chinese",
@@ -1851,6 +1914,7 @@
       "orders": 426,
       "partners": 6,
       "cuisines_count": 6,
+      "unique_dishes": 321,
       "cuisines_available": [
         "Vietnamese",
         "British",
@@ -1881,6 +1945,7 @@
       "orders": 416,
       "partners": 4,
       "cuisines_count": 4,
+      "unique_dishes": 283,
       "cuisines_available": [
         "British",
         "Japanese/Asian",
@@ -1911,6 +1976,7 @@
       "orders": 396,
       "partners": 4,
       "cuisines_count": 4,
+      "unique_dishes": 150,
       "cuisines_available": [
         "Indian",
         "Italian",
@@ -1941,6 +2007,7 @@
       "orders": 372,
       "partners": 4,
       "cuisines_count": 4,
+      "unique_dishes": 220,
       "cuisines_available": [
         "Japanese/Asian",
         "Japanese",
@@ -1969,6 +2036,7 @@
       "orders": 369,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 167,
       "cuisines_available": [
         "Japanese/Asian",
         "Thai/Southeast Asian",
@@ -1998,6 +2066,7 @@
       "orders": 345,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 174,
       "cuisines_available": [
         "Japanese",
         "Japanese/Asian",
@@ -2028,6 +2097,7 @@
       "orders": 336,
       "partners": 6,
       "cuisines_count": 5,
+      "unique_dishes": 253,
       "cuisines_available": [
         "Japanese/Asian",
         "British",
@@ -2060,6 +2130,7 @@
       "orders": 307,
       "partners": 5,
       "cuisines_count": 4,
+      "unique_dishes": 194,
       "cuisines_available": [
         "Italian",
         "Japanese/Asian",
@@ -2088,6 +2159,7 @@
       "orders": 306,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 210,
       "cuisines_available": [
         "British",
         "Italian",
@@ -2119,6 +2191,7 @@
       "orders": 297,
       "partners": 5,
       "cuisines_count": 4,
+      "unique_dishes": 197,
       "cuisines_available": [
         "Middle Eastern",
         "Japanese",
@@ -2149,6 +2222,7 @@
       "orders": 296,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 180,
       "cuisines_available": [
         "Japanese",
         "Japanese/Asian",
@@ -2178,6 +2252,7 @@
       "orders": 292,
       "partners": 4,
       "cuisines_count": 3,
+      "unique_dishes": 191,
       "cuisines_available": [
         "Japanese/Asian",
         "Italian",
@@ -2207,6 +2282,7 @@
       "orders": 278,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 146,
       "cuisines_available": [
         "Italian",
         "Middle Eastern",
@@ -2241,6 +2317,7 @@
       "orders": 275,
       "partners": 3,
       "cuisines_count": 1,
+      "unique_dishes": 111,
       "cuisines_available": [
         "Italian"
       ],
@@ -2271,6 +2348,7 @@
       "orders": 275,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 154,
       "cuisines_available": [
         "Japanese/Asian",
         "Italian",
@@ -2301,6 +2379,7 @@
       "orders": 257,
       "partners": 4,
       "cuisines_count": 4,
+      "unique_dishes": 198,
       "cuisines_available": [
         "Mexican",
         "Japanese/Asian",
@@ -2330,6 +2409,7 @@
       "orders": 249,
       "partners": 6,
       "cuisines_count": 5,
+      "unique_dishes": 221,
       "cuisines_available": [
         "Japanese",
         "Japanese/Asian",
@@ -2360,6 +2440,7 @@
       "orders": 242,
       "partners": 4,
       "cuisines_count": 3,
+      "unique_dishes": 133,
       "cuisines_available": [
         "Japanese/Asian",
         "Italian",
@@ -2389,6 +2470,7 @@
       "orders": 239,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 142,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "Japanese/Asian",
@@ -2418,6 +2500,7 @@
       "orders": 237,
       "partners": 4,
       "cuisines_count": 4,
+      "unique_dishes": 202,
       "cuisines_available": [
         "Italian",
         "Thai/Southeast Asian",
@@ -2448,6 +2531,7 @@
       "orders": 236,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 160,
       "cuisines_available": [
         "Japanese/Asian",
         "Japanese",
@@ -2478,6 +2562,7 @@
       "orders": 220,
       "partners": 5,
       "cuisines_count": 4,
+      "unique_dishes": 194,
       "cuisines_available": [
         "Italian",
         "Japanese/Asian",
@@ -2507,6 +2592,7 @@
       "orders": 181,
       "partners": 3,
       "cuisines_count": 2,
+      "unique_dishes": 147,
       "cuisines_available": [
         "Italian",
         "Thai/Southeast Asian"
@@ -2536,6 +2622,7 @@
       "orders": 181,
       "partners": 5,
       "cuisines_count": 3,
+      "unique_dishes": 179,
       "cuisines_available": [
         "Japanese/Asian",
         "Italian",
@@ -2566,6 +2653,7 @@
       "orders": 175,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 170,
       "cuisines_available": [
         "British",
         "Japanese",
@@ -2597,6 +2685,7 @@
       "orders": 168,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 126,
       "cuisines_available": [
         "Italian",
         "Indian",
@@ -2628,6 +2717,7 @@
       "orders": 160,
       "partners": 3,
       "cuisines_count": 2,
+      "unique_dishes": 119,
       "cuisines_available": [
         "Italian",
         "Japanese/Asian"
@@ -2657,6 +2747,7 @@
       "orders": 156,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 104,
       "cuisines_available": [
         "Mexican",
         "Vietnamese",
@@ -2687,6 +2778,7 @@
       "orders": 151,
       "partners": 4,
       "cuisines_count": 3,
+      "unique_dishes": 187,
       "cuisines_available": [
         "Italian",
         "British",
@@ -2717,6 +2809,7 @@
       "orders": 148,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 140,
       "cuisines_available": [
         "British",
         "Italian",
@@ -2750,6 +2843,7 @@
       "orders": 144,
       "partners": 5,
       "cuisines_count": 5,
+      "unique_dishes": 153,
       "cuisines_available": [
         "Japanese/Asian",
         "Thai/Southeast Asian",
@@ -2780,6 +2874,7 @@
       "orders": 126,
       "partners": 4,
       "cuisines_count": 3,
+      "unique_dishes": 156,
       "cuisines_available": [
         "Japanese",
         "Indian",
@@ -2809,6 +2904,7 @@
       "orders": 126,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 101,
       "cuisines_available": [
         "Thai/Southeast Asian",
         "Japanese/Asian",
@@ -2839,6 +2935,7 @@
       "orders": 101,
       "partners": 3,
       "cuisines_count": 2,
+      "unique_dishes": 106,
       "cuisines_available": [
         "Italian",
         "Japanese"
@@ -2869,6 +2966,7 @@
       "orders": 95,
       "partners": 3,
       "cuisines_count": 1,
+      "unique_dishes": 91,
       "cuisines_available": [
         "Italian"
       ],
@@ -2899,6 +2997,7 @@
       "orders": 93,
       "partners": 3,
       "cuisines_count": 2,
+      "unique_dishes": 43,
       "cuisines_available": [
         "Middle Eastern",
         "Indian"
@@ -2932,6 +3031,7 @@
       "orders": 77,
       "partners": 3,
       "cuisines_count": 3,
+      "unique_dishes": 114,
       "cuisines_available": [
         "Italian",
         "Mexican",

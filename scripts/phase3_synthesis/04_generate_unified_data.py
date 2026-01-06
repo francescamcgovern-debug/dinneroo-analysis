@@ -272,10 +272,18 @@ def generate_mvp_evidence(threshold_data, cuisine_perf):
     
     return mvp_evidence
 
-def generate_zone_gaps(zone_gap_df, recruitment_df):
+def generate_zone_gaps(zone_gap_df, recruitment_df, zone_quality_df=None):
     """
     Generate zone gaps data from zone_gap_report and recruitment_priorities.
+    Optionally merge unique_dishes from zone_quality_scores.
     """
+    # Create lookup for unique_dishes from zone_quality_scores
+    unique_dishes_lookup = {}
+    if zone_quality_df is not None:
+        for _, row in zone_quality_df.iterrows():
+            zone_name = row['ZONE_NAME']
+            unique_dishes_lookup[zone_name] = int(row['unique_dishes']) if pd.notna(row.get('unique_dishes')) else 0
+    
     zones = []
     
     for _, row in zone_gap_df.iterrows():
@@ -309,12 +317,14 @@ def generate_zone_gaps(zone_gap_df, recruitment_df):
         else:
             cuisines_available = []
         
+        zone_name = row['zone']
         zone_record = {
-            "zone": row['zone'],
+            "zone": zone_name,
             "region": row.get('region', 'Unknown'),
             "orders": int(row['orders']) if pd.notna(row.get('orders')) else 0,
             "partners": int(row['partners']) if pd.notna(row.get('partners')) else 0,
             "cuisines_count": int(row['cuisines_count']) if pd.notna(row.get('cuisines_count')) else 0,
+            "unique_dishes": unique_dishes_lookup.get(zone_name, 0),
             "cuisines_available": cuisines_available,
             "avg_rating": round(float(row['avg_rating']), 2) if pd.notna(row.get('avg_rating')) else 0,
             "is_mvp": bool(row['is_mvp']) if pd.notna(row.get('is_mvp')) else False,
@@ -353,6 +363,11 @@ def generate_zone_gaps(zone_gap_df, recruitment_df):
         }
     }
 
+def load_zone_quality_scores():
+    """Load zone quality scores with unique_dishes per zone."""
+    df = pd.read_csv(DATA_ANALYSIS / "zone_quality_scores.csv")
+    return df
+
 def main():
     print("Loading data sources...")
     
@@ -363,12 +378,14 @@ def main():
     threshold_data = load_threshold_sensitivity()
     cuisine_perf = load_cuisine_performance()
     zone_gap_df = load_zone_gap_report()
+    zone_quality_df = load_zone_quality_scores()
     
     print(f"  - Anna's coverage matrix: {len(coverage)} dishes")
     print(f"  - Anna's dish tiers: {len(tiers)} dishes")
     print(f"  - Track A performance: {len(track_a)} dish types")
     print(f"  - Track B opportunity: {len(track_b)} dish types")
     print(f"  - Zone gap report: {len(zone_gap_df)} zones")
+    print(f"  - Zone quality scores: {len(zone_quality_df)} zones (with unique_dishes)")
     
     # Generate unified dishes
     print("\nGenerating unified_dishes.json...")
@@ -388,12 +405,16 @@ def main():
     print(f"  - Cuisine threshold: {mvp_evidence['cuisine_threshold']['recommended']} ({mvp_evidence['cuisine_threshold']['evidence']['impact']})")
     print(f"  - Partner threshold: {mvp_evidence['partner_threshold']['recommended']} ({mvp_evidence['partner_threshold']['evidence']['impact']})")
     
-    # Generate zone gaps
+    # Generate zone gaps (with unique_dishes from zone_quality_scores)
     print("\nGenerating zone_gaps.json...")
-    zone_gaps = generate_zone_gaps(zone_gap_df, recruitment)
+    zone_gaps = generate_zone_gaps(zone_gap_df, recruitment, zone_quality_df)
     print(f"  - Total zones: {zone_gaps['summary']['total_zones']}")
     print(f"  - MVP ready: {zone_gaps['summary']['mvp_ready']}")
     print(f"  - High priority gaps: {zone_gaps['summary']['high_priority']}")
+    
+    # Show sample zones with unique_dishes
+    sample_zones = zone_gaps['zones'][:3]
+    print(f"  - Sample: {sample_zones[0]['zone']} has {sample_zones[0]['unique_dishes']} unique dishes")
     
     # Ensure output directory exists
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
