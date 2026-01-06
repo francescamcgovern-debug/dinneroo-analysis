@@ -251,6 +251,24 @@ NEW_PROJECT/
 ❌ **Add cuisine/dish recommendations to config without source citation**
 ❌ **Add recommendations without validating against performance data**
 ❌ **Assume "kid-friendly" or "familiar" = good for Dinneroo without evidence**
+❌ **Use order line items as "dish count" - this includes sides, drinks, sauces**
+❌ **Confuse "unique items ordered" with "family dishes on menu"**
+
+### 9. Dish Counts Must Use Anna's Item Categorisation (CRITICAL)
+**"Unique dishes" per zone = family dishes from Anna's curated list, NOT order line items.**
+
+The correct source for dish counts:
+- ✅ `DELIVERABLES/reports/Dish Analysis Dec-25.xlsx` > `Item Categorisation` sheet
+- ✅ Filter to `Include = 1` (155 curated family dishes)
+- ✅ Map brands to zones via orders, sum dish counts per brand
+
+WRONG approach:
+- ❌ Counting unique `MENU_ITEM_LIST` entries from orders (includes sides, drinks)
+- ❌ Using `unique_dishes` from `zone_quality_scores.csv` (order line items)
+
+Example:
+- ❌ WRONG: "Clapham has 533 dishes" (order line items)
+- ✅ CORRECT: "Clapham has 45 family dishes" (from Anna's Item Categorisation)
 
 ---
 

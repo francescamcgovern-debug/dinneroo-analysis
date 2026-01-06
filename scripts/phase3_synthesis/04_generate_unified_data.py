@@ -272,17 +272,18 @@ def generate_mvp_evidence(threshold_data, cuisine_perf):
     
     return mvp_evidence
 
-def generate_zone_gaps(zone_gap_df, recruitment_df, zone_quality_df=None):
+def generate_zone_gaps(zone_gap_df, recruitment_df, family_dishes_per_zone=None):
     """
     Generate zone gaps data from zone_gap_report and recruitment_priorities.
-    Optionally merge unique_dishes from zone_quality_scores.
+    
+    Args:
+        zone_gap_df: Zone gap report data
+        recruitment_df: Recruitment priorities data
+        family_dishes_per_zone: Dict of zone -> family dish count from Anna's data
     """
-    # Create lookup for unique_dishes from zone_quality_scores
-    unique_dishes_lookup = {}
-    if zone_quality_df is not None:
-        for _, row in zone_quality_df.iterrows():
-            zone_name = row['ZONE_NAME']
-            unique_dishes_lookup[zone_name] = int(row['unique_dishes']) if pd.notna(row.get('unique_dishes')) else 0
+    # Use family dishes lookup (calculated from Anna's Item Categorisation)
+    # This is ACTUAL family dishes on Dinneroo, not order line items
+    unique_dishes_lookup = family_dishes_per_zone or {}
     
     zones = []
     
@@ -364,9 +365,51 @@ def generate_zone_gaps(zone_gap_df, recruitment_df, zone_quality_df=None):
     }
 
 def load_zone_quality_scores():
-    """Load zone quality scores with unique_dishes per zone."""
+    """Load zone quality scores."""
     df = pd.read_csv(DATA_ANALYSIS / "zone_quality_scores.csv")
     return df
+
+
+def calculate_family_dishes_per_zone():
+    """
+    Calculate actual family dishes per zone using Anna's Item Categorisation.
+    
+    Logic:
+    1. Load Anna's curated list of 155 family dishes by brand
+    2. Get which brands are present in each zone from orders
+    3. Sum the dish counts for brands present in each zone
+    
+    This gives ACTUAL family dishes on Dinneroo per zone, not order line items.
+    Source: Anna's Dish Analysis Dec-25.xlsx > Item Categorisation sheet
+    """
+    print("  Calculating family dishes per zone from Anna's Item Categorisation...")
+    
+    # Load Anna's family dishes by brand
+    xlsx_path = PROJECT_ROOT / "DELIVERABLES" / "reports" / "Dish Analysis Dec-25.xlsx"
+    item_cat = pd.read_excel(xlsx_path, sheet_name='Item Categorisation', header=7)
+    
+    # Filter to included items only (Include = 1)
+    family_dishes = item_cat[item_cat.iloc[:, 0] == 1][['Brand', 'Item']].copy()
+    family_dishes.columns = ['brand', 'item']
+    
+    # Get dish count per brand
+    dishes_per_brand = family_dishes.groupby('brand').size().to_dict()
+    print(f"    - {len(family_dishes)} family dishes across {len(dishes_per_brand)} brands")
+    
+    # Load orders to get brands per zone
+    orders = pd.read_csv(DATA_ANALYSIS / "orders_segmented.csv", low_memory=False)
+    brands_per_zone = orders.groupby('ZONE_NAME')['BRAND'].unique().to_dict()
+    
+    # Calculate family dishes per zone
+    zone_dish_counts = {}
+    for zone, brands in brands_per_zone.items():
+        dish_count = sum(dishes_per_brand.get(brand, 0) for brand in brands)
+        zone_dish_counts[zone] = dish_count
+    
+    print(f"    - Calculated for {len(zone_dish_counts)} zones")
+    print(f"    - Average: {sum(zone_dish_counts.values()) / len(zone_dish_counts):.1f} dishes/zone")
+    
+    return zone_dish_counts
 
 def main():
     print("Loading data sources...")
@@ -385,7 +428,10 @@ def main():
     print(f"  - Track A performance: {len(track_a)} dish types")
     print(f"  - Track B opportunity: {len(track_b)} dish types")
     print(f"  - Zone gap report: {len(zone_gap_df)} zones")
-    print(f"  - Zone quality scores: {len(zone_quality_df)} zones (with unique_dishes)")
+    print(f"  - Zone quality scores: {len(zone_quality_df)} zones")
+    
+    # Calculate family dishes per zone from Anna's Item Categorisation
+    family_dishes_per_zone = calculate_family_dishes_per_zone()
     
     # Generate unified dishes
     print("\nGenerating unified_dishes.json...")
@@ -405,16 +451,16 @@ def main():
     print(f"  - Cuisine threshold: {mvp_evidence['cuisine_threshold']['recommended']} ({mvp_evidence['cuisine_threshold']['evidence']['impact']})")
     print(f"  - Partner threshold: {mvp_evidence['partner_threshold']['recommended']} ({mvp_evidence['partner_threshold']['evidence']['impact']})")
     
-    # Generate zone gaps (with unique_dishes from zone_quality_scores)
+    # Generate zone gaps (with family dishes from Anna's Item Categorisation)
     print("\nGenerating zone_gaps.json...")
-    zone_gaps = generate_zone_gaps(zone_gap_df, recruitment, zone_quality_df)
+    zone_gaps = generate_zone_gaps(zone_gap_df, recruitment, family_dishes_per_zone)
     print(f"  - Total zones: {zone_gaps['summary']['total_zones']}")
     print(f"  - MVP ready: {zone_gaps['summary']['mvp_ready']}")
     print(f"  - High priority gaps: {zone_gaps['summary']['high_priority']}")
     
-    # Show sample zones with unique_dishes
+    # Show sample zones with family dishes
     sample_zones = zone_gaps['zones'][:3]
-    print(f"  - Sample: {sample_zones[0]['zone']} has {sample_zones[0]['unique_dishes']} unique dishes")
+    print(f"  - Sample: {sample_zones[0]['zone']} has {sample_zones[0]['unique_dishes']} family dishes (from Anna's data)")
     
     # Ensure output directory exists
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
