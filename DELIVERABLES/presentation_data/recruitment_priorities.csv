@@ -1,0 +1,16 @@
+Cuisine,Gap Type,Priority,Top Dishes,Avg Priority Score,Num Dishes,Recommended Action
+Chinese,Supply Gap,HIGH - New partners needed,"Dim Sum Family Selection, Chicken Chow Mein Family Bundle, Sweet & Sour Chicken Family Meal",4.033333333333333,6,Recruit dedicated partners for this cuisine
+French,Supply Gap,HIGH - New partners needed,TBD,0.0,0,Recruit dedicated partners for this cuisine
+Irish/British,Supply Gap,HIGH - New partners needed,TBD,0.0,0,Recruit dedicated partners for this cuisine
+Middle Eastern,Supply Gap,HIGH - New partners needed,"Shawarma Family Platter, Falafel & Hummus Family Box, Shawarma",4.386666666666667,3,Recruit dedicated partners for this cuisine
+Mexican,Quality Gap,MEDIUM - Better partners needed,"Fajita Family Kit, Quesadilla Family Pack, Veggie Burrito Bowl Family Bundle",3.5725,8,Find higher-quality partners or improve existing
+Zone: Finsbury Park / Harringay / Crouch End,Zone Gap,High,"Missing: Japanese/Asian, Italian, Thai/Southeast Asian",,1534,"Recruit Japanese/Asian, Italian partners"
+Zone: Brockley / Forest Hill,Zone Gap,Medium,"Missing: Italian, Thai/Southeast Asian",,1478,"Recruit Italian, Thai/Southeast Asian partners"
+Zone: Canning Town,Zone Gap,High,"Missing: Japanese/Asian, Vietnamese, Italian",,1314,"Recruit Japanese/Asian, Vietnamese partners"
+Zone: Surrey Quays,Zone Gap,High,"Missing: Japanese/Asian, Vietnamese, Italian",,1139,"Recruit Japanese/Asian, Vietnamese partners"
+Zone: Wapping and Mile End,Zone Gap,High,"Missing: Japanese/Asian, Vietnamese, Italian",,961,"Recruit Japanese/Asian, Vietnamese partners"
+Zone: Wandsworth,Zone Gap,Medium,"Missing: Vietnamese, Thai/Southeast Asian",,853,"Recruit Vietnamese, Thai/Southeast Asian partners"
+Zone: Hampstead,Zone Gap,Medium,"Missing: Vietnamese, Italian",,797,"Recruit Vietnamese, Italian partners"
+Zone: Edinburgh Central,Zone Gap,Medium,"Missing: Japanese/Asian, Indian",,722,"Recruit Japanese/Asian, Indian partners"
+Zone: South Kensington,Zone Gap,High,"Missing: Japanese/Asian, Vietnamese, Indian",,676,"Recruit Japanese/Asian, Vietnamese partners"
+Zone: Stratford,Zone Gap,Medium,"Missing: Indian, Thai/Southeast Asian",,665,"Recruit Indian, Thai/Southeast Asian partners"

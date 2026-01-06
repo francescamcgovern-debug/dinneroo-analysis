@@ -1,0 +1,1967 @@
+{
+  "cuisine_performance": [
+    {
+      "cuisine_count": 1,
+      "avg_orders": 41.8,
+      "total_orders": 2717,
+      "zone_count": 65,
+      "avg_rating": 3.832388181993445,
+      "avg_partners": 1.0923076923076922
+    },
+    {
+      "cuisine_count": 2,
+      "avg_orders": 171.21621621621622,
+      "total_orders": 6335,
+      "zone_count": 37,
+      "avg_rating": 4.131309811591309,
+      "avg_partners": 2.2432432432432434
+    },
+    {
+      "cuisine_count": 3,
+      "avg_orders": 404.2,
+      "total_orders": 12126,
+      "zone_count": 30,
+      "avg_rating": 4.3446414860722875,
+      "avg_partners": 3.533333333333333
+    },
+    {
+      "cuisine_count": 4,
+      "avg_orders": 511.125,
+      "total_orders": 12267,
+      "zone_count": 24,
+      "avg_rating": 4.34747013513829,
+      "avg_partners": 4.875
+    },
+    {
+      "cuisine_count": 5,
+      "avg_orders": 684.6153846153846,
+      "total_orders": 8900,
+      "zone_count": 13,
+      "avg_rating": 4.435190448962566,
+      "avg_partners": 6.615384615384615
+    },
+    {
+      "cuisine_count": 6,
+      "avg_orders": 797.4545454545455,
+      "total_orders": 8772,
+      "zone_count": 11,
+      "avg_rating": 4.356528779235632,
+      "avg_partners": 7.363636363636363
+    },
+    {
+      "cuisine_count": 7,
+      "avg_orders": 946.375,
+      "total_orders": 7571,
+      "zone_count": 8,
+      "avg_rating": 4.487491944485826,
+      "avg_partners": 12.125
+    },
+    {
+      "cuisine_count": 8,
+      "avg_orders": 1224.6666666666667,
+      "total_orders": 7348,
+      "zone_count": 6,
+      "avg_rating": 4.466430359569994,
+      "avg_partners": 10.666666666666666
+    },
+    {
+      "cuisine_count": 9,
+      "avg_orders": 1800.3333333333333,
+      "total_orders": 5401,
+      "zone_count": 3,
+      "avg_rating": 4.456477339456731,
+      "avg_partners": 12.0
+    }
+  ],
+  "partner_performance": [
+    {
+      "partner_bucket": "1-3",
+      "avg_orders": 120.28448275862068,
+      "total_orders": 13953,
+      "zone_count": 116,
+      "avg_rating": 3.9946239382159625,
+      "avg_cuisines": 1.5775862068965518
+    },
+    {
+      "partner_bucket": "4-5",
+      "avg_orders": 484.0,
+      "total_orders": 19844,
+      "zone_count": 41,
+      "avg_rating": 4.342100629325646,
+      "avg_cuisines": 3.707317073170732
+    },
+    {
+      "partner_bucket": "6-7",
+      "avg_orders": 704.8125,
+      "total_orders": 11277,
+      "zone_count": 16,
+      "avg_rating": 4.3625117372528415,
+      "avg_cuisines": 5.25
+    },
+    {
+      "partner_bucket": "8-10",
+      "avg_orders": 1071.4,
+      "total_orders": 16071,
+      "zone_count": 15,
+      "avg_rating": 4.442051025301646,
+      "avg_cuisines": 6.933333333333334
+    },
+    {
+      "partner_bucket": "11-15",
+      "avg_orders": 1241.1666666666667,
+      "total_orders": 7447,
+      "zone_count": 6,
+      "avg_rating": 4.477591261638789,
+      "avg_cuisines": 7.0
+    },
+    {
+      "partner_bucket": "16-20",
+      "avg_orders": 948.3333333333334,
+      "total_orders": 2845,
+      "zone_count": 3,
+      "avg_rating": 4.530153814305316,
+      "avg_cuisines": 7.333333333333333
+    },
+    {
+      "partner_bucket": "20+",
+      "avg_orders": NaN,
+      "total_orders": 0,
+      "zone_count": 0,
+      "avg_rating": NaN,
+      "avg_cuisines": NaN
+    }
+  ],
+  "dish_performance": [
+    {
+      "dish_bucket": "1-10",
+      "avg_orders": 5.0,
+      "total_orders": 20,
+      "zone_count": 4,
+      "avg_rating": 1.5
+    },
+    {
+      "dish_bucket": "11-20",
+      "avg_orders": 13.125,
+      "total_orders": 105,
+      "zone_count": 8,
+      "avg_rating": 2.8333333333333335
+    },
+    {
+      "dish_bucket": "21-30",
+      "avg_orders": 26.75,
+      "total_orders": 428,
+      "zone_count": 16,
+      "avg_rating": 3.8080729166666667
+    },
+    {
+      "dish_bucket": "31-50",
+      "avg_orders": 31.761904761904763,
+      "total_orders": 667,
+      "zone_count": 21,
+      "avg_rating": 4.284123952611348
+    },
+    {
+      "dish_bucket": "51-100",
+      "avg_orders": 83.1025641025641,
+      "total_orders": 3241,
+      "zone_count": 39,
+      "avg_rating": 4.133458727169075
+    },
+    {
+      "dish_bucket": "101-200",
+      "avg_orders": 311.3333333333333,
+      "total_orders": 14010,
+      "zone_count": 45,
+      "avg_rating": 4.354933705436848
+    },
+    {
+      "dish_bucket": "201-500",
+      "avg_orders": 740.9824561403509,
+      "total_orders": 42236,
+      "zone_count": 57,
+      "avg_rating": 4.390898193161792
+    },
+    {
+      "dish_bucket": "500+",
+      "avg_orders": 1532.857142857143,
+      "total_orders": 10730,
+      "zone_count": 7,
+      "avg_rating": 4.466989195868011
+    }
+  ],
+  "zone_metrics": [
+    {
+      "ZONE_NAME": "West Central",
+      "DINNEROO_PARTNER_COUNT": 20,
+      "DINNEROO_CUISINE_COUNT": 7,
+      "order_count": 793,
+      "avg_rating": 4.563025210084033,
+      "unique_dishes": 423,
+      "CUISINES_AVAILABLE": "Asian, Meal Deals, Salads, Sandwiches, Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "East Central",
+      "DINNEROO_PARTNER_COUNT": 18,
+      "DINNEROO_CUISINE_COUNT": 8,
+      "order_count": 1280,
+      "avg_rating": 4.459090909090909,
+      "unique_dishes": 553,
+      "CUISINES_AVAILABLE": "Chicken, Healthy, Salads, Sandwiches, Tacos, Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Mayfair",
+      "DINNEROO_PARTNER_COUNT": 18,
+      "DINNEROO_CUISINE_COUNT": 7,
+      "order_count": 772,
+      "avg_rating": 4.568345323741007,
+      "unique_dishes": 351,
+      "CUISINES_AVAILABLE": "Chicken, Meal Deals, Salads, Sandwiches, Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Clapham",
+      "DINNEROO_PARTNER_COUNT": 14,
+      "DINNEROO_CUISINE_COUNT": 9,
+      "order_count": 2349,
+      "avg_rating": 4.6104651162790695,
+      "unique_dishes": 533,
+      "CUISINES_AVAILABLE": "Asian, Curry, Healthy, Mediterranean, Salads, Tacos, Vietnamese, Wraps, italian"
+    },
+    {
+      "ZONE_NAME": "Notting Hill / Paddington",
+      "DINNEROO_PARTNER_COUNT": 13,
+      "DINNEROO_CUISINE_COUNT": 7,
+      "order_count": 1226,
+      "avg_rating": 4.525114155251141,
+      "unique_dishes": 382,
+      "CUISINES_AVAILABLE": "Asian, Chicken, Curry, Salads, Sandwiches, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "London Bridge",
+      "DINNEROO_PARTNER_COUNT": 13,
+      "DINNEROO_CUISINE_COUNT": 7,
+      "order_count": 850,
+      "avg_rating": 4.572519083969466,
+      "unique_dishes": 447,
+      "CUISINES_AVAILABLE": "Meal Deals, Salads, Sandwiches, Vietnamese, halal, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Victoria, Westminster, Pimlico",
+      "DINNEROO_PARTNER_COUNT": 12,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 506,
+      "avg_rating": 4.633333333333334,
+      "unique_dishes": 276,
+      "CUISINES_AVAILABLE": "Meal Deals, Salads, Sandwiches, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Brighton Central",
+      "DINNEROO_PARTNER_COUNT": 12,
+      "DINNEROO_CUISINE_COUNT": 9,
+      "order_count": 1734,
+      "avg_rating": 4.465863453815261,
+      "unique_dishes": 665,
+      "CUISINES_AVAILABLE": "Burgers, Latin American, Salads, Sandwiches, Vietnamese, italian, japanese, sushi, thai"
+    },
+    {
+      "ZONE_NAME": "Dublin City North",
+      "DINNEROO_PARTNER_COUNT": 12,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 782,
+      "avg_rating": 4.058252427184466,
+      "unique_dishes": 383,
+      "CUISINES_AVAILABLE": "Roasteries, chinese, indian, italian, vegetarian"
+    },
+    {
+      "ZONE_NAME": "Bath",
+      "DINNEROO_PARTNER_COUNT": 10,
+      "DINNEROO_CUISINE_COUNT": 8,
+      "order_count": 647,
+      "avg_rating": 4.533980582524272,
+      "unique_dishes": 461,
+      "CUISINES_AVAILABLE": "Asian, Burgers, Latin American, Salads, Sandwiches, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Reading",
+      "DINNEROO_PARTNER_COUNT": 10,
+      "DINNEROO_CUISINE_COUNT": 9,
+      "order_count": 1318,
+      "avg_rating": 4.293103448275862,
+      "unique_dishes": 555,
+      "CUISINES_AVAILABLE": "Asian, Burgers, Latin American, Pasta, Salads, Tacos, Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Birmingham",
+      "DINNEROO_PARTNER_COUNT": 10,
+      "DINNEROO_CUISINE_COUNT": 8,
+      "order_count": 689,
+      "avg_rating": 4.154411764705882,
+      "unique_dishes": 423,
+      "CUISINES_AVAILABLE": "Asian, Burgers, Latin American, Tacos, Vietnamese, Wraps, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "South Kensington",
+      "DINNEROO_PARTNER_COUNT": 9,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 676,
+      "avg_rating": 4.556701030927835,
+      "unique_dishes": 289,
+      "CUISINES_AVAILABLE": "Chicken, Salads, Sandwiches, italian"
+    },
+    {
+      "ZONE_NAME": "Norwich",
+      "DINNEROO_PARTNER_COUNT": 9,
+      "DINNEROO_CUISINE_COUNT": 6,
+      "order_count": 1050,
+      "avg_rating": 4.248322147651007,
+      "unique_dishes": 448,
+      "CUISINES_AVAILABLE": "Asian, Burgers, Vietnamese, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Wimbledon",
+      "DINNEROO_PARTNER_COUNT": 9,
+      "DINNEROO_CUISINE_COUNT": 8,
+      "order_count": 1314,
+      "avg_rating": 4.5,
+      "unique_dishes": 505,
+      "CUISINES_AVAILABLE": "Meal Deals, Salads, Sandwiches, Vietnamese, italian, japanese, sushi, thai"
+    },
+    {
+      "ZONE_NAME": "Oxford",
+      "DINNEROO_PARTNER_COUNT": 9,
+      "DINNEROO_CUISINE_COUNT": 6,
+      "order_count": 1501,
+      "avg_rating": 4.515723270440252,
+      "unique_dishes": 456,
+      "CUISINES_AVAILABLE": "Asian, Salads, Vietnamese, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Hammersmith / Shepherd's Bush",
+      "DINNEROO_PARTNER_COUNT": 9,
+      "DINNEROO_CUISINE_COUNT": 6,
+      "order_count": 962,
+      "avg_rating": 4.456647398843931,
+      "unique_dishes": 329,
+      "CUISINES_AVAILABLE": "Meal Deals, Salads, Sandwiches, Vegan Friendly, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Islington",
+      "DINNEROO_PARTNER_COUNT": 9,
+      "DINNEROO_CUISINE_COUNT": 8,
+      "order_count": 2262,
+      "avg_rating": 4.68956043956044,
+      "unique_dishes": 431,
+      "CUISINES_AVAILABLE": "Asian, Salads, Sandwiches, Veganuary, Vietnamese, indian, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Leeds City Centre",
+      "DINNEROO_PARTNER_COUNT": 9,
+      "DINNEROO_CUISINE_COUNT": 7,
+      "order_count": 470,
+      "avg_rating": 4.521739130434782,
+      "unique_dishes": 393,
+      "CUISINES_AVAILABLE": "Burgers, Gluten Free, Latin American, Salads, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Milton Keynes",
+      "DINNEROO_PARTNER_COUNT": 9,
+      "DINNEROO_CUISINE_COUNT": 7,
+      "order_count": 1332,
+      "avg_rating": 4.4581005586592175,
+      "unique_dishes": 509,
+      "CUISINES_AVAILABLE": "Asian, Burgers, Latin American, Salads, Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "York",
+      "DINNEROO_PARTNER_COUNT": 8,
+      "DINNEROO_CUISINE_COUNT": 6,
+      "order_count": 729,
+      "avg_rating": 4.456310679611651,
+      "unique_dishes": 405,
+      "CUISINES_AVAILABLE": "Burgers, Christmas Specials, Latin American, Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Cambridge",
+      "DINNEROO_PARTNER_COUNT": 8,
+      "DINNEROO_CUISINE_COUNT": 7,
+      "order_count": 1403,
+      "avg_rating": 4.482300884955753,
+      "unique_dishes": 554,
+      "CUISINES_AVAILABLE": "Burgers, Latin American, Salads, Vietnamese, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Kingston",
+      "DINNEROO_PARTNER_COUNT": 8,
+      "DINNEROO_CUISINE_COUNT": 8,
+      "order_count": 1156,
+      "avg_rating": 4.461538461538462,
+      "unique_dishes": 499,
+      "CUISINES_AVAILABLE": "Meal Deals, Salads, Sandwiches, Vietnamese, italian, japanese, sushi, thai"
+    },
+    {
+      "ZONE_NAME": "Richmond / Kew",
+      "DINNEROO_PARTNER_COUNT": 8,
+      "DINNEROO_CUISINE_COUNT": 6,
+      "order_count": 562,
+      "avg_rating": 4.3023255813953485,
+      "unique_dishes": 358,
+      "CUISINES_AVAILABLE": "Chicken, Meal Deals, Salads, Sandwiches, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Chelmsford",
+      "DINNEROO_PARTNER_COUNT": 7,
+      "DINNEROO_CUISINE_COUNT": 7,
+      "order_count": 725,
+      "avg_rating": 4.208791208791209,
+      "unique_dishes": 391,
+      "CUISINES_AVAILABLE": "Asian, Burgers, Latin American, Tacos, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Nottingham",
+      "DINNEROO_PARTNER_COUNT": 7,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 759,
+      "avg_rating": 4.4324324324324325,
+      "unique_dishes": 381,
+      "CUISINES_AVAILABLE": "Burgers, Latin American, Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Bristol",
+      "DINNEROO_PARTNER_COUNT": 7,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 1173,
+      "avg_rating": 4.533707865168539,
+      "unique_dishes": 414,
+      "CUISINES_AVAILABLE": "Latin American, Vietnamese, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Southsea",
+      "DINNEROO_PARTNER_COUNT": 7,
+      "DINNEROO_CUISINE_COUNT": 6,
+      "order_count": 435,
+      "avg_rating": 4.180327868852459,
+      "unique_dishes": 294,
+      "CUISINES_AVAILABLE": "Asian, Latin American, Vietnamese, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Canterbury",
+      "DINNEROO_PARTNER_COUNT": 7,
+      "DINNEROO_CUISINE_COUNT": 6,
+      "order_count": 534,
+      "avg_rating": 4.158730158730159,
+      "unique_dishes": 314,
+      "CUISINES_AVAILABLE": "Burgers, Burritos, Vietnamese, italian, japanese, sushi"
+    },
+    {
+      "ZONE_NAME": "Camden/Kentish Town",
+      "DINNEROO_PARTNER_COUNT": 6,
+      "DINNEROO_CUISINE_COUNT": 6,
+      "order_count": 249,
+      "avg_rating": 4.111111111111111,
+      "unique_dishes": 221,
+      "CUISINES_AVAILABLE": "Asian, Salads, Sandwiches, Tacos, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Liverpool City Centre",
+      "DINNEROO_PARTNER_COUNT": 6,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 307,
+      "avg_rating": 4.2926829268292686,
+      "unique_dishes": 194,
+      "CUISINES_AVAILABLE": "Latin American, Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Chiswick",
+      "DINNEROO_PARTNER_COUNT": 6,
+      "DINNEROO_CUISINE_COUNT": 6,
+      "order_count": 1240,
+      "avg_rating": 4.737864077669903,
+      "unique_dishes": 247,
+      "CUISINES_AVAILABLE": "Healthy, Mediterranean, Salads, Vietnamese, indian, italian"
+    },
+    {
+      "ZONE_NAME": "Dartford",
+      "DINNEROO_PARTNER_COUNT": 6,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 336,
+      "avg_rating": 4.102564102564102,
+      "unique_dishes": 253,
+      "CUISINES_AVAILABLE": "Asian, Sandwiches, Shawarma, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Cardiff",
+      "DINNEROO_PARTNER_COUNT": 6,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 475,
+      "avg_rating": 4.571428571428571,
+      "unique_dishes": 258,
+      "CUISINES_AVAILABLE": "Burgers, Latin American, Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Glasgow Centre",
+      "DINNEROO_PARTNER_COUNT": 6,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 542,
+      "avg_rating": 4.5476190476190474,
+      "unique_dishes": 234,
+      "CUISINES_AVAILABLE": "Asian, Burgers, Pho, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Canary Wharf",
+      "DINNEROO_PARTNER_COUNT": 6,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 1122,
+      "avg_rating": 4.294520547945205,
+      "unique_dishes": 342,
+      "CUISINES_AVAILABLE": "Salads, Sandwiches, Vietnamese, japanese"
+    },
+    {
+      "ZONE_NAME": "Reigate",
+      "DINNEROO_PARTNER_COUNT": 6,
+      "DINNEROO_CUISINE_COUNT": 6,
+      "order_count": 541,
+      "avg_rating": 4.506666666666667,
+      "unique_dishes": 335,
+      "CUISINES_AVAILABLE": "Asian, Meal Deals, italian, japanese, sushi, thai"
+    },
+    {
+      "ZONE_NAME": "Lewisham",
+      "DINNEROO_PARTNER_COUNT": 6,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 1358,
+      "avg_rating": 4.495575221238938,
+      "unique_dishes": 353,
+      "CUISINES_AVAILABLE": "Asian, Meal Deals, Vietnamese, italian"
+    },
+    {
+      "ZONE_NAME": "Cheltenham",
+      "DINNEROO_PARTNER_COUNT": 6,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 512,
+      "avg_rating": 4.378378378378378,
+      "unique_dishes": 270,
+      "CUISINES_AVAILABLE": "Vietnamese, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Guildford",
+      "DINNEROO_PARTNER_COUNT": 6,
+      "DINNEROO_CUISINE_COUNT": 6,
+      "order_count": 969,
+      "avg_rating": 4.247787610619469,
+      "unique_dishes": 431,
+      "CUISINES_AVAILABLE": "Burgers, Salads, Vietnamese, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Bromley",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 465,
+      "avg_rating": 3.8135593220338984,
+      "unique_dishes": 216,
+      "CUISINES_AVAILABLE": "Asian, Salads, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Croydon",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 519,
+      "avg_rating": 4.2894736842105265,
+      "unique_dishes": 215,
+      "CUISINES_AVAILABLE": "Asian, Movie Night Restaurants, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Cardiff Bay Area",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 144,
+      "avg_rating": 4.777777777777778,
+      "unique_dishes": 153,
+      "CUISINES_AVAILABLE": "Burgers, Latin American, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Epsom",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 292,
+      "avg_rating": 4.125,
+      "unique_dishes": 191,
+      "CUISINES_AVAILABLE": "Asian, italian, sushi"
+    },
+    {
+      "ZONE_NAME": "Ealing",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 904,
+      "avg_rating": 4.201680672268908,
+      "unique_dishes": 334,
+      "CUISINES_AVAILABLE": "Latin American, Salads, Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Salford",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 535,
+      "avg_rating": 4.257425742574258,
+      "unique_dishes": 250,
+      "CUISINES_AVAILABLE": "Asian, Featured Restaurants, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Cribbs Causeway Shopping Centre",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 220,
+      "avg_rating": 3.8666666666666667,
+      "unique_dishes": 194,
+      "CUISINES_AVAILABLE": "Latin American, Salads, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Windsor",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 517,
+      "avg_rating": 4.298701298701299,
+      "unique_dishes": 278,
+      "CUISINES_AVAILABLE": "Asian, Burgers, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Wembley",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 1202,
+      "avg_rating": 4.489795918367347,
+      "unique_dishes": 265,
+      "CUISINES_AVAILABLE": "Latin American, Vegan Friendly, indian, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Stratford",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 665,
+      "avg_rating": 4.262626262626263,
+      "unique_dishes": 269,
+      "CUISINES_AVAILABLE": "Asian, Salads, Vegan Friendly, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Hampstead",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 797,
+      "avg_rating": 4.472,
+      "unique_dishes": 300,
+      "CUISINES_AVAILABLE": "Asian, Salads, halal, japanese, sushi"
+    },
+    {
+      "ZONE_NAME": "Newton Longville",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 181,
+      "avg_rating": 4.045454545454546,
+      "unique_dishes": 179,
+      "CUISINES_AVAILABLE": "Asian, Sandwiches, italian, pizza"
+    },
+    {
+      "ZONE_NAME": "Royal Tunbridge Wells",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 426,
+      "avg_rating": 4.4363636363636365,
+      "unique_dishes": 321,
+      "CUISINES_AVAILABLE": "Burgers, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Fulham",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 5,
+      "order_count": 615,
+      "avg_rating": 4.574257425742574,
+      "unique_dishes": 206,
+      "CUISINES_AVAILABLE": "Asian, Chicken, Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Bournemouth",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 634,
+      "avg_rating": 4.263736263736264,
+      "unique_dishes": 257,
+      "CUISINES_AVAILABLE": "Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Southampton",
+      "DINNEROO_PARTNER_COUNT": 5,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 470,
+      "avg_rating": 4.288888888888889,
+      "unique_dishes": 281,
+      "CUISINES_AVAILABLE": "Burgers, Latin American, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Surrey Quays",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 1139,
+      "avg_rating": 4.606217616580311,
+      "unique_dishes": 131,
+      "CUISINES_AVAILABLE": "Healthy, Middle Eastern, indian"
+    },
+    {
+      "ZONE_NAME": "Finsbury Park / Harringay / Crouch End",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 1534,
+      "avg_rating": 4.528,
+      "unique_dishes": 223,
+      "CUISINES_AVAILABLE": "Tacos, Vegan Friendly, indian"
+    },
+    {
+      "ZONE_NAME": "Sheffield City Centre",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 442,
+      "avg_rating": 4.267605633802817,
+      "unique_dishes": 205,
+      "CUISINES_AVAILABLE": "Vietnamese, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Highgate, Muswell Hill, East Finchley",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 168,
+      "avg_rating": 4.416666666666667,
+      "unique_dishes": 126,
+      "CUISINES_AVAILABLE": "Asian, indian, italian"
+    },
+    {
+      "ZONE_NAME": "Chichester",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 237,
+      "avg_rating": 4.133333333333334,
+      "unique_dishes": 202,
+      "CUISINES_AVAILABLE": "Burgers, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Edinburgh North",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 345,
+      "avg_rating": 4.4324324324324325,
+      "unique_dishes": 174,
+      "CUISINES_AVAILABLE": "Pho, Plus offers Oct 2024, japanese"
+    },
+    {
+      "ZONE_NAME": "Edinburgh Central",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 722,
+      "avg_rating": 4.511363636363637,
+      "unique_dishes": 145,
+      "CUISINES_AVAILABLE": "Asian, Pho, italian"
+    },
+    {
+      "ZONE_NAME": "Dalston Stoke Newington",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 434,
+      "avg_rating": 4.426470588235294,
+      "unique_dishes": 106,
+      "CUISINES_AVAILABLE": "Asian, halal, indian, italian"
+    },
+    {
+      "ZONE_NAME": "Walton on Thames",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 275,
+      "avg_rating": 4.472222222222222,
+      "unique_dishes": 154,
+      "CUISINES_AVAILABLE": "Asian, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Brixton",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 396,
+      "avg_rating": 4.5,
+      "unique_dishes": 150,
+      "CUISINES_AVAILABLE": "Salads, Sandwiches, indian, italian"
+    },
+    {
+      "ZONE_NAME": "Wapping and Mile End",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 961,
+      "avg_rating": 4.662068965517242,
+      "unique_dishes": 151,
+      "CUISINES_AVAILABLE": "Asian, Curry, Healthy, Middle Eastern"
+    },
+    {
+      "ZONE_NAME": "Basingstoke",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 483,
+      "avg_rating": 3.8333333333333335,
+      "unique_dishes": 249,
+      "CUISINES_AVAILABLE": "Latin American, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Uxbridge",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 242,
+      "avg_rating": 4.404761904761905,
+      "unique_dishes": 133,
+      "CUISINES_AVAILABLE": "italian, japanese, sushi"
+    },
+    {
+      "ZONE_NAME": "Sutton",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 101,
+      "avg_rating": 4.125,
+      "unique_dishes": 106,
+      "CUISINES_AVAILABLE": "italian, sushi"
+    },
+    {
+      "ZONE_NAME": "Braintree",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 151,
+      "avg_rating": 3.9047619047619047,
+      "unique_dishes": 187,
+      "CUISINES_AVAILABLE": "Burgers, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Royal Leamington Spa",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 257,
+      "avg_rating": 4.366666666666666,
+      "unique_dishes": 198,
+      "CUISINES_AVAILABLE": "Latin American, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "St Albans",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 559,
+      "avg_rating": 4.22680412371134,
+      "unique_dishes": 318,
+      "CUISINES_AVAILABLE": "Burgers, Salads, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Golders Green / Brent Cross",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 275,
+      "avg_rating": 4.0,
+      "unique_dishes": 111,
+      "CUISINES_AVAILABLE": "Asian Fusion, Kosher"
+    },
+    {
+      "ZONE_NAME": "Watford",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 372,
+      "avg_rating": 4.357142857142857,
+      "unique_dishes": 220,
+      "CUISINES_AVAILABLE": "Latin American, italian, japanese, sushi"
+    },
+    {
+      "ZONE_NAME": "Belsize Park / St John's Wood",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 278,
+      "avg_rating": 4.7924528301886795,
+      "unique_dishes": 146,
+      "CUISINES_AVAILABLE": "Healthy, Salads, italian, lebanese"
+    },
+    {
+      "ZONE_NAME": "Horsham",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 416,
+      "avg_rating": 4.409090909090909,
+      "unique_dishes": 283,
+      "CUISINES_AVAILABLE": "Burgers, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Harrow",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 126,
+      "avg_rating": 4.333333333333333,
+      "unique_dishes": 156,
+      "CUISINES_AVAILABLE": "indian, italian, sushi"
+    },
+    {
+      "ZONE_NAME": "Colchester",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 464,
+      "avg_rating": 4.597014925373134,
+      "unique_dishes": 249,
+      "CUISINES_AVAILABLE": "Burgers, italian, japanese, sushi"
+    },
+    {
+      "ZONE_NAME": "Putney & Barnes",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 296,
+      "avg_rating": 4.702127659574468,
+      "unique_dishes": 180,
+      "CUISINES_AVAILABLE": "Salads, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Bracknell",
+      "DINNEROO_PARTNER_COUNT": 4,
+      "DINNEROO_CUISINE_COUNT": 4,
+      "order_count": 585,
+      "avg_rating": 4.553846153846154,
+      "unique_dishes": 337,
+      "CUISINES_AVAILABLE": "Latin American, italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Canning Town",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 1314,
+      "avg_rating": 4.6702702702702705,
+      "unique_dishes": 134,
+      "CUISINES_AVAILABLE": "Mediterranean, indian"
+    },
+    {
+      "ZONE_NAME": "Easton",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 297,
+      "avg_rating": 4.375,
+      "unique_dishes": 197,
+      "CUISINES_AVAILABLE": "Salads, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Henley on Thames",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 181,
+      "avg_rating": 4.277777777777778,
+      "unique_dishes": 147,
+      "CUISINES_AVAILABLE": "Asian, italian, thai"
+    },
+    {
+      "ZONE_NAME": "Manchester Central",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 156,
+      "avg_rating": 4.363636363636363,
+      "unique_dishes": 104,
+      "CUISINES_AVAILABLE": "Vietnamese, japanese"
+    },
+    {
+      "ZONE_NAME": "Chingford",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 77,
+      "avg_rating": 4.2,
+      "unique_dishes": 114,
+      "CUISINES_AVAILABLE": "Asian, Tacos, italian"
+    },
+    {
+      "ZONE_NAME": "Dublin City South",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 93,
+      "avg_rating": 4.823529411764706,
+      "unique_dishes": 43,
+      "CUISINES_AVAILABLE": "Family favourites, Healthy Eating 2025, Middle Eastern"
+    },
+    {
+      "ZONE_NAME": "Brockley / Forest Hill",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 1478,
+      "avg_rating": 4.612068965517241,
+      "unique_dishes": 210,
+      "CUISINES_AVAILABLE": "Vegan Friendly, indian, japanese"
+    },
+    {
+      "ZONE_NAME": "Didsbury and Withington",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 236,
+      "avg_rating": 4.722222222222222,
+      "unique_dishes": 160,
+      "CUISINES_AVAILABLE": "Featured Restaurants, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Stevenage",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 369,
+      "avg_rating": 4.523076923076923,
+      "unique_dishes": 167,
+      "CUISINES_AVAILABLE": "italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Newbury",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 148,
+      "avg_rating": 4.478260869565218,
+      "unique_dishes": 140,
+      "CUISINES_AVAILABLE": "Burgers, italian, sushi"
+    },
+    {
+      "ZONE_NAME": "Galway",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 30,
+      "avg_rating": 3.3333333333333335,
+      "unique_dishes": 55,
+      "CUISINES_AVAILABLE": "Asian Fusion, chinese, italian"
+    },
+    {
+      "ZONE_NAME": "Edgbaston",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 574,
+      "avg_rating": 4.67741935483871,
+      "unique_dishes": 204,
+      "CUISINES_AVAILABLE": "Vietnamese, italian, thai"
+    },
+    {
+      "ZONE_NAME": "Winchester",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 126,
+      "avg_rating": 4.0,
+      "unique_dishes": 101,
+      "CUISINES_AVAILABLE": "Movie Night Restaurants, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Eccles",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 175,
+      "avg_rating": 4.0256410256410255,
+      "unique_dishes": 170,
+      "CUISINES_AVAILABLE": "Burgers, Latin American, Salads"
+    },
+    {
+      "ZONE_NAME": "Farnham",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 306,
+      "avg_rating": 4.673076923076923,
+      "unique_dishes": 210,
+      "CUISINES_AVAILABLE": "breakfast, italian, thai"
+    },
+    {
+      "ZONE_NAME": "West Bridgford",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 239,
+      "avg_rating": 4.291666666666667,
+      "unique_dishes": 142,
+      "CUISINES_AVAILABLE": "italian, japanese, thai"
+    },
+    {
+      "ZONE_NAME": "Edgware / Mill Hill",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 95,
+      "avg_rating": 3.8333333333333335,
+      "unique_dishes": 91,
+      "CUISINES_AVAILABLE": "Kosher, Organic, italian"
+    },
+    {
+      "ZONE_NAME": "Hatfield/ Hatfield Park",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 160,
+      "avg_rating": 4.388888888888889,
+      "unique_dishes": 119,
+      "CUISINES_AVAILABLE": "Asian, italian"
+    },
+    {
+      "ZONE_NAME": "Wandsworth",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 3,
+      "order_count": 853,
+      "avg_rating": 4.691275167785235,
+      "unique_dishes": 145,
+      "CUISINES_AVAILABLE": "Curry, italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Romford",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 434,
+      "avg_rating": 4.43859649122807,
+      "unique_dishes": 214,
+      "CUISINES_AVAILABLE": "Asian, italian"
+    },
+    {
+      "ZONE_NAME": "Twickenham / Teddington",
+      "DINNEROO_PARTNER_COUNT": 3,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 106,
+      "avg_rating": 3.7777777777777777,
+      "unique_dishes": 145,
+      "CUISINES_AVAILABLE": "Tacos, italian"
+    },
+    {
+      "ZONE_NAME": "Sevenoaks",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 26,
+      "avg_rating": 4.2,
+      "unique_dishes": 52,
+      "CUISINES_AVAILABLE": "japanese, sushi"
+    },
+    {
+      "ZONE_NAME": "Esher",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 143,
+      "avg_rating": 4.666666666666667,
+      "unique_dishes": 97,
+      "CUISINES_AVAILABLE": "italian, thai"
+    },
+    {
+      "ZONE_NAME": "Enfield",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 302,
+      "avg_rating": 3.8679245283018866,
+      "unique_dishes": 143,
+      "CUISINES_AVAILABLE": "italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Tonbridge",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 56,
+      "avg_rating": 4.0,
+      "unique_dishes": 66,
+      "CUISINES_AVAILABLE": "Asian, italian"
+    },
+    {
+      "ZONE_NAME": "Wokingham",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 177,
+      "avg_rating": 4.782608695652174,
+      "unique_dishes": 125,
+      "CUISINES_AVAILABLE": "italian, thai"
+    },
+    {
+      "ZONE_NAME": "Palmers Green / Southgate",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 101,
+      "avg_rating": 4.285714285714286,
+      "unique_dishes": 76,
+      "CUISINES_AVAILABLE": "Asian, italian"
+    },
+    {
+      "ZONE_NAME": "Bexleyheath",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 48,
+      "avg_rating": 3.857142857142857,
+      "unique_dishes": 45,
+      "CUISINES_AVAILABLE": "Asian, italian"
+    },
+    {
+      "ZONE_NAME": "Belfast",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 14,
+      "avg_rating": 5.0,
+      "unique_dishes": 31,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Wood Green",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 123,
+      "avg_rating": 4.375,
+      "unique_dishes": 70,
+      "CUISINES_AVAILABLE": "Asian, sushi"
+    },
+    {
+      "ZONE_NAME": "Camberley",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 319,
+      "avg_rating": 3.972972972972973,
+      "unique_dishes": 142,
+      "CUISINES_AVAILABLE": "italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Berkhamsted",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 109,
+      "avg_rating": 4.733333333333333,
+      "unique_dishes": 107,
+      "CUISINES_AVAILABLE": "italian, thai"
+    },
+    {
+      "ZONE_NAME": "Kingsbury Green/ The Hyde",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 168,
+      "avg_rating": 4.137931034482759,
+      "unique_dishes": 107,
+      "CUISINES_AVAILABLE": "italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Woking",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 114,
+      "avg_rating": 4.333333333333333,
+      "unique_dishes": 107,
+      "CUISINES_AVAILABLE": "Salads, italian"
+    },
+    {
+      "ZONE_NAME": "Hunts Cross",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 61,
+      "avg_rating": 4.0,
+      "unique_dishes": 69,
+      "CUISINES_AVAILABLE": "italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Maida Vale / Kilburn",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 301,
+      "avg_rating": 4.081632653061225,
+      "unique_dishes": 94,
+      "CUISINES_AVAILABLE": "Asian, Chicken"
+    },
+    {
+      "ZONE_NAME": "Weybridge",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 172,
+      "avg_rating": 3.869565217391304,
+      "unique_dishes": 95,
+      "CUISINES_AVAILABLE": "italian, thai"
+    },
+    {
+      "ZONE_NAME": "Harpenden",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 169,
+      "avg_rating": 4.470588235294118,
+      "unique_dishes": 112,
+      "CUISINES_AVAILABLE": "italian, thai"
+    },
+    {
+      "ZONE_NAME": "Balham",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 265,
+      "avg_rating": 4.435897435897436,
+      "unique_dishes": 107,
+      "CUISINES_AVAILABLE": "Vietnamese, italian"
+    },
+    {
+      "ZONE_NAME": "Dundrum",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 107,
+      "avg_rating": 4.176470588235294,
+      "unique_dishes": 90,
+      "CUISINES_AVAILABLE": "italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Upminster",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 126,
+      "avg_rating": 4.178571428571429,
+      "unique_dishes": 100,
+      "CUISINES_AVAILABLE": "italian, thai"
+    },
+    {
+      "ZONE_NAME": "Hemel Hempstead",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 41,
+      "avg_rating": 4.0,
+      "unique_dishes": 67,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Eastbourne",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 40,
+      "avg_rating": 4.285714285714286,
+      "unique_dishes": 75,
+      "CUISINES_AVAILABLE": "Burgers, italian"
+    },
+    {
+      "ZONE_NAME": "Bermondsey",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 52,
+      "avg_rating": 3.0,
+      "unique_dishes": 60,
+      "CUISINES_AVAILABLE": "Asian, italian"
+    },
+    {
+      "ZONE_NAME": "Welwyn Garden City",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 121,
+      "avg_rating": 4.473684210526316,
+      "unique_dishes": 98,
+      "CUISINES_AVAILABLE": "italian, thai"
+    },
+    {
+      "ZONE_NAME": "Sidcup",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 74,
+      "avg_rating": 4.2,
+      "unique_dishes": 59,
+      "CUISINES_AVAILABLE": "Asian, italian"
+    },
+    {
+      "ZONE_NAME": "Dudley",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 28,
+      "avg_rating": 4.75,
+      "unique_dishes": 32,
+      "CUISINES_AVAILABLE": "Asian, italian"
+    },
+    {
+      "ZONE_NAME": "Eltham",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 57,
+      "avg_rating": 4.384615384615385,
+      "unique_dishes": 67,
+      "CUISINES_AVAILABLE": "Asian, italian"
+    },
+    {
+      "ZONE_NAME": "Warwick",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 50,
+      "avg_rating": 4.375,
+      "unique_dishes": 65,
+      "CUISINES_AVAILABLE": "italian, thai"
+    },
+    {
+      "ZONE_NAME": "Greenwich",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 332,
+      "avg_rating": 4.487804878048781,
+      "unique_dishes": 101,
+      "CUISINES_AVAILABLE": "Asian, japanese"
+    },
+    {
+      "ZONE_NAME": "Waterloo & Southbank",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 9,
+      "avg_rating": 1.0,
+      "unique_dishes": 20,
+      "CUISINES_AVAILABLE": "Sandwiches, italian"
+    },
+    {
+      "ZONE_NAME": "Saltdean",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 16,
+      "avg_rating": 5.0,
+      "unique_dishes": 34,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Ronanstown",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 69,
+      "avg_rating": 3.5454545454545454,
+      "unique_dishes": 65,
+      "CUISINES_AVAILABLE": "italian, japanese"
+    },
+    {
+      "ZONE_NAME": "Renfrew",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 46,
+      "avg_rating": 3.6666666666666665,
+      "unique_dishes": 66,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Poole",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 2,
+      "order_count": 70,
+      "avg_rating": 4.166666666666667,
+      "unique_dishes": 75,
+      "CUISINES_AVAILABLE": "italian, sushi"
+    },
+    {
+      "ZONE_NAME": "Godalming",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 64,
+      "avg_rating": 4.25,
+      "unique_dishes": 58,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Raynes Park",
+      "DINNEROO_PARTNER_COUNT": 2,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 58,
+      "avg_rating": 5.0,
+      "unique_dishes": 46,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Bournemouth East",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 33,
+      "avg_rating": 3.5714285714285716,
+      "unique_dishes": 63,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Glasgow West End",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 108,
+      "avg_rating": 4.5625,
+      "unique_dishes": 27,
+      "CUISINES_AVAILABLE": "Asian"
+    },
+    {
+      "ZONE_NAME": "Borehamwood",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 16,
+      "avg_rating": 4.0,
+      "unique_dishes": 31,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Leavesden and Abbots Langley",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 123,
+      "avg_rating": 4.785714285714286,
+      "unique_dishes": 65,
+      "CUISINES_AVAILABLE": "Asian"
+    },
+    {
+      "ZONE_NAME": "Woolwich",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 15,
+      "avg_rating": 5.0,
+      "unique_dishes": 13,
+      "CUISINES_AVAILABLE": "Asian"
+    },
+    {
+      "ZONE_NAME": "Tooting",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 37,
+      "avg_rating": 5.0,
+      "unique_dishes": 23,
+      "CUISINES_AVAILABLE": "sushi"
+    },
+    {
+      "ZONE_NAME": "Staines",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 142,
+      "avg_rating": 4.454545454545454,
+      "unique_dishes": 62,
+      "CUISINES_AVAILABLE": "japanese"
+    },
+    {
+      "ZONE_NAME": "Belfast Central",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 11,
+      "avg_rating": 5.0,
+      "unique_dishes": 26,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Euston",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 2,
+      "avg_rating": 0.0,
+      "unique_dishes": 9,
+      "CUISINES_AVAILABLE": "Salads"
+    },
+    {
+      "ZONE_NAME": "Slough",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 11,
+      "avg_rating": 5.0,
+      "unique_dishes": 8,
+      "CUISINES_AVAILABLE": "Asian"
+    },
+    {
+      "ZONE_NAME": "Finchley",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 308,
+      "avg_rating": 4.2,
+      "unique_dishes": 121,
+      "CUISINES_AVAILABLE": "japanese"
+    },
+    {
+      "ZONE_NAME": "Lockleaze",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 40,
+      "avg_rating": 3.75,
+      "unique_dishes": 31,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Farnborough",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 14,
+      "avg_rating": 2.3333333333333335,
+      "unique_dishes": 24,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Belfast East",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 8,
+      "avg_rating": 1.0,
+      "unique_dishes": 12,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Kylemore",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 34,
+      "avg_rating": 5.0,
+      "unique_dishes": 16,
+      "CUISINES_AVAILABLE": "chinese"
+    },
+    {
+      "ZONE_NAME": "Hitchin",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 26,
+      "avg_rating": 3.0,
+      "unique_dishes": 47,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "South Pollok",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 96,
+      "avg_rating": 4.473684210526316,
+      "unique_dishes": 71,
+      "CUISINES_AVAILABLE": "japanese"
+    },
+    {
+      "ZONE_NAME": "Stockport/Heaton Moor",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 26,
+      "avg_rating": 5.0,
+      "unique_dishes": 28,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Beckenham",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 65,
+      "avg_rating": 4.357142857142857,
+      "unique_dishes": 55,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Fleet",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 38,
+      "avg_rating": 3.5454545454545454,
+      "unique_dishes": 39,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Ilford",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 67,
+      "avg_rating": 4.166666666666667,
+      "unique_dishes": 61,
+      "CUISINES_AVAILABLE": "indian"
+    },
+    {
+      "ZONE_NAME": "Letchworth Garden City",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 4,
+      "avg_rating": 0.0,
+      "unique_dishes": 9,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Ruislip",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 56,
+      "avg_rating": 4.0,
+      "unique_dishes": 52,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Oakwood and Chapeltown",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 23,
+      "avg_rating": 4.75,
+      "unique_dishes": 35,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Epping",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 9,
+      "avg_rating": 5.0,
+      "unique_dishes": 23,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Leyton",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 17,
+      "avg_rating": 3.5,
+      "unique_dishes": 33,
+      "CUISINES_AVAILABLE": "indian"
+    },
+    {
+      "ZONE_NAME": "Morningside",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 51,
+      "avg_rating": 5.0,
+      "unique_dishes": 51,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Gerrards Cross",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 35,
+      "avg_rating": 3.857142857142857,
+      "unique_dishes": 34,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Barnet",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 50,
+      "avg_rating": 5.0,
+      "unique_dishes": 56,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Shirley / Wickham",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 33,
+      "avg_rating": 3.5,
+      "unique_dishes": 48,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Orpington",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 13,
+      "avg_rating": 5.0,
+      "unique_dishes": 21,
+      "CUISINES_AVAILABLE": "Asian"
+    },
+    {
+      "ZONE_NAME": "Chesham",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 28,
+      "avg_rating": 4.0,
+      "unique_dishes": 57,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Maidenhead",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 27,
+      "avg_rating": 4.166666666666667,
+      "unique_dishes": 31,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Port Solent",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 3,
+      "avg_rating": 1.0,
+      "unique_dishes": 8,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Taplow and Burnham",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 28,
+      "avg_rating": 0.0,
+      "unique_dishes": 30,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Chislehurst",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 192,
+      "avg_rating": 4.461538461538462,
+      "unique_dishes": 79,
+      "CUISINES_AVAILABLE": "thai"
+    },
+    {
+      "ZONE_NAME": "Mulhuddart",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 28,
+      "avg_rating": 4.0,
+      "unique_dishes": 28,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Vauxhall, Kennington and Oval",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 36,
+      "avg_rating": 4.666666666666667,
+      "unique_dishes": 41,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Aldershot",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 55,
+      "avg_rating": 4.0,
+      "unique_dishes": 61,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Dun laoghaire, Dalkey, Killiney",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 22,
+      "avg_rating": 4.333333333333333,
+      "unique_dishes": 29,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Purley",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 32,
+      "avg_rating": 4.5,
+      "unique_dishes": 22,
+      "CUISINES_AVAILABLE": "Asian"
+    },
+    {
+      "ZONE_NAME": "Headingley",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 40,
+      "avg_rating": 3.6666666666666665,
+      "unique_dishes": 65,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Crawley",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 35,
+      "avg_rating": 4.8,
+      "unique_dishes": 29,
+      "CUISINES_AVAILABLE": "japanese"
+    },
+    {
+      "ZONE_NAME": "Glasgow Centre East",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 6,
+      "avg_rating": 5.0,
+      "unique_dishes": 17,
+      "CUISINES_AVAILABLE": "japanese"
+    },
+    {
+      "ZONE_NAME": "Rotherham",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 17,
+      "avg_rating": 4.0,
+      "unique_dishes": 26,
+      "CUISINES_AVAILABLE": "Latin American"
+    },
+    {
+      "ZONE_NAME": "South Woodford",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 69,
+      "avg_rating": 3.5384615384615383,
+      "unique_dishes": 53,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Eastleigh Central",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 16,
+      "avg_rating": 3.0,
+      "unique_dishes": 30,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Grays",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 28,
+      "avg_rating": 3.6,
+      "unique_dishes": 36,
+      "CUISINES_AVAILABLE": "Latin American"
+    },
+    {
+      "ZONE_NAME": "Portsmouth",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 15,
+      "avg_rating": 0.0,
+      "unique_dishes": 22,
+      "CUISINES_AVAILABLE": "sushi"
+    },
+    {
+      "ZONE_NAME": "Stanmore",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 22,
+      "avg_rating": 5.0,
+      "unique_dishes": 36,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "East Barnet",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 17,
+      "avg_rating": 4.4,
+      "unique_dishes": 25,
+      "CUISINES_AVAILABLE": "indian"
+    },
+    {
+      "ZONE_NAME": "Crystal Palace / Penge",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 11,
+      "avg_rating": 4.666666666666667,
+      "unique_dishes": 13,
+      "CUISINES_AVAILABLE": "Asian"
+    },
+    {
+      "ZONE_NAME": "Greater Leeds",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 13,
+      "avg_rating": 1.0,
+      "unique_dishes": 15,
+      "CUISINES_AVAILABLE": "Asian"
+    },
+    {
+      "ZONE_NAME": "Altrincham and Hale",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 23,
+      "avg_rating": 4.2,
+      "unique_dishes": 36,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "High Wycombe",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 78,
+      "avg_rating": 3.7142857142857144,
+      "unique_dishes": 53,
+      "CUISINES_AVAILABLE": "thai"
+    },
+    {
+      "ZONE_NAME": "Maidstone",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 9,
+      "avg_rating": 0.0,
+      "unique_dishes": 13,
+      "CUISINES_AVAILABLE": "sushi"
+    },
+    {
+      "ZONE_NAME": "Southall",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 28,
+      "avg_rating": 5.0,
+      "unique_dishes": 31,
+      "CUISINES_AVAILABLE": "indian"
+    },
+    {
+      "ZONE_NAME": "Sheffield",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 18,
+      "avg_rating": 5.0,
+      "unique_dishes": 37,
+      "CUISINES_AVAILABLE": "italian"
+    },
+    {
+      "ZONE_NAME": "Dulwich",
+      "DINNEROO_PARTNER_COUNT": 1,
+      "DINNEROO_CUISINE_COUNT": 1,
+      "order_count": 71,
+      "avg_rating": 4.666666666666667,
+      "unique_dishes": 60,
+      "CUISINES_AVAILABLE": "italian"
+    }
+  ]
+}

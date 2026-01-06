@@ -1,0 +1,202 @@
+ZONE_NAME,orders,partners,REGION,cuisines
+Clapham,2349,13,London,9
+Islington,2262,8,London,8
+Brighton Central,1734,10,London,8
+Finsbury Park / Harringay / Crouch End,1534,4,London,3
+Oxford,1501,7,South East,5
+Brockley / Forest Hill,1478,3,London,3
+Cambridge,1403,8,South East,7
+Lewisham,1358,5,London,5
+Milton Keynes,1332,8,South East,7
+Reading,1318,10,South East,6
+Canning Town,1314,3,Other,3
+Wimbledon,1314,8,London,7
+East Central,1280,11,London,8
+Chiswick,1240,6,London,5
+Notting Hill / Paddington,1226,9,London,7
+Wembley,1202,7,Other,7
+Bristol,1173,8,South West,6
+Kingston,1156,8,London,7
+Surrey Quays,1139,4,Other,3
+Canary Wharf,1122,6,Other,5
+Norwich,1050,6,South East,5
+Guildford,969,6,South East,6
+Hammersmith / Shepherd's Bush,962,7,London,6
+Wapping and Mile End,961,4,Other,4
+Ealing,904,5,London,5
+Wandsworth,853,3,London,3
+London Bridge,850,10,London,7
+Hampstead,797,5,Other,4
+West Central,793,10,London,7
+Dublin City North,782,6,Other,5
+Mayfair,772,8,London,6
+Nottingham,759,7,London,5
+York,729,8,North,6
+Chelmsford,725,7,South East,5
+Edinburgh Central,722,3,London,3
+Birmingham,689,9,Midlands,7
+South Kensington,676,7,London,4
+Stratford,665,5,London,4
+Bath,647,9,South West,7
+Bournemouth,634,4,South East,3
+Fulham,615,5,London,5
+Bracknell,585,4,Other,4
+Edgbaston,574,3,Other,3
+Richmond / Kew,562,6,London,6
+St Albans,559,4,South East,4
+Glasgow Centre,542,5,Scotland,5
+Reigate,541,6,South East,5
+Salford,535,6,Other,4
+Canterbury,534,7,South East,6
+Croydon,519,4,London,3
+Windsor,517,6,South East,4
+Cheltenham,512,5,South West,4
+"Victoria, Westminster, Pimlico",506,8,London,5
+Basingstoke,483,3,South East,3
+Cardiff,475,6,Wales,5
+Leeds City Centre,470,9,North,7
+Southampton,470,5,South East,4
+Bromley,465,4,London,3
+Colchester,464,4,South East,4
+Sheffield City Centre,442,4,North,3
+Southsea,435,7,Other,5
+Dalston Stoke Newington,434,4,Midlands,3
+Romford,434,3,Other,3
+Royal Tunbridge Wells,426,6,South East,6
+Horsham,416,4,Other,4
+Brixton,396,4,London,4
+Watford,372,4,South East,4
+Stevenage,369,3,Other,3
+Edinburgh North,345,3,Scotland,3
+Dartford,336,6,Other,5
+Greenwich,332,2,London,2
+Camberley,319,2,Other,2
+Finchley,308,1,Other,1
+Liverpool City Centre,307,5,North,4
+Farnham,306,3,Other,3
+Enfield,302,2,London,2
+Maida Vale / Kilburn,301,2,Other,2
+Easton,297,5,Other,4
+Putney & Barnes,296,3,London,3
+Epsom,292,4,South East,3
+Belsize Park / St John's Wood,278,3,Other,3
+Golders Green / Brent Cross,275,3,London,1
+Walton on Thames,275,3,Other,3
+Balham,265,2,London,2
+Royal Leamington Spa,257,4,Other,4
+Camden/Kentish Town,249,6,London,5
+Uxbridge,242,4,Other,3
+West Bridgford,239,3,Other,3
+Chichester,237,4,North,4
+Didsbury and Withington,236,3,Other,3
+Cribbs Causeway Shopping Centre,220,5,Other,4
+Chislehurst,192,1,Other,1
+Henley on Thames,181,3,Other,2
+Newton Longville,181,5,Other,3
+Wokingham,177,2,South East,2
+Eccles,175,3,Other,3
+Weybridge,172,2,Other,2
+Harpenden,169,2,Other,2
+"Highgate, Muswell Hill, East Finchley",168,3,Other,3
+Kingsbury Green/ The Hyde,168,2,Other,2
+Hatfield/ Hatfield Park,160,3,Other,2
+Manchester Central,156,3,London,3
+Braintree,151,4,Other,3
+Newbury,148,3,Other,3
+Cardiff Bay Area,144,5,Wales,5
+Esher,143,2,Other,2
+Staines,142,1,Other,1
+Upminster,126,2,Other,2
+Winchester,126,3,North,3
+Harrow,126,4,London,3
+Leavesden and Abbots Langley,123,1,Other,1
+Wood Green,123,2,Other,2
+Welwyn Garden City,121,2,Other,2
+Woking,114,2,South East,2
+Berkhamsted,109,2,Other,2
+Glasgow West End,108,1,Scotland,1
+Dundrum,107,2,Other,2
+Twickenham / Teddington,106,2,Other,2
+Sutton,101,3,London,2
+Palmers Green / Southgate,101,2,Other,2
+South Pollok,96,1,Other,1
+Edgware / Mill Hill,95,3,Other,1
+Dublin City South,93,3,Other,2
+High Wycombe,78,1,South East,1
+Chingford,77,3,Other,3
+Sidcup,74,2,Other,2
+Dulwich,71,1,London,1
+Poole,70,2,South West,2
+Ronanstown,69,2,Other,2
+South Woodford,69,1,Other,1
+Ilford,67,1,Other,1
+Beckenham,65,1,Other,1
+Godalming,64,2,Other,1
+Hunts Cross,61,2,Other,2
+Raynes Park,58,1,Other,1
+Eltham,57,2,Other,2
+Tonbridge,56,2,Other,2
+Ruislip,56,1,Other,1
+Aldershot,55,1,Other,1
+Bermondsey,52,2,Other,2
+Morningside,51,1,Other,1
+Warwick,50,2,Other,2
+Barnet,50,1,London,1
+Bexleyheath,48,2,London,2
+Renfrew,46,2,Other,1
+Hemel Hempstead,41,2,Other,1
+Lockleaze,40,1,Other,1
+Eastbourne,40,2,South East,2
+Headingley,40,1,Other,1
+Fleet,38,1,Other,1
+Tooting,37,1,London,1
+"Vauxhall, Kennington and Oval",36,1,Other,1
+Crawley,35,1,South East,1
+Gerrards Cross,35,1,Other,1
+Kylemore,34,1,Other,1
+Bournemouth East,33,1,South East,1
+Shirley / Wickham,33,1,Other,1
+Purley,32,1,Other,1
+Galway,30,2,Other,2
+Taplow and Burnham,28,1,Other,1
+Mulhuddart,28,1,Other,1
+Dudley,28,2,Other,2
+Grays,28,1,Other,1
+Southall,28,1,Other,1
+Chesham,28,1,Other,1
+Maidenhead,27,1,South East,1
+Stockport/Heaton Moor,26,1,Other,1
+Hitchin,26,1,Other,1
+Sevenoaks,26,2,Other,2
+Altrincham and Hale,23,1,Other,1
+Oakwood and Chapeltown,23,1,Other,1
+Stanmore,22,1,Other,1
+"Dun laoghaire, Dalkey, Killiney",22,1,Other,1
+Beeston,21,1,Other,1
+Sheffield,18,1,North,1
+Leyton,17,1,Other,1
+East Barnet,17,1,London,1
+Rotherham,17,1,Other,1
+Eastleigh Central,16,1,London,1
+Saltdean,16,2,Other,1
+Borehamwood,16,1,Other,1
+Portsmouth,15,1,South East,1
+Woolwich,15,1,Other,1
+Farnborough,14,1,Other,1
+Belfast,14,1,Other,1
+Orpington,13,1,Other,1
+Greater Leeds,13,1,North,1
+Crystal Palace / Penge,11,1,Other,1
+Belfast Central,11,1,London,1
+Slough,11,1,South East,1
+Hillfields,10,1,Other,1
+Maidstone,9,1,South East,1
+Waterloo & Southbank,9,2,Other,2
+Epping,9,1,Other,1
+Belfast East,8,1,Other,1
+Leatherhead,7,1,Other,1
+Glasgow Centre East,6,1,Scotland,1
+New Earswick and Huntington,5,1,Other,1
+Letchworth Garden City,4,1,Other,1
+Port Solent,3,1,Other,1
+Euston,2,1,Other,1

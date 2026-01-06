@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-01-06T12:59:18.528152",
+  "summary": {
+    "total_dinneroo_orders": 0,
+    "total_full_history_orders": 799935,
+    "identified_family_customers": 0,
+    "regions_analyzed": 0
+  },
+  "cannibalization_analysis": {
+    "dinneroo_day_distribution": {},
+    "non_dinneroo_day_distribution": {},
+    "cannibalization_risk": "Unknown"
+  }
+}

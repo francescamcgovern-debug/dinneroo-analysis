@@ -1,0 +1,18 @@
+Metric,Value,Notes
+Total FTT Zones Analyzed,100,Zones with 3+ partners
+MVP Ready Zones,42,42% of analyzed zones
+Zones Needing Work,58,Missing cuisines or partners
+Required Partners per Zone,5+,Minimum for MVP status
+Required Cuisines per Zone,5+,"Italian, Indian, Japanese/Asian, Chicken, Thai/Vietnamese"
+Required Repeat Rate,35%+,Primary success metric
+Required Rating,4.5+,Deliveroo standard
+Top MVP Zone #1,Clapham,"2349 orders, 9 cuisines"
+Top MVP Zone #2,Islington,"2262 orders, 8 cuisines"
+Top MVP Zone #3,Brighton Central,"1734 orders, 8 cuisines"
+Top MVP Zone #4,Oxford,"1501 orders, 5 cuisines"
+Top MVP Zone #5,Cambridge,"1403 orders, 7 cuisines"
+Priority Gap Zone #1,Finsbury Park / Harringay / Crouch End,"Missing: Japanese/Asian, Italian, Thai/Southeast Asian"
+Priority Gap Zone #2,Brockley / Forest Hill,"Missing: Italian, Thai/Southeast Asian"
+Priority Gap Zone #3,Canning Town,"Missing: Japanese/Asian, Vietnamese, Italian"
+Priority Gap Zone #4,Surrey Quays,"Missing: Japanese/Asian, Vietnamese, Italian"
+Priority Gap Zone #5,Wapping and Mile End,"Missing: Japanese/Asian, Vietnamese, Italian"

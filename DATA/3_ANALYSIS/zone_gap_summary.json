@@ -1,0 +1,386 @@
+{
+  "total_zones": 100,
+  "mvp_ready": 42,
+  "needs_work": 58,
+  "priority_breakdown": {
+    "High": 44,
+    "Medium": 35,
+    "Low": 21
+  },
+  "mvp_zones": [
+    {
+      "zone": "Clapham",
+      "region": "London",
+      "orders": 2349,
+      "cuisines_count": 9,
+      "dish_coverage": "85%"
+    },
+    {
+      "zone": "Islington",
+      "region": "London",
+      "orders": 2262,
+      "cuisines_count": 8,
+      "dish_coverage": "77%"
+    },
+    {
+      "zone": "Brighton Central",
+      "region": "London",
+      "orders": 1734,
+      "cuisines_count": 8,
+      "dish_coverage": "92%"
+    },
+    {
+      "zone": "Oxford",
+      "region": "South East",
+      "orders": 1501,
+      "cuisines_count": 5,
+      "dish_coverage": "69%"
+    },
+    {
+      "zone": "Cambridge",
+      "region": "South East",
+      "orders": 1403,
+      "cuisines_count": 7,
+      "dish_coverage": "92%"
+    },
+    {
+      "zone": "Lewisham",
+      "region": "London",
+      "orders": 1358,
+      "cuisines_count": 5,
+      "dish_coverage": "62%"
+    },
+    {
+      "zone": "Milton Keynes",
+      "region": "South East",
+      "orders": 1332,
+      "cuisines_count": 7,
+      "dish_coverage": "92%"
+    },
+    {
+      "zone": "Reading",
+      "region": "South East",
+      "orders": 1318,
+      "cuisines_count": 6,
+      "dish_coverage": "92%"
+    },
+    {
+      "zone": "Wimbledon",
+      "region": "London",
+      "orders": 1314,
+      "cuisines_count": 7,
+      "dish_coverage": "69%"
+    },
+    {
+      "zone": "East Central",
+      "region": "London",
+      "orders": 1280,
+      "cuisines_count": 8,
+      "dish_coverage": "77%"
+    },
+    {
+      "zone": "Chiswick",
+      "region": "London",
+      "orders": 1240,
+      "cuisines_count": 5,
+      "dish_coverage": "62%"
+    },
+    {
+      "zone": "Notting Hill / Paddington",
+      "region": "London",
+      "orders": 1226,
+      "cuisines_count": 7,
+      "dish_coverage": "69%"
+    },
+    {
+      "zone": "Wembley",
+      "region": "Other",
+      "orders": 1202,
+      "cuisines_count": 7,
+      "dish_coverage": "77%"
+    },
+    {
+      "zone": "Bristol",
+      "region": "South West",
+      "orders": 1173,
+      "cuisines_count": 6,
+      "dish_coverage": "85%"
+    },
+    {
+      "zone": "Kingston",
+      "region": "London",
+      "orders": 1156,
+      "cuisines_count": 7,
+      "dish_coverage": "69%"
+    },
+    {
+      "zone": "Canary Wharf",
+      "region": "Other",
+      "orders": 1122,
+      "cuisines_count": 5,
+      "dish_coverage": "54%"
+    },
+    {
+      "zone": "Norwich",
+      "region": "South East",
+      "orders": 1050,
+      "cuisines_count": 5,
+      "dish_coverage": "62%"
+    },
+    {
+      "zone": "Guildford",
+      "region": "South East",
+      "orders": 969,
+      "cuisines_count": 6,
+      "dish_coverage": "69%"
+    },
+    {
+      "zone": "Hammersmith / Shepherd's Bush",
+      "region": "London",
+      "orders": 962,
+      "cuisines_count": 6,
+      "dish_coverage": "69%"
+    },
+    {
+      "zone": "Ealing",
+      "region": "London",
+      "orders": 904,
+      "cuisines_count": 5,
+      "dish_coverage": "77%"
+    }
+  ],
+  "zones_needing_attention": [
+    {
+      "zone": "Finsbury Park / Harringay / Crouch End",
+      "region": "London",
+      "orders": 1534,
+      "cuisines_count": 3,
+      "missing_essential_cuisines": [
+        "Japanese/Asian",
+        "Italian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "High"
+    },
+    {
+      "zone": "Brockley / Forest Hill",
+      "region": "London",
+      "orders": 1478,
+      "cuisines_count": 3,
+      "missing_essential_cuisines": [
+        "Italian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "Medium"
+    },
+    {
+      "zone": "Canning Town",
+      "region": "Other",
+      "orders": 1314,
+      "cuisines_count": 3,
+      "missing_essential_cuisines": [
+        "Japanese/Asian",
+        "Vietnamese",
+        "Italian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "High"
+    },
+    {
+      "zone": "Surrey Quays",
+      "region": "Other",
+      "orders": 1139,
+      "cuisines_count": 3,
+      "missing_essential_cuisines": [
+        "Japanese/Asian",
+        "Vietnamese",
+        "Italian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "High"
+    },
+    {
+      "zone": "Wapping and Mile End",
+      "region": "Other",
+      "orders": 961,
+      "cuisines_count": 4,
+      "missing_essential_cuisines": [
+        "Japanese/Asian",
+        "Vietnamese",
+        "Italian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "High"
+    },
+    {
+      "zone": "Wandsworth",
+      "region": "London",
+      "orders": 853,
+      "cuisines_count": 3,
+      "missing_essential_cuisines": [
+        "Vietnamese",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "Medium"
+    },
+    {
+      "zone": "Hampstead",
+      "region": "Other",
+      "orders": 797,
+      "cuisines_count": 4,
+      "missing_essential_cuisines": [
+        "Vietnamese",
+        "Italian"
+      ],
+      "recruitment_priority": "Medium"
+    },
+    {
+      "zone": "Edinburgh Central",
+      "region": "London",
+      "orders": 722,
+      "cuisines_count": 3,
+      "missing_essential_cuisines": [
+        "Japanese/Asian",
+        "Indian"
+      ],
+      "recruitment_priority": "Medium"
+    },
+    {
+      "zone": "South Kensington",
+      "region": "London",
+      "orders": 676,
+      "cuisines_count": 4,
+      "missing_essential_cuisines": [
+        "Japanese/Asian",
+        "Vietnamese",
+        "Indian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "High"
+    },
+    {
+      "zone": "Stratford",
+      "region": "London",
+      "orders": 665,
+      "cuisines_count": 4,
+      "missing_essential_cuisines": [
+        "Indian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "Medium"
+    },
+    {
+      "zone": "Bournemouth",
+      "region": "South East",
+      "orders": 634,
+      "cuisines_count": 3,
+      "missing_essential_cuisines": [
+        "Indian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "Medium"
+    },
+    {
+      "zone": "Bracknell",
+      "region": "Other",
+      "orders": 585,
+      "cuisines_count": 4,
+      "missing_essential_cuisines": [
+        "Vietnamese",
+        "Indian"
+      ],
+      "recruitment_priority": "Medium"
+    },
+    {
+      "zone": "Edgbaston",
+      "region": "Other",
+      "orders": 574,
+      "cuisines_count": 3,
+      "missing_essential_cuisines": [
+        "Japanese/Asian",
+        "Indian"
+      ],
+      "recruitment_priority": "Medium"
+    },
+    {
+      "zone": "St Albans",
+      "region": "South East",
+      "orders": 559,
+      "cuisines_count": 4,
+      "missing_essential_cuisines": [
+        "Vietnamese",
+        "Indian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "High"
+    },
+    {
+      "zone": "Salford",
+      "region": "Other",
+      "orders": 535,
+      "cuisines_count": 4,
+      "missing_essential_cuisines": [
+        "Vietnamese",
+        "Indian"
+      ],
+      "recruitment_priority": "Medium"
+    },
+    {
+      "zone": "Croydon",
+      "region": "London",
+      "orders": 519,
+      "cuisines_count": 3,
+      "missing_essential_cuisines": [
+        "Vietnamese",
+        "Indian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "High"
+    },
+    {
+      "zone": "Windsor",
+      "region": "South East",
+      "orders": 517,
+      "cuisines_count": 4,
+      "missing_essential_cuisines": [
+        "Vietnamese",
+        "Indian"
+      ],
+      "recruitment_priority": "Medium"
+    },
+    {
+      "zone": "Cheltenham",
+      "region": "South West",
+      "orders": 512,
+      "cuisines_count": 4,
+      "missing_essential_cuisines": [
+        "Indian"
+      ],
+      "recruitment_priority": "Low"
+    },
+    {
+      "zone": "Basingstoke",
+      "region": "South East",
+      "orders": 483,
+      "cuisines_count": 3,
+      "missing_essential_cuisines": [
+        "Vietnamese",
+        "Indian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "High"
+    },
+    {
+      "zone": "Southampton",
+      "region": "South East",
+      "orders": 470,
+      "cuisines_count": 4,
+      "missing_essential_cuisines": [
+        "Vietnamese",
+        "Indian",
+        "Thai/Southeast Asian"
+      ],
+      "recruitment_priority": "High"
+    }
+  ]
+}

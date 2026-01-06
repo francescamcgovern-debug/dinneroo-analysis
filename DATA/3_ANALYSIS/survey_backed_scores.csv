@@ -1,0 +1,995 @@
+dish_clean,total_orders,kid_total,kid_friendly_measured,adult_total,adult_appeal_measured,portion_total,portion_flexibility_measured,value_at_25_measured,balanced_measured
+0,1,,,1.0,1.0,1.0,1.0,,
+1,3,,,3.0,3.0,3.0,1.0,1.0,
+"2 adult pho, 2 kids egg fried rice",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+2 curries and 2 noodles,1,,,1.0,5.0,1.0,5.0,,
+"2 katsus, 1 teriyaki and 1 spicy chicken",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+2 pho + 2 noodles,1,1.0,1.0,1.0,5.0,1.0,5.0,,5.0
+2 pho and 2 kids fried rice,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"2 pho soups, egg fried rice and noodles",1,,,1.0,1.0,1.0,5.0,,5.0
+"2 pho, children's vegetarian rice and vegetarian noodles",1,1.0,5.0,1.0,1.0,1.0,1.0,5.0,5.0
+"2 phos, 2 kids noodles",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+2 pizzas plus 2 sides,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+2 x chicken and rice and 2 x chicken nuggets and chips,1,1.0,1.0,1.0,1.0,1.0,1.0,,
+"2 x chicken curry and rice, 2 x chicken noodles & prawn crackers and wings",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+2 x spare ribs and house rice and boiled rice,1,,,1.0,5.0,1.0,5.0,,
+"2 x tofu mushroom curry, kids chicken and noodles, kids chicken and egg fried rice, summer rolls (extra)",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+"2x chicken alfredo, lasagne & mac & cheese",1,,,1.0,5.0,1.0,5.0,5.0,
+2x chicken poke bowls & 2x salmon poke bowls,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+2x chicken soup. 1x fried rice. 1x noodles,1,,,1.0,5.0,1.0,5.0,5.0,
+"2x mac n cheese, 2x chicken alfredo",1,,,1.0,5.0,1.0,5.0,5.0,
+2x pho and 2x chicken fried rice,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+"2x pho, fried rice and noodles",1,,,1.0,5.0,1.0,5.0,5.0,
+"2x spicy chicken pho, chicken wok noodles, chicken noodle soup",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+3,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+3 different pastas,1,,,1.0,1.0,1.0,1.0,,
+4,4,1.0,1.0,4.0,4.0,4.0,4.0,2.0,
+4 bowls,1,,,1.0,5.0,1.0,5.0,5.0,
+"4 box meals - chicken teriyaki, tofu, katsu curry",1,,,1.0,5.0,1.0,5.0,,
+4 different sushi platters,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+4 noodles and chicken,1,,,1.0,5.0,1.0,5.0,,
+4 rice bowls,1,,,1.0,5.0,1.0,5.0,5.0,
+4 rice boxes for £20,1,,,1.0,5.0,1.0,5.0,5.0,
+4 x chow mein with sweet chilli chicken,1,,,1.0,5.0,1.0,5.0,5.0,
+"a 9 or 10 hour broth, family dinneroo from cocotte, pulled chicken with salad and garlic potatoes and 4 sauces",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"a baked pasta dish, and a baked vegetarian lasagna",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"a chicken and rice dish, chicken rolls, baba ganoush, hummus, fatoush salad, flat bread",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+a curry and black dal family deliverooe,1,1.0,1.0,1.0,5.0,1.0,5.0,,
+a fez combinations,1,,,1.0,5.0,1.0,5.0,,
+a lot! i can't remember,1,1.0,1.0,1.0,5.0,1.0,5.0,,
+a set for 4,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"adult noodle soup x 2, kids noodles and kids rice - all with chicken",1,1.0,1.0,1.0,5.0,1.0,5.0,,
+"aioli chicken, satay chicken, 2 kids meals",1,,,1.0,5.0,1.0,5.0,,
+all the family dishes from the menu,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"amba chicken, broccoli, cauliflower,",1,,,1.0,5.0,1.0,1.0,,5.0
+"amba chicken, farmer grains, sweet potato, mac and cheese",1,,,1.0,5.0,1.0,5.0,5.0,
+"amba chicken, farmer grains, sweet potato, mac and cheese, miso aubergine",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"amba chicken, sesame cabbage, farmer grains, broccoli, mac & cheese",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+american pizza and pesto pasta,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"american pizza, salad and tomato and mozzarella pasta",1,,,1.0,5.0,1.0,5.0,5.0,
+americano pizza and lasagna,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+awadhi jackfruit biryani,1,,,1.0,5.0,1.0,5.0,5.0,
+azteca,1,,,1.0,5.0,1.0,1.0,5.0,5.0
+beef and chicken pho i think.,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+beef brisket,1,,,1.0,5.0,1.0,5.0,,
+beef brisket pho,2,1.0,1.0,2.0,2.0,2.0,2.0,2.0,
+beef brisket pho noodle soup,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"beef brisket pho, noodles and chicken x2",1,,,1.0,5.0,1.0,5.0,,
+"beef brisket pho, spicy chicken pho, chicken egg fried rice, chicken noodle",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"beef brisket phos, 2 children fried rice",1,,,1.0,5.0,1.0,5.0,5.0,
+"beef brisket, mushroom and tofu pho, egg fried rice",1,1.0,5.0,1.0,5.0,1.0,1.0,,
+beef chilli and chicken fajitas,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+beef chilli and vegetable chilli,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+beef curry,1,,,1.0,5.0,1.0,5.0,,
+"beef curry, wok fried noodles",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+beef curry/ chicken curry/ egg fried rice and noodles and chicken,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+"beef noodle soup, spicy chicken noodle soup, fried noodles, fried rice",1,,,1.0,5.0,1.0,1.0,,5.0
+beef pho,3,2.0,1.0,3.0,5.0,3.0,1.0,5.0,3.0
+beef pho and kids rice noodles,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+beef pho and rice,1,,,1.0,5.0,1.0,1.0,,
+"beef pho soup, chicken soup",1,,,1.0,5.0,1.0,1.0,,
+beef pho x2 chicken fried rice and chicken noodles,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"beef pho x2, chicken pho and noodles",1,,,1.0,5.0,1.0,5.0,,5.0
+"beef pho, chicken pho, chicken noodles",1,,,1.0,5.0,1.0,5.0,,
+"beef pho, chicken pho, fried rice ad fried noodles",1,,,1.0,5.0,1.0,5.0,,
+"beef pho, chicken pho, fried rice chicken, noodles chicken, prawn crackers",1,,,1.0,5.0,1.0,5.0,,5.0
+"beef pho, spicy beef pho, kids chicken pho, kids pad thai",1,,,1.0,5.0,1.0,5.0,5.0,
+"beef pho, tofu pho, egg fried rice",1,,,1.0,5.0,1.0,5.0,5.0,
+beef poh,1,,,1.0,5.0,1.0,1.0,,
+"beef ramen, kids rice and noodle dish",1,,,1.0,5.0,1.0,5.0,5.0,
+berry biryani,1,,,1.0,5.0,1.0,5.0,,
+berry chicken biriyani,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+biriyani,1,,,1.0,5.0,1.0,1.0,,
+biriyani meal deal. very good.,1,,,1.0,5.0,1.0,5.0,5.0,
+"biriyani, dhal and roti",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+biryani,7,3.0,1.0,7.0,3.0,7.0,2.0,2.0,1.0
+biryani family meal,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+biryani with daal and raita,1,,,1.0,5.0,1.0,5.0,5.0,
+"biryani, daal",1,,,1.0,5.0,1.0,5.0,,
+bit of everything,1,,,1.0,5.0,1.0,5.0,,
+black daal and ruby chicken,1,,,1.0,5.0,1.0,5.0,5.0,
+"blackbean rice box, chicken satay rice box, kids chicken rice box, kids chicken nuggets, fries.",1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+"bonfire chicken, kids squid and kids pad thai",1,1.0,5.0,1.0,1.0,1.0,1.0,5.0,
+"brazilian beans and rice, satay chicken and rice, falafel and rice, aioli chicken and rice",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+brisket curry,1,,,1.0,5.0,1.0,5.0,,
+"brisket curry, chicken curry, 2x kids egg fried rice",1,,,1.0,5.0,1.0,5.0,5.0,
+"brisket noodle soup x 2, rice with chicken, noodles with chicken.",1,,,1.0,5.0,1.0,5.0,5.0,
+britannia biryani,1,1.0,1.0,1.0,5.0,1.0,1.0,,5.0
+britannia chicken biryani meal,1,,,1.0,5.0,1.0,1.0,5.0,
+british biriyani,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+briyani,1,,,1.0,1.0,1.0,5.0,,
+bundle,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+butter chicken,10,5.0,2.0,10.0,4.0,10.0,3.0,2.0,
+butter chicken family meal,1,,,1.0,5.0,1.0,5.0,5.0,
+butter chicken rice naan chips,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+butter chicken set,1,,,1.0,5.0,1.0,5.0,,
+butter chicken £25 family deal,1,,,1.0,1.0,1.0,1.0,,
+butter ruby family meal,1,,,1.0,5.0,1.0,1.0,,
+byriani chicken,2,1.0,1.0,2.0,5.0,2.0,5.0,2.0,
+can't rem,1,1.0,5.0,1.0,1.0,1.0,1.0,5.0,
+can't remember,1,,,1.0,1.0,1.0,1.0,,
+"can't remember all the names,, katsu, gyoza",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+can't remember the name but the £25 one,1,,,1.0,5.0,1.0,5.0,5.0,
+cauliflower green thai curry,1,,,1.0,5.0,1.0,1.0,,5.0
+"chargrilled chicken thigh with sticky rice, wok fried noodles, noodle soup x2",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+"chckn noodles, chicken shrimp fried rice",1,,,1.0,5.0,1.0,5.0,,
+cheese pasta with beef brisket,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"chichen and mushroom creamy pesto pasta for 2, lasagne for 2 garlic bread",1,,,1.0,5.0,1.0,5.0,5.0,
+chichen curry,2,2.0,2.0,2.0,5.0,2.0,2.0,2.0,
+chicke berry biriyani family dinner,1,,,1.0,5.0,1.0,1.0,5.0,
+chicken,13,5.0,3.0,13.0,3.0,13.0,3.0,1.0,1.0
+chicken aioli boxes and nuggets,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"chicken aioli, chicken nuggets and chips, chicken and rice, coleslaw, chips, brownie, lemon crunch, smoothie",1,1.0,5.0,1.0,1.0,1.0,5.0,5.0,5.0
+chicken alfredo pasta and rigatoni,1,,,1.0,1.0,1.0,1.0,5.0,
+"chicken alfredo, lasagna, and mac and cheese",1,,,1.0,5.0,1.0,5.0,5.0,
+"chicken alfredo, lasagne, garlic ciabatta",1,,,1.0,5.0,1.0,5.0,5.0,
+chicken and rice,2,2.0,2.0,2.0,5.0,2.0,5.0,5.0,2.0
+"chicken and roast potatoes, caesar salad",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+chicken and shrimp rice x 2 and one kids chicken rice and one kids chicken broth w noodles,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+chicken and side dishes,1,1.0,1.0,1.0,1.0,1.0,1.0,,
+chicken and sides,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken and sides (salad & potatoes),1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+chicken and vegan pho,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+chicken berry,2,1.0,5.0,2.0,5.0,2.0,5.0,5.0,
+chicken berry biryani,1,,,1.0,5.0,1.0,1.0,5.0,
+chicken berry britannia,1,,,1.0,5.0,1.0,1.0,5.0,
+chicken berry britannia - for the family,1,,,1.0,5.0,1.0,5.0,,5.0
+"chicken berry britannia - for the family, garlic naan, lamb chettinad",1,,,1.0,5.0,1.0,5.0,5.0,
+chicken berry britannia – for the family,1,,,1.0,5.0,1.0,5.0,5.0,
+"chicken berry britannia, black dall, masala paratha, warm aubergine chutney",1,,,1.0,5.0,1.0,5.0,5.0,
+"chicken berry, chicken biryani",1,,,1.0,5.0,1.0,5.0,,5.0
+chicken biriani and black lentil,1,,,1.0,5.0,1.0,5.0,,5.0
+chicken biriani and daal,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"chicken biriani, daal, rice, poppadoms, garlic naan",1,,,1.0,5.0,1.0,5.0,5.0,
+chicken biriyani,1,,,1.0,5.0,1.0,5.0,,
+"chicken biriyani, black daal, naan bread",1,,,1.0,5.0,1.0,5.0,,
+chicken biryani and house black daal,1,,,1.0,5.0,1.0,1.0,,
+chicken biryani dal makhai,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+"chicken biryani, daal, raita, papad",1,,,1.0,5.0,1.0,5.0,,
+chicken boxes and falafel,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken briyani,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+chicken byriani for family,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+chicken catsu,2,,,2.0,5.0,2.0,5.0,,
+chicken coconut and lemongrass curry,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+chicken coconut curry,1,,,1.0,5.0,1.0,1.0,5.0,5.0
+chicken coconut milk curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+chicken curry,3,,,3.0,5.0,3.0,5.0,5.0,1.0
+chicken curry and  daal,1,1.0,5.0,1.0,1.0,1.0,1.0,,
+chicken curry and dhal,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken curry and rice,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+chicken curry with rice,1,,,1.0,5.0,1.0,5.0,5.0,
+"chicken curry, beef ,curry, and chicken fried rice x2",1,,,1.0,5.0,1.0,5.0,,
+"chicken curry, beef brisket curry, fried rice",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"chicken curry, beef brisket curry, prawn crackers, egg fried rice, noodles",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"chicken curry, beef curry, chicken noodles and chicken egg fried rice",1,,,1.0,5.0,1.0,5.0,5.0,
+"chicken curry, beef curry, chicken pho & chicken noodles",1,,,1.0,5.0,1.0,1.0,,
+"chicken curry, beef curry, egg fried rice, wok fried noodles with chicken, crispy spring rolls",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"chicken curry, rice and veg",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"chicken curry, rice, dahl, poppadoms",1,,,1.0,5.0,1.0,5.0,5.0,
+"chicken egg fried rice, and thai rice bowl",1,1.0,1.0,1.0,1.0,1.0,1.0,5.0,
+chicken fajitas,2,2.0,5.0,2.0,5.0,2.0,5.0,,2.0
+chicken family meal,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"chicken fried rice, chicken noodle soup & chicken thigh rice",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+chicken green thai curry,1,,,1.0,1.0,1.0,1.0,,
+chicken katsu,25,18.0,3.0,25.0,5.0,25.0,5.0,2.0,
+chicken katsu and stir fry greens,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+chicken katsu currey,1,1.0,1.0,1.0,1.0,1.0,5.0,,
+chicken katsu curry,24,13.0,4.0,24.0,4.0,24.0,3.0,2.0,1.0
+chicken katsu curry and some sushi,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+chicken katsu curry bowl,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken katsu curry family portion,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken katsu curry for the family,1,,,1.0,5.0,1.0,1.0,5.0,
+chicken katsu curry with rice,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+chicken katsu family and chicken chile ramen,1,1.0,5.0,1.0,1.0,1.0,5.0,5.0,
+chicken katsu family bundle,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+chicken katsu family meal,5,3.0,5.0,5.0,5.0,5.0,3.0,3.0,
+"chicken katsu, beef brisket pho",1,,,1.0,5.0,1.0,1.0,5.0,
+"chicken katsu, firecracker chicken, teriyaki chicken",1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+"chicken katsu, rice and greens",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"chicken katsu, teriyaki tofu, teriyaki chicken",1,,,1.0,5.0,1.0,5.0,,
+"chicken katsu, tofu teriyaki",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+chicken kutsu curry,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken lemongrass curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+chicken lemongrass curry rice,1,1.0,1.0,1.0,5.0,1.0,1.0,,
+chicken meal,2,2.0,2.0,2.0,5.0,2.0,5.0,5.0,2.0
+chicken mix and match deal,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"chicken noodle (kids), chicken stir fry (kids), chicken pho, beef pho",1,,,1.0,1.0,1.0,5.0,,
+chicken nuggests kids meals and chicken rice boxes,1,1.0,1.0,1.0,5.0,1.0,5.0,,5.0
+"chicken pad kra pao, moo ping, massaman curry",1,,,1.0,5.0,1.0,5.0,5.0,
+chicken pad thai,2,,,2.0,5.0,2.0,5.0,5.0,
+"chicken phi, wok fried noodles with chicken and chicken + prawn fried rice, pork spring rolls",1,,,1.0,5.0,1.0,5.0,,
+chicken pho,1,,,,,,,,5.0
+"chicken pho noodles, chicken and egg fried rice",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+"chicken pho, beef pho, chicken and rice, chicken noodles",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"chicken pho, beef pho, chicken noodle soup, chicken fried rice",1,,,1.0,5.0,1.0,5.0,5.0,
+"chicken pho, beef pho, kids chicken fried noodle, kids chicken fried rice",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+"chicken pho, brisket pho, spring rolls, chicken curry dish",1,,,1.0,5.0,1.0,5.0,5.0,
+"chicken pho, spicy tofu & mushroom pho, egg fried rice, tofu noodles",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"chicken phosoup, beef pho soup, chicken fried rice, wok fried tofu and mushroom noodles plus extra dish ofmushroom and tofu noodles and chinese leaf",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+chicken platter,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+chicken rice bowl,1,,,1.0,1.0,1.0,5.0,,
+"chicken rice boxes, falafel box, a kids chicken meal, peas and coleslaw",1,1.0,1.0,1.0,5.0,1.0,5.0,,
+"chicken rice, chicken noodles",1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+"chicken rice, pho, noodle soup",1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+chicken ruby,20,5.0,3.0,20.0,5.0,20.0,4.0,2.0,
+chicken ruby and black daahl,2,,,2.0,5.0,2.0,5.0,2.0,
+chicken ruby and dal,2,,,2.0,5.0,2.0,5.0,5.0,2.0
+chicken ruby and the £25 meal,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken ruby curry meal,1,,,1.0,5.0,1.0,5.0,5.0,
+"chicken ruby dinner, samosas, sdalad",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+chicken ruby dinneroo,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken ruby family,2,1.0,1.0,2.0,5.0,2.0,1.0,,
+chicken ruby family and monkfish curry,1,,,1.0,5.0,1.0,5.0,,
+chicken ruby family deal,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken ruby family dinner,3,2.0,5.0,3.0,5.0,3.0,5.0,5.0,
+chicken ruby family dinneroo,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken ruby for the family,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken ruby meal,2,1.0,5.0,2.0,5.0,2.0,5.0,2.0,
+chicken ruby meal and also an extra garlic naan and crumble for dessert,1,,,1.0,5.0,1.0,1.0,5.0,
+chicken ruby meal and chicken biyrani meal,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+chicken ruby murrary family offer,1,,,1.0,5.0,1.0,5.0,,
+chicken ruby rice daal naan,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken ruby rice dal,1,,,1.0,5.0,1.0,5.0,5.0,
+"chicken ruby, basmati rice, black dahl and popadoms",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"chicken ruby, black daal, rice",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"chicken ruby, broccoli salad",1,,,1.0,5.0,1.0,5.0,5.0,
+"chicken ruby, daal, rice, pau bhaji",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"chicken ruby, jackfruit",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"chicken ruby, naan, daal",1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+"chicken salad, chicken thigh bowl, prawn crackers, mushroom and tofu soup",1,,,1.0,5.0,1.0,5.0,,5.0
+"chicken salad, kids pho and kids chicken noodles",1,1.0,5.0,1.0,5.0,1.0,1.0,,
+"chicken salad, rice bowl, 2 x noodles",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+chicken schwarma,1,,,1.0,5.0,1.0,5.0,5.0,
+chicken shawarma,7,4.0,4.0,7.0,4.0,7.0,2.0,3.0,3.0
+chicken shawarma dinneroo platter,2,1.0,5.0,2.0,5.0,2.0,5.0,2.0,5.0
+chicken shawarma family meal,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"chicken shawarma meal, fries",1,1.0,5.0,1.0,1.0,1.0,1.0,5.0,
+chicken shawarma platter,3,1.0,1.0,3.0,5.0,3.0,5.0,1.0,5.0
+chicken shwarma,1,1.0,1.0,1.0,5.0,1.0,5.0,,5.0
+chicken teriyaki and katsu,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+chicken teriyaki poke bowls & salmon tatare poke bowls,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"chicken teriyaki, spicy chicken teriyaki, veg gyoza noodle soup, chili chicken gyoza noodle soup",1,1.0,1.0,1.0,1.0,1.0,5.0,,
+"chicken thai green curry, chicken pad thai, salt & pepper squid",1,,,1.0,5.0,1.0,5.0,,
+"chicken thigh bowl, fried rice, noodles",1,,,1.0,5.0,1.0,5.0,,5.0
+chicken with caesar salad,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"chicken, chip",1,,,1.0,5.0,1.0,5.0,,
+"chicken, salad, potatoes",1,,,1.0,5.0,1.0,1.0,5.0,5.0
+chickena and rice bowls,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+chiken biryani,1,,,1.0,5.0,1.0,1.0,5.0,
+chiken ruby and naan bread and mango lassi,1,,,1.0,5.0,1.0,5.0,5.0,
+children's pho x 2 and noodle dish and rice dish,1,,,1.0,1.0,1.0,5.0,5.0,
+chilli and fajitas,2,1.0,5.0,2.0,5.0,2.0,5.0,2.0,2.0
+"chilli basil chicken, pad thai, sticky chicken",1,,,1.0,5.0,1.0,5.0,5.0,
+chilli chicken and rice,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+classic bowl range,1,,,1.0,5.0,1.0,5.0,5.0,
+"classic chicken curry, classic beef brisket curry, wok-fried noodles with chicken, and mini chicken noodle soup",1,,,1.0,5.0,1.0,5.0,5.0,
+classic tofu curry,1,,,1.0,5.0,1.0,5.0,,
+coconut and lemongrass chicken curry. duck and mushrooms bao.,1,,,1.0,1.0,1.0,5.0,5.0,5.0
+coconut chicken curry,1,1.0,1.0,1.0,1.0,1.0,1.0,5.0,
+coconut chicken curry. plus additional kids chicken soba & kids chicken ramen. plus sides.,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,5.0
+coconut curry,2,,,2.0,2.0,2.0,2.0,2.0,2.0
+coconut milk chicken curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"cocotte - chicken/potatoes/caesar pe - lasagne, pasta pollo and mozerella garlic bread",1,,,1.0,5.0,1.0,5.0,5.0,
+cottage pie,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+cottage pie and chicken,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+crispy chicken,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+crispy chicken dinner,1,1.0,1.0,1.0,5.0,1.0,1.0,,
+"crispy chicken wings, pho the whole fam",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+curries and noodles,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"curries, rice with eggs",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+curry,21,12.0,4.0,21.0,4.0,21.0,4.0,2.0,1.0
+curry & rice deal,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+curry and kids noodles,2,2.0,5.0,2.0,5.0,2.0,5.0,2.0,
+curry and pho,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+curry and stir fry,2,2.0,5.0,2.0,5.0,2.0,5.0,5.0,2.0
+curry dishes (don't remember exactly),1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+curry family offer and extras on the side,1,,,1.0,5.0,1.0,5.0,,
+curry katsu,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+curry katsu rice and fried veg,1,,,1.0,5.0,1.0,1.0,5.0,
+curry night,2,,,2.0,5.0,2.0,5.0,2.0,
+"curry night deal - beef brisket curry, chicken curry, wok stir-fried noodles, prawn crackers",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+curry's rice and noodles,1,1.0,1.0,1.0,5.0,1.0,1.0,5.0,
+"curry,  rice and noodles",1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+"curry, breads, daal, pau bhaju and rice",1,,,1.0,5.0,1.0,5.0,5.0,
+"curry, dhal, rice",1,1.0,1.0,1.0,5.0,1.0,1.0,5.0,
+"curry, noodles, pho",1,1.0,1.0,1.0,5.0,1.0,5.0,,
+"curry, pad thai",1,,,1.0,5.0,1.0,5.0,5.0,
+"curry, rice, ramen",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"curry, sticky chicken and noodles",1,,,1.0,5.0,1.0,5.0,,
+daal & biryani,1,,,1.0,5.0,1.0,5.0,,
+"daal x2, biriani",1,,,1.0,5.0,1.0,5.0,5.0,
+"daal, biryani, samosas",1,,,1.0,5.0,1.0,5.0,5.0,
+"daal, chicken ruby",1,,,1.0,5.0,1.0,1.0,,
+dal and paneer,1,,,1.0,5.0,1.0,5.0,5.0,
+delhi chicken,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+dinner meal with chicken,1,,,1.0,1.0,1.0,1.0,5.0,
+dishoom chicken ruby – for the family,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+dishoom matter paneer-for the family,1,,,1.0,5.0,1.0,5.0,5.0,
+don't remember,3,,,3.0,3.0,3.0,1.0,5.0,1.0
+don't remember exactly - i think fried rice and soup,1,,,1.0,5.0,1.0,5.0,5.0,
+dough balls,1,,,1.0,5.0,1.0,5.0,,
+each type of fajita and the chicken quesadillas,1,1.0,1.0,1.0,5.0,1.0,5.0,,5.0
+"egg fried rice with chicken, wok-fried noodles with chicken, spicy beef brisket pho noodle soup, spicy chicken pho noodle soup, prawn crackera",1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+"egg fried rice, chicken rice bowl, noodles",1,,,1.0,5.0,1.0,5.0,,
+"egg fried rice, vegetable pho and a curry",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+egg fried rice/ chicken pho/ chicken salad and pork rice bowl,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+egg noodles and korean chicken,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+fajita,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+fajita family meal for 3,1,,,1.0,5.0,1.0,5.0,5.0,
+fajita family of three,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+fajita for 3 and churros,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+fajitas,7,3.0,5.0,7.0,5.0,7.0,4.0,3.0,2.0
+fajitas for 3,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+fajitas for 4,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+falafel dinneroo platter,1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+falafel platter,1,,,1.0,5.0,1.0,1.0,5.0,5.0
+family,2,1.0,1.0,2.0,5.0,2.0,5.0,2.0,
+family - chicken katsu curry,1,,,1.0,5.0,1.0,5.0,5.0,
+family 1,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+family box mix meal,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+family bundle,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+family bundle pho,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+family caesar,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+family chicken coconut + lemongrass curry,4,2.0,5.0,4.0,5.0,4.0,5.0,5.0,1.0
+family chicken coconut lemongrass curry,1,1.0,1.0,1.0,5.0,1.0,1.0,5.0,
+family chicken katsu,5,3.0,5.0,5.0,5.0,5.0,3.0,4.0,1.0
+family chicken katsu curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+family chicken ruby,1,,,1.0,5.0,1.0,5.0,5.0,
+family chicken schwarma and a burger,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+family chicken shawarma,2,2.0,2.0,2.0,5.0,2.0,5.0,5.0,5.0
+"family chicken shawarma, burger style fries",1,1.0,5.0,1.0,1.0,1.0,5.0,,
+family coconut curry chicken,1,,,1.0,5.0,1.0,1.0,5.0,
+family coconut lemongrass curry for 2 adults and 2 kids,1,,,1.0,5.0,1.0,5.0,,
+family curry,1,,,1.0,5.0,1.0,1.0,,5.0
+family curry meal,1,,,1.0,5.0,1.0,5.0,5.0,
+"family deal (cheese garlic bread, cheese pizza and tomato pasta)and a kids meal (dough balls, bolognaise, drink)",1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+family deal and salmon,1,1.0,1.0,1.0,5.0,1.0,1.0,,
+family deal butter chicken,1,,,1.0,5.0,1.0,5.0,,
+family deal vegetarian,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+family deal yellow curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+"family deal, dahl and jackfruit",1,,,1.0,5.0,1.0,5.0,,
+family dinerroo,1,,,1.0,5.0,1.0,5.0,5.0,
+family dinner,1,1.0,5.0,1.0,1.0,1.0,1.0,,
+"family dinner - 2 x pho, 2 x rice",1,,,1.0,5.0,1.0,5.0,,
+family dinner for £25,1,,,1.0,5.0,1.0,5.0,,
+family dinner x2,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+family fajita meal deal 4 pieces,1,,,1.0,5.0,1.0,5.0,5.0,
+family favourite feasts,1,1.0,5.0,1.0,1.0,1.0,1.0,5.0,
+family favourites feast,1,,,1.0,5.0,1.0,5.0,5.0,
+"family favourites feast, lemon & herb chicken wings",1,1.0,1.0,1.0,1.0,1.0,1.0,5.0,5.0
+family feast 1 and fries,1,,,1.0,1.0,1.0,1.0,,
+family feast for 2,1,,,1.0,5.0,1.0,5.0,,5.0
+family feast for 4,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+family feast one,1,,,1.0,5.0,1.0,1.0,,5.0
+"family feast which comes with a large pizza, a pasta and garlic. plus a additional pizza and brownies",1,1.0,1.0,1.0,1.0,1.0,5.0,,
+family green curry and pad thai,1,1.0,5.0,1.0,5.0,1.0,1.0,,
+family halloumi shawarma,1,1.0,1.0,1.0,5.0,1.0,5.0,,5.0
+family katsu,5,5.0,4.0,5.0,5.0,5.0,5.0,5.0,1.0
+family katsu chicken,2,1.0,5.0,2.0,5.0,2.0,5.0,5.0,
+family katsu chicken curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+family katsu curry,4,4.0,4.0,4.0,5.0,4.0,2.0,2.0,1.0
+family katsu dinner,1,1.0,5.0,1.0,1.0,1.0,1.0,5.0,5.0
+"family katsu, with rice & jasmine rice",1,1.0,1.0,1.0,5.0,1.0,1.0,5.0,5.0
+family mac and cheese,1,,,1.0,1.0,1.0,1.0,,
+family mac and cheese with brisket,1,,,1.0,5.0,1.0,5.0,5.0,
+family meal,8,5.0,4.0,8.0,4.0,8.0,3.0,4.0,
+family meal - deliveroo family meal katsu curry,1,,,1.0,1.0,1.0,1.0,5.0,
+family meal - harissa chicken,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,5.0
+family meal - katsu curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+family meal 1,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+family meal deal chicken katsu curry and chilli squid,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"family meal, the ruby murray and rice",1,,,1.0,5.0,1.0,5.0,,
+family no chicken bundle,1,1.0,1.0,1.0,1.0,1.0,1.0,5.0,
+family offer - red curry,1,1.0,5.0,1.0,1.0,1.0,5.0,,
+family pack,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+"family pasta deal, 2 large pasta's and a garlic bread",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+family pasta feast,1,,,1.0,1.0,1.0,1.0,,
+family pho and pizza,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+family pho bundle,1,,,1.0,5.0,1.0,5.0,,
+family pho deal,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"family pho deals, family curry deals",1,1.0,5.0,1.0,1.0,1.0,5.0,,
+family pizza deal,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+family pizza pasta,1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+family platter,1,1.0,1.0,1.0,5.0,1.0,1.0,5.0,
+family rice bowls,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+family ruby,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+family ruby chicken + samosas,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+family shawarma package,1,,,1.0,5.0,1.0,5.0,,
+family shepherds pie,1,,,1.0,5.0,1.0,5.0,5.0,
+family spicy chicken dinner combo,1,,,1.0,1.0,1.0,1.0,,
+"family spicy set- chicken and basil chilli, pad thai and sticky chicken.",1,,,1.0,1.0,1.0,1.0,,
+family sticky chicken bundle,1,,,1.0,5.0,1.0,5.0,5.0,
+family thai curry bundle,2,1.0,1.0,2.0,5.0,2.0,2.0,2.0,
+family thai option,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+family time coconut chicken,1,,,1.0,5.0,1.0,5.0,,
+family vegan katsu,1,,,1.0,5.0,1.0,5.0,5.0,
+family veggie feast,1,1.0,1.0,1.0,5.0,1.0,5.0,,5.0
+family yasai katsu,2,1.0,5.0,2.0,5.0,2.0,5.0,2.0,
+feast one (with caesar),1,,,1.0,1.0,1.0,1.0,,5.0
+feed family,1,1.0,1.0,1.0,1.0,1.0,1.0,,
+feed the family sushi deal (mostly salmon sushi),1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"fire cracker chicken, and katsu",1,,,1.0,5.0,1.0,5.0,5.0,
+fire crackers chicken and katsu curry,1,,,1.0,5.0,1.0,5.0,5.0,
+firecracker chicken,1,,,1.0,1.0,1.0,1.0,,
+firecracker chicken bowl,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"firecracker chicken, teriyaki chicken, chicken katsu curry",1,,,1.0,5.0,1.0,5.0,,
+firecracker rice bowl. satsuma curry rice bowl,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+forgot,1,,,1.0,1.0,1.0,1.0,,5.0
+four rices,1,,,1.0,5.0,1.0,5.0,5.0,
+fresh from the wok,2,,,2.0,2.0,2.0,5.0,5.0,2.0
+"fried chicken rice, broccoli and chili chicken",1,,,1.0,1.0,1.0,1.0,,
+fried rice,5,1.0,5.0,5.0,4.0,5.0,5.0,3.0,1.0
+fried rice x 4,1,,,1.0,5.0,1.0,5.0,5.0,
+"fried rice, chicken curry and sautéed noodles",1,,,1.0,5.0,1.0,5.0,5.0,
+"fried rice, pho",1,,,1.0,5.0,1.0,5.0,5.0,
+"fried rice, vegan pho, beef pho, fried noodles",1,,,1.0,5.0,1.0,5.0,5.0,
+fried rice/ wok noodles,1,1.0,5.0,1.0,1.0,1.0,1.0,5.0,
+from the wok,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,5.0
+garlic bread lasagne and a mushroom pasta,1,1.0,5.0,1.0,1.0,1.0,1.0,5.0,
+"garlic bread with mozzarella sharer, lasagna classica sharer, penne pasta sharer.",1,,,1.0,5.0,1.0,5.0,5.0,
+"garlic bread, 2 kids pizzas and 1 large pizza",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"garlic ciabatta, lasagna x 2, chicken alfredo and mac and cheese",1,,,1.0,5.0,1.0,5.0,5.0,
+gf garlic bread and lasagna,1,,,1.0,5.0,1.0,5.0,,
+gluten free pizza and pasta,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+goat,1,,,1.0,5.0,1.0,5.0,,
+good,1,1.0,1.0,1.0,5.0,1.0,1.0,,
+green chicken curry,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+green curry,2,2.0,5.0,2.0,5.0,2.0,2.0,,
+green curry pad thai,1,,,1.0,5.0,1.0,5.0,5.0,
+green curry rice massaman curry crackers,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+green thai curry and pad thai,1,,,1.0,5.0,1.0,1.0,5.0,
+grilled chicken bowls and children's chicken and noodle bowls,1,,,1.0,5.0,1.0,5.0,5.0,
+haha,1,,,1.0,5.0,1.0,5.0,,
+hainan chicken,1,,,1.0,5.0,1.0,5.0,,
+halloumi flatbreads,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+halloumi shawarma,4,2.0,2.0,4.0,5.0,4.0,5.0,2.0,
+hallumi shwarma,1,,,1.0,5.0,1.0,1.0,,
+"harissa chicken, grains, mac n cheese, kale miso slaw",1,,,1.0,5.0,1.0,5.0,,5.0
+"harissa chicken, sweet potato, mac and cheese, broccoli",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+honey chicken. fried rice. spring rolls,1,,,1.0,5.0,1.0,5.0,5.0,
+hot favourites (noodle and rice bowls),1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+i cant remember,1,1.0,1.0,1.0,1.0,1.0,1.0,5.0,
+i don't remember! a curry of some sort and some sides,1,,,1.0,5.0,1.0,1.0,,
+it's a curry night,1,,,1.0,5.0,1.0,5.0,5.0,
+it's in my order history...,1,,,1.0,5.0,1.0,5.0,,
+jackfruit biryani,1,,,1.0,1.0,1.0,1.0,,
+jackfruit biryani and house black daal,1,,,1.0,5.0,1.0,5.0,5.0,
+jackfruit biryani and naan,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+"jackfruit biryani, black dahl",1,,,1.0,5.0,1.0,1.0,,
+"jackfruit biryani, dal",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+kastu curry feast,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+katsu,28,17.0,4.0,28.0,4.0,28.0,3.0,2.0,1.0
+katsu and firecracker chicken,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+katsu and firecracker chicken rice bowls,1,,,1.0,5.0,1.0,5.0,5.0,
+katsu and pad thai,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"katsu bowl, firecracker chicken bowl, teriyaki chicken bowl, korean egg",1,,,1.0,5.0,1.0,5.0,5.0,
+katsu chicken,17,12.0,3.0,17.0,3.0,17.0,2.0,1.0,1.0
+katsu chicken and firecracker chicken,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+katsu chicken and some extras for my parents,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+katsu chicken curry,4,2.0,2.0,4.0,5.0,4.0,4.0,2.0,
+katsu chicken curry family meal and panchko prawns,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+katsu chicken family deal,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+katsu chicken rice,1,,,1.0,5.0,1.0,5.0,5.0,
+katsu chxikencjrru,1,,,1.0,5.0,1.0,1.0,5.0,
+katsu curries (family deal),1,1.0,5.0,1.0,1.0,1.0,1.0,,
+katsu curry,64,39.0,4.0,64.0,5.0,63.0,3.0,2.0,1.0
+katsu curry and chicken gyoza,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+katsu curry chicken,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+katsu curry chicken and chicken teriyaki and rice,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+katsu curry chicken family,1,,,1.0,5.0,1.0,5.0,5.0,
+katsu curry chicken family meal,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+katsu curry deal,1,1.0,5.0,1.0,1.0,1.0,1.0,5.0,
+katsu curry family,3,2.0,5.0,3.0,5.0,3.0,5.0,3.0,
+katsu curry family deal and a few little extras,1,,,1.0,5.0,1.0,5.0,5.0,
+katsu curry for 4,1,1.0,1.0,1.0,1.0,1.0,5.0,,
+katsu curry meal deal,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+katsu curry meals,1,1.0,1.0,1.0,5.0,1.0,5.0,,
+katsu curry offer,1,,,1.0,5.0,1.0,5.0,5.0,
+katsu curry order,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+katsu curry rice bowel firecracker chicken rice bowel teriyaki chicken rice bowel,1,,,1.0,5.0,1.0,5.0,5.0,
+katsu curry set,1,1.0,1.0,1.0,1.0,1.0,1.0,,
+"katsu curry, chicken skewers, chicken gyoza and three different sushi dishes",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"katsu curry, edamame beans and small ramenaken",1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+"katsu curry, thai curry, chips",1,,,1.0,1.0,1.0,5.0,5.0,
+katsu family,2,1.0,5.0,2.0,5.0,2.0,5.0,5.0,
+katsu family deal,1,,,1.0,5.0,1.0,1.0,5.0,
+katsu family dinner,1,,,1.0,5.0,1.0,5.0,5.0,
+katsu family dish,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+katsu family meal,3,2.0,5.0,3.0,5.0,3.0,5.0,1.0,1.0
+katsu meal,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+katsu rice bowls,1,,,1.0,5.0,1.0,5.0,,
+katsu yasai,1,,,1.0,5.0,1.0,1.0,5.0,
+katuse curry,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+"kids egg fried rice with chicken, kids mini chicken pho, 2 adult vietnamese curries",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"kids mild chicken massaman & jasmine rice (574 kcal), thai red curry vegetable & jasmine rice (771 kcal), kids sticky chicken (348 kcal)",1,,,1.0,5.0,1.0,5.0,5.0,
+"kids nuggets, aioli chicken, satay chicken and falafel bowl",1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,5.0
+ktsu chicken,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+large pizza and pasta sharer,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+"large pizza, pasta and garlic bread",1,,,1.0,5.0,1.0,5.0,,
+lasagna,4,3.0,1.0,4.0,4.0,4.0,4.0,1.0,
+lasagna + pasta,1,,,1.0,1.0,1.0,5.0,,
+lasagna and garlic bread,1,,,1.0,5.0,1.0,1.0,5.0,
+lasagna and macaroni and cheese.,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+lasagna and pasta bake,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+lasagna and pizza,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+lasagna and salad,1,,,1.0,5.0,1.0,5.0,5.0,
+lasagna family pack,1,,,1.0,5.0,1.0,5.0,5.0,
+lasagna meal for 4,1,,,1.0,5.0,1.0,1.0,5.0,5.0
+"lasagna, pesto and chicken penne pasta",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"lasagna, salad, large pizza, mozzarella garlic bread, lemon & herb chicken wings, chicken gougons",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"lasagna, tomato and basil pasta",1,1.0,5.0,1.0,1.0,1.0,5.0,,
+lasagna. pizza and salad,1,,,1.0,1.0,1.0,5.0,,
+lasagne,6,3.0,3.0,6.0,4.0,6.0,3.0,1.0,
+lasagne & chicken alfredo,1,,,1.0,5.0,1.0,5.0,5.0,
+"lasagne and chicken, mushroom & pesto pasta",1,,,1.0,5.0,1.0,5.0,5.0,
+lasagne and garlic pizza bread,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+lasagne and pepperoni pizza,1,,,1.0,5.0,1.0,5.0,5.0,
+lasagne carbonara and chicken alfredo,1,,,1.0,5.0,1.0,5.0,5.0,
+lasagne garlic bread,1,,,1.0,1.0,1.0,5.0,,
+lasagne x2 & garlic bread,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+lasagne x2 and salad,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"lasagne, and chicken alfredo",1,1.0,1.0,1.0,5.0,1.0,1.0,,
+"lasagne, cheesy garlic bread, american pizza",1,,,1.0,5.0,1.0,5.0,5.0,
+"lasagne, chicken pesto pasta, garlic bread",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"lasagne, garlic bread, chicken pesto pasta",1,,,1.0,5.0,1.0,5.0,,
+"lasagne, mac & cheese, chicken alfredo, rigatoni",1,,,1.0,1.0,1.0,5.0,5.0,
+"lasagne, pasta and garlic bread",2,,,2.0,5.0,2.0,5.0,5.0,
+"lasagne, pizza and garlic bread",1,,,1.0,1.0,1.0,5.0,5.0,
+lemon grass curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+lemongrass curries and rice,1,1.0,1.0,1.0,1.0,1.0,1.0,5.0,
+little rice bowls family bundle,1,1.0,1.0,1.0,1.0,1.0,1.0,5.0,5.0
+loads of different ones,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+mac + cheese & tomato red pepper rigatoni,1,,,1.0,5.0,1.0,5.0,,
+mac and  cheese,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+mac and brisket,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+mac and cheese,5,3.0,5.0,5.0,4.0,5.0,3.0,2.0,
+mac and cheese brisket,1,,,1.0,5.0,1.0,5.0,,
+mac and cheese with bacon,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+mac and cheese with brisket,2,2.0,2.0,2.0,5.0,2.0,5.0,,
+"mac and cheese with brisket, flatbread and a side of veg.",1,,,1.0,5.0,1.0,1.0,5.0,
+"mac and cheese with chargrilled chicken, with added bacon and onions",1,,,1.0,5.0,1.0,5.0,5.0,
+mac and cheese with chicken,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+mac and cheese with onion and bacon plus calamari,1,,,1.0,1.0,1.0,5.0,,
+"mac and cheese, chicken alfredo and tomato pasta",1,,,1.0,5.0,1.0,5.0,5.0,
+mac cheese,1,,,1.0,1.0,1.0,5.0,,
+mac n cheese,3,,,3.0,3.0,3.0,3.0,3.0,1.0
+mac n cheese with brisket. seasonal veg,1,,,1.0,5.0,1.0,5.0,5.0,
+"mac n cheese with chicken, calamari, corn ribs, loaded hash browns",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"mac n cheese, fries, chicken alfredo",1,1.0,5.0,1.0,1.0,1.0,1.0,,
+mac'n'cheese,2,1.0,5.0,2.0,5.0,2.0,5.0,,
+macaroni and chicken,1,,,1.0,1.0,1.0,5.0,,
+macaroni cheese,6,2.0,2.0,6.0,5.0,6.0,4.0,4.0,
+"macaroni cheese x2, lasagna & chicken al fredo",2,,,2.0,5.0,2.0,5.0,5.0,
+macaroni with chicken,1,,,1.0,1.0,1.0,5.0,,
+many,1,,,1.0,5.0,1.0,5.0,5.0,
+"margarita pizza, mozzarella garlic bread, chicken pesto pasta",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+margherita pizza and tomato pasta,1,1.0,5.0,1.0,5.0,1.0,1.0,,
+"margherita pizza, chicken and pesto pasta and cheesy garlic bread",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+marsh curry firecracker,1,1.0,1.0,1.0,1.0,1.0,1.0,,
+masai katsu curry,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+massaman curry,1,,,1.0,5.0,1.0,5.0,5.0,
+"massaman, pad thai and crispy chicken",1,,,1.0,5.0,1.0,1.0,5.0,
+matar paneer family dish,1,,,1.0,5.0,1.0,1.0,5.0,
+matar paneer meal,1,,,1.0,5.0,1.0,5.0,5.0,
+matta paneer meal,1,,,1.0,5.0,1.0,5.0,,
+mattar paneer,4,1.0,5.0,4.0,5.0,4.0,2.0,4.0,
+"mattar paneer, lentil daal",1,,,1.0,5.0,1.0,5.0,5.0,
+"mattar paneer, which came with black daal, rice, and an appetizer",1,,,1.0,5.0,1.0,1.0,,
+mattar panner for the family,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,5.0
+matter paneer,1,,,1.0,5.0,1.0,5.0,5.0,
+"matter paneer, daal, rice, popadum",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+meal 4,1,,,1.0,1.0,1.0,5.0,,
+meal deal,1,,,1.0,5.0,1.0,5.0,5.0,
+meal for 2,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+mini chicken rice with dumpling sides,1,,,1.0,5.0,1.0,1.0,5.0,
+mix & match family bundle,2,,,2.0,5.0,2.0,5.0,5.0,
+mix & match family dinner,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+mix and match family bowls,1,,,1.0,5.0,1.0,5.0,5.0,
+mix match bowls,1,,,1.0,5.0,1.0,5.0,,5.0
+mix n match rice bowl bundle,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+mix n match rice bowl bundle for four firecracker chicken rice bowl firecracker chicken rice bowl chicken teriyaki rice bowl katsu chicken rice bowl w duck spring rolls,1,,,1.0,1.0,1.0,5.0,5.0,
+mix n match rice bowls bundle for four: 2 chicken teriyaki rice bowl and 2 katsu chicken rice bowls,1,,,1.0,5.0,1.0,5.0,5.0,
+mix of 4,1,,,1.0,5.0,1.0,5.0,5.0,
+mix rice dish,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+mixed bundle for 4,2,1.0,5.0,2.0,5.0,2.0,2.0,5.0,5.0
+"mixed bundle: chicken and mushroom fajitas, meat and vegetarian chillis",1,,,1.0,5.0,1.0,5.0,,
+mixed family meal,1,1.0,1.0,1.0,5.0,1.0,5.0,,
+mixed grill,1,,,1.0,5.0,1.0,1.0,,
+mixed rice bowl bundle,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+mozzarella flatbread and tomato and mozzarella pasta,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+multiple,1,,,1.0,5.0,1.0,1.0,,
+"mushroom and tofu curry, mini noodles, mini pho",1,,,1.0,5.0,1.0,5.0,,
+mushroom fajitas and rice,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+mushroom shawarma,1,,,1.0,5.0,1.0,5.0,,
+mushrron and chicken fajitas with veg chilli,1,,,1.0,5.0,1.0,5.0,5.0,
+mutter paneer,1,,,1.0,5.0,1.0,5.0,,
+noddles,1,,,1.0,5.0,1.0,5.0,5.0,
+noodle bundle,1,,,1.0,5.0,1.0,5.0,5.0,
+noodle soup,1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+noodle soup/pho,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+noodle soups,1,1.0,1.0,1.0,1.0,1.0,5.0,,5.0
+"noodle soups, chicken salad, kids soup.",1,,,1.0,5.0,1.0,5.0,5.0,
+"noodle, fried rice, rice chicken",1,,,1.0,5.0,1.0,5.0,,
+noodles,3,2.0,5.0,3.0,5.0,3.0,3.0,,
+noodles & spicy soup,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+noodles and egg fried rice,1,,,1.0,5.0,1.0,1.0,,
+noodles and pad thai spring rolls,1,1.0,1.0,1.0,5.0,1.0,5.0,,
+noodles and rice,5,3.0,5.0,5.0,4.0,5.0,4.0,2.0,2.0
+"noodles chicken, noodle rice",1,,,1.0,5.0,1.0,5.0,,
+noodles rice snd wings,1,,,1.0,1.0,1.0,1.0,5.0,
+"noodles soup, kid's stir-fry noodles",1,,,1.0,5.0,1.0,5.0,,
+"noodles, chicken and tofu",1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,5.0
+"noodles, egg fried rice, chicken curry",1,,,1.0,5.0,1.0,5.0,5.0,
+"noodles, pho, 2 rice bowls",1,,,1.0,5.0,1.0,5.0,,
+"noodles, pho, rice wok, all vegan",1,,,1.0,1.0,1.0,5.0,,5.0
+old delhi chicken,1,,,1.0,5.0,1.0,1.0,,
+once i ordered pad thai. other time i ordered rice bowls,1,,,1.0,1.0,1.0,1.0,,
+ordered the family mac and cheese along with 2 desserts,1,1.0,1.0,1.0,5.0,1.0,1.0,,
+"ordered twice, once spicy chicken pho x2 & second time. vermicelli chicken thigh bowl and the chicken salad",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+pad gra praow ad massaman chicken,1,,,1.0,5.0,1.0,5.0,,
+"pad kra pow chicken with rice, squid and moo ping",1,,,1.0,5.0,1.0,1.0,,
+pad tai x 4,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"pad tha, green curry",1,1.0,1.0,1.0,1.0,1.0,1.0,5.0,
+pad thai,24,9.0,4.0,24.0,5.0,24.0,4.0,4.0,
+pad thai (chicken and 1 tofu),1,1.0,5.0,1.0,5.0,1.0,5.0,,
+pad thai (chicken and prawns),1,,,1.0,5.0,1.0,5.0,,
+pad thai a d curry,1,1.0,1.0,1.0,1.0,1.0,1.0,,
+pad thai and green thai curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+pad thai chickem,1,,,1.0,5.0,1.0,5.0,,
+pad thai chicken x4,1,,,1.0,5.0,1.0,5.0,5.0,
+pad thai family meal,2,1.0,5.0,2.0,5.0,2.0,5.0,5.0,
+pad thai meal,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+pad thai n three sides,1,,,1.0,5.0,1.0,5.0,5.0,
+pad thai or rice bowl,1,,,1.0,5.0,1.0,5.0,5.0,
+pad thai tofu x4,1,,,1.0,5.0,1.0,5.0,,
+pad thai x4,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"pad thai, 2 x chicken, 2 x tofu",1,,,1.0,5.0,1.0,5.0,5.0,
+"pad thai, corn fritters, fish cakes, broccoli",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"pad thai, firecracker noodles, singapore laska",1,,,1.0,5.0,1.0,5.0,5.0,
+"pad thai, squid",1,,,1.0,1.0,1.0,5.0,,
+paneer,3,1.0,1.0,3.0,3.0,3.0,3.0,1.0,3.0
+paneer curry,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+paneer deal and sides.,1,,,1.0,5.0,1.0,1.0,5.0,
+"paneer, dal , rice combo",1,,,1.0,5.0,1.0,5.0,5.0,
+panko chicken,1,1.0,5.0,1.0,1.0,1.0,5.0,5.0,
+pasta,8,1.0,5.0,8.0,3.0,8.0,4.0,2.0,
+"pasta (family size), margherita pizza, salad",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+pasta and chips,1,,,1.0,5.0,1.0,5.0,5.0,
+pasta and garlic bread,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+pasta and lasagne,1,,,1.0,5.0,1.0,5.0,,
+pasta combo,1,,,1.0,1.0,1.0,5.0,,5.0
+pasta pizza dough ball's calamari,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+pasta pizza garlic bread,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+pasta pizza lasagne,1,,,1.0,5.0,1.0,5.0,,5.0
+pasta rose,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+pasta selection,1,,,1.0,5.0,1.0,5.0,5.0,
+"pasta, pizza",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"pasta, pizza, pad thai",2,2.0,5.0,2.0,5.0,2.0,5.0,,
+pasta/pizza and the chicken roast with salad ootion,1,,,1.0,5.0,1.0,5.0,,
+pastas,1,,,1.0,1.0,1.0,5.0,5.0,
+"peperoni pizza, pasta sharer, garlic bread, dough balls",1,,,1.0,1.0,1.0,5.0,5.0,
+"pepperoni pizza, garlic bread, chicken and mushroom penne",1,,,1.0,5.0,1.0,5.0,5.0,
+"pepperoni pizza, lasagne, salad",1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+pesto and chicken pasta and garlic bread,1,1.0,1.0,1.0,1.0,1.0,5.0,,
+pesto chicken pasta,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"pesto chicken pasta, lasagna, cheesy garlic bread",1,,,1.0,1.0,1.0,1.0,,
+pesto pasta,1,,,1.0,5.0,1.0,1.0,5.0,
+"pesto pasta, lasagne",1,1.0,1.0,1.0,1.0,1.0,5.0,5.0,
+pham thai bundle for 4 with sweetcorn fritter x2 and salt and pepper chips x1,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+pho,13,8.0,4.0,13.0,5.0,12.0,5.0,2.0,1.0
+pho & chicken fired rice,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+pho & stir fried noodles,1,1.0,5.0,1.0,1.0,1.0,5.0,,5.0
+pho - noodle soups,1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+pho and curries on separate occasions!,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+pho and egg fried rice,2,2.0,2.0,2.0,5.0,2.0,5.0,,2.0
+pho and katsu,1,,,1.0,1.0,1.0,1.0,5.0,
+pho and noodles,1,,,1.0,5.0,1.0,5.0,5.0,
+pho and stir-fried noodles,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+pho and two kids noodles with chicken,1,1.0,5.0,1.0,5.0,1.0,1.0,,
+pho brisket and noodles,1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+pho bundle,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"pho chicken soup , pho beef broth soup, chicken fried rice and chicken noodles family offer  noodles",1,,,1.0,5.0,1.0,5.0,,5.0
+pho chicken x3 pho beef,1,1.0,1.0,1.0,1.0,1.0,5.0,5.0,5.0
+"pho chicken, pho brisket, chicken fried ricex2, prawn crackers, sprite, coke zero",1,,,1.0,5.0,1.0,5.0,,
+pho family dinner,1,1.0,1.0,1.0,1.0,1.0,5.0,5.0,5.0
+pho for 4,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"pho fried rice, chargrilled chicken and some others",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+pho package,1,,,1.0,5.0,1.0,5.0,,5.0
+pho soup,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,5.0
+pho soup deal with some extra kids meals,1,,,1.0,5.0,1.0,5.0,5.0,
+"pho soup, wok fried noodles",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+pho soups and rice bowls,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+pho soups and rice with chicken,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+pho the family,1,,,1.0,5.0,1.0,5.0,5.0,
+pho the whole fam,4,1.0,5.0,4.0,5.0,4.0,5.0,5.0,4.0
+"pho the whole fam (prawn crackers, 2x beef brisket pho noodle soup, 2x egg fried rice chicken)",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+"pho the whole fam - prawn crackers, beef brisket pho noodle soup, wok-fried noodles with chicken, wok-fried noodles with chicken, spicy chicken pho noodle soup",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+pho the whole family,2,2.0,5.0,2.0,5.0,2.0,5.0,5.0,2.0
+"pho with chicken (2), fried rice and noodles",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"pho x 2, kids fried rice x2",1,,,1.0,5.0,1.0,5.0,,
+"pho x 3, noodles",1,,,1.0,5.0,1.0,5.0,5.0,
+pho x2 and fried noodles,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+pho x2 and kids meal x2,1,,,1.0,5.0,1.0,5.0,5.0,
+"pho, egg fried",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"pho, egg fried rice, chicken salad, rice bowl",1,1.0,1.0,1.0,5.0,1.0,5.0,,5.0
+"pho, fried rice, fried noodles",1,,,1.0,5.0,1.0,5.0,5.0,
+"pho, fried rice.",1,,,1.0,5.0,1.0,5.0,,
+"pho, prawn crackers, fried rice",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"pho, rice and noodles combo",1,,,1.0,5.0,1.0,5.0,5.0,
+"pho, stir fry",1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+"phos, egg fried rice and noodles",1,,,1.0,5.0,1.0,5.0,5.0,
+picked chicken and ceasar salad set,1,,,1.0,1.0,1.0,1.0,,5.0
+pizza,6,3.0,5.0,6.0,4.0,6.0,5.0,1.0,
+pizza & lasagne,1,,,1.0,1.0,1.0,5.0,,
+pizza & pasta,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+pizza & pasta deal,1,1.0,5.0,1.0,5.0,1.0,1.0,,
+pizza and kids meals,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+pizza and lasagna,2,2.0,5.0,2.0,5.0,2.0,5.0,2.0,
+pizza and lasagne,1,1.0,5.0,1.0,1.0,1.0,5.0,,
+pizza and pasta,7,5.0,3.0,7.0,5.0,7.0,5.0,3.0,
+pizza and pasta and garlic bread,1,,,1.0,1.0,1.0,5.0,5.0,
+pizza and pasta and salad,1,,,1.0,5.0,1.0,5.0,,
+pizza and pasta bundle,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+pizza and pasta combo,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+pizza and pasta deal,2,1.0,5.0,2.0,5.0,2.0,5.0,,
+pizza and pasta family combo,1,,,1.0,5.0,1.0,5.0,5.0,
+pizza and pasta special,1,1.0,5.0,1.0,1.0,1.0,5.0,5.0,
+pizza deal,1,,,1.0,5.0,1.0,5.0,5.0,
+pizza feast,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+pizza for me and the kids,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+pizza garlic bread and lasagna,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+pizza menu,1,1.0,1.0,1.0,5.0,1.0,5.0,,
+pizza pasta,2,1.0,5.0,2.0,5.0,2.0,5.0,5.0,
+pizza pasta and garlic bread (all vegan),1,,,1.0,5.0,1.0,5.0,,
+pizza pasta garlic bread,2,1.0,5.0,2.0,5.0,2.0,2.0,,
+pizza pasta mix,1,,,1.0,1.0,1.0,1.0,,
+pizza pasta n garlic bread,1,1.0,5.0,1.0,1.0,1.0,1.0,,
+pizza x2 and frie,1,1.0,1.0,1.0,1.0,1.0,5.0,,
+"pizza, dough balls,",1,,,1.0,5.0,1.0,5.0,,
+"pizza, garlic bread, pasta",1,,,1.0,5.0,1.0,5.0,5.0,
+"pizza, gluten free pasta, chicken goujons, salad, dough balls, garlic mozzarella pizza,",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+"pizza, lasagna",1,1.0,1.0,1.0,1.0,1.0,5.0,,
+"pizza, lasagna and garlic bread",1,,,1.0,5.0,1.0,5.0,,
+"pizza, lasagne and garlic bread",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"pizza, lasagne sharer and mozzarella garlic bread",1,1.0,1.0,1.0,1.0,1.0,1.0,,
+"pizza, lasagne, calamari, mozzarella fries, garlic bread tiramisu",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"pizza, pasta and garlic pizza",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"pizza, pasta and salad",1,1.0,1.0,1.0,5.0,1.0,5.0,,
+"pizza, pasta, garlic bread",1,1.0,1.0,1.0,1.0,1.0,1.0,,
+"pizza, pasta, salad",1,,,1.0,1.0,1.0,5.0,,
+"pizza, pasta, salad & brownies",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"pizza, pasta, salad, chicken.",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"pizza, pasta, sides",1,,,1.0,5.0,1.0,5.0,5.0,
+"pizza, pasta. doughballs",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+pizza/pasta deal,1,,,1.0,1.0,1.0,5.0,5.0,
+pizzas,1,,,1.0,5.0,1.0,5.0,5.0,
+pizzas and pastas,1,,,1.0,5.0,1.0,5.0,5.0,
+"pizzas, garlic bread",1,,,1.0,5.0,1.0,5.0,5.0,
+poh,1,,,1.0,5.0,1.0,1.0,,
+poke bowls,1,,,1.0,5.0,1.0,5.0,,5.0
+prawn,1,,,1.0,5.0,1.0,5.0,5.0,
+"prawn crackers, egg fried rice with chicken, wok-fried noodles with tofu, wok-fried noodles & veg & chicken, chicken & dried shrimp wok-fried rice",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+prawn curry,1,1.0,5.0,1.0,1.0,1.0,5.0,,
+ramen,2,,,2.0,2.0,2.0,2.0,,
+rasamalai - 3pcs paneer makhani garlic naan - 2pcs vegetable dosa aloo 65 masala,1,,,1.0,1.0,1.0,1.0,,
+rashi curry with rice and chilli squid.,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+red curry,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"red curry, pork with sticky rice and 1 other",1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+"red curry, sticky chicken, spring roll, chick satay",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"red curry, vegetable noodles, chicken pad thai, prawn crackers",1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+red thai,1,,,1.0,1.0,1.0,5.0,5.0,
+remedy box,1,,,1.0,5.0,1.0,5.0,,5.0
+rice and chicken,1,1.0,5.0,1.0,5.0,1.0,1.0,,
+rice and chicken bowls,1,1.0,5.0,1.0,5.0,1.0,1.0,,
+rice and noodles,2,,,2.0,5.0,2.0,2.0,2.0,
+rice and noodles bowls,1,,,1.0,5.0,1.0,5.0,5.0,
+rice bowl,2,1.0,5.0,2.0,5.0,2.0,2.0,2.0,2.0
+rice bowl and noodles,1,,,1.0,5.0,1.0,5.0,,5.0
+rice bowl bundle,1,1.0,1.0,1.0,1.0,1.0,5.0,,
+rice bowl x 4,1,1.0,5.0,1.0,1.0,1.0,5.0,5.0,5.0
+"rice bowl, noodles",1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+"rice bowl, noodles and tofu, soup",1,,,1.0,5.0,1.0,5.0,5.0,
+rice bowls,9,5.0,5.0,9.0,4.0,9.0,4.0,2.0,1.0
+"rice bowls (katsu, teriyaki)",1,,,1.0,5.0,1.0,5.0,5.0,
+rice bowls meal deal,1,,,1.0,5.0,1.0,5.0,,
+"rice bowls. soup, noodles",1,,,1.0,5.0,1.0,5.0,5.0,
+rice box,1,,,1.0,5.0,1.0,5.0,5.0,
+rice chicken,1,,,1.0,5.0,1.0,5.0,,
+rice dishes - tofu teriyaki and vegatsu,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+"rice dishes, gyozas, and mochi",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+rice mix and match 4,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+rice noodle,1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+rice pots and gyoza,1,1.0,1.0,1.0,1.0,1.0,5.0,,
+rice stir fry,1,1.0,1.0,1.0,1.0,1.0,5.0,5.0,
+rice&noodles,1,,,1.0,1.0,1.0,1.0,,
+"rice, garlic naan, black daahl, ruby chicken",1,,,1.0,5.0,1.0,5.0,5.0,
+roast duck and chicken,1,,,1.0,5.0,1.0,5.0,5.0,
+"rotisserie chicken, kale and pepper side dish, potatoes",1,,,1.0,5.0,1.0,1.0,5.0,
+ruby,1,,,1.0,5.0,1.0,5.0,,
+ruby chicken,16,5.0,4.0,16.0,5.0,16.0,4.0,2.0,
+ruby chicken & black dhal,1,,,1.0,5.0,1.0,1.0,,
+ruby chicken family deal woth dahl,1,,,1.0,5.0,1.0,5.0,5.0,
+ruby chicken family meal  + naan,1,,,1.0,5.0,1.0,5.0,5.0,
+ruby chicken for 4 plus naan and paratha,1,,,1.0,5.0,1.0,5.0,5.0,
+ruby chicken meal,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+ruby chicken set,1,,,1.0,5.0,1.0,5.0,5.0,
+"ruby chicken, black dahl, naan",1,,,1.0,5.0,1.0,5.0,5.0,
+"ruby chicken, black dal",1,,,1.0,5.0,1.0,5.0,,
+"ruby chicken, daal",1,,,1.0,5.0,1.0,5.0,5.0,
+"ruby chicken, daal, rice",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"ruby chicken, dal makhni",1,,,1.0,5.0,1.0,5.0,,
+"ruby chicken, paneer chicken, chicken shawarma",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+ruby curry,9,3.0,3.0,9.0,4.0,9.0,2.0,2.0,
+ruby curry family meal,1,,,1.0,5.0,1.0,5.0,,
+ruby dinner,1,1.0,1.0,1.0,1.0,1.0,1.0,5.0,
+ruby murray,1,,,1.0,5.0,1.0,5.0,,
+ruby murray and side dishes,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"ruby murray, black dal, rice and papad",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+salad,1,,,1.0,1.0,1.0,1.0,,
+"salads, rice boxes, chicken with potatoes & sides",1,,,1.0,5.0,1.0,1.0,5.0,5.0
+salmon and health sushi options,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+salmon platters,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+salmon sushi dishes,1,,,1.0,5.0,1.0,5.0,,
+satay chicken and kids nuggets,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+set menu for 4. teriyaki chicken and chicken rice,1,,,1.0,5.0,1.0,5.0,5.0,
+"sharing pizza, 2x kids pizza, sharing cheesy garlic bread",1,,,1.0,5.0,1.0,5.0,5.0,
+shawarma,5,1.0,5.0,5.0,5.0,5.0,2.0,2.0,2.0
+shawarma platter,1,,,1.0,5.0,1.0,5.0,,
+sheperds pie,1,,,1.0,5.0,1.0,5.0,,
+shepherd pie,1,,,1.0,5.0,1.0,5.0,,
+shepherd's pie,2,,,2.0,2.0,2.0,5.0,2.0,
+shepherds pie,6,3.0,5.0,6.0,5.0,6.0,4.0,3.0,1.0
+shiitake mushroom shawarma,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+shiitake shawarma,1,,,1.0,5.0,1.0,5.0,,
+"shiitake shwarma family meal, extra corn ribs and fries",1,,,1.0,5.0,1.0,5.0,5.0,
+"side, pizza large and lasagna",1,,,1.0,5.0,1.0,5.0,5.0,
+singapore noodles,1,,,1.0,5.0,1.0,5.0,,
+small pots,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+some sort of chicken curry,1,1.0,5.0,1.0,5.0,1.0,1.0,,
+soup noodles,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,5.0
+"soups, egg fried rice, spring rolls",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+special fried rice,3,1.0,5.0,3.0,3.0,3.0,3.0,3.0,
+spicy beef,1,,,1.0,5.0,1.0,5.0,,
+spicy beef brisket noodle soup,1,,,1.0,5.0,1.0,5.0,,
+spicy bundle,2,,,2.0,5.0,2.0,5.0,2.0,
+spicy chicken pho x2 egg fried rice kids and chicken noodles kids,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+"spicy chicken pho, beef pho, chicken fried rice, chicken noodles",1,,,1.0,5.0,1.0,5.0,5.0,
+"spicy chicken pho, child chicken pho, spicy brisket pho, child chicken and noodles",1,,,1.0,5.0,1.0,5.0,5.0,
+"spicy chicken pho, spicy brisket pho, wok noodles with chicken, chicken noodle soup",1,,,1.0,5.0,1.0,5.0,5.0,
+"spicy chicken pho, tofu pho, egg fried rice, wok fried veg",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"spicy curry, pad thai, sticky chicken",1,1.0,5.0,1.0,5.0,1.0,5.0,,
+sticky chicken,4,3.0,3.0,4.0,4.0,4.0,2.0,2.0,
+sticky chicken /pad thai,1,1.0,5.0,1.0,5.0,1.0,1.0,,
+sticky chicken and 2 children's meals,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+sticky chicken and pad thai,1,,,1.0,5.0,1.0,5.0,,
+sticky chicken bundle,1,,,1.0,5.0,1.0,5.0,5.0,
+sticky chicken share cheeky sticky chicken child chicken pad thai,1,,,1.0,5.0,1.0,1.0,,
+"sticky chicken, basil chicken, massaman",1,,,1.0,5.0,1.0,1.0,5.0,
+"sticky chicken, chicken green curry, pag tai",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"sticky chicken, noodle and vegetables, chicken skewers",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"sticky chicken, noodles and jasmine rice",1,,,1.0,5.0,1.0,1.0,5.0,
+"sticky chicken, pad thai and satay chicken",1,,,1.0,5.0,1.0,5.0,5.0,
+"sticky chicken, pad thai, squid",1,1.0,1.0,1.0,5.0,1.0,5.0,,
+"sticky chicken, rice",1,1.0,1.0,1.0,1.0,1.0,1.0,,
+"sticky chicken, salt pepper squid",1,1.0,1.0,1.0,5.0,1.0,1.0,,
+"sticky chicken, veggie fried noodles (kids), fried rice (kids)",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+sticky no chicken,1,,,1.0,5.0,1.0,1.0,5.0,
+"sticky no chicken and rice, kids massaman, kids pad thai, thai crackers",1,,,1.0,5.0,1.0,5.0,5.0,
+stir fry rice and noodles,1,,,1.0,1.0,1.0,1.0,5.0,
+"stir fry, rice dishes",1,1.0,1.0,1.0,1.0,1.0,5.0,5.0,
+straight from the wok - family deliveroo,1,,,1.0,1.0,1.0,5.0,5.0,
+super veg bolognese rigatoni,3,3.0,5.0,3.0,3.0,3.0,3.0,1.0,
+"supergreen falafel rice box, peas 'n' seeds, aioli chicken rice box, chilli chicken rice box, peanut satay chicken rice box, leon baked fries - regular, leon baked fries - regular, leon slaw - regular (vg)",1,,,1.0,5.0,1.0,5.0,,5.0
+sushi,23,15.0,4.0,23.0,5.0,23.0,4.0,2.0,2.0
+"sushi boxes  , ramens , noodles",1,1.0,1.0,1.0,1.0,1.0,1.0,5.0,
+"sushi festival, salmon full house, health & happiness, and super salmon light",1,,,1.0,5.0,1.0,5.0,5.0,
+sushi platter,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+sushi platters,1,,,1.0,5.0,1.0,5.0,,
+sushi set for 2,1,1.0,1.0,1.0,1.0,1.0,5.0,,
+sushi sets,1,,,1.0,5.0,1.0,5.0,5.0,
+sweet and sour chicken and egg fried rice,1,1.0,1.0,1.0,1.0,1.0,1.0,,
+sweet and sour chicken and rice,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+sweet and sour chicken family meal,1,,,1.0,1.0,1.0,5.0,,
+tacos,1,,,1.0,5.0,1.0,1.0,,
+teriyaki bowls,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+teriyaki chicken,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+teriyaki chicken and tofu,1,,,1.0,5.0,1.0,5.0,5.0,
+teriyaki family set,1,1.0,1.0,1.0,5.0,1.0,5.0,,5.0
+"teriyaki meatballs, chicken. thai meatballs and chicken. vege gyoza and 2 chicken gyoza",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+teriyaki rice,1,,,1.0,5.0,1.0,5.0,,5.0
+"teriyaki, katsu, sweetcorn fritters",2,,,2.0,2.0,2.0,5.0,,
+teryaki chicken,1,,,1.0,5.0,1.0,5.0,5.0,
+"teryaki,katsu,firecracker",1,,,1.0,5.0,1.0,5.0,,
+"teryiaki chicken, firecracker chicken",1,,,1.0,5.0,1.0,5.0,,
+thai basil and shiitake rice / chicken thigh rice bowl / veg and tofu noodles / egg fried rice,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+"thai chicken rice, korean noodle, chicken gyoza soup and chicken teriyaki rice",1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,
+thai green,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,
+thai green curry for 4,1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+"thai green curry sharer, kids massaman and kids satay chicken",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+thai red curry,1,,,1.0,5.0,1.0,5.0,,
+the 2 chicken ones,1,,,1.0,5.0,1.0,5.0,5.0,
+the caesar family style,1,,,1.0,5.0,1.0,5.0,,
+the chicken biryani family meals,1,,,1.0,5.0,1.0,5.0,5.0,
+the chicken curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+the chicken katsu curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+the chicken ruby order with daal and rice and we ordered additional food - pau bhaji as well,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+the chicken shawarma family bowl,1,1.0,1.0,1.0,5.0,1.0,5.0,5.0,5.0
+the chilli and  fajita combination,1,,,1.0,5.0,1.0,5.0,,
+the curry bundle,1,,,1.0,5.0,1.0,5.0,,
+the curry with rice,1,1.0,5.0,1.0,5.0,1.0,1.0,5.0,5.0
+"the family feeding thing: green thai curry, satay chicken with sticky rice and pad thai,",1,,,1.0,5.0,1.0,1.0,,
+the family sticky chicken meals,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+the halloumi meal,1,,,1.0,5.0,1.0,5.0,,5.0
+the healthy chicken shawarma,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+the pho soup bundle,1,,,1.0,5.0,1.0,1.0,,
+the preselected option,1,,,1.0,5.0,1.0,5.0,,
+the rice and chicken,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+the rice box for 4 meals deal,1,,,1.0,5.0,1.0,5.0,5.0,
+the ruby chicken family meal,1,,,1.0,5.0,1.0,5.0,5.0,
+the salmon sushi platters,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"the sticky chicken shared main, and the kids meals were massaman curry and sticky chicken",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+the tofu family deal.,1,,,1.0,1.0,1.0,5.0,,
+the tofu meal,1,,,1.0,5.0,1.0,5.0,5.0,
+the vegetarian family platter,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+the yellow thai curry dinneroo and a katsu chicken curry,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+their curry family meal,1,,,1.0,5.0,1.0,5.0,5.0,
+their salad and chicken rice bowl. plus egg fried rice  on the side!,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+tofu,1,,,1.0,5.0,1.0,5.0,,
+"tofu & mushroom curries, vegetable noodles",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+tofu coconut curry,1,1.0,5.0,1.0,5.0,1.0,1.0,,
+tofu coconut lemongrass curry,2,,,2.0,5.0,2.0,1.0,,
+"tofu curries, egg fried rices and prawnless crackers.",1,,,1.0,5.0,1.0,5.0,,
+tofu curry,2,1.0,5.0,2.0,5.0,2.0,5.0,2.0,2.0
+tofu curry and tofu wok fried noodles,1,1.0,1.0,1.0,1.0,1.0,5.0,5.0,
+tofu lemongrass curry,3,1.0,5.0,3.0,3.0,3.0,3.0,1.0,3.0
+tofu pho / spicy tofu pho / tofu & noodles,1,,,1.0,5.0,1.0,5.0,,
+tofu yellow rice curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+tomato and mozzarella pasta and pepperoni pizza with garlic bread,1,,,1.0,5.0,1.0,5.0,5.0,
+"two adult curry and rice, one kids' chicken rice, one kids' chicken broth",1,1.0,1.0,1.0,5.0,1.0,5.0,,
+two chicken curries a noodle dish and an egg fried rice,1,,,1.0,5.0,1.0,5.0,5.0,
+"two curries, wok fried noodles and egg fried rice",1,,,1.0,5.0,1.0,5.0,5.0,
+two pasta and garlic bread,1,,,1.0,5.0,1.0,5.0,,
+two pho portions and two kids tofu noodle,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+"two types of marinated chicken, roasted sweet potato, grains, rice, mac and cheese",1,,,1.0,5.0,1.0,5.0,5.0,5.0
+variety,2,1.0,5.0,2.0,5.0,2.0,2.0,2.0,
+various,2,2.0,5.0,2.0,5.0,2.0,5.0,2.0,
+veg combo,1,,,1.0,5.0,1.0,5.0,5.0,
+veg katsu,2,1.0,5.0,2.0,5.0,2.0,2.0,5.0,
+veg packed bolognaise,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+veg rice bowl,1,,,1.0,1.0,1.0,5.0,,
+vegan family meal,1,,,1.0,5.0,1.0,5.0,,
+vegan katsu,4,1.0,1.0,4.0,4.0,4.0,2.0,2.0,1.0
+vegan katsu bowl & tofu bowl,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+vegan katsu curry,2,2.0,1.0,2.0,2.0,2.0,2.0,,
+"vegan katsu, tofu rice bowl",1,,,1.0,5.0,1.0,5.0,,
+vegan margarita pizza and tomato pasta,1,,,1.0,5.0,1.0,5.0,,
+"vegan pizza, vegan garlic bread, kids margarita",1,1.0,1.0,1.0,1.0,1.0,5.0,5.0,
+vegan shiitake mushroom,1,,,1.0,5.0,1.0,1.0,5.0,
+vegatsu,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+"vegetable red curry, kids moo ping, chicken pad thaimoo",1,,,1.0,5.0,1.0,5.0,5.0,
+vegetables green curry,1,1.0,5.0,1.0,5.0,1.0,5.0,,
+vegetarian,1,1.0,1.0,1.0,5.0,1.0,5.0,,5.0
+vegetarian and kids meals,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+vegetarian katsu curry,1,,,1.0,5.0,1.0,5.0,,
+veggie fajitas,1,,,1.0,5.0,1.0,5.0,5.0,5.0
+veggie katsu,1,,,1.0,1.0,1.0,1.0,,
+veggie rice,1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+veggie wok party,1,1.0,1.0,1.0,1.0,1.0,1.0,,
+vietnamese curry and small pho combo,1,,,1.0,5.0,1.0,5.0,,
+"we had noodles combo with pho with a fried rice dish. same with banana tree, rice and noodles combination",1,,,1.0,5.0,1.0,1.0,5.0,
+we ordered twice - do tried each of the options,1,,,1.0,5.0,1.0,5.0,5.0,
+wings and fries,1,1.0,1.0,1.0,1.0,1.0,5.0,,
+"wings, prawn crackers, massaman curry with rice and pad thai",1,,,1.0,5.0,1.0,5.0,5.0,
+wok chicken,1,,,1.0,1.0,1.0,1.0,,
+"wok fried noodles with chcihekn, chicken pad thai",1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,5.0
+wok noodles and rice,1,,,1.0,5.0,1.0,5.0,5.0,
+"x2 pho noodles, egg fried rice, wok fried noodles and fresh juice",1,,,1.0,5.0,1.0,5.0,5.0,
+x2 soup x2 rice,1,1.0,5.0,1.0,5.0,1.0,5.0,,5.0
+yasai curry,1,1.0,5.0,1.0,5.0,1.0,5.0,5.0,
+yasai for 4,1,,,1.0,1.0,1.0,5.0,,
+yasai katsu,9,2.0,5.0,9.0,5.0,9.0,4.0,3.0,1.0
+yasai katsu curry,3,2.0,5.0,3.0,5.0,3.0,3.0,1.0,
+"yasai katsu curry, vegetable/chicken raisu karee",1,,,1.0,5.0,1.0,5.0,,
+yasai katsu family dinneroo,1,1.0,1.0,1.0,5.0,1.0,1.0,5.0,
+yellow curry family meal,1,,,1.0,5.0,1.0,1.0,,5.0
+yes,1,1.0,5.0,1.0,5.0,1.0,5.0,,

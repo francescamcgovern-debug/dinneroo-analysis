@@ -1,0 +1,194 @@
+ZONE_NAME,UNIQUE_DISH_COMBINATIONS,UNIQUE_PARTNERS,UNIQUE_BRANDS,TOTAL_ORDERS,AVG_RATING
+Clapham,1345,15,13,2349,4.610465
+Islington,1223,9,8,2262,4.689560
+Brighton Central,1540,12,10,1734,4.465863
+Finsbury Park / Harringay / Crouch End,954,4,4,1534,4.528000
+Oxford,1304,9,7,1501,4.515723
+Brockley / Forest Hill,932,3,3,1478,4.612069
+Cambridge,1274,8,8,1403,4.482301
+Lewisham,1191,6,5,1358,4.495575
+Milton Keynes,1097,9,8,1332,4.458101
+Reading,1104,10,10,1318,4.293103
+Wimbledon,1100,9,8,1314,4.500000
+Canning Town,369,3,3,1314,4.670270
+East Central,1097,20,11,1280,4.459091
+Chiswick,727,6,6,1240,4.737864
+Notting Hill / Paddington,730,14,9,1226,4.525114
+Wembley,724,7,7,1202,4.489796
+Bristol,1038,8,8,1173,4.533708
+Kingston,987,8,8,1156,4.461538
+Surrey Quays,382,4,4,1139,4.606218
+Canary Wharf,976,7,6,1122,4.294521
+Norwich,908,9,6,1050,4.248322
+Guildford,814,6,6,969,4.247788
+Hammersmith / Shepherd's Bush,848,9,7,962,4.456647
+Wapping and Mile End,285,4,4,961,4.662069
+Ealing,733,5,5,904,4.201681
+Wandsworth,336,3,3,853,4.691275
+London Bridge,728,13,10,850,4.572519
+Hampstead,599,5,5,797,4.472000
+West Central,722,21,10,793,4.563025
+Mayfair,676,20,8,772,4.568345
+Nottingham,669,7,7,759,4.432432
+York,654,8,8,729,4.456311
+Chelmsford,598,7,7,725,4.208791
+Edinburgh Central,660,4,3,722,4.511364
+Birmingham,547,10,9,689,4.154412
+South Kensington,467,10,7,676,4.556701
+Stratford,515,5,5,665,4.262626
+Bath,549,10,9,647,4.533981
+Bournemouth,485,5,4,634,4.263736
+Fulham,562,5,5,615,4.574257
+Bracknell,458,4,4,585,4.553846
+Edgbaston,574,3,3,574,4.677419
+Richmond / Kew,476,8,6,562,4.302326
+St Albans,445,4,4,559,4.226804
+Glasgow Centre,495,6,5,542,4.547619
+Reigate,454,7,6,541,4.506667
+Salford,411,6,6,535,4.257426
+Canterbury,462,7,7,534,4.158730
+Croydon,326,5,4,519,4.289474
+Windsor,387,6,6,517,4.298701
+Cheltenham,463,6,5,512,4.378378
+"Victoria, Westminster, Pimlico",481,12,8,506,4.633333
+Basingstoke,325,4,3,483,3.833333
+Cardiff,434,6,6,475,4.571429
+Leeds City Centre,431,9,9,470,4.521739
+Southampton,366,5,5,470,4.288889
+Bromley,326,5,4,465,3.813559
+Colchester,335,4,4,464,4.597015
+Sheffield City Centre,394,4,4,442,4.267606
+Southsea,370,7,7,435,4.180328
+Dalston Stoke Newington,235,4,4,434,4.426471
+Romford,252,3,3,434,4.438596
+Royal Tunbridge Wells,355,6,6,426,4.436364
+Horsham,327,4,4,416,4.409091
+Brixton,273,4,4,396,4.500000
+Watford,267,4,4,372,4.357143
+Stevenage,287,3,3,369,4.523077
+Edinburgh North,251,4,3,345,4.432432
+Dartford,258,6,6,336,4.102564
+Greenwich,218,2,2,332,4.487805
+Camberley,195,2,2,319,3.972973
+Finchley,149,1,1,308,4.200000
+Liverpool City Centre,283,6,5,307,4.292683
+Farnham,280,3,3,306,4.673077
+Enfield,176,2,2,302,3.867925
+Maida Vale / Kilburn,225,2,2,301,4.081633
+Easton,258,5,5,297,4.375000
+Putney & Barnes,210,4,3,296,4.702128
+Epsom,209,5,4,292,4.125000
+Belsize Park / St John's Wood,150,4,3,278,4.792453
+Walton on Thames,179,4,3,275,4.472222
+Golders Green / Brent Cross,108,4,3,275,4.000000
+Balham,263,2,2,265,4.435897
+Royal Leamington Spa,201,4,4,257,4.366667
+Camden/Kentish Town,182,6,6,249,4.111111
+Uxbridge,141,4,4,242,4.404762
+West Bridgford,207,4,3,239,4.291667
+Chichester,202,4,4,237,4.133333
+Didsbury and Withington,143,3,3,236,4.722222
+Cribbs Causeway Shopping Centre,171,5,5,220,3.866667
+Chislehurst,182,1,1,192,4.461538
+Newton Longville,147,5,5,181,4.045455
+Henley on Thames,174,3,3,181,4.277778
+Wokingham,174,2,2,177,4.782609
+Eccles,172,3,3,175,4.025641
+Weybridge,165,2,2,172,3.869565
+Harpenden,165,2,2,169,4.470588
+Kingsbury Green/ The Hyde,116,2,2,168,4.137931
+"Highgate, Muswell Hill, East Finchley",144,4,3,168,4.416667
+Hatfield/ Hatfield Park,110,3,3,160,4.388889
+Manchester Central,138,5,3,156,4.363636
+Braintree,122,4,4,151,3.904762
+Newbury,136,3,3,148,4.478261
+Cardiff Bay Area,114,5,5,144,4.777778
+Esher,139,2,2,143,4.666667
+Staines,75,1,1,142,4.454545
+Upminster,121,2,2,126,4.178571
+Winchester,101,3,3,126,4.000000
+Harrow,125,4,4,126,4.333333
+Leavesden and Abbots Langley,76,1,1,123,4.785714
+Wood Green,56,2,2,123,4.375000
+Welwyn Garden City,116,2,2,121,4.473684
+Woking,110,2,2,114,4.333333
+Berkhamsted,108,2,2,109,4.733333
+Glasgow West End,97,1,1,108,4.562500
+Twickenham / Teddington,105,3,2,106,3.777778
+Palmers Green / Southgate,90,2,2,101,4.285714
+Sutton,99,4,3,101,4.125000
+South Pollok,67,1,1,96,4.473684
+Edgware / Mill Hill,77,3,3,95,3.833333
+High Wycombe,77,1,1,78,3.714286
+Chingford,67,3,3,77,4.200000
+Sidcup,71,2,2,74,4.200000
+Dulwich,69,1,1,71,4.666667
+Poole,70,2,2,70,4.166667
+South Woodford,67,1,1,69,3.538462
+Ilford,67,1,1,67,4.166667
+Beckenham,62,1,1,65,4.357143
+Godalming,60,2,2,64,4.250000
+Hunts Cross,40,2,2,61,4.000000
+Raynes Park,56,2,1,58,5.000000
+Eltham,51,2,2,57,4.384615
+Ruislip,54,1,1,56,4.000000
+Tonbridge,53,2,2,56,4.000000
+Aldershot,55,1,1,55,4.000000
+Bermondsey,43,2,2,52,3.000000
+Morningside,50,1,1,51,5.000000
+Barnet,50,1,1,50,5.000000
+Warwick,50,2,2,50,4.375000
+Bexleyheath,44,2,2,48,3.857143
+Renfrew,45,2,2,46,3.666667
+Hemel Hempstead,40,2,2,41,4.000000
+Headingley,40,1,1,40,3.666667
+Lockleaze,39,1,1,40,3.750000
+Eastbourne,38,2,2,40,4.285714
+Fleet,38,1,1,38,3.545455
+Tooting,37,1,1,37,5.000000
+"Vauxhall, Kennington and Oval",36,1,1,36,4.666667
+Gerrards Cross,34,1,1,35,3.857143
+Crawley,19,1,1,35,4.800000
+Shirley / Wickham,33,1,1,33,3.500000
+Bournemouth East,31,1,1,33,3.571429
+Purley,17,1,1,32,4.500000
+Chesham,28,1,1,28,4.000000
+Grays,28,1,1,28,3.600000
+Dudley,22,2,2,28,4.750000
+Southall,28,1,1,28,5.000000
+Taplow and Burnham,28,1,1,28,
+Maidenhead,26,1,1,27,4.166667
+Hitchin,26,1,1,26,3.000000
+Stockport/Heaton Moor,26,1,1,26,5.000000
+Sevenoaks,23,2,2,26,4.200000
+Oakwood and Chapeltown,22,1,1,23,4.750000
+Altrincham and Hale,22,1,1,23,4.200000
+Stanmore,22,1,1,22,5.000000
+Beeston,14,1,1,21,2.000000
+Sheffield,18,1,1,18,5.000000
+East Barnet,17,1,1,17,4.400000
+Leyton,15,1,1,17,3.500000
+Rotherham,17,1,1,17,4.000000
+Eastleigh Central,16,1,1,16,3.000000
+Borehamwood,15,1,1,16,4.000000
+Saltdean,16,2,2,16,5.000000
+Portsmouth,15,1,1,15,
+Woolwich,8,1,1,15,5.000000
+Belfast,14,2,1,14,5.000000
+Farnborough,14,1,1,14,2.333333
+Orpington,6,1,1,13,5.000000
+Greater Leeds,10,1,1,13,1.000000
+Crystal Palace / Penge,9,1,1,11,4.666667
+Belfast Central,11,1,1,11,5.000000
+Slough,5,1,1,11,5.000000
+Hillfields,10,1,1,10,
+Waterloo & Southbank,9,2,2,9,1.000000
+Epping,9,1,1,9,5.000000
+Maidstone,5,1,1,9,
+Belfast East,8,1,1,8,1.000000
+Leatherhead,7,1,1,7,4.000000
+Glasgow Centre East,6,1,1,6,5.000000
+New Earswick and Huntington,5,1,1,5,
+Letchworth Garden City,4,1,1,4,
+Port Solent,3,1,1,3,1.000000
+Euston,2,1,1,2,

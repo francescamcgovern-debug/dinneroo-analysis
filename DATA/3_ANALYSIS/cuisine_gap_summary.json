@@ -1,0 +1,32 @@
+{
+  "benchmark_rating": 4.26,
+  "avg_items_per_cuisine": 191.53846153846155,
+  "gap_definitions": {
+    "SUPPLY GAP": "Less than 30% of average items",
+    "QUALITY GAP": "Rating below 95% of benchmark (4.05)",
+    "SUPPLY & QUALITY GAP": "Both low supply and low quality",
+    "DEMAND GAP": "Have supply but low orders",
+    "OK": "Supply and quality both acceptable"
+  },
+  "cuisines_by_gap": {
+    "OK": [
+      "British",
+      "Healthy/Fresh",
+      "Indian",
+      "Italian",
+      "Japanese",
+      "Japanese/Asian",
+      "Thai/Southeast Asian",
+      "Vietnamese"
+    ],
+    "QUALITY GAP": [
+      "Mexican"
+    ],
+    "SUPPLY GAP": [
+      "Chinese",
+      "French",
+      "Irish/British",
+      "Middle Eastern"
+    ]
+  }
+}

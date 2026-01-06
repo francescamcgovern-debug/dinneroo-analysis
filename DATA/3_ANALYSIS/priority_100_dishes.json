@@ -1,0 +1,690 @@
+[
+  {
+    "rank": 1,
+    "dish_type": "Rice Bowl",
+    "composite_score": 3.99,
+    "evidence_type": "Measured",
+    "category": "Proven Winner",
+    "on_dinneroo": true,
+    "order_volume": 6571,
+    "survey_n": 27,
+    "factors": {
+      "kid_friendly": 5,
+      "adult_appeal": 4,
+      "portion_flexibility": 5,
+      "balanced_guilt_free": 4
+    }
+  },
+  {
+    "rank": 2,
+    "dish_type": "Fajitas",
+    "composite_score": 3.79,
+    "evidence_type": "Measured",
+    "category": "Proven Winner",
+    "on_dinneroo": true,
+    "order_volume": 812,
+    "survey_n": 18,
+    "factors": {
+      "kid_friendly": 4,
+      "adult_appeal": 5,
+      "portion_flexibility": 5,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 3,
+    "dish_type": "Pho",
+    "composite_score": 3.65,
+    "evidence_type": "Measured",
+    "category": "Proven Winner",
+    "on_dinneroo": true,
+    "order_volume": 9113,
+    "survey_n": 130,
+    "factors": {
+      "kid_friendly": 4,
+      "adult_appeal": 5,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 4
+    }
+  },
+  {
+    "rank": 4,
+    "dish_type": "Fried Rice",
+    "composite_score": 3.56,
+    "evidence_type": "Measured",
+    "category": "Proven Winner",
+    "on_dinneroo": true,
+    "order_volume": 11842,
+    "survey_n": 16,
+    "factors": {
+      "kid_friendly": 4,
+      "adult_appeal": 5,
+      "portion_flexibility": 5,
+      "balanced_guilt_free": 2
+    }
+  },
+  {
+    "rank": 5,
+    "dish_type": "Shepherd's Pie",
+    "composite_score": 3.53,
+    "evidence_type": "Measured",
+    "category": "Solid Performer",
+    "on_dinneroo": true,
+    "order_volume": 663,
+    "survey_n": 5,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 5,
+      "portion_flexibility": 5,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 6,
+    "dish_type": "Pad Thai",
+    "composite_score": 3.53,
+    "evidence_type": "Measured",
+    "category": "Proven Winner",
+    "on_dinneroo": true,
+    "order_volume": 5351,
+    "survey_n": 54,
+    "factors": {
+      "kid_friendly": 4,
+      "adult_appeal": 5,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 7,
+    "dish_type": "Pasta",
+    "composite_score": 3.52,
+    "evidence_type": "Measured",
+    "category": "Solid Performer",
+    "on_dinneroo": true,
+    "order_volume": 4250,
+    "survey_n": 56,
+    "factors": {
+      "kid_friendly": 4,
+      "adult_appeal": 3,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 8,
+    "dish_type": "Shawarma",
+    "composite_score": 3.44,
+    "evidence_type": "Measured",
+    "category": "Proven Winner",
+    "on_dinneroo": true,
+    "order_volume": 2603,
+    "survey_n": 26,
+    "factors": {
+      "kid_friendly": 4,
+      "adult_appeal": 4,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 9,
+    "dish_type": "Noodles",
+    "composite_score": 3.29,
+    "evidence_type": "Measured",
+    "category": "Solid Performer",
+    "on_dinneroo": true,
+    "order_volume": 11783,
+    "survey_n": 62,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 4,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 10,
+    "dish_type": "Pizza",
+    "composite_score": 3.29,
+    "evidence_type": "Measured",
+    "category": "Solid Performer",
+    "on_dinneroo": true,
+    "order_volume": 2289,
+    "survey_n": 95,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 2
+    }
+  },
+  {
+    "rank": 11,
+    "dish_type": "Mac & Cheese",
+    "composite_score": 3.29,
+    "evidence_type": "Measured",
+    "category": "Proven Winner",
+    "on_dinneroo": true,
+    "order_volume": 928,
+    "survey_n": 23,
+    "factors": {
+      "kid_friendly": 4,
+      "adult_appeal": 4,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 12,
+    "dish_type": "Sushi",
+    "composite_score": 3.21,
+    "evidence_type": "Measured",
+    "category": "Underperformer",
+    "on_dinneroo": true,
+    "order_volume": 2508,
+    "survey_n": 30,
+    "factors": {
+      "kid_friendly": 2,
+      "adult_appeal": 5,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 13,
+    "dish_type": "Katsu Curry",
+    "composite_score": 3.18,
+    "evidence_type": "Measured",
+    "category": "Solid Performer",
+    "on_dinneroo": true,
+    "order_volume": 2300,
+    "survey_n": 167,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 4,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 14,
+    "dish_type": "Curry (General)",
+    "composite_score": 3.18,
+    "evidence_type": "Measured",
+    "category": "Validated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 250,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 4,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 15,
+    "dish_type": "Hummus Platter",
+    "composite_score": 3.13,
+    "evidence_type": "Estimated",
+    "category": "Unvalidated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 5,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 16,
+    "dish_type": "Burrito Bowl",
+    "composite_score": 3.11,
+    "evidence_type": "Estimated",
+    "category": "Unvalidated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 4
+    }
+  },
+  {
+    "rank": 17,
+    "dish_type": "Poke Bowl",
+    "composite_score": 3.11,
+    "evidence_type": "Estimated",
+    "category": "Unvalidated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 4
+    }
+  },
+  {
+    "rank": 18,
+    "dish_type": "Buddha Bowl",
+    "composite_score": 3.11,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 12,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 4
+    }
+  },
+  {
+    "rank": 19,
+    "dish_type": "Grain Bowl",
+    "composite_score": 3.11,
+    "evidence_type": "Estimated",
+    "category": "Unvalidated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 4
+    }
+  },
+  {
+    "rank": 20,
+    "dish_type": "Teriyaki Rice Bowl",
+    "composite_score": 3.11,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 3358,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 4,
+      "balanced_guilt_free": 4
+    }
+  },
+  {
+    "rank": 21,
+    "dish_type": "Pasta Bolognese",
+    "composite_score": 3.04,
+    "evidence_type": "Estimated",
+    "category": "Unvalidated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 4,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 22,
+    "dish_type": "Margherita Pizza",
+    "composite_score": 2.97,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 140,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 4,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 2
+    }
+  },
+  {
+    "rank": 23,
+    "dish_type": "Katsu",
+    "composite_score": 2.97,
+    "evidence_type": "Measured",
+    "category": "Solid Performer",
+    "on_dinneroo": true,
+    "order_volume": 19220,
+    "survey_n": 59,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 4,
+      "portion_flexibility": 2,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 24,
+    "dish_type": "Halloumi Wrap",
+    "composite_score": 2.94,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 23,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 25,
+    "dish_type": "Veggie Fajita",
+    "composite_score": 2.94,
+    "evidence_type": "Estimated",
+    "category": "Unvalidated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 26,
+    "dish_type": "Stir Fry",
+    "composite_score": 2.88,
+    "evidence_type": "Measured",
+    "category": "Underperformer",
+    "on_dinneroo": true,
+    "order_volume": 128,
+    "survey_n": 3,
+    "factors": {
+      "kid_friendly": 1,
+      "adult_appeal": 1,
+      "portion_flexibility": 5,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 27,
+    "dish_type": "Thai Green Curry",
+    "composite_score": 2.88,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 1133,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 4,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 28,
+    "dish_type": "Mild Curry with Rice",
+    "composite_score": 2.88,
+    "evidence_type": "Estimated",
+    "category": "Unvalidated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 4,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 29,
+    "dish_type": "Falafel Wrap",
+    "composite_score": 2.85,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 20,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 30,
+    "dish_type": "Grilled Chicken with Sides",
+    "composite_score": 2.82,
+    "evidence_type": "Estimated",
+    "category": "Unvalidated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 4
+    }
+  },
+  {
+    "rank": 31,
+    "dish_type": "Chicken (General)",
+    "composite_score": 2.76,
+    "evidence_type": "Measured",
+    "category": "Validated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 115,
+    "factors": {
+      "kid_friendly": 2,
+      "adult_appeal": 4,
+      "portion_flexibility": 2,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 32,
+    "dish_type": "Wings",
+    "composite_score": 2.75,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 1252,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 33,
+    "dish_type": "Lasagne",
+    "composite_score": 2.75,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 3942,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 34,
+    "dish_type": "Carbonara",
+    "composite_score": 2.75,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 172,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 35,
+    "dish_type": "Burrito",
+    "composite_score": 2.75,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 51,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 36,
+    "dish_type": "Biryani",
+    "composite_score": 2.75,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 713,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 37,
+    "dish_type": "Tikka Masala",
+    "composite_score": 2.75,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 24,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 38,
+    "dish_type": "Tacos",
+    "composite_score": 2.75,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 156,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 39,
+    "dish_type": "Greek Mezze",
+    "composite_score": 2.75,
+    "evidence_type": "Estimated",
+    "category": "Unvalidated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 40,
+    "dish_type": "Roast Dinner",
+    "composite_score": 2.75,
+    "evidence_type": "Estimated",
+    "category": "Unvalidated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 41,
+    "dish_type": "Chicken Souvlaki",
+    "composite_score": 2.71,
+    "evidence_type": "Estimated",
+    "category": "Unvalidated Gap",
+    "on_dinneroo": false,
+    "order_volume": 0,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 42,
+    "dish_type": "Fish & Chips",
+    "composite_score": 2.71,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 1,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  },
+  {
+    "rank": 43,
+    "dish_type": "Butter Chicken",
+    "composite_score": 2.71,
+    "evidence_type": "Estimated",
+    "category": "Needs Validation",
+    "on_dinneroo": true,
+    "order_volume": 1021,
+    "survey_n": 0,
+    "factors": {
+      "kid_friendly": 3,
+      "adult_appeal": 3,
+      "portion_flexibility": 3,
+      "balanced_guilt_free": 3
+    }
+  }
+]

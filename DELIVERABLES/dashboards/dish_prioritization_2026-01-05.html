@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinneroo Dish Prioritization Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --accent-teal: #00d4aa;
+            --accent-coral: #ff6b6b;
+            --accent-gold: #ffd93d;
+            --accent-purple: #a78bfa;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --border-color: #30363d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(ellipse at 20% 0%, rgba(0, 212, 170, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(167, 139, 250, 0.1) 0%, transparent 50%);
+        }
+        
+        .header {
+            padding: 2rem 3rem;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header-meta {
+            display: flex;
+            gap: 2rem;
+            margin-top: 0.5rem;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .header-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .header-meta .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-teal);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .metric-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-teal);
+        }
+        
+        .metric-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .metric-value.teal { color: var(--accent-teal); }
+        .metric-value.coral { color: var(--accent-coral); }
+        .metric-value.gold { color: var(--accent-gold); }
+        .metric-value.purple { color: var(--accent-purple); }
+        
+        .metric-subtext {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .card-full {
+            grid-column: 1 / -1;
+        }
+        
+        .card h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .card h2::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: var(--accent-teal);
+            border-radius: 2px;
+        }
+        
+        .filter-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        
+        .filter-btn:hover {
+            border-color: var(--accent-teal);
+            color: var(--text-primary);
+        }
+        
+        .filter-btn.active {
+            background: var(--accent-teal);
+            border-color: var(--accent-teal);
+            color: var(--bg-primary);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        
+        th {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+        
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        tr:hover {
+            background: var(--bg-tertiary);
+        }
+        
+        .rank-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        
+        .rank-1 { background: linear-gradient(135deg, #ffd700, #ffaa00); color: #000; }
+        .rank-2 { background: linear-gradient(135deg, #c0c0c0, #a0a0a0); color: #000; }
+        .rank-3 { background: linear-gradient(135deg, #cd7f32, #a0522d); color: #fff; }
+        .rank-other { background: var(--bg-tertiary); color: var(--text-secondary); }
+        
+        .evidence-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .evidence-validated { background: rgba(0, 212, 170, 0.2); color: var(--accent-teal); }
+        .evidence-corroborated { background: rgba(255, 217, 61, 0.2); color: var(--accent-gold); }
+        .evidence-single { background: rgba(167, 139, 250, 0.2); color: var(--accent-purple); }
+        
+        .progress-bar {
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
+        .progress-teal { background: var(--accent-teal); }
+        .progress-coral { background: var(--accent-coral); }
+        .progress-gold { background: var(--accent-gold); }
+        
+        .chart-container {
+            position: relative;
+            height: 350px;
+        }
+        
+        .gap-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gap-cuisine {
+            font-weight: 500;
+        }
+        
+        .gap-requests {
+            font-family: 'Space Mono', monospace;
+            color: var(--accent-coral);
+        }
+        
+        .gap-status {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .gap-missing { background: rgba(255, 107, 107, 0.2); color: var(--accent-coral); }
+        .gap-limited { background: rgba(255, 217, 61, 0.2); color: var(--accent-gold); }
+        
+        .insight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 170, 0.1), rgba(167, 139, 250, 0.1));
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .insight-box h4 {
+            color: var(--accent-teal);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .insight-box p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 1200px) {
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+            .header {
+                padding: 1.5rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dinneroo Dish Prioritization Dashboard</h1>
+        <div class="header-meta">
+            <span><span class="dot"></span> Data Fresh: Jan 5, 2026</span>
+            <span>Orders: 71,480</span>
+            <span>Survey Responses: 1,564</span>
+            <span>Zones: 197</span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-label">Top Dish</div>
+                <div class="metric-value teal">Katsu</div>
+                <div class="metric-subtext">11,246 orders • 81.1% satisfaction</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Top Partner</div>
+                <div class="metric-value coral">Pho</div>
+                <div class="metric-subtext">14,055 orders • 88.9% satisfaction</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Highest Satisfaction</div>
+                <div class="metric-value gold">96.0%</div>
+                <div class="metric-subtext">Cambridge zone</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Latent Demand Gap</div>
+                <div class="metric-value purple">135</div>
+                <div class="metric-subtext">Vegetarian (87) + Mild/Plain (48) mentions</div>
+            </div>
+        </div>
+        
+        <div class="dashboard-grid">
+            <!-- Top Dishes Table -->
+            <div class="card card-full">
+                <h2>Priority Dishes Ranking</h2>
+                <div class="filter-row">
+                    <button class="filter-btn active" onclick="filterDishes('all')">All Dishes</button>
+                    <button class="filter-btn" onclick="filterDishes('family')">Family Bundles</button>
+                    <button class="filter-btn" onclick="filterDishes('katsu')">Katsu</button>
+                    <button class="filter-btn" onclick="filterDishes('pho')">Pho/Noodles</button>
+                    <button class="filter-btn" onclick="filterDishes('curry')">Curry</button>
+                </div>
+                <table id="dishTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Dish</th>
+                            <th>Partner</th>
+                            <th>Orders</th>
+                            <th>Satisfaction</th>
+                            <th>Rating</th>
+                            <th>Score</th>
+                            <th>Evidence</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dishTableBody">
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Partner Performance Chart -->
+            <div class="card">
+                <h2>Partner Performance</h2>
+                <div class="chart-container">
+                    <canvas id="partnerChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Satisfaction by Category -->
+            <div class="card">
+                <h2>Dish Category Performance</h2>
+                <div class="chart-container">
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Latent Demand - The Big Insight -->
+            <div class="card">
+                <h2>Latent Demand Signals (Unprompted Mentions)</h2>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
+                    ⚠️ These are things people ASK FOR that we don't offer well - not just what's selling
+                </p>
+                <div id="gapsList">
+                    <div class="gap-item" style="border-left: 3px solid var(--accent-coral);">
+                        <div>
+                            <span class="gap-cuisine">Vegetarian Family Options</span>
+                            <span class="gap-status gap-missing">Major Gap</span>
+                        </div>
+                        <span class="gap-requests" style="font-size: 1.2rem;">87 mentions</span>
+                    </div>
+                    <div class="gap-item" style="border-left: 3px solid var(--accent-coral);">
+                        <div>
+                            <span class="gap-cuisine">Mild/Plain Kids Options</span>
+                            <span class="gap-status gap-missing">Major Gap</span>
+                        </div>
+                        <span class="gap-requests" style="font-size: 1.2rem;">48 mentions</span>
+                    </div>
+                    <div class="gap-item">
+                        <div>
+                            <span class="gap-cuisine">Chinese Family Meals</span>
+                            <span class="gap-status gap-limited">Limited</span>
+                        </div>
+                        <span class="gap-requests">25 mentions</span>
+                    </div>
+                    <div class="gap-item">
+                        <div>
+                            <span class="gap-cuisine">Lasagne/Comfort Pasta</span>
+                            <span class="gap-status gap-limited">Limited</span>
+                        </div>
+                        <span class="gap-requests">22 mentions</span>
+                    </div>
+                    <div class="gap-item">
+                        <div>
+                            <span class="gap-cuisine">Halal Options</span>
+                            <span class="gap-status gap-missing">Very Limited</span>
+                        </div>
+                        <span class="gap-requests">12 mentions</span>
+                    </div>
+                    <div class="gap-item">
+                        <div>
+                            <span class="gap-cuisine">Fish & Chips</span>
+                            <span class="gap-status gap-missing">Not Available</span>
+                        </div>
+                        <span class="gap-requests">7 mentions</span>
+                    </div>
+                </div>
+                <div class="insight-box" style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.15), rgba(255, 217, 61, 0.15));">
+                    <h4>⚠️ Critical Insight: Survivorship Bias</h4>
+                    <p>Current top dishes (katsu, pho, curry) are what's AVAILABLE, not necessarily what families WANT. 87 vegetarian mentions + 48 mild/plain mentions = families who CAN'T fully use Dinneroo.</p>
+                </div>
+            </div>
+            
+            <!-- Top Barriers -->
+            <div class="card">
+                <h2>Conversion Barriers</h2>
+                <div style="margin-top: 1rem;">
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                            <span>No option suited everyone</span>
+                            <span style="font-family: 'Space Mono', monospace;">52</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-coral" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                            <span>Not confident about portions</span>
+                            <span style="font-family: 'Space Mono', monospace;">45</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-coral" style="width: 86%;"></div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                            <span>Price higher than expected</span>
+                            <span style="font-family: 'Space Mono', monospace;">36</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-gold" style="width: 69%;"></div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                            <span>Couldn't customize/swap</span>
+                            <span style="font-family: 'Space Mono', monospace;">30</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-gold" style="width: 58%;"></div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                            <span>Time window doesn't work</span>
+                            <span style="font-family: 'Space Mono', monospace;">20</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill progress-teal" style="width: 38%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="insight-box">
+                    <h4>Recommendation</h4>
+                    <p><strong>Beyond barriers:</strong> 87 vegetarian + 48 mild/plain mentions suggest families who CAN'T use Dinneroo at all. This is bigger than conversion optimization - it's addressable market expansion.</p>
+                </div>
+            </div>
+            
+            <!-- Zone Performance -->
+            <div class="card card-full">
+                <h2>Top Performing Zones</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Zone</th>
+                            <th>Orders</th>
+                            <th>Satisfaction</th>
+                            <th>Rating</th>
+                            <th>Key Partners</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Clapham</strong></td>
+                            <td>2,349</td>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    79.2%
+                                    <div class="progress-bar" style="width: 100px;">
+                                        <div class="progress-fill progress-teal" style="width: 79%;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>4.61★</td>
+                            <td>Pho, Dishoom, Wagamama</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Islington</strong></td>
+                            <td>2,262</td>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    79.5%
+                                    <div class="progress-bar" style="width: 100px;">
+                                        <div class="progress-fill progress-teal" style="width: 79%;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>4.69★</td>
+                            <td>Pho, Dishoom, Itsu</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Brighton Central</strong></td>
+                            <td>1,734</td>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    92.5%
+                                    <div class="progress-bar" style="width: 100px;">
+                                        <div class="progress-fill progress-teal" style="width: 92%;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>4.47★</td>
+                            <td>Pho, Banana Tree, Giggling Squid</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cambridge</strong></td>
+                            <td>1,403</td>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    96.0%
+                                    <div class="progress-bar" style="width: 100px;">
+                                        <div class="progress-fill progress-teal" style="width: 96%;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>4.48★</td>
+                            <td>Pho, Banana Tree</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Chiswick</strong></td>
+                            <td>1,240</td>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    93.3%
+                                    <div class="progress-bar" style="width: 100px;">
+                                        <div class="progress-fill progress-teal" style="width: 93%;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>4.74★</td>
+                            <td>Pho, Dishoom</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Dish data
+        const dishData = [
+            { rank: 1, dish: "Family Chicken Katsu", partner: "Wagamama", orders: 11246, satisfaction: 81.1, rating: 4.24, score: 86.5, evidence: "validated", category: "katsu,family" },
+            { rank: 2, dish: "Pho the Whole Fam", partner: "Pho", orders: 7910, satisfaction: 88.9, rating: 4.55, score: 67.3, evidence: "validated", category: "pho,family" },
+            { rank: 3, dish: "Dishoom Chicken Ruby", partner: "Dishoom", orders: 4858, satisfaction: 86.7, rating: 4.79, score: 51.1, evidence: "validated", category: "curry,family" },
+            { rank: 4, dish: "Family Favourites Feast", partner: "LEON", orders: 4233, satisfaction: 72.7, rating: 4.13, score: 62.9, evidence: "corroborated", category: "family" },
+            { rank: 5, dish: "Mix n Match Rice Bowl Bundle", partner: "Banana Tree", orders: 3487, satisfaction: 89.5, rating: 4.46, score: 43.9, evidence: "validated", category: "family" },
+            { rank: 6, dish: "It's a Curry Night", partner: "Pho", orders: 3706, satisfaction: 88.9, rating: 4.61, score: 49.5, evidence: "validated", category: "curry" },
+            { rank: 7, dish: "Chicken Berry Britannia", partner: "Dishoom", orders: 2504, satisfaction: 86.7, rating: 4.76, score: 40.3, evidence: "validated", category: "curry,family" },
+            { rank: 8, dish: "Sushi Family Feast", partner: "Itsu", orders: 2198, satisfaction: 90.7, rating: 4.52, score: 42.5, evidence: "validated", category: "family" },
+            { rank: 9, dish: "Family Sticky Chicken Bundle", partner: "Giggling Squid", orders: 1954, satisfaction: 76.3, rating: 4.32, score: 40.0, evidence: "corroborated", category: "family" },
+            { rank: 10, dish: "Pad Thai Bundle For Four", partner: "Banana Tree", orders: 1706, satisfaction: 89.5, rating: 4.65, score: 38.0, evidence: "validated", category: "family" },
+            { rank: 11, dish: "Family Chicken Coconut Curry", partner: "Wagamama", orders: 1655, satisfaction: 81.1, rating: 4.24, score: 45.3, evidence: "validated", category: "katsu,curry,family" },
+            { rank: 12, dish: "Family Thai Curry Bundle", partner: "Banana Tree", orders: 1551, satisfaction: 89.5, rating: 4.46, score: 37.0, evidence: "validated", category: "curry,family" },
+            { rank: 13, dish: "Family Chicken Shawarma", partner: "Bill's", orders: 1147, satisfaction: 88.3, rating: 4.50, score: 37.6, evidence: "corroborated", category: "family" },
+            { rank: 14, dish: "Beef Brisket Pho", partner: "Pho", orders: 5419, satisfaction: 88.9, rating: 4.58, score: 56.8, evidence: "validated", category: "pho" },
+            { rank: 15, dish: "Chicken Pho Noodle Soup", partner: "Pho", orders: 3138, satisfaction: 88.9, rating: 4.55, score: 46.9, evidence: "validated", category: "pho" }
+        ];
+        
+        // Render dish table
+        function renderDishTable(filter = 'all') {
+            const tbody = document.getElementById('dishTableBody');
+            let filteredData = dishData;
+            
+            if (filter !== 'all') {
+                filteredData = dishData.filter(d => d.category.includes(filter));
+            }
+            
+            tbody.innerHTML = filteredData.map((d, i) => `
+                <tr>
+                    <td><span class="rank-badge ${d.rank <= 3 ? 'rank-' + d.rank : 'rank-other'}">${d.rank}</span></td>
+                    <td><strong>${d.dish}</strong></td>
+                    <td>${d.partner}</td>
+                    <td>${d.orders.toLocaleString()}</td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            ${d.satisfaction}%
+                            <div class="progress-bar" style="width: 60px;">
+                                <div class="progress-fill progress-teal" style="width: ${d.satisfaction}%;"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>${d.rating.toFixed(2)}★</td>
+                    <td><strong>${d.score.toFixed(1)}</strong></td>
+                    <td><span class="evidence-badge evidence-${d.evidence}">${d.evidence === 'validated' ? '🟢 Validated' : '🟡 Corroborated'}</span></td>
+                </tr>
+            `).join('');
+        }
+        
+        // Filter buttons
+        function filterDishes(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderDishTable(category);
+        }
+        
+        // Partner chart
+        const partnerCtx = document.getElementById('partnerChart').getContext('2d');
+        new Chart(partnerCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Pho', 'Wagamama', 'Dishoom', 'Banana Tree', 'Bill\'s', 'PizzaExpress', 'Itsu', 'Giggling Squid'],
+                datasets: [{
+                    label: 'Orders',
+                    data: [14055, 14129, 8689, 5709, 3358, 6180, 2983, 3982],
+                    backgroundColor: 'rgba(0, 212, 170, 0.6)',
+                    borderColor: 'rgba(0, 212, 170, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Satisfaction %',
+                    data: [88.9, 81.1, 86.7, 89.5, 88.3, 80.6, 90.7, 76.3],
+                    backgroundColor: 'rgba(167, 139, 250, 0.6)',
+                    borderColor: 'rgba(167, 139, 250, 1)',
+                    borderWidth: 1,
+                    yAxisID: 'y1'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: { color: '#8b949e' }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: { color: '#8b949e' },
+                        grid: { color: '#30363d' }
+                    },
+                    y: {
+                        position: 'left',
+                        ticks: { color: '#8b949e' },
+                        grid: { color: '#30363d' },
+                        title: { display: true, text: 'Orders', color: '#8b949e' }
+                    },
+                    y1: {
+                        position: 'right',
+                        min: 0,
+                        max: 100,
+                        ticks: { color: '#8b949e' },
+                        grid: { display: false },
+                        title: { display: true, text: 'Satisfaction %', color: '#8b949e' }
+                    }
+                }
+            }
+        });
+        
+        // Category chart
+        const categoryCtx = document.getElementById('categoryChart').getContext('2d');
+        new Chart(categoryCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Pho/Noodles', 'Katsu', 'Rice Bowls', 'Kids Meals', 'Fried Rice', 'Wok/Stir Fry', 'Pad Thai', 'Pasta', 'Sushi'],
+                datasets: [{
+                    data: [30819, 25775, 22671, 18171, 13699, 13709, 11992, 10782, 9631],
+                    backgroundColor: [
+                        'rgba(0, 212, 170, 0.8)',
+                        'rgba(167, 139, 250, 0.8)',
+                        'rgba(255, 217, 61, 0.8)',
+                        'rgba(255, 107, 107, 0.8)',
+                        'rgba(99, 179, 237, 0.8)',
+                        'rgba(72, 187, 120, 0.8)',
+                        'rgba(237, 137, 54, 0.8)',
+                        'rgba(159, 122, 234, 0.8)',
+                        'rgba(246, 173, 85, 0.8)'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: { 
+                            color: '#8b949e',
+                            padding: 15,
+                            font: { size: 11 }
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Initial render
+        renderDishTable();
+    </script>
+</body>
+</html>
+

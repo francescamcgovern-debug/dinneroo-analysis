@@ -1,0 +1,122 @@
+{
+  "Various": {
+    "count": 11,
+    "avg_score": 3.5,
+    "gaps": 0
+  },
+  "British": {
+    "count": 6,
+    "avg_score": 3.6,
+    "gaps": 3
+  },
+  "Indian": {
+    "count": 5,
+    "avg_score": 3.85,
+    "gaps": 1
+  },
+  "Mexican": {
+    "count": 4,
+    "avg_score": 3.825,
+    "gaps": 2
+  },
+  "Japanese": {
+    "count": 4,
+    "avg_score": 3.9,
+    "gaps": 0
+  },
+  "Chinese": {
+    "count": 3,
+    "avg_score": 3.9,
+    "gaps": 2
+  },
+  "American": {
+    "count": 3,
+    "avg_score": 3.6833333333333336,
+    "gaps": 2
+  },
+  "Thai": {
+    "count": 3,
+    "avg_score": 3.5833333333333335,
+    "gaps": 1
+  },
+  "Italian": {
+    "count": 3,
+    "avg_score": 3.3000000000000003,
+    "gaps": 1
+  },
+  "Healthy/Fresh": {
+    "count": 2,
+    "avg_score": 4.375,
+    "gaps": 0
+  },
+  "Global": {
+    "count": 2,
+    "avg_score": 4.225,
+    "gaps": 0
+  },
+  "Vietnamese": {
+    "count": 2,
+    "avg_score": 3.575,
+    "gaps": 0
+  },
+  "Korean": {
+    "count": 2,
+    "avg_score": 3.825,
+    "gaps": 1
+  },
+  "Middle Eastern": {
+    "count": 2,
+    "avg_score": 3.875,
+    "gaps": 2
+  },
+  "Asian": {
+    "count": 2,
+    "avg_score": 3.25,
+    "gaps": 0
+  },
+  "Mediterranean": {
+    "count": 1,
+    "avg_score": 4.45,
+    "gaps": 1
+  },
+  "British/Global": {
+    "count": 1,
+    "avg_score": 4.2,
+    "gaps": 0
+  },
+  "Greek/Mediterranean": {
+    "count": 1,
+    "avg_score": 4.15,
+    "gaps": 1
+  },
+  "Italian (Premium)": {
+    "count": 1,
+    "avg_score": 4.05,
+    "gaps": 0
+  },
+  "Mexican/American": {
+    "count": 1,
+    "avg_score": 3.75,
+    "gaps": 1
+  },
+  "Greek": {
+    "count": 1,
+    "avg_score": 3.7,
+    "gaps": 0
+  },
+  "British/American": {
+    "count": 1,
+    "avg_score": 3.55,
+    "gaps": 1
+  },
+  "Spanish": {
+    "count": 1,
+    "avg_score": 3.4,
+    "gaps": 1
+  },
+  "Tex-Mex": {
+    "count": 1,
+    "avg_score": 3.1,
+    "gaps": 0
+  }
+}

@@ -1,0 +1,198 @@
+ZONE_NAME,CITY_NAME,DINNEROO_PARTNER_COUNT,DINNEROO_CUISINE_COUNT,TOTAL_DINNEROO_ORDERS,CUISINES_AVAILABLE,order_count,avg_rating,rating_count,unique_dishes,score_cuisine,score_partners,score_dishes,score_performance,score_quality,composite_score,rank
+West Central,London,20,7,502,"Asian, Meal Deals, Salads, Sandwiches, Vietnamese, italian, japanese",793,4.563025210084033,119.0,423,10,10,10,10,10,100.0,1
+Mayfair,London,18,7,545,"Chicken, Meal Deals, Salads, Sandwiches, Vietnamese, italian, japanese",772,4.568345323741007,139.0,351,10,10,10,10,10,100.0,2
+Clapham,London,14,9,1540,"Asian, Curry, Healthy, Mediterranean, Salads, Tacos, Vietnamese, Wraps, italian",2349,4.6104651162790695,344.0,533,10,10,10,10,10,100.0,3
+Notting Hill / Paddington,London,13,7,870,"Asian, Chicken, Curry, Salads, Sandwiches, italian, japanese",1226,4.525114155251141,219.0,382,10,10,10,10,10,100.0,4
+London Bridge,London,13,7,611,"Meal Deals, Salads, Sandwiches, Vietnamese, halal, italian, japanese",850,4.572519083969466,131.0,447,10,10,10,10,10,100.0,5
+Bath,Bath,10,8,446,"Asian, Burgers, Latin American, Salads, Sandwiches, italian, japanese, thai",647,4.533980582524272,103.0,461,10,10,10,10,10,100.0,6
+Islington,London,9,8,1530,"Asian, Salads, Sandwiches, Veganuary, Vietnamese, indian, italian, japanese",2262,4.68956043956044,364.0,431,10,8,10,10,10,97.0,7
+East Central,London,18,8,831,"Chicken, Healthy, Salads, Sandwiches, Tacos, Vietnamese, italian, japanese",1280,4.459090909090909,220.0,553,10,10,10,10,8,97.0,8
+Brighton Central,Brighton,12,9,1164,"Burgers, Latin American, Salads, Sandwiches, Vietnamese, italian, japanese, sushi, thai",1734,4.465863453815261,249.0,665,10,10,10,10,8,97.0,9
+Wimbledon,London,9,8,793,"Meal Deals, Salads, Sandwiches, Vietnamese, italian, japanese, sushi, thai",1314,4.5,214.0,505,10,8,10,10,10,97.0,10
+Kingston,London,8,8,773,"Meal Deals, Salads, Sandwiches, Vietnamese, italian, japanese, sushi, thai",1156,4.461538461538462,169.0,499,10,8,10,10,8,94.0,11
+Reading,Reading,10,9,897,"Asian, Burgers, Latin American, Pasta, Salads, Tacos, Vietnamese, italian, japanese",1318,4.293103448275862,174.0,555,10,10,10,10,6,94.0,12
+Birmingham,Birmingham,10,8,444,"Asian, Burgers, Latin American, Tacos, Vietnamese, Wraps, italian, japanese",689,4.154411764705882,136.0,423,10,10,10,10,6,94.0,13
+Cambridge,Cambridge,8,7,952,"Burgers, Latin American, Salads, Vietnamese, italian, japanese, thai",1403,4.482300884955753,226.0,554,10,8,10,10,8,94.0,14
+Milton Keynes,Milton Keynes,9,7,926,"Asian, Burgers, Latin American, Salads, Vietnamese, italian, japanese",1332,4.4581005586592175,179.0,509,10,8,10,10,8,94.0,15
+Bristol,Bristol,7,5,781,"Latin American, Vietnamese, italian, japanese, thai",1173,4.533707865168539,178.0,414,8,8,10,10,10,93.0,16
+Oxford,Oxford,9,6,1022,"Asian, Salads, Vietnamese, italian, japanese, thai",1501,4.515723270440252,159.0,456,8,8,10,10,10,93.0,17
+Chelmsford,Chelmsford,7,7,489,"Asian, Burgers, Latin American, Tacos, italian, japanese, thai",725,4.208791208791209,91.0,391,10,8,10,10,6,91.0,18
+Hammersmith / Shepherd's Bush,London,9,6,672,"Meal Deals, Salads, Sandwiches, Vegan Friendly, italian, japanese",962,4.456647398843931,173.0,329,8,8,10,10,8,90.0,19
+Reigate,Crawley,6,6,372,"Asian, Meal Deals, italian, japanese, sushi, thai",541,4.506666666666667,75.0,335,8,6,10,10,10,90.0,20
+Chiswick,London,6,6,790,"Healthy, Mediterranean, Salads, Vietnamese, indian, italian",1240,4.737864077669903,206.0,247,8,6,10,10,10,90.0,21
+Fulham,London,5,5,428,"Asian, Chicken, Vietnamese, italian, japanese",615,4.574257425742574,101.0,206,8,6,10,10,10,90.0,22
+Nottingham,Nottingham,7,5,543,"Burgers, Latin American, Vietnamese, italian, japanese",759,4.4324324324324325,148.0,381,8,8,10,10,8,90.0,23
+Glasgow Centre,Glasgow,6,5,399,"Asian, Burgers, Pho, italian, japanese",542,4.5476190476190474,84.0,234,8,6,10,10,10,90.0,24
+Richmond / Kew,London,8,6,385,"Chicken, Meal Deals, Salads, Sandwiches, italian, japanese",562,4.3023255813953485,86.0,358,8,8,10,10,8,90.0,25
+York,York,8,6,465,"Burgers, Christmas Specials, Latin American, Vietnamese, italian, japanese",729,4.456310679611651,103.0,405,8,8,10,10,8,90.0,26
+Dublin City North,Dublin,12,5,459,"Roasteries, chinese, indian, italian, vegetarian",782,4.058252427184466,103.0,383,8,10,10,10,6,90.0,27
+Leeds City Centre,Leeds,9,7,323,"Burgers, Gluten Free, Latin American, Salads, italian, japanese, thai",470,4.521739130434782,69.0,393,10,8,10,7,10,89.5,28
+South Kensington,London,9,4,485,"Chicken, Salads, Sandwiches, italian",676,4.556701030927835,97.0,289,6,8,10,10,10,89.0,29
+"Victoria, Westminster, Pimlico",London,12,5,374,"Meal Deals, Salads, Sandwiches, italian, japanese",506,4.633333333333334,60.0,276,8,10,10,7,10,88.5,30
+Norwich,Norwich,9,6,672,"Asian, Burgers, Vietnamese, italian, japanese, thai",1050,4.248322147651007,149.0,448,8,8,10,10,6,87.0,31
+Hampstead,London,5,5,536,"Asian, Salads, halal, japanese, sushi",797,4.472,125.0,300,8,6,10,10,8,87.0,32
+Canterbury,Canterbury,7,6,387,"Burgers, Burritos, Vietnamese, italian, japanese, sushi",534,4.158730158730159,63.0,314,8,8,10,10,6,87.0,33
+Wembley,London,5,5,725,"Latin American, Vegan Friendly, indian, italian, japanese",1202,4.489795918367347,196.0,265,8,6,10,10,8,87.0,34
+Stratford,London,5,5,395,"Asian, Salads, Vegan Friendly, italian, japanese",665,4.262626262626263,99.0,269,8,6,10,10,6,84.0,35
+Guildford,London,6,6,677,"Burgers, Salads, Vietnamese, italian, japanese, thai",969,4.247787610619469,113.0,431,8,6,10,10,6,84.0,36
+Ealing,London,5,5,597,"Latin American, Salads, Vietnamese, italian, japanese",904,4.201680672268908,119.0,334,8,6,10,10,6,84.0,37
+Lewisham,London,6,4,943,"Asian, Meal Deals, Vietnamese, italian",1358,4.495575221238938,226.0,353,6,6,10,10,8,83.0,38
+Bracknell,Camberley,4,4,413,"Latin American, italian, japanese, thai",585,4.553846153846154,65.0,337,6,4,10,10,10,83.0,39
+Cardiff,Cardiff,6,5,321,"Burgers, Latin American, Vietnamese, italian, japanese",475,4.571428571428571,70.0,258,8,6,10,7,10,82.5,40
+Canary Wharf,London,6,4,595,"Salads, Sandwiches, Vietnamese, japanese",1122,4.294520547945205,146.0,342,6,6,10,10,6,80.0,41
+Croydon,London,5,4,353,"Asian, Movie Night Restaurants, italian, japanese",519,4.2894736842105265,76.0,215,6,6,10,10,6,80.0,42
+Salford,Manchester,5,4,411,"Asian, Featured Restaurants, italian, japanese",535,4.257425742574258,101.0,250,6,6,10,10,6,80.0,43
+Southsea,Portsmouth,7,6,289,"Asian, Latin American, Vietnamese, italian, japanese, thai",435,4.180327868852459,61.0,294,8,8,10,7,6,79.5,44
+Finsbury Park / Harringay / Crouch End,London,4,3,987,"Tacos, Vegan Friendly, indian",1534,4.528,250.0,223,4,4,10,10,10,79.0,45
+Wapping and Mile End,London,4,4,626,"Asian, Curry, Healthy, Middle Eastern",961,4.662068965517242,145.0,151,6,4,8,10,10,78.0,46
+St Albans,London,4,4,389,"Burgers, Salads, italian, japanese",559,4.22680412371134,97.0,318,6,4,10,10,6,77.0,47
+Dartford,London,6,5,221,"Asian, Sandwiches, Shawarma, italian, japanese",336,4.102564102564102,39.0,253,8,6,10,7,6,76.5,48
+Camden/Kentish Town,London,6,6,170,"Asian, Salads, Sandwiches, Tacos, italian, japanese",249,4.111111111111111,36.0,221,8,6,10,7,6,76.5,49
+Edgbaston,Birmingham,3,3,354,"Vietnamese, italian, thai",574,4.67741935483871,93.0,204,4,2,10,10,10,76.0,50
+Brockley / Forest Hill,London,3,3,904,"Vegan Friendly, indian, japanese",1478,4.612068965517241,232.0,210,4,2,10,10,10,76.0,51
+Bournemouth,Bournemouth,5,3,411,"Vietnamese, italian, japanese",634,4.263736263736264,91.0,257,4,6,10,10,6,76.0,52
+Colchester,Colchester,4,4,337,"Burgers, italian, japanese, sushi",464,4.597014925373134,67.0,249,6,4,10,7,10,75.5,53
+Royal Tunbridge Wells,Royal Tunbridge Wells,5,4,274,"Burgers, italian, japanese, thai",426,4.4363636363636365,55.0,321,6,6,10,7,8,75.5,54
+Cheltenham,Cheltenham,6,4,342,"Vietnamese, italian, japanese, thai",512,4.378378378378378,74.0,270,6,6,10,7,8,75.5,55
+Edinburgh Central,Edinburgh,4,3,427,"Asian, Pho, italian",722,4.511363636363637,88.0,145,4,4,8,10,10,74.0,56
+Surrey Quays,London,4,3,771,"Healthy, Middle Eastern, indian",1139,4.606217616580311,193.0,131,4,4,8,10,10,74.0,57
+Watford,London,4,4,262,"Latin American, italian, japanese, sushi",372,4.357142857142857,56.0,220,6,4,10,7,8,72.5,58
+Horsham,Crawley,4,4,282,"Burgers, italian, japanese, thai",416,4.409090909090909,66.0,283,6,4,10,7,8,72.5,59
+Windsor,London,5,4,356,"Asian, Burgers, italian, japanese",517,4.298701298701299,77.0,278,6,6,10,7,6,72.5,60
+Southampton,Southampton,5,4,342,"Burgers, Latin American, italian, japanese",470,4.288888888888889,90.0,281,6,6,10,7,6,72.5,61
+Wandsworth,London,3,3,532,"Curry, italian, japanese",853,4.691275167785235,149.0,145,4,2,8,10,10,71.0,62
+Brixton,London,4,4,317,"Salads, Sandwiches, indian, italian",396,4.5,64.0,150,6,4,8,7,10,70.5,63
+Belsize Park / St John's Wood,London,4,4,205,"Healthy, Salads, italian, lebanese",278,4.7924528301886795,53.0,146,6,4,8,7,10,70.5,64
+Cardiff Bay Area,Cardiff,5,5,99,"Burgers, Latin American, italian, japanese, thai",144,4.777777777777778,18.0,153,8,6,8,4,10,70.0,65
+Chichester,Portsmouth,4,4,161,"Burgers, italian, japanese, thai",237,4.133333333333334,30.0,202,6,4,10,7,6,69.5,66
+Bromley,London,5,4,325,"Asian, Salads, italian, japanese",465,3.8135593220338984,59.0,216,6,6,10,7,4,69.5,67
+Farnham,Camberley,3,3,191,"breakfast, italian, thai",306,4.673076923076923,52.0,210,4,2,10,7,10,68.5,68
+Liverpool City Centre,Liverpool,6,4,210,"Latin American, Vietnamese, italian, japanese",307,4.2926829268292686,41.0,194,6,6,8,7,6,67.5,69
+Newton Longville,Milton Keynes,5,4,129,"Asian, Sandwiches, italian, pizza",181,4.045454545454546,22.0,179,6,6,8,7,6,67.5,70
+Royal Leamington Spa,Coventry,4,4,174,"Latin American, italian, japanese, thai",257,4.366666666666666,30.0,198,6,4,8,7,8,67.5,71
+Dalston Stoke Newington,London,4,4,346,"Asian, halal, indian, italian",434,4.426470588235294,68.0,106,6,4,8,7,8,67.5,72
+Canning Town,London,3,2,818,"Mediterranean, indian",1314,4.6702702702702705,185.0,134,2,2,8,10,10,67.0,73
+Putney & Barnes,London,4,3,190,"Salads, italian, japanese",296,4.702127659574468,47.0,180,4,4,8,7,10,66.5,74
+Sheffield City Centre,Sheffield,4,3,289,"Vietnamese, italian, japanese",442,4.267605633802817,71.0,205,4,4,10,7,6,65.5,75
+Cribbs Causeway Shopping Centre,Bristol,5,4,153,"Latin American, Salads, italian, japanese",220,3.8666666666666667,30.0,194,6,6,8,7,4,64.5,76
+Uxbridge,London,4,3,137,"italian, japanese, sushi",242,4.404761904761905,42.0,133,4,4,8,7,8,63.5,77
+Epsom,London,5,3,195,"Asian, italian, sushi",292,4.125,32.0,191,4,6,8,7,6,63.5,78
+Walton on Thames,London,4,3,181,"Asian, italian, japanese",275,4.472222222222222,36.0,154,4,4,8,7,8,63.5,79
+Edinburgh North,Edinburgh,4,3,118,"Pho, Plus offers Oct 2024, japanese",345,4.4324324324324325,37.0,174,4,4,8,7,8,63.5,80
+"Highgate, Muswell Hill, East Finchley",London,4,3,111,"Asian, indian, italian",168,4.416666666666667,24.0,126,4,4,8,7,8,63.5,81
+Stevenage,London,3,3,235,"italian, japanese, thai",369,4.523076923076923,65.0,167,4,2,8,7,10,63.5,82
+Didsbury and Withington,Manchester,3,3,120,"Featured Restaurants, italian, japanese",236,4.722222222222222,36.0,160,4,2,8,7,10,63.5,83
+Basingstoke,Reading,4,3,332,"Latin American, italian, japanese",483,3.8333333333333335,66.0,249,4,4,10,7,4,62.5,84
+Romford,London,3,2,284,"Asian, italian",434,4.43859649122807,57.0,214,2,2,10,7,8,61.5,85
+Easton,Bristol,3,3,190,"Salads, italian, japanese",297,4.375,32.0,197,4,2,8,7,8,60.5,86
+Wokingham,Camberley,2,2,110,"italian, thai",177,4.782608695652174,23.0,125,2,1,8,7,10,58.0,87
+Henley on Thames,Reading,3,3,110,"Asian, italian, thai",181,4.277777777777778,18.0,147,4,2,8,7,6,57.5,88
+West Bridgford,Nottingham,3,3,154,"italian, japanese, thai",239,4.291666666666667,48.0,142,4,2,8,7,6,57.5,89
+Eccles,Manchester,3,3,116,"Burgers, Latin American, Salads",175,4.0256410256410255,39.0,170,4,2,8,7,6,57.5,90
+Golders Green / Brent Cross,London,4,2,213,"Asian Fusion, Kosher",275,4.0,48.0,111,2,4,8,7,6,56.5,91
+Harrow,London,4,3,76,"indian, italian, sushi",126,4.333333333333333,15.0,156,4,4,8,4,8,56.0,92
+Balham,London,2,2,179,"Vietnamese, italian",265,4.435897435897436,39.0,107,2,1,8,7,8,55.0,93
+Harpenden,London,2,2,107,"italian, thai",169,4.470588235294118,17.0,112,2,1,8,7,8,55.0,94
+Greenwich,London,2,2,232,"Asian, japanese",332,4.487804878048781,41.0,101,2,1,8,7,8,55.0,95
+Newbury,Reading,3,3,106,"Burgers, italian, sushi",148,4.478260869565218,23.0,140,4,2,8,4,8,53.0,96
+Kingsbury Green/ The Hyde,London,2,2,115,"italian, japanese",168,4.137931034482759,29.0,107,2,1,8,7,6,52.0,97
+Berkhamsted,London,2,2,76,"italian, thai",109,4.733333333333333,15.0,107,2,1,8,4,10,50.5,98
+Winchester,Southampton,3,3,68,"Movie Night Restaurants, japanese, thai",126,4.0,16.0,101,4,2,8,4,6,50.0,99
+Chingford,London,3,3,53,"Asian, Tacos, italian",77,4.2,10.0,114,4,2,8,4,6,50.0,100
+Braintree,Chelmsford,4,3,94,"Burgers, italian, japanese",151,3.9047619047619047,21.0,187,4,4,8,4,4,50.0,101
+Finchley,London,1,1,205,japanese,308,4.2,50.0,121,1,1,8,7,6,50.0,102
+Camberley,Camberley,2,2,223,"italian, japanese",319,3.972972972972973,37.0,142,2,1,8,7,4,49.0,103
+Enfield,London,2,2,201,"italian, japanese",302,3.8679245283018866,53.0,143,2,1,8,7,4,49.0,104
+Hatfield/ Hatfield Park,London,3,2,96,"Asian, italian",160,4.388888888888889,18.0,119,2,2,8,4,8,49.0,105
+Manchester Central,Manchester,3,2,13,"Vietnamese, japanese",156,4.363636363636363,22.0,104,2,2,8,4,8,49.0,106
+Sutton,London,4,2,66,"italian, sushi",101,4.125,8.0,106,2,4,8,4,6,49.0,107
+Chislehurst,London,1,1,113,thai,192,4.461538461538462,39.0,79,1,1,6,7,8,48.0,108
+Woking,London,2,2,74,"Salads, italian",114,4.333333333333333,15.0,107,2,1,8,4,8,47.5,109
+Maida Vale / Kilburn,London,2,2,215,"Asian, Chicken",301,4.081632653061225,49.0,94,2,1,6,7,6,47.0,110
+Dublin City South,Dublin,3,3,6,"Family favourites, Healthy Eating 2025, Middle Eastern",93,4.823529411764706,17.0,43,4,2,4,4,10,46.0,111
+Esher,London,2,2,79,"italian, thai",143,4.666666666666667,18.0,97,2,1,6,4,10,45.5,112
+Upminster,London,2,2,71,"italian, thai",126,4.178571428571429,28.0,100,2,1,8,4,6,44.5,113
+Weybridge,London,2,2,107,"italian, thai",172,3.869565217391304,23.0,95,2,1,6,7,4,44.0,114
+Leavesden and Abbots Langley,London,1,1,84,Asian,123,4.785714285714286,14.0,65,1,1,6,4,10,43.5,115
+Dulwich,London,1,1,43,italian,71,4.666666666666667,9.0,60,1,1,6,4,10,43.5,116
+Morningside,Edinburgh,1,1,30,italian,51,5.0,7.0,51,1,1,6,4,10,43.5,117
+Barnet,London,1,1,36,italian,50,5.0,3.0,56,1,1,6,4,10,43.5,118
+Twickenham / Teddington,London,3,2,75,"Tacos, italian",106,3.7777777777777777,18.0,145,2,2,8,4,4,43.0,119
+Eltham,London,2,2,36,"Asian, italian",57,4.384615384615385,13.0,67,2,1,6,4,8,42.5,120
+Wood Green,London,2,2,94,"Asian, sushi",123,4.375,24.0,70,2,1,6,4,8,42.5,121
+Welwyn Garden City,London,2,2,72,"italian, thai",121,4.473684210526316,19.0,98,2,1,6,4,8,42.5,122
+Warwick,Coventry,2,2,28,"italian, thai",50,4.375,8.0,65,2,1,6,4,8,42.5,123
+Edgware / Mill Hill,London,3,3,79,"Kosher, Organic, italian",95,3.8333333333333335,12.0,91,4,2,6,4,4,42.0,124
+South Pollok,Glasgow,1,1,61,japanese,96,4.473684210526316,19.0,71,1,1,6,4,8,40.5,125
+Beckenham,London,1,1,37,italian,65,4.357142857142857,14.0,55,1,1,6,4,8,40.5,126
+Staines,London,1,1,102,japanese,142,4.454545454545454,22.0,62,1,1,6,4,8,40.5,127
+Poole,Bournemouth,2,2,36,"italian, sushi",70,4.166666666666667,6.0,75,2,1,6,4,6,39.5,128
+Tonbridge,Royal Tunbridge Wells,2,2,29,"Asian, italian",56,4.0,4.0,66,2,1,6,4,6,39.5,129
+Eastbourne,Brighton,2,2,26,"Burgers, italian",40,4.285714285714286,7.0,75,2,1,6,4,6,39.5,130
+Dundrum,Dublin,2,2,46,"italian, japanese",107,4.176470588235294,17.0,90,2,1,6,4,6,39.5,131
+Palmers Green / Southgate,London,2,2,73,"Asian, italian",101,4.285714285714286,14.0,76,2,1,6,4,6,39.5,132
+Sidcup,London,2,2,52,"Asian, italian",74,4.2,10.0,59,2,1,6,4,6,39.5,133
+Hunts Cross,Liverpool,2,2,47,"italian, japanese",61,4.0,10.0,69,2,1,6,4,6,39.5,134
+Raynes Park,London,2,1,37,italian,58,5.0,5.0,46,1,1,4,4,10,38.5,135
+Aldershot,Camberley,1,1,34,italian,55,4.0,7.0,61,1,1,6,4,6,37.5,136
+Ruislip,London,1,1,40,italian,56,4.0,6.0,52,1,1,6,4,6,37.5,137
+Godalming,London,2,1,42,italian,64,4.25,4.0,58,1,1,6,4,6,37.5,138
+Hemel Hempstead,London,2,1,29,italian,41,4.0,7.0,67,1,1,6,4,6,37.5,139
+Ilford,London,1,1,39,indian,67,4.166666666666667,12.0,61,1,1,6,4,6,37.5,140
+Ronanstown,Dublin,2,2,41,"italian, japanese",69,3.5454545454545454,11.0,65,2,1,6,4,4,36.5,141
+Glasgow West End,Glasgow,1,1,45,Asian,108,4.5625,16.0,27,1,1,3,4,10,36.0,142
+High Wycombe,London,1,1,49,thai,78,3.7142857142857144,7.0,53,1,1,6,4,4,34.5,143
+South Woodford,London,1,1,48,italian,69,3.5384615384615383,13.0,53,1,1,6,4,4,34.5,144
+Headingley,Leeds,1,1,28,italian,40,3.6666666666666665,3.0,65,1,1,6,4,4,34.5,145
+Renfrew,Glasgow,2,1,34,italian,46,3.6666666666666665,3.0,66,1,1,6,4,4,34.5,146
+Bermondsey,London,2,2,33,"Asian, italian",52,3.0,6.0,60,2,1,6,4,2,33.5,147
+Dudley,Birmingham,2,2,3,"Asian, italian",28,4.75,4.0,32,2,1,4,1,10,33.0,148
+Sevenoaks,Royal Tunbridge Wells,2,2,2,"japanese, sushi",26,4.2,5.0,52,2,1,6,1,6,32.0,149
+Bexleyheath,London,2,2,28,"Asian, italian",48,3.857142857142857,7.0,45,2,1,4,4,4,31.5,150
+Galway,Galway,3,3,21,"Asian Fusion, chinese, italian",30,3.3333333333333335,3.0,55,4,2,6,1,2,31.5,151
+Stanmore,London,1,1,19,italian,22,5.0,3.0,36,1,1,4,1,10,31.0,152
+Oakwood and Chapeltown,Leeds,1,1,19,italian,23,4.75,4.0,35,1,1,4,1,10,31.0,153
+Southall,London,1,1,17,indian,28,5.0,2.0,31,1,1,4,1,10,31.0,154
+"Vauxhall, Kennington and Oval",London,1,1,22,italian,36,4.666666666666667,6.0,41,1,1,4,1,10,31.0,155
+Saltdean,Brighton,2,1,12,italian,16,5.0,2.0,34,1,1,4,1,10,31.0,156
+Sheffield,Sheffield,1,1,13,italian,18,5.0,3.0,37,1,1,4,1,10,31.0,157
+Belfast,Belfast,2,1,10,italian,14,5.0,1.0,31,1,1,4,1,10,31.0,158
+Chesham,London,1,1,21,italian,28,4.0,2.0,57,1,1,6,1,6,30.0,159
+Lockleaze,Bristol,1,1,34,italian,40,3.75,4.0,31,1,1,4,4,4,29.5,160
+Orpington,London,1,1,11,Asian,13,5.0,2.0,21,1,1,3,1,10,28.5,161
+Purley,London,1,1,21,Asian,32,4.5,8.0,22,1,1,3,1,10,28.5,162
+Crawley,Crawley,1,1,3,japanese,35,4.8,5.0,29,1,1,3,1,10,28.5,163
+Stockport/Heaton Moor,Manchester,1,1,16,italian,26,5.0,3.0,28,1,1,3,1,10,28.5,164
+Epping,London,1,1,7,italian,9,5.0,1.0,23,1,1,3,1,10,28.5,165
+Belfast Central,Belfast,1,1,6,italian,11,5.0,1.0,26,1,1,3,1,10,28.5,166
+Tooting,London,1,1,15,sushi,37,5.0,3.0,23,1,1,3,1,10,28.5,167
+Bournemouth East,Bournemouth,1,1,23,italian,33,3.5714285714285716,7.0,63,1,1,6,1,4,27.0,168
+"Dun laoghaire, Dalkey, Killiney",Dublin,1,1,17,italian,22,4.333333333333333,6.0,29,1,1,3,1,8,25.5,169
+East Barnet,London,1,1,15,indian,17,4.4,5.0,25,1,1,3,1,8,25.5,170
+Borehamwood,London,1,1,12,italian,16,4.0,2.0,31,1,1,4,1,6,25.0,171
+Altrincham and Hale,Manchester,1,1,9,italian,23,4.2,5.0,36,1,1,4,1,6,25.0,172
+Maidenhead,London,1,1,19,italian,27,4.166666666666667,6.0,31,1,1,4,1,6,25.0,173
+Woolwich,London,1,1,10,Asian,15,5.0,1.0,13,1,1,1,1,10,23.5,174
+Slough,London,1,1,7,Asian,11,5.0,1.0,8,1,1,1,1,10,23.5,175
+Taplow and Burnham,London,1,1,21,italian,28,0.0,0.0,30,1,1,4,1,5,23.5,176
+Kylemore,Dublin,1,1,22,chinese,34,5.0,4.0,16,1,1,1,1,10,23.5,177
+Crystal Palace / Penge,London,1,1,3,Asian,11,4.666666666666667,3.0,13,1,1,1,1,10,23.5,178
+Glasgow Centre East,Glasgow,1,1,1,japanese,6,5.0,1.0,17,1,1,1,1,10,23.5,179
+Mulhuddart,Dublin,1,1,19,italian,28,4.0,4.0,28,1,1,3,1,6,22.5,180
+Rotherham,Sheffield,1,1,17,Latin American,17,4.0,2.0,26,1,1,3,1,6,22.5,181
+Grays,London,1,1,21,Latin American,28,3.6,5.0,36,1,1,4,1,4,22.0,182
+Leyton,London,1,1,13,indian,17,3.5,4.0,33,1,1,4,1,4,22.0,183
+Shirley / Wickham,London,1,1,25,italian,33,3.5,4.0,48,1,1,4,1,4,22.0,184
+Gerrards Cross,London,1,1,21,italian,35,3.857142857142857,7.0,34,1,1,4,1,4,22.0,185
+Fleet,Camberley,1,1,29,italian,38,3.5454545454545454,11.0,39,1,1,4,1,4,22.0,186
+Portsmouth,Portsmouth,1,1,11,sushi,15,0.0,0.0,22,1,1,3,1,5,21.0,187
+Eastleigh Central,Southampton,1,1,9,italian,16,3.0,2.0,30,1,1,4,1,2,19.0,188
+Hitchin,London,1,1,18,italian,26,3.0,3.0,47,1,1,4,1,2,19.0,189
+Farnborough,Camberley,1,1,7,italian,14,2.3333333333333335,3.0,24,1,1,3,1,2,16.5,190
+Letchworth Garden City,London,1,1,2,italian,4,0.0,0.0,9,1,1,1,1,5,16.0,191
+Maidstone,Maidstone,1,1,2,sushi,9,0.0,0.0,13,1,1,1,1,5,16.0,192
+Euston,London,1,1,2,Salads,2,0.0,0.0,9,1,1,1,1,5,16.0,193
+Waterloo & Southbank,London,2,2,7,"Sandwiches, italian",9,1.0,1.0,20,2,1,1,1,2,13.5,194
+Port Solent,Portsmouth,1,1,2,italian,3,1.0,1.0,8,1,1,1,1,2,11.5,195
+Greater Leeds,Leeds,1,1,1,Asian,13,1.0,1.0,15,1,1,1,1,2,11.5,196
+Belfast East,Belfast,1,1,8,italian,8,1.0,1.0,12,1,1,1,1,2,11.5,197

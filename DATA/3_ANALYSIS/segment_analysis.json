@@ -1,0 +1,402 @@
+{
+  "regional_cuisine_preferences": {
+    "London": [
+      {
+        "REGION": "London",
+        "CUISINE": "Vietnamese",
+        "orders": 7140
+      },
+      {
+        "REGION": "London",
+        "CUISINE": "Indian",
+        "orders": 5910
+      },
+      {
+        "REGION": "London",
+        "CUISINE": "Japanese/Asian",
+        "orders": 4743
+      },
+      {
+        "REGION": "London",
+        "CUISINE": "Thai/Southeast Asian",
+        "orders": 2968
+      },
+      {
+        "REGION": "London",
+        "CUISINE": "Italian",
+        "orders": 2506
+      }
+    ],
+    "Other": [
+      {
+        "REGION": "Other",
+        "CUISINE": "Japanese/Asian",
+        "orders": 4208
+      },
+      {
+        "REGION": "Other",
+        "CUISINE": "Indian",
+        "orders": 3893
+      },
+      {
+        "REGION": "Other",
+        "CUISINE": "Italian",
+        "orders": 3387
+      },
+      {
+        "REGION": "Other",
+        "CUISINE": "Thai/Southeast Asian",
+        "orders": 3229
+      },
+      {
+        "REGION": "Other",
+        "CUISINE": "Vietnamese",
+        "orders": 1384
+      }
+    ],
+    "South West": [
+      {
+        "REGION": "South West",
+        "CUISINE": "Vietnamese",
+        "orders": 898
+      },
+      {
+        "REGION": "South West",
+        "CUISINE": "Thai/Southeast Asian",
+        "orders": 523
+      },
+      {
+        "REGION": "South West",
+        "CUISINE": "Japanese/Asian",
+        "orders": 483
+      },
+      {
+        "REGION": "South West",
+        "CUISINE": "Italian",
+        "orders": 200
+      },
+      {
+        "REGION": "South West",
+        "CUISINE": "Japanese",
+        "orders": 150
+      }
+    ],
+    "South East": [
+      {
+        "REGION": "South East",
+        "CUISINE": "Japanese/Asian",
+        "orders": 3595
+      },
+      {
+        "REGION": "South East",
+        "CUISINE": "Vietnamese",
+        "orders": 2875
+      },
+      {
+        "REGION": "South East",
+        "CUISINE": "Thai/Southeast Asian",
+        "orders": 2764
+      },
+      {
+        "REGION": "South East",
+        "CUISINE": "Italian",
+        "orders": 1905
+      },
+      {
+        "REGION": "South East",
+        "CUISINE": "British",
+        "orders": 1377
+      }
+    ],
+    "Scotland": [
+      {
+        "REGION": "Scotland",
+        "CUISINE": "Vietnamese",
+        "orders": 380
+      },
+      {
+        "REGION": "Scotland",
+        "CUISINE": "Japanese/Asian",
+        "orders": 284
+      },
+      {
+        "REGION": "Scotland",
+        "CUISINE": "Thai/Southeast Asian",
+        "orders": 157
+      },
+      {
+        "REGION": "Scotland",
+        "CUISINE": "Japanese",
+        "orders": 71
+      },
+      {
+        "REGION": "Scotland",
+        "CUISINE": "Mexican",
+        "orders": 55
+      }
+    ],
+    "North": [
+      {
+        "REGION": "North",
+        "CUISINE": "Vietnamese",
+        "orders": 1004
+      },
+      {
+        "REGION": "North",
+        "CUISINE": "Japanese/Asian",
+        "orders": 531
+      },
+      {
+        "REGION": "North",
+        "CUISINE": "Thai/Southeast Asian",
+        "orders": 244
+      },
+      {
+        "REGION": "North",
+        "CUISINE": "Italian",
+        "orders": 214
+      },
+      {
+        "REGION": "North",
+        "CUISINE": "British",
+        "orders": 157
+      }
+    ],
+    "Midlands": [
+      {
+        "REGION": "Midlands",
+        "CUISINE": "Indian",
+        "orders": 380
+      },
+      {
+        "REGION": "Midlands",
+        "CUISINE": "Thai/Southeast Asian",
+        "orders": 301
+      },
+      {
+        "REGION": "Midlands",
+        "CUISINE": "Japanese/Asian",
+        "orders": 124
+      },
+      {
+        "REGION": "Midlands",
+        "CUISINE": "Italian",
+        "orders": 97
+      },
+      {
+        "REGION": "Midlands",
+        "CUISINE": "Vietnamese",
+        "orders": 71
+      }
+    ],
+    "Wales": [
+      {
+        "REGION": "Wales",
+        "CUISINE": "Vietnamese",
+        "orders": 303
+      },
+      {
+        "REGION": "Wales",
+        "CUISINE": "Japanese/Asian",
+        "orders": 161
+      },
+      {
+        "REGION": "Wales",
+        "CUISINE": "Mexican",
+        "orders": 56
+      },
+      {
+        "REGION": "Wales",
+        "CUISINE": "British",
+        "orders": 39
+      },
+      {
+        "REGION": "Wales",
+        "CUISINE": "Thai/Southeast Asian",
+        "orders": 38
+      }
+    ]
+  },
+  "regional_dish_preferences": {
+    "London": [
+      {
+        "dish": "Prawn crackers",
+        "count": 5960
+      },
+      {
+        "dish": "Egg fried rice with chicken",
+        "count": 5110
+      },
+      {
+        "dish": "Pho the whole fam",
+        "count": 4297
+      },
+      {
+        "dish": "Wok-fried noodles with chicken",
+        "count": 3831
+      },
+      {
+        "dish": "family chicken katsu",
+        "count": 3733
+      }
+    ],
+    "Other": [
+      {
+        "dish": "family chicken katsu",
+        "count": 3339
+      },
+      {
+        "dish": "Garlic Bread with Mozzarella Sharer (V) (723 kcal: serves 2)",
+        "count": 2160
+      },
+      {
+        "dish": "Family Favourites Feast",
+        "count": 1872
+      },
+      {
+        "dish": "Katsu Chicken Rice Bowl",
+        "count": 1692
+      },
+      {
+        "dish": "Dishoom Chicken Ruby \u2013 for the family",
+        "count": 1654
+      }
+    ],
+    "South West": [
+      {
+        "dish": "Prawn crackers",
+        "count": 775
+      },
+      {
+        "dish": "Egg fried rice with chicken",
+        "count": 641
+      },
+      {
+        "dish": "Pho the whole fam",
+        "count": 528
+      },
+      {
+        "dish": "Wok-fried noodles with chicken",
+        "count": 495
+      },
+      {
+        "dish": "family chicken katsu",
+        "count": 393
+      }
+    ],
+    "South East": [
+      {
+        "dish": "family chicken katsu",
+        "count": 2905
+      },
+      {
+        "dish": "Prawn crackers",
+        "count": 2378
+      },
+      {
+        "dish": "Egg fried rice with chicken",
+        "count": 1971
+      },
+      {
+        "dish": "Katsu Chicken Rice Bowl",
+        "count": 1902
+      },
+      {
+        "dish": "Wok-fried noodles with chicken",
+        "count": 1633
+      }
+    ],
+    "Scotland": [
+      {
+        "dish": "Prawn crackers",
+        "count": 333
+      },
+      {
+        "dish": "Egg fried rice with chicken",
+        "count": 263
+      },
+      {
+        "dish": "family chicken katsu",
+        "count": 220
+      },
+      {
+        "dish": "Pho the whole fam",
+        "count": 212
+      },
+      {
+        "dish": "Wok-fried noodles with chicken",
+        "count": 209
+      }
+    ],
+    "North": [
+      {
+        "dish": "Prawn crackers",
+        "count": 800
+      },
+      {
+        "dish": "Egg fried rice with chicken",
+        "count": 669
+      },
+      {
+        "dish": "Wok-fried noodles with chicken",
+        "count": 557
+      },
+      {
+        "dish": "Pho the whole fam",
+        "count": 473
+      },
+      {
+        "dish": "family chicken katsu",
+        "count": 413
+      }
+    ],
+    "Midlands": [
+      {
+        "dish": "Samosas, rice, kachumber salad, papads, sweet raita & mango chutney",
+        "count": 368
+      },
+      {
+        "dish": "Katsu Chicken Rice Bowl",
+        "count": 336
+      },
+      {
+        "dish": "Old Delhi Chicken",
+        "count": 286
+      },
+      {
+        "dish": "Butter Chicken",
+        "count": 284
+      },
+      {
+        "dish": "Chicken Teriyaki Rice Bowl",
+        "count": 231
+      }
+    ],
+    "Wales": [
+      {
+        "dish": "Prawn crackers",
+        "count": 248
+      },
+      {
+        "dish": "Egg fried rice with chicken",
+        "count": 235
+      },
+      {
+        "dish": "Wok-fried noodles with chicken",
+        "count": 178
+      },
+      {
+        "dish": "Pho the whole fam",
+        "count": 148
+      },
+      {
+        "dish": "family chicken katsu",
+        "count": 141
+      }
+    ]
+  },
+  "family_insights": {
+    "with_children": 776,
+    "without_children": 788
+  }
+}

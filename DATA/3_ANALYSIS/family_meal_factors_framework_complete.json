@@ -1,0 +1,152 @@
+{
+  "version": "1.0",
+  "date": "2026-01-05",
+  "purpose": "Score dishes for family midweek meal suitability",
+  "factors": {
+    "PORTION_FLEXIBILITY": {
+      "weight": 0.15,
+      "description": "Can feed 2 adults + 2 kids in appropriate portions",
+      "scoring": {
+        "5": "Explicitly designed for 4 people, family-sized",
+        "4": "Sharing platters or 4 individual portions",
+        "3": "Can be ordered in quantities for 4",
+        "2": "Individual portions only, need to order 4x",
+        "1": "Single-serve only, not suitable for family"
+      },
+      "evidence_sources": [
+        "Dropoff: 68 selected \"clearer portion information\"",
+        "Rating comments: 405 portion mentions"
+      ]
+    },
+    "FUSSY_EATER_FRIENDLY": {
+      "weight": 0.15,
+      "description": "Mild options available, familiar flavours kids will eat",
+      "scoring": {
+        "5": "Mild by default, universally appealing to children",
+        "4": "Mild option available, familiar ingredients",
+        "3": "Can be made mild on request",
+        "2": "Some unfamiliar ingredients, may need adaptation",
+        "1": "Spicy/complex flavours, not kid-friendly"
+      },
+      "evidence_sources": [
+        "Dropoff: 1037 fussy eater mentions",
+        "Dropoff: 34 selected \"more kid-friendly options\""
+      ]
+    },
+    "CUSTOMISATION": {
+      "weight": 0.15,
+      "description": "Individual preferences can be accommodated",
+      "scoring": {
+        "5": "Build-your-own format, fully customisable",
+        "4": "Multiple options/swaps available",
+        "3": "Some customisation possible",
+        "2": "Limited customisation",
+        "1": "Fixed menu, no customisation"
+      },
+      "evidence_sources": [
+        "Dropoff: 125 selected \"more options to customise\"",
+        "OG Survey: 15 dishes rated HIGH on customisable"
+      ]
+    },
+    "BALANCED_NUTRITION": {
+      "weight": 0.15,
+      "description": "Protein + veg + carbs, parents feel good serving it midweek",
+      "scoring": {
+        "5": "Complete balanced meal, visible vegetables, grilled/healthy",
+        "4": "Good balance, some vegetables included",
+        "3": "Reasonably balanced, can add sides",
+        "2": "Heavy on carbs/protein, limited veg",
+        "1": "Indulgent/treat food, not balanced"
+      },
+      "evidence_sources": [
+        "OG Survey: 12 dishes rated HIGH on healthy",
+        "Rating comments: 186 healthy mentions"
+      ]
+    },
+    "VALUE_AT_25": {
+      "weight": 0.15,
+      "description": "Feels worth \u00a325 for a family of 4",
+      "scoring": {
+        "5": "Excellent value, generous portions, premium feel",
+        "4": "Good value, appropriate portions",
+        "3": "Fair value, meets expectations",
+        "2": "Slightly expensive for what you get",
+        "1": "Poor value, feels overpriced"
+      },
+      "evidence_sources": [
+        "Dropoff: 135 selected \"discount or loyalty offer\"",
+        "Rating comments: 212 value mentions"
+      ]
+    },
+    "SHAREABILITY": {
+      "weight": 0.1,
+      "description": "Can come in one big portion for family sharing",
+      "scoring": {
+        "5": "Designed for sharing, communal eating",
+        "4": "Works well as shared meal",
+        "3": "Can be shared with some effort",
+        "2": "Better as individual portions",
+        "1": "Not suitable for sharing"
+      },
+      "evidence_sources": [
+        "OG Survey: 19 dishes rated HIGH on shareable"
+      ]
+    },
+    "MIDWEEK_FIT": {
+      "weight": 0.1,
+      "description": "Appropriate for a Tuesday dinner, not just weekend treats",
+      "scoring": {
+        "5": "Perfect midweek meal, balanced and sensible",
+        "4": "Good midweek option",
+        "3": "Acceptable midweek",
+        "2": "More of a weekend treat",
+        "1": "Definitely weekend/special occasion only"
+      },
+      "evidence_sources": [
+        "Dinneroo positioning: \"balanced midweek meals\""
+      ]
+    },
+    "VEGETARIAN_OPTION": {
+      "weight": 0.05,
+      "description": "Good vegetarian/vegan alternative available",
+      "scoring": {
+        "5": "Excellent veggie option, not an afterthought",
+        "4": "Good veggie alternative available",
+        "3": "Basic veggie option exists",
+        "2": "Limited veggie options",
+        "1": "No veggie option"
+      },
+      "evidence_sources": [
+        "Dropoff: 41 vegetarian mentions",
+        "Rating comments: 32 vegetarian mentions"
+      ]
+    }
+  },
+  "dishes_scoring_high_all_factors": [
+    "Meat & vegetables",
+    "Chicken (Sweet & Sour style)",
+    "Chilli & Rice",
+    "Fajitas/Burritos"
+  ],
+  "key_insights": {
+    "top_demand_signals": [
+      "Wider variety (145 dropoff selections)",
+      "Customisation options (125 dropoff selections)",
+      "Discount/loyalty (135 dropoff selections)",
+      "Fussy eaters (1037 mentions in open-text)"
+    ],
+    "top_dish_mentions_in_feedback": [
+      "chicken (232)",
+      "rice (146)",
+      "curry (84)",
+      "pho (60)",
+      "katsu (55)"
+    ],
+    "gaps_identified": [
+      "Grilled chicken options",
+      "More vegetarian mains",
+      "British comfort food",
+      "Greek/Mediterranean"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+Dish,Importance,Coverage,Quadrant,Action,Priority Score,Order Volume,Gap Type,Cuisine,Potential Partners
+Salmon Teriyaki Family Platter,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,5.2,0,No Gap,Various,TBD - based on cuisine
+Halloumi Wrap Family Box,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,5.1,0,No Gap,Greek/Mediterranean,New recruitment needed
+Souvlaki Family Platter,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,5.1,0,No Gap,Greek/Mediterranean,New recruitment needed
+Chicken,High,High,High Importance / High Coverage,Maintain - working well,5.0,11417,No Gap,Global,TBD
+Rotisserie Chicken Family Feast,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.95,0,No Gap,Healthy/Fresh,Farmer J
+Grilled Chicken Family Platter with Sides,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.95,0,No Gap,Healthy/Fresh,Farmer J
+Fajita Family Kit,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.95,0,No Gap,Mexican,Tortilla
+Kids Ramen & Adult Ramen Combo,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.95,0,No Gap,Japanese/Asian,Wagamama
+Plain Pasta with Sides Family Bundle,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.87,0,No Gap,Various,TBD - based on cuisine
+Paneer Tikka Family Feast,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.87,0,No Gap,Various,TBD - based on cuisine
+Veggie Fajita Family Kit,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.87,0,No Gap,Various,TBD - based on cuisine
+Halloumi Wrap Family Bundle,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.87,0,No Gap,Various,TBD - based on cuisine
+Grilled Chicken with Customizable Sides,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.87,0,No Gap,Various,TBD - based on cuisine
+Dim Sum Family Selection,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.85,0,No Gap,Chinese,New recruitment needed
+Shawarma Family Platter,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.85,0,No Gap,Middle Eastern,New recruitment needed
+Greek Mezze Family Feast,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.85,0,No Gap,Greek/Mediterranean,New recruitment needed
+Build Your Own Grain Bowl Family Pack,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.7,0,No Gap,Healthy/Fresh,Farmer J
+Vietnamese Rice Paper Rolls Family Pack,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.7,0,No Gap,Vietnamese,Pho
+Teriyaki Salmon Family Platter,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.7,0,No Gap,Japanese/Asian,Wagamama
+Quesadilla Family Pack,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.7,0,No Gap,Mexican,Tortilla
+Butter Chicken Family Feast,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.7,0,No Gap,Indian,Dishoom
+Falafel & Hummus Family Box,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.6,0,No Gap,Middle Eastern,New recruitment needed
+Chicken & Rice Plain Family Meal,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.53,0,No Gap,Various,TBD - based on cuisine
+Biryani Family Pot,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.45,0,No Gap,Indian,Dishoom
+Roast Dinner Family Platter,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.45,0,No Gap,British,Bill's
+Veggie Burrito Bowl Family Bundle,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.45,0,No Gap,Mexican,Tortilla
+Teriyaki Rice Bowl Family Bundle,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.45,0,No Gap,Japanese/Healthy,Itsu
+Sushi Family Platter,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.45,0,No Gap,Japanese/Healthy,Itsu
+Katsu Curry Family Bundle,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.45,0,No Gap,Japanese/Asian,Wagamama
+Pho Family Sharing Bowl,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.45,0,No Gap,Vietnamese,Pho
+Chicken Chow Mein Family Bundle,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.35,0,No Gap,Chinese,New recruitment needed
+Sweet & Sour Chicken Family Meal,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.35,0,No Gap,Chinese,New recruitment needed
+Chicken Pie with Mash & Veg,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.2,0,No Gap,British,Bill's
+Banh Mi Family Box,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.2,0,No Gap,Vietnamese,Pho
+Chicken Tikka Wrap Box,High,Low,High Importance / Low Coverage,EXPAND - roll out to more zones,4.2,0,No Gap,Indian,Dishoom
+Pad Thai,High,High,High Importance / High Coverage,Maintain - working well,4.14,2370,No Gap,Thai,Banana Tree
+Biryani,High,Medium,High Importance / Medium Coverage,EXPAND - roll out to more zones,4.12,458,No Gap,Indian,Dishoom
+Fried Rice,High,Low,High Importance / Low Coverage,RECRUIT - need new partners,4.06,2430,Supply Gap,Chinese,"Pho, Wagamama, Itsu"
+Chinese Family Meal,Medium,Low,Medium Importance / Low Coverage,Consider - if resources allow,3.96,31,Supply Gap,Chinese,New recruitment needed
+Thai Green Curry Family Pot (Mild),Medium,Low,Medium Importance / Low Coverage,Consider - if resources allow,3.95,0,No Gap,Thai/Southeast Asian,Banana Tree
+Pad Thai Family Bundle,Medium,Low,Medium Importance / Low Coverage,Consider - if resources allow,3.95,0,No Gap,Thai/Southeast Asian,Banana Tree
+Fish & Chips Family Bucket,Medium,Low,Medium Importance / Low Coverage,Consider - if resources allow,3.95,0,No Gap,British,Bill's
+Sushi,Medium,High,Medium Importance / High Coverage,Optimize - improve efficiency,3.87,1043,No Gap,Japanese,"Itsu, Iro Sushi"
+Rice Bowl,Medium,High,Medium Importance / High Coverage,Optimize - improve efficiency,3.76,3139,No Gap,Healthy/Fresh,"Pho, Wagamama, Itsu, Farmer J"
+Noodles,Medium,High,Medium Importance / High Coverage,Optimize - improve efficiency,3.74,3307,No Gap,Global,"Pho, Wagamama, Itsu, Banana Tree"
+Shawarma,Medium,Low,Medium Importance / Low Coverage,Consider - if resources allow,3.71,1355,Supply Gap,Middle Eastern,New recruitment needed
+Pho,Medium,High,Medium Importance / High Coverage,Optimize - improve efficiency,3.7,4530,No Gap,Vietnamese,Pho
+Fajitas,Medium,Medium,Medium Importance / Medium Coverage,Consider - if resources allow,3.69,595,Quality Gap,Mexican,Tortilla
+Lasagne,Medium,High,Medium Importance / High Coverage,Optimize - improve efficiency,3.56,1099,No Gap,Italian,New recruitment needed
+Mac & Cheese,Medium,High,Medium Importance / High Coverage,Optimize - improve efficiency,3.45,1307,No Gap,Global,New recruitment needed
+Roast Dinner,Medium,Medium,Medium Importance / Medium Coverage,Consider - if resources allow,3.45,287,No Gap,British,Bill's
+Butter Chicken,Medium,Medium,Medium Importance / Medium Coverage,Consider - if resources allow,3.42,365,No Gap,Indian,"Dishoom, Farmer J"
+Curry,Medium,High,Medium Importance / High Coverage,Optimize - improve efficiency,3.39,4949,No Gap,Indian,"Dishoom, Banana Tree"
+Fish & Chips,Medium,Low,Medium Importance / Low Coverage,Consider - if resources allow,3.33,32,No Gap,Global,New recruitment needed
+Salad,Medium,High,Medium Importance / High Coverage,Optimize - improve efficiency,3.32,1089,No Gap,Healthy/Fresh,Farmer J
+Grilled Chicken with Sides,Medium,Medium,Medium Importance / Medium Coverage,Consider - if resources allow,3.3,540,No Gap,Global,Farmer J
+Teriyaki,Medium,Medium,Medium Importance / Medium Coverage,Consider - if resources allow,3.28,394,No Gap,Japanese,Wagamama
+Katsu,Medium,High,Medium Importance / High Coverage,Optimize - improve efficiency,3.24,11686,No Gap,Japanese,Wagamama
+Pasta,Medium,High,Medium Importance / High Coverage,Optimize - improve efficiency,3.15,1340,No Gap,Italian,New recruitment needed
+Shepherd's Pie,Medium,Medium,Medium Importance / Medium Coverage,Consider - if resources allow,3.1,333,No Gap,British,Bill's
+Stir Fry,Medium,Low,Medium Importance / Low Coverage,Consider - if resources allow,3.03,61,No Gap,Global,New recruitment needed
+Korean Fried Chicken,Medium,Medium,Medium Importance / Medium Coverage,Consider - if resources allow,3.02,398,No Gap,Korean,Farmer J
+Pizza,Low,Medium,Low Importance / Medium Coverage,Ignore - low priority,2.98,400,No Gap,Italian,Franco Manca
+Tacos,Low,Medium,Low Importance / Medium Coverage,Ignore - low priority,2.84,92,Quality Gap,Mexican,Tortilla
+Veggie Fajitas,Low,Medium,Low Importance / Medium Coverage,Ignore - low priority,2.72,333,Quality Gap,Mexican,Tortilla
+Ramen,Low,Medium,Low Importance / Medium Coverage,Ignore - low priority,2.7,223,No Gap,Japanese,Wagamama
+Greek Mezze,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.66,7,No Gap,Greek,New recruitment needed
+Dim Sum,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.63,0,Supply Gap,Chinese,New recruitment needed
+Burrito,Low,Medium,Low Importance / Medium Coverage,Ignore - low priority,2.63,3,Quality Gap,Mexican,Tortilla
+Quesadilla,Low,Medium,Low Importance / Medium Coverage,Ignore - low priority,2.6,57,Quality Gap,Mexican,Tortilla
+Chicken Pie,Low,High,Low Importance / High Coverage,Deprioritize - over-served,2.56,34506,No Gap,British,"Farmer J, Bill's"
+Halloumi Wrap,Low,Medium,Low Importance / Medium Coverage,Ignore - low priority,2.49,161,No Gap,Global,New recruitment needed
+Grain Bowl,Low,Medium,Low Importance / Medium Coverage,Ignore - low priority,2.4,192,No Gap,Healthy/Fresh,Farmer J
+Buddha Bowl,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.4,0,No Gap,Healthy/Fresh,Farmer J
+Poke Bowl,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.4,39,No Gap,Healthy/Fresh,Farmer J
+Bowl,Low,High,Low Importance / High Coverage,Deprioritize - over-served,2.37,4517,No Gap,Healthy/Fresh,Farmer J
+Sweet & Sour Chicken,Low,High,Low Importance / High Coverage,Deprioritize - over-served,2.37,1081,No Gap,Global,Farmer J
+Rotisserie Chicken,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.37,0,No Gap,Global,Farmer J
+Tikka Masala,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.2,19,No Gap,Indian,Dishoom
+Cottage Pie,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.2,0,No Gap,British,Bill's
+Korma,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.2,0,No Gap,Indian,Dishoom
+Wrap,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.16,44,No Gap,Global,New recruitment needed
+Burger,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.16,61,No Gap,American,Bill's
+Bibimbap,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.0,0,No Gap,Korean,New recruitment needed
+Bangers & Mash,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.0,0,No Gap,British,New recruitment needed
+Souvlaki,Low,Low,Low Importance / Low Coverage,Ignore - low priority,2.0,0,No Gap,Greek,New recruitment needed

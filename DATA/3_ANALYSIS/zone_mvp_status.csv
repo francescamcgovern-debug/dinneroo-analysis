@@ -1,0 +1,101 @@
+ZONE_NAME,orders,partners,cuisines,REGION,avg_rating,rating_count,meets_cuisine,meets_partners,meets_rating,mvp_criteria_met,is_mvp
+Basingstoke,483,3,3,South East,3.8333333333333335,66.0,False,False,False,0,False
+Bath,647,9,7,South West,4.533980582524272,103.0,True,True,True,3,True
+Belsize Park / St John's Wood,278,3,3,Other,4.7924528301886795,53.0,False,False,True,1,False
+Birmingham,689,9,7,Midlands,4.154411764705882,136.0,True,True,True,3,True
+Bournemouth,634,4,3,South East,4.263736263736264,91.0,False,False,True,1,False
+Bracknell,585,4,4,Other,4.553846153846154,65.0,False,False,True,1,False
+Braintree,151,4,3,Other,3.9047619047619047,21.0,False,False,False,0,False
+Brighton Central,1734,10,8,London,4.465863453815261,249.0,True,True,True,3,True
+Bristol,1173,8,6,South West,4.533707865168539,178.0,True,True,True,3,True
+Brixton,396,4,4,London,4.5,64.0,False,False,True,1,False
+Brockley / Forest Hill,1478,3,3,London,4.612068965517241,232.0,False,False,True,1,False
+Bromley,465,4,3,London,3.8135593220338984,59.0,False,False,False,0,False
+Cambridge,1403,8,7,South East,4.482300884955753,226.0,True,True,True,3,True
+Camden/Kentish Town,249,6,5,London,4.111111111111111,36.0,True,True,True,3,True
+Canary Wharf,1122,6,5,Other,4.294520547945205,146.0,True,True,True,3,True
+Canning Town,1314,3,3,Other,4.6702702702702705,185.0,False,False,True,1,False
+Canterbury,534,7,6,South East,4.158730158730159,63.0,True,True,True,3,True
+Cardiff,475,6,5,Wales,4.571428571428571,70.0,True,True,True,3,True
+Cardiff Bay Area,144,5,5,Wales,4.777777777777778,18.0,True,True,True,3,True
+Chelmsford,725,7,5,South East,4.208791208791209,91.0,True,True,True,3,True
+Cheltenham,512,5,4,South West,4.378378378378378,74.0,False,True,True,2,False
+Chichester,237,4,4,North,4.133333333333334,30.0,False,False,True,1,False
+Chingford,77,3,3,Other,4.2,10.0,False,False,True,1,False
+Chiswick,1240,6,5,London,4.737864077669903,206.0,True,True,True,3,True
+Clapham,2349,13,9,London,4.6104651162790695,344.0,True,True,True,3,True
+Colchester,464,4,4,South East,4.597014925373134,67.0,False,False,True,1,False
+Cribbs Causeway Shopping Centre,220,5,4,Other,3.8666666666666667,30.0,False,True,False,1,False
+Croydon,519,4,3,London,4.2894736842105265,76.0,False,False,True,1,False
+Dalston Stoke Newington,434,4,3,Midlands,4.426470588235294,68.0,False,False,True,1,False
+Dartford,336,6,5,Other,4.102564102564102,39.0,True,True,True,3,True
+Didsbury and Withington,236,3,3,Other,4.722222222222222,36.0,False,False,True,1,False
+Dublin City North,782,6,5,Other,4.058252427184466,103.0,True,True,True,3,True
+Dublin City South,93,3,2,Other,4.823529411764706,17.0,False,False,True,1,False
+Ealing,904,5,5,London,4.201680672268908,119.0,True,True,True,3,True
+East Central,1280,11,8,London,4.459090909090909,220.0,True,True,True,3,True
+Easton,297,5,4,Other,4.375,32.0,False,True,True,2,False
+Eccles,175,3,3,Other,4.0256410256410255,39.0,False,False,True,1,False
+Edgbaston,574,3,3,Other,4.67741935483871,93.0,False,False,True,1,False
+Edgware / Mill Hill,95,3,1,Other,3.8333333333333335,12.0,False,False,False,0,False
+Edinburgh Central,722,3,3,London,4.511363636363637,88.0,False,False,True,1,False
+Edinburgh North,345,3,3,Scotland,4.4324324324324325,37.0,False,False,True,1,False
+Epsom,292,4,3,South East,4.125,32.0,False,False,True,1,False
+Farnham,306,3,3,Other,4.673076923076923,52.0,False,False,True,1,False
+Finsbury Park / Harringay / Crouch End,1534,4,3,London,4.528,250.0,False,False,True,1,False
+Fulham,615,5,5,London,4.574257425742574,101.0,True,True,True,3,True
+Glasgow Centre,542,5,5,Scotland,4.5476190476190474,84.0,True,True,True,3,True
+Golders Green / Brent Cross,275,3,1,London,4.0,48.0,False,False,True,1,False
+Guildford,969,6,6,South East,4.247787610619469,113.0,True,True,True,3,True
+Hammersmith / Shepherd's Bush,962,7,6,London,4.456647398843931,173.0,True,True,True,3,True
+Hampstead,797,5,4,Other,4.472,125.0,False,True,True,2,False
+Harrow,126,4,3,London,4.333333333333333,15.0,False,False,True,1,False
+Hatfield/ Hatfield Park,160,3,2,Other,4.388888888888889,18.0,False,False,True,1,False
+Henley on Thames,181,3,2,Other,4.277777777777778,18.0,False,False,True,1,False
+"Highgate, Muswell Hill, East Finchley",168,3,3,Other,4.416666666666667,24.0,False,False,True,1,False
+Horsham,416,4,4,Other,4.409090909090909,66.0,False,False,True,1,False
+Islington,2262,8,8,London,4.68956043956044,364.0,True,True,True,3,True
+Kingston,1156,8,7,London,4.461538461538462,169.0,True,True,True,3,True
+Leeds City Centre,470,9,7,North,4.521739130434782,69.0,True,True,True,3,True
+Lewisham,1358,5,5,London,4.495575221238938,226.0,True,True,True,3,True
+Liverpool City Centre,307,5,4,North,4.2926829268292686,41.0,False,True,True,2,False
+London Bridge,850,10,7,London,4.572519083969466,131.0,True,True,True,3,True
+Manchester Central,156,3,3,London,4.363636363636363,22.0,False,False,True,1,False
+Mayfair,772,8,6,London,4.568345323741007,139.0,True,True,True,3,True
+Milton Keynes,1332,8,7,South East,4.4581005586592175,179.0,True,True,True,3,True
+Newbury,148,3,3,Other,4.478260869565218,23.0,False,False,True,1,False
+Newton Longville,181,5,3,Other,4.045454545454546,22.0,False,True,True,2,False
+Norwich,1050,6,5,South East,4.248322147651007,149.0,True,True,True,3,True
+Notting Hill / Paddington,1226,9,7,London,4.525114155251141,219.0,True,True,True,3,True
+Nottingham,759,7,5,London,4.4324324324324325,148.0,True,True,True,3,True
+Oxford,1501,7,5,South East,4.515723270440252,159.0,True,True,True,3,True
+Putney & Barnes,296,3,3,London,4.702127659574468,47.0,False,False,True,1,False
+Reading,1318,10,6,South East,4.293103448275862,174.0,True,True,True,3,True
+Reigate,541,6,5,South East,4.506666666666667,75.0,True,True,True,3,True
+Richmond / Kew,562,6,6,London,4.3023255813953485,86.0,True,True,True,3,True
+Romford,434,3,3,Other,4.43859649122807,57.0,False,False,True,1,False
+Royal Leamington Spa,257,4,4,Other,4.366666666666666,30.0,False,False,True,1,False
+Royal Tunbridge Wells,426,6,6,South East,4.4363636363636365,55.0,True,True,True,3,True
+Salford,535,6,4,Other,4.257425742574258,101.0,False,True,True,2,False
+Sheffield City Centre,442,4,3,North,4.267605633802817,71.0,False,False,True,1,False
+South Kensington,676,7,4,London,4.556701030927835,97.0,False,True,True,2,False
+Southampton,470,5,4,South East,4.288888888888889,90.0,False,True,True,2,False
+Southsea,435,7,5,Other,4.180327868852459,61.0,True,True,True,3,True
+St Albans,559,4,4,South East,4.22680412371134,97.0,False,False,True,1,False
+Stevenage,369,3,3,Other,4.523076923076923,65.0,False,False,True,1,False
+Stratford,665,5,4,London,4.262626262626263,99.0,False,True,True,2,False
+Surrey Quays,1139,4,3,Other,4.606217616580311,193.0,False,False,True,1,False
+Sutton,101,3,2,London,4.125,8.0,False,False,True,1,False
+Uxbridge,242,4,3,Other,4.404761904761905,42.0,False,False,True,1,False
+"Victoria, Westminster, Pimlico",506,8,5,London,4.633333333333334,60.0,True,True,True,3,True
+Walton on Thames,275,3,3,Other,4.472222222222222,36.0,False,False,True,1,False
+Wandsworth,853,3,3,London,4.691275167785235,149.0,False,False,True,1,False
+Wapping and Mile End,961,4,4,Other,4.662068965517242,145.0,False,False,True,1,False
+Watford,372,4,4,South East,4.357142857142857,56.0,False,False,True,1,False
+Wembley,1202,7,7,Other,4.489795918367347,196.0,True,True,True,3,True
+West Bridgford,239,3,3,Other,4.291666666666667,48.0,False,False,True,1,False
+West Central,793,10,7,London,4.563025210084033,119.0,True,True,True,3,True
+Wimbledon,1314,8,7,London,4.5,214.0,True,True,True,3,True
+Winchester,126,3,3,North,4.0,16.0,False,False,True,1,False
+Windsor,517,6,4,South East,4.298701298701299,77.0,False,True,True,2,False
+York,729,8,6,North,4.456310679611651,103.0,True,True,True,3,True

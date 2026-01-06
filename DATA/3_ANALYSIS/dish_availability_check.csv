@@ -1,0 +1,16 @@
+dish_type,item_count,brand_count,brands,sample_items
+sweet and sour,1,1,Xian Street Food,['Sweet and Sour Chicken Family Meal']
+fish and chips,0,0,NONE,['NONE']
+burrito,0,0,NONE,['NONE']
+fajita,2,1,Las Iguanas,"['Fajitas Family of Four Bundle', 'Fajitas Family of Three Bundle']"
+taco,1,1,Zambrero UK,['Family Tacos Kit']
+lasagne,2,2,"Bella Italia, Cacciari's","['Lasagna Suitable for a Family of 4', 'Lasagne Family Bundle']"
+korma,0,0,NONE,['NONE']
+biryani,4,3,"Chaska, Dishoom, Tadka House","['Awadhi Jackfruit Biryani – for the family', 'Chicken Biryani For The Table', 'Veg Biryani For The Table']"
+chinese,4,2,"Asia Villa, Xian Street Food","['4x  Asia Villa Special Fried Rice with Salt and Pepper Chicken', '4x Traditional Chow Mein with Sweet Chili Chicken', '4x Asia Villa Special Fried Rice with Salt and Pepper Chicken']"
+grilled chicken,0,0,NONE,['NONE']
+roast,1,1,Taste Of Hong Kong-DCN,['Double Roast Combo Family Meal']
+cottage pie,1,1,Bill's,"[""Family Shepherd's Pie""]"
+vegetarian,1,1,Yacob's Kitchen,['Vegan Dinneroo Platter']
+salad,0,0,NONE,['NONE']
+healthy,0,0,NONE,['NONE']

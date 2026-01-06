@@ -1,0 +1,64 @@
+rank,dish_type,cuisine,factor_score,demand_signal,order_volume,available_on_dinneroo,gap_type,reason,source,ideal_presentation,midweek_fit_score,on_dinneroo_menu,menu_item_count
+1,Grain Bowl Family Bundle,Healthy/Fresh,4.45,High,15129,True,,"Balanced, customisable, healthy. Growing demand signal.",LLM reasoning,Grain Bowl Family Bundle Family Bundle - £25,5,True,179
+2,Veggie Fajita Family Kit,Mexican,4.45,Low,0,False,Supply Gap,"Vegetarian, customisable, balanced.",LLM reasoning,Veggie Fajita Family Kit Family Bundle - £25,4,True,49
+3,Halloumi Wrap Family Bundle,Mediterranean,4.45,Low,0,False,Supply Gap,"Vegetarian protein, balanced, kid-friendly.",LLM reasoning,Halloumi Wrap Family Bundle Family Bundle - £25,4,True,40
+4,Chicken Wrap Family Box,Global,4.35,High,23715,True,,"Quick, customisable, balanced, kid-friendly.",LLM reasoning,Chicken Wrap Family Box Family Bundle - £25,4,True,468
+5,Vegetable Curry Family Bundle,Indian,4.3,High,40258,True,,"Vegetarian main, not afterthought. Gap identified.",LLM reasoning,Vegetable Curry Family Bundle Family Bundle - £25,4,True,6
+6,Buddha Bowl Platter,Healthy/Fresh,4.3,High,15129,True,,"Balanced nutrition, shareable, vegetarian-friendly.",LLM reasoning,Buddha Bowl Platter Family Bundle - £25,5,True,179
+7,Teriyaki Chicken Rice Bowl Bundle,Japanese,4.25,High,51660,True,,"Mild, balanced, customisable portions.",LLM reasoning,Rice Bowl Bundle (4 individual bowls) - £25,5,True,20
+8,Rotisserie Chicken Family Platter,British/Global,4.2,High,23715,True,,"Shareable, balanced, value-driven. Common home meal.",LLM reasoning,Rotisserie Chicken Family Platter Family Bundle - £25,5,True,468
+9,Chicken Katsu Family Bundle,Japanese,4.2,High,23715,True,,"55 mentions in comments, kid-friendly, shareable.",LLM reasoning + data,Chicken Katsu Family Bundle Family Bundle - £25,4,True,468
+10,Roast Dinner Family Platter,British,4.2,Low,0,False,Supply Gap,"Sunday roast for midweek, shareable, balanced.",LLM reasoning,Roast Dinner Family Platter Family Bundle - £25,2,True,1
+11,"Greek Mezze Platter (Souvlaki, Falafel, Hummus)",Greek/Mediterranean,4.15,Low,0,False,Supply Gap,"Shareable, customisable, balanced, healthy perception.",LLM reasoning,"Greek Mezze Platter (Souvlaki, Falafel, Hummus) Family Bundle - £25",3,True,2
+12,Grilled Chicken with Customisable Sides (Peri-Peri style),Global,4.1,High,23715,True,,"Fits ALL factors: portion flex, customisable, balanced, value. Gap identified in analysis.",LLM reasoning,Grilled Chicken Family Platter (whole chicken + 4 sides) - £25,5,True,468
+13,Pho Family Sharing Bowl,Vietnamese,4.05,High,38948,True,,"60 mentions in comments, high satisfaction, shareable.",LLM reasoning + data,Pho Family Sharing Bowl Family Bundle - £25,4,True,179
+14,Butter Chicken with Naan Family Feast,Indian,4.05,High,23715,True,,"Kid-friendly, shareable, familiar.",LLM reasoning,Butter Chicken with Naan Family Feast Family Bundle - £25,3,True,6
+15,Sweet & Sour Chicken Family Meal,Chinese,4.05,High,23715,True,,"Kid-friendly classic, shareable, supply gap.",LLM reasoning,Sweet & Sour Chicken Family Meal Family Bundle - £25,3,True,11
+16,Fresh Pasta Family Feast,Italian (Premium),4.05,High,8566,True,,"Shareable, premium feel, restaurant-quality at home.",LLM reasoning,Fresh Pasta Family Feast Family Bundle - £25,4,True,46
+17,Quesadilla Family Pack,Mexican,4.05,Low,0,False,Supply Gap,"Kid-friendly, customisable, shareable.",LLM reasoning,Quesadilla Family Pack Family Bundle - £25,3,True,3
+18,Korean Fried Chicken Family Box,Korean,3.9,High,36531,True,,"Kid-friendly, shareable, customisable spice levels.",LLM reasoning,Korean Fried Chicken Family Box Family Bundle - £25,3,True,4
+19,BBQ Chicken Wings Family Bucket,American,3.9,High,23715,True,,"Shareable, customisable sauces, fun.",LLM reasoning,BBQ Chicken Wings Family Bucket Family Bundle - £25,1,True,468
+20,Shawarma Family Platter,Middle Eastern,3.9,Low,0,False,Supply Gap,"Shareable, customisable, balanced. Supply gap.",LLM reasoning,Shawarma Family Platter Family Bundle - £25,4,True,128
+21,Tikka Masala Family Bundle,Indian,3.9,Low,0,False,Supply Gap,"84 curry mentions, shareable, customisable spice.",LLM reasoning + data,Tikka Masala Family Bundle Family Bundle - £25,3,True,1
+22,Pad Thai Family Bundle,Thai,3.9,Low,0,False,Supply Gap,"Kid-friendly, shareable, balanced.",LLM reasoning,Pad Thai Family Bundle Family Bundle - £25,4,True,60
+23,Crispy Chilli Beef Family Bundle,Chinese,3.9,Low,0,False,Supply Gap,"Popular, shareable, customisable spice.",LLM reasoning,Crispy Chilli Beef Family Bundle Family Bundle - £25,3,True,57
+24,Mac & Cheese Family Bake,American,3.9,Low,0,False,Supply Gap,"Kid-favourite, shareable, comfort food.",LLM reasoning,Mac & Cheese Family Bake Family Bundle - £25,3,True,171
+25,Falafel & Hummus Family Box,Middle Eastern,3.85,Low,0,False,Supply Gap,"Vegetarian option, shareable, healthy.",LLM reasoning,Falafel & Hummus Family Box Family Bundle - £25,3,True,8
+26,Thai Green Curry Family Pot,Thai,3.75,High,40258,True,,"Shareable, customisable spice, balanced.",LLM reasoning,Thai Green Curry Family Pot Family Bundle - £25,4,True,60
+27,Sushi Family Platter,Japanese,3.75,Medium,4952,True,,"Shareable, healthy, premium feel.",LLM reasoning,Sushi Family Platter (40-50 pieces) - £25,3,True,50
+28,Biryani Family Sharing Pot,Indian,3.75,Low,483,True,,"One-pot meal, shareable, balanced.",LLM reasoning,Biryani Family Pot (large sharing pot + raita) - £25,4,True,16
+29,Bibimbap Family Style,Korean,3.75,Low,0,False,Supply Gap,"Balanced, shareable, customisable toppings.",LLM reasoning,Bibimbap Family Style Family Bundle - £25,3,True,7
+30,Dim Sum Family Selection,Chinese,3.75,Low,0,False,Supply Gap,"Shareable, variety, fun for families.",LLM reasoning,Dim Sum Family Selection Family Bundle - £25,3,True,50
+31,Bangers & Mash Family Feast,British,3.75,Low,0,False,Supply Gap,"Kid-friendly, comfort food, shareable.",LLM reasoning,Bangers & Mash Family Feast Family Bundle - £25,3,True,663
+32,Loaded Nachos Family Platter,Mexican/American,3.75,Low,0,False,Supply Gap,"Shareable, customisable, fun for families.",LLM reasoning,Loaded Nachos Family Platter Family Bundle - £25,3,True,11
+33,Chicken Souvlaki with Pitta & Salad,Greek,3.7,High,26862,True,,"Grilled protein, veg, carbs. Balanced midweek meal.",LLM reasoning,Chicken Souvlaki with Pitta & Salad Family Bundle - £25,3,True,468
+34,Chicken Pie with Mash & Veg,British,3.7,High,23715,True,,"Comfort food, balanced, shareable.",LLM reasoning,Chicken Pie with Mash & Veg Family Bundle - £25,3,True,468
+35,Meat & Vegetables (Roast/Grilled),British,3.6,High,35428,True,,"High on ALL factors: shareable, customisable, healthy",OG Survey,Meat & Vegetables (Roast/Grilled) Family Bundle - £25,3,False,0
+36,Steak Night Family Bundle,British/American,3.55,Low,0,False,Supply Gap,"Premium treat, shareable, balanced with sides.",LLM reasoning,Steak Night Family Bundle Family Bundle - £25,3,True,46
+37,Asian Starters,Various,3.5,High,11686,True,,Top performer with 11686 orders,Order data,Asian Starters Family Bundle - £25,3,False,0
+38,Chicken Katsu / Katsu Curry,Various,3.5,High,11246,True,,Top performer with 11246 orders,Order data,Family Katsu Bundle (4 portions + rice + sides) - £25,4,True,468
+39,Fried Rice,Various,3.5,High,9964,True,,Top performer with 9964 orders,Order data,Fried Rice Family Platter (large portion + sides) - £25,3,True,12
+40,Vietnamese Pho,Various,3.5,High,7910,True,,Top performer with 7910 orders,Order data,Pho Family Sharing Pot (large bowl + sides) - £25,4,False,0
+41,Asian Noodles,Various,3.5,High,7707,True,,Top performer with 7707 orders,Order data,Noodle Family Bundle (4 bowls or 1 sharing wok) - £25,4,False,0
+42,Italian Starters,Various,3.5,Medium,4874,True,,Top performer with 4874 orders,Order data,Italian Starters Family Bundle - £25,3,False,0
+43,Rice Bowl,Various,3.5,Medium,4200,True,,Top performer with 4200 orders,Order data,Rice Bowl Bundle (4 individual bowls) - £25,5,True,146
+44,Curry (General),Various,3.5,Medium,3706,True,,Top performer with 3706 orders,Order data,Curry (General) Family Bundle - £25,4,True,316
+45,Pasta / Italian,Various,3.5,Medium,2659,True,,Top performer with 2659 orders,Order data,Family Pasta Feast (large pasta + garlic bread + salad) - £25,4,True,185
+46,Mexican (Fajitas/Burritos/Tacos),Various,3.5,Medium,2455,True,,Top performer with 2455 orders,Order data,Fajita Family Kit (4 portions + toppings) - £25,4,False,0
+47,Sushi,Various,3.5,Medium,2198,True,,Top performer with 2198 orders,Order data,Sushi Family Platter (40-50 pieces) - £25,3,True,50
+48,Katsu Curry,Japanese,3.4,High,40258,True,,"11% wishlist, kid-friendly, familiar",OG Survey,Family Katsu Bundle (4 portions + rice + sides) - £25,4,True,253
+49,Fajitas / Burritos,Mexican,3.4,High,35428,True,,"High on ALL factors: shareable, customisable, healthy",OG Survey,Fajitas / Burritos Family Bundle - £25,4,True,54
+50,Chicken (Sweet & Sour / Sweet Chilli),Asian,3.4,High,35428,True,,"High on ALL factors: shareable, customisable, healthy",OG Survey,Chicken (Sweet & Sour / Sweet Chilli) Family Bundle - £25,3,True,468
+51,Pasta (Bolognese/Tomato),Italian,3.4,High,35428,True,,"88% eaten regularly, high customisable",OG Survey,Pasta (Bolognese/Tomato) Family Bundle - £25,4,True,185
+52,Tacos / Enchiladas,Mexican,3.4,High,35428,True,,"11% wishlist, high customisable + healthy",OG Survey,Tacos / Enchiladas Family Bundle - £25,3,True,10
+53,Pizza,Italian,3.4,Medium,2013,True,,"87% eaten regularly, high shareable + customisable",OG Survey,Family Pizza Deal (2 large pizzas + sides) - £25,2,True,175
+54,Seafood Paella Family Pot,Spanish,3.4,Low,0,False,Supply Gap,"Shareable, balanced, premium feel.",LLM reasoning,Seafood Paella Family Pot Family Bundle - £25,3,False,0
+55,Curry & Rice (Tikka/Korma),Indian,3.25,High,79916,True,,"High shareable + customisable, 74% eaten regularly",OG Survey,Curry & Rice (Tikka/Korma) Family Bundle - £25,4,True,316
+56,Fish & Chips,British,3.25,Low,0,False,Supply Gap,"63% eaten, 9% wishlist, British staple",OG Survey,Fish & Chips Family Bundle - £25,2,True,3
+57,Burger & Chips,American,3.25,Low,0,False,Supply Gap,"70% eaten, high customisable",OG Survey,Burger & Chips Family Bundle - £25,2,True,3
+58,Stir Fry / Noodles,Asian,3.1,High,65763,True,,"High shareable + healthy, familiar to kids",OG Survey,Stir Fry / Noodles Family Bundle - £25,4,True,5
+59,Thai Curry (Red/Green/Massaman),Thai,3.1,High,51971,True,,"19% wishlist (3rd highest), high shareable + customisable",OG Survey,Thai Curry (Red/Green/Massaman) Family Bundle - £25,4,True,60
+60,Vietnamese Rice Paper Rolls + Pho Combo,Vietnamese,3.1,High,51764,True,,"Healthy, shareable, customisable.",LLM reasoning,Vietnamese Rice Paper Rolls + Pho Combo Family Bundle - £25,4,True,146
+61,Cottage/Shepherds Pie,British,3.1,High,35428,True,,"17% wishlist (2nd highest), high shareable",OG Survey,Cottage/Shepherds Pie Family Bundle - £25,3,False,0
+62,Chilli & Rice,Tex-Mex,3.1,High,27945,True,,"High on ALL factors: shareable, customisable, healthy",OG Survey,Chilli & Rice Family Bundle - £25,3,True,57
+63,Lasagne,Italian,3.1,Low,0,False,Supply Gap,"62% eaten, 16% wishlist (highest!), high shareable",OG Survey,Lasagne Family Bundle - £25,3,True,26

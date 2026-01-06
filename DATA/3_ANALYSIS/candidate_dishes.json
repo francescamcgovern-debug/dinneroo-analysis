@@ -1,0 +1,886 @@
+[
+  {
+    "dish_type": "Grain Bowl Family Bundle",
+    "cuisine": "Healthy/Fresh",
+    "reason": "Balanced, customisable, healthy. Growing demand signal.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 5,
+      "BALANCED_NUTRITION": 5,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 5
+    },
+    "composite_score": 4.45
+  },
+  {
+    "dish_type": "Veggie Fajita Family Kit",
+    "cuisine": "Mexican",
+    "reason": "Vegetarian, customisable, balanced.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 5,
+      "BALANCED_NUTRITION": 5,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 5
+    },
+    "composite_score": 4.45
+  },
+  {
+    "dish_type": "Halloumi Wrap Family Bundle",
+    "cuisine": "Mediterranean",
+    "reason": "Vegetarian protein, balanced, kid-friendly.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 5,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 5
+    },
+    "composite_score": 4.45
+  },
+  {
+    "dish_type": "Chicken Wrap Family Box",
+    "cuisine": "Global",
+    "reason": "Quick, customisable, balanced, kid-friendly.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 5,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 4.35
+  },
+  {
+    "dish_type": "Buddha Bowl Platter",
+    "cuisine": "Healthy/Fresh",
+    "reason": "Balanced nutrition, shareable, vegetarian-friendly.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 5,
+      "BALANCED_NUTRITION": 5,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 5
+    },
+    "composite_score": 4.3
+  },
+  {
+    "dish_type": "Vegetable Curry Family Bundle",
+    "cuisine": "Indian",
+    "reason": "Vegetarian main, not afterthought. Gap identified.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 5,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 5
+    },
+    "composite_score": 4.3
+  },
+  {
+    "dish_type": "Teriyaki Chicken Rice Bowl Bundle",
+    "cuisine": "Japanese",
+    "reason": "Mild, balanced, customisable portions.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 5,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 4,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 4.25
+  },
+  {
+    "dish_type": "Rotisserie Chicken Family Platter",
+    "cuisine": "British/Global",
+    "reason": "Shareable, balanced, value-driven. Common home meal.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 4.2
+  },
+  {
+    "dish_type": "Chicken Katsu Family Bundle",
+    "cuisine": "Japanese",
+    "reason": "55 mentions in comments, kid-friendly, shareable.",
+    "source": "LLM reasoning + data",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 4.2
+  },
+  {
+    "dish_type": "Roast Dinner Family Platter",
+    "cuisine": "British",
+    "reason": "Sunday roast for midweek, shareable, balanced.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 5,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 4.2
+  },
+  {
+    "dish_type": "Greek Mezze Platter (Souvlaki, Falafel, Hummus)",
+    "cuisine": "Greek/Mediterranean",
+    "reason": "Shareable, customisable, balanced, healthy perception.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 5,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 5
+    },
+    "composite_score": 4.15
+  },
+  {
+    "dish_type": "Grilled Chicken with Customisable Sides (Peri-Peri style)",
+    "cuisine": "Global",
+    "reason": "Fits ALL factors: portion flex, customisable, balanced, value. Gap identified in analysis.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 5,
+      "BALANCED_NUTRITION": 5,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 5,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 4.1
+  },
+  {
+    "dish_type": "Fresh Pasta Family Feast",
+    "cuisine": "Italian (Premium)",
+    "reason": "Shareable, premium feel, restaurant-quality at home.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 4.05
+  },
+  {
+    "dish_type": "Pho Family Sharing Bowl",
+    "cuisine": "Vietnamese",
+    "reason": "60 mentions in comments, high satisfaction, shareable.",
+    "source": "LLM reasoning + data",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 5,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 4.05
+  },
+  {
+    "dish_type": "Butter Chicken with Naan Family Feast",
+    "cuisine": "Indian",
+    "reason": "Kid-friendly, shareable, familiar.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 4.05
+  },
+  {
+    "dish_type": "Sweet & Sour Chicken Family Meal",
+    "cuisine": "Chinese",
+    "reason": "Kid-friendly classic, shareable, supply gap.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 4.05
+  },
+  {
+    "dish_type": "Quesadilla Family Pack",
+    "cuisine": "Mexican",
+    "reason": "Kid-friendly, customisable, shareable.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 4.05
+  },
+  {
+    "dish_type": "Korean Fried Chicken Family Box",
+    "cuisine": "Korean",
+    "reason": "Kid-friendly, shareable, customisable spice levels.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 2,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.9
+  },
+  {
+    "dish_type": "Shawarma Family Platter",
+    "cuisine": "Middle Eastern",
+    "reason": "Shareable, customisable, balanced. Supply gap.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.9
+  },
+  {
+    "dish_type": "Tikka Masala Family Bundle",
+    "cuisine": "Indian",
+    "reason": "84 curry mentions, shareable, customisable spice.",
+    "source": "LLM reasoning + data",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.9
+  },
+  {
+    "dish_type": "Pad Thai Family Bundle",
+    "cuisine": "Thai",
+    "reason": "Kid-friendly, shareable, balanced.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.9
+  },
+  {
+    "dish_type": "Crispy Chilli Beef Family Bundle",
+    "cuisine": "Chinese",
+    "reason": "Popular, shareable, customisable spice.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.9
+  },
+  {
+    "dish_type": "Mac & Cheese Family Bake",
+    "cuisine": "American",
+    "reason": "Kid-favourite, shareable, comfort food.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 2,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.9
+  },
+  {
+    "dish_type": "BBQ Chicken Wings Family Bucket",
+    "cuisine": "American",
+    "reason": "Shareable, customisable sauces, fun.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 2,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.9
+  },
+  {
+    "dish_type": "Falafel & Hummus Family Box",
+    "cuisine": "Middle Eastern",
+    "reason": "Vegetarian option, shareable, healthy.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 5
+    },
+    "composite_score": 3.85
+  },
+  {
+    "dish_type": "Sushi Family Platter",
+    "cuisine": "Japanese",
+    "reason": "Shareable, healthy, premium feel.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.75
+  },
+  {
+    "dish_type": "Bibimbap Family Style",
+    "cuisine": "Korean",
+    "reason": "Balanced, shareable, customisable toppings.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.75
+  },
+  {
+    "dish_type": "Biryani Family Sharing Pot",
+    "cuisine": "Indian",
+    "reason": "One-pot meal, shareable, balanced.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.75
+  },
+  {
+    "dish_type": "Thai Green Curry Family Pot",
+    "cuisine": "Thai",
+    "reason": "Shareable, customisable spice, balanced.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.75
+  },
+  {
+    "dish_type": "Dim Sum Family Selection",
+    "cuisine": "Chinese",
+    "reason": "Shareable, variety, fun for families.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.75
+  },
+  {
+    "dish_type": "Bangers & Mash Family Feast",
+    "cuisine": "British",
+    "reason": "Kid-friendly, comfort food, shareable.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.75
+  },
+  {
+    "dish_type": "Loaded Nachos Family Platter",
+    "cuisine": "Mexican/American",
+    "reason": "Shareable, customisable, fun for families.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 2,
+      "VALUE_AT_25": 4,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.75
+  },
+  {
+    "dish_type": "Chicken Souvlaki with Pitta & Salad",
+    "cuisine": "Greek",
+    "reason": "Grilled protein, veg, carbs. Balanced midweek meal.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 5,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.7
+  },
+  {
+    "dish_type": "Chicken Pie with Mash & Veg",
+    "cuisine": "British",
+    "reason": "Comfort food, balanced, shareable.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 5,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.7
+  },
+  {
+    "dish_type": "Meat & Vegetables (Roast/Grilled)",
+    "cuisine": "British",
+    "reason": "High on ALL factors: shareable, customisable, healthy",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 5,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 5,
+      "VEGETARIAN_OPTION": 5
+    },
+    "composite_score": 3.6
+  },
+  {
+    "dish_type": "Steak Night Family Bundle",
+    "cuisine": "British/American",
+    "reason": "Premium treat, shareable, balanced with sides.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 4,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 2,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.55
+  },
+  {
+    "dish_type": "Fajitas / Burritos",
+    "cuisine": "Mexican",
+    "reason": "High on ALL factors: shareable, customisable, healthy",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 5,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.4
+  },
+  {
+    "dish_type": "Chicken (Sweet & Sour / Sweet Chilli)",
+    "cuisine": "Asian",
+    "reason": "High on ALL factors: shareable, customisable, healthy",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.4
+  },
+  {
+    "dish_type": "Pasta (Bolognese/Tomato)",
+    "cuisine": "Italian",
+    "reason": "88% eaten regularly, high customisable",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.4
+  },
+  {
+    "dish_type": "Pizza",
+    "cuisine": "Italian",
+    "reason": "87% eaten regularly, high shareable + customisable",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.4
+  },
+  {
+    "dish_type": "Tacos / Enchiladas",
+    "cuisine": "Mexican",
+    "reason": "11% wishlist, high customisable + healthy",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 5,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.4
+  },
+  {
+    "dish_type": "Katsu Curry",
+    "cuisine": "Japanese",
+    "reason": "11% wishlist, kid-friendly, familiar",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.4
+  },
+  {
+    "dish_type": "Seafood Paella Family Pot",
+    "cuisine": "Spanish",
+    "reason": "Shareable, balanced, premium feel.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 5,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 5,
+      "MIDWEEK_FIT": 2,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.4
+  },
+  {
+    "dish_type": "Curry & Rice (Tikka/Korma)",
+    "cuisine": "Indian",
+    "reason": "High shareable + customisable, 74% eaten regularly",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 4,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.25
+  },
+  {
+    "dish_type": "Fish & Chips",
+    "cuisine": "British",
+    "reason": "63% eaten, 9% wishlist, British staple",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 2,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.25
+  },
+  {
+    "dish_type": "Burger & Chips",
+    "cuisine": "American",
+    "reason": "70% eaten, high customisable",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 5,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 2,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.25
+  },
+  {
+    "dish_type": "Chilli & Rice",
+    "cuisine": "Tex-Mex",
+    "reason": "High on ALL factors: shareable, customisable, healthy",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.1
+  },
+  {
+    "dish_type": "Stir Fry / Noodles",
+    "cuisine": "Asian",
+    "reason": "High shareable + healthy, familiar to kids",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.1
+  },
+  {
+    "dish_type": "Lasagne",
+    "cuisine": "Italian",
+    "reason": "62% eaten, 16% wishlist (highest!), high shareable",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.1
+  },
+  {
+    "dish_type": "Cottage/Shepherds Pie",
+    "cuisine": "British",
+    "reason": "17% wishlist (2nd highest), high shareable",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.1
+  },
+  {
+    "dish_type": "Thai Curry (Red/Green/Massaman)",
+    "cuisine": "Thai",
+    "reason": "19% wishlist (3rd highest), high shareable + customisable",
+    "source": "OG Survey",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.1
+  },
+  {
+    "dish_type": "Vietnamese Rice Paper Rolls + Pho Combo",
+    "cuisine": "Vietnamese",
+    "reason": "Healthy, shareable, customisable.",
+    "source": "LLM reasoning",
+    "factor_scores": {
+      "PORTION_FLEXIBILITY": 3,
+      "FUSSY_EATER_FRIENDLY": 3,
+      "CUSTOMISATION": 3,
+      "BALANCED_NUTRITION": 3,
+      "VALUE_AT_25": 3,
+      "SHAREABILITY": 3,
+      "MIDWEEK_FIT": 4,
+      "VEGETARIAN_OPTION": 3
+    },
+    "composite_score": 3.1
+  }
+]

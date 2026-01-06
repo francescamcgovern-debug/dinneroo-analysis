@@ -1,0 +1,920 @@
+[
+  {
+    "rank": 1,
+    "dish_type": "Salmon Teriyaki Family Platter",
+    "priority_score": 5.2,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "evidence_flag": "Discovery: 5.2/5"
+  },
+  {
+    "rank": 2,
+    "dish_type": "Halloumi Wrap Family Box",
+    "priority_score": 5.1,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Greek/Mediterranean",
+    "evidence_flag": "Discovery: 5.1/5"
+  },
+  {
+    "rank": 3,
+    "dish_type": "Souvlaki Family Platter",
+    "priority_score": 5.1,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Greek/Mediterranean",
+    "evidence_flag": "Discovery: 5.1/5"
+  },
+  {
+    "rank": 4,
+    "dish_type": "Chicken",
+    "priority_score": 5.0,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": NaN,
+    "evidence_flag": "Performance: 5.0/5 | Orders: 11321"
+  },
+  {
+    "rank": 5,
+    "dish_type": "Rotisserie Chicken Family Feast",
+    "priority_score": 4.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Healthy/Fresh",
+    "evidence_flag": "Discovery: 5.0/5"
+  },
+  {
+    "rank": 6,
+    "dish_type": "Grilled Chicken Family Platter with Sides",
+    "priority_score": 4.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Healthy/Fresh",
+    "evidence_flag": "Discovery: 5.0/5"
+  },
+  {
+    "rank": 7,
+    "dish_type": "Fajita Family Kit",
+    "priority_score": 4.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Mexican",
+    "evidence_flag": "Discovery: 5.0/5"
+  },
+  {
+    "rank": 8,
+    "dish_type": "Kids Ramen & Adult Ramen Combo",
+    "priority_score": 4.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Japanese/Asian",
+    "evidence_flag": "Discovery: 5.0/5"
+  },
+  {
+    "rank": 9,
+    "dish_type": "Grilled Chicken with Customizable Sides",
+    "priority_score": 4.87,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "evidence_flag": "Discovery: 4.9/5"
+  },
+  {
+    "rank": 10,
+    "dish_type": "Halloumi Wrap Family Bundle",
+    "priority_score": 4.87,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "evidence_flag": "Discovery: 4.9/5"
+  },
+  {
+    "rank": 11,
+    "dish_type": "Veggie Fajita Family Kit",
+    "priority_score": 4.87,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "evidence_flag": "Discovery: 4.9/5"
+  },
+  {
+    "rank": 12,
+    "dish_type": "Paneer Tikka Family Feast",
+    "priority_score": 4.87,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "evidence_flag": "Discovery: 4.9/5"
+  },
+  {
+    "rank": 13,
+    "dish_type": "Plain Pasta with Sides Family Bundle",
+    "priority_score": 4.87,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "evidence_flag": "Discovery: 4.9/5"
+  },
+  {
+    "rank": 14,
+    "dish_type": "Greek Mezze Family Feast",
+    "priority_score": 4.85,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Greek/Mediterranean",
+    "evidence_flag": "Discovery: 4.8/5"
+  },
+  {
+    "rank": 15,
+    "dish_type": "Shawarma Family Platter",
+    "priority_score": 4.85,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Middle Eastern",
+    "evidence_flag": "Discovery: 4.8/5"
+  },
+  {
+    "rank": 16,
+    "dish_type": "Dim Sum Family Selection",
+    "priority_score": 4.85,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Chinese",
+    "evidence_flag": "Discovery: 4.8/5"
+  },
+  {
+    "rank": 17,
+    "dish_type": "Teriyaki Salmon Family Platter",
+    "priority_score": 4.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Japanese/Asian",
+    "evidence_flag": "Discovery: 4.7/5"
+  },
+  {
+    "rank": 18,
+    "dish_type": "Build Your Own Grain Bowl Family Pack",
+    "priority_score": 4.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Healthy/Fresh",
+    "evidence_flag": "Discovery: 4.7/5"
+  },
+  {
+    "rank": 19,
+    "dish_type": "Vietnamese Rice Paper Rolls Family Pack",
+    "priority_score": 4.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Vietnamese",
+    "evidence_flag": "Discovery: 4.7/5"
+  },
+  {
+    "rank": 20,
+    "dish_type": "Butter Chicken Family Feast",
+    "priority_score": 4.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Indian",
+    "evidence_flag": "Discovery: 4.7/5"
+  },
+  {
+    "rank": 21,
+    "dish_type": "Quesadilla Family Pack",
+    "priority_score": 4.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Mexican",
+    "evidence_flag": "Discovery: 4.7/5"
+  },
+  {
+    "rank": 22,
+    "dish_type": "Falafel & Hummus Family Box",
+    "priority_score": 4.6,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Middle Eastern",
+    "evidence_flag": "Discovery: 4.6/5"
+  },
+  {
+    "rank": 23,
+    "dish_type": "Chicken & Rice Plain Family Meal",
+    "priority_score": 4.53,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "evidence_flag": "Discovery: 4.5/5"
+  },
+  {
+    "rank": 24,
+    "dish_type": "Biryani Family Pot",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Indian",
+    "evidence_flag": "Discovery: 4.5/5"
+  },
+  {
+    "rank": 25,
+    "dish_type": "Roast Dinner Family Platter",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "British",
+    "evidence_flag": "Discovery: 4.5/5"
+  },
+  {
+    "rank": 26,
+    "dish_type": "Sushi Family Platter",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Japanese/Healthy",
+    "evidence_flag": "Discovery: 4.5/5"
+  },
+  {
+    "rank": 27,
+    "dish_type": "Teriyaki Rice Bowl Family Bundle",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Japanese/Healthy",
+    "evidence_flag": "Discovery: 4.5/5"
+  },
+  {
+    "rank": 28,
+    "dish_type": "Katsu Curry Family Bundle",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Japanese/Asian",
+    "evidence_flag": "Discovery: 4.5/5"
+  },
+  {
+    "rank": 29,
+    "dish_type": "Pho Family Sharing Bowl",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Vietnamese",
+    "evidence_flag": "Discovery: 4.5/5"
+  },
+  {
+    "rank": 30,
+    "dish_type": "Veggie Burrito Bowl Family Bundle",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Mexican",
+    "evidence_flag": "Discovery: 4.5/5"
+  },
+  {
+    "rank": 31,
+    "dish_type": "Spaghetti Meatballs Family Feast",
+    "priority_score": 4.4,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Italian",
+    "evidence_flag": "Discovery: 4.4/5"
+  },
+  {
+    "rank": 32,
+    "dish_type": "Sweet & Sour Chicken Family Meal",
+    "priority_score": 4.35,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Chinese",
+    "evidence_flag": "Discovery: 4.3/5"
+  },
+  {
+    "rank": 33,
+    "dish_type": "Chicken Chow Mein Family Bundle",
+    "priority_score": 4.35,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Chinese",
+    "evidence_flag": "Discovery: 4.3/5"
+  },
+  {
+    "rank": 34,
+    "dish_type": "Chicken Chow Mein Family Bundle",
+    "priority_score": 4.3,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Chinese",
+    "evidence_flag": "Discovery: 4.3/5"
+  },
+  {
+    "rank": 35,
+    "dish_type": "Chicken Gyros Family Box",
+    "priority_score": 4.2,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Greek",
+    "evidence_flag": "Discovery: 4.2/5"
+  },
+  {
+    "rank": 36,
+    "dish_type": "Sunday Roast Family Platter",
+    "priority_score": 4.2,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "British",
+    "evidence_flag": "Discovery: 4.2/5"
+  },
+  {
+    "rank": 37,
+    "dish_type": "Chicken Tikka Wrap Box",
+    "priority_score": 4.2,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Indian",
+    "evidence_flag": "Discovery: 4.2/5"
+  },
+  {
+    "rank": 38,
+    "dish_type": "Banh Mi Family Box",
+    "priority_score": 4.2,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Vietnamese",
+    "evidence_flag": "Discovery: 4.2/5"
+  },
+  {
+    "rank": 39,
+    "dish_type": "Chicken Pie with Mash & Veg",
+    "priority_score": 4.2,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "British",
+    "evidence_flag": "Discovery: 4.2/5"
+  },
+  {
+    "rank": 40,
+    "dish_type": "Pad Thai",
+    "priority_score": 4.14,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Thai",
+    "evidence_flag": "Performance: 4.6/5 | Opportunity: 3.4/5 | Survey n=54 | Orders: 2353"
+  },
+  {
+    "rank": 41,
+    "dish_type": "Biryani",
+    "priority_score": 4.12,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Indian",
+    "evidence_flag": "Performance: 5.0/5 | Opportunity: 2.8/5 | Orders: 454"
+  },
+  {
+    "rank": 42,
+    "dish_type": "Chicken Enchiladas Family Tray",
+    "priority_score": 4.1,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Mexican",
+    "evidence_flag": "Discovery: 4.1/5"
+  },
+  {
+    "rank": 43,
+    "dish_type": "Lamb Kofta Family Platter",
+    "priority_score": 4.1,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Middle Eastern",
+    "evidence_flag": "Discovery: 4.1/5"
+  },
+  {
+    "rank": 44,
+    "dish_type": "Fried Rice",
+    "priority_score": 4.06,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Chinese",
+    "evidence_flag": "Performance: 4.6/5 | Opportunity: 3.3/5 | Survey n=16 | Orders: 2418"
+  },
+  {
+    "rank": 45,
+    "dish_type": "Chicken Yakitori Family Box",
+    "priority_score": 4.0,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Japanese",
+    "evidence_flag": "Discovery: 4.0/5"
+  },
+  {
+    "rank": 46,
+    "dish_type": "Crispy Beef Family Meal",
+    "priority_score": 4.0,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Chinese",
+    "evidence_flag": "Discovery: 4.0/5"
+  },
+  {
+    "rank": 47,
+    "dish_type": "Chinese Family Meal",
+    "priority_score": 3.96,
+    "category": "Recruit",
+    "evidence_type": "Opportunity",
+    "cuisine": "Chinese",
+    "evidence_flag": "Opportunity: 4.0/5 | Orders: 31"
+  },
+  {
+    "rank": 48,
+    "dish_type": "Thai Green Curry Family Pot (Mild)",
+    "priority_score": 3.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Thai/Southeast Asian",
+    "evidence_flag": "Discovery: 4.0/5"
+  },
+  {
+    "rank": 49,
+    "dish_type": "Fish & Chips Family Bucket",
+    "priority_score": 3.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "British",
+    "evidence_flag": "Discovery: 4.0/5"
+  },
+  {
+    "rank": 50,
+    "dish_type": "Pad Thai Family Bundle",
+    "priority_score": 3.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Thai/Southeast Asian",
+    "evidence_flag": "Discovery: 4.0/5"
+  },
+  {
+    "rank": 51,
+    "dish_type": "Risotto Family Sharing Bowl",
+    "priority_score": 3.9,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Italian",
+    "evidence_flag": "Discovery: 3.9/5"
+  },
+  {
+    "rank": 52,
+    "dish_type": "Chicken & Leek Pie",
+    "priority_score": 3.9,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "British",
+    "evidence_flag": "Discovery: 3.9/5"
+  },
+  {
+    "rank": 53,
+    "dish_type": "Tempura Family Selection",
+    "priority_score": 3.9,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Japanese",
+    "evidence_flag": "Discovery: 3.9/5"
+  },
+  {
+    "rank": 54,
+    "dish_type": "Sushi",
+    "priority_score": 3.87,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Japanese",
+    "evidence_flag": "Performance: 4.4/5 | Opportunity: 3.0/5 | Survey n=30 | Orders: 1041"
+  },
+  {
+    "rank": 55,
+    "dish_type": "Shawarma",
+    "priority_score": 3.81,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Middle Eastern",
+    "evidence_flag": "Performance: 4.6/5 | Opportunity: 2.6/5 | Survey n=26 | Orders: 1348"
+  },
+  {
+    "rank": 56,
+    "dish_type": "Nachos Grande Family Platter",
+    "priority_score": 3.8,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Mexican",
+    "evidence_flag": "Discovery: 3.8/5"
+  },
+  {
+    "rank": 57,
+    "dish_type": "Mediterranean Salad Family Platter",
+    "priority_score": 3.8,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Healthy/Fresh",
+    "evidence_flag": "Discovery: 3.8/5"
+  },
+  {
+    "rank": 58,
+    "dish_type": "Fish Pie Family Bake",
+    "priority_score": 3.8,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "British",
+    "evidence_flag": "Discovery: 3.8/5"
+  },
+  {
+    "rank": 59,
+    "dish_type": "Rice Bowl",
+    "priority_score": 3.76,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Healthy/Fresh",
+    "evidence_flag": "Performance: 4.4/5 | Opportunity: 2.9/5 | Survey n=27 | Orders: 3127"
+  },
+  {
+    "rank": 60,
+    "dish_type": "Noodles",
+    "priority_score": 3.74,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Global",
+    "evidence_flag": "Performance: 4.4/5 | Opportunity: 2.7/5 | Survey n=62 | Orders: 3296"
+  },
+  {
+    "rank": 61,
+    "dish_type": "Quinoa Bowl Family Bundle",
+    "priority_score": 3.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Healthy/Fresh",
+    "evidence_flag": "Discovery: 3.7/5"
+  },
+  {
+    "rank": 62,
+    "dish_type": "Pho",
+    "priority_score": 3.7,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Vietnamese",
+    "evidence_flag": "Performance: 4.6/5 | Opportunity: 2.3/5 | Survey n=130 | Orders: 4474"
+  },
+  {
+    "rank": 63,
+    "dish_type": "Vegetable Spring Rolls Family Pack",
+    "priority_score": 3.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Chinese",
+    "evidence_flag": "Discovery: 3.7/5"
+  },
+  {
+    "rank": 64,
+    "dish_type": "Fajitas",
+    "priority_score": 3.69,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Mexican",
+    "evidence_flag": "Performance: 4.4/5 | Opportunity: 2.7/5 | Survey n=18 | Orders: 591"
+  },
+  {
+    "rank": 65,
+    "dish_type": "Lasagne",
+    "priority_score": 3.56,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Italian",
+    "evidence_flag": "Performance: 4.0/5 | Opportunity: 2.9/5 | Orders: 1095"
+  },
+  {
+    "rank": 66,
+    "dish_type": "Mac & Cheese",
+    "priority_score": 3.45,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Global",
+    "evidence_flag": "Performance: 4.3/5 | Opportunity: 2.2/5 | Survey n=23 | Orders: 1295"
+  },
+  {
+    "rank": 67,
+    "dish_type": "Roast Dinner",
+    "priority_score": 3.45,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "British",
+    "evidence_flag": "Opportunity: 3.5/5 | Orders: 286"
+  },
+  {
+    "rank": 68,
+    "dish_type": "Butter Chicken",
+    "priority_score": 3.42,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Indian",
+    "evidence_flag": "Performance: 4.0/5 | Opportunity: 2.6/5 | Orders: 361"
+  },
+  {
+    "rank": 69,
+    "dish_type": "Curry",
+    "priority_score": 3.39,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Indian",
+    "evidence_flag": "Performance: 4.0/5 | Opportunity: 2.5/5 | Orders: 4910"
+  },
+  {
+    "rank": 70,
+    "dish_type": "Fish & Chips",
+    "priority_score": 3.33,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "evidence_flag": "Opportunity: 3.3/5 | Orders: 31"
+  },
+  {
+    "rank": 71,
+    "dish_type": "Salad",
+    "priority_score": 3.32,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Healthy/Fresh",
+    "evidence_flag": "Performance: 4.0/5 | Opportunity: 2.3/5 | Orders: 1084"
+  },
+  {
+    "rank": 72,
+    "dish_type": "Grilled Chicken with Sides",
+    "priority_score": 3.3,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "evidence_flag": "Opportunity: 3.3/5 | Orders: 538"
+  },
+  {
+    "rank": 73,
+    "dish_type": "Teriyaki",
+    "priority_score": 3.28,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Japanese",
+    "evidence_flag": "Performance: 4.0/5 | Opportunity: 2.2/5 | Orders: 395"
+  },
+  {
+    "rank": 74,
+    "dish_type": "Katsu",
+    "priority_score": 3.24,
+    "category": "Fix",
+    "evidence_type": "Measured",
+    "cuisine": "Japanese",
+    "evidence_flag": "Performance: 3.9/5 | Opportunity: 2.3/5 | Survey n=59 | Orders: 11634"
+  },
+  {
+    "rank": 75,
+    "dish_type": "Pasta",
+    "priority_score": 3.15,
+    "category": "Fix",
+    "evidence_type": "Measured",
+    "cuisine": "Italian",
+    "evidence_flag": "Performance: 3.8/5 | Opportunity: 2.2/5 | Survey n=56 | Orders: 1336"
+  },
+  {
+    "rank": 76,
+    "dish_type": "Shepherd's Pie",
+    "priority_score": 3.1,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "British",
+    "evidence_flag": "Opportunity: 3.1/5 | Orders: 329"
+  },
+  {
+    "rank": 77,
+    "dish_type": "Stir Fry",
+    "priority_score": 3.03,
+    "category": "Monitor",
+    "evidence_type": "Measured",
+    "cuisine": "Global",
+    "evidence_flag": "Performance: 3.7/5 | Opportunity: 2.0/5 | Survey n=3 | Orders: 61"
+  },
+  {
+    "rank": 78,
+    "dish_type": "Korean Fried Chicken",
+    "priority_score": 3.02,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Korean",
+    "evidence_flag": "Opportunity: 3.0/5 | Orders: 394"
+  },
+  {
+    "rank": 79,
+    "dish_type": "Pizza",
+    "priority_score": 2.98,
+    "category": "Fix",
+    "evidence_type": "Measured",
+    "cuisine": "Italian",
+    "evidence_flag": "Performance: 3.4/5 | Opportunity: 2.4/5 | Survey n=95 | Orders: 395"
+  },
+  {
+    "rank": 80,
+    "dish_type": "Tacos",
+    "priority_score": 2.84,
+    "category": "Monitor",
+    "evidence_type": "Measured",
+    "cuisine": "Mexican",
+    "evidence_flag": "Performance: 3.0/5 | Opportunity: 2.6/5 | Orders: 91"
+  },
+  {
+    "rank": 81,
+    "dish_type": "Veggie Fajitas",
+    "priority_score": 2.72,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Mexican",
+    "evidence_flag": "Opportunity: 2.7/5 | Orders: 329"
+  },
+  {
+    "rank": 82,
+    "dish_type": "Ramen",
+    "priority_score": 2.7,
+    "category": "Monitor",
+    "evidence_type": "Measured",
+    "cuisine": "Japanese",
+    "evidence_flag": "Performance: 3.0/5 | Opportunity: 2.2/5 | Orders: 219"
+  },
+  {
+    "rank": 83,
+    "dish_type": "Greek Mezze",
+    "priority_score": 2.66,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Greek",
+    "evidence_flag": "Opportunity: 2.7/5 | Orders: 7"
+  },
+  {
+    "rank": 84,
+    "dish_type": "Dim Sum",
+    "priority_score": 2.63,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Chinese",
+    "evidence_flag": "Opportunity: 2.6/5"
+  },
+  {
+    "rank": 85,
+    "dish_type": "Burrito",
+    "priority_score": 2.63,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Mexican",
+    "evidence_flag": "Opportunity: 2.6/5 | Orders: 3"
+  },
+  {
+    "rank": 86,
+    "dish_type": "Quesadilla",
+    "priority_score": 2.6,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Mexican",
+    "evidence_flag": "Opportunity: 2.6/5 | Orders: 56"
+  },
+  {
+    "rank": 87,
+    "dish_type": "Chicken Pie",
+    "priority_score": 2.56,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "British",
+    "evidence_flag": "Opportunity: 2.6/5 | Orders: 34284"
+  },
+  {
+    "rank": 88,
+    "dish_type": "Halloumi Wrap",
+    "priority_score": 2.49,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "evidence_flag": "Opportunity: 2.5/5 | Orders: 158"
+  },
+  {
+    "rank": 89,
+    "dish_type": "Poke Bowl",
+    "priority_score": 2.4,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Healthy/Fresh",
+    "evidence_flag": "Opportunity: 2.4/5 | Orders: 36"
+  },
+  {
+    "rank": 90,
+    "dish_type": "Grain Bowl",
+    "priority_score": 2.4,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Healthy/Fresh",
+    "evidence_flag": "Opportunity: 2.4/5 | Orders: 193"
+  },
+  {
+    "rank": 91,
+    "dish_type": "Buddha Bowl",
+    "priority_score": 2.4,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Healthy/Fresh",
+    "evidence_flag": "Opportunity: 2.4/5"
+  },
+  {
+    "rank": 92,
+    "dish_type": "Sweet & Sour Chicken",
+    "priority_score": 2.37,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "evidence_flag": "Opportunity: 2.4/5 | Orders: 1081"
+  },
+  {
+    "rank": 93,
+    "dish_type": "Bowl",
+    "priority_score": 2.37,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Healthy/Fresh",
+    "evidence_flag": "Opportunity: 2.4/5 | Orders: 4492"
+  },
+  {
+    "rank": 94,
+    "dish_type": "Rotisserie Chicken",
+    "priority_score": 2.37,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "evidence_flag": "Opportunity: 2.4/5"
+  },
+  {
+    "rank": 95,
+    "dish_type": "Korma",
+    "priority_score": 2.2,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Indian",
+    "evidence_flag": "Opportunity: 2.2/5"
+  },
+  {
+    "rank": 96,
+    "dish_type": "Cottage Pie",
+    "priority_score": 2.2,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "British",
+    "evidence_flag": "Opportunity: 2.2/5"
+  },
+  {
+    "rank": 97,
+    "dish_type": "Tikka Masala",
+    "priority_score": 2.2,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Indian",
+    "evidence_flag": "Opportunity: 2.2/5 | Orders: 18"
+  },
+  {
+    "rank": 98,
+    "dish_type": "Wrap",
+    "priority_score": 2.16,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "evidence_flag": "Opportunity: 2.2/5 | Orders: 44"
+  },
+  {
+    "rank": 99,
+    "dish_type": "Burger",
+    "priority_score": 2.16,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "American",
+    "evidence_flag": "Opportunity: 2.2/5 | Orders: 60"
+  },
+  {
+    "rank": 100,
+    "dish_type": "Souvlaki",
+    "priority_score": 2.0,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Greek",
+    "evidence_flag": "Opportunity: 2.0/5"
+  },
+  {
+    "rank": 101,
+    "dish_type": "Bangers & Mash",
+    "priority_score": 2.0,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "British",
+    "evidence_flag": "Opportunity: 2.0/5"
+  },
+  {
+    "rank": 102,
+    "dish_type": "Bibimbap",
+    "priority_score": 2.0,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Korean",
+    "evidence_flag": "Opportunity: 2.0/5"
+  }
+]

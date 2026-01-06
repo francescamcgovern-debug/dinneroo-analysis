@@ -1,0 +1,49 @@
+dish_type,on_dinneroo,order_volume,latent_demand_mentions,latent_demand_score,kid_friendly,balanced_guilt_free,adult_appeal,portion_flexibility,fussy_eater_friendly,customisation,value_at_25,shareability,vegetarian_option,framework_score,partner_capability,potential_partners,cuisine,gap_type,gap_score,track_b_score
+Chinese Family Meal,False,31,58,5,3,3,3,5,3,3,4,5,3,3.53,2,New recruitment needed,Chinese,Supply Gap,5,3.96
+Roast Dinner,True,287,34,5,3,4,3,3,3,3,3,4,3,3.18,3,Bill's,British,No Gap,2,3.45
+Pad Thai,True,2734,37,5,3,3,5,3,2,3,3,3,3,3.01,3,Banana Tree,Thai,No Gap,2,3.4
+Fish & Chips,True,32,39,5,5,2,3,3,5,3,3,3,2,3.45,2,New recruitment needed,Global,No Gap,2,3.33
+Fried Rice,True,4958,0,1,4,3,3,3,4,3,3,3,3,3.32,5,"Pho, Wagamama, Itsu",Chinese,Supply Gap,5,3.3
+Grilled Chicken with Sides,True,540,18,4,4,5,3,3,5,3,3,3,2,3.67,3,Farmer J,Global,No Gap,2,3.3
+Shepherd's Pie,True,333,17,4,3,3,3,3,3,3,3,3,3,3.0,3,Bill's,British,No Gap,2,3.1
+Korean Fried Chicken,True,398,8,3,4,4,5,3,5,3,3,3,2,3.72,3,Farmer J,Korean,No Gap,2,3.02
+Sushi,True,1043,12,3,3,3,5,3,3,3,2,3,3,3.06,4,"Itsu, Iro Sushi",Japanese,No Gap,2,3.02
+Lasagne,True,931,25,4,3,3,3,3,3,3,3,3,3,3.0,2,New recruitment needed,Italian,No Gap,2,2.9
+Rice Bowl,True,9545,0,1,4,4,3,4,4,5,3,3,4,3.86,5,"Pho, Wagamama, Itsu, Farmer J",Healthy/Fresh,No Gap,2,2.86
+Biryani,True,458,7,3,3,3,3,3,3,3,3,3,3,3.0,3,Dishoom,Indian,No Gap,2,2.8
+Veggie Fajitas,True,333,0,1,3,3,4,3,3,5,3,3,5,3.4,3,Tortilla,Mexican,Quality Gap,4,2.72
+Noodles,True,2092,0,1,4,3,3,3,4,3,3,3,3,3.32,5,"Pho, Wagamama, Itsu, Banana Tree",Global,No Gap,2,2.7
+Fajitas,True,221,0,1,3,3,4,3,3,5,3,3,3,3.29,3,Tortilla,Mexican,Quality Gap,4,2.69
+Greek Mezze,False,7,6,3,3,3,4,3,3,3,3,5,3,3.19,2,New recruitment needed,Greek,No Gap,2,2.66
+Dim Sum,False,0,0,1,3,3,3,3,3,3,3,5,3,3.11,2,New recruitment needed,Chinese,Supply Gap,5,2.63
+Burrito,False,3,0,1,3,3,3,3,3,4,3,3,3,3.11,3,Tortilla,Mexican,Quality Gap,4,2.63
+Shawarma,True,1355,0,1,3,3,4,3,3,3,3,3,3,3.08,2,New recruitment needed,Middle Eastern,Supply Gap,5,2.62
+Tacos,True,62,0,1,3,3,3,3,3,3,3,3,3,3.0,3,Tortilla,Mexican,Quality Gap,4,2.6
+Quesadilla,True,57,0,1,3,3,3,3,3,3,3,3,3,3.0,3,Tortilla,Mexican,Quality Gap,4,2.6
+Chicken Pie,True,34506,0,1,4,4,3,3,5,3,3,3,2,3.55,4,"Farmer J, Bill's",British,No Gap,2,2.56
+Butter Chicken,True,650,0,1,4,4,3,3,5,3,3,3,2,3.55,4,"Dishoom, Farmer J",Indian,No Gap,2,2.56
+Halloumi Wrap,True,161,3,2,4,3,3,3,4,5,3,3,5,3.63,2,New recruitment needed,Global,No Gap,2,2.49
+Curry,True,5897,0,1,3,3,5,3,3,3,3,4,4,3.27,4,"Dishoom, Banana Tree",Indian,No Gap,2,2.48
+Pizza,True,548,0,1,5,2,3,3,5,4,3,4,4,3.72,3,Franco Manca,Italian,No Gap,2,2.42
+Poke Bowl,True,39,0,1,3,5,3,4,3,5,3,3,4,3.67,3,Farmer J,Healthy/Fresh,No Gap,2,2.4
+Buddha Bowl,False,0,0,1,3,5,3,4,3,5,3,3,4,3.67,3,Farmer J,Healthy/Fresh,No Gap,2,2.4
+Grain Bowl,True,192,0,1,3,5,3,4,3,5,3,3,4,3.67,3,Farmer J,Healthy/Fresh,No Gap,2,2.4
+Bowl,True,4517,0,1,3,4,3,4,3,5,3,3,4,3.55,3,Farmer J,Healthy/Fresh,No Gap,2,2.37
+Sweet & Sour Chicken,True,1081,0,1,4,4,3,3,5,3,3,3,2,3.55,3,Farmer J,Global,No Gap,2,2.37
+Rotisserie Chicken,False,0,0,1,4,4,3,3,5,3,3,3,2,3.55,3,Farmer J,Global,No Gap,2,2.37
+Katsu,True,11730,0,1,4,3,4,3,4,3,3,3,3,3.4,3,Wagamama,Japanese,No Gap,2,2.32
+Salad,True,1090,0,1,3,5,3,3,3,4,3,3,3,3.36,3,Farmer J,Healthy/Fresh,No Gap,2,2.31
+Pho,True,4530,0,1,3,4,5,3,3,3,3,3,3,3.29,3,Pho,Vietnamese,No Gap,2,2.29
+Ramen,True,223,0,1,3,3,5,3,3,3,3,3,3,3.17,3,Wagamama,Japanese,No Gap,2,2.25
+Cottage Pie,False,0,0,1,3,3,3,3,3,3,3,3,3,3.0,3,Bill's,British,No Gap,2,2.2
+Teriyaki,True,1369,0,1,3,3,3,3,3,3,3,3,3,3.0,3,Wagamama,Japanese,No Gap,2,2.2
+Tikka Masala,True,19,0,1,3,3,3,3,3,3,3,3,3,3.0,3,Dishoom,Indian,No Gap,2,2.2
+Pasta,True,1342,0,1,5,3,3,3,5,3,3,3,4,3.68,2,New recruitment needed,Italian,No Gap,2,2.2
+Korma,False,0,0,1,3,3,3,3,3,3,3,3,3,3.0,3,Dishoom,Indian,No Gap,2,2.2
+Mac & Cheese,True,1322,0,1,5,3,3,3,5,3,3,3,3,3.63,2,New recruitment needed,Global,No Gap,2,2.19
+Burger,True,61,0,1,3,2,3,3,3,3,3,3,3,2.87,3,Bill's,American,No Gap,2,2.16
+Wrap,True,44,0,1,4,3,3,3,4,5,3,3,3,3.53,2,New recruitment needed,Global,No Gap,2,2.16
+Souvlaki,False,0,0,1,3,3,3,3,3,3,3,3,3,3.0,2,New recruitment needed,Greek,No Gap,2,2.0
+Bangers & Mash,False,0,0,1,3,3,3,3,3,3,3,3,3,3.0,2,New recruitment needed,British,No Gap,2,2.0
+Bibimbap,False,0,0,1,3,3,3,3,3,3,3,3,3,3.0,2,New recruitment needed,Korean,No Gap,2,2.0
+Stir Fry,True,252,0,1,3,3,3,3,3,3,3,3,3,3.0,2,New recruitment needed,Global,No Gap,2,2.0

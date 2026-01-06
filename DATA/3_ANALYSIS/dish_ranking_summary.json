@@ -1,0 +1,162 @@
+{
+  "methodology": {
+    "volume_weight": 0.5,
+    "rating_weight": 0.5,
+    "benchmark_rating": 4.26,
+    "avg_order_volume": 2204.76
+  },
+  "top_10": [
+    {
+      "rank": 1,
+      "dish_name": "Prawn crackers",
+      "order_count": 11686,
+      "avg_rating": 4.563106796116505,
+      "composite_score": 9.6
+    },
+    {
+      "rank": 2,
+      "dish_name": "family chicken katsu",
+      "order_count": 11246,
+      "avg_rating": 4.2445759368836296,
+      "composite_score": 9.0
+    },
+    {
+      "rank": 3,
+      "dish_name": "Egg fried rice with chicken",
+      "order_count": 9964,
+      "avg_rating": 4.590277777777778,
+      "composite_score": 8.8
+    },
+    {
+      "rank": 4,
+      "dish_name": "Pho the whole fam",
+      "order_count": 7910,
+      "avg_rating": 4.552436003303056,
+      "composite_score": 8.0
+    },
+    {
+      "rank": 5,
+      "dish_name": "Wok-fried noodles with chicken",
+      "order_count": 7707,
+      "avg_rating": 4.533050847457627,
+      "composite_score": 7.8
+    },
+    {
+      "rank": 6,
+      "dish_name": "Katsu Chicken Rice Bowl",
+      "order_count": 6144,
+      "avg_rating": 4.436004162330906,
+      "composite_score": 7.1
+    },
+    {
+      "rank": 7,
+      "dish_name": "Beef brisket pho noodle soup",
+      "order_count": 5419,
+      "avg_rating": 4.580891719745223,
+      "composite_score": 6.9
+    },
+    {
+      "rank": 8,
+      "dish_name": "Dishoom Chicken Ruby \u2013 for the family",
+      "order_count": 4858,
+      "avg_rating": 4.793147208121828,
+      "composite_score": 6.9
+    },
+    {
+      "rank": 9,
+      "dish_name": "Mini chicken noodle soup",
+      "order_count": 4811,
+      "avg_rating": 4.624,
+      "composite_score": 6.6
+    },
+    {
+      "rank": 10,
+      "dish_name": "Chicken Teriyaki Rice Bowl",
+      "order_count": 4200,
+      "avg_rating": 4.427051671732523,
+      "composite_score": 6.2
+    }
+  ],
+  "mention_counts": [
+    {
+      "dish_type": "rice",
+      "mention_count": 184
+    },
+    {
+      "dish_type": "chicken",
+      "mention_count": 131
+    },
+    {
+      "dish_type": "curry",
+      "mention_count": 61
+    },
+    {
+      "dish_type": "salad",
+      "mention_count": 59
+    },
+    {
+      "dish_type": "pizza",
+      "mention_count": 39
+    },
+    {
+      "dish_type": "pho",
+      "mention_count": 28
+    },
+    {
+      "dish_type": "pasta",
+      "mention_count": 28
+    },
+    {
+      "dish_type": "katsu",
+      "mention_count": 25
+    },
+    {
+      "dish_type": "noodles",
+      "mention_count": 23
+    },
+    {
+      "dish_type": "healthy",
+      "mention_count": 23
+    },
+    {
+      "dish_type": "vegetarian",
+      "mention_count": 22
+    },
+    {
+      "dish_type": "vegan",
+      "mention_count": 18
+    },
+    {
+      "dish_type": "lasagne",
+      "mention_count": 13
+    },
+    {
+      "dish_type": "thai",
+      "mention_count": 13
+    },
+    {
+      "dish_type": "sushi",
+      "mention_count": 12
+    },
+    {
+      "dish_type": "chips",
+      "mention_count": 9
+    },
+    {
+      "dish_type": "fish",
+      "mention_count": 5
+    },
+    {
+      "dish_type": "burger",
+      "mention_count": 3
+    },
+    {
+      "dish_type": "tacos",
+      "mention_count": 2
+    },
+    {
+      "dish_type": "grilled",
+      "mention_count": 2
+    }
+  ]
+}

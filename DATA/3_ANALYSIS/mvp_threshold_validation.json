@@ -1,0 +1,43 @@
+{
+  "analysis_date": "2026-01-06",
+  "findings": {
+    "cuisine_count": {
+      "correlation_with_repeat_rate": 0.514,
+      "impact": "STRONG - zones with more cuisines have significantly higher repeat rates",
+      "recommendation": "Keep cuisine threshold - it predicts success"
+    },
+    "rating": {
+      "correlation_with_repeat_rate": 0.22,
+      "impact": "MODERATE - rating matters but 4.5 threshold is too strict",
+      "finding": "4.5 threshold shows NO significant difference in repeat rate (p=0.21)",
+      "finding_2": "4.2-4.3 threshold DOES show significant difference (p<0.05)",
+      "recommendation": "Lower rating threshold from 4.5 to 4.3"
+    },
+    "repeat_rate": {
+      "current_mean": 0.171,
+      "current_median": 0.183,
+      "percentile_75": 0.223,
+      "percentile_90": 0.252,
+      "finding": "35% repeat rate is aspirational - only 1 zone achieves it",
+      "recommendation": "Lower repeat threshold to 20% (achievable by top 41% of zones)"
+    }
+  },
+  "recommended_thresholds": {
+    "rating_min": 4.3,
+    "repeat_rate_min": 0.2,
+    "cuisine_count_min": 4,
+    "justification": "These thresholds are achievable (21% of zones pass) while still being meaningful (all show significant correlation with success)"
+  },
+  "zones_passing": {
+    "current_strict": {
+      "thresholds": "Rating>=4.5, Repeat>=35%, Cuisines>=5",
+      "count": 0,
+      "percent": 0
+    },
+    "recommended": {
+      "thresholds": "Rating>=4.3, Repeat>=20%, Cuisines>=4",
+      "count": 43,
+      "percent": 21
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "target_price_range": "\u00a320-30",
+  "orders_in_range": 2136,
+  "pct_of_total": 63.4,
+  "top_dishes": [
+    {
+      "dish": "Prawn crackers",
+      "count": 382
+    },
+    {
+      "dish": "Egg fried rice with chicken",
+      "count": 338
+    },
+    {
+      "dish": "Wok-fried noodles with chicken",
+      "count": 234
+    },
+    {
+      "dish": "Pho the whole fam",
+      "count": 227
+    },
+    {
+      "dish": "Katsu Chicken Rice Bowl",
+      "count": 212
+    },
+    {
+      "dish": "family chicken katsu",
+      "count": 198
+    },
+    {
+      "dish": "Beef brisket pho noodle soup",
+      "count": 168
+    },
+    {
+      "dish": "Mini chicken noodle soup",
+      "count": 165
+    },
+    {
+      "dish": "Chicken Teriyaki Rice Bowl",
+      "count": 149
+    },
+    {
+      "dish": "Dishoom Chicken Ruby \u2013 for the family",
+      "count": 134
+    },
+    {
+      "dish": "Firecracker Chicken Rice Bowl",
+      "count": 132
+    },
+    {
+      "dish": "Chicken Pad Thai",
+      "count": 132
+    },
+    {
+      "dish": "Garlic Bread with Mozzarella Sharer (V) (723 kcal: serves 2)",
+      "count": 130
+    },
+    {
+      "dish": "It's a curry night",
+      "count": 130
+    },
+    {
+      "dish": "Family Favourites Feast",
+      "count": 126
+    },
+    {
+      "dish": "\ud83c\udf5b\ud83c\udf5cMix n Match Rice Bowl Bundle For Four\ud83c\udf5b\ud83c\udf5c",
+      "count": 126
+    },
+    {
+      "dish": "Classic chicken curry",
+      "count": 112
+    },
+    {
+      "dish": "Fresh from the wok",
+      "count": 111
+    },
+    {
+      "dish": "Chicken pho noodle soup",
+      "count": 104
+    },
+    {
+      "dish": "Wok-fried noodles with tofu",
+      "count": 94
+    }
+  ],
+  "top_brands": {
+    "Pho": 468,
+    "Wagamama": 303,
+    "Dishoom": 252,
+    "Banana Tree": 207,
+    "PizzaExpress": 182,
+    "Bill's": 109,
+    "Giggling Squid": 105,
+    "Itsu": 100,
+    "Farmer J": 56,
+    "Yacob's Kitchen": 52
+  },
+  "family_items_count": 1240,
+  "order_value_stats": {
+    "mean": 30.17,
+    "median": 27.75,
+    "min": 0.0,
+    "max": 223.39
+  }
+}

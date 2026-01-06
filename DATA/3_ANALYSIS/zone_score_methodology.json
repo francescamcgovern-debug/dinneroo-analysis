@@ -1,0 +1,49 @@
+{
+  "weights": {
+    "cuisine": 0.2,
+    "partners": 0.15,
+    "dishes": 0.25,
+    "performance": 0.25,
+    "quality": 0.15
+  },
+  "scoring_rules": {
+    "cuisine_diversity": {
+      "7+": 10,
+      "5-6": 8,
+      "4": 6,
+      "3": 4,
+      "2": 2,
+      "1": 1
+    },
+    "partner_density": {
+      "10+": 10,
+      "7-9": 8,
+      "5-6": 6,
+      "4": 4,
+      "3": 2,
+      "1-2": 1
+    },
+    "dish_variety": {
+      "200+": 10,
+      "100-199": 8,
+      "50-99": 6,
+      "30-49": 4,
+      "21-29": 3,
+      "<21": 1
+    },
+    "performance": "Based on order count percentiles",
+    "quality": {
+      "4.5+": 10,
+      "4.3-4.5": 8,
+      "4.0-4.3": 6,
+      "3.5-4.0": 4,
+      "<3.5": 2
+    }
+  },
+  "benchmark_rating": 4.26,
+  "order_percentiles": {
+    "0.25": 40.0,
+    "0.5": 168.0,
+    "0.75": 519.0
+  }
+}

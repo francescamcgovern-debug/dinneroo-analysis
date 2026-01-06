@@ -1,0 +1,308 @@
+{
+  "rating_benchmarks": {
+    "overall_avg": 4.43,
+    "overall_median": 5.0,
+    "std_dev": 1.13,
+    "high_threshold": 5.56,
+    "low_threshold": 3.3
+  },
+  "volume_benchmarks": {
+    "total_orders": 71480,
+    "total_ratings": 10713
+  },
+  "definitions": {
+    "HIGH_RATING": "Above 5.56 (avg + 1 std)",
+    "LOW_RATING": "Below 3.30 (avg - 1 std)",
+    "ABOVE_AVG": "Rating > 4.43 + 0.1",
+    "BELOW_AVG": "Rating < 4.43 - 0.1"
+  },
+  "brand_performance": [
+    {
+      "brand": "Pho",
+      "avg_rating": 4.559904534606205,
+      "rating_count": 2095,
+      "vs_benchmark": 0.13,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "Wagamama",
+      "avg_rating": 4.24640555280119,
+      "rating_count": 2017,
+      "vs_benchmark": -0.19,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Dishoom",
+      "avg_rating": 4.7585470085470085,
+      "rating_count": 1404,
+      "vs_benchmark": 0.33,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "Banana Tree",
+      "avg_rating": 4.4579326923076925,
+      "rating_count": 832,
+      "vs_benchmark": 0.03,
+      "performance": "AT AVG"
+    },
+    {
+      "brand": "PizzaExpress",
+      "avg_rating": 4.173170731707317,
+      "rating_count": 820,
+      "vs_benchmark": -0.26,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Giggling Squid",
+      "avg_rating": 4.317741935483871,
+      "rating_count": 620,
+      "vs_benchmark": -0.12,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Bill's",
+      "avg_rating": 4.503401360544218,
+      "rating_count": 588,
+      "vs_benchmark": 0.07,
+      "performance": "AT AVG"
+    },
+    {
+      "brand": "Itsu",
+      "avg_rating": 4.516539440203562,
+      "rating_count": 393,
+      "vs_benchmark": 0.08,
+      "performance": "AT AVG"
+    },
+    {
+      "brand": "Farmer J",
+      "avg_rating": 4.711610486891386,
+      "rating_count": 267,
+      "vs_benchmark": 0.28,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "Las Iguanas",
+      "avg_rating": 4.121495327102804,
+      "rating_count": 214,
+      "vs_benchmark": -0.31,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Bella Italia",
+      "avg_rating": 4.17910447761194,
+      "rating_count": 201,
+      "vs_benchmark": -0.25,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Cocotte",
+      "avg_rating": 4.420454545454546,
+      "rating_count": 176,
+      "vs_benchmark": -0.01,
+      "performance": "AT AVG"
+    },
+    {
+      "brand": "Yacob's Kitchen",
+      "avg_rating": 4.662790697674419,
+      "rating_count": 172,
+      "vs_benchmark": 0.23,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "Kricket",
+      "avg_rating": 4.368421052631579,
+      "rating_count": 152,
+      "vs_benchmark": -0.06,
+      "performance": "AT AVG"
+    },
+    {
+      "brand": "LEON",
+      "avg_rating": 4.120481927710843,
+      "rating_count": 83,
+      "vs_benchmark": -0.31,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Asia Villa",
+      "avg_rating": 4.2631578947368425,
+      "rating_count": 76,
+      "vs_benchmark": -0.17,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Ting Thai",
+      "avg_rating": 4.5,
+      "rating_count": 64,
+      "vs_benchmark": 0.07,
+      "performance": "AT AVG"
+    },
+    {
+      "brand": "Iro Sushi",
+      "avg_rating": 4.672413793103448,
+      "rating_count": 58,
+      "vs_benchmark": 0.24,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "Prezzo",
+      "avg_rating": 3.4489795918367347,
+      "rating_count": 49,
+      "vs_benchmark": -0.98,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Milano",
+      "avg_rating": 3.877551020408163,
+      "rating_count": 49,
+      "vs_benchmark": -0.56,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Chaska",
+      "avg_rating": 3.977272727272727,
+      "rating_count": 44,
+      "vs_benchmark": -0.46,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Remedy Kitchen",
+      "avg_rating": 4.902439024390244,
+      "rating_count": 41,
+      "vs_benchmark": 0.47,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "Cacciari's",
+      "avg_rating": 4.684210526315789,
+      "rating_count": 38,
+      "vs_benchmark": 0.25,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "Zambrero UK",
+      "avg_rating": 3.75,
+      "rating_count": 36,
+      "vs_benchmark": -0.68,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "TUK TUK-SGroup",
+      "avg_rating": 3.90625,
+      "rating_count": 32,
+      "vs_benchmark": -0.53,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Kokoro",
+      "avg_rating": 4.464285714285714,
+      "rating_count": 28,
+      "vs_benchmark": 0.03,
+      "performance": "AT AVG"
+    },
+    {
+      "brand": "Xian Street Food",
+      "avg_rating": 4.32,
+      "rating_count": 25,
+      "vs_benchmark": -0.11,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Tiffin Tin",
+      "avg_rating": 4.304347826086956,
+      "rating_count": 23,
+      "vs_benchmark": -0.13,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "SOYO-SGroup",
+      "avg_rating": 4.0588235294117645,
+      "rating_count": 17,
+      "vs_benchmark": -0.37,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Saravana Bhavan",
+      "avg_rating": 4.3125,
+      "rating_count": 16,
+      "vs_benchmark": -0.12,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "atis",
+      "avg_rating": 4.071428571428571,
+      "rating_count": 14,
+      "vs_benchmark": -0.36,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "The Salad Project",
+      "avg_rating": 4.538461538461538,
+      "rating_count": 13,
+      "vs_benchmark": 0.11,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "Zumuku",
+      "avg_rating": 3.9,
+      "rating_count": 10,
+      "vs_benchmark": -0.53,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Tula Ireland",
+      "avg_rating": 4.222222222222222,
+      "rating_count": 9,
+      "vs_benchmark": -0.21,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Taste Of Hong Kong-DCN",
+      "avg_rating": 4.555555555555555,
+      "rating_count": 9,
+      "vs_benchmark": 0.12,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "Tadka House",
+      "avg_rating": 4.625,
+      "rating_count": 8,
+      "vs_benchmark": 0.19,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "Shaku Maku",
+      "avg_rating": 5.0,
+      "rating_count": 8,
+      "vs_benchmark": 0.57,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "PIZAZA-SGroup",
+      "avg_rating": 4.333333333333333,
+      "rating_count": 6,
+      "vs_benchmark": -0.1,
+      "performance": "AT AVG"
+    },
+    {
+      "brand": "Zumuku Sushi",
+      "avg_rating": 5.0,
+      "rating_count": 4,
+      "vs_benchmark": 0.57,
+      "performance": "ABOVE AVG"
+    },
+    {
+      "brand": "Umi Falafel",
+      "avg_rating": 4.0,
+      "rating_count": 1,
+      "vs_benchmark": -0.43,
+      "performance": "BELOW AVG"
+    },
+    {
+      "brand": "Zaatar Rathmines",
+      "avg_rating": 5.0,
+      "rating_count": 1,
+      "vs_benchmark": 0.57,
+      "performance": "ABOVE AVG"
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "og_survey_dishes": [
+    {
+      "dish": "Boiled Pasta",
+      "cuisine": "Italian",
+      "eaten_pct": "87.87%",
+      "wishlist_pct": "1.24%",
+      "shareable": "Medium",
+      "customisable": "High",
+      "healthy": "Medium",
+      "prep_time": 21.37
+    },
+    {
+      "dish": "Pizza",
+      "cuisine": "Italian",
+      "eaten_pct": "87.13%",
+      "wishlist_pct": "3.71%",
+      "shareable": "High",
+      "customisable": "High",
+      "healthy": "Low",
+      "prep_time": 15.38
+    },
+    {
+      "dish": "Meat veg",
+      "cuisine": "British/Generalist",
+      "eaten_pct": "78.22%",
+      "wishlist_pct": "4.70%",
+      "shareable": "High",
+      "customisable": "High",
+      "healthy": "High",
+      "prep_time": 34.16
+    },
+    {
+      "dish": "Curry Rice",
+      "cuisine": "Indian",
+      "eaten_pct": "74.01%",
+      "wishlist_pct": "5.94%",
+      "shareable": "High",
+      "customisable": "High",
+      "healthy": "Medium",
+      "prep_time": 28.22
+    },
+    {
+      "dish": "Stir fry Noodles",
+      "cuisine": "Asian",
+      "eaten_pct": "72.28%",
+      "wishlist_pct": "5.20%",
+      "shareable": "High",
+      "customisable": "Medium",
+      "healthy": "High",
+      "prep_time": 19.81
+    },
+    {
+      "dish": "Fajitas Burritos",
+      "cuisine": "Tex Mex",
+      "eaten_pct": "70.79%",
+      "wishlist_pct": "5.20%",
+      "shareable": "High",
+      "customisable": "High",
+      "healthy": "High",
+      "prep_time": 23.96
+    },
+    {
+      "dish": "Burger Chips",
+      "cuisine": "British/Generalist",
+      "eaten_pct": "70.05%",
+      "wishlist_pct": "8.17%",
+      "shareable": "Medium",
+      "customisable": "High",
+      "healthy": "Low",
+      "prep_time": 24.36
+    },
+    {
+      "dish": "Chicken",
+      "cuisine": "Asian",
+      "eaten_pct": "67.82%",
+      "wishlist_pct": "3.22%",
+      "shareable": "High",
+      "customisable": "High",
+      "healthy": "High",
+      "prep_time": 25.47
+    },
+    {
+      "dish": "Sausage mash",
+      "cuisine": "British/Generalist",
+      "eaten_pct": "66.83%",
+      "wishlist_pct": "6.19%",
+      "shareable": "Low",
+      "customisable": "Medium",
+      "healthy": "Medium",
+      "prep_time": 24.53
+    },
+    {
+      "dish": "Meat Chips",
+      "cuisine": "British/Generalist",
+      "eaten_pct": "65.59%",
+      "wishlist_pct": "6.93%",
+      "shareable": "Medium",
+      "customisable": "High",
+      "healthy": "Medium",
+      "prep_time": 27.42
+    },
+    {
+      "dish": "Fish Chips",
+      "cuisine": "British/Generalist",
+      "eaten_pct": "62.62%",
+      "wishlist_pct": "8.91%",
+      "shareable": "Medium",
+      "customisable": "Medium",
+      "healthy": "Low",
+      "prep_time": 19.31
+    },
+    {
+      "dish": "Lasagne",
+      "cuisine": "Italian",
+      "eaten_pct": "62.38%",
+      "wishlist_pct": "15.59%",
+      "shareable": "High",
+      "customisable": "Low",
+      "healthy": "Medium",
+      "prep_time": 21.37
+    },
+    {
+      "dish": "Baked Pasta",
+      "cuisine": "Italian",
+      "eaten_pct": "62.38%",
+      "wishlist_pct": "5.20%",
+      "shareable": "High",
+      "customisable": "Medium",
+      "healthy": "Medium",
+      "prep_time": 25.07
+    },
+    {
+      "dish": "Jacket potato",
+      "cuisine": "British/Generalist",
+      "eaten_pct": "61.14%",
+      "wishlist_pct": "9.90%",
+      "shareable": "Low",
+      "customisable": "High",
+      "healthy": "Medium",
+      "prep_time": 23.95
+    },
+    {
+      "dish": "Chilli",
+      "cuisine": "Tex Mex",
+      "eaten_pct": "56.93%",
+      "wishlist_pct": "5.20%",
+      "shareable": "High",
+      "customisable": "High",
+      "healthy": "High",
+      "prep_time": 30.43
+    },
+    {
+      "dish": "Rice bowl fried rice",
+      "cuisine": "Asian",
+      "eaten_pct": "54.70%",
+      "wishlist_pct": "4.21%",
+      "shareable": "Medium",
+      "customisable": "High",
+      "healthy": "High",
+      "prep_time": 22.08
+    },
+    {
+      "dish": "Mash pie",
+      "cuisine": "British/Generalist",
+      "eaten_pct": "49.26%",
+      "wishlist_pct": "17.33%",
+      "shareable": "High",
+      "customisable": "Medium",
+      "healthy": "Medium",
+      "prep_time": 34.3
+    },
+    {
+      "dish": "Tacos",
+      "cuisine": "Tex Mex",
+      "eaten_pct": "48.02%",
+      "wishlist_pct": "10.64%",
+      "shareable": "Medium",
+      "customisable": "High",
+      "healthy": "High",
+      "prep_time": 26.78
+    },
+    {
+      "dish": "Sandwich Toastie",
+      "cuisine": "British/Generalist",
+      "eaten_pct": "44.31%",
+      "wishlist_pct": "2.97%",
+      "shareable": "Low",
+      "customisable": "High",
+      "healthy": "Low",
+      "prep_time": 11.97
+    },
+    {
+      "dish": "Pastry Pie",
+      "cuisine": "British/Generalist",
+      "eaten_pct": "43.56%",
+      "wishlist_pct": "12.13%",
+      "shareable": "High",
+      "customisable": "Low",
+      "healthy": "Medium",
+      "prep_time": 29.25
+    },
+    {
+      "dish": "Filled Pasta",
+      "cuisine": "Italian",
+      "eaten_pct": "42.33%",
+      "wishlist_pct": "8.66%",
+      "shareable": "Medium",
+      "customisable": "Medium",
+      "healthy": "Medium",
+      "prep_time": 16.97
+    },
+    {
+      "dish": "Soup",
+      "cuisine": "British/Generalist",
+      "eaten_pct": "36.88%",
+      "wishlist_pct": "9.16%",
+      "shareable": "High",
+      "customisable": "Medium",
+      "healthy": "High",
+      "prep_time": 23.83
+    },
+    {
+      "dish": "Piri",
+      "cuisine": "Global",
+      "eaten_pct": "36.14%",
+      "wishlist_pct": "7.18%",
+      "shareable": "Medium",
+      "customisable": "Medium",
+      "healthy": "High",
+      "prep_time": 25.68
+    },
+    {
+      "dish": "Cajun Chicken",
+      "cuisine": "Global",
+      "eaten_pct": "32.92%",
+      "wishlist_pct": "7.92%",
+      "shareable": "Medium",
+      "customisable": "Medium",
+      "healthy": "Medium",
+      "prep_time": 26.39
+    },
+    {
+      "dish": "Casserole Stew",
+      "cuisine": "British/Generalist",
+      "eaten_pct": "49.79%",
+      "wishlist_pct": "12.34%",
+      "shareable": "High",
+      "customisable": "Low",
+      "healthy": "Medium",
+      "prep_time": 39.19
+    },
+    {
+      "dish": "Thai Curry",
+      "cuisine": "Asian",
+      "eaten_pct": "27.23%",
+      "wishlist_pct": "19.06%",
+      "shareable": "High",
+      "customisable": "High",
+      "healthy": "Medium",
+      "prep_time": 27.98
+    },
+    {
+      "dish": "Katsu Curry",
+      "cuisine": "Asian",
+      "eaten_pct": "26.73%",
+      "wishlist_pct": "11.14%",
+      "shareable": "Medium",
+      "customisable": "Medium",
+      "healthy": "Medium",
+      "prep_time": 26.88
+    },
+    {
+      "dish": "Thai Noodles",
+      "cuisine": "Asian",
+      "eaten_pct": "25.99%",
+      "wishlist_pct": "12.87%",
+      "shareable": "High",
+      "customisable": "Medium",
+      "healthy": "Medium",
+      "prep_time": 23.02
+    },
+    {
+      "dish": "Cous Cous",
+      "cuisine": "Global",
+      "eaten_pct": "24.01%",
+      "wishlist_pct": "6.93%",
+      "shareable": "Medium",
+      "customisable": "Medium",
+      "healthy": "High",
+      "prep_time": 16.8
+    },
+    {
+      "dish": "Risotto",
+      "cuisine": "Italian",
+      "eaten_pct": "23.27%",
+      "wishlist_pct": "15.10%",
+      "shareable": "High",
+      "customisable": "Medium",
+      "healthy": "Medium",
+      "prep_time": 30.29
+    },
+    {
+      "dish": "Ramen",
+      "cuisine": "Asian",
+      "eaten_pct": "20.79%",
+      "wishlist_pct": "8.91%",
+      "shareable": "Medium",
+      "customisable": "High",
+      "healthy": "Medium",
+      "prep_time": 21.96
+    },
+    {
+      "dish": "Jerk Chicken",
+      "cuisine": "Global",
+      "eaten_pct": "19.55%",
+      "wishlist_pct": "9.41%",
+      "shareable": "Medium",
+      "customisable": "Medium",
+      "healthy": "Medium",
+      "prep_time": 34.46
+    },
+    {
+      "dish": "Paella",
+      "cuisine": "Global",
+      "eaten_pct": "18.56%",
+      "wishlist_pct": "14.85%",
+      "shareable": "High",
+      "customisable": "Medium",
+      "healthy": "High",
+      "prep_time": 32.33
+    },
+    {
+      "dish": "Gnocchi",
+      "cuisine": "Italian",
+      "eaten_pct": "18.32%",
+      "wishlist_pct": "6.93%",
+      "shareable": "Medium",
+      "customisable": "Medium",
+      "healthy": "Medium",
+      "prep_time": 19.66
+    },
+    {
+      "dish": "Stroganoff",
+      "cuisine": "Global",
+      "eaten_pct": "11.88%",
+      "wishlist_pct": "10.15%",
+      "shareable": "High",
+      "customisable": "Medium",
+      "healthy": "Medium",
+      "prep_time": 31.61
+    },
+    {
+      "dish": "Tagine",
+      "cuisine": "Global",
+      "eaten_pct": "7.92%",
+      "wishlist_pct": "9.90%",
+      "shareable": "High",
+      "customisable": "Medium",
+      "healthy": "High",
+      "prep_time": 35.47
+    }
+  ],
+  "high_shareable": [
+    "Pizza",
+    "Meat veg",
+    "Curry Rice",
+    "Stir fry Noodles",
+    "Fajitas Burritos",
+    "Chicken",
+    "Lasagne",
+    "Baked Pasta",
+    "Chilli",
+    "Mash pie",
+    "Pastry Pie",
+    "Soup",
+    "Casserole Stew",
+    "Thai Curry",
+    "Thai Noodles",
+    "Risotto",
+    "Paella",
+    "Stroganoff",
+    "Tagine"
+  ],
+  "high_customisable": [
+    "Boiled Pasta",
+    "Pizza",
+    "Meat veg",
+    "Curry Rice",
+    "Fajitas Burritos",
+    "Burger Chips",
+    "Chicken",
+    "Meat Chips",
+    "Jacket potato",
+    "Chilli",
+    "Rice bowl fried rice",
+    "Tacos",
+    "Sandwich Toastie",
+    "Thai Curry",
+    "Ramen"
+  ],
+  "high_healthy": [
+    "Meat veg",
+    "Stir fry Noodles",
+    "Fajitas Burritos",
+    "Chicken",
+    "Chilli",
+    "Rice bowl fried rice",
+    "Tacos",
+    "Soup",
+    "Piri",
+    "Cous Cous",
+    "Paella",
+    "Tagine"
+  ],
+  "all_three_high": [
+    "Meat veg",
+    "Chicken",
+    "Chilli",
+    "Fajitas Burritos"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "PORTION_FLEXIBILITY": {
+    "description": "Can feed 2 adults + 2 kids in appropriate portions",
+    "evidence": {
+      "dropoff_mentions": 30,
+      "rating_mentions": 405,
+      "survey_importance": "High - 68 selected \"clearer portion information\""
+    },
+    "ideal_dishes": "Family-sized shareable platters, individual portions for customisation"
+  },
+  "FUSSY_EATER_FRIENDLY": {
+    "description": "Mild options, customisable, familiar flavours",
+    "evidence": {
+      "dropoff_mentions": 1047,
+      "rating_mentions": 200,
+      "survey_importance": "High - 34 selected \"more kid-friendly options\""
+    },
+    "ideal_dishes": "Customisable with mild/spicy options, plain sides available"
+  },
+  "BALANCED_NUTRITION": {
+    "description": "Protein + veg + carbs, parents feel good serving it",
+    "evidence": {
+      "dropoff_mentions": 90,
+      "rating_mentions": 186,
+      "survey_high_dishes": [
+        "Meat veg",
+        "Stir fry Noodles",
+        "Fajitas Burritos",
+        "Chicken",
+        "Chilli"
+      ]
+    },
+    "ideal_dishes": "Complete meals with visible vegetables, grilled over fried"
+  },
+  "VALUE_PERCEPTION": {
+    "description": "Worth \u00a325 for 4 people vs cooking at home",
+    "evidence": {
+      "dropoff_mentions": 35,
+      "rating_mentions": 212,
+      "survey_importance": "135 selected \"discount or loyalty offer\""
+    },
+    "ideal_dishes": "Generous portions, premium ingredients, visible quality"
+  },
+  "CUSTOMISATION": {
+    "description": "Individual preferences can be accommodated",
+    "evidence": {
+      "dropoff_mentions": 246,
+      "rating_mentions": 27,
+      "survey_importance": "125 selected \"more options to customise or add sides\""
+    },
+    "ideal_dishes": "Build-your-own options, sides that can be swapped"
+  },
+  "VARIETY": {
+    "description": "Range of cuisines and dishes to avoid repetition",
+    "evidence": {
+      "dropoff_mentions": 329,
+      "rating_mentions": 88,
+      "survey_importance": "145 selected \"wider variety of dishes and cuisines\""
+    },
+    "ideal_dishes": "Multiple cuisine options, seasonal specials"
+  },
+  "VEGETARIAN_OPTIONS": {
+    "description": "Good vegetarian/vegan alternatives available",
+    "evidence": {
+      "dropoff_mentions": 41,
+      "rating_mentions": 32
+    },
+    "ideal_dishes": "Dedicated vegetarian mains, not just sides"
+  },
+  "MIDWEEK_APPROPRIATE": {
+    "description": "Suitable for a Tuesday dinner, not just weekend treats",
+    "evidence": {
+      "dropoff_mentions": 20,
+      "rating_mentions": 136
+    },
+    "ideal_dishes": "Balanced, not overly indulgent, reasonable portions"
+  }
+}

@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zone Ranking & Ideal Dishes Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono&display=swap');
+        
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --accent-teal: #00d9ff;
+            --accent-coral: #ff6b6b;
+            --accent-gold: #ffc107;
+            --accent-green: #3fb950;
+            --accent-purple: #a855f7;
+            --border-color: #30363d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-tab {
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+        
+        .nav-tab:hover {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+        
+        .nav-tab.active {
+            background: var(--accent-teal);
+            color: var(--bg-primary);
+            border-color: var(--accent-teal);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+        
+        @media (max-width: 1200px) {
+            .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+        }
+        
+        .card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+        
+        .chart-container.tall {
+            height: 400px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        th {
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+        
+        tr:hover {
+            background: var(--bg-tertiary);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .badge-green { background: rgba(63, 185, 80, 0.2); color: var(--accent-green); }
+        .badge-red { background: rgba(255, 107, 107, 0.2); color: var(--accent-coral); }
+        .badge-yellow { background: rgba(255, 193, 7, 0.2); color: var(--accent-gold); }
+        .badge-teal { background: rgba(0, 217, 255, 0.2); color: var(--accent-teal); }
+        
+        .score-bar {
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .score-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .info-note {
+            background: var(--bg-tertiary);
+            border-left: 3px solid var(--accent-teal);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+        }
+        
+        .benchmark-line {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        
+        .benchmark-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Zone Ranking & Ideal Dishes</h1>
+            <p class="subtitle">Transparent methodology for zone quality scoring and dish recommendations</p>
+            <p class="subtitle" style="margin-top: 0.5rem; font-size: 0.9rem;">Data: 71,480 orders | 10,713 ratings | 2,490 menu items | 197 zones</p>
+        </header>
+        
+        <div class="nav-tabs">
+            <div class="nav-tab active" onclick="showTab('overview')">Overview</div>
+            <div class="nav-tab" onclick="showTab('sensitivity')">Sensitivity Analysis</div>
+            <div class="nav-tab" onclick="showTab('zones')">Zone Rankings</div>
+            <div class="nav-tab" onclick="showTab('gaps')">Cuisine Gaps</div>
+            <div class="nav-tab" onclick="showTab('dishes')">Dish Rankings</div>
+            <div class="nav-tab" onclick="showTab('price')">£25 Price Point</div>
+        </div>
+        
+        <!-- OVERVIEW TAB -->
+        <div id="overview" class="tab-content active">
+            <div class="grid grid-4" style="margin-bottom: 2rem;">
+                <div class="card">
+                    <div class="card-title">Total Zones</div>
+                    <div class="metric-value" style="color: var(--accent-teal);">197</div>
+                    <div class="metric-label">Scored and ranked</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Zones with Score ≥70</div>
+                    <div class="metric-value" style="color: var(--accent-green);">65</div>
+                    <div class="metric-label">High quality zones</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Zones with Score &lt;30</div>
+                    <div class="metric-value" style="color: var(--accent-coral);">38</div>
+                    <div class="metric-label">Need improvement</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Avg Rating Benchmark</div>
+                    <div class="metric-value" style="color: var(--accent-gold);">4.43</div>
+                    <div class="metric-label">Overall average</div>
+                </div>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-title">Scoring Methodology</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Weight</th>
+                                <th>Why</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dish Variety</td>
+                                <td><span class="badge badge-teal">25%</span></td>
+                                <td>Reduces variety complaints</td>
+                            </tr>
+                            <tr>
+                                <td>Performance</td>
+                                <td><span class="badge badge-teal">25%</span></td>
+                                <td>Validates mix works</td>
+                            </tr>
+                            <tr>
+                                <td>Cuisine Diversity</td>
+                                <td><span class="badge badge-teal">20%</span></td>
+                                <td>More family choice</td>
+                            </tr>
+                            <tr>
+                                <td>Partner Density</td>
+                                <td><span class="badge badge-teal">15%</span></td>
+                                <td>Reliability</td>
+                            </tr>
+                            <tr>
+                                <td>Quality (Rating)</td>
+                                <td><span class="badge badge-teal">15%</span></td>
+                                <td>Customer satisfaction</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title">Key Thresholds (Evidence-Based)</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Threshold</th>
+                                <th>Evidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cuisines</td>
+                                <td><span class="badge badge-green">5+</span></td>
+                                <td>34% more orders than 4</td>
+                            </tr>
+                            <tr>
+                                <td>Partners</td>
+                                <td><span class="badge badge-green">5+</span></td>
+                                <td>4x more orders than 1-3</td>
+                            </tr>
+                            <tr>
+                                <td>Dishes</td>
+                                <td><span class="badge badge-green">21+</span></td>
+                                <td>Rating jumps to 4.37</td>
+                            </tr>
+                            <tr>
+                                <td>High Rating</td>
+                                <td><span class="badge badge-green">&gt;4.53</span></td>
+                                <td>Avg + 0.1</td>
+                            </tr>
+                            <tr>
+                                <td>Low Rating</td>
+                                <td><span class="badge badge-red">&lt;4.33</span></td>
+                                <td>Avg - 0.1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SENSITIVITY TAB -->
+        <div id="sensitivity" class="tab-content">
+            <div class="highlight-box">
+                <strong>Why these thresholds?</strong> This section shows the data relationships that justify each threshold. 
+                The goal is to show there's an observable trend, not an arbitrary line.
+            </div>
+            
+            <div class="grid grid-2" style="margin-bottom: 2rem;">
+                <div class="card">
+                    <div class="card-title">Orders by Cuisine Count</div>
+                    <div class="info-note">
+                        <strong>Why 5+ cuisines?</strong> At 5 cuisines, avg orders jump 34% (from 511 to 685). 
+                        The biggest gains are at 2→3 and 4→5.
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="cuisineChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title">Orders by Partner Count</div>
+                    <div class="info-note">
+                        <strong>Why 5+ partners?</strong> At 5 partners, zones show 537 avg orders vs 68 at 1-2 partners (4x increase).
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="partnerChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">Rating by Dish Count</div>
+                <div class="info-note">
+                    <strong>Why 21+ dishes?</strong> At 21-25 dishes, avg rating jumps to 4.37 (from 3.67 at 16-20). 
+                    17.3% of dropoff respondents selected "wider variety" as a conversion barrier.
+                </div>
+                <div class="chart-container tall">
+                    <canvas id="dishChart"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ZONES TAB -->
+        <div id="zones" class="tab-content">
+            <input type="text" class="search-box" id="zoneSearch" placeholder="Search zones..." onkeyup="filterZones()">
+            
+            <div class="card">
+                <div class="card-title">All Zones Ranked by Quality Score</div>
+                <div style="overflow-x: auto;">
+                    <table id="zoneTable">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Zone</th>
+                                <th>Partners</th>
+                                <th>Cuisines</th>
+                                <th>Dishes</th>
+                                <th>Orders</th>
+                                <th>Avg Rating</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="zoneTableBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- GAPS TAB -->
+        <div id="gaps" class="tab-content">
+            <div class="highlight-box">
+                <strong>Gap Types:</strong>
+                <span class="badge badge-red" style="margin-left: 1rem;">SUPPLY GAP</span> = Less than 30% of avg items
+                <span class="badge badge-yellow" style="margin-left: 1rem;">QUALITY GAP</span> = Rating below 4.05
+                <span class="badge badge-green" style="margin-left: 1rem;">OK</span> = Both acceptable
+            </div>
+            
+            <div class="grid grid-2" style="margin-bottom: 2rem;">
+                <div class="card">
+                    <div class="card-title">Cuisine Gap Analysis</div>
+                    <div class="chart-container tall">
+                        <canvas id="gapChart"></canvas>
+                    </div>
+                    <div class="benchmark-line">
+                        <span class="benchmark-dot"></span>
+                        Benchmark rating: 4.43
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title">Gap Summary</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cuisine</th>
+                                <th>Items</th>
+                                <th>Rating</th>
+                                <th>Gap Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mexican</td>
+                                <td>168</td>
+                                <td>3.94</td>
+                                <td><span class="badge badge-yellow">QUALITY GAP</span></td>
+                            </tr>
+                            <tr>
+                                <td>Middle Eastern</td>
+                                <td>30</td>
+                                <td>4.67</td>
+                                <td><span class="badge badge-red">SUPPLY GAP</span></td>
+                            </tr>
+                            <tr>
+                                <td>French</td>
+                                <td>15</td>
+                                <td>4.42</td>
+                                <td><span class="badge badge-red">SUPPLY GAP</span></td>
+                            </tr>
+                            <tr>
+                                <td>Chinese</td>
+                                <td>46</td>
+                                <td>4.38</td>
+                                <td><span class="badge badge-red">SUPPLY GAP</span></td>
+                            </tr>
+                            <tr>
+                                <td>Irish/British</td>
+                                <td>3</td>
+                                <td>4.22</td>
+                                <td><span class="badge badge-red">SUPPLY GAP</span></td>
+                            </tr>
+                            <tr>
+                                <td>Japanese/Asian</td>
+                                <td>410</td>
+                                <td>4.25</td>
+                                <td><span class="badge badge-green">OK</span></td>
+                            </tr>
+                            <tr>
+                                <td>Vietnamese</td>
+                                <td>138</td>
+                                <td>4.56</td>
+                                <td><span class="badge badge-green">OK</span></td>
+                            </tr>
+                            <tr>
+                                <td>Indian</td>
+                                <td>85</td>
+                                <td>4.39</td>
+                                <td><span class="badge badge-green">OK</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- DISHES TAB -->
+        <div id="dishes" class="tab-content">
+            <div class="highlight-box">
+                <strong>Transparent Ranking:</strong> Each dish shows its component scores so you can see exactly why it's ranked where it is.
+            </div>
+            
+            <div class="card">
+                <div class="card-title">Top 30 Dishes (with Component Scores)</div>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Dish</th>
+                                <th>Orders</th>
+                                <th>Avg Rating</th>
+                                <th>Volume Score</th>
+                                <th>Rating Score</th>
+                                <th>Composite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Prawn crackers</td>
+                                <td>11,686</td>
+                                <td>4.56</td>
+                                <td>10.0</td>
+                                <td>9.1</td>
+                                <td><strong>9.6</strong></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>family chicken katsu</td>
+                                <td>11,246</td>
+                                <td>4.24</td>
+                                <td>9.6</td>
+                                <td>8.5</td>
+                                <td><strong>9.0</strong></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Egg fried rice with chicken</td>
+                                <td>9,964</td>
+                                <td>4.59</td>
+                                <td>8.5</td>
+                                <td>9.2</td>
+                                <td><strong>8.8</strong></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Pho the whole fam</td>
+                                <td>7,910</td>
+                                <td>4.55</td>
+                                <td>6.8</td>
+                                <td>9.1</td>
+                                <td><strong>8.0</strong></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Wok-fried noodles with chicken</td>
+                                <td>7,707</td>
+                                <td>4.53</td>
+                                <td>6.6</td>
+                                <td>9.1</td>
+                                <td><strong>7.8</strong></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Katsu Chicken Rice Bowl</td>
+                                <td>6,144</td>
+                                <td>4.44</td>
+                                <td>5.3</td>
+                                <td>8.9</td>
+                                <td><strong>7.1</strong></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Beef brisket pho noodle soup</td>
+                                <td>5,419</td>
+                                <td>4.58</td>
+                                <td>4.6</td>
+                                <td>9.2</td>
+                                <td><strong>6.9</strong></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Dishoom Chicken Ruby – for the family</td>
+                                <td>4,858</td>
+                                <td>4.79</td>
+                                <td>4.2</td>
+                                <td>9.6</td>
+                                <td><strong>6.9</strong></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Mini chicken noodle soup</td>
+                                <td>4,811</td>
+                                <td>4.62</td>
+                                <td>4.1</td>
+                                <td>9.2</td>
+                                <td><strong>6.6</strong></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Chicken Teriyaki Rice Bowl</td>
+                                <td>4,200</td>
+                                <td>4.43</td>
+                                <td>3.6</td>
+                                <td>8.9</td>
+                                <td><strong>6.2</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="benchmark-line" style="margin-top: 1rem;">
+                    <span class="benchmark-dot"></span>
+                    Benchmark rating: 4.43 | Volume Score = (orders / max) × 10 | Rating Score = (rating / 5) × 10
+                </div>
+            </div>
+        </div>
+        
+        <!-- PRICE TAB -->
+        <div id="price" class="tab-content">
+            <div class="grid grid-3" style="margin-bottom: 2rem;">
+                <div class="card">
+                    <div class="card-title">Orders in £20-30 Range</div>
+                    <div class="metric-value" style="color: var(--accent-teal);">63.4%</div>
+                    <div class="metric-label">2,136 of 3,367 Dinneroo orders</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Mean Order Value</div>
+                    <div class="metric-value" style="color: var(--accent-gold);">£30.17</div>
+                    <div class="metric-label">Dinneroo orders</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Median Order Value</div>
+                    <div class="metric-value" style="color: var(--accent-green);">£27.75</div>
+                    <div class="metric-label">Dinneroo orders</div>
+                </div>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-title">Top Dishes at £20-30 Price Point</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dish</th>
+                                <th>Orders</th>
+                                <th>Cuisine</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Prawn crackers</td>
+                                <td>382</td>
+                                <td>Vietnamese</td>
+                            </tr>
+                            <tr>
+                                <td>Egg fried rice with chicken</td>
+                                <td>338</td>
+                                <td>Vietnamese</td>
+                            </tr>
+                            <tr>
+                                <td>Wok-fried noodles with chicken</td>
+                                <td>234</td>
+                                <td>Vietnamese</td>
+                            </tr>
+                            <tr>
+                                <td>Pho the whole fam</td>
+                                <td>227</td>
+                                <td>Vietnamese</td>
+                            </tr>
+                            <tr>
+                                <td>Katsu Chicken Rice Bowl</td>
+                                <td>212</td>
+                                <td>Thai/SE Asian</td>
+                            </tr>
+                            <tr>
+                                <td>family chicken katsu</td>
+                                <td>198</td>
+                                <td>Japanese/Asian</td>
+                            </tr>
+                            <tr>
+                                <td>Beef brisket pho noodle soup</td>
+                                <td>168</td>
+                                <td>Vietnamese</td>
+                            </tr>
+                            <tr>
+                                <td>Mini chicken noodle soup</td>
+                                <td>165</td>
+                                <td>Vietnamese</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title">Ideal Dish Presentations by Cuisine</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cuisine</th>
+                                <th>Ideal Format</th>
+                                <th>Orders</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Vietnamese</td>
+                                <td>Sharing noodle soup + sides</td>
+                                <td>468</td>
+                            </tr>
+                            <tr>
+                                <td>Thai/SE Asian</td>
+                                <td>Rice bowl bundles</td>
+                                <td>320</td>
+                            </tr>
+                            <tr>
+                                <td>Japanese/Asian</td>
+                                <td>Family katsu bundle</td>
+                                <td>303</td>
+                            </tr>
+                            <tr>
+                                <td>Indian</td>
+                                <td>Named family platters</td>
+                                <td>295</td>
+                            </tr>
+                            <tr>
+                                <td>Italian</td>
+                                <td>Sharing bread + family feast</td>
+                                <td>246</td>
+                            </tr>
+                            <tr>
+                                <td>Japanese</td>
+                                <td>Sushi family feast</td>
+                                <td>129</td>
+                            </tr>
+                            <tr>
+                                <td>British</td>
+                                <td>Family pie/roast</td>
+                                <td>109</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Tab switching
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        // Zone data
+        const zoneData = [
+            {rank: 1, zone: "West Central", partners: 20, cuisines: 7, dishes: 423, orders: 793, rating: 4.56, score: 100.0},
+            {rank: 2, zone: "Mayfair", partners: 18, cuisines: 7, dishes: 351, orders: 772, rating: 4.57, score: 100.0},
+            {rank: 3, zone: "Clapham", partners: 14, cuisines: 9, dishes: 533, orders: 2349, rating: 4.61, score: 100.0},
+            {rank: 4, zone: "Notting Hill / Paddington", partners: 13, cuisines: 7, dishes: 382, orders: 1226, rating: 4.53, score: 100.0},
+            {rank: 5, zone: "London Bridge", partners: 13, cuisines: 7, dishes: 447, orders: 850, rating: 4.57, score: 100.0},
+            {rank: 6, zone: "Bath", partners: 10, cuisines: 8, dishes: 461, orders: 647, rating: 4.53, score: 100.0},
+            {rank: 7, zone: "Islington", partners: 9, cuisines: 8, dishes: 431, orders: 2262, rating: 4.69, score: 97.0},
+            {rank: 8, zone: "East Central", partners: 18, cuisines: 8, dishes: 553, orders: 1280, rating: 4.46, score: 97.0},
+            {rank: 9, zone: "Brighton Central", partners: 12, cuisines: 9, dishes: 665, orders: 1734, rating: 4.47, score: 97.0},
+            {rank: 10, zone: "Wimbledon", partners: 9, cuisines: 8, dishes: 505, orders: 1314, rating: 4.50, score: 97.0},
+            {rank: 11, zone: "Kingston", partners: 8, cuisines: 8, dishes: 499, orders: 1156, rating: 4.46, score: 94.0},
+            {rank: 12, zone: "Reading", partners: 10, cuisines: 9, dishes: 555, orders: 1318, rating: 4.29, score: 94.0},
+            {rank: 13, zone: "Birmingham", partners: 10, cuisines: 8, dishes: 423, orders: 689, rating: 4.15, score: 94.0},
+            {rank: 14, zone: "Cambridge", partners: 8, cuisines: 7, dishes: 554, orders: 1403, rating: 4.48, score: 94.0},
+            {rank: 15, zone: "Milton Keynes", partners: 9, cuisines: 7, dishes: 509, orders: 1332, rating: 4.46, score: 94.0},
+            {rank: 16, zone: "Bristol", partners: 7, cuisines: 5, dishes: 414, orders: 1173, rating: 4.53, score: 93.0},
+            {rank: 17, zone: "Oxford", partners: 9, cuisines: 6, dishes: 456, orders: 1501, rating: 4.52, score: 93.0},
+            {rank: 18, zone: "Chelmsford", partners: 7, cuisines: 7, dishes: 391, orders: 725, rating: 4.21, score: 91.0},
+            {rank: 19, zone: "Hammersmith / Shepherd's Bush", partners: 9, cuisines: 6, dishes: 329, orders: 962, rating: 4.46, score: 90.0},
+            {rank: 20, zone: "Reigate", partners: 6, cuisines: 6, dishes: 335, orders: 541, rating: 4.51, score: 90.0},
+        ];
+        
+        // Populate zone table
+        function populateZoneTable(data) {
+            const tbody = document.getElementById('zoneTableBody');
+            tbody.innerHTML = data.map(z => `
+                <tr>
+                    <td>${z.rank}</td>
+                    <td>${z.zone}</td>
+                    <td>${z.partners}</td>
+                    <td>${z.cuisines}</td>
+                    <td>${z.dishes}</td>
+                    <td>${z.orders.toLocaleString()}</td>
+                    <td>${z.rating.toFixed(2)}</td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div class="score-bar" style="width: 60px;">
+                                <div class="score-bar-fill" style="width: ${z.score}%; background: ${z.score >= 70 ? 'var(--accent-green)' : z.score >= 50 ? 'var(--accent-gold)' : 'var(--accent-coral)'}"></div>
+                            </div>
+                            ${z.score.toFixed(1)}
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+        
+        populateZoneTable(zoneData);
+        
+        function filterZones() {
+            const search = document.getElementById('zoneSearch').value.toLowerCase();
+            const filtered = zoneData.filter(z => z.zone.toLowerCase().includes(search));
+            populateZoneTable(filtered);
+        }
+        
+        // Charts
+        Chart.defaults.color = '#8b949e';
+        Chart.defaults.borderColor = '#30363d';
+        
+        // Cuisine Chart
+        new Chart(document.getElementById('cuisineChart'), {
+            type: 'line',
+            data: {
+                labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+                datasets: [{
+                    label: 'Avg Orders',
+                    data: [42, 171, 404, 511, 685, 797, 946, 1225, 1800],
+                    borderColor: '#00d9ff',
+                    backgroundColor: 'rgba(0, 217, 255, 0.1)',
+                    fill: true,
+                    tension: 0.3,
+                    pointRadius: 6,
+                    pointBackgroundColor: '#00d9ff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    annotation: {
+                        annotations: {
+                            line1: {
+                                type: 'line',
+                                xMin: 4,
+                                xMax: 4,
+                                borderColor: '#ffc107',
+                                borderWidth: 2,
+                                borderDash: [5, 5]
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { title: { display: true, text: 'Cuisine Count' } },
+                    y: { title: { display: true, text: 'Avg Orders' } }
+                }
+            }
+        });
+        
+        // Partner Chart
+        new Chart(document.getElementById('partnerChart'), {
+            type: 'line',
+            data: {
+                labels: ['1-2', '3', '4', '5', '6-7', '8-10', '11-15', '16-20'],
+                datasets: [{
+                    label: 'Avg Orders',
+                    data: [68, 355, 450, 537, 705, 1071, 1241, 948],
+                    borderColor: '#a855f7',
+                    backgroundColor: 'rgba(168, 85, 247, 0.1)',
+                    fill: true,
+                    tension: 0.3,
+                    pointRadius: 6,
+                    pointBackgroundColor: '#a855f7'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { title: { display: true, text: 'Partner Count' } },
+                    y: { title: { display: true, text: 'Avg Orders' } }
+                }
+            }
+        });
+        
+        // Dish Chart
+        new Chart(document.getElementById('dishChart'), {
+            type: 'bar',
+            data: {
+                labels: ['1-10', '11-15', '16-20', '21-25', '26-30', '31-40', '41-50', '51-100', '101-200', '201-500'],
+                datasets: [{
+                    label: 'Avg Rating',
+                    data: [3.00, 2.92, 3.67, 4.37, 4.34, 4.34, 4.14, 4.13, 4.35, 4.39],
+                    backgroundColor: [
+                        '#ff6b6b', '#ff6b6b', '#ff6b6b', '#3fb950', '#3fb950', 
+                        '#3fb950', '#3fb950', '#3fb950', '#3fb950', '#3fb950'
+                    ],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    annotation: {
+                        annotations: {
+                            line1: {
+                                type: 'line',
+                                yMin: 4.43,
+                                yMax: 4.43,
+                                borderColor: '#ffc107',
+                                borderWidth: 2,
+                                borderDash: [5, 5],
+                                label: {
+                                    display: true,
+                                    content: 'Benchmark: 4.43',
+                                    position: 'end'
+                                }
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { title: { display: true, text: 'Dish Count Range' } },
+                    y: { 
+                        title: { display: true, text: 'Avg Rating' },
+                        min: 2,
+                        max: 5
+                    }
+                }
+            }
+        });
+        
+        // Gap Chart
+        new Chart(document.getElementById('gapChart'), {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'OK',
+                    data: [
+                        {x: 410, y: 4.25, label: 'Japanese/Asian'},
+                        {x: 138, y: 4.56, label: 'Vietnamese'},
+                        {x: 207, y: 4.43, label: 'Thai/SE Asian'},
+                        {x: 85, y: 4.39, label: 'Indian'},
+                        {x: 705, y: 4.12, label: 'Italian'},
+                        {x: 282, y: 4.51, label: 'Japanese'},
+                        {x: 292, y: 4.50, label: 'British'},
+                        {x: 109, y: 4.45, label: 'Healthy/Fresh'}
+                    ],
+                    backgroundColor: '#3fb950',
+                    pointRadius: 10
+                }, {
+                    label: 'Quality Gap',
+                    data: [
+                        {x: 168, y: 3.94, label: 'Mexican'}
+                    ],
+                    backgroundColor: '#ffc107',
+                    pointRadius: 10
+                }, {
+                    label: 'Supply Gap',
+                    data: [
+                        {x: 30, y: 4.67, label: 'Middle Eastern'},
+                        {x: 15, y: 4.42, label: 'French'},
+                        {x: 46, y: 4.38, label: 'Chinese'},
+                        {x: 3, y: 4.22, label: 'Irish/British'}
+                    ],
+                    backgroundColor: '#ff6b6b',
+                    pointRadius: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.raw.label}: ${context.raw.x} items, ${context.raw.y.toFixed(2)} rating`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { 
+                        title: { display: true, text: 'Item Count' },
+                        min: 0
+                    },
+                    y: { 
+                        title: { display: true, text: 'Avg Rating' },
+                        min: 3.5,
+                        max: 5
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,302 @@
+﻿Dinneroo Analysis
+
+
+Investigating the order behaviour of dinneroo users, specifically the time of day and the days of the week that they order (not specifically dinneroo orders). The hypothesis is that there may be a shift in the occasions that they are using deliveroo since they first started using dinneroo.
+
+
+This analysis looks at ~650 established (at least 5 orders) dinneroo users that made their first dinneroo order in September.
+
+
+Chart A looks at the average behaviour for established dinneroo users, which is cut by order behaviour before their first dinneroo order, and after.
+
+
+The chart shows what % of total orders are made in each order occasion bucket.
+
+
+Order occasion is split by shift (breakfast, lunch, interpeak, dinner) and day (mon-sun), as well as by pre/post dinneroo (e.g. ‘pre-breakfast-monday’).
+
+
+The average amount of orders per day has also been calculated, which is also split pre/post dinneroo. This is to measure if their order frequency has changed. 
+
+
+Main finding: there has been a significant composition shift from weekend dinner orders to weekday dinner orders since the users’ first dinneroo order was placed. Whilst it looks like this may be cannibalism, for these users there is an increase of 0.24 orders per day on average, which equates to 1.7 orders per week.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Appendix
+
+
+
+
+Chart A: occasions composition pre and post users’ first dinneroo order  
+
+
+Table: significance testing results
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Occasion composition code
+   -- count of dinneroo orders made for each users
+WITH base AS ( 
+  SELECT
+    user_id,
+    COUNT(*) AS dinneroo_cnt
+  FROM production.denormalised.orders
+  WHERE is_family_time_order = TRUE
+  GROUP BY user_id
+),
+
+
+-- first dinner order made for each user
+first_dinneroo AS (
+  SELECT
+    user_id,
+    MIN(order_date) AS first_order
+  FROM production.denormalised.orders
+  WHERE is_family_time_order = TRUE
+  GROUP BY 1
+)
+
+
+
+
+SELECT
+  f.user_id,
+  b.dinneroo_cnt,
+
+
+  -- total orders (all occasions)
+  SUM(CASE WHEN o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_orders_all,
+  SUM(CASE WHEN o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_orders_all,
+
+
+  -- total Dinneroo-only orders (all occasions)
+  SUM(CASE WHEN o.is_family_time_order AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_orders_dinneroo,
+  SUM(CASE WHEN o.is_family_time_order AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_orders_dinneroo,
+
+
+  -- count of all orders made on Mondays split by shifts (occasion)
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Mon' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_breakfast_mon,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Mon' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_breakfast_mon,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Mon'     AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_lunch_mon,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Mon'     AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_lunch_mon,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Mon'    AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_dinner_mon,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Mon'    AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_dinner_mon,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Mon' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_interpeak_mon,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Mon' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_interpeak_mon,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Mon' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_latenight_mon,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Mon' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_latenight_mon,
+
+
+  -- Tuesday
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Tue' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_breakfast_tue,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Tue' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_breakfast_tue,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Tue'     AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_lunch_tue,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Tue'     AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_lunch_tue,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Tue'    AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_dinner_tue,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Tue'    AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_dinner_tue,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Tue' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_interpeak_tue,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Tue' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_interpeak_tue,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Tue' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_latenight_tue,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Tue' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_latenight_tue,
+
+
+  -- Wednesday
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Wed' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_breakfast_wed,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Wed' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_breakfast_wed,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Wed'     AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_lunch_wed,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Wed'     AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_lunch_wed,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Wed'    AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_dinner_wed,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Wed'    AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_dinner_wed,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Wed' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_interpeak_wed,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Wed' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_interpeak_wed,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Wed' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_latenight_wed,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Wed' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_latenight_wed,
+
+
+  -- Thursday
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Thu' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_breakfast_thu,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Thu' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_breakfast_thu,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Thu'     AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_lunch_thu,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Thu'     AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_lunch_thu,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Thu'    AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_dinner_thu,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Thu'    AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_dinner_thu,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Thu' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_interpeak_thu,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Thu' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_interpeak_thu,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Thu' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_latenight_thu,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Thu' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_latenight_thu,
+
+
+  -- Friday
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Fri' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_breakfast_fri,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Fri' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_breakfast_fri,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Fri'     AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_lunch_fri,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Fri'     AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_lunch_fri,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Fri'    AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_dinner_fri,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Fri'    AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_dinner_fri,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Fri' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_interpeak_fri,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Fri' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_interpeak_fri,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Fri' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_latenight_fri,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Fri' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_latenight_fri,
+
+
+  -- Saturday
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Sat' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_breakfast_sat,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Sat' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_breakfast_sat,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Sat'     AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_lunch_sat,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Sat'     AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_lunch_sat,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Sat'    AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_dinner_sat,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Sat'    AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_dinner_sat,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Sat' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_interpeak_sat,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Sat' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_interpeak_sat,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Sat' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_latenight_sat,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Sat' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_latenight_sat,
+
+
+  -- Sunday
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Sun' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_breakfast_sun,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Breakfast Sun' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_breakfast_sun,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Sun'     AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_lunch_sun,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Lunch Sun'     AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_lunch_sun,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Sun'    AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_dinner_sun,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Dinner Sun'    AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_dinner_sun,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Sun' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_interpeak_sun,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Interpeak Sun' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_interpeak_sun,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Sun' AND o.order_date <  f.first_order THEN 1 ELSE 0 END) AS pre_latenight_sun,
+  SUM(CASE WHEN (o.shift1 || ' ' || DAYNAME(o.order_date)) = 'Latenight Sun' AND o.order_date >= f.first_order THEN 1 ELSE 0 END) AS post_latenight_sun
+
+
+FROM first_dinneroo f
+JOIN base b
+  ON f.user_id = b.user_id
+LEFT JOIN production.denormalised.orders o
+  ON o.user_id = f.user_id
+WHERE f.first_order BETWEEN '2025-09-01' AND '2025-09-30' -- first order made in the month of November (reason: to give enough time for patterns of behaviour to develop)
+  AND b.dinneroo_cnt >= 5 -- minimum of 5 dinneroo orders (reason: to collect data from established dinneroo users)
+GROUP BY f.user_id, b.dinneroo_cnt
+ORDER BY f.user_id
+LIMIT 10000;
+
+
+
+
+
+
+
+* Order per day change since starting dinneroo code
+-- count of dinneroo orders made for each users
+WITH base AS ( 
+  SELECT
+    user_id,
+    COUNT(*) AS dinneroo_cnt
+  FROM production.denormalised.orders
+  WHERE is_family_time_order = TRUE
+  GROUP BY user_id
+),
+
+
+-- first dinner order made for each user
+first_dinneroo AS (
+  SELECT
+    user_id,
+    min(order_date) AS first_order_ever,
+    min(case when is_family_time_order = TRUE then order_date end) as first_dinneroo_order,
+    max(order_date) as latest_order_ever
+  FROM production.denormalised.orders
+  GROUP BY 1
+)
+
+
+select
+avg(orders_per_day_post) - avg(orders_per_day_pre) as order_per_day_change 
+from (
+    select
+    f.user_id,
+    (SUM(CASE WHEN o.order_date <  f.first_dinneroo_order THEN 1 ELSE 0 END)
+    / nullif(datediff(day, f.first_order_ever, f.first_dinneroo_order),0)) as orders_per_day_pre, -- how many orders they've made prior to using dinneroo for the first time divided by the difference in days between first ever order and first dinneroo order
+    (SUM(CASE WHEN o.order_date >= f.first_dinneroo_order THEN 1 ELSE 0 END)
+    / nullif(datediff(day, f.first_dinneroo_order, f.latest_order_ever),0)) AS orders_per_day_post -- same as above but for post-dinneroo
+    
+    FROM first_dinneroo f
+    JOIN base b
+      ON f.user_id = b.user_id
+    LEFT JOIN production.denormalised.orders o
+      ON o.user_id = f.user_id
+    WHERE f.first_dinneroo_order BETWEEN '2025-09-01' AND '2025-09-30' -- first order made in the month of september (reason: to give enough time for patterns of behaviour to develop)
+      AND b.dinneroo_cnt >= 5 -- minimum of 5 dinneroo orders (reason: to collect data from established dinneroo users)
+    GROUP BY f.user_id, f.first_order_ever, f.first_dinneroo_order, f.latest_order_ever
+    ORDER BY f.user_id
+    LIMIT 1000
+)
+where orders_per_day_pre is not null
+
+
+

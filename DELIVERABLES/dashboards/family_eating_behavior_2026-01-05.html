@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Eating Behavior Dashboard | Dinneroo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --bg-primary: #0a0f1a;
+            --bg-secondary: #111827;
+            --bg-card: #1a2234;
+            --accent-teal: #00d4aa;
+            --accent-coral: #ff6b6b;
+            --accent-gold: #ffd93d;
+            --accent-purple: #a78bfa;
+            --accent-blue: #60a5fa;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border-color: #2d3748;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .dashboard {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .headline-stats {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-family: 'Space Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-teal);
+        }
+        
+        .stat-value.coral { color: var(--accent-coral); }
+        .stat-value.gold { color: var(--accent-gold); }
+        .stat-value.purple { color: var(--accent-purple); }
+        .stat-value.blue { color: var(--accent-blue); }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-teal);
+            display: inline-block;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .chart-container {
+            height: 300px;
+            position: relative;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        th {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .badge-critical { background: rgba(255, 107, 107, 0.2); color: var(--accent-coral); }
+        .badge-high { background: rgba(255, 217, 61, 0.2); color: var(--accent-gold); }
+        .badge-success { background: rgba(0, 212, 170, 0.2); color: var(--accent-teal); }
+        
+        .insight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 170, 0.1), rgba(96, 165, 250, 0.1));
+            border: 1px solid var(--accent-teal);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .insight-title {
+            color: var(--accent-teal);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: var(--bg-secondary);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        .question-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .question-btn {
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+        
+        .question-btn:hover, .question-btn.active {
+            border-color: var(--accent-teal);
+            background: rgba(0, 212, 170, 0.1);
+        }
+        
+        .question-section {
+            display: none;
+        }
+        
+        .question-section.active {
+            display: block;
+        }
+        
+        .gap-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .gap-item:last-child {
+            border-bottom: none;
+        }
+        
+        .gap-name {
+            font-weight: 500;
+        }
+        
+        .gap-count {
+            font-family: 'Space Mono', monospace;
+            color: var(--accent-coral);
+        }
+        
+        @media (max-width: 1200px) {
+            .headline-stats { grid-template-columns: repeat(3, 1fr); }
+            .grid-3 { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            .headline-stats { grid-template-columns: repeat(2, 1fr); }
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Family Eating Behavior Dashboard</h1>
+            <p class="subtitle">Comprehensive analysis across 5 foundational questions | 30+ data sources | 15,000+ data points</p>
+        </header>
+        
+        <!-- Headline Stats -->
+        <div class="headline-stats">
+            <div class="stat-card">
+                <div class="stat-value">87%</div>
+                <div class="stat-label">Families eat pizza midweek</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value coral">1,299</div>
+                <div class="stat-label">Nando's orders (not on Dinneroo)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value gold">54%</div>
+                <div class="stat-label">Choose Dinneroo for value</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value purple">36</div>
+                <div class="stat-label">Vegetarian option requests</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value blue">4.43★</div>
+                <div class="stat-label">Average Dinneroo rating</div>
+            </div>
+        </div>
+        
+        <!-- Key Insight -->
+        <div class="insight-box">
+            <div class="insight-title">🎯 Key Strategic Insight: Missing Dish Types</div>
+            <p><strong>Grilled Chicken with Customizable Sides</strong> (1,547 orders, 54.4% midweek) and <strong>Healthy Balanced Meals</strong> (1,009 orders, 59.8% midweek) are the top dish types families order midweek that are NOT on Dinneroo. These fit the "balanced midweek meal" positioning perfectly.</p>
+        </div>
+        
+        <!-- Question Navigation -->
+        <div class="question-nav">
+            <button class="question-btn active" onclick="showQuestion('qa')">A: Home Cooking</button>
+            <button class="question-btn" onclick="showQuestion('qb')">B: Aspirations</button>
+            <button class="question-btn" onclick="showQuestion('qc')">C: Deliveroo Orders</button>
+            <button class="question-btn" onclick="showQuestion('qd')">D: Dinneroo Success</button>
+            <button class="question-btn" onclick="showQuestion('qe')">E: Gaps</button>
+            <button class="question-btn" onclick="showQuestion('synthesis')">Synthesis</button>
+        </div>
+        
+        <!-- Question A: Home Cooking -->
+        <div id="qa" class="question-section active">
+            <div class="section">
+                <h2 class="section-title">A: What Do Families Cook/Eat at Home Midweek?</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Sources: OG Survey (n=404), Doordash Research (n=505)</p>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Top 10 Midweek Dishes</h3>
+                        <div class="chart-container">
+                            <canvas id="homeDishesChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Preparation by Cuisine</h3>
+                        <table>
+                            <tr><th>Cuisine / Dish</th><th>Scratch</th><th>Delivery</th><th>Opportunity</th></tr>
+                            <tr><td><strong>Italian</strong> - Pizza</td><td>18%</td><td>12%</td><td>Already high delivery</td></tr>
+                            <tr><td><strong>Indian</strong> - Curry</td><td>21%</td><td>15%</td><td>Already high delivery</td></tr>
+                            <tr><td><strong>British</strong> - Fish & Chips</td><td>27%</td><td>9%</td><td><span class="badge badge-critical">0 on Dinneroo</span></td></tr>
+                            <tr><td><strong>British</strong> - Meat & Veg</td><td>88%</td><td>0%</td><td>Untapped</td></tr>
+                            <tr><td><strong>Asian</strong> - Stir Fry</td><td>84%</td><td>3%</td><td>Growing</td></tr>
+                            <tr><td><strong>Italian</strong> - Lasagne</td><td>73%</td><td>1%</td><td>Skill barrier</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-top: 1.5rem;">
+                    <h3 class="card-title">Drivers: Why Families Choose These Dishes</h3>
+                    <div class="grid-3">
+                        <div>
+                            <div class="gap-item"><span>"Just a regular meal" - routine</span><span class="gap-count" style="color: var(--accent-teal);">38%</span></div>
+                        </div>
+                        <div>
+                            <div class="gap-item"><span>"Too busy to cook" - convenience</span><span class="gap-count" style="color: var(--accent-teal);">32%</span></div>
+                        </div>
+                        <div>
+                            <div class="gap-item"><span>"Balance of protein, veg, carbs"</span><span class="gap-count" style="color: var(--accent-teal);">20%</span></div>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.85rem;">
+                        <strong>Key Insight:</strong> British cuisine (Meat & Veg, Fish & Chips, Sausage Mash) is 67-78% eaten at home but has near-zero delivery. Major untapped opportunity.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question B: Aspirations -->
+        <div id="qb" class="question-section">
+            <div class="section">
+                <h2 class="section-title">B: What Do Families Want to Eat More Of?</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Sources: OG Survey Wishlist (n=404), Dropoff Open-Text (n=838)</p>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Aspirational Cuisines & Dishes</h3>
+                        <table>
+                            <tr><th>Cuisine</th><th>Dish</th><th>Wishlist</th><th>Kids Barrier</th></tr>
+                            <tr><td><strong>Asian</strong></td><td>Thai Curry</td><td>77</td><td>77</td></tr>
+                            <tr><td><strong>British</strong></td><td>Cottage Pie</td><td>70</td><td>70</td></tr>
+                            <tr><td><strong>Italian</strong></td><td>Lasagne</td><td>63</td><td>63</td></tr>
+                            <tr><td><strong>Italian</strong></td><td>Risotto</td><td>61</td><td>61</td></tr>
+                            <tr><td><strong>Global</strong></td><td>Paella</td><td>60</td><td>60</td></tr>
+                            <tr><td><strong>Asian</strong></td><td>Katsu Curry</td><td>45</td><td>45</td></tr>
+                            <tr><td><strong>Caribbean</strong></td><td>Jerk Chicken</td><td>22</td><td>38</td></tr>
+                        </table>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Drivers: Barriers to Aspirational Dishes</h3>
+                        <div class="gap-item">
+                            <span class="gap-name">"Kids won't eat it"</span>
+                            <span class="gap-count">1,239 mentions</span>
+                        </div>
+                        <div class="gap-item">
+                            <span class="gap-name">"Don't know how to make"</span>
+                            <span class="gap-count">882 mentions</span>
+                        </div>
+                        <div class="gap-item">
+                            <span class="gap-name">"Not nutritious enough"</span>
+                            <span class="gap-count">634 mentions</span>
+                        </div>
+                        <div class="gap-item">
+                            <span class="gap-name">"Too expensive"</span>
+                            <span class="gap-count">206 mentions</span>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.85rem;">
+                            <strong>Insight:</strong> "Kids won't eat it" is #1 barrier. Asian (Thai, Katsu) and Italian (Risotto) cuisines need kid-friendly versions.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-top: 1.5rem;">
+                    <h3 class="card-title">Delivery Opportunity by Cuisine (Wishlist + Skill Barrier)</h3>
+                    <table>
+                        <tr><th>Cuisine</th><th>Dish</th><th>Opportunity Score</th><th>Why</th><th>On Dinneroo?</th></tr>
+                        <tr><td><strong>British</strong></td><td>Casserole/Stew</td><td>108</td><td>High skill barrier</td><td><span class="badge badge-critical">Very limited</span></td></tr>
+                        <tr><td><strong>British</strong></td><td>Cottage Pie</td><td>80</td><td>Skill barrier, comfort</td><td><span class="badge badge-critical">No</span></td></tr>
+                        <tr><td><strong>Caribbean</strong></td><td>Jerk Chicken</td><td>74</td><td>Skill barrier</td><td><span class="badge badge-critical">No</span></td></tr>
+                        <tr><td><strong>Asian</strong></td><td>Thai Curry</td><td>77</td><td>Kids barrier</td><td><span class="badge badge-success">Yes (Pho)</span></td></tr>
+                        <tr><td><strong>Italian</strong></td><td>Lasagne</td><td>63</td><td>Skill barrier</td><td><span class="badge badge-high">Limited</span></td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question C: Deliveroo Orders -->
+        <div id="qc" class="question-section">
+            <div class="section">
+                <h2 class="section-title">C: What Do Families Order on Deliveroo (Outside Dinneroo)?</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Sources: FULL_ORDER_HISTORY (63,316 non-Dinneroo orders)</p>
+                
+                <div class="insight-box">
+                    <div class="insight-title">🔥 Critical Finding: Nando's Gap - Validated for Midweek</div>
+                    <p>Nando's is the <strong>#7 most-ordered partner</strong> by Dinneroo customers outside Dinneroo with <strong>1,299 orders</strong> at £35.71 average. <strong>54.1% of these orders are midweek (Mon-Thu)</strong> - the same occasion as Dinneroo. This validates Nando's as a perfect fit for the "balanced midweek meal" positioning.</p>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Orders by Cuisine - Midweek %</h3>
+                        <table>
+                            <tr><th>Cuisine</th><th>Orders</th><th>Midweek %</th><th>On Dinneroo?</th></tr>
+                            <tr><td>Indian (Dishoom)</td><td>670</td><td><strong style="color: var(--accent-teal);">60.0%</strong></td><td><span class="badge badge-success">Yes</span></td></tr>
+                            <tr style="background: rgba(255, 107, 107, 0.1);"><td><strong>Chicken (Nando's)</strong></td><td><strong>1,299</strong></td><td><strong style="color: var(--accent-teal);">54.1%</strong></td><td><span class="badge badge-critical">NO - GAP</span></td></tr>
+                            <tr><td>Japanese (Wagamama)</td><td>1,742</td><td><strong style="color: var(--accent-teal);">52.4%</strong></td><td><span class="badge badge-success">Yes</span></td></tr>
+                            <tr><td>Italian (PizzaExpress)</td><td>595</td><td><strong style="color: var(--accent-teal);">52.1%</strong></td><td><span class="badge badge-success">Yes</span></td></tr>
+                            <tr><td>Vietnamese (Pho)</td><td>1,178</td><td><strong style="color: var(--accent-teal);">52.0%</strong></td><td><span class="badge badge-success">Yes</span></td></tr>
+                            <tr><td>Chinese dishes</td><td>4,175</td><td><strong style="color: var(--accent-teal);">50.7%</strong></td><td><span class="badge badge-critical">NO - GAP</span></td></tr>
+                            <tr><td>Fast Food (McDonald's)</td><td>3,138</td><td>48.7%</td><td><span class="badge badge-high">No</span></td></tr>
+                        </table>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.85rem;">
+                            Dinneroo is 98.3% midweek. Partners with >50% midweek are natural fits.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Top Dishes by Cuisine (Non-Dinneroo)</h3>
+                        <div class="chart-container">
+                            <canvas id="cuisineItemsChart"></canvas>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.85rem;">
+                            <strong>Chinese: 6,880 items</strong> ordered - zero partners on Dinneroo
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-top: 1.5rem;">
+                    <h3 class="card-title">Drivers: Why Families Order These</h3>
+                    <div class="grid-3">
+                        <div>
+                            <div class="gap-item"><span>Didn't want to cook</span><span class="gap-count" style="color: var(--accent-teal);">62%</span></div>
+                        </div>
+                        <div>
+                            <div class="gap-item"><span>Trusted brand/familiarity</span><span class="gap-count" style="color: var(--accent-teal);">56%</span></div>
+                        </div>
+                        <div>
+                            <div class="gap-item"><span>Busy day / no time</span><span class="gap-count" style="color: var(--accent-teal);">49%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question D: Dinneroo Success -->
+        <div id="qd" class="question-section">
+            <div class="section">
+                <h2 class="section-title">D: What Works on Dinneroo and Why?</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Sources: Post-Order (n=1,564), Ratings (n=10,713), Orders (n=71,400)</p>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Top Cuisines & Dishes on Dinneroo</h3>
+                        <table>
+                            <tr><th>Cuisine</th><th>Partner</th><th>Top Dish</th><th>Orders</th></tr>
+                            <tr><td><strong>Japanese/Asian</strong></td><td>Wagamama</td><td>Family Chicken Katsu</td><td>11,246</td></tr>
+                            <tr><td><strong>Vietnamese</strong></td><td>Pho</td><td>Pho the whole fam</td><td>7,910</td></tr>
+                            <tr><td><strong>Indian</strong></td><td>Dishoom</td><td>Chicken Ruby</td><td>4,858</td></tr>
+                            <tr><td><strong>Italian</strong></td><td>PizzaExpress</td><td>Garlic Bread Sharer</td><td>4,874</td></tr>
+                            <tr><td><strong>Thai</strong></td><td>Banana Tree</td><td>Thai bundles</td><td>2,500+</td></tr>
+                        </table>
+                        <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.85rem;">
+                            <strong>⚠️ Gap:</strong> Asian-heavy (52% from Wagamama + Pho). Missing: British, Chicken, Chinese.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Drivers: Why These Dishes Work</h3>
+                        <div class="gap-item"><span>Good value for money</span><span class="gap-count" style="color: var(--accent-teal);">54%</span></div>
+                        <div class="gap-item"><span>Familiar dish</span><span class="gap-count" style="color: var(--accent-teal);">33%</span></div>
+                        <div class="gap-item"><span>Offer on this dish</span><span class="gap-count" style="color: var(--accent-teal);">29%</span></div>
+                        <div class="gap-item"><span>Appealing to adults</span><span class="gap-count" style="color: var(--accent-teal);">27%</span></div>
+                        <div class="gap-item"><span>Don't cook at home</span><span class="gap-count" style="color: var(--accent-teal);">23%</span></div>
+                        <div class="gap-item"><span>Appealing to children</span><span class="gap-count" style="color: var(--accent-gold);">19%</span></div>
+                        <div class="gap-item"><span>Healthy option</span><span class="gap-count" style="color: var(--accent-gold);">18%</span></div>
+                    </div>
+                </div>
+                
+                <div class="grid-2" style="margin-top: 1.5rem;">
+                    <div class="card">
+                        <h3 class="card-title">Top Performing Dishes by Volume</h3>
+                        <div class="chart-container">
+                            <canvas id="topDishesChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Why Families Order Delivery</h3>
+                        <div class="gap-item"><span>Didn't want to cook</span><span class="gap-count" style="color: var(--accent-gold);">62%</span></div>
+                        <div class="gap-item"><span>Busy day / no time</span><span class="gap-count" style="color: var(--accent-gold);">49%</span></div>
+                        <div class="gap-item"><span>Treat / special occasion</span><span class="gap-count" style="color: var(--accent-gold);">15%</span></div>
+                        <div class="gap-item"><span>Try new food</span><span class="gap-count" style="color: var(--accent-gold);">12%</span></div>
+                        <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.85rem;">
+                            <strong>Key:</strong> "Convenience" (62%) + "Busy day" (49%) = Dinneroo fits the midweek need perfectly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Question E: Gaps -->
+        <div id="qe" class="question-section">
+            <div class="section">
+                <h2 class="section-title">E: What's Missing from Dinneroo?</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Sources: Dropoff (n=838), Ratings Complaints (n=499), Non-Dinneroo Orders</p>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Missing Cuisines (by demand)</h3>
+                        <table>
+                            <tr><th>Cuisine</th><th>Demand Signal</th><th>Availability</th><th>Priority</th></tr>
+                            <tr style="background: rgba(255, 107, 107, 0.1);"><td><strong>Chinese</strong></td><td>24 mentions, 6,880 items</td><td><strong>Zero</strong></td><td><span class="badge badge-critical">Critical</span></td></tr>
+                            <tr style="background: rgba(255, 107, 107, 0.1);"><td><strong>Grilled Chicken</strong></td><td>1,299 Nando's orders</td><td><strong>Zero</strong></td><td><span class="badge badge-critical">Critical</span></td></tr>
+                            <tr style="background: rgba(255, 107, 107, 0.1);"><td><strong>Fish & Chips</strong></td><td>63% eat at home</td><td><strong>Zero</strong></td><td><span class="badge badge-critical">Critical</span></td></tr>
+                            <tr><td>Caribbean</td><td>4 mentions, skill barrier</td><td>Zero</td><td><span class="badge badge-critical">Critical</span></td></tr>
+                            <tr><td>Vegetarian</td><td>36 mentions</td><td>Very limited</td><td><span class="badge badge-high">High</span></td></tr>
+                            <tr><td>British Comfort</td><td>11 mentions</td><td>Limited</td><td><span class="badge badge-high">High</span></td></tr>
+                        </table>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Missing Dishes (explicit requests)</h3>
+                        <table>
+                            <tr><th>Dish</th><th>Mentions</th><th>Context</th></tr>
+                            <tr><td><strong>Lasagne</strong></td><td>25</td><td>High wishlist (63), skill barrier</td></tr>
+                            <tr><td><strong>Cottage Pie</strong></td><td>11</td><td>High wishlist (70), British comfort</td></tr>
+                            <tr><td>Plain/mild kids</td><td>11</td><td>Picky eaters excluded</td></tr>
+                            <tr><td>Burgers</td><td>18</td><td>Family-friendly</td></tr>
+                            <tr><td>Roast Dinner</td><td>5</td><td>Sunday tradition</td></tr>
+                            <tr><td>Dim Sum</td><td>2</td><td>Chinese family sharing</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="grid-2" style="margin-top: 1.5rem;">
+                    <div class="card">
+                        <h3 class="card-title">Drivers: Why People Don't Order</h3>
+                        <div class="gap-item"><span>"No option that suited everyone"</span><span class="gap-count">52</span></div>
+                        <div class="gap-item"><span>"Not confident we'd get enough food"</span><span class="gap-count">45</span></div>
+                        <div class="gap-item"><span>"Price higher than expected"</span><span class="gap-count">36</span></div>
+                        <div class="gap-item"><span>"Couldn't customise/swap ingredients"</span><span class="gap-count">30</span></div>
+                        <div class="gap-item"><span>"Meals didn't appeal to children"</span><span class="gap-count">12</span></div>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Complaint Categories (Low Ratings)</h3>
+                        <div>
+                            <div class="gap-item"><span>Portion Size</span><span class="gap-count">122</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 100%; background: var(--accent-coral);"></div></div>
+                        </div>
+                        <div style="margin-top: 0.5rem;">
+                            <div class="gap-item"><span>Cold Food</span><span class="gap-count">95</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 78%; background: var(--accent-coral);"></div></div>
+                        </div>
+                        <div style="margin-top: 0.5rem;">
+                            <div class="gap-item"><span>Too Spicy (for kids)</span><span class="gap-count">15</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 12%; background: var(--accent-gold);"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Synthesis -->
+        <div id="synthesis" class="question-section">
+            <div class="section">
+                <h2 class="section-title">Synthesis: DISH TYPES (Not Brands)</h2>
+                
+                <div class="insight-box">
+                    <div class="insight-title">🎯 Key Reframe: Think Dish Types, Not Brands</div>
+                    <p>The question isn't "should we recruit Nando's?" - it's <strong>"Do families want Grilled Chicken with Customizable Sides?"</strong> Focus on what families want to eat, not specific partners.</p>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Dish Types ON Dinneroo ✅</h3>
+                        <table>
+                            <tr><th>Dish Type</th><th>Orders</th><th>Midweek%</th></tr>
+                            <tr><td>Asian Noodles & Rice Bowls</td><td>1,742</td><td>52.4%</td></tr>
+                            <tr><td>Pizza & Italian Classics</td><td>1,587</td><td>51.5%</td></tr>
+                            <tr><td>Vietnamese Noodle Soups</td><td>1,178</td><td>52.0%</td></tr>
+                            <tr><td>Indian Curry & Sharing</td><td>785</td><td>59.4%</td></tr>
+                            <tr><td>Japanese Fast-Casual</td><td>687</td><td>50.5%</td></tr>
+                        </table>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Dish Types NOT on Dinneroo ❌</h3>
+                        <table>
+                            <tr><th>Dish Type</th><th>Orders</th><th>Midweek%</th></tr>
+                            <tr style="background: rgba(255, 107, 107, 0.1);"><td><strong>Grilled Chicken (Peri-Peri)</strong></td><td><strong>1,547</strong></td><td><strong>54.4%</strong></td></tr>
+                            <tr style="background: rgba(0, 212, 170, 0.1);"><td><strong>Healthy Balanced Meals</strong></td><td><strong>1,009</strong></td><td><strong>59.8%</strong></td></tr>
+                            <tr><td>Kebabs & Middle Eastern</td><td>650</td><td>51.7%</td></tr>
+                            <tr><td>Fresh Pasta (Premium)</td><td>647</td><td>52.9%</td></tr>
+                            <tr><td>Poke & Hawaiian Bowls</td><td>279</td><td>52.7%</td></tr>
+                            <tr><td>Greek & Mediterranean</td><td>220</td><td>62.3%</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-top: 1.5rem;">
+                    <h3 class="card-title">Priority Dish Types to Add</h3>
+                    <table>
+                        <tr><th>Priority</th><th>Dish Type</th><th>What It Represents</th><th>Orders</th><th>Midweek%</th></tr>
+                        <tr style="background: rgba(255, 107, 107, 0.1);"><td>🔴 1</td><td><strong>Grilled Chicken</strong></td><td>Flame-grilled, customizable sides, perceived healthy</td><td>1,547</td><td>54.4%</td></tr>
+                        <tr style="background: rgba(0, 212, 170, 0.1);"><td>🔴 2</td><td><strong>Healthy Balanced</strong></td><td>Protein + veg + carbs, macro-balanced, guilt-free</td><td>1,009</td><td>59.8%</td></tr>
+                        <tr><td>🔴 3</td><td>Fresh Pasta</td><td>Restaurant-quality, comfort food, family shareable</td><td>647</td><td>52.9%</td></tr>
+                        <tr><td>🔴 4</td><td>Kebabs & Middle Eastern</td><td>Grilled meats, fresh salads, shareable</td><td>650</td><td>51.7%</td></tr>
+                        <tr><td>🟡 5</td><td>Salads & Grain Bowls</td><td>Light, healthy, customizable</td><td>175</td><td>69.1%</td></tr>
+                        <tr><td>🟡 6</td><td>Greek & Mediterranean</td><td>Grilled meats, healthy sides</td><td>220</td><td>62.3%</td></tr>
+                        <tr><td>🟡 7</td><td>Chinese Dim Sum</td><td>Shareable, variety, family-style</td><td>137</td><td>60.6%</td></tr>
+                    </table>
+                </div>
+                
+                <div class="insight-box" style="margin-top: 1.5rem; border-color: var(--accent-gold);">
+                    <div class="insight-title" style="color: var(--accent-gold);">💡 The Reframe</div>
+                    <table style="width: 100%; border: none;">
+                        <tr><td style="border: none; padding: 0.5rem;"><strong>Instead of:</strong> "Should we recruit Nando's?"</td><td style="border: none; padding: 0.5rem;"><strong>Think:</strong> "Do families want Grilled Chicken with Sides?"</td></tr>
+                        <tr><td style="border: none; padding: 0.5rem;"><strong>Instead of:</strong> "Should we recruit Farmer J?"</td><td style="border: none; padding: 0.5rem;"><strong>Think:</strong> "Do families want Healthy Balanced Meals?"</td></tr>
+                        <tr><td style="border: none; padding: 0.5rem;"><strong>Instead of:</strong> "Should we recruit Pasta Evangelists?"</td><td style="border: none; padding: 0.5rem;"><strong>Think:</strong> "Do families want Fresh Premium Pasta?"</td></tr>
+                    </table>
+                    <p style="margin-top: 0.5rem;">The answer to all of these is <strong>YES</strong> - the data shows families are ordering these dish types midweek.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Question navigation
+        function showQuestion(id) {
+            document.querySelectorAll('.question-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.question-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        // Chart configurations
+        const chartColors = {
+            teal: '#00d4aa',
+            coral: '#ff6b6b',
+            gold: '#ffd93d',
+            purple: '#a78bfa',
+            blue: '#60a5fa'
+        };
+        
+        // Home Dishes Chart - with cuisine labels
+        new Chart(document.getElementById('homeDishesChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Pizza (Italian)', 'Meat & Veg (British)', 'Curry (Indian)', 'Stir Fry (Asian)', 'Fajitas (Tex-Mex)', 'Burgers (British)', 'Chicken (Asian)', 'Sausage Mash (British)', 'Fish & Chips (British)', 'Lasagne (Italian)'],
+                datasets: [{
+                    label: '% Eaten in Last 2 Months',
+                    data: [87, 78, 74, 72, 71, 70, 68, 67, 63, 62],
+                    backgroundColor: [chartColors.coral, chartColors.purple, chartColors.gold, chartColors.teal, '#ff9f43', chartColors.purple, chartColors.teal, chartColors.purple, chartColors.purple, chartColors.coral]
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { color: '#2d3748' }, ticks: { color: '#94a3b8' } },
+                    y: { grid: { display: false }, ticks: { color: '#f1f5f9' } }
+                }
+            }
+        });
+        
+        // Wishlist Chart
+        new Chart(document.getElementById('wishlistChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Thai Curry', 'Cottage Pie', 'Lasagne', 'Risotto', 'Paella', 'Thai Noodles', 'Katsu', 'Ramen'],
+                datasets: [{
+                    label: 'Wishlist Count',
+                    data: [77, 70, 63, 61, 60, 52, 45, 36],
+                    backgroundColor: chartColors.gold
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { color: '#2d3748' }, ticks: { color: '#94a3b8' } },
+                    y: { grid: { display: false }, ticks: { color: '#f1f5f9' } }
+                }
+            }
+        });
+        
+        // Cuisine Items Chart (replacing Order Value)
+        new Chart(document.getElementById('cuisineItemsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['American', 'British', 'Indian', 'Japanese', 'Italian', 'Chinese', 'Chicken', 'Thai'],
+                datasets: [{
+                    label: 'Items Ordered',
+                    data: [34389, 20761, 13334, 10163, 9374, 6880, 4489, 2709],
+                    backgroundColor: [chartColors.blue, chartColors.purple, chartColors.gold, chartColors.teal, chartColors.coral, '#ff9f43', '#ee5a24', '#00cec9']
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { color: '#2d3748' }, ticks: { color: '#94a3b8' } },
+                    y: { grid: { display: false }, ticks: { color: '#f1f5f9' } }
+                }
+            }
+        });
+        
+        // Top Dishes Chart
+        new Chart(document.getElementById('topDishesChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Family Chicken Katsu', 'Egg Fried Rice', 'Pho the whole fam', 'Wok-fried noodles', 'Dishoom Chicken Ruby'],
+                datasets: [{
+                    label: 'Orders',
+                    data: [11246, 9964, 7910, 7707, 4858],
+                    backgroundColor: chartColors.purple
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { display: false }, ticks: { color: '#f1f5f9' } },
+                    y: { grid: { color: '#2d3748' }, ticks: { color: '#94a3b8' } }
+                }
+            }
+        });
+        
+        // Gaps Chart
+        new Chart(document.getElementById('gapsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['More Variety', 'Portion Size', 'Vegetarian', 'Lasagne/Pasta', 'Healthy', 'Chinese', 'Burgers', 'Mild Kids'],
+                datasets: [{
+                    label: 'Mentions',
+                    data: [133, 57, 36, 25, 25, 24, 18, 11],
+                    backgroundColor: chartColors.coral
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { color: '#2d3748' }, ticks: { color: '#94a3b8' } },
+                    y: { grid: { display: false }, ticks: { color: '#f1f5f9' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
