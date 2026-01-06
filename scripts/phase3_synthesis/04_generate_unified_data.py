@@ -64,6 +64,69 @@ def normalize_dish_name(name):
         return ""
     return str(name).lower().strip().replace("_", " ").replace("-", " ")
 
+
+def generate_rationale(dish_record, track_a_match, track_b_match, coverage_match):
+    """
+    Generate evidence-based rationale for dish recommendation.
+    Includes specific metrics with sample sizes.
+    """
+    parts = []
+    
+    # Kids happy rate (most important consumer signal)
+    if track_a_match is not None and pd.notna(track_a_match.get('kids_happy')):
+        rate = int(track_a_match['kids_happy'] * 100)
+        n = int(track_a_match['kids_happy_n']) if pd.notna(track_a_match.get('kids_happy_n')) else 0
+        if rate >= 80:
+            parts.append(f"{rate}% kids full & happy (n={n})")
+        elif rate >= 70:
+            parts.append(f"{rate}% kids happy (n={n})")
+    
+    # Rating
+    if track_a_match is not None and pd.notna(track_a_match.get('avg_rating')):
+        rating = float(track_a_match['avg_rating'])
+        n = int(track_a_match['rating_n']) if pd.notna(track_a_match.get('rating_n')) else 0
+        if rating >= 4.5:
+            parts.append(f"{rating:.1f}★ rating (n={n})")
+    
+    # Latent demand
+    if track_b_match is not None and pd.notna(track_b_match.get('latent_demand_mentions')):
+        mentions = int(track_b_match['latent_demand_mentions'])
+        if mentions >= 20:
+            parts.append(f"{mentions} latent demand mentions (high)")
+        elif mentions >= 5:
+            parts.append(f"{mentions} latent demand mentions")
+    
+    # Family fit framework
+    if track_b_match is not None and pd.notna(track_b_match.get('kid_friendly')):
+        kf = int(track_b_match['kid_friendly'])
+        fef = int(track_b_match.get('fussy_eater_friendly', 3))
+        if kf >= 4 and fef >= 4:
+            parts.append("high kid-friendly & fussy-eater scores")
+        elif kf >= 4:
+            parts.append("high kid-friendly score")
+    
+    # Quadrant action
+    if coverage_match is not None and pd.notna(coverage_match.get('Action')):
+        action = coverage_match['Action']
+        quadrant = coverage_match.get('Quadrant', '')
+        if 'High Importance' in str(quadrant):
+            if 'High Coverage' in str(quadrant):
+                parts.append("Core Driver - maintain availability")
+            else:
+                parts.append("Demand Booster - expand to more zones")
+    
+    # If no specific evidence, use tier-based generic
+    if not parts:
+        tier = dish_record.get('tier', 'Unknown')
+        if tier == 'Must Have':
+            parts.append("High priority based on family fit framework")
+        elif tier == 'Nice to Have':
+            parts.append("Good option for variety")
+        else:
+            parts.append("Monitor for performance")
+    
+    return ". ".join(parts)
+
 def generate_unified_dishes(coverage, tiers, track_a, track_b):
     """
     Merge all dish data into unified format.
@@ -96,7 +159,7 @@ def generate_unified_dishes(coverage, tiers, track_a, track_b):
                 coverage_match = cv
                 break
         
-        # Build unified dish record
+        # Build unified dish record (rationale will be set after we have all data)
         dish_record = {
             "dish": dish_name,
             "tier": row['Tier'],
@@ -105,7 +168,7 @@ def generate_unified_dishes(coverage, tiers, track_a, track_b):
             "evidence_type": row['Evidence Type'] if pd.notna(row.get('Evidence Type')) else "Estimated",
             "cuisine": row['Cuisine'] if pd.notna(row.get('Cuisine')) else "Unknown",
             "gap_type": row['Gap Type'] if pd.notna(row.get('Gap Type')) else "No Gap",
-            "rationale": row['Rationale'] if pd.notna(row.get('Rationale')) else "",
+            "rationale": "",  # Will be set below with evidence
             "potential_partners": row['Potential Partners'] if pd.notna(row.get('Potential Partners')) else "TBD",
         }
         
@@ -180,6 +243,9 @@ def generate_unified_dishes(coverage, tiers, track_a, track_b):
             dish_record["evidence_level"] = "Corroborated"
         else:
             dish_record["evidence_level"] = "Single"
+        
+        # Generate evidence-based rationale
+        dish_record["rationale"] = generate_rationale(dish_record, track_a_match, track_b_match, coverage_match)
         
         dishes.append(dish_record)
     

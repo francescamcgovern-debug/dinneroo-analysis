@@ -462,6 +462,35 @@
             </div>
 
             <div class="card">
+                <h3>🎯 Quadrant Framework</h3>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
+                    Dishes are classified by Consumer Want (demand signals) vs Performance (how well they do when available).
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+                    <div style="background: rgba(34, 197, 94, 0.1); padding: 12px; border-radius: 8px; border-left: 3px solid #22c55e;">
+                        <div style="font-weight: 600; font-size: 13px; color: #22c55e;">Core Drivers</div>
+                        <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">High Want + High Performance</div>
+                        <div style="font-size: 12px; margin-top: 8px;">Action: <strong>Maintain</strong> - protect and ensure availability</div>
+                    </div>
+                    <div style="background: rgba(59, 130, 246, 0.1); padding: 12px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                        <div style="font-weight: 600; font-size: 13px; color: #3b82f6;">Demand Boosters</div>
+                        <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">High Want + Low Performance</div>
+                        <div style="font-size: 12px; margin-top: 8px;">Action: <strong>Expand</strong> - roll out to more zones</div>
+                    </div>
+                    <div style="background: rgba(234, 179, 8, 0.1); padding: 12px; border-radius: 8px; border-left: 3px solid #eab308;">
+                        <div style="font-weight: 600; font-size: 13px; color: #eab308;">Preference Drivers</div>
+                        <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Low Want + High Performance</div>
+                        <div style="font-size: 12px; margin-top: 8px;">Action: <strong>Monitor</strong> - efficient but niche</div>
+                    </div>
+                    <div style="background: rgba(100, 116, 139, 0.1); padding: 12px; border-radius: 8px; border-left: 3px solid #64748b;">
+                        <div style="font-weight: 600; font-size: 13px; color: #64748b;">Deprioritize</div>
+                        <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Low Want + Low Performance</div>
+                        <div style="font-size: 12px; margin-top: 8px;">Action: <strong>Review</strong> - consider removing</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
                 <h3>📊 Priority Dishes</h3>
                 <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
                     Dishes ranked by priority score. Includes both dishes on Dinneroo (with performance data) and latent demand opportunities (not yet available).
@@ -558,6 +587,10 @@
                         <div class="loading">Loading consumer validation...</div>
                     </div>
                     <div class="source" id="consumer-source" style="margin-top: 12px;"></div>
+                    <p style="font-size: 11px; color: var(--text-muted); margin-top: 8px; font-style: italic;">
+                        Note: We compare 5+ vs 3-4 cuisine zones (n=811 vs n=551) for statistical robustness. 
+                        The 1-2 cuisine bucket (n=27) is too small for reliable comparison.
+                    </p>
                 </div>
                 
                 <div class="evidence-box" style="margin-top: 16px;">
@@ -1062,12 +1095,12 @@
                 <div style="background: var(--bg-secondary); padding: 12px; border-radius: 8px; border-left: 3px solid var(--accent-purple);">
                     <div style="font-weight: 600; font-size: 14px; color: var(--accent-purple);">Sample Coverage</div>
                     <div style="font-size: 24px; font-weight: 700; margin: 4px 0;">
-                        ${ci.summary.sample_size_high}
+                        ${high.n || 0}
                     </div>
                     <div style="font-size: 11px; color: var(--text-muted);">
                         Survey responses in 5+ cuisine zones<br>
-                        ${ci.summary.sample_size_low} in 1-2 cuisine zones<br>
-                        Total: ${Object.values(ci.buckets).reduce((sum, b) => sum + (b.n || 0), 0)} responses
+                        ${low.n || 0} in 3-4 cuisine zones<br>
+                        Total: ${(high.n || 0) + (low.n || 0)} responses (robust samples)
                     </div>
                 </div>
             `;
