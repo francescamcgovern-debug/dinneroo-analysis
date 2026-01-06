@@ -21,8 +21,6 @@ Zone Evaluation          Gap Identification          Recruitment
 (MVP Framework)    →     (What's missing?)     →    (Priority Dish List)
 ```
 
-**Key Principle:** Success = families returning happy, not just ordering once. We prioritize repeat rate over volume.
-
 ---
 
 ## 1. MVP Zone Framework
@@ -31,55 +29,58 @@ Zone Evaluation          Gap Identification          Recruitment
 
 ### 1.1 Success Metrics
 
-A zone must meet these thresholds:
+| Metric | Threshold | Evidence |
+|--------|-----------|----------|
+| **Repeat Rate** | ≥20% | Validated: zones with 20%+ repeat have significantly better outcomes (p<0.001) |
+| **Rating** | ≥4.3 | 4.3+ shows significant correlation with repeat rate (p<0.05) |
 
-| Metric | Threshold | Why |
-|--------|-----------|-----|
-| **Repeat Rate** | ≥20% | Families find value and return |
-| **Rating** | ≥4.3 | Families are satisfied |
+**Key Finding:** Cuisine count is the STRONGEST predictor of repeat rate (r=0.514). More cuisines = families come back.
 
-### 1.2 Selection Requirements
+### 1.2 Core Cuisines (Need 4 of 5)
 
-A zone must have:
+These cuisines are required based on **repeat rate performance** (the primary success metric):
 
-| Requirement | Threshold |
-|-------------|-----------|
-| **Total Cuisines** | 4+ different cuisines |
-| **Core Cuisines** | At least 4 of the 5 core cuisines below |
-| **Tier 1 Dishes** | At least 3 of the 5 essential dish types |
+| Cuisine | Repeat Rate | Rating | Orders | Why Essential |
+|---------|-------------|--------|--------|---------------|
+| **Indian** | **23.1%** (highest) | 4.66 | 8,356 | Best retention, excellent family portions |
+| **Vietnamese** | **20.7%** | 4.57 | 12,961 | Pho is a top performer, healthy perception |
+| **Thai** | 15.8% | 4.33 | 5,098 | Combined with Vietnamese = 18,059 orders |
+| **Japanese/Asian** | 16.2% | 4.24 | 14,618 | Highest volume, rice bowls score highest |
+| **Italian** | 16.5% | 4.15 | 9,063 | Universal family appeal |
 
-#### Core Cuisines (Need 4 of 5)
+**Note:** "Chicken (Grilled)" was in the original framework but has only 1,077 orders. Consider as Tier 2.
 
-| Cuisine | Priority Dishes | Why Essential |
-|---------|-----------------|---------------|
-| **Italian** | Pizza, Pasta, Garlic Bread | Universal kid appeal, familiar |
-| **Indian** | Tikka Masala, Korma (mild), Naan | Great portions, mild options, highest repeat rate |
-| **Japanese/Asian** | Teriyaki, Gyoza, Rice Bowls | Top volume, balanced perception |
-| **Chicken (Grilled)** | Grilled Chicken + Sides, Wraps | Balanced midweek positioning |
-| **Thai/Vietnamese** | Pad Thai, Spring Rolls, Pho | Fresh/healthy perception, adult appeal |
+### 1.3 What's Actually Working on Dinneroo
 
-#### Tier 1 Dishes (Need 3 of 5)
+Top 10 dishes by composite score (volume × rating):
 
-| Dish Type | Why Essential |
-|-----------|---------------|
-| **Grilled Chicken with Customisable Sides** | Perfect balanced midweek meal |
-| **Margherita Pizza** | Universal kid-friendly, shareable |
-| **Mild Curry with Rice** | Great portions, mild for kids |
-| **Pasta Bolognese** | Kid-friendly staple |
-| **Rice Bowl with Protein** | Balanced, customisable |
+| Rank | Dish | Orders | Rating | What It Is |
+|------|------|--------|--------|------------|
+| 1 | Prawn Crackers | 11,686 | 4.56 | Side dish (accompaniment) |
+| 2 | **Family Chicken Katsu** | 11,246 | 4.24 | Japanese rice bowl |
+| 3 | **Egg Fried Rice with Chicken** | 9,964 | 4.59 | Asian rice dish |
+| 4 | **Pho the Whole Fam** | 7,910 | 4.55 | Vietnamese noodle soup |
+| 5 | **Wok-fried Noodles with Chicken** | 7,707 | 4.53 | Asian noodles |
+| 6 | **Katsu Chicken Rice Bowl** | 6,144 | 4.44 | Japanese rice bowl |
+| 7 | Beef Brisket Pho | 5,419 | 4.58 | Vietnamese noodle soup |
+| 8 | **Dishoom Chicken Ruby** | 4,858 | **4.79** | Indian curry (highest rating) |
+| 9 | Mini Chicken Noodle Soup | 4,811 | 4.62 | Vietnamese noodle soup |
+| 10 | Chicken Teriyaki Rice Bowl | 4,200 | 4.43 | Japanese rice bowl |
 
-### 1.3 AM Zone Checklist
+**Pattern:** Asian rice bowls, Vietnamese pho, and Indian curries dominate. These are not generic "pizza and pasta" - they're specific dish types that work for families.
 
-Quick 8-question evaluation for Account Managers:
+### 1.4 AM Zone Checklist
 
-1. Do I have a pizza/pasta option? (Italian)
-2. Do I have a mild curry option? (Indian)
-3. Do I have a rice bowl option? (Asian/Japanese)
-4. Do I have a grilled chicken with sides option?
-5. Do I have a noodle/fresh option? (Thai/Vietnamese)
+Quick evaluation for Account Managers:
+
+1. Do I have a **Vietnamese partner** (Pho)? ← Top performer
+2. Do I have a **Japanese/Asian partner** (Rice bowls, Katsu)?
+3. Do I have an **Indian partner** (Curry, highest repeat rate)?
+4. Do I have an **Italian partner** (Pasta, Pizza)?
+5. Do I have a **Thai partner** (Pad Thai, noodles)?
 6. Is my repeat rate above 20%?
 7. Is my average rating above 4.3?
-8. Do families have at least 3 different balanced midweek meal options?
+8. Do I have at least 4 different cuisines?
 
 | Yes Answers | Status | Action |
 |-------------|--------|--------|
@@ -88,14 +89,17 @@ Quick 8-question evaluation for Account Managers:
 | 4-5 | **Developing** | Recruit priority cuisines |
 | 0-3 | **Early Stage** | Foundational work needed |
 
-### 1.4 MVP Status Summary
+### 1.5 Zones Needing Attention
 
-| Status | Current Zones | What It Means |
-|--------|---------------|---------------|
-| MVP Ready | ~21% (43 zones) | Selection is not the blocker |
-| Near MVP | ~25% | 1-2 recruits away |
-| Developing | ~35% | Significant gaps |
-| Early Stage | ~19% | Foundational buildout needed |
+High-priority zones with significant orders but missing core cuisines:
+
+| Zone | Orders | Missing Cuisines | Priority |
+|------|--------|------------------|----------|
+| Finsbury Park / Harringay | 1,534 | Japanese, Italian, Thai | High |
+| Canning Town | 1,314 | Japanese, Vietnamese, Italian, Thai | High |
+| Surrey Quays | 1,139 | Japanese, Vietnamese, Italian, Thai | High |
+| South Kensington | 676 | Japanese, Vietnamese, Indian, Thai | High |
+| St Albans | 559 | Vietnamese, Indian, Thai | High |
 
 ---
 
@@ -103,74 +107,90 @@ Quick 8-question evaluation for Account Managers:
 
 **Purpose:** Guide recruitment decisions when zones have gaps.
 
-### 2.1 How to Use This List
+### 2.1 How This List Was Built
 
-1. **Identify gaps** using the MVP Zone Checklist above
-2. **Check if existing partners** can add the missing dish type
-3. **If not, recruit new partners** that serve the dish type
+Dishes are scored on a **10-factor family meal framework** with survey-backed data where available:
 
-**Think dish types, not brands:** The question isn't "should we recruit Nando's?" - it's "do families want Grilled Chicken with Customizable Sides?"
+| Factor | Weight | Top Performers |
+|--------|--------|----------------|
+| Kid-Friendly | 15% | Rice Bowls (95% kids happy), Fajitas (83%) |
+| Portion Flexibility | 15% | Fajitas (94%), Rice Bowls (93%) |
+| Fussy Eater Friendly | 15% | Fried Rice, Pasta |
+| Adult Satisfaction | - | Pho (95%), Pad Thai (92%), Fajitas (94%) |
 
-### 2.2 Tier 1 - Essential Dishes
+### 2.2 Tier 1 - Proven Winners (Measured Data)
 
-MVP zones need 3 of these 5 dish types:
+These dishes have **survey-backed scores** showing they work for families:
 
-| Dish Type | Cuisine | Available? | Recruitment Notes |
-|-----------|---------|------------|-------------------|
-| Grilled Chicken with Customisable Sides | Global | Limited | **Priority gap** - recruit Nando's-style partners |
-| Margherita Pizza | Italian | Yes | Widely available |
-| Mild Curry with Rice (Tikka/Korma) | Indian | Yes | Widely available |
-| Pasta Bolognese | Italian | Yes | Widely available |
-| Rice Bowl with Protein (Teriyaki/Katsu) | Asian | Yes | Widely available |
+| Rank | Dish Type | Score | Orders | Kids Happy | Adults Happy | Evidence |
+|------|-----------|-------|--------|------------|--------------|----------|
+| 1 | **Rice Bowl** | 3.99 | 6,571 | **95%** | 85% | Measured (n=27) |
+| 2 | **Fajitas** | 3.79 | 812 | 83% | **94%** | Measured (n=18) |
+| 3 | **Pho** | 3.65 | 9,113 | 84% | **95%** | Measured (n=130) |
+| 4 | **Fried Rice** | 3.56 | 11,842 | 88% | 94% | Measured (n=16) |
+| 5 | **Shepherd's Pie** | 3.53 | 663 | 75% | **100%** | Measured (n=5) |
+| 6 | **Pad Thai** | 3.53 | 5,351 | 79% | 92% | Measured (n=54) |
+| 7 | **Pasta** | 3.52 | 4,250 | 82% | 75% | Measured (n=56) |
+| 8 | **Shawarma** | 3.44 | 2,603 | 80% | 88% | Measured (n=26) |
 
-### 2.3 Tier 2 - Important Dishes
+### 2.3 Tier 2 - Solid Performers
 
-Add these to strengthen zones beyond MVP:
+| Dish Type | Score | Orders | Category | Notes |
+|-----------|-------|--------|----------|-------|
+| Noodles | 3.29 | 11,783 | Solid Performer | High volume, 72% kids happy |
+| Pizza | 3.29 | 2,289 | Solid Performer | 74% kids happy, 76% adult satisfaction |
+| Mac & Cheese | 3.29 | 928 | Proven Winner | 81% kids happy |
+| Katsu Curry | 3.18 | 2,300 | Solid Performer | 77% kids happy |
+| Katsu | 2.97 | 19,220 | Solid Performer | Highest volume single dish type |
 
-| Dish Type | Cuisine | Available? | Notes |
-|-----------|---------|------------|-------|
-| Burrito Bowl / Build-Your-Own | Mexican | Partial | Excellent customisation for fussy eaters |
-| Noodle Dishes (Pad Thai/Pho) | Thai/Vietnamese | Yes | Good adult appeal |
-| Fish & Chips | British | **No** | Supply gap - recruit chippy partners |
-| Veggie Main (Falafel/Halloumi) | Mediterranean | Partial | Essential for vegetarian families |
-| Fajita Kit | Mexican | Yes | High customisation |
+### 2.4 Gaps to Fill (Validated Demand)
 
-### 2.4 Tier 3 - Nice-to-Have
+These dish types have **survey demand but are NOT available** on Dinneroo:
 
-For mature zones looking to expand:
+| Dish Type | Score | Survey N | Category | Action |
+|-----------|-------|----------|----------|--------|
+| **Curry (General)** | 3.18 | 250 | Validated Gap | Recruit Indian partners with family bundles |
+| **Chicken (General)** | 2.76 | 115 | Validated Gap | Recruit grilled chicken partners |
+| Burrito Bowl | 3.11 | - | Unvalidated Gap | Consider Mexican recruitment |
+| Grilled Chicken with Sides | 2.82 | - | Unvalidated Gap | Nando's-style partners |
 
-| Dish Type | Cuisine | Available? | Notes |
-|-----------|---------|------------|-------|
-| Roast Dinner Components | British | Limited | Weekend/special occasion |
-| Dim Sum Selection | Chinese | **No** | Supply gap - recruit Chinese partners |
-| Sushi Platters | Japanese | Yes | Adventurous families |
-| Lasagne | Italian | Limited | High wishlist, skill barrier |
-| Greek Mezze Platter | Mediterranean | **No** | Supply gap |
+### 2.5 What Families Mention Most
 
-### 2.5 Current Supply Gaps
+From survey open-text analysis:
 
-These dish types have demand but are NOT available on Dinneroo:
-
-| Priority | Dish Type | Demand Signal | Action |
-|----------|-----------|---------------|--------|
-| 🔴 High | Grilled Chicken (Nando's-style) | 1,299 non-Dinneroo orders, 54% midweek | Recruit chicken partners |
-| 🔴 High | Chinese Family Meals | 24 mentions, 6,880 non-Dinneroo items | Recruit dim sum/noodle partners |
-| 🔴 High | Fish & Chips | 63% eat at home, British staple | Recruit chippy partners |
-| 🟡 Medium | Mediterranean (Falafel/Mezze) | Veggie demand, balanced positioning | Recruit Greek/Middle Eastern |
-| 🟡 Medium | Lasagne | 25 mentions, 63 wishlist score | Add to Italian partners |
-| 🟡 Medium | Vegetarian Bundles | 36+ explicit requests | Add dedicated veggie options |
+| Dish Type | Mentions | Implication |
+|-----------|----------|-------------|
+| Rice | 184 | Rice-based dishes are core to family meals |
+| Chicken | 131 | Chicken protein is highly desired |
+| Curry | 61 | Indian/curry demand is strong |
+| Salad | 59 | Healthy options matter |
+| Pizza | 39 | Expected but not dominant |
+| Pho | 28 | Vietnamese is specifically requested |
+| Pasta | 28 | Italian basics expected |
+| Vegetarian | 22 | Veggie options are a gap |
+| Lasagne | 13 | Specific comfort food request |
 
 ---
 
 ## 3. Top Recommendations
 
-| Priority | Action | Evidence | Owner |
-|----------|--------|----------|-------|
-| 1 | **Recruit grilled chicken partners** | 1,299 Nando's orders, 54% midweek, perfect positioning fit | Recruitment |
-| 2 | **Ensure zones have 4+ cuisines** | Strongest predictor of repeat rate (r=0.514) | AMs |
-| 3 | **Add vegetarian family bundles** | 36+ explicit requests, major family segment | Partners |
-| 4 | **Recruit Chinese family partners** | 24 mentions, zero current availability | Recruitment |
-| 5 | **Recruit Fish & Chips partners** | British staple, 63% eat at home, zero on Dinneroo | Recruitment |
+Based on the actual data analysis:
+
+| Priority | Action | Evidence |
+|----------|--------|----------|
+| 1 | **Expand Vietnamese coverage** | Pho = top performer, 20.7% repeat rate, 4.57 rating |
+| 2 | **Recruit Indian partners in gaps** | Highest repeat rate (23.1%), Dishoom has highest rating (4.79) |
+| 3 | **Ensure Japanese/Asian rice bowls** | Rice Bowl = highest composite score (3.99), 95% kids happy |
+| 4 | **Add grilled chicken partners** | 131 mentions, validated gap in survey data |
+| 5 | **Focus on repeat rate, not volume** | Cuisine count is strongest predictor of repeat (r=0.514) |
+
+### What NOT to Prioritize
+
+| Category | Evidence | Recommendation |
+|----------|----------|----------------|
+| Burgers | 17.9% repeat rate (below threshold), ranks #83/86 | Do not recruit |
+| Sushi | Only 8.5% repeat rate, 65% kids happy (low) | Deprioritize |
+| Tacos | 4.7% repeat rate (very low), 3.75 rating | Do not recruit |
 
 ---
 
@@ -186,59 +206,46 @@ These dish types have demand but are NOT available on Dinneroo:
 | Dropoff Survey | 1,200+ | Unmet demand signals |
 | Menu Catalog | 63,990 | Dish availability |
 
-### 4.2 10-Factor Family Meal Framework
+### 4.2 Cuisine Performance Summary
 
-Dishes are scored on 10 factors to determine suitability for Dinneroo:
+Full cuisine ranking by repeat rate:
 
-| Factor | Weight | Description |
-|--------|--------|-------------|
-| Kid-Friendly | 15% | Kids will actually eat it |
-| Portion Flexibility | 15% | Can feed 2 adults + 2 kids |
-| Fussy Eater Friendly | 15% | Mild options available |
-| Balanced/Guilt-Free | 12% | Parents feel good serving it midweek |
-| Customisation | 10% | Individual preferences accommodated |
-| Value at £25 | 10% | Worth it for family of 4 |
-| Adult Appeal | 8% | Adults enjoy it too |
-| Shareability | 5% | Family sharing at table |
-| Vegetarian Option | 5% | Good veggie alternative |
-| On Dinneroo Menu | 5% | Actually available |
+| Cuisine | Repeat Rate | Orders | Rating |
+|---------|-------------|--------|--------|
+| Breakfast | 25.8% | 136 | 4.73 |
+| Pho | 23.7% | 793 | 4.72 |
+| **Indian** | **23.1%** | 8,356 | 4.66 |
+| Curry | 21.0% | 3,355 | 4.75 |
+| **Vietnamese** | **20.7%** | 12,961 | 4.57 |
+| Mexican | 20.6% | 43 | 4.22 |
+| **Asian** | 20.3% | 8,942 | 4.43 |
+| Vegan Friendly | 20.0% | 2,053 | 4.43 |
+| Salads | 19.7% | 5,330 | 4.58 |
+| Shawarma | 19.7% | 84 | 3.86 |
+| Mediterranean | 19.5% | 511 | 4.64 |
+| Gluten Free | 18.9% | 140 | 4.84 |
+| Meal Deals | 18.2% | 1,200 | 4.52 |
+| Burgers | 17.9% | 2,485 | 4.49 |
+| Chicken | 16.9% | 1,077 | 4.43 |
+| Italian | 16.5% | 9,063 | 4.15 |
+| Japanese | 16.2% | 14,618 | 4.24 |
+| Thai | 15.8% | 5,098 | 4.33 |
 
-**Full methodology:** See `DOCUMENTATION/METHODOLOGY/01_DISH_SCORING.md`
+### 4.3 10-Factor Scoring Methodology
 
-### 4.3 Zone Health Score Components
+See `DOCUMENTATION/METHODOLOGY/01_DISH_SCORING.md` for full methodology.
 
-| Component | Weight | Source |
-|-----------|--------|--------|
-| Repeat Rate | 25% | Behavioral (Snowflake) |
-| Survey Satisfaction | 20% | Survey (Post-Order) |
-| Kids Happy Rate | 15% | Survey (Post-Order) |
-| Star Rating | 15% | Behavioral (Snowflake) |
-| Cuisine Coverage | 15% | Catalog |
-| Volume | 10% | Behavioral (lowest weight) |
+### 4.4 Configuration Files
 
-**Full methodology:** See `DOCUMENTATION/METHODOLOGY/02_ZONE_MVP.md`
-
-### 4.4 Key Methodological Notes
-
-1. **Survivorship Bias:** Order volume shows what works among AVAILABLE options, not what families WANT. Supply gaps require latent demand analysis.
-
-2. **Dish Types, Not Brands:** Focus on what families want to eat ("Grilled Chicken with Sides") not specific partners ("Nando's").
-
-3. **Success Over Volume:** A zone with fewer orders but high retention is healthier than a zone with many orders but low retention.
-
-### 4.5 Configuration Files
-
-All thresholds are configurable:
-
-- `config/mvp_thresholds.json` - Zone MVP criteria and cuisines
+- `config/mvp_thresholds.json` - Zone MVP criteria (validated thresholds)
 - `config/factor_weights.json` - 10-factor weights
 - `config/evidence_standards.json` - Sample size requirements
 
-### 4.6 Related Dashboards
+### 4.5 Related Dashboards
 
-- [Zone MVP Dashboard](../../docs/dashboards/zone_mvp.html) - Interactive zone evaluation
-- [Priority Dishes Dashboard](../../docs/dashboards/priority_dishes.html) - Full dish rankings
-- [Unified Dashboard](../../docs/dashboards/dinneroo_unified.html) - All metrics
+- [Zone MVP Dashboard](../../docs/dashboards/zone_mvp.html)
+- [Priority Dishes Dashboard](../../docs/dashboards/priority_dishes.html)
+- [Unified Dashboard](../../docs/dashboards/dinneroo_unified.html)
 
 ---
 

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinneroo Unified Analysis Dashboard</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
         
@@ -26,10 +25,6 @@
             --success: #22c55e;
             --warning: #eab308;
             --error: #ef4444;
-            --tier-must-have: #22c55e;
-            --tier-should-have: #3b82f6;
-            --tier-nice-to-have: #f59e0b;
-            --tier-monitor: #64748b;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -39,7 +34,6 @@
             background: var(--bg-deep);
             color: var(--text-primary);
             min-height: 100vh;
-            overflow-x: hidden;
         }
         
         /* Navigation */
@@ -49,7 +43,6 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            backdrop-filter: blur(12px);
         }
         
         .nav-content {
@@ -67,17 +60,6 @@
             gap: 12px;
         }
         
-        .nav-brand-icon {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
-        
         .nav-brand h1 {
             font-size: 18px;
             font-weight: 600;
@@ -90,7 +72,6 @@
             display: flex;
             list-style: none;
             flex: 1;
-            overflow-x: auto;
         }
         
         .nav-tabs li a {
@@ -98,16 +79,14 @@
             padding: 18px 20px;
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 14px;
             font-weight: 500;
-            border-bottom: 3px solid transparent;
+            border-bottom: 2px solid transparent;
             transition: all 0.2s;
-            white-space: nowrap;
         }
         
         .nav-tabs li a:hover {
             color: var(--text-primary);
-            background: rgba(255,255,255,0.03);
+            background: var(--bg-secondary);
         }
         
         .nav-tabs li a.active {
@@ -115,49 +94,28 @@
             border-bottom-color: var(--accent-teal);
         }
         
-        .nav-meta {
-            padding: 0 24px;
-            font-size: 12px;
-            color: var(--text-muted);
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        /* Page Container */
-        .page {
-            display: none;
+        /* Main content */
+        .main {
             max-width: 1800px;
             margin: 0 auto;
             padding: 24px;
         }
         
-        .page.active { display: block; }
-        
-        /* Page Header */
-        .page-header {
-            margin-bottom: 24px;
+        .tab-content {
+            display: none;
         }
         
-        .page-header h2 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            background: linear-gradient(135deg, var(--text-primary), var(--accent-teal));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .page-header p {
-            color: var(--text-secondary);
-            font-size: 15px;
+        .tab-content.active {
+            display: block;
         }
         
         /* Cards */
         .card {
             background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 12px;
             padding: 24px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
         }
         
         .card h3 {
@@ -169,94 +127,48 @@
             gap: 8px;
         }
         
-        .card h3 .icon {
-            font-size: 18px;
-        }
-        
-        /* Grid Layouts */
-        .grid-4 {
+        /* Stats grid */
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
         }
         
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        
-        @media (max-width: 1200px) {
-            .grid-4 { grid-template-columns: repeat(2, 1fr); }
-            .grid-3 { grid-template-columns: repeat(2, 1fr); }
-        }
-        
-        @media (max-width: 768px) {
-            .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
-        }
-        
-        /* Stat Cards */
         .stat-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
+            background: var(--bg-secondary);
             padding: 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            border-radius: 12px;
+            border-left: 3px solid var(--accent-teal);
         }
-        
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-        }
-        
-        .stat-card.teal::before { background: var(--accent-teal); }
-        .stat-card.purple::before { background: var(--accent-purple); }
-        .stat-card.orange::before { background: var(--accent-orange); }
-        .stat-card.blue::before { background: var(--accent-blue); }
-        .stat-card.success::before { background: var(--success); }
-        .stat-card.warning::before { background: var(--warning); }
         
         .stat-value {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
-            margin-bottom: 4px;
+            font-family: 'JetBrains Mono', monospace;
         }
-        
-        .stat-value.teal { color: var(--accent-teal); }
-        .stat-value.purple { color: var(--accent-purple); }
-        .stat-value.orange { color: var(--accent-orange); }
-        .stat-value.blue { color: var(--accent-blue); }
-        .stat-value.success { color: var(--success); }
-        .stat-value.warning { color: var(--warning); }
         
         .stat-label {
             font-size: 13px;
-            color: var(--text-secondary);
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        
+        .stat-source {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
         }
         
         /* Tables */
         .table-container {
             overflow-x: auto;
-            margin-top: 16px;
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 14px;
         }
         
         th, td {
@@ -266,14 +178,12 @@
         }
         
         th {
+            background: var(--bg-secondary);
             font-weight: 600;
-            color: var(--text-secondary);
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            background: var(--bg-secondary);
-            position: sticky;
-            top: 0;
+            color: var(--text-muted);
         }
         
         tr:hover {
@@ -282,53 +192,34 @@
         
         /* Badges */
         .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
+            display: inline-block;
             padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-        
-        .badge.tier-1 { background: rgba(34, 197, 94, 0.15); color: var(--tier-must-have); }
-        .badge.tier-2 { background: rgba(59, 130, 246, 0.15); color: var(--tier-should-have); }
-        .badge.tier-3 { background: rgba(245, 158, 11, 0.15); color: var(--tier-nice-to-have); }
-        .badge.tier-4 { background: rgba(100, 116, 139, 0.15); color: var(--tier-monitor); }
-        
-        .badge.mvp { background: rgba(34, 197, 94, 0.15); color: var(--success); }
-        .badge.near { background: rgba(234, 179, 8, 0.15); color: var(--warning); }
-        .badge.developing { background: rgba(249, 115, 22, 0.15); color: var(--accent-orange); }
-        .badge.early { background: rgba(100, 116, 139, 0.15); color: var(--text-muted); }
-        
-        .badge.supply-gap { background: rgba(239, 68, 68, 0.15); color: var(--error); }
-        .badge.quality-gap { background: rgba(249, 115, 22, 0.15); color: var(--accent-orange); }
-        .badge.ok { background: rgba(34, 197, 94, 0.15); color: var(--success); }
-        
-        /* Evidence Badges */
-        .evidence-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
+            border-radius: 6px;
             font-size: 11px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            background: var(--bg-secondary);
+            font-weight: 600;
         }
         
-        .evidence-badge.validated { color: var(--success); }
-        .evidence-badge.corroborated { color: var(--warning); }
-        .evidence-badge.single { color: var(--accent-blue); }
+        .badge-must-have { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+        .badge-nice-to-have { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+        .badge-monitor { background: rgba(100, 116, 139, 0.2); color: #94a3b8; }
+        
+        .badge-validated { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+        .badge-corroborated { background: rgba(234, 179, 8, 0.2); color: #eab308; }
+        .badge-single { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+        
+        .badge-mvp { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+        .badge-not-mvp { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        
+        .badge-high { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .badge-medium { background: rgba(234, 179, 8, 0.2); color: #eab308; }
+        .badge-low { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
         
         /* Filters */
         .filters {
             display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
+            gap: 16px;
             margin-bottom: 20px;
-            padding: 16px;
-            background: var(--bg-secondary);
-            border-radius: 12px;
+            flex-wrap: wrap;
         }
         
         .filter-group {
@@ -341,1983 +232,826 @@
             font-size: 11px;
             color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
         
-        .filter-group select,
-        .filter-group input[type="text"] {
+        .filter-group select, .filter-group input {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
             padding: 8px 12px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 13px;
-            min-width: 150px;
-        }
-        
-        .filter-group select:focus,
-        .filter-group input:focus {
-            outline: none;
-            border-color: var(--accent-teal);
-        }
-        
-        /* Toggle Buttons */
-        .toggle-group {
-            display: flex;
-            background: var(--bg-secondary);
-            border-radius: 8px;
-            padding: 4px;
-        }
-        
-        .toggle-btn {
-            padding: 8px 16px;
-            background: transparent;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 13px;
-            font-weight: 500;
-            cursor: pointer;
             border-radius: 6px;
-            transition: all 0.2s;
-        }
-        
-        .toggle-btn.active {
-            background: var(--accent-teal);
-            color: var(--bg-deep);
-        }
-        
-        .toggle-btn:hover:not(.active) {
-            color: var(--text-primary);
-        }
-        
-        /* Sliders */
-        .slider-group {
-            margin-bottom: 16px;
-        }
-        
-        .slider-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .slider-label {
             font-size: 13px;
-            color: var(--text-secondary);
         }
         
-        .slider-value {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 13px;
-            color: var(--accent-teal);
-        }
-        
-        input[type="range"] {
-            width: 100%;
-            height: 6px;
+        /* Evidence box */
+        .evidence-box {
             background: var(--bg-secondary);
-            border-radius: 3px;
-            outline: none;
-            -webkit-appearance: none;
-        }
-        
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 16px;
-            height: 16px;
-            background: var(--accent-teal);
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        
-        /* 2x2 Matrix */
-        .matrix-container {
-            display: grid;
-            grid-template-columns: 40px 1fr 1fr;
-            grid-template-rows: auto 1fr 1fr 40px;
-            gap: 8px;
-            height: 500px;
-            margin-top: 16px;
-        }
-        
-        .matrix-y-label {
-            grid-column: 1;
-            grid-row: 2 / 4;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            transform: rotate(180deg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-        
-        .matrix-x-label {
-            grid-column: 2 / 4;
-            grid-row: 4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-        
-        .matrix-quadrant {
-            background: var(--bg-secondary);
-            border-radius: 12px;
+            border-radius: 8px;
             padding: 16px;
-            display: flex;
-            flex-direction: column;
-            overflow-y: auto;
+            margin-top: 12px;
+            border-left: 3px solid var(--accent-blue);
         }
         
-        .matrix-quadrant.top-left { grid-column: 2; grid-row: 2; border: 2px solid var(--warning); }
-        .matrix-quadrant.top-right { grid-column: 3; grid-row: 2; border: 2px solid var(--success); }
-        .matrix-quadrant.bottom-left { grid-column: 2; grid-row: 3; border: 2px solid var(--text-muted); }
-        .matrix-quadrant.bottom-right { grid-column: 3; grid-row: 3; border: 2px solid var(--accent-blue); }
-        
-        .quadrant-header {
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .quadrant-header.demand-boosters { color: var(--warning); }
-        .quadrant-header.core-drivers { color: var(--success); }
-        .quadrant-header.deprioritize { color: var(--text-muted); }
-        .quadrant-header.preference-drivers { color: var(--accent-blue); }
-        
-        .quadrant-item {
-            font-size: 12px;
-            padding: 6px 8px;
-            margin-bottom: 4px;
-            background: var(--bg-card);
-            border-radius: 6px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .quadrant-item-score {
-            font-family: 'JetBrains Mono', monospace;
+        .evidence-box .source {
             font-size: 11px;
-            color: var(--text-muted);
-        }
-        
-        /* Progress Bars */
-        .progress-bar {
-            height: 8px;
-            background: var(--bg-secondary);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            border-radius: 4px;
-            transition: width 0.3s;
-        }
-        
-        .progress-fill.teal { background: var(--accent-teal); }
-        .progress-fill.success { background: var(--success); }
-        .progress-fill.warning { background: var(--warning); }
-        .progress-fill.error { background: var(--error); }
-        
-        /* Two Track View */
-        .two-track {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-        
-        .track-panel {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-        }
-        
-        .track-panel.performance { border-top: 3px solid var(--accent-teal); }
-        .track-panel.opportunity { border-top: 3px solid var(--accent-purple); }
-        
-        .track-header {
-            margin-bottom: 16px;
-        }
-        
-        .track-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        
-        .track-title.performance { color: var(--accent-teal); }
-        .track-title.opportunity { color: var(--accent-purple); }
-        
-        .track-subtitle {
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-        
-        .track-requirements {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
+            color: var(--accent-blue);
             margin-top: 8px;
         }
         
-        .track-req {
-            font-size: 11px;
-            padding: 4px 8px;
-            background: var(--bg-secondary);
-            border-radius: 4px;
-            color: var(--text-muted);
-        }
-        
-        /* Methodology Section */
-        .methodology-grid {
+        /* MVP criteria cards */
+        .mvp-criteria {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
         }
         
-        .methodology-item {
+        .mvp-card {
             background: var(--bg-secondary);
-            border-radius: 12px;
             padding: 20px;
-        }
-        
-        .methodology-item h4 {
-            font-size: 14px;
-            color: var(--accent-teal);
-            margin-bottom: 12px;
-        }
-        
-        .methodology-item p {
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-        
-        .formula-box {
-            background: var(--bg-deep);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 16px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin-top: 12px;
-            overflow-x: auto;
-        }
-        
-        .formula-line {
-            margin: 4px 0;
-        }
-        
-        .formula-line .weight {
-            color: var(--accent-teal);
-        }
-        
-        .formula-line .source {
-            color: var(--text-muted);
-            font-size: 10px;
-        }
-        
-        /* Sensitivity Table */
-        .sensitivity-table {
-            width: 100%;
-            margin-top: 16px;
-        }
-        
-        .sensitivity-table tr.recommended {
-            background: rgba(0, 229, 199, 0.1);
-        }
-        
-        .sensitivity-table .highlight {
-            color: var(--accent-teal);
-            font-weight: 600;
-        }
-        
-        /* Discovery Cards */
-        .discovery-card {
-            background: var(--bg-secondary);
             border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 12px;
-            border-left: 3px solid var(--accent-purple);
-        }
-        
-        .discovery-card.factor-gap { border-left-color: var(--accent-teal); }
-        .discovery-card.cuisine-gap { border-left-color: var(--accent-orange); }
-        .discovery-card.partner-capability { border-left-color: var(--accent-purple); }
-        
-        .discovery-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-        }
-        
-        .discovery-title {
-            font-size: 14px;
-            font-weight: 600;
-        }
-        
-        .discovery-score {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 14px;
-            color: var(--accent-teal);
-        }
-        
-        .discovery-meta {
-            display: flex;
-            gap: 12px;
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-        }
-        
-        .discovery-reason {
-            font-size: 13px;
-            color: var(--text-muted);
-            font-style: italic;
-        }
-        
-        /* Buttons */
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
-            color: var(--bg-deep);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 229, 199, 0.3);
-        }
-        
-        .btn-secondary {
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            border: 1px solid var(--border);
-        }
-        
-        .btn-secondary:hover {
-            border-color: var(--accent-teal);
-        }
-        
-        /* Heatmap */
-        .heatmap-container {
-            overflow-x: auto;
-            margin-top: 16px;
-        }
-        
-        .heatmap {
-            display: grid;
-            gap: 2px;
-            font-size: 11px;
-        }
-        
-        .heatmap-cell {
-            padding: 8px 4px;
             text-align: center;
-            border-radius: 4px;
         }
         
-        .heatmap-cell.header {
-            background: var(--bg-secondary);
+        .mvp-card .number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--accent-teal);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .mvp-card .label {
+            font-size: 14px;
             font-weight: 600;
-            color: var(--text-secondary);
+            margin-bottom: 8px;
         }
         
-        .heatmap-cell.high { background: rgba(34, 197, 94, 0.3); color: var(--success); }
-        .heatmap-cell.medium { background: rgba(234, 179, 8, 0.3); color: var(--warning); }
-        .heatmap-cell.low { background: rgba(239, 68, 68, 0.2); color: var(--error); }
-        .heatmap-cell.none { background: var(--bg-secondary); color: var(--text-muted); }
+        .mvp-card .evidence {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
         
-        /* Loading */
-        .loading {
+        /* Kids happy indicator */
+        .kids-happy {
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 6px;
+        }
+        
+        .kids-happy-bar {
+            width: 60px;
+            height: 6px;
+            background: var(--bg-primary);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .kids-happy-fill {
+            height: 100%;
+            background: var(--success);
+            border-radius: 3px;
+        }
+        
+        .kids-happy-text {
+            font-size: 12px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .kids-happy-n {
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+        
+        /* Core cuisines */
+        .cuisine-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+        
+        .cuisine-card {
+            background: var(--bg-secondary);
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .cuisine-card .name {
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: capitalize;
+        }
+        
+        .cuisine-card .metric {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        .cuisine-card .metric strong {
+            color: var(--text-primary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        /* Quadrant display */
+        .quadrant-tag {
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: var(--bg-primary);
+            color: var(--text-muted);
+        }
+        
+        .quadrant-high-high { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+        .quadrant-high-low { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+        .quadrant-low-high { background: rgba(234, 179, 8, 0.2); color: #eab308; }
+        .quadrant-low-low { background: rgba(100, 116, 139, 0.2); color: #64748b; }
+        
+        /* Loading state */
+        .loading {
+            text-align: center;
             padding: 40px;
             color: var(--text-muted);
         }
         
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
+        /* Expandable details */
+        .expandable {
+            cursor: pointer;
         }
         
-        ::-webkit-scrollbar-track {
+        .details-row {
+            display: none;
             background: var(--bg-secondary);
         }
         
-        ::-webkit-scrollbar-thumb {
-            background: var(--border);
-            border-radius: 4px;
+        .details-row.show {
+            display: table-row;
         }
         
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--text-muted);
+        .details-content {
+            padding: 16px;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        .details-section h4 {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        
+        .details-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            padding: 4px 0;
+        }
+        
+        .details-item .label {
+            color: var(--text-secondary);
+        }
+        
+        .details-item .value {
+            font-family: 'JetBrains Mono', monospace;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-content">
             <div class="nav-brand">
-                <div class="nav-brand-icon">🍽️</div>
-                <h1>Dinneroo Analysis</h1>
+                <h1>🍽️ Dinneroo Analysis</h1>
             </div>
             <ul class="nav-tabs">
-                <li><a href="#executive" class="active" onclick="showPage('executive')">Executive Summary</a></li>
-                <li><a href="#cuisine" onclick="showPage('cuisine')">Cuisine Coverage</a></li>
-                <li><a href="#zones" onclick="showPage('zones')">Zone MVP Status</a></li>
-                <li><a href="#dishes" onclick="showPage('dishes')">Dish Prioritization</a></li>
-                <li><a href="#discovery" onclick="showPage('discovery')">Smart Discovery</a></li>
-                <li><a href="#methodology" onclick="showPage('methodology')">Methodology</a></li>
+                <li><a href="#dishes" class="active" onclick="showTab('dishes')">Priority Dishes</a></li>
+                <li><a href="#zones" onclick="showTab('zones')">Zone MVP</a></li>
+                <li><a href="#methodology" onclick="showTab('methodology')">Methodology</a></li>
             </ul>
-            <div class="nav-meta">
-                <span id="last-updated">Loading...</span>
-            </div>
         </div>
     </nav>
 
-    <!-- Page 1: Executive Summary -->
-    <div id="executive" class="page active">
-        <div class="page-header">
-            <h2>Executive Summary</h2>
-            <p>Key metrics and headline insights across all analysis dimensions</p>
-        </div>
-        
-        <div class="grid-4" id="exec-stats">
-            <div class="stat-card teal">
-                <div class="stat-value teal" id="total-dishes">--</div>
-                <div class="stat-label">Priority Dishes</div>
-            </div>
-            <div class="stat-card purple">
-                <div class="stat-value purple" id="total-zones">--</div>
-                <div class="stat-label">Zones Analyzed</div>
-            </div>
-            <div class="stat-card success">
-                <div class="stat-value success" id="mvp-zones">--</div>
-                <div class="stat-label">MVP Ready</div>
-            </div>
-            <div class="stat-card orange">
-                <div class="stat-value orange" id="discovery-dishes">--</div>
-                <div class="stat-label">Discovery Opportunities</div>
-            </div>
-        </div>
-        
-        <div class="grid-2">
-            <div class="card">
-                <h3><span class="icon">📊</span> Zone Status Distribution</h3>
-                <canvas id="zone-status-chart" height="200"></canvas>
-            </div>
-            <div class="card">
-                <h3><span class="icon">🎯</span> Dish Tier Distribution</h3>
-                <canvas id="dish-tier-chart" height="200"></canvas>
-            </div>
-        </div>
-        
-        <div class="grid-3">
-            <div class="card">
-                <h3><span class="icon">✅</span> Evidence Standards</h3>
-                <div class="methodology-item" style="background: transparent; padding: 0;">
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-                        <span class="evidence-badge validated">🟢 Validated</span>
-                        <span style="font-size: 12px; color: var(--text-secondary);">3+ sources - Strategic recommendations</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-                        <span class="evidence-badge corroborated">🟡 Corroborated</span>
-                        <span style="font-size: 12px; color: var(--text-secondary);">2 sources - Working hypotheses</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 8px;">
-                        <span class="evidence-badge single">🔵 Single</span>
-                        <span style="font-size: 12px; color: var(--text-secondary);">1 source - Exploratory only</span>
-                    </div>
+    <main class="main">
+        <!-- DISHES TAB -->
+        <div id="dishes" class="tab-content active">
+            <div class="stats-grid" id="dish-stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-dishes">--</div>
+                    <div class="stat-label">Total Dishes Analyzed</div>
+                </div>
+                <div class="stat-card" style="border-color: var(--success);">
+                    <div class="stat-value" style="color: var(--success);" id="must-have-count">--</div>
+                    <div class="stat-label">Must Have Dishes</div>
+                </div>
+                <div class="stat-card" style="border-color: var(--accent-blue);">
+                    <div class="stat-value" style="color: var(--accent-blue);" id="with-kids-happy">--</div>
+                    <div class="stat-label">With Kids Happy Data</div>
+                    <div class="stat-source">Source: Post-order survey</div>
+                </div>
+                <div class="stat-card" style="border-color: var(--accent-purple);">
+                    <div class="stat-value" style="color: var(--accent-purple);" id="with-latent-demand">--</div>
+                    <div class="stat-label">With Latent Demand</div>
+                    <div class="stat-source">Source: Open-text analysis</div>
                 </div>
             </div>
-            <div class="card">
-                <h3><span class="icon">🔑</span> Key Threshold Finding</h3>
-                <div style="text-align: center; padding: 20px 0;">
-                    <div style="font-size: 48px; font-weight: 700; color: var(--accent-teal);">+34%</div>
-                    <div style="font-size: 14px; color: var(--text-secondary); margin-top: 8px;">More orders with 5+ cuisines vs 4</div>
-                    <div class="evidence-badge validated" style="margin-top: 12px;">🟢 Validated (n=197 zones)</div>
-                </div>
-            </div>
-            <div class="card">
-                <h3><span class="icon">⚠️</span> Top Priority Gaps</h3>
-                <div id="top-gaps">
-                    <div class="discovery-card cuisine-gap" style="margin-bottom: 8px;">
-                        <div class="discovery-title" style="font-size: 13px;">Chinese Cuisine</div>
-                        <div style="font-size: 11px; color: var(--text-muted);">Supply Gap - 25 latent demand mentions</div>
-                    </div>
-                    <div class="discovery-card cuisine-gap" style="margin-bottom: 8px;">
-                        <div class="discovery-title" style="font-size: 13px;">Middle Eastern</div>
-                        <div style="font-size: 11px; color: var(--text-muted);">Supply Gap - Limited partner coverage</div>
-                    </div>
-                    <div class="discovery-card quality-gap" style="border-left-color: var(--warning);">
-                        <div class="discovery-title" style="font-size: 13px;">Mexican</div>
-                        <div style="font-size: 11px; color: var(--text-muted);">Quality Gap - Rating below benchmark</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Page 2: Cuisine Coverage -->
-    <div id="cuisine" class="page">
-        <div class="page-header">
-            <h2>Cuisine Coverage</h2>
-            <p>What we currently have in terms of cuisines across zones - granular breakdown with gap identification</p>
-        </div>
-        
-        <div class="grid-4" style="margin-bottom: 20px;">
-            <div class="stat-card teal">
-                <div class="stat-value teal" id="cuisines-ok">8</div>
-                <div class="stat-label">Cuisines OK</div>
-            </div>
-            <div class="stat-card warning">
-                <div class="stat-value warning" id="cuisines-quality">1</div>
-                <div class="stat-label">Quality Gaps</div>
-            </div>
-            <div class="stat-card orange">
-                <div class="stat-value orange" id="cuisines-supply">4</div>
-                <div class="stat-label">Supply Gaps</div>
-            </div>
-            <div class="stat-card purple">
-                <div class="stat-value purple">4.26</div>
-                <div class="stat-label">Benchmark Rating</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h3><span class="icon">🗺️</span> Cuisine Status Overview</h3>
-            <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
-                Core cuisines on Dinneroo: Asian, Italian, Indian, Healthy, Mexican, Middle Eastern, British
-            </p>
-            <div class="table-container">
-                <table id="cuisine-table">
-                    <thead>
-                        <tr>
-                            <th>Cuisine</th>
-                            <th>Status</th>
-                            <th>Gap Type</th>
-                            <th>Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Italian</td><td><span class="badge ok">✓ OK</span></td><td>-</td><td>Well covered - universal kid appeal</td></tr>
-                        <tr><td>Japanese/Asian</td><td><span class="badge ok">✓ OK</span></td><td>-</td><td>Well covered - top volume</td></tr>
-                        <tr><td>Indian</td><td><span class="badge ok">✓ OK</span></td><td>-</td><td>Good coverage - mild options for kids</td></tr>
-                        <tr><td>British</td><td><span class="badge ok">✓ OK</span></td><td>-</td><td>Adequate coverage</td></tr>
-                        <tr><td>Healthy/Fresh</td><td><span class="badge ok">✓ OK</span></td><td>-</td><td>Good coverage - balanced positioning</td></tr>
-                        <tr><td>Thai/Vietnamese</td><td><span class="badge ok">✓ OK</span></td><td>-</td><td>Good coverage - fresh perception</td></tr>
-                        <tr><td>Mexican</td><td><span class="badge quality-gap">Quality Gap</span></td><td>Rating &lt; 4.05</td><td>Partners exist but underperforming</td></tr>
-                        <tr><td>Chinese</td><td><span class="badge supply-gap">Supply Gap</span></td><td>&lt;30% avg items</td><td>High latent demand (25 mentions)</td></tr>
-                        <tr><td>Middle Eastern</td><td><span class="badge supply-gap">Supply Gap</span></td><td>&lt;30% avg items</td><td>Limited partner coverage</td></tr>
-                        <tr><td>French</td><td><span class="badge supply-gap">Supply Gap</span></td><td>&lt;30% avg items</td><td>Niche demand</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h3><span class="icon">🔍</span> Granular Cuisine Breakdown (Anna's Request)</h3>
-            <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
-                Breaking down broad categories into specific cuisines for better recruitment targeting
-            </p>
-            <div class="grid-3">
-                <div class="methodology-item">
-                    <h4>Asian → Split Into</h4>
-                    <ul style="font-size: 13px; color: var(--text-secondary); padding-left: 20px;">
-                        <li>Chinese <span class="badge supply-gap" style="font-size: 10px;">Gap</span></li>
-                        <li>Japanese <span class="badge ok" style="font-size: 10px;">OK</span></li>
-                        <li>Thai <span class="badge ok" style="font-size: 10px;">OK</span></li>
-                        <li>Vietnamese <span class="badge ok" style="font-size: 10px;">OK</span></li>
-                        <li>Korean <span class="badge supply-gap" style="font-size: 10px;">Gap</span></li>
-                    </ul>
-                </div>
-                <div class="methodology-item">
-                    <h4>New Categories to Consider</h4>
-                    <ul style="font-size: 13px; color: var(--text-secondary); padding-left: 20px;">
-                        <li>Grilled Chicken (Peri-Peri)</li>
-                        <li>Greek/Mediterranean</li>
-                        <li>British Comfort</li>
-                        <li>Caribbean</li>
-                        <li>Korean</li>
-                    </ul>
-                </div>
-                <div class="methodology-item">
-                    <h4>LLM Discovery Potential</h4>
-                    <p>Existing partners could potentially make dishes in gap cuisines. See Smart Discovery tab for specific opportunities.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Page 3: Zone MVP Status -->
-    <div id="zones" class="page">
-        <div class="page-header">
-            <h2>Zone MVP Status</h2>
-            <p>MVP = 5+ Partners + Required Cuisines + Minimum Dishes. Variety matters, not just partner count.</p>
-        </div>
-        
-        <div class="grid-4" style="margin-bottom: 20px;">
-            <div class="stat-card success">
-                <div class="stat-value success" id="zones-mvp">--</div>
-                <div class="stat-label">MVP Ready</div>
-            </div>
-            <div class="stat-card warning">
-                <div class="stat-value warning" id="zones-near">--</div>
-                <div class="stat-label">Near MVP</div>
-            </div>
-            <div class="stat-card orange">
-                <div class="stat-value orange" id="zones-developing">--</div>
-                <div class="stat-label">Developing</div>
-            </div>
-            <div class="stat-card blue">
-                <div class="stat-value blue" id="zones-early">--</div>
-                <div class="stat-label">Early Stage</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h3><span class="icon">📋</span> Zone MVP Requirements</h3>
-            <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
-                What a zone needs to be considered MVP-ready. Evidence from consumer surveys + normalized performance data.
-            </p>
-            
-            <!-- The 3 Requirements -->
-            <div class="grid-3" style="gap: 16px; margin-bottom: 20px;">
-                <div style="background: var(--bg-secondary); padding: 20px; border-radius: 12px; border-left: 4px solid var(--accent-teal);">
-                    <div style="font-size: 32px; font-weight: 700; color: var(--accent-teal);">5+</div>
-                    <div style="font-size: 14px; font-weight: 600; margin-bottom: 8px;">Partners</div>
-                    <div style="font-size: 11px; color: var(--text-muted);">
-                        <strong>Consumer:</strong> 17.3% cite "more variety" as top need<br>
-                        <strong>Performance:</strong> Zones with 5+ partners show +28% normalized orders vs 3-4 partners
-                    </div>
-                </div>
-                <div style="background: var(--bg-secondary); padding: 20px; border-radius: 12px; border-left: 4px solid var(--accent-purple);">
-                    <div style="font-size: 32px; font-weight: 700; color: var(--accent-purple);">5</div>
-                    <div style="font-size: 14px; font-weight: 600; margin-bottom: 8px;">Core Cuisines</div>
-                    <div style="font-size: 11px; color: var(--text-muted);">
-                        <strong>Consumer:</strong> Survey shows families want Italian, Indian, Asian, Chicken, Thai/Viet<br>
-                        <strong>Performance:</strong> +34% orders at 5 cuisines vs 4 (normalized)
-                    </div>
-                </div>
-                <div style="background: var(--bg-secondary); padding: 20px; border-radius: 12px; border-left: 4px solid var(--accent-orange);">
-                    <div style="font-size: 32px; font-weight: 700; color: var(--accent-orange);">3+</div>
-                    <div style="font-size: 14px; font-weight: 600; margin-bottom: 8px;">Tier 1 Dish Types</div>
-                    <div style="font-size: 11px; color: var(--text-muted);">
-                        <strong>Consumer:</strong> Top 5 dishes by "want" score from surveys<br>
-                        <strong>Performance:</strong> These dishes show highest normalized performance
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Tier 1 Dishes -->
-            <div style="padding: 16px; background: var(--bg-secondary); border-radius: 12px;">
-                <h4 style="font-size: 13px; color: var(--text-primary); margin-bottom: 12px;">Tier 1 Dish Types (need 3 of 5)</h4>
-                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                    <span class="badge tier-1">Grilled Chicken + Sides</span>
-                    <span class="badge tier-1">Margherita Pizza</span>
-                    <span class="badge tier-1">Mild Curry + Rice</span>
-                    <span class="badge tier-1">Pasta Bolognese</span>
-                    <span class="badge tier-1">Rice Bowl + Protein</span>
-                </div>
-                <div style="font-size: 11px; color: var(--text-muted); margin-top: 8px;">
-                    Selected based on: highest consumer want scores + highest normalized performance across zones
-                </div>
-            </div>
-        </div>
-        
-        <!-- 5 Core Cuisines with Evidence -->
-        <div class="card">
-            <h3><span class="icon">🍜</span> The 5 Core Cuisines</h3>
-            <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
-                Each cuisine selected based on <strong>consumer want</strong> (survey data) + <strong>normalized performance</strong> (orders adjusted for availability)
-            </p>
-            
-            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;">
-                <div style="background: var(--bg-secondary); padding: 16px; border-radius: 12px; border-top: 3px solid #ef4444;">
-                    <div style="font-size: 14px; font-weight: 600; color: #ef4444; margin-bottom: 8px;">🇮🇹 Italian</div>
-                    <div style="font-size: 11px; color: var(--text-muted);">
-                        <strong>Dishes:</strong> Pizza, Pasta, Garlic Bread<br>
-                        <strong>Want:</strong> 92% families say kids will eat it<br>
-                        <strong>Performance:</strong> Top 5 in 68% of zones where available
-                    </div>
-                </div>
-                <div style="background: var(--bg-secondary); padding: 16px; border-radius: 12px; border-top: 3px solid #f59e0b;">
-                    <div style="font-size: 14px; font-weight: 600; color: #f59e0b; margin-bottom: 8px;">🇮🇳 Indian</div>
-                    <div style="font-size: 11px; color: var(--text-muted);">
-                        <strong>Dishes:</strong> Tikka Masala, Korma, Naan<br>
-                        <strong>Want:</strong> 85% satisfaction, "great portions"<br>
-                        <strong>Performance:</strong> 4.66★ rating, top 5 in 72% zones
-                    </div>
-                </div>
-                <div style="background: var(--bg-secondary); padding: 16px; border-radius: 12px; border-top: 3px solid #ec4899;">
-                    <div style="font-size: 14px; font-weight: 600; color: #ec4899; margin-bottom: 8px;">🇯🇵 Japanese/Asian</div>
-                    <div style="font-size: 11px; color: var(--text-muted);">
-                        <strong>Dishes:</strong> Katsu, Rice Bowls, Gyoza<br>
-                        <strong>Want:</strong> 89% kids happy rate in survey<br>
-                        <strong>Performance:</strong> #1 in 34% of zones, top 5 in 78%
-                    </div>
-                </div>
-                <div style="background: var(--bg-secondary); padding: 16px; border-radius: 12px; border-top: 3px solid #22c55e;">
-                    <div style="font-size: 14px; font-weight: 600; color: #22c55e; margin-bottom: 8px;">🍗 Grilled Chicken</div>
-                    <div style="font-size: 11px; color: var(--text-muted);">
-                        <strong>Dishes:</strong> Chicken + Sides, Wraps<br>
-                        <strong>Want:</strong> 48 open-text mentions, "balanced meal"<br>
-                        <strong>Performance:</strong> Limited availability - high opportunity
-                    </div>
-                </div>
-                <div style="background: var(--bg-secondary); padding: 16px; border-radius: 12px; border-top: 3px solid #06b6d4;">
-                    <div style="font-size: 14px; font-weight: 600; color: #06b6d4; margin-bottom: 8px;">🇻🇳 Thai/Vietnamese</div>
-                    <div style="font-size: 11px; color: var(--text-muted);">
-                        <strong>Dishes:</strong> Pad Thai, Pho, Spring Rolls<br>
-                        <strong>Want:</strong> "Healthy" perception in surveys<br>
-                        <strong>Performance:</strong> 4.55★, top 5 in 65% of zones
-                    </div>
-                </div>
-            </div>
-            
-            <div style="margin-top: 16px; padding: 12px; background: rgba(34, 197, 94, 0.1); border-radius: 8px; border: 1px solid rgba(34, 197, 94, 0.3);">
-                <div style="font-size: 12px; color: var(--success);">
-                    <strong>Important:</strong> 5 partners ≠ 5 cuisines. A zone needs BOTH 5+ partners AND coverage of these 5 cuisine types.
-                </div>
-            </div>
-        </div>
-        
-        
-        <div class="card">
-            <h3><span class="icon">📍</span> Zone List</h3>
-            <div class="filters">
-                <div class="filter-group">
-                    <label>Status</label>
-                    <select id="zone-status-filter" onchange="filterZones()">
-                        <option value="all">All Statuses</option>
-                        <option value="mvp">MVP Ready</option>
-                        <option value="near">Near MVP</option>
-                        <option value="developing">Developing</option>
-                        <option value="early">Early Stage</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Gap Type</label>
-                    <select id="zone-gap-filter" onchange="filterZones()">
-                        <option value="all">All Gaps</option>
-                        <option value="supply">Supply Gap</option>
-                        <option value="quality">Quality Gap</option>
-                        <option value="none">No Gap</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Search</label>
-                    <input type="text" id="zone-search" placeholder="Search zones..." oninput="filterZones()">
-                </div>
-            </div>
-            <div class="table-container" style="max-height: 500px; overflow-y: auto;">
-                <table id="zone-table">
-                    <thead>
-                        <tr>
-                            <th>Zone</th>
-                            <th>Status</th>
-                            <th>Partners</th>
-                            <th>Cuisines</th>
-                            <th>Health Score</th>
-                            <th>Gap Type</th>
-                        </tr>
-                    </thead>
-                    <tbody id="zone-tbody">
-                        <tr><td colspan="6" class="loading">Loading zone data...</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <!-- Page 4: Dish Prioritization -->
-    <div id="dishes" class="page">
-        <div class="page-header">
-            <h2>Dish Prioritization</h2>
-            <p>Two-Track scoring (Performance vs Opportunity) with adjustable 13-factor weights and 2x2 matrix</p>
-        </div>
-        
-        <!-- Two Track View -->
-        <div class="two-track" style="margin-bottom: 24px;">
-            <div class="track-panel performance">
-                <div class="track-header">
-                    <div class="track-title performance">Track A: Performance Score</div>
-                    <div class="track-subtitle">"How well is this dish doing?"</div>
-                    <div class="track-requirements">
-                        <span class="track-req">✓ 50+ orders required</span>
-                        <span class="track-req">✓ Repeat rate, rating, satisfaction</span>
-                    </div>
-                </div>
-                <p style="font-size: 12px; color: var(--text-muted);">Used to: Identify winners to expand, underperformers to fix</p>
-            </div>
-            <div class="track-panel opportunity">
-                <div class="track-header">
-                    <div class="track-title opportunity">Track B: Opportunity Score</div>
-                    <div class="track-subtitle">"How much do families want this?"</div>
-                    <div class="track-requirements">
-                        <span class="track-req">✓ ALL dishes eligible</span>
-                        <span class="track-req">✓ Latent demand, fit, partner capability</span>
-                    </div>
-                </div>
-                <p style="font-size: 12px; color: var(--text-muted);">Used to: Identify gaps to fill, new dishes to recruit</p>
-            </div>
-        </div>
-        
-        <div class="grid-2">
-            <!-- 2x2 Matrix -->
             <div class="card">
-                <h3><span class="icon">📊</span> Consumer Want vs Performance</h3>
-                <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
-                    X-axis: What families WANT (survey + open-text) | Y-axis: Normalized performance (orders/zones, ratings)
-                </p>
-                <div class="matrix-container">
-                    <div class="matrix-y-label">← LOW PERFORMANCE &nbsp;&nbsp;&nbsp; HIGH PERFORMANCE →</div>
-                    <div class="matrix-quadrant top-left">
-                        <div class="quadrant-header demand-boosters">🟡 QUESTION MARKS</div>
-                        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">High perf, low want - why is it selling?</div>
-                        <div id="quadrant-demand-boosters"></div>
-                    </div>
-                    <div class="matrix-quadrant top-right">
-                        <div class="quadrant-header core-drivers">🟢 CORE DRIVERS</div>
-                        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">High want + high perf - PROTECT & EXPAND</div>
-                        <div id="quadrant-core-drivers"></div>
-                    </div>
-                    <div class="matrix-quadrant bottom-left">
-                        <div class="quadrant-header deprioritize">⚪ DEPRIORITIZE</div>
-                        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">Low want + low perf - consider removal</div>
-                        <div id="quadrant-deprioritize"></div>
-                    </div>
-                    <div class="matrix-quadrant bottom-right">
-                        <div class="quadrant-header preference-drivers">🔵 OPPORTUNITIES</div>
-                        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px;">High want, low/no perf - RECRUIT OR FIX</div>
-                        <div id="quadrant-preference-drivers"></div>
-                    </div>
-                    <div class="matrix-x-label">← LOW WANT &nbsp;&nbsp;&nbsp; HIGH WANT →</div>
-                </div>
-            </div>
-            
-            <!-- Scoring Explanation -->
-            <div class="card">
-                <h3><span class="icon">📐</span> How We Score Dishes</h3>
+                <h3>📊 Priority Dishes</h3>
                 <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
-                    Two simple scores tell the whole story:
+                    Dishes ranked by priority score. Includes both dishes on Dinneroo (with performance data) and latent demand opportunities (not yet available).
+                    Click a row to see full evidence breakdown.
                 </p>
                 
-                <div class="grid-2" style="gap: 16px; margin-bottom: 16px;">
-                    <div style="background: var(--bg-secondary); padding: 16px; border-radius: 12px; border-left: 4px solid var(--accent-purple);">
-                        <div style="font-size: 16px; font-weight: 700; color: var(--accent-purple);">Want Score</div>
-                        <div style="font-size: 12px; color: var(--text-secondary); margin-top: 8px;">
-                            "Do families want this?"<br><br>
-                            <strong>Sources:</strong><br>
-                            • Survey data (what families say)<br>
-                            • Open-text mentions (n=2,796)<br>
-                            • Latent demand signals
-                        </div>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Tier</label>
+                        <select id="tier-filter" onchange="renderDishTable()">
+                            <option value="all">All Tiers</option>
+                            <option value="Must Have">Must Have</option>
+                            <option value="Nice to Have">Nice to Have</option>
+                            <option value="Monitor">Monitor</option>
+                        </select>
                     </div>
-                    <div style="background: var(--bg-secondary); padding: 16px; border-radius: 12px; border-left: 4px solid var(--accent-teal);">
-                        <div style="font-size: 16px; font-weight: 700; color: var(--accent-teal);">Performance Score</div>
-                        <div style="font-size: 12px; color: var(--text-secondary); margin-top: 8px;">
-                            "Is it doing well?"<br><br>
-                            <strong>Sources:</strong><br>
-                            • Normalized orders/zones<br>
-                            • Zone ranking (% #1, % top 5)<br>
-                            • Rating (4.5+ threshold)
-                        </div>
+                    <div class="filter-group">
+                        <label>Availability</label>
+                        <select id="availability-filter" onchange="renderDishTable()">
+                            <option value="all">All</option>
+                            <option value="on-dinneroo">On Dinneroo</option>
+                            <option value="latent-demand">Latent Demand Only</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Evidence Level</label>
+                        <select id="evidence-filter" onchange="renderDishTable()">
+                            <option value="all">All Levels</option>
+                            <option value="Validated">Validated (3+ sources)</option>
+                            <option value="Corroborated">Corroborated (2 sources)</option>
+                            <option value="Single">Single Source</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Search</label>
+                        <input type="text" id="dish-search" placeholder="Search dishes..." oninput="renderDishTable()">
                     </div>
                 </div>
                 
-                <div style="padding: 12px; background: rgba(34, 197, 94, 0.1); border-radius: 8px; border: 1px solid rgba(34, 197, 94, 0.3);">
-                    <div style="font-size: 12px; color: var(--success);">
-                        <strong>Key insight:</strong> Dishes NOT on Dinneroo have Want Score but no Performance Score - they appear as <strong>Opportunities</strong> in the quadrant.
-                    </div>
-                </div>
-                
-                <div style="margin-top: 16px;">
-                    <div class="toggle-group">
-                        <button class="toggle-btn active" onclick="setAvailabilityFilter('all')">All Dishes</button>
-                        <button class="toggle-btn" onclick="setAvailabilityFilter('have')">On Menu</button>
-                        <button class="toggle-btn" onclick="setAvailabilityFilter('dont-have')">Not on Menu</button>
-                    </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Dish</th>
+                                <th>Tier</th>
+                                <th>Priority</th>
+                                <th>Kids Happy</th>
+                                <th>On Dinneroo</th>
+                                <th>Quadrant</th>
+                                <th>Evidence</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dish-tbody">
+                            <tr><td colspan="8" class="loading">Loading dishes...</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-        
-        <!-- Dish Table -->
-        <div class="card">
-            <h3><span class="icon">🍽️</span> Priority Dishes - With Reasoning</h3>
-            <div class="filters">
-                <div class="filter-group">
-                    <label>Tier</label>
-                    <select id="dish-tier-filter" onchange="filterDishes()">
-                        <option value="all">All Tiers</option>
-                        <option value="1">Tier 1: Must-Have</option>
-                        <option value="2">Tier 2: Should-Have</option>
-                        <option value="3">Tier 3: Nice-to-Have</option>
-                        <option value="4">Tier 4: Monitor</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Cuisine</label>
-                    <select id="dish-cuisine-filter" onchange="filterDishes()">
-                        <option value="all">All Cuisines</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Search</label>
-                    <input type="text" id="dish-search" placeholder="Search dishes..." oninput="filterDishes()">
-                </div>
-            </div>
-            <div class="table-container" style="max-height: 500px; overflow-y: auto;">
-                <table id="dish-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 40px;">Rank</th>
-                            <th style="width: 200px;">Dish Type</th>
-                            <th>Cuisine</th>
-                            <th style="width: 80px;">Want Score</th>
-                            <th style="width: 80px;">Perf Score</th>
-                            <th>Quadrant</th>
-                            <th>On Menu</th>
-                        </tr>
-                    </thead>
-                    <tbody id="dish-tbody">
-                        <tr><td colspan="7" class="loading">Loading dish data...</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
 
-    <!-- Page 5: Smart Discovery -->
-    <div id="discovery" class="page">
-        <div class="page-header">
-            <h2>Smart Discovery</h2>
-            <p>LLM-identified opportunities: dishes existing partners COULD make but don't currently offer</p>
-        </div>
-        
-        <div class="grid-3" style="margin-bottom: 20px;">
-            <div class="stat-card teal">
-                <div class="stat-value teal" id="discovery-total">37</div>
-                <div class="stat-label">Discovery Dishes</div>
-            </div>
-            <div class="stat-card purple">
-                <div class="stat-value purple" id="discovery-partner">--</div>
-                <div class="stat-label">Partner Capability</div>
-            </div>
-            <div class="stat-card orange">
-                <div class="stat-value orange" id="discovery-recruit">--</div>
-                <div class="stat-label">Recruitment Needed</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h3><span class="icon">🔍</span> Discovery Sources</h3>
-            <div class="grid-3" style="margin-top: 16px;">
-                <div class="methodology-item" style="border-left: 3px solid var(--accent-teal);">
-                    <h4 style="color: var(--accent-teal);">Factor Gap</h4>
-                    <p>Dishes that fill unmet family meal needs (e.g., vegetarian protein options)</p>
-                </div>
-                <div class="methodology-item" style="border-left: 3px solid var(--accent-orange);">
-                    <h4 style="color: var(--accent-orange);">Cuisine Gap</h4>
-                    <p>Dishes in cuisines with supply/quality gaps (e.g., Chinese family meals)</p>
-                </div>
-                <div class="methodology-item" style="border-left: 3px solid var(--accent-purple);">
-                    <h4 style="color: var(--accent-purple);">Partner Capability</h4>
-                    <p>Dishes existing partners could realistically make (e.g., Dishoom → Biryani)</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h3><span class="icon">💡</span> Discovery Dishes</h3>
-            <div class="filters">
-                <div class="filter-group">
-                    <label>Source</label>
-                    <select id="discovery-source-filter" onchange="filterDiscovery()">
-                        <option value="all">All Sources</option>
-                        <option value="Factor Gap">Factor Gap</option>
-                        <option value="Cuisine Gap">Cuisine Gap</option>
-                        <option value="Partner Capability">Partner Capability</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Recruitment</label>
-                    <select id="discovery-recruit-filter" onchange="filterDiscovery()">
-                        <option value="all">All</option>
-                        <option value="no">Existing Partners</option>
-                        <option value="yes">Recruitment Needed</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Search</label>
-                    <input type="text" id="discovery-search" placeholder="Search dishes..." oninput="filterDiscovery()">
-                </div>
-            </div>
-            <div id="discovery-list" style="max-height: 600px; overflow-y: auto;">
-                <div class="loading">Loading discovery data...</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Page 6: Methodology -->
-    <div id="methodology" class="page">
-        <div class="page-header">
-            <h2>Methodology & Evidence</h2>
-            <p>How we scored dishes and zones - threshold sensitivity, evidence standards, and bias handling</p>
-        </div>
-        
-        <div class="grid-2">
+        <!-- ZONES TAB -->
+        <div id="zones" class="tab-content">
             <div class="card">
-                <h3><span class="icon">📈</span> Threshold Sensitivity Analysis</h3>
+                <h3>📋 MVP Criteria - Selection Requirements</h3>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">
+                    What a zone needs to be considered MVP-ready. Each threshold is backed by behavioral data showing impact on orders and satisfaction.
+                </p>
+                
+                <div class="mvp-criteria" id="mvp-criteria">
+                    <div class="mvp-card">
+                        <div class="number" id="mvp-cuisines">5</div>
+                        <div class="label">Core Cuisines</div>
+                        <div class="evidence" id="cuisine-evidence">Loading...</div>
+                    </div>
+                    <div class="mvp-card">
+                        <div class="number" id="mvp-partners">5+</div>
+                        <div class="label">Partners</div>
+                        <div class="evidence" id="partner-evidence">Loading...</div>
+                    </div>
+                    <div class="mvp-card">
+                        <div class="number">3+</div>
+                        <div class="label">Tier 1 Dish Types</div>
+                        <div class="evidence">Katsu, Pho, Pizza/Pasta, Curry, Rice Bowls</div>
+                    </div>
+                </div>
+                
+                <div class="evidence-box">
+                    <strong>Why these thresholds?</strong>
+                    <p style="font-size: 13px; margin-top: 8px;" id="variety-evidence">Loading...</p>
+                    <div class="source" id="variety-source"></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🍜 Core Cuisines by Performance</h3>
                 <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
-                    Evidence that cuisine variety drives performance
+                    Top cuisines ranked by repeat rate (families coming back). These are the cuisines every MVP zone should have.
                 </p>
-                <table class="sensitivity-table">
-                    <thead>
-                        <tr>
-                            <th>Cuisines</th>
-                            <th>Zones</th>
-                            <th>Avg Orders</th>
-                            <th>vs Baseline</th>
-                        </tr>
-                    </thead>
-                    <tbody id="sensitivity-tbody">
-                        <tr><td>1</td><td>65</td><td>42</td><td>Baseline</td></tr>
-                        <tr><td>2</td><td>37</td><td>171</td><td>+309%</td></tr>
-                        <tr><td>3</td><td>30</td><td>404</td><td>+867%</td></tr>
-                        <tr><td>4</td><td>24</td><td>511</td><td>+1123%</td></tr>
-                        <tr class="recommended"><td class="highlight">5</td><td>13</td><td class="highlight">685</td><td class="highlight">+1539%</td></tr>
-                        <tr><td>6</td><td>11</td><td>797</td><td>+1807%</td></tr>
-                        <tr><td>7</td><td>8</td><td>946</td><td>+2164%</td></tr>
-                    </tbody>
-                </table>
-                <div class="evidence-badge validated" style="margin-top: 12px;">🟢 Validated (n=197 zones)</div>
+                <div class="cuisine-grid" id="cuisine-grid">
+                    <div class="loading">Loading cuisines...</div>
+                </div>
             </div>
             
             <div class="card">
-                <h3><span class="icon">✅</span> Evidence Standards</h3>
-                <div class="methodology-grid" style="grid-template-columns: 1fr;">
-                    <div class="methodology-item">
-                        <h4>🟢 Validated</h4>
-                        <p>3+ independent sources OR quant+qual. Use for strategic recommendations and stakeholder presentations.</p>
+                <h3>📍 Zone Status</h3>
+                <div class="stats-grid" id="zone-stats" style="margin-bottom: 20px;">
+                    <div class="stat-card">
+                        <div class="stat-value" id="total-zones">--</div>
+                        <div class="stat-label">Total Zones</div>
                     </div>
-                    <div class="methodology-item">
-                        <h4>🟡 Corroborated</h4>
-                        <p>2 independent sources. Use for working hypotheses and internal analysis.</p>
+                    <div class="stat-card" style="border-color: var(--success);">
+                        <div class="stat-value" style="color: var(--success);" id="mvp-ready">--</div>
+                        <div class="stat-label">MVP Ready</div>
                     </div>
-                    <div class="methodology-item">
-                        <h4>🔵 Single</h4>
-                        <p>One data source only. Use for exploratory findings and hypothesis generation only.</p>
+                    <div class="stat-card" style="border-color: var(--error);">
+                        <div class="stat-value" style="color: var(--error);" id="high-priority">--</div>
+                        <div class="stat-label">High Priority Gaps</div>
                     </div>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select id="zone-status-filter" onchange="renderZoneTable()">
+                            <option value="all">All Zones</option>
+                            <option value="mvp">MVP Ready</option>
+                            <option value="not-mvp">Not MVP</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Priority</label>
+                        <select id="zone-priority-filter" onchange="renderZoneTable()">
+                            <option value="all">All Priorities</option>
+                            <option value="High">High Priority</option>
+                            <option value="Medium">Medium Priority</option>
+                            <option value="Low">Low Priority</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Zone</th>
+                                <th>Orders</th>
+                                <th>Partners</th>
+                                <th>Cuisines</th>
+                                <th>MVP Status</th>
+                                <th>Missing Cuisines</th>
+                                <th>Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody id="zone-tbody">
+                            <tr><td colspan="7" class="loading">Loading zones...</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-        
-        <div class="card">
-            <h3><span class="icon">⚠️</span> Survivorship Bias Handling</h3>
-            <div class="grid-3">
-                <div class="methodology-item">
-                    <h4>The Problem</h4>
-                    <p>Order volume shows what works among AVAILABLE options, not what families WANT. Top-performing dishes are top performers OF WHAT WE HAVE.</p>
-                </div>
-                <div class="methodology-item">
-                    <h4>Evidence</h4>
-                    <p>Open-text analysis (n=2,796) revealed: Vegetarian options (87 mentions), Mild kids options (48), Chinese cuisine (25), Fish & Chips (7 - zero availability).</p>
-                </div>
-                <div class="methodology-item">
-                    <h4>Mitigation</h4>
-                    <p>Track B scores unavailable dishes on opportunity (not performance). Latent demand analysis captures unmet needs. Smart Discovery identifies what partners COULD make.</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="grid-2">
+
+        <!-- METHODOLOGY TAB -->
+        <div id="methodology" class="tab-content">
             <div class="card">
-                <h3><span class="icon">🎯</span> Two-Track Scoring Interpretation</h3>
-                <table style="margin-top: 16px;">
+                <h3>📐 Data Sources</h3>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
+                    This dashboard merges multiple data sources to provide evidence-backed recommendations.
+                </p>
+                
+                <table>
                     <thead>
                         <tr>
-                            <th>Track A (Performance)</th>
-                            <th>Track B (Opportunity)</th>
-                            <th>Interpretation</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="badge tier-1">High</span></td>
-                            <td>Any</td>
-                            <td>Proven winner</td>
-                            <td><strong>EXPAND</strong> to more zones</td>
-                        </tr>
-                        <tr>
-                            <td><span class="badge tier-4">N/A</span></td>
-                            <td><span class="badge tier-1">High</span></td>
-                            <td>High-demand gap</td>
-                            <td><strong>RECRUIT</strong> partners</td>
-                        </tr>
-                        <tr>
-                            <td><span class="badge tier-4">Low</span></td>
-                            <td><span class="badge tier-1">High</span></td>
-                            <td>Something's wrong</td>
-                            <td><strong>INVESTIGATE</strong> mismatch</td>
-                        </tr>
-                        <tr>
-                            <td><span class="badge tier-4">Low</span></td>
-                            <td><span class="badge tier-4">Low</span></td>
-                            <td>Not working, not wanted</td>
-                            <td><strong>FIX</strong> or deprioritize</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="card">
-                <h3><span class="icon">📊</span> Sample Size Requirements</h3>
-                <table style="margin-top: 16px;">
-                    <thead>
-                        <tr>
+                            <th>Source</th>
+                            <th>What It Contains</th>
                             <th>Sample Size</th>
-                            <th>Reliability</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>n &lt; 20</td>
-                            <td><span class="badge supply-gap">❌ Unreliable</span></td>
-                            <td>Do not report</td>
+                            <td><strong>Anna's Coverage Matrix</strong></td>
+                            <td>Dish importance, coverage, quadrant, action</td>
+                            <td>86 dishes</td>
                         </tr>
                         <tr>
-                            <td>n = 20-50</td>
-                            <td><span class="badge quality-gap">⚠️ Directional</span></td>
-                            <td>Report with caveat</td>
+                            <td><strong>Track A Performance</strong></td>
+                            <td>kids_happy rate, adult_satisfaction, ratings with sample sizes</td>
+                            <td>22 dish types measured</td>
                         </tr>
                         <tr>
-                            <td>n = 50-100</td>
-                            <td><span class="badge tier-3">✓ Moderate</span></td>
-                            <td>Report as finding</td>
+                            <td><strong>Track B Opportunity</strong></td>
+                            <td>Latent demand mentions, 10-factor framework scores</td>
+                            <td>48 dish types scored</td>
                         </tr>
                         <tr>
-                            <td>n &gt; 100</td>
-                            <td><span class="badge ok">✓✓ Strong</span></td>
-                            <td>Report confidently</td>
+                            <td><strong>Threshold Sensitivity</strong></td>
+                            <td>Cuisine/partner count impact on orders and rating</td>
+                            <td>197 zones analyzed</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cuisine Performance</strong></td>
+                            <td>Repeat rates and ratings by cuisine</td>
+                            <td>~80,000 orders</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zone Gap Report</strong></td>
+                            <td>Per-zone missing cuisines and dish types</td>
+                            <td>100 zones</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            
+            <div class="card">
+                <h3>🔬 Evidence Levels</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Definition</th>
+                            <th>Use For</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge badge-validated">🟢 Validated</span></td>
+                            <td>3+ independent sources (e.g., survey + ratings + orders)</td>
+                            <td>Strategic recommendations, stakeholder presentations</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-corroborated">🟡 Corroborated</span></td>
+                            <td>2 independent sources</td>
+                            <td>Working hypotheses, internal analysis</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-single">🔵 Single</span></td>
+                            <td>One data source only</td>
+                            <td>Exploratory findings, hypothesis generation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="card">
+                <h3>⚠️ Survivorship Bias Mitigation</h3>
+                <div class="evidence-box">
+                    <strong>The Problem:</strong> Order volume only shows what works among AVAILABLE options, not what families WANT.
+                    <p style="margin-top: 12px; font-size: 13px;">
+                        <strong>Our Solution:</strong> Two-track scoring system:
+                    </p>
+                    <ul style="margin-top: 8px; margin-left: 20px; font-size: 13px; color: var(--text-secondary);">
+                        <li><strong>Track A (Performance):</strong> Measures how well available dishes perform (ratings, kids_happy, satisfaction)</li>
+                        <li><strong>Track B (Opportunity):</strong> Scores all dish types including unavailable ones based on latent demand, family fit framework, and partner capability</li>
+                    </ul>
+                    <p style="margin-top: 12px; font-size: 13px;">
+                        This ensures dishes like "Chinese Family Meal" (58 latent demand mentions, not on Dinneroo) appear in recommendations.
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 
     <script>
-        // ========================================
-        // EMBEDDED DATA - Self-contained dashboard
-        // ========================================
-        
-        // Priority Dishes Data - with Want Score and Performance Score
-        // Want Score: Based on survey data, open-text mentions, latent demand (1-5)
-        // Performance Score: Based on normalized orders/zones, ratings (1-5, 0 if not on menu)
-        const EMBEDDED_DISHES = [
-            {"rank":1,"name":"Family Chicken Katsu (Wagamama)","cuisine":"Japanese","want_score":4.8,"performance_score":4.5,"on_menu":true},
-            {"rank":2,"name":"Pho the Whole Fam (Pho)","cuisine":"Vietnamese","want_score":4.6,"performance_score":4.6,"on_menu":true},
-            {"rank":3,"name":"Dishoom Chicken Ruby","cuisine":"Indian","want_score":4.5,"performance_score":4.8,"on_menu":true},
-            {"rank":4,"name":"Grilled Chicken Family Platter with Sides","cuisine":"Grilled Chicken","want_score":4.8,"performance_score":0,"on_menu":false},
-            {"rank":5,"name":"Mix n Match Rice Bowl Bundle (Banana Tree)","cuisine":"Thai","want_score":4.4,"performance_score":4.4,"on_menu":true},
-            {"rank":6,"name":"Margherita Pizza Family Bundle","cuisine":"Italian","want_score":4.6,"performance_score":4.0,"on_menu":true},
-            {"rank":7,"name":"Fajita Family Kit","cuisine":"Mexican","want_score":4.5,"performance_score":3.8,"on_menu":true},
-            {"rank":8,"name":"Mild Chicken Tikka Masala Family Feast","cuisine":"Indian","want_score":4.6,"performance_score":4.6,"on_menu":true},
-            {"rank":9,"name":"Pasta Bolognese Family Bundle","cuisine":"Italian","want_score":4.4,"performance_score":4.2,"on_menu":true},
-            {"rank":10,"name":"Sushi Family Feast (Itsu)","cuisine":"Japanese","want_score":3.8,"performance_score":4.5,"on_menu":true},
-            {"rank":11,"name":"Fish & Chips Family Bucket","cuisine":"British","want_score":4.2,"performance_score":0,"on_menu":false},
-            {"rank":12,"name":"Halloumi Wrap Family Box","cuisine":"Mediterranean","want_score":4.3,"performance_score":3.6,"on_menu":true},
-            {"rank":13,"name":"Pad Thai Bundle For Four (Banana Tree)","cuisine":"Thai","want_score":4.2,"performance_score":4.6,"on_menu":true},
-            {"rank":14,"name":"Greek Mezze Family Feast","cuisine":"Mediterranean","want_score":4.0,"performance_score":0,"on_menu":false},
-            {"rank":15,"name":"Dim Sum Family Selection","cuisine":"Chinese","want_score":4.1,"performance_score":0,"on_menu":false},
-            {"rank":16,"name":"Family Favourites Feast (LEON)","cuisine":"Healthy/Fresh","want_score":4.0,"performance_score":4.1,"on_menu":true},
-            {"rank":17,"name":"Butter Chicken Family Feast","cuisine":"Indian","want_score":4.2,"performance_score":3.6,"on_menu":true},
-            {"rank":18,"name":"Rotisserie Chicken Family Feast","cuisine":"Grilled Chicken","want_score":4.5,"performance_score":0,"on_menu":false},
-            {"rank":19,"name":"Biryani Family Pot (Dishoom)","cuisine":"Indian","want_score":3.8,"performance_score":4.5,"on_menu":true},
-            {"rank":20,"name":"Family Sticky Chicken Bundle (Giggling Squid)","cuisine":"Thai","want_score":3.9,"performance_score":4.3,"on_menu":true},
-            {"rank":21,"name":"Sweet & Sour Chicken Family Meal","cuisine":"Chinese","want_score":3.8,"performance_score":3.4,"on_menu":true},
-            {"rank":22,"name":"Teriyaki Rice Bowl Family Bundle","cuisine":"Japanese","want_score":3.7,"performance_score":3.6,"on_menu":true},
-            {"rank":23,"name":"Quesadilla Family Pack","cuisine":"Mexican","want_score":3.6,"performance_score":2.8,"on_menu":true},
-            {"rank":24,"name":"Roast Dinner Family Platter","cuisine":"British","want_score":3.8,"performance_score":0,"on_menu":false},
-            {"rank":25,"name":"Lasagne Classica Sharer","cuisine":"Italian","want_score":3.9,"performance_score":4.0,"on_menu":true},
-            {"rank":26,"name":"Chicken Chow Mein Family Bundle","cuisine":"Chinese","want_score":3.7,"performance_score":0,"on_menu":false},
-            {"rank":27,"name":"Mac & Cheese Family Portion","cuisine":"Other","want_score":3.5,"performance_score":4.4,"on_menu":true},
-            {"rank":28,"name":"Shepherd's Pie Family Portion","cuisine":"British","want_score":3.4,"performance_score":2.8,"on_menu":true},
-            {"rank":29,"name":"Veggie Fajita Family Kit","cuisine":"Mexican","want_score":4.0,"performance_score":2.8,"on_menu":true},
-            {"rank":30,"name":"Build Your Own Grain Bowl Family Pack","cuisine":"Healthy/Fresh","want_score":3.6,"performance_score":3.0,"on_menu":true},
-            {"rank":31,"name":"Katsu Curry (Standard)","cuisine":"Japanese","want_score":3.2,"performance_score":4.3,"on_menu":true},
-            {"rank":32,"name":"Ramen Family Bowl","cuisine":"Japanese","want_score":3.4,"performance_score":3.2,"on_menu":true},
-            {"rank":33,"name":"Shawarma Family Platter","cuisine":"Middle Eastern","want_score":3.5,"performance_score":4.6,"on_menu":true},
-            {"rank":34,"name":"Falafel & Hummus Family Box","cuisine":"Middle Eastern","want_score":3.8,"performance_score":0,"on_menu":false},
-            {"rank":35,"name":"Chicken Pie with Mash & Veg","cuisine":"British","want_score":3.6,"performance_score":0,"on_menu":false},
-            {"rank":36,"name":"Pizza (Standard)","cuisine":"Italian","want_score":3.0,"performance_score":3.6,"on_menu":true},
-            {"rank":37,"name":"Tacos Family Pack","cuisine":"Mexican","want_score":3.2,"performance_score":3.0,"on_menu":true},
-            {"rank":38,"name":"Korean Fried Chicken","cuisine":"Korean","want_score":2.8,"performance_score":3.2,"on_menu":true},
-            {"rank":39,"name":"Burger Family Meal","cuisine":"American","want_score":2.6,"performance_score":2.4,"on_menu":true},
-            {"rank":40,"name":"Poke Bowl Family Pack","cuisine":"Healthy/Fresh","want_score":2.8,"performance_score":2.2,"on_menu":true},
-            {"rank":41,"name":"Bibimbap Family Bundle","cuisine":"Korean","want_score":2.6,"performance_score":0,"on_menu":false},
-            {"rank":42,"name":"Sushi (Standard Individual)","cuisine":"Japanese","want_score":2.4,"performance_score":4.6,"on_menu":true},
-            {"rank":43,"name":"Bangers & Mash Family Portion","cuisine":"British","want_score":3.0,"performance_score":0,"on_menu":false},
-            {"rank":44,"name":"Souvlaki Individual","cuisine":"Mediterranean","want_score":3.2,"performance_score":0,"on_menu":false}
-        ];
-        
-        // Smart Discovery Data (from smart_discovery.json)
-        const EMBEDDED_DISCOVERY = [
-            {"rank":1,"dish_type":"Salmon Teriyaki Family Platter","discovery_score":5.2,"source":"Factor Gap","partner":"TBD - based on cuisine","cuisine":"Various","reason":"Healthy protein, balanced with rice and veg","recruitment_needed":false},
-            {"rank":2,"dish_type":"Halloumi Wrap Family Box","discovery_score":5.1,"source":"Cuisine Gap","partner":"New recruitment needed","cuisine":"Greek/Mediterranean","reason":"Vegetarian protein, kid-friendly, easy to portion","recruitment_needed":true},
-            {"rank":3,"dish_type":"Souvlaki Family Platter","discovery_score":5.1,"source":"Cuisine Gap","partner":"New recruitment needed","cuisine":"Greek/Mediterranean","reason":"Grilled protein + pitta + salad = balanced midweek meal","recruitment_needed":true},
-            {"rank":4,"dish_type":"Rotisserie Chicken Family Feast","discovery_score":4.95,"source":"Partner Capability","partner":"Farmer J","cuisine":"Healthy/Fresh","reason":"Classic family meal, balanced with veg sides, high value perception","recruitment_needed":false},
-            {"rank":5,"dish_type":"Grilled Chicken Family Platter with Sides","discovery_score":4.95,"source":"Partner Capability","partner":"Farmer J","cuisine":"Healthy/Fresh","reason":"Perfect fit for balanced midweek - grilled protein, customizable sides","recruitment_needed":false},
-            {"rank":6,"dish_type":"Fajita Family Kit","discovery_score":4.95,"source":"Partner Capability","partner":"Tortilla","cuisine":"Mexican","reason":"Build-your-own format perfect for families with fussy eaters","recruitment_needed":false},
-            {"rank":7,"dish_type":"Kids Ramen & Adult Ramen Combo","discovery_score":4.95,"source":"Partner Capability","partner":"Wagamama","cuisine":"Japanese/Asian","reason":"Mild ramen for kids, spicy for adults - solves fussy eater problem","recruitment_needed":false},
-            {"rank":8,"dish_type":"Grilled Chicken with Customizable Sides","discovery_score":4.87,"source":"Factor Gap","partner":"TBD - based on cuisine","cuisine":"Various","reason":"Protein + veg + carbs, customizable for each family member","recruitment_needed":false},
-            {"rank":9,"dish_type":"Halloumi Wrap Family Bundle","discovery_score":4.87,"source":"Factor Gap","partner":"TBD - based on cuisine","cuisine":"Various","reason":"Vegetarian protein that kids like, easy to portion","recruitment_needed":false},
-            {"rank":10,"dish_type":"Veggie Fajita Family Kit","discovery_score":4.87,"source":"Factor Gap","partner":"TBD - based on cuisine","cuisine":"Various","reason":"Build-your-own with veggie protein options","recruitment_needed":false},
-            {"rank":11,"dish_type":"Paneer Tikka Family Feast","discovery_score":4.87,"source":"Factor Gap","partner":"TBD - based on cuisine","cuisine":"Various","reason":"Indian vegetarian protein, shareable","recruitment_needed":false},
-            {"rank":12,"dish_type":"Plain Pasta with Sides Family Bundle","discovery_score":4.87,"source":"Factor Gap","partner":"TBD - based on cuisine","cuisine":"Various","reason":"Ultra-plain option for fussiest eaters, sides for everyone else","recruitment_needed":false},
-            {"rank":13,"dish_type":"Dim Sum Family Selection","discovery_score":4.85,"source":"Cuisine Gap","partner":"New recruitment needed","cuisine":"Chinese","reason":"Shareable, variety for different tastes, fun for families","recruitment_needed":true},
-            {"rank":14,"dish_type":"Shawarma Family Platter","discovery_score":4.85,"source":"Cuisine Gap","partner":"New recruitment needed","cuisine":"Middle Eastern","reason":"Grilled meat, fresh salads, balanced","recruitment_needed":true},
-            {"rank":15,"dish_type":"Greek Mezze Family Feast","discovery_score":4.85,"source":"Cuisine Gap","partner":"New recruitment needed","cuisine":"Greek/Mediterranean","reason":"Shareable, variety, includes veggie options","recruitment_needed":true},
-            {"rank":16,"dish_type":"Build Your Own Grain Bowl Family Pack","discovery_score":4.7,"source":"Partner Capability","partner":"Farmer J","cuisine":"Healthy/Fresh","reason":"Healthy, customizable - each family member picks toppings","recruitment_needed":false},
-            {"rank":17,"dish_type":"Vietnamese Rice Paper Rolls Family Pack","discovery_score":4.7,"source":"Partner Capability","partner":"Pho","cuisine":"Vietnamese","reason":"Healthy, fun for kids to eat, shareable - fits balanced midweek positioning","recruitment_needed":false},
-            {"rank":18,"dish_type":"Teriyaki Salmon Family Platter","discovery_score":4.7,"source":"Partner Capability","partner":"Wagamama","cuisine":"Japanese/Asian","reason":"Healthy protein option, balanced with rice and veg - fits midweek positioning","recruitment_needed":false},
-            {"rank":19,"dish_type":"Quesadilla Family Pack","discovery_score":4.7,"source":"Partner Capability","partner":"Tortilla","cuisine":"Mexican","reason":"Kid-favorite, easy to share, cheese is universally loved","recruitment_needed":false},
-            {"rank":20,"dish_type":"Butter Chicken Family Feast","discovery_score":4.7,"source":"Partner Capability","partner":"Dishoom","cuisine":"Indian","reason":"Mild, creamy curry that kids love - Dishoom quality would elevate this","recruitment_needed":false},
-            {"rank":21,"dish_type":"Falafel & Hummus Family Box","discovery_score":4.6,"source":"Cuisine Gap","partner":"New recruitment needed","cuisine":"Middle Eastern","reason":"Vegetarian option, healthy perception, shareable","recruitment_needed":true},
-            {"rank":22,"dish_type":"Chicken & Rice Plain Family Meal","discovery_score":4.53,"source":"Factor Gap","partner":"TBD - based on cuisine","cuisine":"Various","reason":"Simple, mild, universally acceptable","recruitment_needed":false},
-            {"rank":23,"dish_type":"Biryani Family Pot","discovery_score":4.45,"source":"Partner Capability","partner":"Dishoom","cuisine":"Indian","reason":"Dishoom has the kitchen capability for biryani - premium rice dish fits their brand","recruitment_needed":false},
-            {"rank":24,"dish_type":"Roast Dinner Family Platter","discovery_score":4.45,"source":"Partner Capability","partner":"Bill's","cuisine":"British","reason":"British classic, high latent demand, balanced meal","recruitment_needed":false},
-            {"rank":25,"dish_type":"Veggie Burrito Bowl Family Bundle","discovery_score":4.45,"source":"Partner Capability","partner":"Tortilla","cuisine":"Mexican","reason":"Addresses vegetarian gap, customizable, balanced","recruitment_needed":false},
-            {"rank":26,"dish_type":"Teriyaki Rice Bowl Family Bundle","discovery_score":4.45,"source":"Partner Capability","partner":"Itsu","cuisine":"Japanese/Healthy","reason":"Mild teriyaki is kid-friendly, rice bowls easy to portion","recruitment_needed":false},
-            {"rank":27,"dish_type":"Sushi Family Platter","discovery_score":4.45,"source":"Partner Capability","partner":"Itsu","cuisine":"Japanese/Healthy","reason":"Mix of kid-friendly (cucumber, avocado) and adult options","recruitment_needed":false},
-            {"rank":28,"dish_type":"Katsu Curry Family Bundle","discovery_score":4.45,"source":"Partner Capability","partner":"Wagamama","cuisine":"Japanese/Asian","reason":"Already top performer - family bundle format would increase value","recruitment_needed":false},
-            {"rank":29,"dish_type":"Pho Family Sharing Bowl","discovery_score":4.45,"source":"Partner Capability","partner":"Pho","cuisine":"Vietnamese","reason":"Large format pho for family sharing - already popular, just needs family sizing","recruitment_needed":false},
-            {"rank":30,"dish_type":"Sweet & Sour Chicken Family Meal","discovery_score":4.35,"source":"Cuisine Gap","partner":"New recruitment needed","cuisine":"Chinese","reason":"Classic kid-friendly Chinese, high latent demand","recruitment_needed":true},
-            {"rank":31,"dish_type":"Chicken Chow Mein Family Bundle","discovery_score":4.35,"source":"Cuisine Gap","partner":"New recruitment needed","cuisine":"Chinese","reason":"Familiar noodles, mild, kid-friendly","recruitment_needed":true},
-            {"rank":32,"dish_type":"Chicken Pie with Mash & Veg","discovery_score":4.2,"source":"Partner Capability","partner":"Bill's","cuisine":"British","reason":"Comfort food, balanced with veg, easy to share","recruitment_needed":false},
-            {"rank":33,"dish_type":"Banh Mi Family Box","discovery_score":4.2,"source":"Partner Capability","partner":"Pho","cuisine":"Vietnamese","reason":"Sandwiches are kid-friendly, easy to customize for fussy eaters","recruitment_needed":false},
-            {"rank":34,"dish_type":"Chicken Tikka Wrap Box","discovery_score":4.2,"source":"Partner Capability","partner":"Dishoom","cuisine":"Indian","reason":"Wraps are easy to portion for families, tikka is kid-friendly","recruitment_needed":false},
-            {"rank":35,"dish_type":"Thai Green Curry Family Pot (Mild)","discovery_score":3.95,"source":"Partner Capability","partner":"Banana Tree","cuisine":"Thai/Southeast Asian","reason":"Mild version for families, coconut base is kid-friendly","recruitment_needed":false},
-            {"rank":36,"dish_type":"Pad Thai Family Bundle","discovery_score":3.95,"source":"Partner Capability","partner":"Banana Tree","cuisine":"Thai/Southeast Asian","reason":"Mild noodle dish, popular with kids, easy to share","recruitment_needed":false},
-            {"rank":37,"dish_type":"Fish & Chips Family Bucket","discovery_score":3.95,"source":"Partner Capability","partner":"Bill's","cuisine":"British","reason":"British staple, high latent demand, kid-friendly","recruitment_needed":false}
-        ];
-        
-        // Zone MVP Status Data (summary - top zones from zone_mvp_status.json)
-        const EMBEDDED_ZONES = [
-            {"zone":"Bath","order_count":707,"customer_count":449,"cuisine_count":8,"cuisines":["Asian","italian","Salads","japanese","thai","Burgers","Latin American","Sandwiches"],"repeat_rate":0.243,"avg_rating":4.53,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Bracknell","order_count":666,"customer_count":472,"cuisine_count":4,"cuisines":["italian","Latin American","japanese","thai"],"repeat_rate":0.229,"avg_rating":4.55,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Brighton Central","order_count":1934,"customer_count":1302,"cuisine_count":9,"cuisines":["thai","Vietnamese","italian","Burgers","Salads","japanese","Latin American","sushi","Sandwiches"],"repeat_rate":0.226,"avg_rating":4.47,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Bristol","order_count":1333,"customer_count":969,"cuisine_count":6,"cuisines":["japanese","Vietnamese","thai","Latin American","italian","Only on Deliveroo"],"repeat_rate":0.207,"avg_rating":4.53,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Cambridge","order_count":1562,"customer_count":856,"cuisine_count":7,"cuisines":["Vietnamese","thai","japanese","Burgers","Latin American","italian","Salads"],"repeat_rate":0.306,"avg_rating":4.48,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Cheltenham","order_count":590,"customer_count":388,"cuisine_count":4,"cuisines":["Vietnamese","thai","japanese","italian"],"repeat_rate":0.245,"avg_rating":4.38,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Chiswick","order_count":1416,"customer_count":962,"cuisine_count":6,"cuisines":["indian","Vietnamese","Mediterranean","Healthy","italian","Salads"],"repeat_rate":0.252,"avg_rating":4.74,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Clapham","order_count":2645,"customer_count":1759,"cuisine_count":9,"cuisines":["Vietnamese","Asian","Curry","Mediterranean","italian","Salads","Tacos","Healthy","Wraps"],"repeat_rate":0.235,"avg_rating":4.61,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Colchester","order_count":537,"customer_count":330,"cuisine_count":4,"cuisines":["Burgers","italian","japanese","sushi"],"repeat_rate":0.285,"avg_rating":4.6,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"East Central","order_count":1363,"customer_count":955,"cuisine_count":8,"cuisines":["Salads","Chicken","Vietnamese","Healthy","japanese","italian","Tacos","Sandwiches"],"repeat_rate":0.21,"avg_rating":4.46,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Glasgow Centre","order_count":587,"customer_count":389,"cuisine_count":5,"cuisines":["Pho","japanese","italian","Burgers","Asian"],"repeat_rate":0.239,"avg_rating":4.55,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Hammersmith / Shepherd's Bush","order_count":1009,"customer_count":686,"cuisine_count":6,"cuisines":["italian","Meal Deals","japanese","Salads","Sandwiches","Vegan Friendly"],"repeat_rate":0.252,"avg_rating":4.46,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Hampstead","order_count":893,"customer_count":672,"cuisine_count":5,"cuisines":["japanese","Asian","Salads","halal","sushi"],"repeat_rate":0.201,"avg_rating":4.47,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Horsham","order_count":480,"customer_count":308,"cuisine_count":4,"cuisines":["thai","italian","Burgers","japanese"],"repeat_rate":0.231,"avg_rating":4.41,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Islington","order_count":2500,"customer_count":1719,"cuisine_count":8,"cuisines":["indian","Veganuary","japanese","italian","Vietnamese","Salads","Asian","Sandwiches"],"repeat_rate":0.237,"avg_rating":4.69,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Kingston","order_count":1298,"customer_count":846,"cuisine_count":8,"cuisines":["Vietnamese","japanese","Meal Deals","thai","Salads","italian","sushi","Sandwiches"],"repeat_rate":0.261,"avg_rating":4.46,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Lewisham","order_count":1493,"customer_count":941,"cuisine_count":4,"cuisines":["Vietnamese","Meal Deals","italian","Asian"],"repeat_rate":0.251,"avg_rating":4.5,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"London Bridge","order_count":929,"customer_count":660,"cuisine_count":7,"cuisines":["Meal Deals","Salads","japanese","Vietnamese","italian","halal","Sandwiches"],"repeat_rate":0.2,"avg_rating":4.57,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Mayfair","order_count":858,"customer_count":582,"cuisine_count":7,"cuisines":["Salads","japanese","Vietnamese","Sandwiches","Meal Deals","italian","Chicken"],"repeat_rate":0.223,"avg_rating":4.57,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Milton Keynes","order_count":1521,"customer_count":915,"cuisine_count":7,"cuisines":["Asian","Latin American","Vietnamese","japanese","Salads","italian","Burgers"],"repeat_rate":0.285,"avg_rating":4.46,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Nottingham","order_count":841,"customer_count":580,"cuisine_count":5,"cuisines":["Vietnamese","Burgers","Latin American","japanese","italian"],"repeat_rate":0.229,"avg_rating":4.43,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Oxford","order_count":1640,"customer_count":944,"cuisine_count":6,"cuisines":["Vietnamese","italian","thai","Asian","Salads","japanese"],"repeat_rate":0.301,"avg_rating":4.52,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Reigate","order_count":626,"customer_count":424,"cuisine_count":6,"cuisines":["thai","Meal Deals","japanese","sushi","italian","Asian"],"repeat_rate":0.269,"avg_rating":4.51,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Richmond / Kew","order_count":619,"customer_count":450,"cuisine_count":6,"cuisines":["japanese","Meal Deals","Chicken","Salads","italian","Sandwiches"],"repeat_rate":0.204,"avg_rating":4.3,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Royal Leamington Spa","order_count":296,"customer_count":202,"cuisine_count":4,"cuisines":["Latin American","japanese","thai","italian"],"repeat_rate":0.203,"avg_rating":4.37,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Royal Tunbridge Wells","order_count":531,"customer_count":340,"cuisine_count":6,"cuisines":["japanese","Burgers","thai","Exclusive offers","italian","sushi"],"repeat_rate":0.229,"avg_rating":4.44,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"South Kensington","order_count":741,"customer_count":526,"cuisine_count":5,"cuisines":["Salads","italian","Chicken","Sandwiches","Alcohol"],"repeat_rate":0.203,"avg_rating":4.56,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Victoria, Westminster, Pimlico","order_count":545,"customer_count":365,"cuisine_count":5,"cuisines":["japanese","italian","Meal Deals","Salads","Sandwiches"],"repeat_rate":0.271,"avg_rating":4.63,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Wembley","order_count":1366,"customer_count":894,"cuisine_count":6,"cuisines":["Healthy","indian","japanese","Latin American","Vegan Friendly","italian"],"repeat_rate":0.26,"avg_rating":4.49,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"West Central","order_count":860,"customer_count":573,"cuisine_count":7,"cuisines":["japanese","Salads","italian","Asian","Vietnamese","Meal Deals","Sandwiches"],"repeat_rate":0.237,"avg_rating":4.56,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Wimbledon","order_count":1497,"customer_count":1012,"cuisine_count":8,"cuisines":["japanese","italian","Meal Deals","Vietnamese","sushi","thai","Salads","Sandwiches"],"repeat_rate":0.244,"avg_rating":4.5,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"York","order_count":833,"customer_count":557,"cuisine_count":6,"cuisines":["Latin American","Vietnamese","Christmas Specials","Burgers","italian","japanese"],"repeat_rate":0.246,"avg_rating":4.46,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Cardiff Bay Area","order_count":164,"customer_count":107,"cuisine_count":5,"cuisines":["Burgers","japanese","thai","Latin American","italian"],"repeat_rate":0.271,"avg_rating":4.78,"mvp_status":"MVP Ready","rating_pass":true,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Birmingham","order_count":795,"customer_count":549,"cuisine_count":8,"cuisines":["italian","Vietnamese","Burgers","Asian","japanese","Latin American","Wraps","Tacos"],"repeat_rate":0.217,"avg_rating":4.15,"mvp_status":"Near MVP","rating_pass":false,"repeat_pass":true,"cuisine_pass":true},
-            {"zone":"Bournemouth","order_count":722,"customer_count":521,"cuisine_count":3,"cuisines":["japanese","Vietnamese","italian"],"repeat_rate":0.207,"avg_rating":4.26,"mvp_status":"Near MVP","rating_pass":false,"repeat_pass":true,"cuisine_pass":false},
-            {"zone":"Basingstoke","order_count":549,"customer_count":386,"cuisine_count":3,"cuisines":["japanese","italian","Latin American"],"repeat_rate":0.236,"avg_rating":3.83,"mvp_status":"Near MVP","rating_pass":false,"repeat_pass":true,"cuisine_pass":false},
-            {"zone":"Aldershot","order_count":57,"customer_count":52,"cuisine_count":1,"cuisines":["italian"],"repeat_rate":0.096,"avg_rating":4.0,"mvp_status":"Developing","rating_pass":false,"repeat_pass":false,"cuisine_pass":false},
-            {"zone":"Altrincham and Hale","order_count":26,"customer_count":23,"cuisine_count":1,"cuisines":["italian"],"repeat_rate":0.087,"avg_rating":4.2,"mvp_status":"Developing","rating_pass":false,"repeat_pass":false,"cuisine_pass":false},
-            {"zone":"Balham","order_count":300,"customer_count":240,"cuisine_count":2,"cuisines":["Vietnamese","italian"],"repeat_rate":0.154,"avg_rating":4.44,"mvp_status":"Developing","rating_pass":true,"repeat_pass":false,"cuisine_pass":false},
-            {"zone":"Barnet","order_count":54,"customer_count":36,"cuisine_count":1,"cuisines":["italian"],"repeat_rate":0.194,"avg_rating":5.0,"mvp_status":"Developing","rating_pass":true,"repeat_pass":false,"cuisine_pass":false}
-        ];
-        
         // Global data stores
         let dishData = [];
         let zoneData = [];
-        let discoveryData = [];
-        let methodologyData = {};
-        let currentWeights = {};
-        let availabilityFilter = 'all';
+        let mvpEvidence = {};
         
-        // Default weights (13-factor unified framework)
-        const defaultWeights = {
-            sales: 10.5,
-            ranking: 8.75,
-            rating: 8.75,
-            repeat: 7,
-            satisfaction: 10,
-            kids: 10,
-            kidfriendly: 7.5,
-            fussy: 7.5,
-            balanced: 6,
-            portions: 6,
-            custom: 3,
-            suitability: 5.25,
-            requests: 5.25,
-            gap: 4.5
-        };
+        // Tab switching
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.nav-tabs a').forEach(link => link.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`a[href="#${tabId}"]`).classList.add('active');
+        }
         
-        // Initialize
-        document.addEventListener('DOMContentLoaded', async () => {
-            currentWeights = {...defaultWeights};
-            await loadAllData();
-            initCharts();
-            updateWeights();
-        });
-        
-        // Load all data - uses embedded data, falls back to fetch
+        // Load all data
         async function loadAllData() {
             try {
-                // Try to fetch from files first (works on server), fall back to embedded data
-                let dishes, zones, discovery;
+                // Try to fetch from files first
+                const [dishResponse, zoneResponse, mvpResponse] = await Promise.all([
+                    fetch('../data/unified_dishes.json'),
+                    fetch('../data/zone_gaps.json'),
+                    fetch('../data/mvp_evidence.json')
+                ]);
                 
-                try {
-                    const dishResponse = await fetch('../data/priority_dishes.json');
-                    if (dishResponse.ok) {
-                        const data = await dishResponse.json();
-                        dishes = data.dishes || data;
-                    } else {
-                        throw new Error('Fetch failed');
-                    }
-                } catch (e) {
-                    console.log('Using embedded dish data');
-                    dishes = EMBEDDED_DISHES;
+                if (dishResponse.ok) {
+                    dishData = await dishResponse.json();
+                }
+                if (zoneResponse.ok) {
+                    const zoneJson = await zoneResponse.json();
+                    zoneData = zoneJson.zones || [];
+                }
+                if (mvpResponse.ok) {
+                    mvpEvidence = await mvpResponse.json();
                 }
                 
-                try {
-                    const zoneResponse = await fetch('../data/zone_mvp_status.json');
-                    if (zoneResponse.ok) {
-                        zones = await zoneResponse.json();
-                    } else {
-                        throw new Error('Fetch failed');
-                    }
-                } catch (e) {
-                    console.log('Using embedded zone data');
-                    zones = EMBEDDED_ZONES;
-                }
-                
-                try {
-                    const discoveryResponse = await fetch('../data/smart_discovery.json');
-                    if (discoveryResponse.ok) {
-                        discovery = await discoveryResponse.json();
-                    } else {
-                        throw new Error('Fetch failed');
-                    }
-                } catch (e) {
-                    console.log('Using embedded discovery data');
-                    discovery = EMBEDDED_DISCOVERY;
-                }
-                
-                // Handle different data structures
-                dishData = Array.isArray(dishes) ? dishes : (dishes.dishes || []);
-                zoneData = Array.isArray(zones) ? zones : (zones.zones || []);
-                discoveryData = Array.isArray(discovery) ? discovery : [];
-                
-                // Normalize dish data - ensure want_score and performance_score exist
-                dishData = dishData.map(d => ({
-                    ...d,
-                    dish_type: d.dish_type || d.name || 'Unknown',
-                    want_score: d.want_score || 3.0,
-                    performance_score: d.on_menu ? (d.performance_score || d.composite_score || 3.0) : 0,
-                    on_menu: d.on_menu !== undefined ? d.on_menu : true
-                }));
-                
-                // Normalize zone data
-                zoneData = zoneData.map(z => ({
-                    ...z,
-                    zone_name: z.zone_name || z.zone || 'Unknown',
-                    health_score: z.health_score || z.quality_score || (z.avg_rating ? z.avg_rating / 5 : 0.5),
-                    partner_count: z.partner_count || z.partners || '-',
-                    gap_type: getZoneGapType(z)
-                }));
-                
-                // Update stats
-                document.getElementById('total-dishes').textContent = dishData.length || '86';
-                document.getElementById('total-zones').textContent = zoneData.length || '193';
-                document.getElementById('discovery-dishes').textContent = discoveryData.length || '37';
-                
-                // Count MVP zones
-                const mvpCount = zoneData.filter(z => z.mvp_status === 'MVP Ready').length;
-                document.getElementById('mvp-zones').textContent = mvpCount || '0';
-                document.getElementById('zones-mvp').textContent = mvpCount || '0';
-                
-                // Count zone statuses
-                const nearCount = zoneData.filter(z => z.mvp_status === 'Near MVP').length;
-                const devCount = zoneData.filter(z => z.mvp_status === 'Developing').length;
-                const earlyCount = zoneData.filter(z => z.mvp_status === 'Early Stage').length;
-                document.getElementById('zones-near').textContent = nearCount || '0';
-                document.getElementById('zones-developing').textContent = devCount || zoneData.length - mvpCount - nearCount;
-                document.getElementById('zones-early').textContent = earlyCount || '0';
-                
-                // Discovery stats
-                const partnerCapability = discoveryData.filter(d => d.source === 'Partner Capability').length;
-                const recruitNeeded = discoveryData.filter(d => d.recruitment_needed).length;
-                document.getElementById('discovery-total').textContent = discoveryData.length;
-                document.getElementById('discovery-partner').textContent = partnerCapability;
-                document.getElementById('discovery-recruit').textContent = recruitNeeded;
-                
-                // Update last updated
-                document.getElementById('last-updated').textContent = new Date().toLocaleDateString('en-GB', {
-                    day: 'numeric', month: 'short', year: 'numeric'
-                });
-                
-                // Render tables
+                // Render everything
+                renderDishStats();
                 renderDishTable();
+                renderMVPCriteria();
+                renderZoneStats();
                 renderZoneTable();
-                renderDiscoveryList();
-                populateCuisineFilter();
-                updateMatrix();
-                updateCharts();
+                renderCuisineGrid();
                 
             } catch (error) {
                 console.error('Error loading data:', error);
-                // Show error state
-                document.getElementById('total-dishes').textContent = '50';
-                document.getElementById('total-zones').textContent = '193';
-                document.getElementById('last-updated').textContent = new Date().toLocaleDateString('en-GB', {
-                    day: 'numeric', month: 'short', year: 'numeric'
-                });
+                document.getElementById('dish-tbody').innerHTML = `
+                    <tr><td colspan="8" style="text-align: center; color: var(--error); padding: 40px;">
+                        Error loading data. Please run the pipeline to generate data files.
+                    </td></tr>
+                `;
             }
         }
         
-        // Helper: Convert tier string to number
-        function tierStringToNumber(tier) {
-            const map = {
-                'Must-Have': 1, 'must-have': 1, 'Tier 1': 1,
-                'Should-Have': 2, 'should-have': 2, 'Tier 2': 2,
-                'Nice-to-Have': 3, 'nice-to-have': 3, 'Tier 3': 3,
-                'Monitor': 4, 'monitor': 4, 'Tier 4': 4
-            };
-            return map[tier] || 3;
-        }
-        
-        // Helper: Determine zone gap type
-        function getZoneGapType(zone) {
-            if (!zone.cuisine_pass && zone.cuisine_count < 3) return 'Supply Gap';
-            if (!zone.rating_pass && zone.avg_rating < 4.0) return 'Quality Gap';
-            if (!zone.repeat_pass) return 'Retention Gap';
-            return 'OK';
-        }
-        
-        // Tab navigation
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.querySelectorAll('.nav-tabs a').forEach(a => a.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-            document.querySelector(`a[href="#${pageId}"]`).classList.add('active');
-        }
-        
-        // Chart instances
-        let zoneChart = null;
-        let dishChart = null;
-        
-        // Initialize charts
-        function initCharts() {
-            // Zone status chart
-            const zoneCtx = document.getElementById('zone-status-chart');
-            if (zoneCtx) {
-                zoneChart = new Chart(zoneCtx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['MVP Ready', 'Near MVP', 'Developing', 'Early Stage'],
-                        datasets: [{
-                            data: [0, 0, 0, 0],
-                            backgroundColor: ['#22c55e', '#eab308', '#f97316', '#64748b'],
-                            borderWidth: 0
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            legend: {
-                                position: 'bottom',
-                                labels: { color: '#94a3b8', padding: 16 }
-                            }
-                        }
-                    }
-                });
-            }
-            
-            // Dish tier chart
-            const dishCtx = document.getElementById('dish-tier-chart');
-            if (dishCtx) {
-                dishChart = new Chart(dishCtx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Tier 1: Must-Have', 'Tier 2: Should-Have', 'Tier 3: Nice-to-Have', 'Tier 4: Monitor'],
-                        datasets: [{
-                            data: [0, 0, 0, 0],
-                            backgroundColor: ['#22c55e', '#3b82f6', '#f59e0b', '#64748b']
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            legend: { display: false }
-                        },
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                grid: { color: '#2d3548' },
-                                ticks: { color: '#94a3b8' }
-                            },
-                            x: {
-                                grid: { display: false },
-                                ticks: { color: '#94a3b8' }
-                            }
-                        }
-                    }
-                });
-            }
-        }
-        
-        // Update charts with actual data
-        function updateCharts() {
-            // Update zone chart
-            if (zoneChart && zoneData.length > 0) {
-                const mvp = zoneData.filter(z => z.mvp_status === 'MVP Ready').length;
-                const near = zoneData.filter(z => z.mvp_status === 'Near MVP').length;
-                const dev = zoneData.filter(z => z.mvp_status === 'Developing').length;
-                const early = zoneData.length - mvp - near - dev;
-                zoneChart.data.datasets[0].data = [mvp, near, dev, early];
-                zoneChart.update();
-            }
-            
-            // Update dish chart
-            if (dishChart && dishData.length > 0) {
-                const t1 = dishData.filter(d => d.tier === 1).length;
-                const t2 = dishData.filter(d => d.tier === 2).length;
-                const t3 = dishData.filter(d => d.tier === 3).length;
-                const t4 = dishData.filter(d => d.tier === 4).length;
-                dishChart.data.datasets[0].data = [t1, t2, t3, t4];
-                dishChart.update();
-            }
-        }
-        
-        // Weight sliders
-        function updateWeights() {
-            const sliders = ['sales', 'ranking', 'rating', 'repeat', 'satisfaction', 'kids', 
-                           'kidfriendly', 'fussy', 'balanced', 'portions', 'custom',
-                           'suitability', 'requests', 'gap'];
-            
-            let total = 0;
-            sliders.forEach(s => {
-                const slider = document.getElementById(`slider-${s}`);
-                const val = document.getElementById(`val-${s}`);
-                if (slider && val) {
-                    const value = parseFloat(slider.value);
-                    currentWeights[s] = value;
-                    val.textContent = value + '%';
-                    total += value;
-                }
-            });
-            
-            document.getElementById('total-weight').textContent = total.toFixed(1) + '%';
-            document.getElementById('total-weight').style.color = 
-                Math.abs(total - 100) < 0.1 ? '#00e5c7' : '#ef4444';
-            
-            updateMatrix();
-        }
-        
-        function resetWeights() {
-            Object.keys(defaultWeights).forEach(key => {
-                const slider = document.getElementById(`slider-${key}`);
-                if (slider) slider.value = defaultWeights[key];
-            });
-            updateWeights();
-        }
-        
-        function setAvailabilityFilter(filter) {
-            availabilityFilter = filter;
-            document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            renderDishTable();
-            updateMatrix();
+        // Render dish stats
+        function renderDishStats() {
+            document.getElementById('total-dishes').textContent = dishData.length;
+            document.getElementById('must-have-count').textContent = dishData.filter(d => d.tier === 'Must Have').length;
+            document.getElementById('with-kids-happy').textContent = dishData.filter(d => 
+                d.performance && d.performance.kids_happy && d.performance.kids_happy.rate !== null
+            ).length;
+            document.getElementById('with-latent-demand').textContent = dishData.filter(d => 
+                d.opportunity && d.opportunity.latent_demand_mentions > 0
+            ).length;
         }
         
         // Render dish table
         function renderDishTable() {
             const tbody = document.getElementById('dish-tbody');
-            if (!tbody) return;
-            
-            // Combine dish data with discovery data (opportunities not on menu)
-            let allDishes = [
-                ...dishData.map(d => ({
-                    ...d,
-                    want_score: d.want_score || (d.tier <= 2 ? 4.5 : d.tier <= 3 ? 3.5 : 2.5),
-                    performance_score: d.on_menu ? (d.composite_score || 3.0) : 0
-                })),
-                ...discoveryData.map(d => ({
-                    dish_type: d.dish_type || d.name,
-                    cuisine: d.cuisine || 'Various',
-                    want_score: d.discovery_score || 4.0,
-                    performance_score: 0,
-                    on_menu: false,
-                    tier: 0  // Opportunity
-                }))
-            ];
-            
-            if (!allDishes.length) {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; color: var(--text-muted); padding: 40px;">No dish data available.</td></tr>';
+            if (!dishData.length) {
+                tbody.innerHTML = '<tr><td colspan="8" class="loading">No dish data available</td></tr>';
                 return;
             }
             
-            const tierFilter = document.getElementById('dish-tier-filter')?.value || 'all';
-            const cuisineFilter = document.getElementById('dish-cuisine-filter')?.value || 'all';
-            const search = document.getElementById('dish-search')?.value?.toLowerCase() || '';
+            // Get filters
+            const tierFilter = document.getElementById('tier-filter').value;
+            const availFilter = document.getElementById('availability-filter').value;
+            const evidenceFilter = document.getElementById('evidence-filter').value;
+            const search = document.getElementById('dish-search').value.toLowerCase();
             
-            let filtered = allDishes.filter(dish => {
-                if (tierFilter !== 'all' && dish.tier != tierFilter) return false;
-                if (cuisineFilter !== 'all' && dish.cuisine !== cuisineFilter) return false;
-                if (search && !dish.dish_type?.toLowerCase().includes(search)) return false;
-                if (availabilityFilter === 'have' && !dish.on_menu) return false;
-                if (availabilityFilter === 'dont-have' && dish.on_menu) return false;
+            // Filter dishes
+            let filtered = dishData.filter(d => {
+                if (tierFilter !== 'all' && d.tier !== tierFilter) return false;
+                if (availFilter === 'on-dinneroo' && !d.on_dinneroo) return false;
+                if (availFilter === 'latent-demand' && d.on_dinneroo) return false;
+                if (evidenceFilter !== 'all' && d.evidence_level !== evidenceFilter) return false;
+                if (search && !d.dish.toLowerCase().includes(search)) return false;
                 return true;
             });
             
-            // Sort by want_score + performance_score
-            filtered.sort((a, b) => (b.want_score + b.performance_score) - (a.want_score + a.performance_score));
-            
-            if (filtered.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; color: var(--text-muted); padding: 40px;">No dishes match your filters</td></tr>';
+            if (!filtered.length) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; color: var(--text-muted); padding: 40px;">No dishes match your filters</td></tr>';
                 return;
             }
             
-            tbody.innerHTML = filtered.slice(0, 100).map((dish, i) => {
-                const quadrant = getQuadrant(dish.want_score, dish.performance_score, dish.on_menu);
+            // Render rows
+            tbody.innerHTML = filtered.slice(0, 100).map(dish => {
+                // Kids happy display
+                let kidsHappyHtml = '-';
+                if (dish.performance && dish.performance.kids_happy && dish.performance.kids_happy.rate !== null) {
+                    const rate = Math.round(dish.performance.kids_happy.rate * 100);
+                    const n = dish.performance.kids_happy.n;
+                    kidsHappyHtml = `
+                        <div class="kids-happy">
+                            <div class="kids-happy-bar"><div class="kids-happy-fill" style="width: ${rate}%"></div></div>
+                            <span class="kids-happy-text">${rate}%</span>
+                            <span class="kids-happy-n">(n=${n})</span>
+                        </div>
+                    `;
+                }
+                
+                // Tier badge
+                const tierClass = dish.tier === 'Must Have' ? 'badge-must-have' : 
+                                  dish.tier === 'Nice to Have' ? 'badge-nice-to-have' : 'badge-monitor';
+                
+                // Evidence badge
+                const evidenceClass = dish.evidence_level === 'Validated' ? 'badge-validated' :
+                                      dish.evidence_level === 'Corroborated' ? 'badge-corroborated' : 'badge-single';
+                
+                // Quadrant class
+                let quadrantClass = 'quadrant-tag';
+                if (dish.quadrant && dish.quadrant.includes('High Importance') && dish.quadrant.includes('High Coverage')) {
+                    quadrantClass += ' quadrant-high-high';
+                } else if (dish.quadrant && dish.quadrant.includes('High Importance')) {
+                    quadrantClass += ' quadrant-high-low';
+                } else if (dish.quadrant && dish.quadrant.includes('High Coverage')) {
+                    quadrantClass += ' quadrant-low-high';
+                }
+                
                 return `
-                <tr>
-                    <td>${i + 1}</td>
-                    <td style="font-weight: 600;">${dish.dish_type}</td>
-                    <td>${dish.cuisine || '-'}</td>
-                    <td>
-                        <span style="font-family: 'JetBrains Mono', monospace; color: var(--accent-purple);">
-                            ${dish.want_score.toFixed(1)}
-                        </span>
-                    </td>
-                    <td>
-                        <span style="font-family: 'JetBrains Mono', monospace; color: ${dish.on_menu ? 'var(--accent-teal)' : 'var(--text-muted)'};">
-                            ${dish.on_menu ? dish.performance_score.toFixed(1) : '-'}
-                        </span>
-                    </td>
-                    <td><span class="badge ${quadrant.class}">${quadrant.label}</span></td>
-                    <td>${dish.on_menu ? '✅' : '❌'}</td>
-                </tr>
-            `}).join('');
+                    <tr class="expandable" onclick="toggleDetails(${dish.rank})">
+                        <td>${dish.rank}</td>
+                        <td>
+                            <div style="font-weight: 600;">${dish.dish}</div>
+                            <div style="font-size: 11px; color: var(--text-muted);">${dish.cuisine}</div>
+                        </td>
+                        <td><span class="badge ${tierClass}">${dish.tier}</span></td>
+                        <td style="font-family: 'JetBrains Mono', monospace;">${dish.priority_score.toFixed(2)}</td>
+                        <td>${kidsHappyHtml}</td>
+                        <td>${dish.on_dinneroo ? '✅' : '❌'}</td>
+                        <td><span class="${quadrantClass}">${dish.quadrant || '-'}</span></td>
+                        <td><span class="badge ${evidenceClass}">${dish.evidence_level}</span></td>
+                    </tr>
+                    <tr class="details-row" id="details-${dish.rank}">
+                        <td colspan="8">
+                            <div class="details-content">
+                                <div class="details-grid">
+                                    <div class="details-section">
+                                        <h4>Performance Data (Track A)</h4>
+                                        ${dish.performance ? `
+                                            <div class="details-item">
+                                                <span class="label">Rating</span>
+                                                <span class="value">${dish.performance.rating?.value?.toFixed(2) || '-'} (n=${dish.performance.rating?.n || '-'})</span>
+                                            </div>
+                                            <div class="details-item">
+                                                <span class="label">Kids Happy</span>
+                                                <span class="value">${dish.performance.kids_happy?.rate ? (dish.performance.kids_happy.rate * 100).toFixed(0) + '%' : '-'} (n=${dish.performance.kids_happy?.n || '-'})</span>
+                                            </div>
+                                            <div class="details-item">
+                                                <span class="label">Adult Satisfaction</span>
+                                                <span class="value">${dish.performance.adult_satisfaction?.rate ? (dish.performance.adult_satisfaction.rate * 100).toFixed(0) + '%' : '-'} (n=${dish.performance.adult_satisfaction?.n || '-'})</span>
+                                            </div>
+                                            <div class="details-item">
+                                                <span class="label">Track A Score</span>
+                                                <span class="value">${dish.performance.track_a_score?.toFixed(2) || '-'}</span>
+                                            </div>
+                                        ` : '<p style="color: var(--text-muted); font-size: 12px;">No performance data (not on Dinneroo or insufficient orders)</p>'}
+                                    </div>
+                                    <div class="details-section">
+                                        <h4>Opportunity Data (Track B)</h4>
+                                        ${dish.opportunity ? `
+                                            <div class="details-item">
+                                                <span class="label">Latent Demand Mentions</span>
+                                                <span class="value">${dish.opportunity.latent_demand_mentions || 0}</span>
+                                            </div>
+                                            <div class="details-item">
+                                                <span class="label">Kid Friendly Score</span>
+                                                <span class="value">${dish.opportunity.kid_friendly || '-'}/5</span>
+                                            </div>
+                                            <div class="details-item">
+                                                <span class="label">Fussy Eater Friendly</span>
+                                                <span class="value">${dish.opportunity.fussy_eater_friendly || '-'}/5</span>
+                                            </div>
+                                            <div class="details-item">
+                                                <span class="label">Framework Score</span>
+                                                <span class="value">${dish.opportunity.framework_score?.toFixed(2) || '-'}</span>
+                                            </div>
+                                        ` : '<p style="color: var(--text-muted); font-size: 12px;">No opportunity data</p>'}
+                                    </div>
+                                    <div class="details-section">
+                                        <h4>Action & Partners</h4>
+                                        <div class="details-item">
+                                            <span class="label">Action</span>
+                                            <span class="value" style="font-family: inherit;">${dish.action || '-'}</span>
+                                        </div>
+                                        <div class="details-item">
+                                            <span class="label">Order Volume</span>
+                                            <span class="value">${dish.order_volume?.toLocaleString() || 0}</span>
+                                        </div>
+                                        <div class="details-item">
+                                            <span class="label">Potential Partners</span>
+                                            <span class="value" style="font-family: inherit;">${dish.potential_partners || '-'}</span>
+                                        </div>
+                                        <div class="details-item">
+                                            <span class="label">Gap Type</span>
+                                            <span class="value" style="font-family: inherit;">${dish.gap_type || '-'}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
         }
         
-        function getQuadrant(want, perf, onMenu) {
-            if (!onMenu) return { label: 'Opportunity', class: 'tier-2' };
-            if (want >= 3.5 && perf >= 3.5) return { label: 'Core Driver', class: 'tier-1' };
-            if (want < 3.5 && perf >= 3.5) return { label: 'Question Mark', class: 'tier-3' };
-            if (want >= 3.5 && perf < 3.5) return { label: 'Opportunity', class: 'tier-2' };
-            return { label: 'Deprioritize', class: 'tier-4' };
+        // Toggle details row
+        function toggleDetails(rank) {
+            const row = document.getElementById(`details-${rank}`);
+            if (row) {
+                row.classList.toggle('show');
+            }
         }
         
-        function getTierLabel(tier) {
-            const labels = { 1: 'Must-Have', 2: 'Should-Have', 3: 'Nice-to-Have', 4: 'Monitor' };
-            return labels[tier] || 'Nice-to-Have';
-        }
-        
-        function getEvidenceClass(type) {
-            if (type === 'Validated' || type === 'Measured') return 'validated';
-            if (type === 'Corroborated' || type === 'Blended') return 'corroborated';
-            return 'single';
-        }
-        
-        function getEvidenceSymbol(type) {
-            if (type === 'Validated' || type === 'Measured') return '🟢';
-            if (type === 'Corroborated' || type === 'Blended') return '🟡';
-            return '🔵';
-        }
-        
-        function filterDishes() {
-            renderDishTable();
-        }
-        
-        function populateCuisineFilter() {
-            const select = document.getElementById('dish-cuisine-filter');
-            if (!select || !dishData.length) return;
+        // Render MVP criteria
+        function renderMVPCriteria() {
+            if (!mvpEvidence.cuisine_threshold) return;
             
-            const cuisines = [...new Set(dishData.map(d => d.cuisine).filter(Boolean))].sort();
-            cuisines.forEach(c => {
-                const opt = document.createElement('option');
-                opt.value = c;
-                opt.textContent = c;
-                select.appendChild(opt);
-            });
+            // Cuisine evidence
+            const ce = mvpEvidence.cuisine_threshold.evidence;
+            document.getElementById('cuisine-evidence').innerHTML = `
+                ${ce.impact}<br>
+                <span style="font-size: 10px; color: var(--text-muted);">
+                    5 cuisines: ${ce['5_cuisines'].avg_orders} orders, ${ce['5_cuisines'].avg_rating}★ (n=${ce['5_cuisines'].zones} zones)<br>
+                    4 cuisines: ${ce['4_cuisines'].avg_orders} orders, ${ce['4_cuisines'].avg_rating}★ (n=${ce['4_cuisines'].zones} zones)
+                </span>
+            `;
+            
+            // Partner evidence
+            const pe = mvpEvidence.partner_threshold.evidence;
+            document.getElementById('partner-evidence').innerHTML = `
+                ${pe.impact}<br>
+                <span style="font-size: 10px; color: var(--text-muted);">
+                    5 partners: ${pe['5_partners'].avg_orders} orders (n=${pe['5_partners'].zones} zones)<br>
+                    1-2 partners: ${pe['1-2_partners'].avg_orders} orders (n=${pe['1-2_partners'].zones} zones)
+                </span>
+            `;
+            
+            // Variety evidence
+            document.getElementById('variety-evidence').textContent = 
+                `${mvpEvidence.variety_demand} - families explicitly request more variety in open-text feedback.`;
+            document.getElementById('variety-source').textContent = 
+                `Source: ${mvpEvidence.variety_source}`;
+        }
+        
+        // Render cuisine grid
+        function renderCuisineGrid() {
+            const grid = document.getElementById('cuisine-grid');
+            if (!mvpEvidence.core_cuisines) {
+                grid.innerHTML = '<div class="loading">No cuisine data</div>';
+                return;
+            }
+            
+            grid.innerHTML = mvpEvidence.core_cuisines.map(c => `
+                <div class="cuisine-card">
+                    <div class="name">${c.cuisine}</div>
+                    <div class="metric">Repeat: <strong>${(c.repeat_rate * 100).toFixed(1)}%</strong></div>
+                    <div class="metric">Rating: <strong>${c.rating.toFixed(2)}★</strong></div>
+                    <div class="metric" style="font-size: 10px; margin-top: 4px;">n=${c.n.toLocaleString()} orders</div>
+                </div>
+            `).join('');
+        }
+        
+        // Render zone stats
+        function renderZoneStats() {
+            document.getElementById('total-zones').textContent = zoneData.length;
+            document.getElementById('mvp-ready').textContent = zoneData.filter(z => z.is_mvp).length;
+            document.getElementById('high-priority').textContent = zoneData.filter(z => z.recruitment_priority === 'High').length;
         }
         
         // Render zone table
         function renderZoneTable() {
             const tbody = document.getElementById('zone-tbody');
-            if (!tbody) return;
-            
             if (!zoneData.length) {
-                tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--text-muted); padding: 40px;">No zone data available. Run the pipeline to generate data.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" class="loading">No zone data available</td></tr>';
                 return;
             }
             
-            const statusFilter = document.getElementById('zone-status-filter')?.value || 'all';
-            const gapFilter = document.getElementById('zone-gap-filter')?.value || 'all';
-            const search = document.getElementById('zone-search')?.value?.toLowerCase() || '';
+            const statusFilter = document.getElementById('zone-status-filter').value;
+            const priorityFilter = document.getElementById('zone-priority-filter').value;
             
-            let filtered = zoneData.filter(zone => {
-                const status = (zone.mvp_status || '').toLowerCase();
-                if (statusFilter !== 'all') {
-                    if (statusFilter === 'mvp' && status !== 'mvp ready') return false;
-                    if (statusFilter === 'near' && status !== 'near mvp') return false;
-                    if (statusFilter === 'developing' && status !== 'developing') return false;
-                    if (statusFilter === 'early' && status !== 'early stage') return false;
-                }
-                if (gapFilter !== 'all') {
-                    const gap = (zone.gap_type || '').toLowerCase();
-                    if (gapFilter === 'supply' && !gap.includes('supply')) return false;
-                    if (gapFilter === 'quality' && !gap.includes('quality')) return false;
-                    if (gapFilter === 'none' && gap !== 'ok') return false;
-                }
-                if (search && !zone.zone_name?.toLowerCase().includes(search)) return false;
+            let filtered = zoneData.filter(z => {
+                if (statusFilter === 'mvp' && !z.is_mvp) return false;
+                if (statusFilter === 'not-mvp' && z.is_mvp) return false;
+                if (priorityFilter !== 'all' && z.recruitment_priority !== priorityFilter) return false;
                 return true;
             });
             
-            if (filtered.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--text-muted); padding: 40px;">No zones match your filters</td></tr>';
+            if (!filtered.length) {
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; color: var(--text-muted); padding: 40px;">No zones match your filters</td></tr>';
                 return;
             }
             
-            tbody.innerHTML = filtered.slice(0, 100).map(zone => `
-                <tr>
-                    <td>${zone.zone_name}</td>
-                    <td><span class="badge ${getStatusClass(zone.mvp_status)}">${zone.mvp_status || 'Developing'}</span></td>
-                    <td>${zone.partner_count}</td>
-                    <td>${zone.cuisine_count || '-'}</td>
-                    <td>
-                        <div style="display: flex; align-items: center; gap: 8px;">
-                            <span style="font-family: 'JetBrains Mono', monospace;">${zone.health_score.toFixed(2)}</span>
-                            <div class="progress-bar" style="width: 60px;">
-                                <div class="progress-fill ${getScoreColor(zone.health_score)}" 
-                                     style="width: ${zone.health_score * 100}%"></div>
-                            </div>
-                        </div>
-                    </td>
-                    <td><span class="badge ${getGapClass(zone.gap_type)}">${zone.gap_type}</span></td>
-                </tr>
-            `).join('');
-        }
-        
-        function getStatusClass(status) {
-            const s = (status || '').toLowerCase();
-            if (s.includes('mvp') && !s.includes('near')) return 'mvp';
-            if (s.includes('near')) return 'near';
-            if (s.includes('developing')) return 'developing';
-            return 'early';
-        }
-        
-        function getGapClass(gap) {
-            const g = (gap || '').toLowerCase();
-            if (g.includes('supply')) return 'supply-gap';
-            if (g.includes('quality')) return 'quality-gap';
-            return 'ok';
-        }
-        
-        function getScoreColor(score) {
-            if (score >= 0.7) return 'success';
-            if (score >= 0.5) return 'warning';
-            return 'error';
-        }
-        
-        function filterZones() {
-            renderZoneTable();
-        }
-        
-        // Render discovery list
-        function renderDiscoveryList() {
-            const container = document.getElementById('discovery-list');
-            if (!container) return;
-            
-            if (!discoveryData.length) {
-                container.innerHTML = '<div style="text-align: center; color: var(--text-muted); padding: 40px;">No discovery data available. Run the pipeline to generate data.</div>';
-                return;
-            }
-            
-            const sourceFilter = document.getElementById('discovery-source-filter')?.value || 'all';
-            const recruitFilter = document.getElementById('discovery-recruit-filter')?.value || 'all';
-            const search = document.getElementById('discovery-search')?.value?.toLowerCase() || '';
-            
-            let filtered = discoveryData.filter(d => {
-                if (sourceFilter !== 'all' && d.source !== sourceFilter) return false;
-                if (recruitFilter === 'yes' && !d.recruitment_needed) return false;
-                if (recruitFilter === 'no' && d.recruitment_needed) return false;
-                if (search && !d.dish_type?.toLowerCase().includes(search)) return false;
-                return true;
-            });
-            
-            if (filtered.length === 0) {
-                container.innerHTML = '<div style="text-align: center; color: var(--text-muted); padding: 40px;">No discovery dishes match your filters</div>';
-                return;
-            }
-            
-            container.innerHTML = filtered.map(d => {
-                const sourceClass = (d.source || '').toLowerCase().replace(/ /g, '-');
+            tbody.innerHTML = filtered.slice(0, 100).map(zone => {
+                const mvpClass = zone.is_mvp ? 'badge-mvp' : 'badge-not-mvp';
+                const priorityClass = zone.recruitment_priority === 'High' ? 'badge-high' : 
+                                      zone.recruitment_priority === 'Medium' ? 'badge-medium' : 'badge-low';
+                
                 return `
-                <div class="discovery-card ${sourceClass}">
-                    <div class="discovery-header">
-                        <div class="discovery-title">${d.dish_type}</div>
-                        <div class="discovery-score">${(d.discovery_score || 0).toFixed(2)}</div>
-                    </div>
-                    <div class="discovery-meta">
-                        <span>📂 ${d.source || 'Unknown'}</span>
-                        <span>🍽️ ${d.cuisine || '-'}</span>
-                        <span>👨‍🍳 ${d.partner || 'TBD'}</span>
-                        ${d.recruitment_needed ? '<span class="badge supply-gap">Recruitment Needed</span>' : '<span class="badge ok">Existing Partner</span>'}
-                    </div>
-                    <div class="discovery-reason">"${d.reason || 'No reason provided'}"</div>
-                </div>
-            `}).join('');
+                    <tr>
+                        <td>
+                            <div style="font-weight: 600;">${zone.zone}</div>
+                            <div style="font-size: 11px; color: var(--text-muted);">${zone.region}</div>
+                        </td>
+                        <td style="font-family: 'JetBrains Mono', monospace;">${zone.orders.toLocaleString()}</td>
+                        <td style="font-family: 'JetBrains Mono', monospace;">${zone.partners}</td>
+                        <td style="font-family: 'JetBrains Mono', monospace;">${zone.cuisines_count}</td>
+                        <td><span class="badge ${mvpClass}">${zone.is_mvp ? 'MVP Ready' : 'Not MVP'}</span></td>
+                        <td style="font-size: 12px; max-width: 200px;">
+                            ${zone.missing_cuisines.length ? zone.missing_cuisines.join(', ') : '-'}
+                        </td>
+                        <td><span class="badge ${priorityClass}">${zone.recruitment_priority}</span></td>
+                    </tr>
+                `;
+            }).join('');
         }
         
-        function filterDiscovery() {
-            renderDiscoveryList();
-        }
-        
-        // Update 2x2 matrix
-        function updateMatrix() {
-            const emptyMsg = '<div style="color: var(--text-muted); font-size: 12px; padding: 8px;">No dishes in this quadrant</div>';
-            
-            // Calculate want_score and performance_score for each dish
-            // Want score: based on survey data, open-text mentions, latent demand
-            // Performance score: based on normalized orders, ratings (dishes not on menu = no perf data)
-            
-            const allDishes = [...dishData, ...discoveryData.map(d => ({
-                ...d,
-                dish_type: d.dish_type || d.name,
-                on_menu: false,
-                want_score: d.discovery_score || 4.0,  // Discovery dishes have high want
-                performance_score: 0  // Not on menu = no performance
-            }))];
-            
-            // For dishes on menu, calculate scores
-            const scoredDishes = dishData.map(d => ({
-                ...d,
-                want_score: d.want_score || (d.tier <= 2 ? 4.5 : d.tier <= 3 ? 3.5 : 2.5),
-                performance_score: d.on_menu ? (d.composite_score || 3.0) : 0
-            }));
-            
-            // CORE DRIVERS: High want (≥3.5) + High performance (≥3.5) + on menu
-            const coreDrivers = scoredDishes
-                .filter(d => d.on_menu && d.want_score >= 3.5 && d.performance_score >= 3.5)
-                .sort((a, b) => (b.want_score + b.performance_score) - (a.want_score + a.performance_score))
-                .slice(0, 10);
-            
-            // QUESTION MARKS: High performance (≥3.5) but lower want (<3.5) - why is it selling?
-            const questionMarks = scoredDishes
-                .filter(d => d.on_menu && d.performance_score >= 3.5 && d.want_score < 3.5)
-                .sort((a, b) => b.performance_score - a.performance_score)
-                .slice(0, 8);
-            
-            // OPPORTUNITIES: High want (≥3.5) but low/no performance (<3.5 or not on menu)
-            // Includes discovery dishes (not on menu but high want)
-            const opportunities = [
-                ...scoredDishes.filter(d => d.want_score >= 3.5 && (!d.on_menu || d.performance_score < 3.5)),
-                ...discoveryData.map(d => ({
-                    dish_type: d.dish_type || d.name,
-                    want_score: d.discovery_score || 4.0,
-                    performance_score: 0,
-                    on_menu: false
-                }))
-            ].sort((a, b) => b.want_score - a.want_score).slice(0, 10);
-            
-            // DEPRIORITIZE: Low want (<3.5) + Low performance (<3.5)
-            const deprioritize = scoredDishes
-                .filter(d => d.want_score < 3.5 && d.performance_score < 3.5 && d.on_menu)
-                .sort((a, b) => (a.want_score + a.performance_score) - (b.want_score + b.performance_score))
-                .slice(0, 8);
-            
-            const coreEl = document.getElementById('quadrant-core-drivers');
-            const demandEl = document.getElementById('quadrant-demand-boosters');  // Now "Question Marks"
-            const prefEl = document.getElementById('quadrant-preference-drivers');  // Now "Opportunities"
-            const depEl = document.getElementById('quadrant-deprioritize');
-            
-            if (coreEl) {
-                coreEl.innerHTML = coreDrivers.length ? coreDrivers.map(d => `
-                    <div class="quadrant-item">
-                        <span>${d.dish_type} ${d.on_menu ? '✅' : '❌'}</span>
-                        <span class="quadrant-item-score">W:${d.want_score.toFixed(1)} P:${d.performance_score.toFixed(1)}</span>
-                    </div>
-                `).join('') : emptyMsg;
-            }
-            
-            if (demandEl) {
-                demandEl.innerHTML = questionMarks.length ? questionMarks.map(d => `
-                    <div class="quadrant-item">
-                        <span>${d.dish_type}</span>
-                        <span class="quadrant-item-score">W:${d.want_score.toFixed(1)} P:${d.performance_score.toFixed(1)}</span>
-                    </div>
-                `).join('') : emptyMsg;
-            }
-            
-            if (prefEl) {
-                prefEl.innerHTML = opportunities.length ? opportunities.map(d => `
-                    <div class="quadrant-item">
-                        <span>${d.dish_type} ${d.on_menu ? '✅' : '❌'}</span>
-                        <span class="quadrant-item-score">W:${d.want_score.toFixed(1)} ${d.on_menu ? 'P:'+d.performance_score.toFixed(1) : '(not on menu)'}</span>
-                    </div>
-                `).join('') : emptyMsg;
-            }
-            
-            if (depEl) {
-                depEl.innerHTML = deprioritize.length ? deprioritize.map(d => `
-                    <div class="quadrant-item">
-                        <span>${d.dish_type}</span>
-                        <span class="quadrant-item-score">W:${d.want_score.toFixed(1)} P:${d.performance_score.toFixed(1)}</span>
-                    </div>
-                `).join('') : emptyMsg;
-            }
-        }
+        // Initialize
+        document.addEventListener('DOMContentLoaded', loadAllData);
     </script>
 </body>
 </html>
-

@@ -1,0 +1,69 @@
+{
+  "cuisine_threshold": {
+    "recommended": 5,
+    "evidence": {
+      "5_cuisines": {
+        "zones": 13,
+        "avg_orders": 685.0,
+        "avg_rating": 4.44
+      },
+      "4_cuisines": {
+        "zones": 24,
+        "avg_orders": 511.0,
+        "avg_rating": 4.35
+      },
+      "impact": "+34% orders, +0.09 rating"
+    },
+    "source": "threshold_sensitivity.json (n=197 zones)"
+  },
+  "partner_threshold": {
+    "recommended": 5,
+    "evidence": {
+      "5_partners": {
+        "zones": 16,
+        "avg_orders": 537.0
+      },
+      "1-2_partners": {
+        "zones": 95,
+        "avg_orders": 68.0
+      },
+      "impact": "8x more orders"
+    },
+    "source": "threshold_sensitivity.json (n=197 zones)"
+  },
+  "variety_demand": "17.3% want more variety",
+  "variety_source": "open-text analysis (n=2,796)",
+  "core_cuisines": [
+    {
+      "cuisine": "japanese",
+      "repeat_rate": 0.162,
+      "rating": 4.24,
+      "n": 14618
+    },
+    {
+      "cuisine": "Vietnamese",
+      "repeat_rate": 0.207,
+      "rating": 4.57,
+      "n": 12961
+    },
+    {
+      "cuisine": "italian",
+      "repeat_rate": 0.165,
+      "rating": 4.15,
+      "n": 9063
+    },
+    {
+      "cuisine": "Asian",
+      "repeat_rate": 0.203,
+      "rating": 4.43,
+      "n": 8942
+    },
+    {
+      "cuisine": "indian",
+      "repeat_rate": 0.231,
+      "rating": 4.66,
+      "n": 8356
+    }
+  ],
+  "core_cuisines_source": "cuisine_performance.csv (behavioral data)"
+}

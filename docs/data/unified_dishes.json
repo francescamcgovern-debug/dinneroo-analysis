@@ -1,0 +1,3346 @@
+[
+  {
+    "dish": "Salmon Teriyaki Family Platter",
+    "tier": "Must Have",
+    "priority_score": 5.2,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (5.20)",
+    "potential_partners": "TBD - based on cuisine",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.0,
+        "n": 44
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 4.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.2,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 1
+  },
+  {
+    "dish": "Halloumi Wrap Family Box",
+    "tier": "Must Have",
+    "priority_score": 5.1,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Greek/Mediterranean",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (5.10)",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 3,
+      "latent_demand_score": 2.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4,
+      "customisation": 5,
+      "framework_score": 3.63,
+      "track_b_score": 2.49,
+      "partner_capability": 2
+    },
+    "evidence_level": "Single",
+    "rank": 2
+  },
+  {
+    "dish": "Souvlaki Family Platter",
+    "tier": "Must Have",
+    "priority_score": 5.1,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Greek/Mediterranean",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (5.10)",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.0,
+      "partner_capability": 2
+    },
+    "evidence_level": "Single",
+    "rank": 3
+  },
+  {
+    "dish": "Chicken",
+    "tier": "Must Have",
+    "priority_score": 5.0,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Global",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (5.00)",
+    "potential_partners": "TBD",
+    "quadrant": "High Importance / High Coverage",
+    "action": "Maintain - working well",
+    "order_volume": 11417,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 18,
+      "latent_demand_score": 4.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.67,
+      "track_b_score": 3.3,
+      "partner_capability": 3
+    },
+    "evidence_level": "Validated",
+    "rank": 4
+  },
+  {
+    "dish": "Rotisserie Chicken Family Feast",
+    "tier": "Must Have",
+    "priority_score": 4.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Healthy/Fresh",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.95)",
+    "potential_partners": "Farmer J",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.55,
+      "track_b_score": 2.37,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 5
+  },
+  {
+    "dish": "Grilled Chicken Family Platter with Sides",
+    "tier": "Must Have",
+    "priority_score": 4.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Healthy/Fresh",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.95)",
+    "potential_partners": "Farmer J",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": null,
+    "evidence_level": "Single",
+    "rank": 6
+  },
+  {
+    "dish": "Fajita Family Kit",
+    "tier": "Must Have",
+    "priority_score": 4.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Mexican",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.95)",
+    "potential_partners": "Tortilla",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": null,
+    "evidence_level": "Single",
+    "rank": 7
+  },
+  {
+    "dish": "Kids Ramen & Adult Ramen Combo",
+    "tier": "Must Have",
+    "priority_score": 4.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Japanese/Asian",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.95)",
+    "potential_partners": "Wagamama",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 3.76,
+        "n": 21
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 3.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.17,
+      "track_b_score": 2.25,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 8
+  },
+  {
+    "dish": "Plain Pasta with Sides Family Bundle",
+    "tier": "Must Have",
+    "priority_score": 4.87,
+    "category": "Discover",
+    "evidence_type": "Measured",
+    "cuisine": "Various",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.87)",
+    "potential_partners": "TBD - based on cuisine",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.28,
+        "n": 159
+      },
+      "kids_happy": {
+        "rate": 0.82,
+        "n": 56
+      },
+      "adult_satisfaction": {
+        "rate": 0.75,
+        "n": 56
+      },
+      "portions_adequate": {
+        "rate": 0.82,
+        "n": 56
+      },
+      "track_a_score": 3.79,
+      "survey_n": 56
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.68,
+      "track_b_score": 2.2,
+      "partner_capability": 2
+    },
+    "evidence_level": "Corroborated",
+    "rank": 9
+  },
+  {
+    "dish": "Paneer Tikka Family Feast",
+    "tier": "Must Have",
+    "priority_score": 4.87,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.87)",
+    "potential_partners": "TBD - based on cuisine",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": null,
+    "evidence_level": "Single",
+    "rank": 10
+  },
+  {
+    "dish": "Veggie Fajita Family Kit",
+    "tier": "Must Have",
+    "priority_score": 4.87,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.87)",
+    "potential_partners": "TBD - based on cuisine",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": null,
+    "evidence_level": "Single",
+    "rank": 11
+  },
+  {
+    "dish": "Halloumi Wrap Family Bundle",
+    "tier": "Must Have",
+    "priority_score": 4.87,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.87)",
+    "potential_partners": "TBD - based on cuisine",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 3,
+      "latent_demand_score": 2.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4,
+      "customisation": 5,
+      "framework_score": 3.63,
+      "track_b_score": 2.49,
+      "partner_capability": 2
+    },
+    "evidence_level": "Single",
+    "rank": 12
+  },
+  {
+    "dish": "Grilled Chicken with Customizable Sides",
+    "tier": "Must Have",
+    "priority_score": 4.87,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.87)",
+    "potential_partners": "TBD - based on cuisine",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": null,
+    "evidence_level": "Single",
+    "rank": 13
+  },
+  {
+    "dish": "Dim Sum Family Selection",
+    "tier": "Must Have",
+    "priority_score": 4.85,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Chinese",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.85)",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.11,
+      "track_b_score": 2.63,
+      "partner_capability": 2
+    },
+    "evidence_level": "Single",
+    "rank": 14
+  },
+  {
+    "dish": "Shawarma Family Platter",
+    "tier": "Must Have",
+    "priority_score": 4.85,
+    "category": "Discover",
+    "evidence_type": "Measured",
+    "cuisine": "Middle Eastern",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.85)",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.68,
+        "n": 220
+      },
+      "kids_happy": {
+        "rate": 0.8,
+        "n": 15
+      },
+      "adult_satisfaction": {
+        "rate": 0.88,
+        "n": 24
+      },
+      "portions_adequate": {
+        "rate": 0.83,
+        "n": 24
+      },
+      "track_a_score": 4.43,
+      "survey_n": 24
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.08,
+      "track_b_score": 2.62,
+      "partner_capability": 2
+    },
+    "evidence_level": "Corroborated",
+    "rank": 15
+  },
+  {
+    "dish": "Greek Mezze Family Feast",
+    "tier": "Must Have",
+    "priority_score": 4.85,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Greek/Mediterranean",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.85)",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 6,
+      "latent_demand_score": 3.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.19,
+      "track_b_score": 2.66,
+      "partner_capability": 2
+    },
+    "evidence_level": "Single",
+    "rank": 16
+  },
+  {
+    "dish": "Build Your Own Grain Bowl Family Pack",
+    "tier": "Must Have",
+    "priority_score": 4.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Healthy/Fresh",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.70)",
+    "potential_partners": "Farmer J",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 3,
+      "customisation": 5,
+      "framework_score": 3.67,
+      "track_b_score": 2.4,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 17
+  },
+  {
+    "dish": "Vietnamese Rice Paper Rolls Family Pack",
+    "tier": "Must Have",
+    "priority_score": 4.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Vietnamese",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.70)",
+    "potential_partners": "Pho",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": null,
+    "evidence_level": "Single",
+    "rank": 18
+  },
+  {
+    "dish": "Teriyaki Salmon Family Platter",
+    "tier": "Must Have",
+    "priority_score": 4.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Japanese/Asian",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.70)",
+    "potential_partners": "Wagamama",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.0,
+        "n": 44
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 4.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.2,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 19
+  },
+  {
+    "dish": "Quesadilla Family Pack",
+    "tier": "Must Have",
+    "priority_score": 4.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Mexican",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.70)",
+    "potential_partners": "Tortilla",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.6,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 20
+  },
+  {
+    "dish": "Butter Chicken Family Feast",
+    "tier": "Must Have",
+    "priority_score": 4.7,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Indian",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.70)",
+    "potential_partners": "Dishoom",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.55,
+      "track_b_score": 2.56,
+      "partner_capability": 4
+    },
+    "evidence_level": "Single",
+    "rank": 21
+  },
+  {
+    "dish": "Falafel & Hummus Family Box",
+    "tier": "Must Have",
+    "priority_score": 4.6,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Middle Eastern",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.60)",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": null,
+    "evidence_level": "Single",
+    "rank": 22
+  },
+  {
+    "dish": "Chicken & Rice Plain Family Meal",
+    "tier": "Must Have",
+    "priority_score": 4.53,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Various",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.53)",
+    "potential_partners": "TBD - based on cuisine",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": null,
+    "evidence_level": "Single",
+    "rank": 23
+  },
+  {
+    "dish": "Biryani Family Pot",
+    "tier": "Must Have",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Indian",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.45)",
+    "potential_partners": "Dishoom",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.53,
+        "n": 77
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 7,
+      "latent_demand_score": 3.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.8,
+      "partner_capability": 3
+    },
+    "evidence_level": "Corroborated",
+    "rank": 24
+  },
+  {
+    "dish": "Roast Dinner Family Platter",
+    "tier": "Must Have",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "British",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.45)",
+    "potential_partners": "Bill's",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 34,
+      "latent_demand_score": 5.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.18,
+      "track_b_score": 3.45,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 25
+  },
+  {
+    "dish": "Veggie Burrito Bowl Family Bundle",
+    "tier": "Must Have",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Mexican",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.45)",
+    "potential_partners": "Tortilla",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 4,
+      "framework_score": 3.11,
+      "track_b_score": 2.63,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 26
+  },
+  {
+    "dish": "Teriyaki Rice Bowl Family Bundle",
+    "tier": "Must Have",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Measured",
+    "cuisine": "Japanese/Healthy",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.45)",
+    "potential_partners": "Itsu",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.39,
+        "n": 420
+      },
+      "kids_happy": {
+        "rate": 0.95,
+        "n": 21
+      },
+      "adult_satisfaction": {
+        "rate": 0.85,
+        "n": 27
+      },
+      "portions_adequate": {
+        "rate": 0.93,
+        "n": 27
+      },
+      "track_a_score": 4.36,
+      "survey_n": 27
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 4,
+      "customisation": 5,
+      "framework_score": 3.86,
+      "track_b_score": 2.86,
+      "partner_capability": 5
+    },
+    "evidence_level": "Corroborated",
+    "rank": 27
+  },
+  {
+    "dish": "Sushi Family Platter",
+    "tier": "Must Have",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Measured",
+    "cuisine": "Japanese/Healthy",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.45)",
+    "potential_partners": "Itsu",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.7,
+        "n": 105
+      },
+      "kids_happy": {
+        "rate": 0.65,
+        "n": 23
+      },
+      "adult_satisfaction": {
+        "rate": 0.93,
+        "n": 29
+      },
+      "portions_adequate": {
+        "rate": 0.86,
+        "n": 29
+      },
+      "track_a_score": 4.43,
+      "survey_n": 29
+    },
+    "opportunity": {
+      "latent_demand_mentions": 12,
+      "latent_demand_score": 3.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.06,
+      "track_b_score": 3.02,
+      "partner_capability": 4
+    },
+    "evidence_level": "Validated",
+    "rank": 28
+  },
+  {
+    "dish": "Katsu Curry Family Bundle",
+    "tier": "Must Have",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Japanese/Asian",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.45)",
+    "potential_partners": "Wagamama",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.45,
+        "n": 702
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 4.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.27,
+      "track_b_score": 2.48,
+      "partner_capability": 4
+    },
+    "evidence_level": "Single",
+    "rank": 29
+  },
+  {
+    "dish": "Pho Family Sharing Bowl",
+    "tier": "Must Have",
+    "priority_score": 4.45,
+    "category": "Discover",
+    "evidence_type": "Measured",
+    "cuisine": "Vietnamese",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.45)",
+    "potential_partners": "Pho",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.54,
+        "n": 590
+      },
+      "kids_happy": {
+        "rate": 0.84,
+        "n": 97
+      },
+      "adult_satisfaction": {
+        "rate": 0.95,
+        "n": 130
+      },
+      "portions_adequate": {
+        "rate": 0.9,
+        "n": 128
+      },
+      "track_a_score": 4.64,
+      "survey_n": 131
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3,
+      "customisation": 5,
+      "framework_score": 3.55,
+      "track_b_score": 2.37,
+      "partner_capability": 3
+    },
+    "evidence_level": "Corroborated",
+    "rank": 30
+  },
+  {
+    "dish": "Chicken Chow Mein Family Bundle",
+    "tier": "Must Have",
+    "priority_score": 4.35,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Chinese",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.35)",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": null,
+    "evidence_level": "Single",
+    "rank": 31
+  },
+  {
+    "dish": "Sweet & Sour Chicken Family Meal",
+    "tier": "Must Have",
+    "priority_score": 4.35,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Chinese",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.35)",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.55,
+      "track_b_score": 2.37,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 32
+  },
+  {
+    "dish": "Chicken Pie with Mash & Veg",
+    "tier": "Must Have",
+    "priority_score": 4.2,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "British",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.20)",
+    "potential_partners": "Bill's",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.55,
+      "track_b_score": 2.56,
+      "partner_capability": 4
+    },
+    "evidence_level": "Single",
+    "rank": 33
+  },
+  {
+    "dish": "Banh Mi Family Box",
+    "tier": "Must Have",
+    "priority_score": 4.2,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Vietnamese",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.20)",
+    "potential_partners": "Pho",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": null,
+    "evidence_level": "Single",
+    "rank": 34
+  },
+  {
+    "dish": "Chicken Tikka Wrap Box",
+    "tier": "Must Have",
+    "priority_score": 4.2,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Indian",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.20)",
+    "potential_partners": "Dishoom",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4,
+      "customisation": 5,
+      "framework_score": 3.53,
+      "track_b_score": 2.16,
+      "partner_capability": 2
+    },
+    "evidence_level": "Single",
+    "rank": 35
+  },
+  {
+    "dish": "Pad Thai",
+    "tier": "Must Have",
+    "priority_score": 4.14,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Thai",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.14)",
+    "potential_partners": "Banana Tree",
+    "quadrant": "High Importance / High Coverage",
+    "action": "Maintain - working well",
+    "order_volume": 2370,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.54,
+        "n": 280
+      },
+      "kids_happy": {
+        "rate": 0.79,
+        "n": 34
+      },
+      "adult_satisfaction": {
+        "rate": 0.92,
+        "n": 52
+      },
+      "portions_adequate": {
+        "rate": 0.87,
+        "n": 52
+      },
+      "track_a_score": 4.64,
+      "survey_n": 52
+    },
+    "opportunity": {
+      "latent_demand_mentions": 37,
+      "latent_demand_score": 5.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 2,
+      "customisation": 3,
+      "framework_score": 3.01,
+      "track_b_score": 3.4,
+      "partner_capability": 3
+    },
+    "evidence_level": "Validated",
+    "rank": 36
+  },
+  {
+    "dish": "Biryani",
+    "tier": "Must Have",
+    "priority_score": 4.12,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Indian",
+    "gap_type": "No Gap",
+    "rationale": "High priority score (4.12)",
+    "potential_partners": "Dishoom",
+    "quadrant": "High Importance / Medium Coverage",
+    "action": "EXPAND - roll out to more zones",
+    "order_volume": 458,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.53,
+        "n": 77
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 7,
+      "latent_demand_score": 3.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.8,
+      "partner_capability": 3
+    },
+    "evidence_level": "Validated",
+    "rank": 37
+  },
+  {
+    "dish": "Fried Rice",
+    "tier": "Must Have",
+    "priority_score": 4.06,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Chinese",
+    "gap_type": "Supply Gap",
+    "rationale": "High priority score (4.06)",
+    "potential_partners": "Pho, Wagamama, Itsu",
+    "quadrant": "High Importance / Low Coverage",
+    "action": "RECRUIT - need new partners",
+    "order_volume": 2430,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.46,
+        "n": 322
+      },
+      "kids_happy": {
+        "rate": 0.88,
+        "n": 8
+      },
+      "adult_satisfaction": {
+        "rate": 0.94,
+        "n": 16
+      },
+      "portions_adequate": {
+        "rate": 0.94,
+        "n": 16
+      },
+      "track_a_score": 4.57,
+      "survey_n": 16
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4,
+      "customisation": 3,
+      "framework_score": 3.32,
+      "track_b_score": 3.3,
+      "partner_capability": 5
+    },
+    "evidence_level": "Validated",
+    "rank": 38
+  },
+  {
+    "dish": "Chinese Family Meal",
+    "tier": "Must Have",
+    "priority_score": 3.96,
+    "category": "Recruit",
+    "evidence_type": "Opportunity",
+    "cuisine": "Chinese",
+    "gap_type": "Supply Gap",
+    "rationale": "Fills Supply Gap",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Medium Importance / Low Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 31,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 58,
+      "latent_demand_score": 5.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.53,
+      "track_b_score": 3.96,
+      "partner_capability": 2
+    },
+    "evidence_level": "Corroborated",
+    "rank": 39
+  },
+  {
+    "dish": "Thai Green Curry Family Pot (Mild)",
+    "tier": "Nice to Have",
+    "priority_score": 3.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "Thai/Southeast Asian",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.95), no critical gap",
+    "potential_partners": "Banana Tree",
+    "quadrant": "Medium Importance / Low Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.45,
+        "n": 702
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 4.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.27,
+      "track_b_score": 2.48,
+      "partner_capability": 4
+    },
+    "evidence_level": "Single",
+    "rank": 40
+  },
+  {
+    "dish": "Pad Thai Family Bundle",
+    "tier": "Nice to Have",
+    "priority_score": 3.95,
+    "category": "Discover",
+    "evidence_type": "Measured",
+    "cuisine": "Thai/Southeast Asian",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.95), no critical gap",
+    "potential_partners": "Banana Tree",
+    "quadrant": "Medium Importance / Low Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.54,
+        "n": 280
+      },
+      "kids_happy": {
+        "rate": 0.79,
+        "n": 34
+      },
+      "adult_satisfaction": {
+        "rate": 0.92,
+        "n": 52
+      },
+      "portions_adequate": {
+        "rate": 0.87,
+        "n": 52
+      },
+      "track_a_score": 4.64,
+      "survey_n": 52
+    },
+    "opportunity": {
+      "latent_demand_mentions": 37,
+      "latent_demand_score": 5.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 2,
+      "customisation": 3,
+      "framework_score": 3.01,
+      "track_b_score": 3.4,
+      "partner_capability": 3
+    },
+    "evidence_level": "Validated",
+    "rank": 41
+  },
+  {
+    "dish": "Fish & Chips Family Bucket",
+    "tier": "Nice to Have",
+    "priority_score": 3.95,
+    "category": "Discover",
+    "evidence_type": "Discovery",
+    "cuisine": "British",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.95), no critical gap",
+    "potential_partners": "Bill's",
+    "quadrant": "Medium Importance / Low Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 39,
+      "latent_demand_score": 5.0,
+      "kid_friendly": 5,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.45,
+      "track_b_score": 3.33,
+      "partner_capability": 2
+    },
+    "evidence_level": "Single",
+    "rank": 42
+  },
+  {
+    "dish": "Sushi",
+    "tier": "Must Have",
+    "priority_score": 3.87,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Japanese",
+    "gap_type": "No Gap",
+    "rationale": "Fills No Gap",
+    "potential_partners": "Itsu, Iro Sushi",
+    "quadrant": "Medium Importance / High Coverage",
+    "action": "Optimize - improve efficiency",
+    "order_volume": 1043,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.7,
+        "n": 105
+      },
+      "kids_happy": {
+        "rate": 0.65,
+        "n": 23
+      },
+      "adult_satisfaction": {
+        "rate": 0.93,
+        "n": 29
+      },
+      "portions_adequate": {
+        "rate": 0.86,
+        "n": 29
+      },
+      "track_a_score": 4.43,
+      "survey_n": 29
+    },
+    "opportunity": {
+      "latent_demand_mentions": 12,
+      "latent_demand_score": 3.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.06,
+      "track_b_score": 3.02,
+      "partner_capability": 4
+    },
+    "evidence_level": "Validated",
+    "rank": 43
+  },
+  {
+    "dish": "Rice Bowl",
+    "tier": "Must Have",
+    "priority_score": 3.76,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Healthy/Fresh",
+    "gap_type": "No Gap",
+    "rationale": "Fills No Gap",
+    "potential_partners": "Pho, Wagamama, Itsu, Farmer J",
+    "quadrant": "Medium Importance / High Coverage",
+    "action": "Optimize - improve efficiency",
+    "order_volume": 3139,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.39,
+        "n": 420
+      },
+      "kids_happy": {
+        "rate": 0.95,
+        "n": 21
+      },
+      "adult_satisfaction": {
+        "rate": 0.85,
+        "n": 27
+      },
+      "portions_adequate": {
+        "rate": 0.93,
+        "n": 27
+      },
+      "track_a_score": 4.36,
+      "survey_n": 27
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 4,
+      "customisation": 5,
+      "framework_score": 3.86,
+      "track_b_score": 2.86,
+      "partner_capability": 5
+    },
+    "evidence_level": "Validated",
+    "rank": 44
+  },
+  {
+    "dish": "Noodles",
+    "tier": "Must Have",
+    "priority_score": 3.74,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Global",
+    "gap_type": "No Gap",
+    "rationale": "Fills No Gap",
+    "potential_partners": "Pho, Wagamama, Itsu, Banana Tree",
+    "quadrant": "Medium Importance / High Coverage",
+    "action": "Optimize - improve efficiency",
+    "order_volume": 3307,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.57,
+        "n": 419
+      },
+      "kids_happy": {
+        "rate": 0.72,
+        "n": 39
+      },
+      "adult_satisfaction": {
+        "rate": 0.87,
+        "n": 62
+      },
+      "portions_adequate": {
+        "rate": 0.84,
+        "n": 62
+      },
+      "track_a_score": 4.43,
+      "survey_n": 62
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4,
+      "customisation": 3,
+      "framework_score": 3.32,
+      "track_b_score": 2.7,
+      "partner_capability": 5
+    },
+    "evidence_level": "Validated",
+    "rank": 45
+  },
+  {
+    "dish": "Shawarma",
+    "tier": "Must Have",
+    "priority_score": 3.71,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Middle Eastern",
+    "gap_type": "Supply Gap",
+    "rationale": "Fills Supply Gap",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Medium Importance / Low Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 1355,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.68,
+        "n": 220
+      },
+      "kids_happy": {
+        "rate": 0.8,
+        "n": 15
+      },
+      "adult_satisfaction": {
+        "rate": 0.88,
+        "n": 24
+      },
+      "portions_adequate": {
+        "rate": 0.83,
+        "n": 24
+      },
+      "track_a_score": 4.43,
+      "survey_n": 24
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.08,
+      "track_b_score": 2.62,
+      "partner_capability": 2
+    },
+    "evidence_level": "Validated",
+    "rank": 46
+  },
+  {
+    "dish": "Pho",
+    "tier": "Must Have",
+    "priority_score": 3.7,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Vietnamese",
+    "gap_type": "No Gap",
+    "rationale": "Fills No Gap",
+    "potential_partners": "Pho",
+    "quadrant": "Medium Importance / High Coverage",
+    "action": "Optimize - improve efficiency",
+    "order_volume": 4530,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.54,
+        "n": 590
+      },
+      "kids_happy": {
+        "rate": 0.84,
+        "n": 97
+      },
+      "adult_satisfaction": {
+        "rate": 0.95,
+        "n": 130
+      },
+      "portions_adequate": {
+        "rate": 0.9,
+        "n": 128
+      },
+      "track_a_score": 4.64,
+      "survey_n": 131
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.29,
+      "track_b_score": 2.29,
+      "partner_capability": 3
+    },
+    "evidence_level": "Validated",
+    "rank": 47
+  },
+  {
+    "dish": "Fajitas",
+    "tier": "Must Have",
+    "priority_score": 3.69,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Mexican",
+    "gap_type": "Quality Gap",
+    "rationale": "Fills Quality Gap",
+    "potential_partners": "Tortilla",
+    "quadrant": "Medium Importance / Medium Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 595,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.15,
+        "n": 93
+      },
+      "kids_happy": {
+        "rate": 0.83,
+        "n": 18
+      },
+      "adult_satisfaction": {
+        "rate": 0.94,
+        "n": 18
+      },
+      "portions_adequate": {
+        "rate": 0.94,
+        "n": 18
+      },
+      "track_a_score": 4.36,
+      "survey_n": 18
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 5,
+      "framework_score": 3.4,
+      "track_b_score": 2.72,
+      "partner_capability": 3
+    },
+    "evidence_level": "Validated",
+    "rank": 48
+  },
+  {
+    "dish": "Lasagne",
+    "tier": "Must Have",
+    "priority_score": 3.56,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Italian",
+    "gap_type": "No Gap",
+    "rationale": "Fills No Gap",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Medium Importance / High Coverage",
+    "action": "Optimize - improve efficiency",
+    "order_volume": 1099,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.17,
+        "n": 149
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 4.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 25,
+      "latent_demand_score": 4.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.9,
+      "partner_capability": 2
+    },
+    "evidence_level": "Validated",
+    "rank": 49
+  },
+  {
+    "dish": "Mac & Cheese",
+    "tier": "Nice to Have",
+    "priority_score": 3.45,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Global",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.45), no critical gap",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Medium Importance / High Coverage",
+    "action": "Optimize - improve efficiency",
+    "order_volume": 1307,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.51,
+        "n": 199
+      },
+      "kids_happy": {
+        "rate": 0.81,
+        "n": 21
+      },
+      "adult_satisfaction": {
+        "rate": 0.87,
+        "n": 23
+      },
+      "portions_adequate": {
+        "rate": 0.78,
+        "n": 23
+      },
+      "track_a_score": 4.29,
+      "survey_n": 23
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.63,
+      "track_b_score": 2.19,
+      "partner_capability": 2
+    },
+    "evidence_level": "Validated",
+    "rank": 50
+  },
+  {
+    "dish": "Roast Dinner",
+    "tier": "Nice to Have",
+    "priority_score": 3.45,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "British",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.45), no critical gap",
+    "potential_partners": "Bill's",
+    "quadrant": "Medium Importance / Medium Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 287,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 34,
+      "latent_demand_score": 5.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.18,
+      "track_b_score": 3.45,
+      "partner_capability": 3
+    },
+    "evidence_level": "Corroborated",
+    "rank": 51
+  },
+  {
+    "dish": "Butter Chicken",
+    "tier": "Nice to Have",
+    "priority_score": 3.42,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Indian",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.42), no critical gap",
+    "potential_partners": "Dishoom, Farmer J",
+    "quadrant": "Medium Importance / Medium Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 365,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.55,
+      "track_b_score": 2.56,
+      "partner_capability": 4
+    },
+    "evidence_level": "Corroborated",
+    "rank": 52
+  },
+  {
+    "dish": "Curry",
+    "tier": "Nice to Have",
+    "priority_score": 3.39,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Indian",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.39), no critical gap",
+    "potential_partners": "Dishoom, Banana Tree",
+    "quadrant": "Medium Importance / High Coverage",
+    "action": "Optimize - improve efficiency",
+    "order_volume": 4949,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.45,
+        "n": 702
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 4.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.27,
+      "track_b_score": 2.48,
+      "partner_capability": 4
+    },
+    "evidence_level": "Corroborated",
+    "rank": 53
+  },
+  {
+    "dish": "Fish & Chips",
+    "tier": "Nice to Have",
+    "priority_score": 3.33,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.33), no critical gap",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Medium Importance / Low Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 32,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 39,
+      "latent_demand_score": 5.0,
+      "kid_friendly": 5,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.45,
+      "track_b_score": 3.33,
+      "partner_capability": 2
+    },
+    "evidence_level": "Corroborated",
+    "rank": 54
+  },
+  {
+    "dish": "Salad",
+    "tier": "Nice to Have",
+    "priority_score": 3.32,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Healthy/Fresh",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.32), no critical gap",
+    "potential_partners": "Farmer J",
+    "quadrant": "Medium Importance / High Coverage",
+    "action": "Optimize - improve efficiency",
+    "order_volume": 1089,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.47,
+        "n": 160
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 4.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 3,
+      "customisation": 4,
+      "framework_score": 3.36,
+      "track_b_score": 2.31,
+      "partner_capability": 3
+    },
+    "evidence_level": "Corroborated",
+    "rank": 55
+  },
+  {
+    "dish": "Grilled Chicken with Sides",
+    "tier": "Nice to Have",
+    "priority_score": 3.3,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.30), no critical gap",
+    "potential_partners": "Farmer J",
+    "quadrant": "Medium Importance / Medium Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 540,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 18,
+      "latent_demand_score": 4.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.67,
+      "track_b_score": 3.3,
+      "partner_capability": 3
+    },
+    "evidence_level": "Validated",
+    "rank": 56
+  },
+  {
+    "dish": "Teriyaki",
+    "tier": "Nice to Have",
+    "priority_score": 3.28,
+    "category": "Expand",
+    "evidence_type": "Measured",
+    "cuisine": "Japanese",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.28), no critical gap",
+    "potential_partners": "Wagamama",
+    "quadrant": "Medium Importance / Medium Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 394,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.0,
+        "n": 44
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 4.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.2,
+      "partner_capability": 3
+    },
+    "evidence_level": "Corroborated",
+    "rank": 57
+  },
+  {
+    "dish": "Katsu",
+    "tier": "Nice to Have",
+    "priority_score": 3.24,
+    "category": "Fix",
+    "evidence_type": "Measured",
+    "cuisine": "Japanese",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.24), no critical gap",
+    "potential_partners": "Wagamama",
+    "quadrant": "Medium Importance / High Coverage",
+    "action": "Optimize - improve efficiency",
+    "order_volume": 11686,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.29,
+        "n": 1469
+      },
+      "kids_happy": {
+        "rate": 0.78,
+        "n": 69
+      },
+      "adult_satisfaction": {
+        "rate": 0.81,
+        "n": 57
+      },
+      "portions_adequate": {
+        "rate": 0.68,
+        "n": 57
+      },
+      "track_a_score": 3.86,
+      "survey_n": 57
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4,
+      "customisation": 3,
+      "framework_score": 3.4,
+      "track_b_score": 2.32,
+      "partner_capability": 3
+    },
+    "evidence_level": "Validated",
+    "rank": 58
+  },
+  {
+    "dish": "Pasta",
+    "tier": "Nice to Have",
+    "priority_score": 3.15,
+    "category": "Fix",
+    "evidence_type": "Measured",
+    "cuisine": "Italian",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.15), no critical gap",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Medium Importance / High Coverage",
+    "action": "Optimize - improve efficiency",
+    "order_volume": 1340,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.28,
+        "n": 159
+      },
+      "kids_happy": {
+        "rate": 0.82,
+        "n": 56
+      },
+      "adult_satisfaction": {
+        "rate": 0.75,
+        "n": 56
+      },
+      "portions_adequate": {
+        "rate": 0.82,
+        "n": 56
+      },
+      "track_a_score": 3.79,
+      "survey_n": 56
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.68,
+      "track_b_score": 2.2,
+      "partner_capability": 2
+    },
+    "evidence_level": "Validated",
+    "rank": 59
+  },
+  {
+    "dish": "Shepherd's Pie",
+    "tier": "Nice to Have",
+    "priority_score": 3.1,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "British",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.10), no critical gap",
+    "potential_partners": "Bill's",
+    "quadrant": "Medium Importance / Medium Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 333,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 17,
+      "latent_demand_score": 4.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 3.1,
+      "partner_capability": 3
+    },
+    "evidence_level": "Corroborated",
+    "rank": 60
+  },
+  {
+    "dish": "Stir Fry",
+    "tier": "Nice to Have",
+    "priority_score": 3.03,
+    "category": "Monitor",
+    "evidence_type": "Measured",
+    "cuisine": "Global",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.03), no critical gap",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Medium Importance / Low Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 61,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.4,
+        "n": 5
+      },
+      "kids_happy": {
+        "rate": 0.0,
+        "n": 2
+      },
+      "adult_satisfaction": {
+        "rate": 0.33,
+        "n": 3
+      },
+      "portions_adequate": {
+        "rate": 1.0,
+        "n": 3
+      },
+      "track_a_score": 3.71,
+      "survey_n": 3
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.0,
+      "partner_capability": 2
+    },
+    "evidence_level": "Validated",
+    "rank": 61
+  },
+  {
+    "dish": "Korean Fried Chicken",
+    "tier": "Nice to Have",
+    "priority_score": 3.02,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Korean",
+    "gap_type": "No Gap",
+    "rationale": "Medium priority (3.02), no critical gap",
+    "potential_partners": "Farmer J",
+    "quadrant": "Medium Importance / Medium Coverage",
+    "action": "Consider - if resources allow",
+    "order_volume": 398,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 8,
+      "latent_demand_score": 3.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.72,
+      "track_b_score": 3.02,
+      "partner_capability": 3
+    },
+    "evidence_level": "Validated",
+    "rank": 62
+  },
+  {
+    "dish": "Pizza",
+    "tier": "Monitor",
+    "priority_score": 2.98,
+    "category": "Fix",
+    "evidence_type": "Measured",
+    "cuisine": "Italian",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.98), monitor for changes",
+    "potential_partners": "Franco Manca",
+    "quadrant": "Low Importance / Medium Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 400,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 3.84,
+        "n": 38
+      },
+      "kids_happy": {
+        "rate": 0.74,
+        "n": 109
+      },
+      "adult_satisfaction": {
+        "rate": 0.76,
+        "n": 93
+      },
+      "portions_adequate": {
+        "rate": 0.89,
+        "n": 94
+      },
+      "track_a_score": 3.36,
+      "survey_n": 94
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 5,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5,
+      "customisation": 4,
+      "framework_score": 3.72,
+      "track_b_score": 2.42,
+      "partner_capability": 3
+    },
+    "evidence_level": "Validated",
+    "rank": 63
+  },
+  {
+    "dish": "Tacos",
+    "tier": "Monitor",
+    "priority_score": 2.84,
+    "category": "Monitor",
+    "evidence_type": "Measured",
+    "cuisine": "Mexican",
+    "gap_type": "Quality Gap",
+    "rationale": "Lower priority (2.84), monitor for changes",
+    "potential_partners": "Tortilla",
+    "quadrant": "Low Importance / Medium Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 92,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 3.67,
+        "n": 15
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 3.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.6,
+      "partner_capability": 3
+    },
+    "evidence_level": "Corroborated",
+    "rank": 64
+  },
+  {
+    "dish": "Veggie Fajitas",
+    "tier": "Monitor",
+    "priority_score": 2.72,
+    "category": "Monitor",
+    "evidence_type": "Measured",
+    "cuisine": "Mexican",
+    "gap_type": "Quality Gap",
+    "rationale": "Lower priority (2.72), monitor for changes",
+    "potential_partners": "Tortilla",
+    "quadrant": "Low Importance / Medium Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 333,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.15,
+        "n": 93
+      },
+      "kids_happy": {
+        "rate": 0.83,
+        "n": 18
+      },
+      "adult_satisfaction": {
+        "rate": 0.94,
+        "n": 18
+      },
+      "portions_adequate": {
+        "rate": 0.94,
+        "n": 18
+      },
+      "track_a_score": 4.36,
+      "survey_n": 18
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 5,
+      "framework_score": 3.4,
+      "track_b_score": 2.72,
+      "partner_capability": 3
+    },
+    "evidence_level": "Validated",
+    "rank": 65
+  },
+  {
+    "dish": "Ramen",
+    "tier": "Monitor",
+    "priority_score": 2.7,
+    "category": "Monitor",
+    "evidence_type": "Measured",
+    "cuisine": "Japanese",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.70), monitor for changes",
+    "potential_partners": "Wagamama",
+    "quadrant": "Low Importance / Medium Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 223,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 3.76,
+        "n": 21
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 3.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.17,
+      "track_b_score": 2.25,
+      "partner_capability": 3
+    },
+    "evidence_level": "Corroborated",
+    "rank": 66
+  },
+  {
+    "dish": "Greek Mezze",
+    "tier": "Monitor",
+    "priority_score": 2.66,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Greek",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.66), monitor for changes",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 7,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 6,
+      "latent_demand_score": 3.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.19,
+      "track_b_score": 2.66,
+      "partner_capability": 2
+    },
+    "evidence_level": "Corroborated",
+    "rank": 67
+  },
+  {
+    "dish": "Dim Sum",
+    "tier": "Monitor",
+    "priority_score": 2.63,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Chinese",
+    "gap_type": "Supply Gap",
+    "rationale": "Lower priority (2.63), monitor for changes",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.11,
+      "track_b_score": 2.63,
+      "partner_capability": 2
+    },
+    "evidence_level": "Single",
+    "rank": 68
+  },
+  {
+    "dish": "Burrito",
+    "tier": "Monitor",
+    "priority_score": 2.63,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Mexican",
+    "gap_type": "Quality Gap",
+    "rationale": "Lower priority (2.63), monitor for changes",
+    "potential_partners": "Tortilla",
+    "quadrant": "Low Importance / Medium Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 3,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 4,
+      "framework_score": 3.11,
+      "track_b_score": 2.63,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 69
+  },
+  {
+    "dish": "Quesadilla",
+    "tier": "Monitor",
+    "priority_score": 2.6,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Mexican",
+    "gap_type": "Quality Gap",
+    "rationale": "Lower priority (2.60), monitor for changes",
+    "potential_partners": "Tortilla",
+    "quadrant": "Low Importance / Medium Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 57,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.6,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 70
+  },
+  {
+    "dish": "Chicken Pie",
+    "tier": "Monitor",
+    "priority_score": 2.56,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "British",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.56), monitor for changes",
+    "potential_partners": "Farmer J, Bill's",
+    "quadrant": "Low Importance / High Coverage",
+    "action": "Deprioritize - over-served",
+    "order_volume": 34506,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.55,
+      "track_b_score": 2.56,
+      "partner_capability": 4
+    },
+    "evidence_level": "Corroborated",
+    "rank": 71
+  },
+  {
+    "dish": "Halloumi Wrap",
+    "tier": "Monitor",
+    "priority_score": 2.49,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.49), monitor for changes",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Low Importance / Medium Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 161,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 3,
+      "latent_demand_score": 2.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4,
+      "customisation": 5,
+      "framework_score": 3.63,
+      "track_b_score": 2.49,
+      "partner_capability": 2
+    },
+    "evidence_level": "Corroborated",
+    "rank": 72
+  },
+  {
+    "dish": "Grain Bowl",
+    "tier": "Monitor",
+    "priority_score": 2.4,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Healthy/Fresh",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.40), monitor for changes",
+    "potential_partners": "Farmer J",
+    "quadrant": "Low Importance / Medium Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 192,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 3,
+      "customisation": 5,
+      "framework_score": 3.67,
+      "track_b_score": 2.4,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 73
+  },
+  {
+    "dish": "Buddha Bowl",
+    "tier": "Monitor",
+    "priority_score": 2.4,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Healthy/Fresh",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.40), monitor for changes",
+    "potential_partners": "Farmer J",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 3,
+      "customisation": 5,
+      "framework_score": 3.67,
+      "track_b_score": 2.4,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 74
+  },
+  {
+    "dish": "Poke Bowl",
+    "tier": "Monitor",
+    "priority_score": 2.4,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Healthy/Fresh",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.40), monitor for changes",
+    "potential_partners": "Farmer J",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 39,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 3,
+      "customisation": 5,
+      "framework_score": 3.67,
+      "track_b_score": 2.4,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 75
+  },
+  {
+    "dish": "Bowl",
+    "tier": "Monitor",
+    "priority_score": 2.37,
+    "category": "Monitor",
+    "evidence_type": "Measured",
+    "cuisine": "Healthy/Fresh",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.37), monitor for changes",
+    "potential_partners": "Farmer J",
+    "quadrant": "Low Importance / High Coverage",
+    "action": "Deprioritize - over-served",
+    "order_volume": 4517,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.39,
+        "n": 420
+      },
+      "kids_happy": {
+        "rate": 0.95,
+        "n": 21
+      },
+      "adult_satisfaction": {
+        "rate": 0.85,
+        "n": 27
+      },
+      "portions_adequate": {
+        "rate": 0.93,
+        "n": 27
+      },
+      "track_a_score": 4.36,
+      "survey_n": 27
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 4,
+      "customisation": 5,
+      "framework_score": 3.86,
+      "track_b_score": 2.86,
+      "partner_capability": 5
+    },
+    "evidence_level": "Validated",
+    "rank": 76
+  },
+  {
+    "dish": "Sweet & Sour Chicken",
+    "tier": "Monitor",
+    "priority_score": 2.37,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.37), monitor for changes",
+    "potential_partners": "Farmer J",
+    "quadrant": "Low Importance / High Coverage",
+    "action": "Deprioritize - over-served",
+    "order_volume": 1081,
+    "on_dinneroo": true,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.55,
+      "track_b_score": 2.37,
+      "partner_capability": 3
+    },
+    "evidence_level": "Corroborated",
+    "rank": 77
+  },
+  {
+    "dish": "Rotisserie Chicken",
+    "tier": "Monitor",
+    "priority_score": 2.37,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.37), monitor for changes",
+    "potential_partners": "Farmer J",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": {
+      "rating": {
+        "value": 4.55,
+        "n": 1535
+      },
+      "kids_happy": {
+        "rate": null,
+        "n": null
+      },
+      "adult_satisfaction": {
+        "rate": null,
+        "n": null
+      },
+      "portions_adequate": {
+        "rate": null,
+        "n": null
+      },
+      "track_a_score": 5.0,
+      "survey_n": null
+    },
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5,
+      "customisation": 3,
+      "framework_score": 3.55,
+      "track_b_score": 2.37,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 78
+  },
+  {
+    "dish": "Tikka Masala",
+    "tier": "Monitor",
+    "priority_score": 2.2,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Indian",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.20), monitor for changes",
+    "potential_partners": "Dishoom",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 19,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.2,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 79
+  },
+  {
+    "dish": "Cottage Pie",
+    "tier": "Monitor",
+    "priority_score": 2.2,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "British",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.20), monitor for changes",
+    "potential_partners": "Bill's",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.2,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 80
+  },
+  {
+    "dish": "Korma",
+    "tier": "Monitor",
+    "priority_score": 2.2,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Indian",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.20), monitor for changes",
+    "potential_partners": "Dishoom",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.2,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 81
+  },
+  {
+    "dish": "Wrap",
+    "tier": "Monitor",
+    "priority_score": 2.16,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Global",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.16), monitor for changes",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 44,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 3,
+      "latent_demand_score": 2.0,
+      "kid_friendly": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4,
+      "customisation": 5,
+      "framework_score": 3.63,
+      "track_b_score": 2.49,
+      "partner_capability": 2
+    },
+    "evidence_level": "Corroborated",
+    "rank": 82
+  },
+  {
+    "dish": "Burger",
+    "tier": "Monitor",
+    "priority_score": 2.16,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "American",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.16), monitor for changes",
+    "potential_partners": "Bill's",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 61,
+    "on_dinneroo": true,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 2.87,
+      "track_b_score": 2.16,
+      "partner_capability": 3
+    },
+    "evidence_level": "Single",
+    "rank": 83
+  },
+  {
+    "dish": "Bibimbap",
+    "tier": "Monitor",
+    "priority_score": 2.0,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Korean",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.00), monitor for changes",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.0,
+      "partner_capability": 2
+    },
+    "evidence_level": "Single",
+    "rank": 84
+  },
+  {
+    "dish": "Bangers & Mash",
+    "tier": "Monitor",
+    "priority_score": 2.0,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "British",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.00), monitor for changes",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.0,
+      "partner_capability": 2
+    },
+    "evidence_level": "Single",
+    "rank": 85
+  },
+  {
+    "dish": "Souvlaki",
+    "tier": "Monitor",
+    "priority_score": 2.0,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "cuisine": "Greek",
+    "gap_type": "No Gap",
+    "rationale": "Lower priority (2.00), monitor for changes",
+    "potential_partners": "New recruitment needed",
+    "quadrant": "Low Importance / Low Coverage",
+    "action": "Ignore - low priority",
+    "order_volume": 0,
+    "on_dinneroo": false,
+    "performance": null,
+    "opportunity": {
+      "latent_demand_mentions": 0,
+      "latent_demand_score": 1.0,
+      "kid_friendly": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3,
+      "customisation": 3,
+      "framework_score": 3.0,
+      "track_b_score": 2.0,
+      "partner_capability": 2
+    },
+    "evidence_level": "Single",
+    "rank": 86
+  }
+]
