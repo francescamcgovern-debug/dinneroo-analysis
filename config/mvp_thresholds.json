@@ -1,0 +1,415 @@
+{
+  "version": "2.1",
+  "last_updated": "2026-01-06",
+  "config_validation": {
+    "last_validated": "2026-01-06",
+    "data_source": "DATA/3_ANALYSIS/cuisine_performance.csv",
+    "methodology": "Repeat rate as primary success metric per .cursorrules",
+    "validation_script": "scripts/phase1_data/04_validate_config.py",
+    "validation_rules": {
+      "min_repeat_rate_required": 0.15,
+      "min_repeat_rate_recommended": 0.15,
+      "min_rating": 4.0,
+      "require_source_citation": true
+    }
+  },
+  "data_freshness": {
+    "snowflake_pull_date": "2026-01-05",
+    "order_date_range": {
+      "from": "2025-08-13",
+      "to": "2026-01-05"
+    },
+    "total_orders": 80724,
+    "total_customers": 50744,
+    "total_zones": 201
+  },
+  "description": "Zone MVP criteria prioritizing SUCCESS METRICS (retention, satisfaction) over volume. Order volume is a survivorship bias metric - it shows activity, not success.",
+  "philosophy": {
+    "principle": "Success = families returning happy, not just ordering once",
+    "warning": "High order volume in a zone does NOT mean success - it may just mean the zone has more population or partners. Focus on repeat rate and satisfaction.",
+    "success_hierarchy": [
+      "1. Repeat rate (are families coming back?)",
+      "2. Satisfaction/rating (are families happy?)",
+      "3. Order frequency (how often do retained customers order?)",
+      "4. Selection adequacy (variety complaints low?)",
+      "5. Volume (last - only relevant after above are healthy)"
+    ]
+  },
+  "zone_definitions": {
+    "ftt_zone": {
+      "description": "Family Time (Dinneroo) zones - zones where Dinneroo is available",
+      "note": "WBRs reference 'FTT zones' for platform penetration calculations. The 3+ partner threshold is our internal definition for analysis scope.",
+      "analysis_scope": {
+        "all_zones": 201,
+        "zones_3plus_partners": 102,
+        "zones_5plus_partners_mvp": 58
+      }
+    }
+  },
+  "mvp_criteria": {
+    "repeat_rate_min": {
+      "value": 0.20,
+      "justification": "20% repeat rate is achievable (top 41% of zones) while still being meaningful. Validated: zones with 20%+ repeat rate have significantly better outcomes.",
+      "source": "Threshold validation analysis, 2026-01-06",
+      "priority": "CRITICAL - primary success metric",
+      "previous_threshold": 0.35,
+      "change_reason": "Updated 2026-01-06: 35% was unachievable (only 1 zone passed). 20% is evidence-based threshold."
+    },
+    "rating_min": {
+      "value": 4.3,
+      "justification": "4.3+ rating shows statistically significant correlation with repeat rate (p<0.05). 4.5 threshold showed NO significant difference (p=0.21).",
+      "source": "Threshold validation analysis, 2026-01-06",
+      "priority": "CRITICAL - primary success metric",
+      "previous_threshold": 4.5,
+      "change_reason": "Updated 2026-01-06: 4.5 was not statistically meaningful. 4.3 is evidence-based threshold."
+    },
+    "cuisine_count_min": {
+      "value": 4,
+      "justification": "Cuisine count has STRONGEST correlation with repeat rate (r=0.514). Zones with 4+ cuisines have significantly higher repeat rates (p<0.001).",
+      "source": "Threshold validation analysis, 2026-01-06",
+      "priority": "HIGH - strongest predictor of success"
+    }
+  },
+  "mvp_selection_requirements": {
+    "description": "ACTIONABLE requirements for what cuisines and dishes a zone needs. This is what AMs use to know what to recruit.",
+    "core_cuisines": {
+      "required": [
+        {
+          "cuisine": "Italian",
+          "reason": "Universal family appeal, high kid-friendliness, high volume",
+          "priority_dishes": ["Margherita Pizza", "Pasta Bolognese", "Garlic Bread"],
+          "min_partners": 1,
+          "source": "cuisine_performance.csv",
+          "evidence": {
+            "order_count": 9063,
+            "repeat_rate": 0.165,
+            "avg_rating": 4.15
+          },
+          "validated": "2026-01-06"
+        },
+        {
+          "cuisine": "Indian",
+          "reason": "Highest repeat rate among major cuisines, excellent family portions",
+          "priority_dishes": ["Chicken Tikka Masala", "Korma (Mild)", "Naan Bread", "Rice Dishes"],
+          "min_partners": 1,
+          "source": "cuisine_performance.csv",
+          "evidence": {
+            "order_count": 8356,
+            "repeat_rate": 0.231,
+            "avg_rating": 4.66
+          },
+          "validated": "2026-01-06"
+        },
+        {
+          "cuisine": "Japanese/Asian",
+          "reason": "Top cuisine by volume, strong balanced meal perception",
+          "priority_dishes": ["Teriyaki Chicken", "Gyoza", "Rice Bowls", "Noodle Dishes"],
+          "min_partners": 1,
+          "source": "cuisine_performance.csv",
+          "evidence": {
+            "order_count": 14618,
+            "repeat_rate": 0.162,
+            "avg_rating": 4.24
+          },
+          "validated": "2026-01-06"
+        },
+        {
+          "cuisine": "Chicken (Grilled/Peri-Peri)",
+          "reason": "Balanced midweek meal positioning, customisable sides, kid-friendly protein",
+          "priority_dishes": ["Grilled Chicken with Sides", "Chicken Wings (Mild)", "Chicken Wraps"],
+          "min_partners": 1,
+          "source": "cuisine_performance.csv",
+          "evidence": {
+            "order_count": 1077,
+            "repeat_rate": 0.169,
+            "avg_rating": 4.43
+          },
+          "validated": "2026-01-06"
+        },
+        {
+          "cuisine": "Thai/Vietnamese",
+          "reason": "Second highest repeat rate, fresh/healthy perception, excellent ratings",
+          "priority_dishes": ["Pad Thai", "Spring Rolls", "Pho", "Curry (Mild)"],
+          "min_partners": 1,
+          "source": "cuisine_performance.csv",
+          "evidence": {
+            "order_count": 18059,
+            "repeat_rate": 0.207,
+            "avg_rating": 4.57,
+            "note": "Combined Thai (5098) + Vietnamese (12961)"
+          },
+          "validated": "2026-01-06"
+        }
+      ],
+      "recommended": [
+        {
+          "cuisine": "Mexican/Latin",
+          "reason": "Above-threshold repeat rate, high customisation for fussy eaters",
+          "priority_dishes": ["Burrito Bowl", "Tacos", "Quesadilla", "Nachos"],
+          "min_partners": 1,
+          "source": "cuisine_performance.csv",
+          "evidence": {
+            "order_count": 43,
+            "repeat_rate": 0.206,
+            "avg_rating": 4.22,
+            "note": "Low volume but strong repeat rate - growth opportunity"
+          },
+          "validated": "2026-01-06"
+        },
+        {
+          "cuisine": "Mediterranean/Healthy",
+          "reason": "Strong repeat rate, balanced meal perception, good veggie options",
+          "priority_dishes": ["Grilled Halloumi", "Falafel Wrap", "Salad Bowls", "Hummus Platters"],
+          "min_partners": 1,
+          "source": "cuisine_performance.csv",
+          "evidence": {
+            "order_count": 511,
+            "repeat_rate": 0.195,
+            "avg_rating": 4.64
+          },
+          "validated": "2026-01-06"
+        },
+        {
+          "cuisine": "Salads/Fresh",
+          "reason": "High repeat rate, fits balanced midweek positioning",
+          "priority_dishes": ["Grain Bowls", "Protein Salads", "Build Your Own Salad"],
+          "min_partners": 1,
+          "source": "cuisine_performance.csv",
+          "evidence": {
+            "order_count": 5330,
+            "repeat_rate": 0.197,
+            "avg_rating": 4.58
+          },
+          "validated": "2026-01-06"
+        }
+      ],
+      "not_recommended": [
+        {
+          "cuisine": "Burgers",
+          "reason": "Below repeat rate threshold (17.9% < 20%), ranks #83/86 in dish priority scoring",
+          "source": "cuisine_performance.csv + priority_dishes.json",
+          "evidence": {
+            "order_count": 2485,
+            "repeat_rate": 0.179,
+            "avg_rating": 4.49,
+            "dish_rank": "83 of 86",
+            "category": "Monitor"
+          },
+          "validated": "2026-01-06",
+          "note": "Despite being 'kid-friendly', data shows families don't return for burgers. Does not fit balanced midweek meal positioning."
+        }
+      ],
+      "total_cuisines_for_mvp": 5,
+      "note": "Must have at least 5 of the above cuisines covered. All 5 'required' cuisines should be prioritised first."
+    },
+    "priority_dish_types": {
+      "description": "These dish TYPES (not brands) should be available in an MVP zone. Check against menu catalog.",
+      "tier_1_essential": [
+        {
+          "dish_type": "Grilled Chicken with Customisable Sides",
+          "why": "Perfect balanced midweek meal - protein + veg + carbs, kid-friendly, adult appeal",
+          "example_partners": "Nando's-style, local chicken shops",
+          "family_meal_score": 4.5
+        },
+        {
+          "dish_type": "Margherita Pizza",
+          "why": "Universal kid-friendly, shareable, familiar",
+          "example_partners": "Any pizza partner",
+          "family_meal_score": 4.2
+        },
+        {
+          "dish_type": "Mild Curry with Rice (Tikka Masala/Korma)",
+          "why": "Great portions, mild options for kids, adults love it",
+          "example_partners": "Indian restaurants",
+          "family_meal_score": 4.3
+        },
+        {
+          "dish_type": "Pasta Bolognese / Pasta with Tomato Sauce",
+          "why": "Kid-friendly staple, familiar, good portions",
+          "example_partners": "Italian restaurants",
+          "family_meal_score": 4.4
+        },
+        {
+          "dish_type": "Rice Bowl with Protein (Teriyaki/Katsu)",
+          "why": "Balanced, customisable, works for whole family",
+          "example_partners": "Japanese/Asian restaurants",
+          "family_meal_score": 4.2
+        }
+      ],
+      "tier_2_important": [
+        {
+          "dish_type": "Burrito Bowl / Build-Your-Own Mexican",
+          "why": "Excellent customisation for fussy eaters",
+          "example_partners": "Mexican restaurants",
+          "family_meal_score": 4.0
+        },
+        {
+          "dish_type": "Noodle Dishes (Pad Thai/Pho)",
+          "why": "Good adult appeal, can be made mild",
+          "example_partners": "Thai/Vietnamese restaurants",
+          "family_meal_score": 3.8
+        },
+        {
+          "dish_type": "Fish & Chips",
+          "why": "British family staple, familiar, shareable",
+          "example_partners": "Fish & chip shops",
+          "family_meal_score": 3.9
+        },
+        {
+          "dish_type": "Veggie/Vegan Main (Falafel/Halloumi)",
+          "why": "Essential for vegetarian families",
+          "example_partners": "Mediterranean/healthy restaurants",
+          "family_meal_score": 3.7
+        }
+      ],
+      "tier_3_nice_to_have": [
+        {
+          "dish_type": "Roast Dinner Components",
+          "why": "Weekend family meal, but can work midweek",
+          "example_partners": "British pubs/restaurants",
+          "family_meal_score": 3.5
+        },
+        {
+          "dish_type": "Sushi Platters",
+          "why": "Good for adventurous families, shareable",
+          "example_partners": "Japanese restaurants",
+          "family_meal_score": 3.4
+        }
+      ],
+      "mvp_requirement": "Zone must have at least 3 of the 5 Tier 1 dish types available"
+    }
+  },
+  "zone_health_score": {
+    "description": "BLENDED score combining BEHAVIORAL data (what families do) with SURVEY data (how families feel). Triangulation provides more robust success signal.",
+    "approach": {
+      "behavioral_data": "Repeat rate, star ratings, order volume - shows revealed preference",
+      "survey_data": "Satisfaction rate, kids happy rate - shows stated satisfaction",
+      "why_blend": "Behavioral shows what families DO, survey shows how they FEEL. Together = complete picture."
+    },
+    "components": {
+      "repeat_rate": {
+        "weight": 0.25,
+        "source": "Behavioral (Snowflake)",
+        "calculation": "min(repeat_rate / 0.50, 1.0)",
+        "description": "% customers ordering 2+ times. PRIMARY behavioral signal."
+      },
+      "survey_satisfaction": {
+        "weight": 0.20,
+        "source": "Survey (Post-Order)",
+        "calculation": "% 'Loved it' + 'Liked it' responses",
+        "description": "How adults feel about the meal. PRIMARY survey signal.",
+        "fallback": "If survey n < 20, use star rating as proxy"
+      },
+      "kids_happy_rate": {
+        "weight": 0.15,
+        "source": "Survey (Post-Order)",
+        "calculation": "% 'full and happy' child reactions",
+        "description": "Kids eating it = family success. CRITICAL for Dinneroo.",
+        "fallback": "If survey n < 20, use zone average or 0.7 default"
+      },
+      "star_rating": {
+        "weight": 0.15,
+        "source": "Behavioral (Snowflake)",
+        "calculation": "avg_rating / 5.0",
+        "description": "Normalized star rating. Behavioral satisfaction proxy."
+      },
+      "cuisine_coverage": {
+        "weight": 0.15,
+        "source": "Catalog",
+        "calculation": "min(cuisine_count / 8, 1.0)",
+        "description": "8 cuisines = full coverage for diverse families"
+      },
+      "volume": {
+        "weight": 0.10,
+        "source": "Behavioral (Snowflake)",
+        "calculation": "min(order_count / 1000, 1.0)",
+        "description": "LOWEST weight - volume is an OUTCOME of success, not success itself"
+      }
+    },
+    "fallback_logic": {
+      "description": "When survey data is insufficient, fall back to behavioral proxies",
+      "min_survey_n": 20,
+      "survey_satisfaction_fallback": "star_rating",
+      "kids_happy_fallback": 0.7
+    },
+    "interpretation": {
+      "0.8_plus": "Excellent - zone is healthy, focus on growth",
+      "0.6_to_0.8": "Good - minor improvements needed",
+      "0.4_to_0.6": "Developing - address retention or satisfaction gaps",
+      "below_0.4": "Needs attention - fundamental issues with selection or quality"
+    }
+  },
+  "gap_classification": {
+    "supply_gap": {
+      "definition": "Cuisine has <2 partners OR dish type not available",
+      "priority": "High - need to recruit partners"
+    },
+    "quality_gap": {
+      "definition": "Cuisine available but rating <4.5 OR satisfaction <70%",
+      "priority": "Medium - need to improve existing partners"
+    },
+    "no_gap": {
+      "definition": "3+ partners with 4.5+ rating",
+      "priority": "Low - maintain current performance"
+    }
+  },
+  "mvp_status_levels": {
+    "mvp_ready": {
+      "criteria": "Has 4+ cuisines AND 3+ Tier 1 dish types AND 20%+ repeat rate AND 4.3+ rating",
+      "action": "Focus on growth levers beyond selection - marketing, frequency, AOV",
+      "checklist": [
+        "✓ Italian partner with pizza/pasta",
+        "✓ Indian partner with mild curry options",
+        "✓ Asian partner with rice bowls",
+        "✓ Chicken partner with grilled options",
+        "✓ Repeat rate ≥20%",
+        "✓ Average rating ≥4.3",
+        "✓ At least 4 cuisines available"
+      ],
+      "validation": "21% of zones (43/201) meet these criteria. Validated against repeat rate correlation."
+    },
+    "near_mvp": {
+      "criteria": "Has 3-4 core cuisines AND 2+ Tier 1 dish types",
+      "action": "Recruit 1-2 specific partners to fill gaps",
+      "example_gaps": [
+        "Missing: Grilled chicken partner → recruit Nando's-style",
+        "Missing: Mexican partner → recruit burrito/taco partner"
+      ]
+    },
+    "developing": {
+      "criteria": "Has 1-2 core cuisines OR missing multiple Tier 1 dishes",
+      "action": "Significant partner recruitment needed - prioritise Italian, Indian, Asian first",
+      "recruitment_priority": [
+        "1. Italian (pizza/pasta) - universal appeal",
+        "2. Indian (curry) - great portions",
+        "3. Asian (rice bowls) - balanced meals",
+        "4. Chicken (grilled) - midweek positioning",
+        "5. Thai/Vietnamese - adult appeal"
+      ]
+    },
+    "early_stage": {
+      "criteria": "Fewer than 3 partners total",
+      "action": "Zone requires foundational buildout - focus on any family-friendly partners first"
+    }
+  },
+  "am_zone_checklist": {
+    "description": "Quick checklist for Account Managers to evaluate their zone",
+    "questions": [
+      "1. Do I have a pizza/pasta option? (Italian)",
+      "2. Do I have a mild curry option? (Indian)",
+      "3. Do I have a rice bowl option? (Asian/Japanese)",
+      "4. Do I have a grilled chicken with sides option?",
+      "5. Do I have a noodle/fresh option? (Thai/Vietnamese)",
+      "6. Is my repeat rate above 35%?",
+      "7. Is my average rating above 4.3?",
+      "8. Do families have at least 3 different balanced midweek meal options?"
+    ],
+    "scoring": {
+      "8_yes": "MVP Ready - focus on growth",
+      "6-7_yes": "Near MVP - fill specific gaps",
+      "4-5_yes": "Developing - recruit priority cuisines",
+      "0-3_yes": "Early stage - foundational work needed"
+    }
+  }
+}
+

@@ -1,0 +1,339 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-01-06",
+  "description": "Unified Dish Scoring Framework - Merges Anna's Hit List (performance) with Family Fit Framework",
+  "framework_philosophy": {
+    "principle": "Score dishes on BOTH what families actually do (performance) AND what works for families (fit)",
+    "anna_contribution": "Performance metrics from Looker + surveys showing revealed demand",
+    "family_fit_contribution": "Family-specific factors critical for Dinneroo's positioning",
+    "why_unified": "Anna's approach captures demand, ours captures fit. Together = complete picture of dish attractiveness."
+  },
+  "total_weight": 1.0,
+  
+  "categories": {
+    "performance": {
+      "category_weight": 0.35,
+      "description": "How well is this dish actually performing? (Anna's behavioral metrics)",
+      "factors": {
+        "normalized_sales": {
+          "weight_within_category": 0.30,
+          "effective_weight": 0.105,
+          "source": "Looker",
+          "calculation": "Total orders / (zones available × days listed)",
+          "description": "Demand for dish, normalized for availability - prevents bias toward dishes in more zones",
+          "scoring": {
+            "5": "Top 10% of normalized sales",
+            "4": "Top 25% of normalized sales",
+            "3": "Top 50% of normalized sales",
+            "2": "Bottom 50% of normalized sales",
+            "1": "Bottom 25% of normalized sales"
+          }
+        },
+        "zone_ranking_strength": {
+          "weight_within_category": 0.25,
+          "effective_weight": 0.0875,
+          "source": "Looker",
+          "calculation": "(% zones where #1 × 2) + (% zones where top 5)",
+          "description": "Consistency of demand across zones - dishes that rank highly everywhere are more universally appealing",
+          "scoring": {
+            "5": "#1 in 20%+ of zones OR top 5 in 60%+ of zones",
+            "4": "#1 in 10%+ of zones OR top 5 in 40%+ of zones",
+            "3": "Top 5 in 20%+ of zones",
+            "2": "Top 5 in 10%+ of zones",
+            "1": "Rarely ranks in top 5"
+          }
+        },
+        "deliveroo_rating": {
+          "weight_within_category": 0.25,
+          "effective_weight": 0.0875,
+          "source": "Looker",
+          "calculation": "Average star rating on Family Dinneroo orders",
+          "description": "Quality signal from customer ratings",
+          "scoring": {
+            "5": "4.7+ stars",
+            "4": "4.5-4.69 stars",
+            "3": "4.3-4.49 stars",
+            "2": "4.0-4.29 stars",
+            "1": "Below 4.0 stars"
+          }
+        },
+        "repeat_intent": {
+          "weight_within_category": 0.20,
+          "effective_weight": 0.07,
+          "source": "Post-Order Survey",
+          "survey_question": "How likely are you to order the same dish again?",
+          "calculation": "% 'Likely' or 'Very likely'",
+          "description": "Forward-looking retention signal - will families come back for this?",
+          "scoring": {
+            "5": "80%+ would reorder",
+            "4": "70-79% would reorder",
+            "3": "60-69% would reorder",
+            "2": "50-59% would reorder",
+            "1": "Below 50% would reorder"
+          }
+        }
+      }
+    },
+    
+    "satisfaction": {
+      "category_weight": 0.20,
+      "description": "How satisfied are families with this dish? (Blended survey signals)",
+      "factors": {
+        "meal_satisfaction": {
+          "weight_within_category": 0.50,
+          "effective_weight": 0.10,
+          "source": "Post-Order Survey",
+          "survey_question": "How satisfied were you with the meal?",
+          "calculation": "% 'Satisfied' or 'Very satisfied'",
+          "description": "Overall consumer satisfaction with the dish",
+          "scoring": {
+            "5": "90%+ satisfied",
+            "4": "80-89% satisfied",
+            "3": "70-79% satisfied",
+            "2": "60-69% satisfied",
+            "1": "Below 60% satisfied"
+          }
+        },
+        "kids_happy_rate": {
+          "weight_within_category": 0.50,
+          "effective_weight": 0.10,
+          "source": "Post-Order Survey",
+          "survey_question": "How did your child(ren) react to the meal?",
+          "calculation": "% 'Full and happy'",
+          "description": "Critical for Dinneroo - kids eating it = family success",
+          "scoring": {
+            "5": "85%+ kids happy",
+            "4": "75-84% kids happy",
+            "3": "65-74% kids happy",
+            "2": "55-64% kids happy",
+            "1": "Below 55% kids happy"
+          }
+        }
+      }
+    },
+    
+    "family_fit": {
+      "category_weight": 0.30,
+      "description": "Does this dish work for Dinneroo's family positioning? (Family-specific factors)",
+      "factors": {
+        "kid_friendly": {
+          "weight_within_category": 0.25,
+          "effective_weight": 0.075,
+          "source": "Survey + Expert assessment",
+          "description": "Kids will actually eat it - familiar flavours, not too spicy",
+          "scoring": {
+            "5": "Universally kid-friendly, mild by default, familiar presentation",
+            "4": "Most kids will eat, familiar ingredients, appealing look",
+            "3": "Some kids will eat with mild option or adaptation",
+            "2": "Adventurous kids only, unfamiliar ingredients",
+            "1": "Not kid-friendly, spicy/complex flavours"
+          }
+        },
+        "fussy_eater_friendly": {
+          "weight_within_category": 0.25,
+          "effective_weight": 0.075,
+          "source": "Dropoff Survey (1,037 mentions of fussy eaters as barrier)",
+          "description": "Mild options available, customisable for picky kids",
+          "scoring": {
+            "5": "Mild by default, universally appealing, no 'scary' ingredients",
+            "4": "Mild option available, familiar ingredients throughout",
+            "3": "Can be made mild on request",
+            "2": "Some unfamiliar ingredients, may need adaptation",
+            "1": "Spicy/complex by nature, difficult to adapt"
+          }
+        },
+        "balanced_guilt_free": {
+          "weight_within_category": 0.20,
+          "effective_weight": 0.06,
+          "source": "Survey + Strategic positioning",
+          "description": "Parents feel good serving it on a Tuesday - fits 'balanced midweek meal' positioning",
+          "scoring": {
+            "5": "Clearly balanced meal, visible protein + veg + carbs, grilled/healthy",
+            "4": "Mostly balanced, some vegetables included, not too heavy",
+            "3": "Neutral - can go either way depending on presentation",
+            "2": "Indulgent but has some redeeming qualities",
+            "1": "Pure treat/indulgence, not a balanced meal"
+          }
+        },
+        "portion_flexibility": {
+          "weight_within_category": 0.20,
+          "effective_weight": 0.06,
+          "source": "Post-Order Survey (252 portion mentions)",
+          "description": "Can appropriately feed 2 adults + 2 kids",
+          "scoring": {
+            "5": "Explicitly designed for 4 people, family-sized",
+            "4": "Sharing platters or 4 individual portions work well",
+            "3": "Can be ordered in quantities for 4",
+            "2": "Individual portions only, awkward for family",
+            "1": "Single-serve only, not suitable for family sharing"
+          }
+        },
+        "customisation": {
+          "weight_within_category": 0.10,
+          "effective_weight": 0.03,
+          "source": "Dropoff Survey (125 mentions)",
+          "description": "Individual preferences can be accommodated within the order",
+          "scoring": {
+            "5": "Build-your-own format, fully customisable",
+            "4": "Multiple options/swaps available",
+            "3": "Some customisation possible",
+            "2": "Limited customisation",
+            "1": "No customisation, take it or leave it"
+          }
+        }
+      }
+    },
+    
+    "opportunity": {
+      "category_weight": 0.15,
+      "description": "What's the growth potential for this dish? (Demand signals + availability)",
+      "factors": {
+        "dish_suitability_rating": {
+          "weight_within_category": 0.35,
+          "effective_weight": 0.0525,
+          "source": "Initial R&I Research (Pre-launch)",
+          "description": "Survey-driven consumer appeal - frequency of consumption, difficulty to cook at home, desire to see on app",
+          "note": "Anna's measure - provides early insight into consumer appeal before behavioral data exists",
+          "scoring": {
+            "5": "4.5+ suitability score",
+            "4": "4.0-4.49 suitability score",
+            "3": "3.5-3.99 suitability score",
+            "2": "3.0-3.49 suitability score",
+            "1": "Below 3.0 suitability score"
+          }
+        },
+        "open_text_requests": {
+          "weight_within_category": 0.35,
+          "effective_weight": 0.0525,
+          "source": "Post-Launch Survey open-text",
+          "description": "Explicit unmet demand - number of times dish is mentioned when customers asked what they'd like to see",
+          "note": "Anna's measure - captures latent demand for dishes not currently available or underrepresented",
+          "scoring": {
+            "5": "20+ unprompted mentions",
+            "4": "10-19 unprompted mentions",
+            "3": "5-9 unprompted mentions",
+            "2": "2-4 unprompted mentions",
+            "1": "0-1 unprompted mentions"
+          }
+        },
+        "availability_gap": {
+          "weight_within_category": 0.30,
+          "effective_weight": 0.045,
+          "source": "Menu Catalog + Zone analysis",
+          "description": "How much room for expansion? Dishes available in few zones have more growth potential",
+          "scoring": {
+            "5": "Available in <20% of zones (high expansion potential)",
+            "4": "Available in 20-40% of zones",
+            "3": "Available in 40-60% of zones",
+            "2": "Available in 60-80% of zones",
+            "1": "Available in 80%+ of zones (saturated)"
+          },
+          "note": "Inverse scoring - less availability = more opportunity"
+        }
+      }
+    }
+  },
+  
+  "composite_score_calculation": {
+    "formula": "Performance (35%) + Satisfaction (20%) + Family Fit (30%) + Opportunity (15%)",
+    "expanded": "(normalized_sales × 0.105) + (zone_ranking × 0.0875) + (deliveroo_rating × 0.0875) + (repeat_intent × 0.07) + (meal_satisfaction × 0.10) + (kids_happy × 0.10) + (kid_friendly × 0.075) + (fussy_eater × 0.075) + (balanced × 0.06) + (portions × 0.06) + (customisation × 0.03) + (suitability × 0.0525) + (open_text × 0.0525) + (availability_gap × 0.045)",
+    "max_score": 5.0,
+    "min_score": 1.0
+  },
+  
+  "tier_classification": {
+    "description": "Classify dishes into priority tiers based on composite score",
+    "tier_1_must_have": {
+      "threshold": 4.0,
+      "label": "Must-Have",
+      "description": "Essential dishes for every MVP zone",
+      "action": "Prioritize availability, expand to all zones"
+    },
+    "tier_2_should_have": {
+      "threshold": 3.5,
+      "label": "Should-Have",
+      "description": "Important dishes that strengthen zone offering",
+      "action": "Recruit where gaps exist, promote where available"
+    },
+    "tier_3_nice_to_have": {
+      "threshold": 3.0,
+      "label": "Nice-to-Have",
+      "description": "Good for variety, not essential",
+      "action": "Add opportunistically, don't prioritize recruitment"
+    },
+    "tier_4_monitor": {
+      "threshold": 0,
+      "label": "Monitor",
+      "description": "Below threshold - may need improvement or removal",
+      "action": "Investigate underperformance, consider removing from bundles"
+    }
+  },
+  
+  "quadrant_analysis": {
+    "description": "Plot dishes on Performance vs Family Fit to identify action quadrants",
+    "quadrants": {
+      "star": {
+        "criteria": "High Performance (>3.5) + High Family Fit (>3.5)",
+        "action": "EXPAND - These are proven winners, get them in more zones"
+      },
+      "potential": {
+        "criteria": "Low Performance (<3.5) + High Family Fit (>3.5)",
+        "action": "INVESTIGATE - Good fit but not selling. Marketing issue? Availability issue?"
+      },
+      "cash_cow": {
+        "criteria": "High Performance (>3.5) + Low Family Fit (<3.5)",
+        "action": "MAINTAIN - Selling well but may not fit positioning. Don't expand aggressively."
+      },
+      "question_mark": {
+        "criteria": "Low Performance (<3.5) + Low Family Fit (<3.5)",
+        "action": "REVIEW - Consider removing or repositioning"
+      }
+    }
+  },
+  
+  "data_sources_required": {
+    "looker": [
+      "Average sales per dish (normalized)",
+      "% zones where dish ranks #1",
+      "% zones where dish ranks top 5",
+      "Deliveroo rating by dish"
+    ],
+    "post_order_survey": [
+      "Meal satisfaction score by dish",
+      "Kids happy rate by dish",
+      "Repeat intent by dish"
+    ],
+    "pre_launch_research": [
+      "Dish suitability rating (Anna's R&I data)"
+    ],
+    "open_text_analysis": [
+      "Dish request counts from survey open-text"
+    ],
+    "menu_catalog": [
+      "Dish availability by zone"
+    ]
+  },
+  
+  "evidence_levels": {
+    "validated": {
+      "criteria": "Has data for 8+ of 13 factors",
+      "confidence": "High - can make strategic decisions"
+    },
+    "corroborated": {
+      "criteria": "Has data for 5-7 of 13 factors",
+      "confidence": "Medium - directionally correct"
+    },
+    "estimated": {
+      "criteria": "Has data for <5 factors",
+      "confidence": "Low - use for exploration only"
+    }
+  },
+  
+  "weight_rationale": {
+    "why_performance_35": "Behavioral data is the strongest signal of actual demand. Anna's normalized metrics prevent availability bias.",
+    "why_satisfaction_20": "Satisfaction predicts retention. Kids happy rate is critical for Dinneroo specifically.",
+    "why_family_fit_30": "Dinneroo's positioning is 'balanced midweek family meals' - fit factors ensure we stay on-brand.",
+    "why_opportunity_15": "Forward-looking signals help identify growth opportunities, but shouldn't override proven performance."
+  }
+}
+

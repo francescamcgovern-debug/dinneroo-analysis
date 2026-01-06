@@ -1,0 +1,108 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-01-05",
+  "description": "Evidence standards for claims and recommendations",
+  "evidence_levels": {
+    "validated": {
+      "symbol": "🟢",
+      "name": "Validated",
+      "description": "Multiple independent sources confirm the finding",
+      "requirements": {
+        "min_sources": 3,
+        "min_sample_size": 100,
+        "source_types": "Must include behavioral data (orders) + survey data + one other"
+      },
+      "use_for": "Strategic recommendations, resource allocation decisions"
+    },
+    "corroborated": {
+      "symbol": "🟡",
+      "name": "Corroborated",
+      "description": "Two independent sources support the finding",
+      "requirements": {
+        "min_sources": 2,
+        "min_sample_size": 30,
+        "source_types": "Should include at least one behavioral source"
+      },
+      "use_for": "Tactical recommendations, hypothesis validation"
+    },
+    "single": {
+      "symbol": "🔵",
+      "name": "Single Source",
+      "description": "Finding from one source only",
+      "requirements": {
+        "min_sources": 1,
+        "min_sample_size": 10,
+        "source_types": "Any"
+      },
+      "use_for": "Exploratory findings, hypotheses to test"
+    }
+  },
+  "sample_size_requirements": {
+    "dish_recommendation": {
+      "min_orders": 50,
+      "min_survey_responses": 10,
+      "description": "To recommend a dish with confidence"
+    },
+    "zone_assessment": {
+      "min_orders": 100,
+      "min_survey_responses": 20,
+      "description": "To assess zone performance"
+    },
+    "cuisine_priority": {
+      "min_orders": 200,
+      "min_survey_mentions": 15,
+      "description": "To prioritize a cuisine"
+    },
+    "survey_backed_score": {
+      "min_responses": 5,
+      "description": "Minimum to use survey data instead of estimated score"
+    }
+  },
+  "triangulation_rules": {
+    "og_survey": {
+      "rule": "MUST triangulate with Snowflake behavioral data",
+      "reason": "Stated preference ≠ revealed preference",
+      "max_weight": 0.30
+    },
+    "dropoff_survey": {
+      "rule": "Use for themes, not prevalence",
+      "reason": "Self-selection bias",
+      "max_weight": 0.30
+    },
+    "orders_data": {
+      "rule": "Shows what works among AVAILABLE options",
+      "reason": "Survivorship bias - doesn't capture latent demand",
+      "max_weight": 0.40
+    },
+    "ratings": {
+      "rule": "~40% coverage only",
+      "reason": "Don't use for volume, only sentiment",
+      "max_weight": 0.20
+    }
+  },
+  "anti_replication_checklist": [
+    "Did I calculate this from the current data?",
+    "Can I show the code/query that produced this number?",
+    "Is this different from what I might have assumed?",
+    "Would this finding change if the data changed?",
+    "Am I copying example values from documentation?"
+  ],
+  "bias_warnings": {
+    "survivorship_bias": {
+      "applies_to": "Order volume analysis",
+      "warning": "Top-performing dishes are top performers OF WHAT WE HAVE",
+      "mitigation": "Always analyze latent demand via open-text alongside order volume"
+    },
+    "stated_vs_revealed": {
+      "applies_to": "Survey data",
+      "warning": "What people say ≠ what they do",
+      "mitigation": "Triangulate with behavioral data"
+    },
+    "selection_bias": {
+      "applies_to": "Post-order survey",
+      "warning": "Only orderers respond - survivors only",
+      "mitigation": "Use for 'what works', not barriers"
+    }
+  }
+}
+
