@@ -1,0 +1,161 @@
+{
+  "generated_at": "2026-01-06T14:00:00.000Z",
+  "evidence_standards": {
+    "levels": [
+      {
+        "level": "Single",
+        "symbol": "🔵",
+        "definition": "One data source only",
+        "use_for": "Exploratory findings, hypothesis generation"
+      },
+      {
+        "level": "Corroborated",
+        "symbol": "🟡",
+        "definition": "2 independent sources",
+        "use_for": "Working hypotheses, internal analysis"
+      },
+      {
+        "level": "Validated",
+        "symbol": "🟢",
+        "definition": "3+ sources OR quant+qual",
+        "use_for": "Strategic recommendations, stakeholder presentations"
+      }
+    ],
+    "minimum_samples": {
+      "unreliable": { "n": "<20", "action": "Do not report" },
+      "directional": { "n": "20-50", "action": "Report with caveat" },
+      "moderate": { "n": "50-100", "action": "Report as finding" },
+      "strong": { "n": ">100", "action": "Report confidently" }
+    }
+  },
+  "unified_scoring_framework": {
+    "name": "13-Factor Unified Dish Scoring",
+    "description": "Merges Anna's Hit List (performance-focused) with Family Fit Framework (positioning-focused)",
+    "categories": {
+      "performance": {
+        "weight": 0.35,
+        "description": "What families actually do - behavioral data showing revealed demand",
+        "factors": [
+          { "name": "Normalized Sales", "weight": 0.105, "source": "Looker", "calculation": "Orders / (zones × days listed)" },
+          { "name": "Zone Ranking Strength", "weight": 0.0875, "source": "Looker", "calculation": "% zones #1 + % zones top 5" },
+          { "name": "Deliveroo Rating", "weight": 0.0875, "source": "Looker", "calculation": "Average star rating" },
+          { "name": "Repeat Intent", "weight": 0.07, "source": "Survey", "calculation": "% likely to reorder" }
+        ]
+      },
+      "satisfaction": {
+        "weight": 0.20,
+        "description": "How families feel about the dish - adult and child satisfaction",
+        "factors": [
+          { "name": "Meal Satisfaction", "weight": 0.10, "source": "Post-Order Survey", "calculation": "% satisfied/very satisfied" },
+          { "name": "Kids Happy Rate", "weight": 0.10, "source": "Post-Order Survey", "calculation": "% full and happy" }
+        ]
+      },
+      "family_fit": {
+        "weight": 0.30,
+        "description": "Does this dish work for Dinneroo's balanced midweek family meal positioning?",
+        "factors": [
+          { "name": "Kid-Friendly", "weight": 0.075, "source": "Survey + Assessment", "calculation": "Kids will actually eat it" },
+          { "name": "Fussy Eater Friendly", "weight": 0.075, "source": "Dropoff Survey", "calculation": "Mild options for picky eaters" },
+          { "name": "Balanced/Guilt-Free", "weight": 0.06, "source": "Survey + Positioning", "calculation": "Parents feel good serving it" },
+          { "name": "Portion Flexibility", "weight": 0.06, "source": "Post-Order Survey", "calculation": "Feeds family of 4" },
+          { "name": "Customisation", "weight": 0.03, "source": "Dropoff Survey", "calculation": "Accommodates preferences" }
+        ]
+      },
+      "opportunity": {
+        "weight": 0.15,
+        "description": "Forward-looking signals for dishes with untapped potential",
+        "factors": [
+          { "name": "Dish Suitability Rating", "weight": 0.0525, "source": "Pre-launch R&I", "calculation": "Consumer appeal before launch" },
+          { "name": "Open-Text Requests", "weight": 0.0525, "source": "Post-Launch Survey", "calculation": "Explicit unmet demand" },
+          { "name": "Availability Gap", "weight": 0.045, "source": "Menu Catalog", "calculation": "Room for expansion" }
+        ]
+      }
+    },
+    "tier_classification": [
+      { "tier": 1, "score_range": "4.0+", "label": "Must-Have", "action": "Essential for every MVP zone. Prioritize availability." },
+      { "tier": 2, "score_range": "3.5-3.99", "label": "Should-Have", "action": "Important for zone strength. Recruit where gaps exist." },
+      { "tier": 3, "score_range": "3.0-3.49", "label": "Nice-to-Have", "action": "Good for variety. Add opportunistically." },
+      { "tier": 4, "score_range": "<3.0", "label": "Monitor", "action": "Investigate underperformance. Consider removal." }
+    ]
+  },
+  "two_track_scoring": {
+    "description": "Separates Performance from Opportunity to avoid survivorship bias",
+    "track_a": {
+      "name": "Performance Score",
+      "question": "How well is this dish doing?",
+      "requirements": "50+ orders required",
+      "components": ["Repeat rate", "Rating (4.5+ threshold)", "Satisfaction"],
+      "use_for": "Identify winners to expand, underperformers to fix"
+    },
+    "track_b": {
+      "name": "Opportunity Score",
+      "question": "How much do families want this?",
+      "requirements": "ALL dish types eligible (including unavailable)",
+      "components": ["Latent demand", "10-factor fit", "Partner capability"],
+      "use_for": "Identify gaps to fill, new dishes to recruit"
+    },
+    "interpretation": [
+      { "track_a": "High", "track_b": "Any", "interpretation": "Proven winner", "action": "EXPAND to more zones" },
+      { "track_a": "N/A (not available)", "track_b": "High", "interpretation": "High-demand gap", "action": "RECRUIT partners to offer" },
+      { "track_a": "Low", "track_b": "High", "interpretation": "Something's wrong", "action": "INVESTIGATE mismatch" },
+      { "track_a": "Low", "track_b": "Low", "interpretation": "Not working, not wanted", "action": "FIX or deprioritize" }
+    ]
+  },
+  "zone_health_score": {
+    "description": "BLENDED composite score combining BEHAVIORAL data with SURVEY data",
+    "formula": {
+      "repeat_rate": { "weight": 0.25, "source": "Behavioral", "description": "% ordering 2+ times. PRIMARY behavioral signal." },
+      "survey_satisfaction": { "weight": 0.20, "source": "Survey", "description": "% Loved it + Liked it. PRIMARY survey signal." },
+      "kids_happy_rate": { "weight": 0.15, "source": "Survey", "description": "% full and happy reactions. CRITICAL." },
+      "star_rating": { "weight": 0.15, "source": "Behavioral", "description": "Behavioral satisfaction proxy." },
+      "cuisine_coverage": { "weight": 0.15, "source": "Catalog", "description": "8 cuisines = full coverage" },
+      "volume": { "weight": 0.10, "source": "Behavioral", "description": "LOWEST weight - outcome, not success" }
+    },
+    "interpretation": [
+      { "score": "0.8+", "status": "Excellent", "action": "Zone is healthy, focus on growth" },
+      { "score": "0.6-0.8", "status": "Good", "action": "Minor improvements needed" },
+      { "score": "0.4-0.6", "status": "Developing", "action": "Address retention or satisfaction gaps" },
+      { "score": "<0.4", "status": "Needs Attention", "action": "Fundamental issues with selection or quality" }
+    ]
+  },
+  "survivorship_bias": {
+    "problem": "Order volume shows what works among AVAILABLE options, not what families WANT",
+    "evidence": [
+      "Open-text analysis (n=2,796) revealed significant latent demand",
+      "Vegetarian family options: 87 mentions",
+      "Mild/plain kids options: 48 mentions",
+      "Chinese cuisine: 25 mentions",
+      "Fish & Chips: 7 mentions (zero availability)"
+    ],
+    "mitigation": [
+      "Track B scores unavailable dishes on opportunity, not performance",
+      "Latent demand analysis via open-text captures unmet needs",
+      "Smart Discovery identifies dishes partners COULD make"
+    ]
+  },
+  "quadrant_definitions": {
+    "core_drivers": { "preference": "High", "demand": "High", "action": "Protect & Scale - must have", "color": "#22c55e" },
+    "demand_boosters": { "preference": "Low", "demand": "High", "action": "Recruit - high latent demand", "color": "#f59e0b" },
+    "preference_drivers": { "preference": "High", "demand": "Low", "action": "Niche - keep for loyal users", "color": "#3b82f6" },
+    "deprioritize": { "preference": "Low", "demand": "Low", "action": "Monitor only", "color": "#64748b" }
+  },
+  "mvp_criteria": {
+    "success_metrics": {
+      "repeat_rate": { "threshold": "≥35%", "priority": "CRITICAL" },
+      "rating": { "threshold": "≥4.0", "priority": "CRITICAL" }
+    },
+    "selection_requirements": {
+      "core_cuisines": { "threshold": "5 of 5 required", "priority": "HIGH" },
+      "tier_1_dishes": { "threshold": "3 of 5 available", "priority": "HIGH" },
+      "partners": { "threshold": "≥5", "priority": "HIGH" }
+    },
+    "core_cuisines": [
+      { "cuisine": "Italian", "dishes": ["Pizza", "Pasta", "Garlic Bread"], "why": "Universal kid appeal, familiar" },
+      { "cuisine": "Indian", "dishes": ["Tikka Masala", "Korma (mild)", "Naan"], "why": "Great portions, mild options for kids" },
+      { "cuisine": "Japanese/Asian", "dishes": ["Teriyaki", "Gyoza", "Rice Bowls"], "why": "Top volume, balanced perception" },
+      { "cuisine": "Chicken (Grilled/Peri-Peri)", "dishes": ["Grilled Chicken + Sides", "Wraps"], "why": "Balanced midweek positioning" },
+      { "cuisine": "Thai/Vietnamese", "dishes": ["Pad Thai", "Spring Rolls", "Pho"], "why": "Fresh/healthy perception, adult appeal" }
+    ]
+  }
+}
+

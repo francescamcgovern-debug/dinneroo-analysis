@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinneroo Analysis Dashboard | Complete Overview</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        
+        :root {
+            --bg-deep: #06070a;
+            --bg-primary: #0c0e14;
+            --bg-secondary: #141820;
+            --bg-card: #1a1f2e;
+            --bg-hover: #232a3d;
+            --accent-teal: #00e5c7;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f97316;
+            --accent-pink: #ec4899;
+            --accent-blue: #3b82f6;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #2d3548;
+            --success: #22c55e;
+            --warning: #eab308;
+            --error: #ef4444;
+            --gradient-1: linear-gradient(135deg, #00e5c7 0%, #3b82f6 100%);
+            --gradient-2: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 32px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+        
+        .header-content {
+            max-width: 1800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .logo h1 {
+            font-size: 22px;
+            font-weight: 600;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .header-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .header-meta .value {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-teal);
+        }
+        
+        /* Navigation Tabs */
+        .nav-tabs {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border);
+            padding: 0 32px;
+        }
+        
+        .tabs-container {
+            max-width: 1800px;
+            margin: 0 auto;
+            display: flex;
+            gap: 4px;
+        }
+        
+        .tab {
+            padding: 16px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        
+        .tab:hover {
+            color: var(--text-primary);
+            background: var(--bg-hover);
+        }
+        
+        .tab.active {
+            color: var(--accent-teal);
+            border-bottom-color: var(--accent-teal);
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 24px 32px;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-1);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+        
+        .stat-card .label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .stat-card .value {
+            font-size: 32px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-teal);
+        }
+        
+        .stat-card .subtext {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        
+        .stat-card.purple .value { color: var(--accent-purple); }
+        .stat-card.orange .value { color: var(--accent-orange); }
+        .stat-card.pink .value { color: var(--accent-pink); }
+        .stat-card.blue .value { color: var(--accent-blue); }
+        
+        /* Grid Layouts */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        .three-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .card-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .card-header h3 {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        /* Tables */
+        .data-table {
+            width: 100%;
+        }
+        
+        .data-table th {
+            text-align: left;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .data-table td {
+            padding: 14px 16px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .data-table tr:hover {
+            background: var(--bg-hover);
+        }
+        
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .badge.discover { background: rgba(139, 92, 246, 0.2); color: var(--accent-purple); }
+        .badge.expand { background: rgba(34, 197, 94, 0.2); color: var(--success); }
+        .badge.fix { background: rgba(239, 68, 68, 0.2); color: var(--error); }
+        .badge.monitor { background: rgba(148, 163, 184, 0.2); color: var(--text-secondary); }
+        .badge.recruit { background: rgba(249, 115, 22, 0.2); color: var(--accent-orange); }
+        
+        .badge.mvp-ready { background: rgba(34, 197, 94, 0.2); color: var(--success); }
+        .badge.near-mvp { background: rgba(234, 179, 8, 0.2); color: var(--warning); }
+        .badge.developing { background: rgba(139, 92, 246, 0.2); color: var(--accent-purple); }
+        
+        .badge.required { background: rgba(0, 229, 199, 0.2); color: var(--accent-teal); }
+        .badge.recommended { background: rgba(59, 130, 246, 0.2); color: var(--accent-blue); }
+        .badge.not-recommended { background: rgba(239, 68, 68, 0.2); color: var(--error); }
+        
+        /* Metrics */
+        .metric {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .metric.pass { color: var(--success); }
+        .metric.fail { color: var(--error); }
+        .metric.warn { color: var(--warning); }
+        
+        /* Score Bar */
+        .score-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--bg-primary);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 6px;
+        }
+        
+        .score-bar-fill {
+            height: 100%;
+            background: var(--gradient-1);
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+        
+        /* Chart Container */
+        .chart-container {
+            height: 280px;
+            position: relative;
+        }
+        
+        /* Filter Bar */
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-bar input,
+        .filter-bar select {
+            padding: 10px 14px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 13px;
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        .filter-bar input {
+            min-width: 200px;
+        }
+        
+        .filter-bar input:focus,
+        .filter-bar select:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+        }
+        
+        /* Key Insight Box */
+        .insight-box {
+            background: linear-gradient(135deg, rgba(0, 229, 199, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border: 1px solid rgba(0, 229, 199, 0.3);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+        }
+        
+        .insight-box .insight-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-teal);
+            margin-bottom: 6px;
+        }
+        
+        .insight-box .insight-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        /* MVP Criteria Grid */
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        
+        .criteria-item {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 14px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .criteria-item .label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .criteria-item .value {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: var(--accent-teal);
+        }
+        
+        /* Cuisine Cards */
+        .cuisine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        
+        .cuisine-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+        }
+        
+        .cuisine-card .cuisine-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .cuisine-card .cuisine-name {
+            font-weight: 600;
+            font-size: 15px;
+        }
+        
+        .cuisine-card .cuisine-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 12px;
+        }
+        
+        .cuisine-card .stat {
+            text-align: center;
+        }
+        
+        .cuisine-card .stat-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .cuisine-card .stat-label {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+        
+        /* Scrollable Table */
+        .table-scroll {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .table-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .table-scroll::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        
+        .table-scroll::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 3px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .two-col, .three-col {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .header-meta {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🍽️</div>
+                <h1>Dinneroo Analysis</h1>
+            </div>
+            <div class="header-meta">
+                <span>Data: <span class="value">2026-01-05</span></span>
+                <span>Orders: <span class="value" id="total-orders">80,724</span></span>
+                <span>Zones: <span class="value" id="total-zones">201</span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="nav-tabs">
+        <div class="tabs-container">
+            <div class="tab active" data-tab="overview">Overview</div>
+            <div class="tab" data-tab="dishes">Priority Dishes</div>
+            <div class="tab" data-tab="zones">Zone MVP</div>
+            <div class="tab" data-tab="cuisines">Cuisine Strategy</div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- OVERVIEW TAB -->
+        <div id="overview" class="tab-content active">
+            <div class="insight-box">
+                <div class="insight-title">🎯 Key Strategic Principle</div>
+                <div class="insight-text">
+                    <strong>Success = families returning happy, not just ordering once.</strong> 
+                    Order volume is a survivorship bias metric. We prioritize repeat rate (families coming back) 
+                    and satisfaction (families happy) over raw volume.
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="label">Total Orders</div>
+                    <div class="value">80,724</div>
+                    <div class="subtext">Since Aug 2025</div>
+                </div>
+                <div class="stat-card purple">
+                    <div class="label">Priority Dishes</div>
+                    <div class="value">86</div>
+                    <div class="subtext">Scored & ranked</div>
+                </div>
+                <div class="stat-card orange">
+                    <div class="label">MVP Ready Zones</div>
+                    <div class="value" id="mvp-count">43</div>
+                    <div class="subtext">42% of zones</div>
+                </div>
+                <div class="stat-card pink">
+                    <div class="label">Required Cuisines</div>
+                    <div class="value">5</div>
+                    <div class="subtext">For MVP status</div>
+                </div>
+                <div class="stat-card blue">
+                    <div class="label">Top Repeat Rate</div>
+                    <div class="value">23.1%</div>
+                    <div class="subtext">Indian cuisine</div>
+                </div>
+            </div>
+            
+            <div class="two-col">
+                <!-- Top 10 Dishes -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>🏆 Top 10 Priority Dishes</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Dish</th>
+                                    <th>Score</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="top-dishes-table">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Zone Status Distribution -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>📍 Zone Status Distribution</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <canvas id="zoneStatusChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="two-col">
+                <!-- MVP Criteria -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>✅ MVP Zone Criteria</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="criteria-grid">
+                            <div class="criteria-item">
+                                <span class="label">Repeat Rate</span>
+                                <span class="value">≥ 20%</span>
+                            </div>
+                            <div class="criteria-item">
+                                <span class="label">Avg Rating</span>
+                                <span class="value">≥ 4.3</span>
+                            </div>
+                            <div class="criteria-item">
+                                <span class="label">Cuisines</span>
+                                <span class="value">≥ 4</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 16px; font-size: 13px; color: var(--text-secondary);">
+                            These thresholds are evidence-based: 20% repeat rate is achievable (41% of zones), 
+                            4.3 rating shows statistically significant correlation with repeat rate (p&lt;0.05), 
+                            and cuisine count has the strongest correlation with success (r=0.514).
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Dish Categories -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>📊 Dish Categories</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <canvas id="dishCategoryChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- DISHES TAB -->
+        <div id="dishes" class="tab-content">
+            <div class="insight-box">
+                <div class="insight-title">📋 Two-Track Scoring System</div>
+                <div class="insight-text">
+                    <strong>Track A (Performance):</strong> How well is this dish doing? Based on orders, ratings, survey satisfaction.<br>
+                    <strong>Track B (Opportunity):</strong> How much do families want this? Based on latent demand, 10-factor fit.<br>
+                    <strong>Discovery:</strong> High-potential family bundles to test with partners.
+                </div>
+            </div>
+            
+            <div class="filter-bar">
+                <input type="text" id="dish-search" placeholder="Search dishes...">
+                <select id="dish-category-filter">
+                    <option value="">All Categories</option>
+                    <option value="Discover">Discover</option>
+                    <option value="Expand">Expand</option>
+                    <option value="Fix">Fix</option>
+                    <option value="Monitor">Monitor</option>
+                    <option value="Recruit">Recruit</option>
+                </select>
+                <select id="dish-cuisine-filter">
+                    <option value="">All Cuisines</option>
+                </select>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>Priority Dishes (<span id="dish-count">86</span>)</h3>
+                </div>
+                <div class="table-scroll">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Dish Type</th>
+                                <th>Score</th>
+                                <th>Category</th>
+                                <th>Cuisine</th>
+                                <th>Orders</th>
+                                <th>Rating</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dishes-table">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ZONES TAB -->
+        <div id="zones" class="tab-content">
+            <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="stat-card">
+                    <div class="label">MVP Ready</div>
+                    <div class="value" id="zones-mvp-ready">--</div>
+                </div>
+                <div class="stat-card purple">
+                    <div class="label">Near MVP</div>
+                    <div class="value" id="zones-near-mvp">--</div>
+                </div>
+                <div class="stat-card orange">
+                    <div class="label">Developing</div>
+                    <div class="value" id="zones-developing">--</div>
+                </div>
+                <div class="stat-card pink">
+                    <div class="label">Early Stage</div>
+                    <div class="value" id="zones-early">--</div>
+                </div>
+            </div>
+            
+            <div class="filter-bar">
+                <input type="text" id="zone-search" placeholder="Search zones...">
+                <select id="zone-status-filter">
+                    <option value="">All Statuses</option>
+                    <option value="MVP Ready">MVP Ready</option>
+                    <option value="Near MVP">Near MVP</option>
+                    <option value="Developing">Developing</option>
+                </select>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>Zone MVP Status (<span id="zone-count">--</span>)</h3>
+                </div>
+                <div class="table-scroll">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Zone</th>
+                                <th>Status</th>
+                                <th>Orders</th>
+                                <th>Cuisines</th>
+                                <th>Repeat Rate</th>
+                                <th>Rating</th>
+                                <th>Criteria Met</th>
+                            </tr>
+                        </thead>
+                        <tbody id="zones-table">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CUISINES TAB -->
+        <div id="cuisines" class="tab-content">
+            <div class="insight-box">
+                <div class="insight-title">🍳 Cuisine Strategy</div>
+                <div class="insight-text">
+                    <strong>Required cuisines</strong> are what every MVP zone needs. <strong>Recommended</strong> are good additions. 
+                    <strong>Not recommended</strong> don't fit the balanced midweek meal positioning despite seeming "kid-friendly".
+                </div>
+            </div>
+            
+            <div class="section-header">
+                <h2 class="section-title">Required Cuisines (5)</h2>
+            </div>
+            <div class="cuisine-grid" id="required-cuisines">
+                <!-- Populated by JS -->
+            </div>
+            
+            <div class="section-header" style="margin-top: 32px;">
+                <h2 class="section-title">Recommended Cuisines</h2>
+            </div>
+            <div class="cuisine-grid" id="recommended-cuisines">
+                <!-- Populated by JS -->
+            </div>
+            
+            <div class="section-header" style="margin-top: 32px;">
+                <h2 class="section-title">Not Recommended</h2>
+            </div>
+            <div class="cuisine-grid" id="not-recommended-cuisines">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        // Data
+        const dishesData = [
+            { rank: 1, dish_type: "Salmon Teriyaki Family Platter", priority_score: 5.2, category: "Discover", cuisine: "Various", order_volume: 0, avg_rating: null, action: "Test with partner" },
+            { rank: 2, dish_type: "Halloumi Wrap Family Box", priority_score: 5.1, category: "Discover", cuisine: "Greek/Mediterranean", order_volume: 0, avg_rating: null, action: "New recruitment needed" },
+            { rank: 3, dish_type: "Souvlaki Family Platter", priority_score: 5.1, category: "Discover", cuisine: "Greek/Mediterranean", order_volume: 0, avg_rating: null, action: "New recruitment needed" },
+            { rank: 4, dish_type: "Chicken", priority_score: 5.0, category: "Expand", cuisine: "Global", order_volume: 11417, avg_rating: 4.55, action: "Roll out to more zones" },
+            { rank: 5, dish_type: "Rotisserie Chicken Family Feast", priority_score: 4.95, category: "Discover", cuisine: "Healthy/Fresh", order_volume: 0, avg_rating: null, action: "Test with Farmer J" },
+            { rank: 6, dish_type: "Grilled Chicken Family Platter", priority_score: 4.95, category: "Discover", cuisine: "Healthy/Fresh", order_volume: 0, avg_rating: null, action: "Test with Farmer J" },
+            { rank: 7, dish_type: "Fajita Family Kit", priority_score: 4.95, category: "Discover", cuisine: "Mexican", order_volume: 0, avg_rating: null, action: "Test with Tortilla" },
+            { rank: 8, dish_type: "Kids Ramen & Adult Combo", priority_score: 4.95, category: "Discover", cuisine: "Japanese/Asian", order_volume: 0, avg_rating: null, action: "Test with Wagamama" },
+            { rank: 9, dish_type: "Plain Pasta Family Bundle", priority_score: 4.87, category: "Discover", cuisine: "Various", order_volume: 0, avg_rating: null, action: "Test with partner" },
+            { rank: 10, dish_type: "Paneer Tikka Family Feast", priority_score: 4.87, category: "Discover", cuisine: "Indian", order_volume: 0, avg_rating: null, action: "Test with Dishoom" },
+            { rank: 36, dish_type: "Pad Thai", priority_score: 4.14, category: "Expand", cuisine: "Thai", order_volume: 2370, avg_rating: 4.54, action: "Roll out to more zones" },
+            { rank: 37, dish_type: "Biryani", priority_score: 4.12, category: "Expand", cuisine: "Indian", order_volume: 458, avg_rating: 4.53, action: "Roll out to more zones" },
+            { rank: 58, dish_type: "Katsu", priority_score: 3.24, category: "Fix", cuisine: "Japanese", order_volume: 11686, avg_rating: 4.29, action: "Improve quality" },
+            { rank: 59, dish_type: "Pasta", priority_score: 3.15, category: "Fix", cuisine: "Italian", order_volume: 1340, avg_rating: 4.28, action: "Improve quality" },
+            { rank: 63, dish_type: "Pizza", priority_score: 2.98, category: "Fix", cuisine: "Italian", order_volume: 400, avg_rating: 3.84, action: "Improve quality" },
+            { rank: 39, dish_type: "Chinese Family Meal", priority_score: 3.96, category: "Recruit", cuisine: "Chinese", order_volume: 31, avg_rating: null, action: "Recruit partners" }
+        ];
+        
+        const zonesData = [
+            { zone: "Clapham", mvp_status: "MVP Ready", orders: 2349, cuisines: 9, repeat_rate: 0.24, avg_rating: 4.61, criteria_met: 3 },
+            { zone: "Islington", mvp_status: "MVP Ready", orders: 2262, cuisines: 8, repeat_rate: 0.22, avg_rating: 4.69, criteria_met: 3 },
+            { zone: "Brighton Central", mvp_status: "MVP Ready", orders: 1734, cuisines: 8, repeat_rate: 0.21, avg_rating: 4.47, criteria_met: 3 },
+            { zone: "Oxford", mvp_status: "MVP Ready", orders: 1501, cuisines: 5, repeat_rate: 0.23, avg_rating: 4.52, criteria_met: 3 },
+            { zone: "Cambridge", mvp_status: "MVP Ready", orders: 1403, cuisines: 7, repeat_rate: 0.22, avg_rating: 4.48, criteria_met: 3 },
+            { zone: "Wimbledon", mvp_status: "MVP Ready", orders: 1314, cuisines: 7, repeat_rate: 0.21, avg_rating: 4.50, criteria_met: 3 },
+            { zone: "Milton Keynes", mvp_status: "MVP Ready", orders: 1332, cuisines: 7, repeat_rate: 0.20, avg_rating: 4.46, criteria_met: 3 },
+            { zone: "Bristol", mvp_status: "MVP Ready", orders: 1173, cuisines: 6, repeat_rate: 0.22, avg_rating: 4.53, criteria_met: 3 },
+            { zone: "Cheltenham", mvp_status: "Near MVP", orders: 512, cuisines: 4, repeat_rate: 0.19, avg_rating: 4.38, criteria_met: 2 },
+            { zone: "Southampton", mvp_status: "Near MVP", orders: 470, cuisines: 4, repeat_rate: 0.18, avg_rating: 4.29, criteria_met: 2 },
+            { zone: "Basingstoke", mvp_status: "Near MVP", orders: 483, cuisines: 3, repeat_rate: 0.24, avg_rating: 3.83, criteria_met: 1 },
+            { zone: "Bournemouth", mvp_status: "Developing", orders: 634, cuisines: 3, repeat_rate: 0.17, avg_rating: 4.26, criteria_met: 1 }
+        ];
+        
+        const cuisinesData = {
+            required: [
+                { name: "Italian", repeat_rate: 0.165, avg_rating: 4.15, orders: 9063, status: "WARN", reason: "Universal family appeal, high kid-friendliness" },
+                { name: "Indian", repeat_rate: 0.231, avg_rating: 4.66, orders: 8356, status: "PASS", reason: "Highest repeat rate, excellent family portions" },
+                { name: "Japanese/Asian", repeat_rate: 0.162, avg_rating: 4.24, orders: 14618, status: "WARN", reason: "Top volume, balanced meal perception" },
+                { name: "Chicken (Grilled)", repeat_rate: 0.169, avg_rating: 4.43, orders: 1077, status: "WARN", reason: "Perfect midweek positioning" },
+                { name: "Thai/Vietnamese", repeat_rate: 0.158, avg_rating: 4.33, orders: 5098, status: "WARN", reason: "High repeat, fresh/healthy perception" }
+            ],
+            recommended: [
+                { name: "Mexican/Latin", repeat_rate: 0.206, avg_rating: 4.22, orders: 43, status: "PASS", reason: "High customization for fussy eaters" },
+                { name: "Mediterranean", repeat_rate: 0.195, avg_rating: 4.64, orders: 511, status: "PASS", reason: "Balanced meals, good veggie options" },
+                { name: "Salads/Fresh", repeat_rate: 0.197, avg_rating: 4.58, orders: 5330, status: "PASS", reason: "Fits midweek positioning" }
+            ],
+            not_recommended: [
+                { name: "Burgers", repeat_rate: 0.179, avg_rating: 4.49, orders: 2485, status: "FAIL", reason: "Below repeat threshold, doesn't fit balanced midweek positioning" }
+            ]
+        };
+        
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+        
+        // Render top dishes
+        function renderTopDishes() {
+            const tbody = document.getElementById('top-dishes-table');
+            const top10 = dishesData.slice(0, 10);
+            tbody.innerHTML = top10.map(d => `
+                <tr>
+                    <td class="metric">#${d.rank}</td>
+                    <td>${d.dish_type}</td>
+                    <td class="metric">${d.priority_score.toFixed(2)}</td>
+                    <td><span class="badge ${d.category.toLowerCase()}">${d.category}</span></td>
+                </tr>
+            `).join('');
+        }
+        
+        // Render all dishes
+        function renderDishes() {
+            const search = document.getElementById('dish-search').value.toLowerCase();
+            const category = document.getElementById('dish-category-filter').value;
+            const cuisine = document.getElementById('dish-cuisine-filter').value;
+            
+            let filtered = dishesData.filter(d => {
+                if (search && !d.dish_type.toLowerCase().includes(search)) return false;
+                if (category && d.category !== category) return false;
+                if (cuisine && d.cuisine !== cuisine) return false;
+                return true;
+            });
+            
+            document.getElementById('dish-count').textContent = filtered.length;
+            
+            const tbody = document.getElementById('dishes-table');
+            tbody.innerHTML = filtered.map(d => `
+                <tr>
+                    <td class="metric">#${d.rank}</td>
+                    <td><strong>${d.dish_type}</strong></td>
+                    <td class="metric">${d.priority_score.toFixed(2)}</td>
+                    <td><span class="badge ${d.category.toLowerCase()}">${d.category}</span></td>
+                    <td>${d.cuisine}</td>
+                    <td class="metric">${d.order_volume > 0 ? d.order_volume.toLocaleString() : '-'}</td>
+                    <td class="metric">${d.avg_rating ? d.avg_rating.toFixed(2) + '★' : '-'}</td>
+                    <td style="font-size: 12px; color: var(--text-secondary);">${d.action}</td>
+                </tr>
+            `).join('');
+        }
+        
+        // Render zones
+        function renderZones() {
+            const search = document.getElementById('zone-search').value.toLowerCase();
+            const status = document.getElementById('zone-status-filter').value;
+            
+            let filtered = zonesData.filter(z => {
+                if (search && !z.zone.toLowerCase().includes(search)) return false;
+                if (status && z.mvp_status !== status) return false;
+                return true;
+            });
+            
+            // Update counts
+            const counts = {
+                'MVP Ready': zonesData.filter(z => z.mvp_status === 'MVP Ready').length,
+                'Near MVP': zonesData.filter(z => z.mvp_status === 'Near MVP').length,
+                'Developing': zonesData.filter(z => z.mvp_status === 'Developing').length,
+                'Early Stage': zonesData.filter(z => z.mvp_status === 'Early Stage' || !z.mvp_status).length
+            };
+            
+            document.getElementById('zones-mvp-ready').textContent = counts['MVP Ready'];
+            document.getElementById('zones-near-mvp').textContent = counts['Near MVP'];
+            document.getElementById('zones-developing').textContent = counts['Developing'];
+            document.getElementById('zones-early').textContent = counts['Early Stage'];
+            document.getElementById('zone-count').textContent = filtered.length;
+            
+            const tbody = document.getElementById('zones-table');
+            tbody.innerHTML = filtered.map(z => {
+                const statusClass = z.mvp_status.toLowerCase().replace(' ', '-');
+                return `
+                    <tr>
+                        <td><strong>${z.zone}</strong></td>
+                        <td><span class="badge ${statusClass}">${z.mvp_status}</span></td>
+                        <td class="metric">${z.orders.toLocaleString()}</td>
+                        <td class="metric ${z.cuisines >= 4 ? 'pass' : 'fail'}">${z.cuisines}</td>
+                        <td class="metric ${z.repeat_rate >= 0.20 ? 'pass' : 'fail'}">${(z.repeat_rate * 100).toFixed(1)}%</td>
+                        <td class="metric ${z.avg_rating >= 4.3 ? 'pass' : 'fail'}">${z.avg_rating.toFixed(2)}★</td>
+                        <td class="metric">${z.criteria_met}/3</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+        
+        // Render cuisines
+        function renderCuisines() {
+            function renderCuisineCards(cuisines, containerId) {
+                const container = document.getElementById(containerId);
+                container.innerHTML = cuisines.map(c => {
+                    const statusClass = c.status === 'PASS' ? 'pass' : c.status === 'WARN' ? 'warn' : 'fail';
+                    const badgeType = containerId.includes('required') ? 'required' : 
+                                      containerId.includes('recommended') ? 'recommended' : 'not-recommended';
+                    return `
+                        <div class="cuisine-card">
+                            <div class="cuisine-header">
+                                <span class="cuisine-name">${c.name}</span>
+                                <span class="badge ${badgeType}">${c.status}</span>
+                            </div>
+                            <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 12px;">${c.reason}</p>
+                            <div class="cuisine-stats">
+                                <div class="stat">
+                                    <div class="stat-value metric ${c.repeat_rate >= 0.20 ? 'pass' : c.repeat_rate >= 0.15 ? 'warn' : 'fail'}">${(c.repeat_rate * 100).toFixed(1)}%</div>
+                                    <div class="stat-label">Repeat</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value metric ${c.avg_rating >= 4.3 ? 'pass' : 'warn'}">${c.avg_rating.toFixed(2)}★</div>
+                                    <div class="stat-label">Rating</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value">${c.orders.toLocaleString()}</div>
+                                    <div class="stat-label">Orders</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+            
+            renderCuisineCards(cuisinesData.required, 'required-cuisines');
+            renderCuisineCards(cuisinesData.recommended, 'recommended-cuisines');
+            renderCuisineCards(cuisinesData.not_recommended, 'not-recommended-cuisines');
+        }
+        
+        // Charts
+        function renderCharts() {
+            // Zone Status Chart
+            new Chart(document.getElementById('zoneStatusChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['MVP Ready', 'Near MVP', 'Developing', 'Early Stage'],
+                    datasets: [{
+                        data: [43, 15, 35, 8],
+                        backgroundColor: ['#22c55e', '#eab308', '#8b5cf6', '#ef4444'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: { color: '#94a3b8', font: { family: 'Outfit' } }
+                        }
+                    }
+                }
+            });
+            
+            // Dish Category Chart
+            new Chart(document.getElementById('dishCategoryChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Discover', 'Expand', 'Fix', 'Monitor', 'Recruit'],
+                    datasets: [{
+                        label: 'Dishes',
+                        data: [35, 20, 4, 26, 1],
+                        backgroundColor: ['#8b5cf6', '#22c55e', '#ef4444', '#64748b', '#f97316']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#2d3548' },
+                            ticks: { color: '#94a3b8' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8' }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Event listeners
+        document.getElementById('dish-search').addEventListener('input', renderDishes);
+        document.getElementById('dish-category-filter').addEventListener('change', renderDishes);
+        document.getElementById('dish-cuisine-filter').addEventListener('change', renderDishes);
+        document.getElementById('zone-search').addEventListener('input', renderZones);
+        document.getElementById('zone-status-filter').addEventListener('change', renderZones);
+        
+        // Initialize
+        renderTopDishes();
+        renderDishes();
+        renderZones();
+        renderCuisines();
+        renderCharts();
+    </script>
+</body>
+</html>
+

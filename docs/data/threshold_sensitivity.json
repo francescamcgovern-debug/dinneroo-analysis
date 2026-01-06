@@ -1,0 +1,194 @@
+{
+  "cuisine_analysis": [
+    {
+      "cuisine_count": 1,
+      "zones": 65,
+      "avg_orders": 41.8,
+      "median_orders": 28.0,
+      "avg_rating": 4.151753863826232,
+      "total_orders": 2717
+    },
+    {
+      "cuisine_count": 2,
+      "zones": 37,
+      "avg_orders": 171.21621621621622,
+      "median_orders": 114.0,
+      "avg_rating": 4.131309811591309,
+      "total_orders": 6335
+    },
+    {
+      "cuisine_count": 3,
+      "zones": 30,
+      "avg_orders": 404.2,
+      "median_orders": 283.5,
+      "avg_rating": 4.344641486072287,
+      "total_orders": 12126
+    },
+    {
+      "cuisine_count": 4,
+      "zones": 24,
+      "avg_orders": 511.125,
+      "median_orders": 464.5,
+      "avg_rating": 4.34747013513829,
+      "total_orders": 12267
+    },
+    {
+      "cuisine_count": 5,
+      "zones": 13,
+      "avg_orders": 684.6153846153846,
+      "median_orders": 665.0,
+      "avg_rating": 4.435190448962567,
+      "total_orders": 8900
+    },
+    {
+      "cuisine_count": 6,
+      "zones": 11,
+      "avg_orders": 797.4545454545455,
+      "median_orders": 729.0,
+      "avg_rating": 4.356528779235632,
+      "total_orders": 8772
+    },
+    {
+      "cuisine_count": 7,
+      "zones": 8,
+      "avg_orders": 946.375,
+      "median_orders": 821.5,
+      "avg_rating": 4.487491944485826,
+      "total_orders": 7571
+    },
+    {
+      "cuisine_count": 8,
+      "zones": 6,
+      "avg_orders": 1224.6666666666667,
+      "median_orders": 1218.0,
+      "avg_rating": 4.466430359569994,
+      "total_orders": 7348
+    },
+    {
+      "cuisine_count": 9,
+      "zones": 3,
+      "avg_orders": 1800.3333333333333,
+      "median_orders": 1734.0,
+      "avg_rating": 4.45647733945673,
+      "total_orders": 5401
+    }
+  ],
+  "partner_analysis": [
+    {
+      "partner_range": "1-2",
+      "zones": 95,
+      "avg_orders": 68.48421052631579,
+      "avg_rating": 4.135550278518345
+    },
+    {
+      "partner_range": "3-3",
+      "zones": 21,
+      "avg_orders": 354.6190476190476,
+      "avg_rating": 4.34175484601908
+    },
+    {
+      "partner_range": "4-4",
+      "zones": 25,
+      "avg_orders": 450.32,
+      "avg_rating": 4.3825087078775455
+    },
+    {
+      "partner_range": "5-5",
+      "zones": 16,
+      "avg_orders": 536.625,
+      "avg_rating": 4.278963006588303
+    },
+    {
+      "partner_range": "6-7",
+      "zones": 16,
+      "avg_orders": 704.8125,
+      "avg_rating": 4.3625117372528415
+    },
+    {
+      "partner_range": "8-10",
+      "zones": 15,
+      "avg_orders": 1071.4,
+      "avg_rating": 4.442051025301646
+    },
+    {
+      "partner_range": "11-15",
+      "zones": 6,
+      "avg_orders": 1241.1666666666667,
+      "avg_rating": 4.47759126163879
+    },
+    {
+      "partner_range": "16-20",
+      "zones": 3,
+      "avg_orders": 948.3333333333334,
+      "avg_rating": 4.530153814305316
+    }
+  ],
+  "dish_analysis": [
+    {
+      "dish_range": "1-10",
+      "zones": 4,
+      "avg_orders": 5.0,
+      "avg_rating": 3.0
+    },
+    {
+      "dish_range": "11-15",
+      "zones": 5,
+      "avg_orders": 11.2,
+      "avg_rating": 2.916666666666667
+    },
+    {
+      "dish_range": "16-20",
+      "zones": 3,
+      "avg_orders": 16.333333333333332,
+      "avg_rating": 3.6666666666666665
+    },
+    {
+      "dish_range": "21-25",
+      "zones": 7,
+      "avg_orders": 19.571428571428573,
+      "avg_rating": 4.372222222222223
+    },
+    {
+      "dish_range": "26-30",
+      "zones": 9,
+      "avg_orders": 32.333333333333336,
+      "avg_rating": 4.336979166666667
+    },
+    {
+      "dish_range": "31-40",
+      "zones": 15,
+      "avg_orders": 24.866666666666667,
+      "avg_rating": 4.3412842712842705
+    },
+    {
+      "dish_range": "41-50",
+      "zones": 6,
+      "avg_orders": 49.0,
+      "avg_rating": 4.141223155929039
+    },
+    {
+      "dish_range": "51-100",
+      "zones": 39,
+      "avg_orders": 83.1025641025641,
+      "avg_rating": 4.133458727169075
+    },
+    {
+      "dish_range": "101-200",
+      "zones": 45,
+      "avg_orders": 311.3333333333333,
+      "avg_rating": 4.354933705436848
+    },
+    {
+      "dish_range": "201-500",
+      "zones": 57,
+      "avg_orders": 740.9824561403509,
+      "avg_rating": 4.390898193161793
+    }
+  ],
+  "key_findings": {
+    "cuisine_threshold": "5+ cuisines shows 34% more orders than 4 cuisines",
+    "partner_threshold": "5+ partners shows 4x more orders than 1-3 partners",
+    "dish_threshold": "21+ dishes shows clear performance improvement",
+    "variety_complaint_rate": "17.3% want more variety"
+  }
+}

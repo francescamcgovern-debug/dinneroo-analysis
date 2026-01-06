@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinneroo Analysis Dashboards</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        
+        :root {
+            --bg-primary: #06070a;
+            --bg-secondary: #0c0e14;
+            --bg-card: #1a1f2e;
+            --accent-teal: #00e5c7;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f97316;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #2d3548;
+            --success: #22c55e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(ellipse at 20% 0%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(0, 229, 199, 0.08) 0%, transparent 50%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: var(--accent-teal);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-teal) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+        
+        @media (max-width: 900px) {
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            border-color: var(--accent-teal);
+            transform: translateY(-4px);
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent-teal);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .stat-value.purple { color: var(--accent-purple); }
+        .stat-value.orange { color: var(--accent-orange); }
+        .stat-value.success { color: var(--success); }
+        
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+        
+        /* Primary Dashboard Card */
+        .primary-dashboard {
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(0, 229, 199, 0.05) 100%);
+            border: 2px solid var(--accent-teal);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .primary-dashboard::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-purple));
+        }
+        
+        .primary-badge {
+            display: inline-block;
+            background: var(--accent-teal);
+            color: var(--bg-primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+        
+        .primary-dashboard h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .primary-dashboard .description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            max-width: 800px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid { grid-template-columns: 1fr; }
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+        }
+        
+        .feature-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .feature-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .feature-text strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .primary-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+            color: var(--bg-primary);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .primary-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 229, 199, 0.3);
+        }
+        
+        /* Secondary Dashboards */
+        .secondary-section {
+            margin-bottom: 48px;
+        }
+        
+        .secondary-section h3 {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .dashboards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        
+        .dashboard-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .dashboard-card:hover {
+            border-color: var(--accent-purple);
+            transform: translateY(-4px);
+        }
+        
+        .dashboard-card .icon {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .dashboard-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .dashboard-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        
+        .dashboard-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent-teal);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: gap 0.2s;
+        }
+        
+        .dashboard-link:hover {
+            gap: 10px;
+        }
+        
+        /* Methodology */
+        .methodology-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .methodology-section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+        
+        .methodology-item {
+            padding: 16px;
+            background: var(--bg-card);
+            border-radius: 12px;
+        }
+        
+        .methodology-item h4 {
+            font-size: 14px;
+            color: var(--accent-teal);
+            margin-bottom: 8px;
+        }
+        
+        .methodology-item p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 32px 0;
+            border-top: 1px solid var(--border);
+        }
+        
+        .last-updated {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+        
+        .last-updated span {
+            color: var(--accent-teal);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Dinneroo Analytics</div>
+            <h1>Analysis Dashboards</h1>
+            <p class="subtitle">
+                Comprehensive analysis of Priority Dishes, Zone MVP status, Cuisine Coverage, and Smart Discovery opportunities. 
+                Powered by the 13-Factor Unified Scoring Framework with full evidence standards.
+            </p>
+        </header>
+        
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-value" id="dish-count">86</div>
+                <div class="stat-label">Priority Dishes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value purple" id="zone-count">193</div>
+                <div class="stat-label">Zones Analyzed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value success" id="mvp-count">--</div>
+                <div class="stat-label">MVP Ready</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value orange" id="discovery-count">37</div>
+                <div class="stat-label">Discovery Dishes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">13</div>
+                <div class="stat-label">Scoring Factors</div>
+            </div>
+        </div>
+        
+        <!-- PRIMARY: Unified Dashboard -->
+        <div class="primary-dashboard">
+            <span class="primary-badge">Recommended</span>
+            <h2>Unified Analysis Dashboard</h2>
+            <p class="description">
+                <strong>Everything in one place.</strong> All analysis consolidated into a single tabbed dashboard with 
+                interactive scoring, 2x2 prioritization matrix, and complete methodology documentation. 
+                Perfect for sharing with coworkers and presenting to stakeholders.
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">📊</span>
+                    <div class="feature-text">
+                        <strong>6 Integrated Tabs</strong>
+                        Executive Summary, Cuisine Coverage, Zone MVP, Dish Prioritization, Smart Discovery, Methodology
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">⚙️</span>
+                    <div class="feature-text">
+                        <strong>Adjustable 13-Factor Weights</strong>
+                        Interactive sliders to adjust scoring weights in real-time and see how rankings change
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">📈</span>
+                    <div class="feature-text">
+                        <strong>2x2 Prioritization Matrix</strong>
+                        Preference vs Demand quadrants: Core Drivers, Demand Boosters, Preference Drivers, Deprioritize
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔍</span>
+                    <div class="feature-text">
+                        <strong>Two-Track Scoring</strong>
+                        Performance (what's working) vs Opportunity (what families want) - avoids survivorship bias
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">💡</span>
+                    <div class="feature-text">
+                        <strong>Smart Discovery</strong>
+                        37 LLM-identified dishes that existing partners could make but don't currently offer
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <div class="feature-text">
+                        <strong>Evidence Standards</strong>
+                        Every score shows evidence level (🟢 Validated, 🟡 Corroborated, 🔵 Single source)
+                    </div>
+                </div>
+            </div>
+            
+            <a href="dashboards/dinneroo_unified.html" class="primary-link">
+                Open Unified Dashboard →
+            </a>
+        </div>
+        
+        <!-- Secondary Dashboards -->
+        <div class="secondary-section">
+            <h3>Individual Dashboards (Legacy)</h3>
+            <div class="dashboards-grid">
+                <div class="dashboard-card">
+                    <div class="icon">🍽️</div>
+                    <h4>Priority Dishes</h4>
+                    <p>Detailed dish scoring with 10-factor weights. Filter by cuisine, tier, and availability.</p>
+                    <a href="dashboards/priority_dishes.html" class="dashboard-link">Open Dashboard →</a>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon">📍</div>
+                    <h4>Zone MVP Status</h4>
+                    <p>Zone-by-zone analysis with MVP criteria, gap identification, and recommendations.</p>
+                    <a href="dashboards/zone_mvp.html" class="dashboard-link">Open Dashboard →</a>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon">📊</div>
+                    <h4>Master Dashboard</h4>
+                    <p>Previous consolidated view. Use Unified Dashboard for latest features.</p>
+                    <a href="dashboards/dinneroo_master_dashboard.html" class="dashboard-link">Open Dashboard →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Methodology -->
+        <div class="methodology-section">
+            <h3>Methodology Highlights</h3>
+            <div class="methodology-grid">
+                <div class="methodology-item">
+                    <h4>Two-Track Scoring</h4>
+                    <p>Separates Performance (what's working) from Opportunity (what families want) to avoid survivorship bias.</p>
+                </div>
+                <div class="methodology-item">
+                    <h4>13-Factor Unified Framework</h4>
+                    <p>Merges Anna's Hit List (behavioral) with Family Fit Framework (positioning) for balanced scoring.</p>
+                </div>
+                <div class="methodology-item">
+                    <h4>Evidence Standards</h4>
+                    <p>Every claim requires source citation and sample size. 🟢 Validated = 3+ sources for strategic recommendations.</p>
+                </div>
+                <div class="methodology-item">
+                    <h4>Survivorship Bias Aware</h4>
+                    <p>Order volume shows available options, not unmet demand. Latent demand analyzed via open-text.</p>
+                </div>
+                <div class="methodology-item">
+                    <h4>Dish Types, Not Brands</h4>
+                    <p>Focus on what families want to eat (e.g., "Grilled Chicken"), not specific restaurant names.</p>
+                </div>
+                <div class="methodology-item">
+                    <h4>Blended Health Score</h4>
+                    <p>Combines behavioral data (repeat rate) with survey data (satisfaction) for robust zone scoring.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p class="last-updated">
+                Last updated: <span id="last-update">Loading...</span>
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        async function loadStats() {
+            try {
+                const [dishes, zones, discovery] = await Promise.all([
+                    fetch('data/priority_dishes.json').then(r => r.ok ? r.json() : {}),
+                    fetch('data/zone_mvp_status.json').then(r => r.ok ? r.json() : {}),
+                    fetch('data/smart_discovery.json').then(r => r.ok ? r.json() : [])
+                ]);
+                
+                // Update dish count
+                const dishCount = dishes.dishes?.length || dishes.total_dishes || 86;
+                document.getElementById('dish-count').textContent = dishCount;
+                
+                // Update zone count
+                const zoneCount = zones.zones?.length || zones.total_zones || 193;
+                document.getElementById('zone-count').textContent = zoneCount;
+                
+                // Update MVP count
+                const zoneList = zones.zones || [];
+                const mvpCount = zoneList.filter(z => 
+                    z.mvp_status === 'MVP Ready' || z.status === 'mvp'
+                ).length;
+                document.getElementById('mvp-count').textContent = mvpCount || '--';
+                
+                // Update discovery count
+                const discoveryCount = Array.isArray(discovery) ? discovery.length : 37;
+                document.getElementById('discovery-count').textContent = discoveryCount;
+                
+                // Update last updated
+                document.getElementById('last-update').textContent = new Date().toLocaleDateString('en-GB', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+                
+            } catch (error) {
+                console.log('Stats will be available after running the pipeline');
+                document.getElementById('last-update').textContent = new Date().toLocaleDateString('en-GB', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+            }
+        }
+        
+        loadStats();
+    </script>
+</body>
+</html>

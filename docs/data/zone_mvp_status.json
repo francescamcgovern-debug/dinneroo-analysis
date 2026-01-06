@@ -1,0 +1,3419 @@
+[
+  {
+    "zone": "Aldershot",
+    "order_count": 57,
+    "customer_count": 52,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.096,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Altrincham and Hale",
+    "order_count": 26,
+    "customer_count": 23,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.087,
+    "avg_rating": 4.2,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Balham",
+    "order_count": 300,
+    "customer_count": 240,
+    "cuisine_count": 2,
+    "cuisines": [
+      "Vietnamese",
+      "italian"
+    ],
+    "repeat_rate": 0.154,
+    "avg_rating": 4.44,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Barnet",
+    "order_count": 54,
+    "customer_count": 36,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.194,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Basingstoke",
+    "order_count": 549,
+    "customer_count": 386,
+    "cuisine_count": 3,
+    "cuisines": [
+      "japanese",
+      "italian",
+      "Latin American"
+    ],
+    "repeat_rate": 0.236,
+    "avg_rating": 3.83,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Bath",
+    "order_count": 707,
+    "customer_count": 449,
+    "cuisine_count": 8,
+    "cuisines": [
+      "Asian",
+      "italian",
+      "Salads",
+      "japanese",
+      "thai",
+      "Burgers",
+      "Latin American",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.243,
+    "avg_rating": 4.53,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Beckenham",
+    "order_count": 71,
+    "customer_count": 52,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.192,
+    "avg_rating": 4.36,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Beeston",
+    "order_count": 25,
+    "customer_count": 22,
+    "cuisine_count": 1,
+    "cuisines": [
+      "japanese"
+    ],
+    "repeat_rate": 0.091,
+    "avg_rating": 2.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Belfast",
+    "order_count": 14,
+    "customer_count": 12,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.167,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Belfast Central",
+    "order_count": 13,
+    "customer_count": 13,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.0,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Belfast East",
+    "order_count": 9,
+    "customer_count": 7,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.143,
+    "avg_rating": 1.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Belsize Park / St John's Wood",
+    "order_count": 304,
+    "customer_count": 222,
+    "cuisine_count": 4,
+    "cuisines": [
+      "lebanese",
+      "Salads",
+      "italian",
+      "Healthy"
+    ],
+    "repeat_rate": 0.198,
+    "avg_rating": 4.79,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Berkhamsted",
+    "order_count": 125,
+    "customer_count": 92,
+    "cuisine_count": 2,
+    "cuisines": [
+      "thai",
+      "italian"
+    ],
+    "repeat_rate": 0.196,
+    "avg_rating": 4.73,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Bermondsey",
+    "order_count": 56,
+    "customer_count": 49,
+    "cuisine_count": 2,
+    "cuisines": [
+      "italian",
+      "Asian"
+    ],
+    "repeat_rate": 0.102,
+    "avg_rating": 3.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Bexleyheath",
+    "order_count": 54,
+    "customer_count": 42,
+    "cuisine_count": 2,
+    "cuisines": [
+      "italian",
+      "Asian"
+    ],
+    "repeat_rate": 0.167,
+    "avg_rating": 3.86,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Birmingham",
+    "order_count": 795,
+    "customer_count": 549,
+    "cuisine_count": 8,
+    "cuisines": [
+      "italian",
+      "Vietnamese",
+      "Burgers",
+      "Asian",
+      "japanese",
+      "Latin American",
+      "Wraps",
+      "Tacos"
+    ],
+    "repeat_rate": 0.217,
+    "avg_rating": 4.15,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Borehamwood",
+    "order_count": 17,
+    "customer_count": 15,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.067,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Bournemouth",
+    "order_count": 722,
+    "customer_count": 521,
+    "cuisine_count": 3,
+    "cuisines": [
+      "japanese",
+      "Vietnamese",
+      "italian"
+    ],
+    "repeat_rate": 0.207,
+    "avg_rating": 4.26,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Bournemouth East",
+    "order_count": 34,
+    "customer_count": 29,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.138,
+    "avg_rating": 3.57,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Bracknell",
+    "order_count": 666,
+    "customer_count": 472,
+    "cuisine_count": 4,
+    "cuisines": [
+      "italian",
+      "Latin American",
+      "japanese",
+      "thai"
+    ],
+    "repeat_rate": 0.229,
+    "avg_rating": 4.55,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Braintree",
+    "order_count": 180,
+    "customer_count": 140,
+    "cuisine_count": 3,
+    "cuisines": [
+      "italian",
+      "japanese",
+      "Burgers"
+    ],
+    "repeat_rate": 0.136,
+    "avg_rating": 3.9,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Brighton Central",
+    "order_count": 1934,
+    "customer_count": 1302,
+    "cuisine_count": 9,
+    "cuisines": [
+      "thai",
+      "Vietnamese",
+      "italian",
+      "Burgers",
+      "Salads",
+      "japanese",
+      "Latin American",
+      "sushi",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.226,
+    "avg_rating": 4.47,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Bristol",
+    "order_count": 1333,
+    "customer_count": 969,
+    "cuisine_count": 6,
+    "cuisines": [
+      "japanese",
+      "Vietnamese",
+      "thai",
+      "Latin American",
+      "italian",
+      "Only on Deliveroo"
+    ],
+    "repeat_rate": 0.207,
+    "avg_rating": 4.53,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Brixton",
+    "order_count": 436,
+    "customer_count": 379,
+    "cuisine_count": 4,
+    "cuisines": [
+      "indian",
+      "Salads",
+      "italian",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.113,
+    "avg_rating": 4.5,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Brockley / Forest Hill",
+    "order_count": 1705,
+    "customer_count": 1168,
+    "cuisine_count": 3,
+    "cuisines": [
+      "indian",
+      "japanese",
+      "Vegan Friendly"
+    ],
+    "repeat_rate": 0.236,
+    "avg_rating": 4.61,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Bromley",
+    "order_count": 511,
+    "customer_count": 369,
+    "cuisine_count": 4,
+    "cuisines": [
+      "Salads",
+      "japanese",
+      "Asian",
+      "italian"
+    ],
+    "repeat_rate": 0.195,
+    "avg_rating": 3.81,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Camberley",
+    "order_count": 368,
+    "customer_count": 266,
+    "cuisine_count": 2,
+    "cuisines": [
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.192,
+    "avg_rating": 3.97,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Cambridge",
+    "order_count": 1562,
+    "customer_count": 856,
+    "cuisine_count": 7,
+    "cuisines": [
+      "Vietnamese",
+      "thai",
+      "japanese",
+      "Burgers",
+      "Latin American",
+      "italian",
+      "Salads"
+    ],
+    "repeat_rate": 0.306,
+    "avg_rating": 4.48,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Camden/Kentish Town",
+    "order_count": 286,
+    "customer_count": 224,
+    "cuisine_count": 6,
+    "cuisines": [
+      "japanese",
+      "Salads",
+      "Tacos",
+      "italian",
+      "Asian",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.156,
+    "avg_rating": 4.11,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Canary Wharf",
+    "order_count": 1267,
+    "customer_count": 908,
+    "cuisine_count": 5,
+    "cuisines": [
+      "Vietnamese",
+      "japanese",
+      "Salads",
+      "indian",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.233,
+    "avg_rating": 4.29,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Canning Town",
+    "order_count": 1484,
+    "customer_count": 979,
+    "cuisine_count": 2,
+    "cuisines": [
+      "indian",
+      "Mediterranean"
+    ],
+    "repeat_rate": 0.254,
+    "avg_rating": 4.67,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Canterbury",
+    "order_count": 614,
+    "customer_count": 370,
+    "cuisine_count": 6,
+    "cuisines": [
+      "Burritos",
+      "japanese",
+      "Burgers",
+      "Vietnamese",
+      "italian",
+      "sushi"
+    ],
+    "repeat_rate": 0.257,
+    "avg_rating": 4.16,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Cardiff",
+    "order_count": 530,
+    "customer_count": 384,
+    "cuisine_count": 5,
+    "cuisines": [
+      "Vietnamese",
+      "italian",
+      "japanese",
+      "Burgers",
+      "Latin American"
+    ],
+    "repeat_rate": 0.182,
+    "avg_rating": 4.57,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Cardiff Bay Area",
+    "order_count": 164,
+    "customer_count": 107,
+    "cuisine_count": 5,
+    "cuisines": [
+      "Burgers",
+      "japanese",
+      "thai",
+      "Latin American",
+      "italian"
+    ],
+    "repeat_rate": 0.271,
+    "avg_rating": 4.78,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Chelmsford",
+    "order_count": 838,
+    "customer_count": 522,
+    "cuisine_count": 7,
+    "cuisines": [
+      "Asian",
+      "japanese",
+      "thai",
+      "Latin American",
+      "italian",
+      "Burgers",
+      "Tacos"
+    ],
+    "repeat_rate": 0.27,
+    "avg_rating": 4.21,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Cheltenham",
+    "order_count": 590,
+    "customer_count": 388,
+    "cuisine_count": 4,
+    "cuisines": [
+      "Vietnamese",
+      "thai",
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.245,
+    "avg_rating": 4.38,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Chesham",
+    "order_count": 29,
+    "customer_count": 24,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.083,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Chichester",
+    "order_count": 277,
+    "customer_count": 201,
+    "cuisine_count": 4,
+    "cuisines": [
+      "Burgers",
+      "japanese",
+      "thai",
+      "italian"
+    ],
+    "repeat_rate": 0.229,
+    "avg_rating": 4.13,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Chingford",
+    "order_count": 87,
+    "customer_count": 69,
+    "cuisine_count": 3,
+    "cuisines": [
+      "italian",
+      "Asian",
+      "Tacos"
+    ],
+    "repeat_rate": 0.145,
+    "avg_rating": 4.2,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Chislehurst",
+    "order_count": 238,
+    "customer_count": 202,
+    "cuisine_count": 1,
+    "cuisines": [
+      "thai"
+    ],
+    "repeat_rate": 0.134,
+    "avg_rating": 4.46,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Chiswick",
+    "order_count": 1416,
+    "customer_count": 962,
+    "cuisine_count": 6,
+    "cuisines": [
+      "indian",
+      "Vietnamese",
+      "Mediterranean",
+      "Healthy",
+      "italian",
+      "Salads"
+    ],
+    "repeat_rate": 0.252,
+    "avg_rating": 4.74,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Clapham",
+    "order_count": 2645,
+    "customer_count": 1759,
+    "cuisine_count": 9,
+    "cuisines": [
+      "Vietnamese",
+      "Asian",
+      "Curry",
+      "Mediterranean",
+      "italian",
+      "Salads",
+      "Tacos",
+      "Healthy",
+      "Wraps"
+    ],
+    "repeat_rate": 0.235,
+    "avg_rating": 4.61,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Colchester",
+    "order_count": 537,
+    "customer_count": 330,
+    "cuisine_count": 4,
+    "cuisines": [
+      "Burgers",
+      "italian",
+      "japanese",
+      "sushi"
+    ],
+    "repeat_rate": 0.285,
+    "avg_rating": 4.6,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Crawley",
+    "order_count": 45,
+    "customer_count": 41,
+    "cuisine_count": 1,
+    "cuisines": [
+      "japanese"
+    ],
+    "repeat_rate": 0.073,
+    "avg_rating": 4.8,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Cribbs Causeway Shopping Centre",
+    "order_count": 236,
+    "customer_count": 178,
+    "cuisine_count": 4,
+    "cuisines": [
+      "italian",
+      "Latin American",
+      "Salads",
+      "japanese"
+    ],
+    "repeat_rate": 0.202,
+    "avg_rating": 3.87,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Croydon",
+    "order_count": 576,
+    "customer_count": 427,
+    "cuisine_count": 4,
+    "cuisines": [
+      "japanese",
+      "Movie Night Restaurants",
+      "italian",
+      "Asian"
+    ],
+    "repeat_rate": 0.197,
+    "avg_rating": 4.29,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Crystal Palace / Penge",
+    "order_count": 13,
+    "customer_count": 11,
+    "cuisine_count": 1,
+    "cuisines": [
+      "Asian"
+    ],
+    "repeat_rate": 0.182,
+    "avg_rating": 4.67,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Dalston Stoke Newington",
+    "order_count": 508,
+    "customer_count": 435,
+    "cuisine_count": 4,
+    "cuisines": [
+      "indian",
+      "italian",
+      "Asian",
+      "halal"
+    ],
+    "repeat_rate": 0.113,
+    "avg_rating": 4.43,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Dartford",
+    "order_count": 372,
+    "customer_count": 262,
+    "cuisine_count": 5,
+    "cuisines": [
+      "japanese",
+      "italian",
+      "Shawarma",
+      "Sandwiches",
+      "Asian"
+    ],
+    "repeat_rate": 0.237,
+    "avg_rating": 4.1,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Didsbury and Withington",
+    "order_count": 278,
+    "customer_count": 208,
+    "cuisine_count": 3,
+    "cuisines": [
+      "japanese",
+      "Featured Restaurants",
+      "italian"
+    ],
+    "repeat_rate": 0.188,
+    "avg_rating": 4.72,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Dublin City North",
+    "order_count": 908,
+    "customer_count": 681,
+    "cuisine_count": 6,
+    "cuisines": [
+      "Roasteries",
+      "indian",
+      "chinese",
+      "italian",
+      "mexican",
+      "vegetarian"
+    ],
+    "repeat_rate": 0.192,
+    "avg_rating": 4.06,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Dublin City South",
+    "order_count": 109,
+    "customer_count": 94,
+    "cuisine_count": 4,
+    "cuisines": [
+      "Chicken",
+      "Family favourites",
+      "Middle Eastern",
+      "Healthy Eating 2025"
+    ],
+    "repeat_rate": 0.117,
+    "avg_rating": 4.82,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Dudley",
+    "order_count": 45,
+    "customer_count": 37,
+    "cuisine_count": 2,
+    "cuisines": [
+      "Asian",
+      "italian"
+    ],
+    "repeat_rate": 0.162,
+    "avg_rating": 4.75,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Dulwich",
+    "order_count": 75,
+    "customer_count": 58,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.138,
+    "avg_rating": 4.67,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Dun laoghaire, Dalkey, Killiney",
+    "order_count": 24,
+    "customer_count": 22,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.091,
+    "avg_rating": 4.33,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Dundrum",
+    "order_count": 126,
+    "customer_count": 102,
+    "cuisine_count": 2,
+    "cuisines": [
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.137,
+    "avg_rating": 4.18,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Ealing",
+    "order_count": 1000,
+    "customer_count": 677,
+    "cuisine_count": 5,
+    "cuisines": [
+      "japanese",
+      "Vietnamese",
+      "Latin American",
+      "Salads",
+      "italian"
+    ],
+    "repeat_rate": 0.211,
+    "avg_rating": 4.2,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "East Barnet",
+    "order_count": 18,
+    "customer_count": 17,
+    "cuisine_count": 1,
+    "cuisines": [
+      "indian"
+    ],
+    "repeat_rate": 0.059,
+    "avg_rating": 4.4,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "East Central",
+    "order_count": 1363,
+    "customer_count": 955,
+    "cuisine_count": 8,
+    "cuisines": [
+      "Salads",
+      "Chicken",
+      "Vietnamese",
+      "Healthy",
+      "japanese",
+      "italian",
+      "Tacos",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.21,
+    "avg_rating": 4.46,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Eastbourne",
+    "order_count": 49,
+    "customer_count": 35,
+    "cuisine_count": 2,
+    "cuisines": [
+      "Burgers",
+      "italian"
+    ],
+    "repeat_rate": 0.229,
+    "avg_rating": 4.29,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Eastleigh Central",
+    "order_count": 23,
+    "customer_count": 20,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.1,
+    "avg_rating": 3.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Easton",
+    "order_count": 356,
+    "customer_count": 305,
+    "cuisine_count": 5,
+    "cuisines": [
+      "japanese",
+      "Only on Deliveroo",
+      "Featured Restaurants",
+      "Salads",
+      "italian"
+    ],
+    "repeat_rate": 0.095,
+    "avg_rating": 4.38,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Eccles",
+    "order_count": 199,
+    "customer_count": 155,
+    "cuisine_count": 3,
+    "cuisines": [
+      "Salads",
+      "Burgers",
+      "Latin American"
+    ],
+    "repeat_rate": 0.174,
+    "avg_rating": 4.03,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Edgbaston",
+    "order_count": 665,
+    "customer_count": 430,
+    "cuisine_count": 3,
+    "cuisines": [
+      "thai",
+      "Vietnamese",
+      "italian"
+    ],
+    "repeat_rate": 0.24,
+    "avg_rating": 4.68,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Edgware / Mill Hill",
+    "order_count": 103,
+    "customer_count": 83,
+    "cuisine_count": 3,
+    "cuisines": [
+      "italian",
+      "Kosher",
+      "Organic"
+    ],
+    "repeat_rate": 0.157,
+    "avg_rating": 3.83,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Edinburgh Central",
+    "order_count": 807,
+    "customer_count": 587,
+    "cuisine_count": 3,
+    "cuisines": [
+      "Pho",
+      "Asian",
+      "italian"
+    ],
+    "repeat_rate": 0.203,
+    "avg_rating": 4.51,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Edinburgh North",
+    "order_count": 402,
+    "customer_count": 335,
+    "cuisine_count": 3,
+    "cuisines": [
+      "Pho",
+      "Plus offers Oct 2024",
+      "japanese"
+    ],
+    "repeat_rate": 0.125,
+    "avg_rating": 4.43,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Eltham",
+    "order_count": 62,
+    "customer_count": 50,
+    "cuisine_count": 2,
+    "cuisines": [
+      "Asian",
+      "italian"
+    ],
+    "repeat_rate": 0.14,
+    "avg_rating": 4.38,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Enfield",
+    "order_count": 341,
+    "customer_count": 266,
+    "cuisine_count": 2,
+    "cuisines": [
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.177,
+    "avg_rating": 3.87,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Epping",
+    "order_count": 11,
+    "customer_count": 11,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.0,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Epsom",
+    "order_count": 338,
+    "customer_count": 248,
+    "cuisine_count": 3,
+    "cuisines": [
+      "Asian",
+      "italian",
+      "sushi"
+    ],
+    "repeat_rate": 0.181,
+    "avg_rating": 4.12,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Esher",
+    "order_count": 174,
+    "customer_count": 145,
+    "cuisine_count": 2,
+    "cuisines": [
+      "thai",
+      "italian"
+    ],
+    "repeat_rate": 0.117,
+    "avg_rating": 4.67,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Euston",
+    "order_count": 2,
+    "customer_count": 2,
+    "cuisine_count": 1,
+    "cuisines": [
+      "Salads"
+    ],
+    "repeat_rate": 0.0,
+    "avg_rating": null,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Farnborough",
+    "order_count": 20,
+    "customer_count": 19,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.053,
+    "avg_rating": 2.33,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Farnham",
+    "order_count": 359,
+    "customer_count": 254,
+    "cuisine_count": 3,
+    "cuisines": [
+      "thai",
+      "breakfast",
+      "italian"
+    ],
+    "repeat_rate": 0.213,
+    "avg_rating": 4.67,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Finchley",
+    "order_count": 342,
+    "customer_count": 253,
+    "cuisine_count": 1,
+    "cuisines": [
+      "japanese"
+    ],
+    "repeat_rate": 0.17,
+    "avg_rating": 4.2,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Finsbury Park / Harringay / Crouch End",
+    "order_count": 1792,
+    "customer_count": 1167,
+    "cuisine_count": 3,
+    "cuisines": [
+      "Vegan Friendly",
+      "indian",
+      "Tacos"
+    ],
+    "repeat_rate": 0.25,
+    "avg_rating": 4.53,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Fleet",
+    "order_count": 44,
+    "customer_count": 32,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.219,
+    "avg_rating": 3.55,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Fulham",
+    "order_count": 692,
+    "customer_count": 511,
+    "cuisine_count": 5,
+    "cuisines": [
+      "Vietnamese",
+      "japanese",
+      "Chicken",
+      "Asian",
+      "italian"
+    ],
+    "repeat_rate": 0.198,
+    "avg_rating": 4.57,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Galway",
+    "order_count": 31,
+    "customer_count": 30,
+    "cuisine_count": 3,
+    "cuisines": [
+      "Asian Fusion",
+      "chinese",
+      "italian"
+    ],
+    "repeat_rate": 0.033,
+    "avg_rating": 3.33,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Gerrards Cross",
+    "order_count": 42,
+    "customer_count": 29,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.172,
+    "avg_rating": 3.86,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Glasgow Centre",
+    "order_count": 587,
+    "customer_count": 389,
+    "cuisine_count": 5,
+    "cuisines": [
+      "Pho",
+      "japanese",
+      "italian",
+      "Burgers",
+      "Asian"
+    ],
+    "repeat_rate": 0.239,
+    "avg_rating": 4.55,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Glasgow Centre East",
+    "order_count": 10,
+    "customer_count": 10,
+    "cuisine_count": 1,
+    "cuisines": [
+      "japanese"
+    ],
+    "repeat_rate": 0.0,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Glasgow West End",
+    "order_count": 126,
+    "customer_count": 109,
+    "cuisine_count": 1,
+    "cuisines": [
+      "Asian"
+    ],
+    "repeat_rate": 0.083,
+    "avg_rating": 4.56,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Godalming",
+    "order_count": 73,
+    "customer_count": 46,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.217,
+    "avg_rating": 4.25,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Golders Green / Brent Cross",
+    "order_count": 279,
+    "customer_count": 204,
+    "cuisine_count": 2,
+    "cuisines": [
+      "Kosher",
+      "Asian Fusion"
+    ],
+    "repeat_rate": 0.172,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Grays",
+    "order_count": 34,
+    "customer_count": 26,
+    "cuisine_count": 1,
+    "cuisines": [
+      "Latin American"
+    ],
+    "repeat_rate": 0.154,
+    "avg_rating": 3.6,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Greater Leeds",
+    "order_count": 25,
+    "customer_count": 22,
+    "cuisine_count": 1,
+    "cuisines": [
+      "Asian"
+    ],
+    "repeat_rate": 0.136,
+    "avg_rating": 1.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Greenwich",
+    "order_count": 370,
+    "customer_count": 277,
+    "cuisine_count": 2,
+    "cuisines": [
+      "Asian",
+      "japanese"
+    ],
+    "repeat_rate": 0.199,
+    "avg_rating": 4.49,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Guildford",
+    "order_count": 1107,
+    "customer_count": 721,
+    "cuisine_count": 6,
+    "cuisines": [
+      "Vietnamese",
+      "Burgers",
+      "Salads",
+      "italian",
+      "japanese",
+      "thai"
+    ],
+    "repeat_rate": 0.252,
+    "avg_rating": 4.25,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Hammersmith / Shepherd's Bush",
+    "order_count": 1009,
+    "customer_count": 686,
+    "cuisine_count": 6,
+    "cuisines": [
+      "italian",
+      "Meal Deals",
+      "japanese",
+      "Salads",
+      "Sandwiches",
+      "Vegan Friendly"
+    ],
+    "repeat_rate": 0.252,
+    "avg_rating": 4.46,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Hampstead",
+    "order_count": 893,
+    "customer_count": 672,
+    "cuisine_count": 5,
+    "cuisines": [
+      "japanese",
+      "Asian",
+      "Salads",
+      "halal",
+      "sushi"
+    ],
+    "repeat_rate": 0.201,
+    "avg_rating": 4.47,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Harpenden",
+    "order_count": 196,
+    "customer_count": 157,
+    "cuisine_count": 2,
+    "cuisines": [
+      "thai",
+      "italian"
+    ],
+    "repeat_rate": 0.14,
+    "avg_rating": 4.47,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Harrow",
+    "order_count": 143,
+    "customer_count": 129,
+    "cuisine_count": 3,
+    "cuisines": [
+      "italian",
+      "sushi",
+      "indian"
+    ],
+    "repeat_rate": 0.078,
+    "avg_rating": 4.33,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Hatfield/ Hatfield Park",
+    "order_count": 185,
+    "customer_count": 139,
+    "cuisine_count": 2,
+    "cuisines": [
+      "Asian",
+      "italian"
+    ],
+    "repeat_rate": 0.216,
+    "avg_rating": 4.39,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Headingley",
+    "order_count": 43,
+    "customer_count": 34,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.118,
+    "avg_rating": 3.67,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Hemel Hempstead",
+    "order_count": 43,
+    "customer_count": 34,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.147,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Henley on Thames",
+    "order_count": 209,
+    "customer_count": 160,
+    "cuisine_count": 3,
+    "cuisines": [
+      "thai",
+      "Asian",
+      "italian"
+    ],
+    "repeat_rate": 0.181,
+    "avg_rating": 4.28,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "High Wycombe",
+    "order_count": 93,
+    "customer_count": 76,
+    "cuisine_count": 1,
+    "cuisines": [
+      "thai"
+    ],
+    "repeat_rate": 0.184,
+    "avg_rating": 3.71,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Highgate, Muswell Hill, East Finchley",
+    "order_count": 184,
+    "customer_count": 136,
+    "cuisine_count": 3,
+    "cuisines": [
+      "Asian",
+      "italian",
+      "indian"
+    ],
+    "repeat_rate": 0.14,
+    "avg_rating": 4.42,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Hillfields",
+    "order_count": 13,
+    "customer_count": 13,
+    "cuisine_count": 1,
+    "cuisines": [
+      "pizza"
+    ],
+    "repeat_rate": 0.0,
+    "avg_rating": null,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Hitchin",
+    "order_count": 32,
+    "customer_count": 28,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.107,
+    "avg_rating": 3.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Horsham",
+    "order_count": 480,
+    "customer_count": 308,
+    "cuisine_count": 4,
+    "cuisines": [
+      "thai",
+      "italian",
+      "Burgers",
+      "japanese"
+    ],
+    "repeat_rate": 0.231,
+    "avg_rating": 4.41,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Hunts Cross",
+    "order_count": 69,
+    "customer_count": 56,
+    "cuisine_count": 2,
+    "cuisines": [
+      "italian",
+      "japanese"
+    ],
+    "repeat_rate": 0.089,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Ilford",
+    "order_count": 80,
+    "customer_count": 67,
+    "cuisine_count": 1,
+    "cuisines": [
+      "indian"
+    ],
+    "repeat_rate": 0.075,
+    "avg_rating": 4.17,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Islington",
+    "order_count": 2500,
+    "customer_count": 1719,
+    "cuisine_count": 8,
+    "cuisines": [
+      "indian",
+      "Veganuary",
+      "japanese",
+      "italian",
+      "Vietnamese",
+      "Salads",
+      "Asian",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.237,
+    "avg_rating": 4.69,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Kingsbury Green/ The Hyde",
+    "order_count": 180,
+    "customer_count": 144,
+    "cuisine_count": 2,
+    "cuisines": [
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.139,
+    "avg_rating": 4.14,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Kingston",
+    "order_count": 1298,
+    "customer_count": 846,
+    "cuisine_count": 8,
+    "cuisines": [
+      "Vietnamese",
+      "japanese",
+      "Meal Deals",
+      "thai",
+      "Salads",
+      "italian",
+      "sushi",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.261,
+    "avg_rating": 4.46,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Kylemore",
+    "order_count": 36,
+    "customer_count": 34,
+    "cuisine_count": 1,
+    "cuisines": [
+      "chinese"
+    ],
+    "repeat_rate": 0.059,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Leatherhead",
+    "order_count": 11,
+    "customer_count": 11,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.0,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Leavesden and Abbots Langley",
+    "order_count": 147,
+    "customer_count": 118,
+    "cuisine_count": 1,
+    "cuisines": [
+      "Asian"
+    ],
+    "repeat_rate": 0.144,
+    "avg_rating": 4.79,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Leeds City Centre",
+    "order_count": 526,
+    "customer_count": 405,
+    "cuisine_count": 7,
+    "cuisines": [
+      "italian",
+      "Burgers",
+      "japanese",
+      "Salads",
+      "thai",
+      "Latin American",
+      "Gluten Free"
+    ],
+    "repeat_rate": 0.183,
+    "avg_rating": 4.52,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Letchworth Garden City",
+    "order_count": 5,
+    "customer_count": 4,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.25,
+    "avg_rating": null,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Lewisham",
+    "order_count": 1493,
+    "customer_count": 941,
+    "cuisine_count": 4,
+    "cuisines": [
+      "Vietnamese",
+      "Meal Deals",
+      "italian",
+      "Asian"
+    ],
+    "repeat_rate": 0.251,
+    "avg_rating": 4.5,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Leyton",
+    "order_count": 18,
+    "customer_count": 18,
+    "cuisine_count": 1,
+    "cuisines": [
+      "indian"
+    ],
+    "repeat_rate": 0.0,
+    "avg_rating": 3.5,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Liverpool City Centre",
+    "order_count": 366,
+    "customer_count": 295,
+    "cuisine_count": 4,
+    "cuisines": [
+      "Vietnamese",
+      "Latin American",
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.129,
+    "avg_rating": 4.29,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Lockleaze",
+    "order_count": 43,
+    "customer_count": 42,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.024,
+    "avg_rating": 3.75,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "London Bridge",
+    "order_count": 929,
+    "customer_count": 660,
+    "cuisine_count": 7,
+    "cuisines": [
+      "Meal Deals",
+      "Salads",
+      "japanese",
+      "Vietnamese",
+      "italian",
+      "halal",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.2,
+    "avg_rating": 4.57,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Maida Vale / Kilburn",
+    "order_count": 329,
+    "customer_count": 252,
+    "cuisine_count": 2,
+    "cuisines": [
+      "Asian",
+      "Chicken"
+    ],
+    "repeat_rate": 0.187,
+    "avg_rating": 4.08,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Maidenhead",
+    "order_count": 28,
+    "customer_count": 26,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.077,
+    "avg_rating": 4.17,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Maidstone",
+    "order_count": 10,
+    "customer_count": 6,
+    "cuisine_count": 1,
+    "cuisines": [
+      "sushi"
+    ],
+    "repeat_rate": 0.5,
+    "avg_rating": null,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Manchester Central",
+    "order_count": 223,
+    "customer_count": 203,
+    "cuisine_count": 3,
+    "cuisines": [
+      "Vietnamese",
+      "japanese",
+      "Tacos"
+    ],
+    "repeat_rate": 0.074,
+    "avg_rating": 4.36,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Mayfair",
+    "order_count": 858,
+    "customer_count": 582,
+    "cuisine_count": 7,
+    "cuisines": [
+      "Salads",
+      "japanese",
+      "Vietnamese",
+      "Sandwiches",
+      "Meal Deals",
+      "italian",
+      "Chicken"
+    ],
+    "repeat_rate": 0.223,
+    "avg_rating": 4.57,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Milton Keynes",
+    "order_count": 1521,
+    "customer_count": 915,
+    "cuisine_count": 7,
+    "cuisines": [
+      "Asian",
+      "Latin American",
+      "Vietnamese",
+      "japanese",
+      "Salads",
+      "italian",
+      "Burgers"
+    ],
+    "repeat_rate": 0.285,
+    "avg_rating": 4.46,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Morningside",
+    "order_count": 55,
+    "customer_count": 37,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.216,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Mulhuddart",
+    "order_count": 29,
+    "customer_count": 23,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.217,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "New Earswick and Huntington",
+    "order_count": 5,
+    "customer_count": 5,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.0,
+    "avg_rating": null,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Newbury",
+    "order_count": 168,
+    "customer_count": 120,
+    "cuisine_count": 3,
+    "cuisines": [
+      "Burgers",
+      "sushi",
+      "italian"
+    ],
+    "repeat_rate": 0.2,
+    "avg_rating": 4.48,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Newton Longville",
+    "order_count": 200,
+    "customer_count": 166,
+    "cuisine_count": 4,
+    "cuisines": [
+      "italian",
+      "Asian",
+      "pizza",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.145,
+    "avg_rating": 4.05,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Norwich",
+    "order_count": 1228,
+    "customer_count": 760,
+    "cuisine_count": 6,
+    "cuisines": [
+      "Vietnamese",
+      "Burgers",
+      "thai",
+      "italian",
+      "Asian",
+      "japanese"
+    ],
+    "repeat_rate": 0.257,
+    "avg_rating": 4.25,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Notting Hill / Paddington",
+    "order_count": 1401,
+    "customer_count": 1023,
+    "cuisine_count": 7,
+    "cuisines": [
+      "japanese",
+      "Curry",
+      "Salads",
+      "italian",
+      "Chicken",
+      "Sandwiches",
+      "Asian"
+    ],
+    "repeat_rate": 0.193,
+    "avg_rating": 4.53,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Nottingham",
+    "order_count": 841,
+    "customer_count": 580,
+    "cuisine_count": 5,
+    "cuisines": [
+      "Vietnamese",
+      "Burgers",
+      "Latin American",
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.229,
+    "avg_rating": 4.43,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Oakwood and Chapeltown",
+    "order_count": 28,
+    "customer_count": 25,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.12,
+    "avg_rating": 4.75,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Orpington",
+    "order_count": 14,
+    "customer_count": 13,
+    "cuisine_count": 1,
+    "cuisines": [
+      "Asian"
+    ],
+    "repeat_rate": 0.077,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Oxford",
+    "order_count": 1640,
+    "customer_count": 944,
+    "cuisine_count": 6,
+    "cuisines": [
+      "Vietnamese",
+      "italian",
+      "thai",
+      "Asian",
+      "Salads",
+      "japanese"
+    ],
+    "repeat_rate": 0.301,
+    "avg_rating": 4.52,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Palmers Green / Southgate",
+    "order_count": 109,
+    "customer_count": 87,
+    "cuisine_count": 2,
+    "cuisines": [
+      "italian",
+      "Asian"
+    ],
+    "repeat_rate": 0.161,
+    "avg_rating": 4.29,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Poole",
+    "order_count": 74,
+    "customer_count": 59,
+    "cuisine_count": 2,
+    "cuisines": [
+      "sushi",
+      "italian"
+    ],
+    "repeat_rate": 0.169,
+    "avg_rating": 4.17,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Port Solent",
+    "order_count": 3,
+    "customer_count": 3,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.0,
+    "avg_rating": 1.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Portsmouth",
+    "order_count": 16,
+    "customer_count": 16,
+    "cuisine_count": 1,
+    "cuisines": [
+      "sushi"
+    ],
+    "repeat_rate": 0.0,
+    "avg_rating": null,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Purley",
+    "order_count": 34,
+    "customer_count": 25,
+    "cuisine_count": 1,
+    "cuisines": [
+      "Asian"
+    ],
+    "repeat_rate": 0.32,
+    "avg_rating": 4.5,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Putney & Barnes",
+    "order_count": 325,
+    "customer_count": 229,
+    "cuisine_count": 3,
+    "cuisines": [
+      "japanese",
+      "Salads",
+      "italian"
+    ],
+    "repeat_rate": 0.188,
+    "avg_rating": 4.7,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Raynes Park",
+    "order_count": 67,
+    "customer_count": 54,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.185,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Reading",
+    "order_count": 1460,
+    "customer_count": 920,
+    "cuisine_count": 9,
+    "cuisines": [
+      "Vietnamese",
+      "Salads",
+      "Burgers",
+      "Latin American",
+      "italian",
+      "Pasta",
+      "Asian",
+      "japanese",
+      "Tacos"
+    ],
+    "repeat_rate": 0.262,
+    "avg_rating": 4.29,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Reigate",
+    "order_count": 626,
+    "customer_count": 424,
+    "cuisine_count": 6,
+    "cuisines": [
+      "thai",
+      "Meal Deals",
+      "japanese",
+      "sushi",
+      "italian",
+      "Asian"
+    ],
+    "repeat_rate": 0.269,
+    "avg_rating": 4.51,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Renfrew",
+    "order_count": 49,
+    "customer_count": 35,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.257,
+    "avg_rating": 3.67,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Richmond / Kew",
+    "order_count": 619,
+    "customer_count": 450,
+    "cuisine_count": 6,
+    "cuisines": [
+      "japanese",
+      "Meal Deals",
+      "Chicken",
+      "Salads",
+      "italian",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.204,
+    "avg_rating": 4.3,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Romford",
+    "order_count": 480,
+    "customer_count": 337,
+    "cuisine_count": 2,
+    "cuisines": [
+      "italian",
+      "Asian"
+    ],
+    "repeat_rate": 0.211,
+    "avg_rating": 4.44,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Ronanstown",
+    "order_count": 74,
+    "customer_count": 59,
+    "cuisine_count": 2,
+    "cuisines": [
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.186,
+    "avg_rating": 3.55,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Rotherham",
+    "order_count": 18,
+    "customer_count": 14,
+    "cuisine_count": 1,
+    "cuisines": [
+      "Latin American"
+    ],
+    "repeat_rate": 0.214,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Royal Leamington Spa",
+    "order_count": 296,
+    "customer_count": 202,
+    "cuisine_count": 4,
+    "cuisines": [
+      "Latin American",
+      "japanese",
+      "thai",
+      "italian"
+    ],
+    "repeat_rate": 0.203,
+    "avg_rating": 4.37,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Royal Tunbridge Wells",
+    "order_count": 531,
+    "customer_count": 340,
+    "cuisine_count": 6,
+    "cuisines": [
+      "japanese",
+      "Burgers",
+      "thai",
+      "Exclusive offers, from our exclusive restaurants",
+      "italian",
+      "sushi"
+    ],
+    "repeat_rate": 0.229,
+    "avg_rating": 4.44,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Ruislip",
+    "order_count": 62,
+    "customer_count": 46,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.239,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Salford",
+    "order_count": 583,
+    "customer_count": 428,
+    "cuisine_count": 4,
+    "cuisines": [
+      "Asian",
+      "italian",
+      "japanese",
+      "Featured Restaurants"
+    ],
+    "repeat_rate": 0.217,
+    "avg_rating": 4.26,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Saltdean",
+    "order_count": 19,
+    "customer_count": 17,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.118,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Sevenoaks",
+    "order_count": 34,
+    "customer_count": 33,
+    "cuisine_count": 2,
+    "cuisines": [
+      "sushi",
+      "japanese"
+    ],
+    "repeat_rate": 0.03,
+    "avg_rating": 4.2,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Sheffield",
+    "order_count": 19,
+    "customer_count": 14,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.214,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Sheffield City Centre",
+    "order_count": 501,
+    "customer_count": 363,
+    "cuisine_count": 3,
+    "cuisines": [
+      "Vietnamese",
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.218,
+    "avg_rating": 4.27,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Shirley / Wickham",
+    "order_count": 35,
+    "customer_count": 27,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.148,
+    "avg_rating": 3.5,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Sidcup",
+    "order_count": 84,
+    "customer_count": 55,
+    "cuisine_count": 2,
+    "cuisines": [
+      "italian",
+      "Asian"
+    ],
+    "repeat_rate": 0.2,
+    "avg_rating": 4.2,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Slough",
+    "order_count": 12,
+    "customer_count": 9,
+    "cuisine_count": 1,
+    "cuisines": [
+      "Asian"
+    ],
+    "repeat_rate": 0.222,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "South Kensington",
+    "order_count": 741,
+    "customer_count": 526,
+    "cuisine_count": 5,
+    "cuisines": [
+      "Salads",
+      "italian",
+      "Chicken",
+      "Sandwiches",
+      "Alcohol"
+    ],
+    "repeat_rate": 0.203,
+    "avg_rating": 4.56,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "South Pollok",
+    "order_count": 106,
+    "customer_count": 73,
+    "cuisine_count": 1,
+    "cuisines": [
+      "japanese"
+    ],
+    "repeat_rate": 0.219,
+    "avg_rating": 4.47,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "South Woodford",
+    "order_count": 76,
+    "customer_count": 70,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.071,
+    "avg_rating": 3.54,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Southall",
+    "order_count": 31,
+    "customer_count": 30,
+    "cuisine_count": 1,
+    "cuisines": [
+      "indian"
+    ],
+    "repeat_rate": 0.033,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Southampton",
+    "order_count": 520,
+    "customer_count": 357,
+    "cuisine_count": 4,
+    "cuisines": [
+      "italian",
+      "japanese",
+      "Burgers",
+      "Latin American"
+    ],
+    "repeat_rate": 0.216,
+    "avg_rating": 4.29,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Southsea",
+    "order_count": 504,
+    "customer_count": 360,
+    "cuisine_count": 6,
+    "cuisines": [
+      "Latin American",
+      "thai",
+      "Asian",
+      "Vietnamese",
+      "italian",
+      "japanese"
+    ],
+    "repeat_rate": 0.253,
+    "avg_rating": 4.18,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "St Albans",
+    "order_count": 631,
+    "customer_count": 444,
+    "cuisine_count": 4,
+    "cuisines": [
+      "Burgers",
+      "Salads",
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.214,
+    "avg_rating": 4.23,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Staines",
+    "order_count": 166,
+    "customer_count": 141,
+    "cuisine_count": 1,
+    "cuisines": [
+      "japanese"
+    ],
+    "repeat_rate": 0.121,
+    "avg_rating": 4.45,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Stanmore",
+    "order_count": 24,
+    "customer_count": 19,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.263,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Stevenage",
+    "order_count": 412,
+    "customer_count": 280,
+    "cuisine_count": 3,
+    "cuisines": [
+      "thai",
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.261,
+    "avg_rating": 4.52,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Stockport/Heaton Moor",
+    "order_count": 31,
+    "customer_count": 23,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.174,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Stratford",
+    "order_count": 765,
+    "customer_count": 568,
+    "cuisine_count": 5,
+    "cuisines": [
+      "Vegan Friendly",
+      "japanese",
+      "Salads",
+      "italian",
+      "Asian"
+    ],
+    "repeat_rate": 0.18,
+    "avg_rating": 4.26,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Surrey Quays",
+    "order_count": 1293,
+    "customer_count": 887,
+    "cuisine_count": 3,
+    "cuisines": [
+      "indian",
+      "Middle Eastern",
+      "Healthy"
+    ],
+    "repeat_rate": 0.233,
+    "avg_rating": 4.61,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Sutton",
+    "order_count": 121,
+    "customer_count": 100,
+    "cuisine_count": 2,
+    "cuisines": [
+      "italian",
+      "sushi"
+    ],
+    "repeat_rate": 0.15,
+    "avg_rating": 4.12,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Taplow and Burnham",
+    "order_count": 28,
+    "customer_count": 25,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.12,
+    "avg_rating": null,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Tonbridge",
+    "order_count": 61,
+    "customer_count": 47,
+    "cuisine_count": 2,
+    "cuisines": [
+      "italian",
+      "Asian"
+    ],
+    "repeat_rate": 0.17,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Tooting",
+    "order_count": 42,
+    "customer_count": 42,
+    "cuisine_count": 1,
+    "cuisines": [
+      "sushi"
+    ],
+    "repeat_rate": 0.0,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Twickenham / Teddington",
+    "order_count": 123,
+    "customer_count": 95,
+    "cuisine_count": 2,
+    "cuisines": [
+      "italian",
+      "Tacos"
+    ],
+    "repeat_rate": 0.2,
+    "avg_rating": 3.78,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Upminster",
+    "order_count": 158,
+    "customer_count": 129,
+    "cuisine_count": 2,
+    "cuisines": [
+      "thai",
+      "italian"
+    ],
+    "repeat_rate": 0.116,
+    "avg_rating": 4.18,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Uxbridge",
+    "order_count": 279,
+    "customer_count": 238,
+    "cuisine_count": 3,
+    "cuisines": [
+      "japanese",
+      "italian",
+      "sushi"
+    ],
+    "repeat_rate": 0.139,
+    "avg_rating": 4.4,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Vauxhall, Kennington and Oval",
+    "order_count": 42,
+    "customer_count": 38,
+    "cuisine_count": 1,
+    "cuisines": [
+      "italian"
+    ],
+    "repeat_rate": 0.026,
+    "avg_rating": 4.67,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Victoria, Westminster, Pimlico",
+    "order_count": 545,
+    "customer_count": 365,
+    "cuisine_count": 5,
+    "cuisines": [
+      "japanese",
+      "italian",
+      "Meal Deals",
+      "Salads",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.271,
+    "avg_rating": 4.63,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Walton on Thames",
+    "order_count": 316,
+    "customer_count": 234,
+    "cuisine_count": 3,
+    "cuisines": [
+      "japanese",
+      "italian",
+      "Asian"
+    ],
+    "repeat_rate": 0.192,
+    "avg_rating": 4.47,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Wandsworth",
+    "order_count": 963,
+    "customer_count": 668,
+    "cuisine_count": 3,
+    "cuisines": [
+      "Curry",
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.234,
+    "avg_rating": 4.69,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Wapping and Mile End",
+    "order_count": 1092,
+    "customer_count": 811,
+    "cuisine_count": 4,
+    "cuisines": [
+      "Curry",
+      "Middle Eastern",
+      "Asian",
+      "Healthy"
+    ],
+    "repeat_rate": 0.176,
+    "avg_rating": 4.66,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Warwick",
+    "order_count": 61,
+    "customer_count": 51,
+    "cuisine_count": 2,
+    "cuisines": [
+      "italian",
+      "thai"
+    ],
+    "repeat_rate": 0.137,
+    "avg_rating": 4.38,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Waterloo & Southbank",
+    "order_count": 9,
+    "customer_count": 7,
+    "cuisine_count": 2,
+    "cuisines": [
+      "italian",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.143,
+    "avg_rating": 1.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Watford",
+    "order_count": 424,
+    "customer_count": 324,
+    "cuisine_count": 4,
+    "cuisines": [
+      "italian",
+      "japanese",
+      "Latin American",
+      "sushi"
+    ],
+    "repeat_rate": 0.176,
+    "avg_rating": 4.36,
+    "mvp_status": "Near MVP",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Welwyn Garden City",
+    "order_count": 154,
+    "customer_count": 119,
+    "cuisine_count": 2,
+    "cuisines": [
+      "thai",
+      "italian"
+    ],
+    "repeat_rate": 0.16,
+    "avg_rating": 4.47,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Wembley",
+    "order_count": 1366,
+    "customer_count": 894,
+    "cuisine_count": 6,
+    "cuisines": [
+      "Healthy",
+      "indian",
+      "japanese",
+      "Latin American",
+      "Vegan Friendly",
+      "italian"
+    ],
+    "repeat_rate": 0.26,
+    "avg_rating": 4.49,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "West Bridgford",
+    "order_count": 288,
+    "customer_count": 219,
+    "cuisine_count": 3,
+    "cuisines": [
+      "thai",
+      "japanese",
+      "italian"
+    ],
+    "repeat_rate": 0.205,
+    "avg_rating": 4.29,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "West Central",
+    "order_count": 860,
+    "customer_count": 573,
+    "cuisine_count": 7,
+    "cuisines": [
+      "japanese",
+      "Salads",
+      "italian",
+      "Asian",
+      "Vietnamese",
+      "Meal Deals",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.237,
+    "avg_rating": 4.56,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Weybridge",
+    "order_count": 205,
+    "customer_count": 168,
+    "cuisine_count": 2,
+    "cuisines": [
+      "thai",
+      "italian"
+    ],
+    "repeat_rate": 0.119,
+    "avg_rating": 3.87,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Wimbledon",
+    "order_count": 1497,
+    "customer_count": 1012,
+    "cuisine_count": 8,
+    "cuisines": [
+      "japanese",
+      "italian",
+      "Meal Deals",
+      "Vietnamese",
+      "sushi",
+      "thai",
+      "Salads",
+      "Sandwiches"
+    ],
+    "repeat_rate": 0.244,
+    "avg_rating": 4.5,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Winchester",
+    "order_count": 149,
+    "customer_count": 116,
+    "cuisine_count": 3,
+    "cuisines": [
+      "thai",
+      "japanese",
+      "Movie Night Restaurants"
+    ],
+    "repeat_rate": 0.164,
+    "avg_rating": 4.0,
+    "mvp_status": "Developing",
+    "rating_pass": false,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Windsor",
+    "order_count": 595,
+    "customer_count": 390,
+    "cuisine_count": 5,
+    "cuisines": [
+      "thai",
+      "italian",
+      "Asian",
+      "Burgers",
+      "japanese"
+    ],
+    "repeat_rate": 0.238,
+    "avg_rating": 4.3,
+    "mvp_status": "Near MVP",
+    "rating_pass": false,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  },
+  {
+    "zone": "Woking",
+    "order_count": 135,
+    "customer_count": 110,
+    "cuisine_count": 2,
+    "cuisines": [
+      "Salads",
+      "italian"
+    ],
+    "repeat_rate": 0.155,
+    "avg_rating": 4.33,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Wokingham",
+    "order_count": 202,
+    "customer_count": 154,
+    "cuisine_count": 2,
+    "cuisines": [
+      "thai",
+      "italian"
+    ],
+    "repeat_rate": 0.123,
+    "avg_rating": 4.78,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Wood Green",
+    "order_count": 138,
+    "customer_count": 112,
+    "cuisine_count": 2,
+    "cuisines": [
+      "Asian",
+      "sushi"
+    ],
+    "repeat_rate": 0.116,
+    "avg_rating": 4.38,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "Woolwich",
+    "order_count": 16,
+    "customer_count": 13,
+    "cuisine_count": 1,
+    "cuisines": [
+      "Asian"
+    ],
+    "repeat_rate": 0.154,
+    "avg_rating": 5.0,
+    "mvp_status": "Developing",
+    "rating_pass": true,
+    "repeat_pass": false,
+    "cuisine_pass": false
+  },
+  {
+    "zone": "York",
+    "order_count": 833,
+    "customer_count": 557,
+    "cuisine_count": 6,
+    "cuisines": [
+      "Latin American",
+      "Vietnamese",
+      "Christmas Specials",
+      "Burgers",
+      "italian",
+      "japanese"
+    ],
+    "repeat_rate": 0.246,
+    "avg_rating": 4.46,
+    "mvp_status": "MVP Ready",
+    "rating_pass": true,
+    "repeat_pass": true,
+    "cuisine_pass": true
+  }
+]

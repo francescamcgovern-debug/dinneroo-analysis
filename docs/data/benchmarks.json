@@ -1,0 +1,50 @@
+{
+  "thresholds": {
+    "rating_min": 4.3,
+    "repeat_rate_min": 0.2,
+    "cuisine_count_min": 4
+  },
+  "current_performance": {
+    "avg_rating": 4.25,
+    "avg_repeat_rate": 0.171,
+    "avg_cuisine_count": 3.0
+  },
+  "mvp_summary": {
+    "mvp_ready": 33,
+    "near_mvp": 48,
+    "developing": 120,
+    "total_zones": 201
+  },
+  "top_performers": [
+    {
+      "zone": "Maidstone",
+      "repeat_rate": 0.5,
+      "avg_rating": null,
+      "cuisine_count": 1
+    },
+    {
+      "zone": "Purley",
+      "repeat_rate": 0.32,
+      "avg_rating": 4.5,
+      "cuisine_count": 1
+    },
+    {
+      "zone": "Cambridge",
+      "repeat_rate": 0.306,
+      "avg_rating": 4.48,
+      "cuisine_count": 7
+    },
+    {
+      "zone": "Oxford",
+      "repeat_rate": 0.301,
+      "avg_rating": 4.52,
+      "cuisine_count": 6
+    },
+    {
+      "zone": "Milton Keynes",
+      "repeat_rate": 0.285,
+      "avg_rating": 4.46,
+      "cuisine_count": 7
+    }
+  ]
+}

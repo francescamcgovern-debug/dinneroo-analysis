@@ -1,0 +1,1697 @@
+{
+  "metadata": {
+    "generated": "2026-01-06T12:00:00.000Z",
+    "framework": "Unified (Anna's Hit List + Family Fit)",
+    "version": "1.0",
+    "total_dishes": 50
+  },
+  "summary": {
+    "must_have_count": 8,
+    "should_have_count": 15,
+    "nice_to_have_count": 18,
+    "monitor_count": 9,
+    "validated_count": 12,
+    "corroborated_count": 20,
+    "estimated_count": 18
+  },
+  "category_weights": {
+    "performance": 0.35,
+    "satisfaction": 0.20,
+    "family_fit": 0.30,
+    "opportunity": 0.15
+  },
+  "dishes": [
+    {
+      "rank": 1,
+      "name": "Family Chicken Katsu (Wagamama)",
+      "cuisine": "Japanese",
+      "composite_score": 4.35,
+      "tier": "Must-Have",
+      "quadrant": "Star",
+      "evidence_level": "Validated",
+      "order_volume": 11246,
+      "avg_rating": 4.24,
+      "scores": {
+        "performance": {
+          "normalized_sales": 5,
+          "zone_ranking": 5,
+          "deliveroo_rating": 4,
+          "repeat_intent": 4,
+          "subscore": 4.5
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 4,
+          "balanced": 3,
+          "portions": 5,
+          "customisation": 3,
+          "subscore": 4.0
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 2
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 2,
+      "name": "Pho the Whole Fam (Pho)",
+      "cuisine": "Vietnamese",
+      "composite_score": 4.28,
+      "tier": "Must-Have",
+      "quadrant": "Star",
+      "evidence_level": "Validated",
+      "order_volume": 7910,
+      "avg_rating": 4.55,
+      "scores": {
+        "performance": {
+          "normalized_sales": 5,
+          "zone_ranking": 4,
+          "deliveroo_rating": 5,
+          "repeat_intent": 5,
+          "subscore": 4.75
+        },
+        "satisfaction": {
+          "meal_satisfaction": 5,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 3,
+          "balanced": 5,
+          "portions": 5,
+          "customisation": 3,
+          "subscore": 3.8
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 2
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 3,
+      "name": "Dishoom Chicken Ruby",
+      "cuisine": "Indian",
+      "composite_score": 4.22,
+      "tier": "Must-Have",
+      "quadrant": "Star",
+      "evidence_level": "Validated",
+      "order_volume": 4858,
+      "avg_rating": 4.79,
+      "scores": {
+        "performance": {
+          "normalized_sales": 4,
+          "zone_ranking": 4,
+          "deliveroo_rating": 5,
+          "repeat_intent": 5,
+          "subscore": 4.5
+        },
+        "satisfaction": {
+          "meal_satisfaction": 5,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 3,
+          "balanced": 4,
+          "portions": 5,
+          "customisation": 3,
+          "subscore": 3.6
+        },
+        "opportunity": {
+          "suitability": 5,
+          "open_text": 4,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 4,
+      "name": "Grilled Chicken Family Platter with Sides",
+      "cuisine": "Grilled Chicken",
+      "composite_score": 4.18,
+      "tier": "Must-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Corroborated",
+      "order_volume": 0,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 5,
+          "portions": 5,
+          "customisation": 5,
+          "subscore": 5.0
+        },
+        "opportunity": {
+          "suitability": 5,
+          "open_text": 5,
+          "availability_gap": 5
+        }
+      },
+      "on_menu": false
+    },
+    {
+      "rank": 5,
+      "name": "Mix n Match Rice Bowl Bundle (Banana Tree)",
+      "cuisine": "Thai",
+      "composite_score": 4.12,
+      "tier": "Must-Have",
+      "quadrant": "Star",
+      "evidence_level": "Validated",
+      "order_volume": 3487,
+      "avg_rating": 4.46,
+      "scores": {
+        "performance": {
+          "normalized_sales": 4,
+          "zone_ranking": 4,
+          "deliveroo_rating": 4,
+          "repeat_intent": 4,
+          "subscore": 4.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 5,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 4,
+          "balanced": 4,
+          "portions": 4,
+          "customisation": 4,
+          "subscore": 4.0
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 6,
+      "name": "Margherita Pizza Family Bundle",
+      "cuisine": "Italian",
+      "composite_score": 4.08,
+      "tier": "Must-Have",
+      "quadrant": "Star",
+      "evidence_level": "Corroborated",
+      "order_volume": 2890,
+      "avg_rating": 4.15,
+      "scores": {
+        "performance": {
+          "normalized_sales": 4,
+          "zone_ranking": 4,
+          "deliveroo_rating": 4,
+          "repeat_intent": 4,
+          "subscore": 4.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 5
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 2,
+          "portions": 4,
+          "customisation": 3,
+          "subscore": 3.8
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 2
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 7,
+      "name": "Fajita Family Kit",
+      "cuisine": "Mexican",
+      "composite_score": 4.05,
+      "tier": "Must-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Corroborated",
+      "order_volume": 595,
+      "avg_rating": 4.15,
+      "scores": {
+        "performance": {
+          "normalized_sales": 2,
+          "zone_ranking": 2,
+          "deliveroo_rating": 4,
+          "repeat_intent": 4,
+          "subscore": 3.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 5,
+          "balanced": 4,
+          "portions": 5,
+          "customisation": 5,
+          "subscore": 4.6
+        },
+        "opportunity": {
+          "suitability": 5,
+          "open_text": 4,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 8,
+      "name": "Mild Chicken Tikka Masala Family Feast",
+      "cuisine": "Indian",
+      "composite_score": 4.02,
+      "tier": "Must-Have",
+      "quadrant": "Star",
+      "evidence_level": "Validated",
+      "order_volume": 3200,
+      "avg_rating": 4.66,
+      "scores": {
+        "performance": {
+          "normalized_sales": 4,
+          "zone_ranking": 3,
+          "deliveroo_rating": 5,
+          "repeat_intent": 4,
+          "subscore": 4.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 4,
+          "balanced": 4,
+          "portions": 5,
+          "customisation": 3,
+          "subscore": 4.0
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 9,
+      "name": "Pasta Bolognese Family Bundle",
+      "cuisine": "Italian",
+      "composite_score": 3.95,
+      "tier": "Should-Have",
+      "quadrant": "Star",
+      "evidence_level": "Corroborated",
+      "order_volume": 2100,
+      "avg_rating": 4.28,
+      "scores": {
+        "performance": {
+          "normalized_sales": 3,
+          "zone_ranking": 3,
+          "deliveroo_rating": 4,
+          "repeat_intent": 4,
+          "subscore": 3.5
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 5
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 3,
+          "portions": 4,
+          "customisation": 3,
+          "subscore": 4.0
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 2
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 10,
+      "name": "Sushi Family Feast (Itsu)",
+      "cuisine": "Japanese",
+      "composite_score": 3.88,
+      "tier": "Should-Have",
+      "quadrant": "Star",
+      "evidence_level": "Validated",
+      "order_volume": 2198,
+      "avg_rating": 4.52,
+      "scores": {
+        "performance": {
+          "normalized_sales": 3,
+          "zone_ranking": 3,
+          "deliveroo_rating": 5,
+          "repeat_intent": 4,
+          "subscore": 3.75
+        },
+        "satisfaction": {
+          "meal_satisfaction": 5,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 2,
+          "balanced": 5,
+          "portions": 4,
+          "customisation": 3,
+          "subscore": 3.4
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 11,
+      "name": "Fish & Chips Family Bucket",
+      "cuisine": "British",
+      "composite_score": 3.82,
+      "tier": "Should-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 0,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 2,
+          "portions": 5,
+          "customisation": 2,
+          "subscore": 3.8
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 4,
+          "availability_gap": 5
+        }
+      },
+      "on_menu": false
+    },
+    {
+      "rank": 12,
+      "name": "Halloumi Wrap Family Box",
+      "cuisine": "Mediterranean",
+      "composite_score": 3.78,
+      "tier": "Should-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 161,
+      "avg_rating": 4.64,
+      "scores": {
+        "performance": {
+          "normalized_sales": 2,
+          "zone_ranking": 2,
+          "deliveroo_rating": 5,
+          "repeat_intent": 3,
+          "subscore": 3.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 4,
+          "balanced": 4,
+          "portions": 4,
+          "customisation": 4,
+          "subscore": 4.0
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 4,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 13,
+      "name": "Pad Thai Bundle For Four (Banana Tree)",
+      "cuisine": "Thai",
+      "composite_score": 3.75,
+      "tier": "Should-Have",
+      "quadrant": "Star",
+      "evidence_level": "Validated",
+      "order_volume": 1706,
+      "avg_rating": 4.65,
+      "scores": {
+        "performance": {
+          "normalized_sales": 3,
+          "zone_ranking": 3,
+          "deliveroo_rating": 5,
+          "repeat_intent": 4,
+          "subscore": 3.75
+        },
+        "satisfaction": {
+          "meal_satisfaction": 5,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 3,
+          "balanced": 4,
+          "portions": 4,
+          "customisation": 3,
+          "subscore": 3.4
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 14,
+      "name": "Greek Mezze Family Feast",
+      "cuisine": "Mediterranean",
+      "composite_score": 3.72,
+      "tier": "Should-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 7,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 4,
+          "balanced": 5,
+          "portions": 5,
+          "customisation": 4,
+          "subscore": 4.4
+        },
+        "opportunity": {
+          "suitability": 5,
+          "open_text": 4,
+          "availability_gap": 5
+        }
+      },
+      "on_menu": false
+    },
+    {
+      "rank": 15,
+      "name": "Dim Sum Family Selection",
+      "cuisine": "Chinese",
+      "composite_score": 3.68,
+      "tier": "Should-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 0,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 3,
+          "balanced": 4,
+          "portions": 5,
+          "customisation": 4,
+          "subscore": 4.0
+        },
+        "opportunity": {
+          "suitability": 5,
+          "open_text": 5,
+          "availability_gap": 5
+        }
+      },
+      "on_menu": false
+    },
+    {
+      "rank": 16,
+      "name": "Family Favourites Feast (LEON)",
+      "cuisine": "Healthy/Fresh",
+      "composite_score": 3.65,
+      "tier": "Should-Have",
+      "quadrant": "Star",
+      "evidence_level": "Corroborated",
+      "order_volume": 4233,
+      "avg_rating": 4.13,
+      "scores": {
+        "performance": {
+          "normalized_sales": 4,
+          "zone_ranking": 3,
+          "deliveroo_rating": 4,
+          "repeat_intent": 3,
+          "subscore": 3.5
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 3,
+          "balanced": 5,
+          "portions": 4,
+          "customisation": 3,
+          "subscore": 3.6
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 17,
+      "name": "Butter Chicken Family Feast",
+      "cuisine": "Indian",
+      "composite_score": 3.62,
+      "tier": "Should-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Corroborated",
+      "order_volume": 365,
+      "avg_rating": 4.0,
+      "scores": {
+        "performance": {
+          "normalized_sales": 2,
+          "zone_ranking": 2,
+          "deliveroo_rating": 4,
+          "repeat_intent": 3,
+          "subscore": 2.75
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 4,
+          "balanced": 3,
+          "portions": 5,
+          "customisation": 3,
+          "subscore": 3.8
+        },
+        "opportunity": {
+          "suitability": 5,
+          "open_text": 4,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 18,
+      "name": "Rotisserie Chicken Family Feast",
+      "cuisine": "Grilled Chicken",
+      "composite_score": 3.58,
+      "tier": "Should-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 0,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 5,
+          "portions": 4,
+          "customisation": 4,
+          "subscore": 4.6
+        },
+        "opportunity": {
+          "suitability": 5,
+          "open_text": 4,
+          "availability_gap": 5
+        }
+      },
+      "on_menu": false
+    },
+    {
+      "rank": 19,
+      "name": "Biryani Family Pot (Dishoom)",
+      "cuisine": "Indian",
+      "composite_score": 3.55,
+      "tier": "Should-Have",
+      "quadrant": "Star",
+      "evidence_level": "Validated",
+      "order_volume": 458,
+      "avg_rating": 4.53,
+      "scores": {
+        "performance": {
+          "normalized_sales": 2,
+          "zone_ranking": 2,
+          "deliveroo_rating": 5,
+          "repeat_intent": 4,
+          "subscore": 3.25
+        },
+        "satisfaction": {
+          "meal_satisfaction": 5,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 3,
+          "balanced": 4,
+          "portions": 5,
+          "customisation": 2,
+          "subscore": 3.4
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 4,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 20,
+      "name": "Family Sticky Chicken Bundle (Giggling Squid)",
+      "cuisine": "Thai",
+      "composite_score": 3.52,
+      "tier": "Should-Have",
+      "quadrant": "Star",
+      "evidence_level": "Corroborated",
+      "order_volume": 1954,
+      "avg_rating": 4.32,
+      "scores": {
+        "performance": {
+          "normalized_sales": 3,
+          "zone_ranking": 3,
+          "deliveroo_rating": 4,
+          "repeat_intent": 3,
+          "subscore": 3.25
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 3,
+          "balanced": 3,
+          "portions": 4,
+          "customisation": 3,
+          "subscore": 3.4
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 21,
+      "name": "Sweet & Sour Chicken Family Meal",
+      "cuisine": "Chinese",
+      "composite_score": 3.48,
+      "tier": "Nice-to-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 1081,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 2,
+          "zone_ranking": 2,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.5
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 4,
+          "balanced": 2,
+          "portions": 4,
+          "customisation": 3,
+          "subscore": 3.6
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 5,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 22,
+      "name": "Teriyaki Rice Bowl Family Bundle",
+      "cuisine": "Japanese",
+      "composite_score": 3.45,
+      "tier": "Nice-to-Have",
+      "quadrant": "Star",
+      "evidence_level": "Corroborated",
+      "order_volume": 394,
+      "avg_rating": 4.0,
+      "scores": {
+        "performance": {
+          "normalized_sales": 2,
+          "zone_ranking": 2,
+          "deliveroo_rating": 4,
+          "repeat_intent": 3,
+          "subscore": 2.75
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 4,
+          "balanced": 4,
+          "portions": 4,
+          "customisation": 4,
+          "subscore": 4.0
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 23,
+      "name": "Quesadilla Family Pack",
+      "cuisine": "Mexican",
+      "composite_score": 3.42,
+      "tier": "Nice-to-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 57,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 2,
+          "portions": 4,
+          "customisation": 4,
+          "subscore": 4.0
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 24,
+      "name": "Roast Dinner Family Platter",
+      "cuisine": "British",
+      "composite_score": 3.38,
+      "tier": "Nice-to-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 287,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 4,
+          "portions": 5,
+          "customisation": 2,
+          "subscore": 4.2
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 4,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": false
+    },
+    {
+      "rank": 25,
+      "name": "Lasagne Classica Sharer",
+      "cuisine": "Italian",
+      "composite_score": 3.35,
+      "tier": "Nice-to-Have",
+      "quadrant": "Star",
+      "evidence_level": "Corroborated",
+      "order_volume": 1099,
+      "avg_rating": 4.17,
+      "scores": {
+        "performance": {
+          "normalized_sales": 2,
+          "zone_ranking": 2,
+          "deliveroo_rating": 4,
+          "repeat_intent": 3,
+          "subscore": 2.75
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 4,
+          "balanced": 2,
+          "portions": 4,
+          "customisation": 2,
+          "subscore": 3.2
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 4,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 26,
+      "name": "Chicken Chow Mein Family Bundle",
+      "cuisine": "Chinese",
+      "composite_score": 3.32,
+      "tier": "Nice-to-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 0,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 4,
+          "balanced": 3,
+          "portions": 4,
+          "customisation": 3,
+          "subscore": 3.6
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 5,
+          "availability_gap": 5
+        }
+      },
+      "on_menu": false
+    },
+    {
+      "rank": 27,
+      "name": "Mac & Cheese Family Portion",
+      "cuisine": "Other",
+      "composite_score": 3.28,
+      "tier": "Nice-to-Have",
+      "quadrant": "Star",
+      "evidence_level": "Corroborated",
+      "order_volume": 1307,
+      "avg_rating": 4.51,
+      "scores": {
+        "performance": {
+          "normalized_sales": 3,
+          "zone_ranking": 2,
+          "deliveroo_rating": 5,
+          "repeat_intent": 3,
+          "subscore": 3.25
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 5
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 1,
+          "portions": 4,
+          "customisation": 2,
+          "subscore": 3.4
+        },
+        "opportunity": {
+          "suitability": 3,
+          "open_text": 2,
+          "availability_gap": 2
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 28,
+      "name": "Shepherd's Pie Family Portion",
+      "cuisine": "British",
+      "composite_score": 3.25,
+      "tier": "Nice-to-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 333,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 3,
+          "portions": 4,
+          "customisation": 1,
+          "subscore": 3.6
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 4,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 29,
+      "name": "Veggie Fajita Family Kit",
+      "cuisine": "Mexican",
+      "composite_score": 3.22,
+      "tier": "Nice-to-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 333,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 4,
+          "balanced": 4,
+          "portions": 4,
+          "customisation": 5,
+          "subscore": 4.2
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 4,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 30,
+      "name": "Build Your Own Grain Bowl Family Pack",
+      "cuisine": "Healthy/Fresh",
+      "composite_score": 3.18,
+      "tier": "Nice-to-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 192,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 3,
+          "balanced": 5,
+          "portions": 4,
+          "customisation": 5,
+          "subscore": 4.0
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 31,
+      "name": "Katsu Curry (Standard)",
+      "cuisine": "Japanese",
+      "composite_score": 3.15,
+      "tier": "Nice-to-Have",
+      "quadrant": "Cash Cow",
+      "evidence_level": "Validated",
+      "order_volume": 11686,
+      "avg_rating": 4.29,
+      "scores": {
+        "performance": {
+          "normalized_sales": 5,
+          "zone_ranking": 5,
+          "deliveroo_rating": 4,
+          "repeat_intent": 3,
+          "subscore": 4.25
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 3,
+          "balanced": 2,
+          "portions": 3,
+          "customisation": 2,
+          "subscore": 2.8
+        },
+        "opportunity": {
+          "suitability": 3,
+          "open_text": 2,
+          "availability_gap": 1
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 32,
+      "name": "Ramen Family Bowl",
+      "cuisine": "Japanese",
+      "composite_score": 3.12,
+      "tier": "Nice-to-Have",
+      "quadrant": "Question Mark",
+      "evidence_level": "Corroborated",
+      "order_volume": 223,
+      "avg_rating": 3.76,
+      "scores": {
+        "performance": {
+          "normalized_sales": 2,
+          "zone_ranking": 2,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.5
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 2,
+          "balanced": 4,
+          "portions": 4,
+          "customisation": 3,
+          "subscore": 3.2
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 3,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 33,
+      "name": "Shawarma Family Platter",
+      "cuisine": "Middle Eastern",
+      "composite_score": 3.08,
+      "tier": "Nice-to-Have",
+      "quadrant": "Star",
+      "evidence_level": "Corroborated",
+      "order_volume": 1355,
+      "avg_rating": 4.68,
+      "scores": {
+        "performance": {
+          "normalized_sales": 3,
+          "zone_ranking": 2,
+          "deliveroo_rating": 5,
+          "repeat_intent": 4,
+          "subscore": 3.5
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 3,
+          "balanced": 3,
+          "portions": 4,
+          "customisation": 3,
+          "subscore": 3.2
+        },
+        "opportunity": {
+          "suitability": 3,
+          "open_text": 3,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 34,
+      "name": "Falafel & Hummus Family Box",
+      "cuisine": "Middle Eastern",
+      "composite_score": 3.05,
+      "tier": "Nice-to-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 0,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 3,
+          "balanced": 5,
+          "portions": 4,
+          "customisation": 4,
+          "subscore": 3.8
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 4,
+          "availability_gap": 5
+        }
+      },
+      "on_menu": false
+    },
+    {
+      "rank": 35,
+      "name": "Chicken Pie with Mash & Veg",
+      "cuisine": "British",
+      "composite_score": 3.02,
+      "tier": "Nice-to-Have",
+      "quadrant": "Potential",
+      "evidence_level": "Estimated",
+      "order_volume": 0,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 3,
+          "portions": 4,
+          "customisation": 1,
+          "subscore": 3.6
+        },
+        "opportunity": {
+          "suitability": 4,
+          "open_text": 4,
+          "availability_gap": 5
+        }
+      },
+      "on_menu": false
+    },
+    {
+      "rank": 36,
+      "name": "Pizza (Standard)",
+      "cuisine": "Italian",
+      "composite_score": 2.98,
+      "tier": "Monitor",
+      "quadrant": "Cash Cow",
+      "evidence_level": "Validated",
+      "order_volume": 400,
+      "avg_rating": 3.84,
+      "scores": {
+        "performance": {
+          "normalized_sales": 2,
+          "zone_ranking": 2,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.5
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 1,
+          "portions": 3,
+          "customisation": 3,
+          "subscore": 3.4
+        },
+        "opportunity": {
+          "suitability": 3,
+          "open_text": 2,
+          "availability_gap": 2
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 37,
+      "name": "Tacos Family Pack",
+      "cuisine": "Mexican",
+      "composite_score": 2.95,
+      "tier": "Monitor",
+      "quadrant": "Question Mark",
+      "evidence_level": "Corroborated",
+      "order_volume": 92,
+      "avg_rating": 3.67,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 4,
+          "fussy_eater": 3,
+          "balanced": 3,
+          "portions": 3,
+          "customisation": 4,
+          "subscore": 3.4
+        },
+        "opportunity": {
+          "suitability": 3,
+          "open_text": 3,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 38,
+      "name": "Korean Fried Chicken",
+      "cuisine": "Korean",
+      "composite_score": 2.92,
+      "tier": "Monitor",
+      "quadrant": "Question Mark",
+      "evidence_level": "Estimated",
+      "order_volume": 398,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 2,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.25
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 2,
+          "balanced": 2,
+          "portions": 4,
+          "customisation": 2,
+          "subscore": 2.6
+        },
+        "opportunity": {
+          "suitability": 3,
+          "open_text": 4,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 39,
+      "name": "Burger Family Meal",
+      "cuisine": "American",
+      "composite_score": 2.88,
+      "tier": "Monitor",
+      "quadrant": "Question Mark",
+      "evidence_level": "Estimated",
+      "order_volume": 61,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 4,
+          "balanced": 1,
+          "portions": 3,
+          "customisation": 3,
+          "subscore": 3.2
+        },
+        "opportunity": {
+          "suitability": 2,
+          "open_text": 2,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 40,
+      "name": "Poke Bowl Family Pack",
+      "cuisine": "Healthy/Fresh",
+      "composite_score": 2.85,
+      "tier": "Monitor",
+      "quadrant": "Question Mark",
+      "evidence_level": "Estimated",
+      "order_volume": 39,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 2
+        },
+        "family_fit": {
+          "kid_friendly": 2,
+          "fussy_eater": 2,
+          "balanced": 5,
+          "portions": 3,
+          "customisation": 5,
+          "subscore": 3.4
+        },
+        "opportunity": {
+          "suitability": 3,
+          "open_text": 2,
+          "availability_gap": 3
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 41,
+      "name": "Bibimbap Family Bundle",
+      "cuisine": "Korean",
+      "composite_score": 2.82,
+      "tier": "Monitor",
+      "quadrant": "Question Mark",
+      "evidence_level": "Estimated",
+      "order_volume": 0,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 2
+        },
+        "family_fit": {
+          "kid_friendly": 2,
+          "fussy_eater": 2,
+          "balanced": 4,
+          "portions": 4,
+          "customisation": 3,
+          "subscore": 3.0
+        },
+        "opportunity": {
+          "suitability": 3,
+          "open_text": 3,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": false
+    },
+    {
+      "rank": 42,
+      "name": "Sushi (Standard Individual)",
+      "cuisine": "Japanese",
+      "composite_score": 2.78,
+      "tier": "Monitor",
+      "quadrant": "Question Mark",
+      "evidence_level": "Corroborated",
+      "order_volume": 1043,
+      "avg_rating": 4.7,
+      "scores": {
+        "performance": {
+          "normalized_sales": 2,
+          "zone_ranking": 2,
+          "deliveroo_rating": 5,
+          "repeat_intent": 3,
+          "subscore": 3.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 4,
+          "kids_happy": 2
+        },
+        "family_fit": {
+          "kid_friendly": 2,
+          "fussy_eater": 2,
+          "balanced": 4,
+          "portions": 2,
+          "customisation": 2,
+          "subscore": 2.4
+        },
+        "opportunity": {
+          "suitability": 3,
+          "open_text": 2,
+          "availability_gap": 2
+        }
+      },
+      "on_menu": true
+    },
+    {
+      "rank": 43,
+      "name": "Bangers & Mash Family Portion",
+      "cuisine": "British",
+      "composite_score": 2.75,
+      "tier": "Monitor",
+      "quadrant": "Question Mark",
+      "evidence_level": "Estimated",
+      "order_volume": 0,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 4
+        },
+        "family_fit": {
+          "kid_friendly": 5,
+          "fussy_eater": 5,
+          "balanced": 2,
+          "portions": 3,
+          "customisation": 1,
+          "subscore": 3.2
+        },
+        "opportunity": {
+          "suitability": 2,
+          "open_text": 2,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": false
+    },
+    {
+      "rank": 44,
+      "name": "Souvlaki Individual",
+      "cuisine": "Mediterranean",
+      "composite_score": 2.72,
+      "tier": "Monitor",
+      "quadrant": "Question Mark",
+      "evidence_level": "Estimated",
+      "order_volume": 0,
+      "avg_rating": null,
+      "scores": {
+        "performance": {
+          "normalized_sales": 1,
+          "zone_ranking": 1,
+          "deliveroo_rating": 3,
+          "repeat_intent": 3,
+          "subscore": 2.0
+        },
+        "satisfaction": {
+          "meal_satisfaction": 3,
+          "kids_happy": 3
+        },
+        "family_fit": {
+          "kid_friendly": 3,
+          "fussy_eater": 3,
+          "balanced": 4,
+          "portions": 2,
+          "customisation": 3,
+          "subscore": 3.0
+        },
+        "opportunity": {
+          "suitability": 3,
+          "open_text": 3,
+          "availability_gap": 4
+        }
+      },
+      "on_menu": false
+    }
+  ]
+}

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zone MVP Dashboard | Dinneroo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono&display=swap');
+        
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --accent-primary: #00d4aa;
+            --accent-secondary: #7c3aed;
+            --accent-warning: #f59e0b;
+            --text-primary: #f0f0f5;
+            --text-secondary: #8888a0;
+            --border: #2a2a3a;
+            --success: #10b981;
+            --error: #ef4444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .back-link:hover {
+            color: var(--accent-primary);
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: calc(100vh - 80px);
+        }
+        
+        .sidebar {
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            padding: 24px;
+            overflow-y: auto;
+        }
+        
+        .sidebar h2 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-group label {
+            display: block;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        
+        .filter-group select,
+        .filter-group input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+        
+        .criteria-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 24px;
+        }
+        
+        .criteria-box h3 {
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: var(--accent-primary);
+        }
+        
+        .criteria-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 13px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .criteria-item:last-child {
+            border-bottom: none;
+        }
+        
+        .criteria-item .label {
+            color: var(--text-secondary);
+        }
+        
+        .criteria-item .value {
+            font-family: 'Space Mono', monospace;
+            color: var(--text-primary);
+        }
+        
+        .main-content {
+            padding: 24px;
+            overflow-y: auto;
+        }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .stat-card .value {
+            font-size: 32px;
+            font-weight: 700;
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .stat-card .label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        
+        .stat-card.mvp-ready .value {
+            color: var(--success);
+        }
+        
+        .stat-card.near-mvp .value {
+            color: var(--accent-warning);
+        }
+        
+        .stat-card.developing .value {
+            color: var(--accent-secondary);
+        }
+        
+        .stat-card.early .value {
+            color: var(--error);
+        }
+        
+        .zones-table {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .table-header {
+            display: grid;
+            grid-template-columns: 60px 1fr 120px 80px 80px 80px 80px 140px;
+            padding: 16px 20px;
+            background: var(--bg-secondary);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .table-row {
+            display: grid;
+            grid-template-columns: 60px 1fr 120px 80px 80px 80px 80px 140px;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+        
+        .table-row:hover {
+            background: var(--bg-secondary);
+        }
+        
+        .table-row:last-child {
+            border-bottom: none;
+        }
+        
+        .rank {
+            font-family: 'Space Mono', monospace;
+            font-weight: 600;
+            color: var(--accent-secondary);
+        }
+        
+        .zone-name {
+            font-weight: 500;
+        }
+        
+        .zone-gaps {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .status-badge.mvp-ready {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+        
+        .status-badge.near-mvp {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--accent-warning);
+        }
+        
+        .status-badge.developing {
+            background: rgba(124, 58, 237, 0.2);
+            color: var(--accent-secondary);
+        }
+        
+        .status-badge.early-stage {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--error);
+        }
+        
+        .metric {
+            font-family: 'Space Mono', monospace;
+            font-size: 13px;
+        }
+        
+        .metric.pass {
+            color: var(--success);
+        }
+        
+        .metric.fail {
+            color: var(--error);
+        }
+        
+        .quality-score {
+            font-family: 'Space Mono', monospace;
+            font-weight: 600;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: var(--text-secondary);
+        }
+        
+        .chart-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>📍 Zone MVP Dashboard</h1>
+        <a href="../index.html" class="back-link">← Back to Home</a>
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Filters</h2>
+            
+            <div class="filter-group">
+                <label>Search Zones</label>
+                <input type="text" id="search" placeholder="Search by name...">
+            </div>
+            
+            <div class="filter-group">
+                <label>MVP Status</label>
+                <select id="status-filter">
+                    <option value="">All Statuses</option>
+                    <option value="MVP Ready">MVP Ready</option>
+                    <option value="Near MVP">Near MVP</option>
+                    <option value="Developing">Developing</option>
+                    <option value="Early Stage">Early Stage</option>
+                </select>
+            </div>
+            
+            <div class="criteria-box">
+                <h3>MVP Criteria</h3>
+                <div class="criteria-item">
+                    <span class="label">Cuisines</span>
+                    <span class="value">≥ 5</span>
+                </div>
+                <div class="criteria-item">
+                    <span class="label">Partners</span>
+                    <span class="value">≥ 5</span>
+                </div>
+                <div class="criteria-item">
+                    <span class="label">Dishes</span>
+                    <span class="value">≥ 21</span>
+                </div>
+                <div class="criteria-item">
+                    <span class="label">Rating</span>
+                    <span class="value">≥ 4.0</span>
+                </div>
+            </div>
+            
+            <div class="criteria-box" style="margin-top: 16px;">
+                <h3>Quality Score Components</h3>
+                <div class="criteria-item">
+                    <span class="label">Cuisine Coverage</span>
+                    <span class="value">25%</span>
+                </div>
+                <div class="criteria-item">
+                    <span class="label">Partner Density</span>
+                    <span class="value">20%</span>
+                </div>
+                <div class="criteria-item">
+                    <span class="label">Dish Variety</span>
+                    <span class="value">20%</span>
+                </div>
+                <div class="criteria-item">
+                    <span class="label">Quality Score</span>
+                    <span class="value">20%</span>
+                </div>
+                <div class="criteria-item">
+                    <span class="label">Volume</span>
+                    <span class="value">15%</span>
+                </div>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <div class="stats-row">
+                <div class="stat-card mvp-ready">
+                    <div class="value" id="mvp-ready-count">--</div>
+                    <div class="label">MVP Ready</div>
+                </div>
+                <div class="stat-card near-mvp">
+                    <div class="value" id="near-mvp-count">--</div>
+                    <div class="label">Near MVP</div>
+                </div>
+                <div class="stat-card developing">
+                    <div class="value" id="developing-count">--</div>
+                    <div class="label">Developing</div>
+                </div>
+                <div class="stat-card early">
+                    <div class="value" id="early-count">--</div>
+                    <div class="label">Early Stage</div>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="statusChart"></canvas>
+            </div>
+            
+            <div class="zones-table">
+                <div class="table-header">
+                    <div>Rank</div>
+                    <div>Zone</div>
+                    <div>Status</div>
+                    <div>Cuisines</div>
+                    <div>Partners</div>
+                    <div>Dishes</div>
+                    <div>Rating</div>
+                    <div>Quality Score</div>
+                </div>
+                <div id="zones-list">
+                    <div class="loading">Loading zone data...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        let zonesData = [];
+        let statusChart = null;
+        
+        function renderZones() {
+            const container = document.getElementById('zones-list');
+            const searchTerm = document.getElementById('search').value.toLowerCase();
+            const statusFilter = document.getElementById('status-filter').value;
+            
+            let filtered = zonesData.filter(zone => {
+                if (searchTerm && !zone.name.toLowerCase().includes(searchTerm)) return false;
+                if (statusFilter && zone.mvp_status !== statusFilter) return false;
+                return true;
+            });
+            
+            // Update stats
+            const statusCounts = {
+                'MVP Ready': filtered.filter(z => z.mvp_status === 'MVP Ready').length,
+                'Near MVP': filtered.filter(z => z.mvp_status === 'Near MVP').length,
+                'Developing': filtered.filter(z => z.mvp_status === 'Developing').length,
+                'Early Stage': filtered.filter(z => z.mvp_status === 'Early Stage').length
+            };
+            
+            document.getElementById('mvp-ready-count').textContent = statusCounts['MVP Ready'];
+            document.getElementById('near-mvp-count').textContent = statusCounts['Near MVP'];
+            document.getElementById('developing-count').textContent = statusCounts['Developing'];
+            document.getElementById('early-count').textContent = statusCounts['Early Stage'];
+            
+            container.innerHTML = filtered.map(zone => {
+                const statusClass = zone.mvp_status?.toLowerCase().replace(' ', '-') || 'developing';
+                const metrics = zone.metrics || {};
+                const criteria = zone.criteria || {};
+                
+                return `
+                    <div class="table-row">
+                        <div class="rank">#${zone.rank}</div>
+                        <div>
+                            <div class="zone-name">${zone.name}</div>
+                            <div class="zone-gaps">${zone.gaps?.supply || 'No gaps'}</div>
+                        </div>
+                        <div>
+                            <span class="status-badge ${statusClass}">${zone.mvp_status}</span>
+                        </div>
+                        <div class="metric ${criteria.meets_cuisines ? 'pass' : 'fail'}">
+                            ${metrics.cuisine_count || 0}
+                        </div>
+                        <div class="metric ${criteria.meets_partners ? 'pass' : 'fail'}">
+                            ${metrics.partner_count || 0}
+                        </div>
+                        <div class="metric ${criteria.meets_dishes ? 'pass' : 'fail'}">
+                            ${metrics.dish_count || 0}
+                        </div>
+                        <div class="metric ${criteria.meets_rating ? 'pass' : 'fail'}">
+                            ${metrics.avg_rating?.toFixed(1) || '--'}
+                        </div>
+                        <div class="quality-score" style="color: var(--accent-primary)">
+                            ${zone.quality_score?.toFixed(3) || '--'}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            if (filtered.length === 0) {
+                container.innerHTML = '<div class="loading">No zones match your filters</div>';
+            }
+            
+            updateChart(statusCounts);
+        }
+        
+        function updateChart(statusCounts) {
+            const ctx = document.getElementById('statusChart').getContext('2d');
+            
+            if (statusChart) {
+                statusChart.destroy();
+            }
+            
+            statusChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['MVP Ready', 'Near MVP', 'Developing', 'Early Stage'],
+                    datasets: [{
+                        data: [
+                            statusCounts['MVP Ready'],
+                            statusCounts['Near MVP'],
+                            statusCounts['Developing'],
+                            statusCounts['Early Stage']
+                        ],
+                        backgroundColor: [
+                            '#10b981',
+                            '#f59e0b',
+                            '#7c3aed',
+                            '#ef4444'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#8888a0',
+                                font: {
+                                    family: 'DM Sans'
+                                }
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Zone Status Distribution',
+                            color: '#f0f0f5',
+                            font: {
+                                family: 'DM Sans',
+                                size: 16,
+                                weight: 600
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        async function loadData() {
+            try {
+                const response = await fetch('../data/zone_data.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    zonesData = data.zones || [];
+                    renderZones();
+                } else {
+                    throw new Error('Data not found');
+                }
+            } catch (error) {
+                document.getElementById('zones-list').innerHTML = `
+                    <div class="loading">
+                        <p>No data available yet.</p>
+                        <p style="font-size: 13px; margin-top: 8px;">Run <code>python scripts/run_pipeline.py --all</code> to generate data.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Event listeners
+        document.getElementById('search').addEventListener('input', renderZones);
+        document.getElementById('status-filter').addEventListener('change', renderZones);
+        
+        // Initialize
+        loadData();
+    </script>
+</body>
+</html>
+

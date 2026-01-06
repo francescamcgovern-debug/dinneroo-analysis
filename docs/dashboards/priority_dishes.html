@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priority Dishes Dashboard | Dinneroo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        
+        :root {
+            --bg-primary: #0c0c14;
+            --bg-secondary: #14141f;
+            --bg-card: #1c1c2a;
+            --bg-card-hover: #242436;
+            --accent-teal: #00d4aa;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f59e0b;
+            --accent-pink: #ec4899;
+            --accent-blue: #3b82f6;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #2d2d44;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --tier-must-have: #22c55e;
+            --tier-should-have: #3b82f6;
+            --tier-nice-to-have: #f59e0b;
+            --tier-monitor: #64748b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(ellipse at 20% 0%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(0, 212, 170, 0.06) 0%, transparent 50%);
+        }
+        
+        .header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .header h1 {
+            font-size: 22px;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-teal) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .framework-badge {
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        
+        .back-link:hover {
+            color: var(--accent-teal);
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            min-height: calc(100vh - 80px);
+        }
+        
+        .sidebar {
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            padding: 24px;
+            overflow-y: auto;
+        }
+        
+        .sidebar h2 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-group label {
+            display: block;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .filter-group select,
+        .filter-group input[type="text"] {
+            width: 100%;
+            padding: 10px 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        .filter-group select:focus,
+        .filter-group input[type="text"]:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.1);
+        }
+        
+        .category-weights {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .category-weights h3 {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        
+        .weight-bar {
+            margin-bottom: 10px;
+        }
+        
+        .weight-bar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        
+        .weight-bar-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+        
+        .weight-bar-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--accent-teal);
+        }
+        
+        .weight-bar-track {
+            height: 6px;
+            background: var(--bg-primary);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .weight-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+        
+        .weight-bar-fill.performance { background: var(--accent-purple); }
+        .weight-bar-fill.satisfaction { background: var(--accent-pink); }
+        .weight-bar-fill.family-fit { background: var(--accent-teal); }
+        .weight-bar-fill.opportunity { background: var(--accent-orange); }
+        
+        .factor-sliders {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .factor-slider {
+            margin-bottom: 14px;
+        }
+        
+        .factor-slider .slider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        
+        .factor-slider .slider-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+        
+        .factor-slider .slider-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--accent-teal);
+        }
+        
+        .factor-slider input[type="range"] {
+            width: 100%;
+            height: 4px;
+            background: var(--bg-card);
+            border-radius: 2px;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+        
+        .factor-slider input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            background: var(--accent-teal);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .factor-slider input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+        
+        .reset-btn {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 16px;
+        }
+        
+        .reset-btn:hover {
+            border-color: var(--accent-teal);
+            color: var(--accent-teal);
+            background: rgba(0, 212, 170, 0.05);
+        }
+        
+        .main-content {
+            padding: 24px;
+            overflow-y: auto;
+        }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-teal);
+        }
+        
+        .stat-card .value {
+            font-size: 32px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-card .label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        
+        .tier-summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .tier-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .tier-card:hover, .tier-card.active {
+            transform: translateY(-2px);
+        }
+        
+        .tier-card.must-have { border-left: 3px solid var(--tier-must-have); }
+        .tier-card.should-have { border-left: 3px solid var(--tier-should-have); }
+        .tier-card.nice-to-have { border-left: 3px solid var(--tier-nice-to-have); }
+        .tier-card.monitor { border-left: 3px solid var(--tier-monitor); }
+        
+        .tier-card .tier-count {
+            font-size: 28px;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .tier-card.must-have .tier-count { color: var(--tier-must-have); }
+        .tier-card.should-have .tier-count { color: var(--tier-should-have); }
+        .tier-card.nice-to-have .tier-count { color: var(--tier-nice-to-have); }
+        .tier-card.monitor .tier-count { color: var(--tier-monitor); }
+        
+        .tier-card .tier-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        
+        .dishes-table {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+        
+        .table-header {
+            display: grid;
+            grid-template-columns: 60px 1fr 100px 90px 100px 90px 90px;
+            padding: 14px 20px;
+            background: var(--bg-secondary);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+        }
+        
+        .table-row {
+            display: grid;
+            grid-template-columns: 60px 1fr 100px 90px 100px 90px 90px;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+            align-items: center;
+        }
+        
+        .table-row:hover {
+            background: var(--bg-card-hover);
+        }
+        
+        .table-row:last-child {
+            border-bottom: none;
+        }
+        
+        .rank {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: var(--accent-purple);
+            font-size: 14px;
+        }
+        
+        .dish-info {
+            min-width: 0;
+        }
+        
+        .dish-name {
+            font-weight: 500;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .dish-cuisine {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        
+        .score {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .score.high { color: var(--success); }
+        .score.medium { color: var(--warning); }
+        .score.low { color: var(--error); }
+        
+        .tier-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        
+        .tier-badge.must-have {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--tier-must-have);
+        }
+        
+        .tier-badge.should-have {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--tier-should-have);
+        }
+        
+        .tier-badge.nice-to-have {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--tier-nice-to-have);
+        }
+        
+        .tier-badge.monitor {
+            background: rgba(100, 116, 139, 0.15);
+            color: var(--tier-monitor);
+        }
+        
+        .quadrant-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 500;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+        }
+        
+        .quadrant-badge.star { color: var(--accent-teal); }
+        .quadrant-badge.potential { color: var(--accent-purple); }
+        .quadrant-badge.cash-cow { color: var(--accent-orange); }
+        .quadrant-badge.question-mark { color: var(--text-muted); }
+        
+        .evidence-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+        
+        .evidence-badge.validated {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--success);
+        }
+        
+        .evidence-badge.corroborated {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--warning);
+        }
+        
+        .evidence-badge.estimated {
+            background: rgba(100, 116, 139, 0.15);
+            color: var(--text-muted);
+        }
+        
+        .on-menu {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+        }
+        
+        .on-menu.yes { color: var(--success); }
+        .on-menu.no { color: var(--error); }
+        
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: var(--text-secondary);
+        }
+        
+        .methodology-link {
+            display: block;
+            margin-top: 20px;
+            padding: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 12px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        
+        .methodology-link:hover {
+            border-color: var(--accent-purple);
+            color: var(--accent-purple);
+        }
+        
+        .score-breakdown {
+            display: none;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .table-row.expanded .score-breakdown {
+            display: grid;
+        }
+        
+        .breakdown-item {
+            text-align: center;
+            padding: 8px;
+            background: var(--bg-secondary);
+            border-radius: 6px;
+        }
+        
+        .breakdown-item .label {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        
+        .breakdown-item .value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <h1>🍽️ Priority Dishes</h1>
+            <span class="framework-badge">Unified Framework</span>
+        </div>
+        <a href="../index.html" class="back-link">← Back to Home</a>
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Framework Weights</h2>
+            
+            <div class="category-weights">
+                <h3>Category Distribution</h3>
+                <div class="weight-bar">
+                    <div class="weight-bar-header">
+                        <span class="weight-bar-label">Performance (Anna's)</span>
+                        <span class="weight-bar-value">35%</span>
+                    </div>
+                    <div class="weight-bar-track">
+                        <div class="weight-bar-fill performance" style="width: 35%"></div>
+                    </div>
+                </div>
+                <div class="weight-bar">
+                    <div class="weight-bar-header">
+                        <span class="weight-bar-label">Satisfaction</span>
+                        <span class="weight-bar-value">20%</span>
+                    </div>
+                    <div class="weight-bar-track">
+                        <div class="weight-bar-fill satisfaction" style="width: 20%"></div>
+                    </div>
+                </div>
+                <div class="weight-bar">
+                    <div class="weight-bar-header">
+                        <span class="weight-bar-label">Family Fit</span>
+                        <span class="weight-bar-value">30%</span>
+                    </div>
+                    <div class="weight-bar-track">
+                        <div class="weight-bar-fill family-fit" style="width: 30%"></div>
+                    </div>
+                </div>
+                <div class="weight-bar">
+                    <div class="weight-bar-header">
+                        <span class="weight-bar-label">Opportunity</span>
+                        <span class="weight-bar-value">15%</span>
+                    </div>
+                    <div class="weight-bar-track">
+                        <div class="weight-bar-fill opportunity" style="width: 15%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Filters</h2>
+            
+            <div class="filter-group">
+                <label>Search Dishes</label>
+                <input type="text" id="search" placeholder="Search by name...">
+            </div>
+            
+            <div class="filter-group">
+                <label>Tier</label>
+                <select id="tier-filter">
+                    <option value="">All Tiers</option>
+                    <option value="Must-Have">Must-Have (4.0+)</option>
+                    <option value="Should-Have">Should-Have (3.5+)</option>
+                    <option value="Nice-to-Have">Nice-to-Have (3.0+)</option>
+                    <option value="Monitor">Monitor (&lt;3.0)</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Quadrant</label>
+                <select id="quadrant-filter">
+                    <option value="">All Quadrants</option>
+                    <option value="Star">⭐ Star (High Perf + High Fit)</option>
+                    <option value="Potential">💎 Potential (Low Perf + High Fit)</option>
+                    <option value="Cash Cow">💰 Cash Cow (High Perf + Low Fit)</option>
+                    <option value="Question Mark">❓ Question Mark</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Cuisine</label>
+                <select id="cuisine-filter">
+                    <option value="">All Cuisines</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Evidence Level</label>
+                <select id="evidence-filter">
+                    <option value="">All Levels</option>
+                    <option value="Validated">🟢 Validated (8+ factors)</option>
+                    <option value="Corroborated">🟡 Corroborated (5-7 factors)</option>
+                    <option value="Estimated">⚪ Estimated (&lt;5 factors)</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>On Dinneroo Menu</label>
+                <select id="menu-filter">
+                    <option value="">All</option>
+                    <option value="yes">Yes - Available</option>
+                    <option value="no">No - Gap</option>
+                </select>
+            </div>
+            
+            <h2 style="margin-top: 24px;">Adjust Factor Weights</h2>
+            <div id="factor-sliders" class="factor-sliders"></div>
+            
+            <button class="reset-btn" onclick="resetWeights()">Reset to Defaults</button>
+            
+            <a href="../../DOCUMENTATION/METHODOLOGY/05_UNIFIED_DISH_SCORING.md" class="methodology-link">
+                📖 View Full Methodology
+            </a>
+        </aside>
+        
+        <main class="main-content">
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="value" id="total-dishes">--</div>
+                    <div class="label">Total Dishes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" id="validated-count">--</div>
+                    <div class="label">Validated Scores</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" id="on-menu-count">--</div>
+                    <div class="label">On Menu</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" id="gaps-count">--</div>
+                    <div class="label">Gaps Identified</div>
+                </div>
+            </div>
+            
+            <div class="tier-summary">
+                <div class="tier-card must-have" onclick="filterByTier('Must-Have')">
+                    <div class="tier-count" id="must-have-count">--</div>
+                    <div class="tier-label">Must-Have</div>
+                </div>
+                <div class="tier-card should-have" onclick="filterByTier('Should-Have')">
+                    <div class="tier-count" id="should-have-count">--</div>
+                    <div class="tier-label">Should-Have</div>
+                </div>
+                <div class="tier-card nice-to-have" onclick="filterByTier('Nice-to-Have')">
+                    <div class="tier-count" id="nice-to-have-count">--</div>
+                    <div class="tier-label">Nice-to-Have</div>
+                </div>
+                <div class="tier-card monitor" onclick="filterByTier('Monitor')">
+                    <div class="tier-count" id="monitor-count">--</div>
+                    <div class="tier-label">Monitor</div>
+                </div>
+            </div>
+            
+            <div class="dishes-table">
+                <div class="table-header">
+                    <div>Rank</div>
+                    <div>Dish</div>
+                    <div>Score</div>
+                    <div>Tier</div>
+                    <div>Quadrant</div>
+                    <div>Evidence</div>
+                    <div>On Menu</div>
+                </div>
+                <div id="dishes-list">
+                    <div class="loading">Loading dishes data...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Unified framework weights
+        const defaultWeights = {
+            // Performance (35%)
+            normalized_sales: 0.105,
+            zone_ranking: 0.0875,
+            deliveroo_rating: 0.0875,
+            repeat_intent: 0.07,
+            // Satisfaction (20%)
+            meal_satisfaction: 0.10,
+            kids_happy: 0.10,
+            // Family Fit (30%)
+            kid_friendly: 0.075,
+            fussy_eater: 0.075,
+            balanced: 0.06,
+            portions: 0.06,
+            customisation: 0.03,
+            // Opportunity (15%)
+            suitability: 0.0525,
+            open_text: 0.0525,
+            availability_gap: 0.045
+        };
+        
+        const factorLabels = {
+            // Performance
+            normalized_sales: 'Normalized Sales',
+            zone_ranking: 'Zone Ranking',
+            deliveroo_rating: 'Deliveroo Rating',
+            repeat_intent: 'Repeat Intent',
+            // Satisfaction
+            meal_satisfaction: 'Meal Satisfaction',
+            kids_happy: 'Kids Happy Rate',
+            // Family Fit
+            kid_friendly: 'Kid-Friendly',
+            fussy_eater: 'Fussy Eater Friendly',
+            balanced: 'Balanced/Guilt-Free',
+            portions: 'Portion Flexibility',
+            customisation: 'Customisation',
+            // Opportunity
+            suitability: 'Dish Suitability',
+            open_text: 'Open-Text Requests',
+            availability_gap: 'Availability Gap'
+        };
+        
+        const factorCategories = {
+            normalized_sales: 'performance',
+            zone_ranking: 'performance',
+            deliveroo_rating: 'performance',
+            repeat_intent: 'performance',
+            meal_satisfaction: 'satisfaction',
+            kids_happy: 'satisfaction',
+            kid_friendly: 'family_fit',
+            fussy_eater: 'family_fit',
+            balanced: 'family_fit',
+            portions: 'family_fit',
+            customisation: 'family_fit',
+            suitability: 'opportunity',
+            open_text: 'opportunity',
+            availability_gap: 'opportunity'
+        };
+        
+        let currentWeights = {...defaultWeights};
+        let dishesData = [];
+        
+        function initFactorSliders() {
+            const container = document.getElementById('factor-sliders');
+            container.innerHTML = '';
+            
+            const categories = [
+                { name: 'Performance', factors: ['normalized_sales', 'zone_ranking', 'deliveroo_rating', 'repeat_intent'] },
+                { name: 'Satisfaction', factors: ['meal_satisfaction', 'kids_happy'] },
+                { name: 'Family Fit', factors: ['kid_friendly', 'fussy_eater', 'balanced', 'portions', 'customisation'] },
+                { name: 'Opportunity', factors: ['suitability', 'open_text', 'availability_gap'] }
+            ];
+            
+            categories.forEach(cat => {
+                const catDiv = document.createElement('div');
+                catDiv.innerHTML = `<div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 8px; font-weight: 600;">${cat.name}</div>`;
+                container.appendChild(catDiv);
+                
+                cat.factors.forEach(factor => {
+                    const weight = currentWeights[factor];
+                    const div = document.createElement('div');
+                    div.className = 'factor-slider';
+                    div.innerHTML = `
+                        <div class="slider-header">
+                            <span class="slider-label">${factorLabels[factor]}</span>
+                            <span class="slider-value" id="${factor}-value">${(weight * 100).toFixed(1)}%</span>
+                        </div>
+                        <input type="range" id="${factor}-slider" min="0" max="20" step="0.5" value="${weight * 100}" 
+                               onchange="updateWeight('${factor}', this.value)">
+                    `;
+                    container.appendChild(div);
+                });
+            });
+        }
+        
+        function updateWeight(factor, value) {
+            currentWeights[factor] = value / 100;
+            document.getElementById(`${factor}-value`).textContent = `${parseFloat(value).toFixed(1)}%`;
+            recalculateScores();
+        }
+        
+        function resetWeights() {
+            currentWeights = {...defaultWeights};
+            initFactorSliders();
+            recalculateScores();
+        }
+        
+        function calculateScore(dish) {
+            let score = 0;
+            
+            // Performance
+            score += (dish.scores?.performance?.normalized_sales || 3) * currentWeights.normalized_sales;
+            score += (dish.scores?.performance?.zone_ranking || 3) * currentWeights.zone_ranking;
+            score += (dish.scores?.performance?.deliveroo_rating || 3) * currentWeights.deliveroo_rating;
+            score += (dish.scores?.performance?.repeat_intent || 3) * currentWeights.repeat_intent;
+            
+            // Satisfaction
+            score += (dish.scores?.satisfaction?.meal_satisfaction || 3) * currentWeights.meal_satisfaction;
+            score += (dish.scores?.satisfaction?.kids_happy || 3) * currentWeights.kids_happy;
+            
+            // Family Fit
+            score += (dish.scores?.family_fit?.kid_friendly || 3) * currentWeights.kid_friendly;
+            score += (dish.scores?.family_fit?.fussy_eater || 3) * currentWeights.fussy_eater;
+            score += (dish.scores?.family_fit?.balanced || 3) * currentWeights.balanced;
+            score += (dish.scores?.family_fit?.portions || 3) * currentWeights.portions;
+            score += (dish.scores?.family_fit?.customisation || 3) * currentWeights.customisation;
+            
+            // Opportunity
+            score += (dish.scores?.opportunity?.suitability || 3) * currentWeights.suitability;
+            score += (dish.scores?.opportunity?.open_text || 3) * currentWeights.open_text;
+            score += (dish.scores?.opportunity?.availability_gap || 3) * currentWeights.availability_gap;
+            
+            return score;
+        }
+        
+        function determineTier(score) {
+            if (score >= 4.0) return 'Must-Have';
+            if (score >= 3.5) return 'Should-Have';
+            if (score >= 3.0) return 'Nice-to-Have';
+            return 'Monitor';
+        }
+        
+        function recalculateScores() {
+            dishesData.forEach(dish => {
+                dish.calculated_score = calculateScore(dish);
+                dish.calculated_tier = determineTier(dish.calculated_score);
+            });
+            
+            dishesData.sort((a, b) => b.calculated_score - a.calculated_score);
+            
+            dishesData.forEach((dish, index) => {
+                dish.display_rank = index + 1;
+            });
+            
+            renderDishes();
+            updateTierCounts();
+        }
+        
+        function updateTierCounts() {
+            const tiers = { 'Must-Have': 0, 'Should-Have': 0, 'Nice-to-Have': 0, 'Monitor': 0 };
+            dishesData.forEach(dish => {
+                const tier = dish.calculated_tier || dish.tier;
+                if (tiers[tier] !== undefined) tiers[tier]++;
+            });
+            
+            document.getElementById('must-have-count').textContent = tiers['Must-Have'];
+            document.getElementById('should-have-count').textContent = tiers['Should-Have'];
+            document.getElementById('nice-to-have-count').textContent = tiers['Nice-to-Have'];
+            document.getElementById('monitor-count').textContent = tiers['Monitor'];
+        }
+        
+        function filterByTier(tier) {
+            document.getElementById('tier-filter').value = tier;
+            renderDishes();
+        }
+        
+        function renderDishes() {
+            const container = document.getElementById('dishes-list');
+            const searchTerm = document.getElementById('search').value.toLowerCase();
+            const tierFilter = document.getElementById('tier-filter').value;
+            const quadrantFilter = document.getElementById('quadrant-filter').value;
+            const cuisineFilter = document.getElementById('cuisine-filter').value;
+            const evidenceFilter = document.getElementById('evidence-filter').value;
+            const menuFilter = document.getElementById('menu-filter').value;
+            
+            let filtered = dishesData.filter(dish => {
+                if (searchTerm && !dish.name.toLowerCase().includes(searchTerm)) return false;
+                const tier = dish.calculated_tier || dish.tier;
+                if (tierFilter && tier !== tierFilter) return false;
+                if (quadrantFilter && dish.quadrant !== quadrantFilter) return false;
+                if (cuisineFilter && dish.cuisine !== cuisineFilter) return false;
+                if (evidenceFilter && dish.evidence_level !== evidenceFilter) return false;
+                if (menuFilter === 'yes' && !dish.on_menu) return false;
+                if (menuFilter === 'no' && dish.on_menu) return false;
+                return true;
+            });
+            
+            // Update stats
+            document.getElementById('total-dishes').textContent = filtered.length;
+            document.getElementById('validated-count').textContent = filtered.filter(d => d.evidence_level === 'Validated').length;
+            document.getElementById('on-menu-count').textContent = filtered.filter(d => d.on_menu).length;
+            document.getElementById('gaps-count').textContent = filtered.filter(d => !d.on_menu).length;
+            
+            container.innerHTML = filtered.map(dish => {
+                const score = dish.calculated_score || dish.composite_score;
+                const tier = dish.calculated_tier || dish.tier;
+                const scoreClass = score >= 4 ? 'high' : score >= 3 ? 'medium' : 'low';
+                const tierClass = tier.toLowerCase().replace(/\s+/g, '-');
+                const quadrantClass = dish.quadrant?.toLowerCase().replace(/\s+/g, '-') || '';
+                const evidenceClass = dish.evidence_level?.toLowerCase() || 'estimated';
+                
+                return `
+                    <div class="table-row">
+                        <div class="rank">#${dish.display_rank || dish.rank}</div>
+                        <div class="dish-info">
+                            <div class="dish-name">${dish.name}</div>
+                            <div class="dish-cuisine">${dish.cuisine}</div>
+                        </div>
+                        <div class="score ${scoreClass}">${score.toFixed(2)}</div>
+                        <div>
+                            <span class="tier-badge ${tierClass}">${tier}</span>
+                        </div>
+                        <div>
+                            <span class="quadrant-badge ${quadrantClass}">${dish.quadrant || '-'}</span>
+                        </div>
+                        <div>
+                            <span class="evidence-badge ${evidenceClass}">${dish.evidence_level || 'Estimated'}</span>
+                        </div>
+                        <div class="on-menu ${dish.on_menu ? 'yes' : 'no'}">
+                            ${dish.on_menu ? '✓ Yes' : '✗ Gap'}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            if (filtered.length === 0) {
+                container.innerHTML = '<div class="loading">No dishes match your filters</div>';
+            }
+        }
+        
+        function populateCuisineFilter() {
+            const cuisines = [...new Set(dishesData.map(d => d.cuisine))].filter(Boolean).sort();
+            const select = document.getElementById('cuisine-filter');
+            select.innerHTML = '<option value="">All Cuisines</option>';
+            cuisines.forEach(cuisine => {
+                const option = document.createElement('option');
+                option.value = cuisine;
+                option.textContent = cuisine;
+                select.appendChild(option);
+            });
+        }
+        
+        async function loadData() {
+            try {
+                const response = await fetch('../data/priority_dishes.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    dishesData = data.dishes || [];
+                    
+                    // Calculate initial scores
+                    dishesData.forEach((dish, index) => {
+                        dish.calculated_score = calculateScore(dish);
+                        dish.calculated_tier = determineTier(dish.calculated_score);
+                        dish.display_rank = index + 1;
+                    });
+                    
+                    populateCuisineFilter();
+                    renderDishes();
+                    updateTierCounts();
+                } else {
+                    throw new Error('Data not found');
+                }
+            } catch (error) {
+                document.getElementById('dishes-list').innerHTML = `
+                    <div class="loading">
+                        <p>No data available yet.</p>
+                        <p style="font-size: 13px; margin-top: 8px; color: var(--text-muted);">
+                            Run <code style="background: var(--bg-secondary); padding: 2px 6px; border-radius: 4px;">python scripts/phase2_analysis/01_score_dishes_unified.py</code> to generate data.
+                        </p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Event listeners
+        document.getElementById('search').addEventListener('input', renderDishes);
+        document.getElementById('tier-filter').addEventListener('change', renderDishes);
+        document.getElementById('quadrant-filter').addEventListener('change', renderDishes);
+        document.getElementById('cuisine-filter').addEventListener('change', renderDishes);
+        document.getElementById('evidence-filter').addEventListener('change', renderDishes);
+        document.getElementById('menu-filter').addEventListener('change', renderDishes);
+        
+        // Initialize
+        initFactorSliders();
+        loadData();
+    </script>
+</body>
+</html>
