@@ -437,6 +437,46 @@ def main():
         print(f"✓ Chinese Family Meal found: {latent} latent demand mentions")
     else:
         print("⚠ Chinese Family Meal not found in top dishes")
+    
+    # VALIDATION GATE: Check that consumer validation data exists
+    print("\n--- Consumer Validation Gate ---")
+    consumer_validation_path = OUTPUT_DIR / "mvp_consumer_validation.json"
+    if not consumer_validation_path.exists():
+        print("❌ VALIDATION GATE FAILED: mvp_consumer_validation.json not found!")
+        print("   Run scripts/phase2_analysis/04_validate_mvp_consumer_outcomes.py first")
+        raise FileNotFoundError(
+            "MVP consumer validation data missing. Run 04_validate_mvp_consumer_outcomes.py first. "
+            "MVP criteria MUST be validated against consumer outcomes (kids_happy, reorder_intent, variety_complaints)."
+        )
+    
+    with open(consumer_validation_path, "r") as f:
+        consumer_val = json.load(f)
+    
+    # Check required fields exist
+    required_fields = ['cuisine_impact', 'partner_impact', 'validation_status']
+    missing_fields = [f for f in required_fields if f not in consumer_val]
+    if missing_fields:
+        print(f"❌ VALIDATION GATE FAILED: Missing fields in consumer validation: {missing_fields}")
+        raise ValueError(f"Consumer validation missing required fields: {missing_fields}")
+    
+    # Check that outcomes were actually validated (not all N/A)
+    val_status = consumer_val.get('validation_status', {})
+    if not any(val_status.values()):
+        print("❌ VALIDATION GATE FAILED: No consumer outcomes could be validated!")
+        print("   Check survey data quality and zone matching.")
+        raise ValueError("No consumer outcomes validated - check survey data quality")
+    
+    print(f"✓ Consumer validation data exists")
+    print(f"✓ Kids happy validated: {val_status.get('kids_happy_validated', False)}")
+    print(f"✓ Reorder intent validated: {val_status.get('reorder_intent_validated', False)}")
+    print(f"✓ Variety complaints validated: {val_status.get('variety_complaints_validated', False)}")
+    
+    # Show summary of consumer impact
+    ci = consumer_val.get('cuisine_impact', {}).get('summary', {})
+    print(f"\nConsumer Impact Summary (5+ cuisines vs 1-2):")
+    print(f"  Kids Happy: {ci.get('kids_happy_impact', 'N/A')}")
+    print(f"  Reorder Intent: {ci.get('reorder_intent_impact', 'N/A')}")
+    print(f"  Variety Complaints: {ci.get('variety_complaint_impact', 'N/A')}")
 
 if __name__ == "__main__":
     main()

@@ -528,7 +528,7 @@
             <div class="card">
                 <h3>📋 MVP Criteria - Selection Requirements</h3>
                 <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">
-                    What a zone needs to be considered MVP-ready. Each threshold is backed by behavioral data showing impact on orders and satisfaction.
+                    What a zone needs to be considered MVP-ready. Each threshold is validated against consumer outcomes (kids happy, reorder intent, variety complaints).
                 </p>
                 
                 <div class="mvp-criteria" id="mvp-criteria">
@@ -549,8 +549,19 @@
                     </div>
                 </div>
                 
-                <div class="evidence-box">
-                    <strong>Why these thresholds?</strong>
+                <div class="evidence-box" style="margin-top: 20px;">
+                    <strong>🎯 Consumer Outcome Validation</strong>
+                    <p style="font-size: 13px; margin-top: 8px; color: var(--text-secondary);">
+                        Survey data (n=1,389) joined to zones shows impact on family satisfaction:
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 12px;" id="consumer-validation">
+                        <div class="loading">Loading consumer validation...</div>
+                    </div>
+                    <div class="source" id="consumer-source" style="margin-top: 12px;"></div>
+                </div>
+                
+                <div class="evidence-box" style="margin-top: 16px;">
+                    <strong>📊 Variety Demand</strong>
                     <p style="font-size: 13px; margin-top: 8px;" id="variety-evidence">Loading...</p>
                     <div class="source" id="variety-source"></div>
                 </div>
@@ -729,6 +740,7 @@
         let dishData = [];
         let zoneData = [];
         let mvpEvidence = {};
+        let consumerValidation = {};
         
         // Tab switching
         function showTab(tabId) {
@@ -742,10 +754,11 @@
         async function loadAllData() {
             try {
                 // Try to fetch from files first
-                const [dishResponse, zoneResponse, mvpResponse] = await Promise.all([
+                const [dishResponse, zoneResponse, mvpResponse, consumerResponse] = await Promise.all([
                     fetch('../data/unified_dishes.json'),
                     fetch('../data/zone_gaps.json'),
-                    fetch('../data/mvp_evidence.json')
+                    fetch('../data/mvp_evidence.json'),
+                    fetch('../data/mvp_consumer_validation.json')
                 ]);
                 
                 if (dishResponse.ok) {
@@ -757,6 +770,9 @@
                 }
                 if (mvpResponse.ok) {
                     mvpEvidence = await mvpResponse.json();
+                }
+                if (consumerResponse.ok) {
+                    consumerValidation = await consumerResponse.json();
                 }
                 
                 // Render everything
@@ -976,6 +992,87 @@
                 `${mvpEvidence.variety_demand} - families explicitly request more variety in open-text feedback.`;
             document.getElementById('variety-source').textContent = 
                 `Source: ${mvpEvidence.variety_source}`;
+            
+            // Consumer validation (kids happy, reorder intent, variety complaints)
+            renderConsumerValidation();
+        }
+        
+        // Render consumer validation section
+        function renderConsumerValidation() {
+            const container = document.getElementById('consumer-validation');
+            if (!consumerValidation.cuisine_impact) {
+                container.innerHTML = '<div class="loading">Consumer validation data not available</div>';
+                return;
+            }
+            
+            const ci = consumerValidation.cuisine_impact;
+            const pi = consumerValidation.partner_impact;
+            
+            // Get bucket data for comparison
+            const low = ci.buckets['3-4_cuisines'] || {};
+            const high = ci.buckets['5+_cuisines'] || {};
+            
+            // Calculate actual differences
+            const kidsHappyDiff = high.kids_happy && low.kids_happy ? 
+                ((high.kids_happy - low.kids_happy) * 100).toFixed(1) : 'N/A';
+            const reorderDiff = high.reorder_intent && low.reorder_intent ? 
+                ((high.reorder_intent - low.reorder_intent) * 100).toFixed(1) : 'N/A';
+            
+            container.innerHTML = `
+                <div style="background: var(--bg-secondary); padding: 12px; border-radius: 8px; border-left: 3px solid var(--success);">
+                    <div style="font-weight: 600; font-size: 14px; color: var(--success);">Kids Full & Happy</div>
+                    <div style="font-size: 24px; font-weight: 700; margin: 4px 0;">
+                        ${high.kids_happy ? (high.kids_happy * 100).toFixed(1) : '--'}%
+                    </div>
+                    <div style="font-size: 11px; color: var(--text-muted);">
+                        5+ cuisines (n=${high.kids_happy_n || 0})<br>
+                        vs ${low.kids_happy ? (low.kids_happy * 100).toFixed(1) : '--'}% for 3-4 cuisines (n=${low.kids_happy_n || 0})<br>
+                        <span style="color: ${kidsHappyDiff > 0 ? 'var(--success)' : 'var(--text-muted)'};">
+                            ${kidsHappyDiff > 0 ? '+' : ''}${kidsHappyDiff}pp difference
+                        </span>
+                    </div>
+                </div>
+                <div style="background: var(--bg-secondary); padding: 12px; border-radius: 8px; border-left: 3px solid var(--accent-blue);">
+                    <div style="font-weight: 600; font-size: 14px; color: var(--accent-blue);">Reorder Intent</div>
+                    <div style="font-size: 24px; font-weight: 700; margin: 4px 0;">
+                        ${high.reorder_intent ? (high.reorder_intent * 100).toFixed(1) : '--'}%
+                    </div>
+                    <div style="font-size: 11px; color: var(--text-muted);">
+                        5+ cuisines (n=${high.reorder_intent_n || 0})<br>
+                        vs ${low.reorder_intent ? (low.reorder_intent * 100).toFixed(1) : '--'}% for 3-4 cuisines (n=${low.reorder_intent_n || 0})<br>
+                        <span style="color: ${reorderDiff > 0 ? 'var(--success)' : 'var(--text-muted)'};">
+                            ${reorderDiff > 0 ? '+' : ''}${reorderDiff}pp difference
+                        </span>
+                    </div>
+                </div>
+                <div style="background: var(--bg-secondary); padding: 12px; border-radius: 8px; border-left: 3px solid var(--warning);">
+                    <div style="font-weight: 600; font-size: 14px; color: var(--warning);">Variety Complaints</div>
+                    <div style="font-size: 24px; font-weight: 700; margin: 4px 0;">
+                        ${high.variety_complaints ? (high.variety_complaints * 100).toFixed(1) : '--'}%
+                    </div>
+                    <div style="font-size: 11px; color: var(--text-muted);">
+                        5+ cuisines (n=${high.variety_complaints_n || 0})<br>
+                        vs ${low.variety_complaints ? (low.variety_complaints * 100).toFixed(1) : '--'}% for 3-4 cuisines<br>
+                        <span style="color: var(--text-muted);">
+                            ${((high.variety_complaints - low.variety_complaints) * 100).toFixed(1)}pp difference
+                        </span>
+                    </div>
+                </div>
+                <div style="background: var(--bg-secondary); padding: 12px; border-radius: 8px; border-left: 3px solid var(--accent-purple);">
+                    <div style="font-weight: 600; font-size: 14px; color: var(--accent-purple);">Sample Coverage</div>
+                    <div style="font-size: 24px; font-weight: 700; margin: 4px 0;">
+                        ${ci.summary.sample_size_high}
+                    </div>
+                    <div style="font-size: 11px; color: var(--text-muted);">
+                        Survey responses in 5+ cuisine zones<br>
+                        ${ci.summary.sample_size_low} in 1-2 cuisine zones<br>
+                        Total: ${Object.values(ci.buckets).reduce((sum, b) => sum + (b.n || 0), 0)} responses
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('consumer-source').textContent = 
+                `Source: ${consumerValidation.source || 'POST_ORDER_SURVEY joined to zone metrics'}`;
         }
         
         // Render cuisine grid

@@ -1,0 +1,102 @@
+{
+  "analysis_date": "2026-01-06",
+  "methodology": "Survey responses joined to zones via restaurant mapping, then grouped by cuisine/partner count buckets",
+  "cuisine_impact": {
+    "buckets": {
+      "1-2_cuisines": {
+        "kids_happy": 0.8,
+        "kids_happy_n": 15,
+        "reorder_intent": 0.815,
+        "reorder_intent_n": 27,
+        "variety_complaints": 0.148,
+        "variety_complaints_n": 27,
+        "n": 27
+      },
+      "3-4_cuisines": {
+        "kids_happy": 0.776,
+        "kids_happy_n": 286,
+        "reorder_intent": 0.7,
+        "reorder_intent_n": 510,
+        "variety_complaints": 0.174,
+        "variety_complaints_n": 551,
+        "n": 551
+      },
+      "5+_cuisines": {
+        "kids_happy": 0.824,
+        "kids_happy_n": 284,
+        "reorder_intent": 0.791,
+        "reorder_intent_n": 699,
+        "variety_complaints": 0.169,
+        "variety_complaints_n": 811,
+        "n": 811
+      }
+    },
+    "impact_5_vs_1-2": {
+      "kids_happy_change": 0.024,
+      "kids_happy_impact": "+2.4pp",
+      "reorder_intent_change": -0.024,
+      "reorder_intent_impact": "-2.4pp",
+      "variety_complaints_change": 0.021,
+      "variety_complaints_impact": "+2.1pp"
+    },
+    "summary": {
+      "kids_happy_impact": "+2.4pp",
+      "reorder_intent_impact": "-2.4pp",
+      "variety_complaint_impact": "+2.1pp",
+      "sample_size_low": 27,
+      "sample_size_high": 811
+    }
+  },
+  "partner_impact": {
+    "buckets": {
+      "1-2_partners": {
+        "kids_happy": 0.889,
+        "kids_happy_n": 9,
+        "reorder_intent": 0.769,
+        "reorder_intent_n": 13,
+        "variety_complaints": 0.077,
+        "variety_complaints_n": 13,
+        "n": 13
+      },
+      "3-4_partners": {
+        "kids_happy": 0.778,
+        "kids_happy_n": 27,
+        "reorder_intent": 0.768,
+        "reorder_intent_n": 69,
+        "variety_complaints": 0.2,
+        "variety_complaints_n": 75,
+        "n": 75
+      },
+      "5+_partners": {
+        "kids_happy": 0.8,
+        "kids_happy_n": 549,
+        "reorder_intent": 0.753,
+        "reorder_intent_n": 1154,
+        "variety_complaints": 0.17,
+        "variety_complaints_n": 1301,
+        "n": 1301
+      }
+    },
+    "impact_5_vs_1-2": {
+      "kids_happy_change": -0.089,
+      "kids_happy_impact": "-8.9pp",
+      "reorder_intent_change": -0.016,
+      "reorder_intent_impact": "-1.6pp",
+      "variety_complaints_change": 0.093,
+      "variety_complaints_impact": "+9.3pp"
+    },
+    "summary": {
+      "kids_happy_impact": "-8.9pp",
+      "reorder_intent_impact": "-1.6pp",
+      "variety_complaint_impact": "+9.3pp",
+      "sample_size_low": 13,
+      "sample_size_high": 1301
+    }
+  },
+  "validation_status": {
+    "kids_happy_validated": true,
+    "reorder_intent_validated": true,
+    "variety_complaints_validated": true
+  },
+  "source": "POST_ORDER_SURVEY-CONSOLIDATED.csv joined to zone_quality_scores.csv via ALL_DINNEROO_ORDERS.csv"
+}

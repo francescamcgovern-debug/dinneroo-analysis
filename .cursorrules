@@ -150,6 +150,28 @@ python scripts/phase1_data/04_validate_config.py
 
 The pipeline will FAIL if config contains unfounded recommendations.
 
+### 8. MVP Criteria Consumer Validation (CRITICAL)
+**MVP thresholds MUST be validated against consumer outcomes, not just order volume.**
+
+Before presenting MVP criteria (cuisine count, partner count thresholds):
+1. Run `scripts/phase2_analysis/04_validate_mvp_consumer_outcomes.py`
+2. Verify consumer outcomes are linked to zone-level variety:
+   - Kids full & happy rate by cuisine/partner bucket
+   - Reorder intent by cuisine/partner bucket
+   - Variety complaint rate by cuisine/partner bucket
+3. All metrics must have sample sizes (n=X)
+4. The pipeline will FAIL if `mvp_consumer_validation.json` is missing
+
+**MVP Criteria Validation Checklist (MUST complete before presenting):**
+- [ ] Kids happy rate by zone type calculated (5+ cuisines vs 3-4 vs 1-2)
+- [ ] Reorder intent by zone type calculated
+- [ ] Variety complaints by zone type calculated
+- [ ] All metrics have sample sizes (n=X)
+- [ ] Consumer validation data exists at `docs/data/mvp_consumer_validation.json`
+
+**Why this matters:**
+Order volume alone shows activity, not success. MVP criteria must prove that 5 cuisines/5 partners actually makes families happier and more likely to return - not just that they order more.
+
 ---
 
 ## 10-Factor Family Meal Framework
