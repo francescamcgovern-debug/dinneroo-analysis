@@ -38,11 +38,15 @@ def load_data():
     orders = pd.read_csv(DATA_ANALYSIS / "orders_segmented.csv", low_memory=False)
     print(f"  Orders: {len(orders)} orders with zone mapping and brand")
     
-    # Survey responses
+    # Post-order survey responses
     survey = pd.read_csv(DATA_SOURCE / "surveys" / "POST_ORDER_SURVEY-CONSOLIDATED.csv", low_memory=False)
-    print(f"  Survey: {len(survey)} responses")
+    print(f"  Post-Order Survey: {len(survey)} responses")
     
-    return zones, orders, survey
+    # Dropoff survey (people who didn't order)
+    dropoff = pd.read_csv(DATA_SOURCE / "surveys" / "DROPOFF_SURVEY-CONSOLIDATED.csv", low_memory=False)
+    print(f"  Dropoff Survey: {len(dropoff)} responses")
+    
+    return zones, orders, survey, dropoff
 
 
 def map_restaurant_to_zone(orders):
@@ -136,9 +140,9 @@ def parse_reorder_intent(survey):
     return survey.apply(get_reorder_intent, axis=1)
 
 
-def parse_variety_complaints(survey):
+def parse_variety_complaints_opentext(survey):
     """
-    Parse variety complaints from open-text feedback.
+    Parse variety complaints from open-text feedback in POST-ORDER survey.
     Look for mentions of 'variety', 'choice', 'selection', 'more options' in improvement fields.
     """
     improvement_cols = [
@@ -158,6 +162,43 @@ def parse_variety_complaints(survey):
         return 0
     
     return survey.apply(has_variety_complaint, axis=1)
+
+
+def parse_variety_demand_closed(dropoff):
+    """
+    Parse variety demand from CLOSED-RESPONSE question in DROPOFF survey.
+    
+    Question: "Which of the following would have made you more likely to place an order?"
+    Response: "Wider variety of dishes and cuisines"
+    
+    This is a direct, unambiguous signal that variety is a barrier to conversion.
+    """
+    col = 'Wider variety of dishes and cuisines:Which of the following would have made you more likely to place an order at the time? (select up to 3)'
+    
+    if col not in dropoff.columns:
+        print(f"  Warning: Variety demand column not found in dropoff survey")
+        return pd.Series([0] * len(dropoff))
+    
+    # If they selected this option, they want more variety
+    return dropoff[col].notna().astype(int)
+
+
+def parse_variety_positive_closed(dropoff):
+    """
+    Parse POSITIVE variety sentiment from CLOSED-RESPONSE question in DROPOFF survey.
+    
+    Question: "What are the most appealing aspects of this new offering for you?"
+    Response: "The variety of dishes and cuisines are great for me/my family"
+    
+    This shows when variety IS working well.
+    """
+    col = 'The variety of dishes and cuisines are great for me/my family:What are the most appealing aspects of this new offering for you? (select up to 3)'
+    
+    if col not in dropoff.columns:
+        print(f"  Warning: Variety positive column not found in dropoff survey")
+        return pd.Series([0] * len(dropoff))
+    
+    return dropoff[col].notna().astype(int)
 
 
 def join_survey_to_zones(survey, orders, zones):
@@ -249,13 +290,14 @@ def join_survey_to_zones(survey, orders, zones):
 def calculate_outcomes_by_bucket(df):
     """
     Calculate consumer outcomes grouped by cuisine/partner count buckets.
+    Uses POST-ORDER survey data.
     """
-    print("\nCalculating outcomes by bucket...")
+    print("\nCalculating outcomes by bucket (Post-Order Survey)...")
     
     # Parse consumer outcome columns
     df['kids_happy'] = parse_kids_reaction(df)
     df['reorder_intent'] = parse_reorder_intent(df)
-    df['variety_complaint'] = parse_variety_complaints(df)
+    df['variety_complaint'] = parse_variety_complaints_opentext(df)
     
     # Create buckets
     def cuisine_bucket(x):
@@ -400,22 +442,70 @@ def generate_output(cuisine_results, partner_results):
     return output
 
 
+def calculate_dropoff_variety_metrics(dropoff):
+    """
+    Calculate variety demand metrics from DROPOFF survey (closed-response questions).
+    
+    This captures people who DIDN'T order because of variety issues - 
+    arguably more valuable than post-order complaints as it measures lost conversions.
+    """
+    print("\nCalculating dropoff variety metrics (Closed-Response)...")
+    
+    # Parse closed-response variety columns
+    variety_demand = parse_variety_demand_closed(dropoff)
+    variety_positive = parse_variety_positive_closed(dropoff)
+    
+    total_responses = len(dropoff)
+    want_more_variety = variety_demand.sum()
+    variety_is_great = variety_positive.sum()
+    
+    metrics = {
+        "total_dropoff_responses": total_responses,
+        "want_more_variety": int(want_more_variety),
+        "want_more_variety_pct": round(want_more_variety / total_responses * 100, 1) if total_responses > 0 else 0,
+        "variety_is_great": int(variety_is_great),
+        "variety_is_great_pct": round(variety_is_great / total_responses * 100, 1) if total_responses > 0 else 0,
+        "source": "DROPOFF_SURVEY-CONSOLIDATED.csv (closed-response questions)"
+    }
+    
+    print(f"  Total dropoff responses: {total_responses}")
+    print(f"  'Wider variety would make me order': {want_more_variety} ({metrics['want_more_variety_pct']}%)")
+    print(f"  'Variety is great': {variety_is_great} ({metrics['variety_is_great_pct']}%)")
+    
+    return metrics
+
+
 def main():
     print("=" * 60)
     print("MVP CONSUMER OUTCOMES VALIDATION")
     print("=" * 60)
     
     # Load data
-    zones, orders, survey = load_data()
+    zones, orders, survey, dropoff = load_data()
     
-    # Join survey to zones
+    # Join post-order survey to zones
     survey_with_metrics = join_survey_to_zones(survey, orders, zones)
     
-    # Calculate outcomes by bucket
+    # Calculate outcomes by bucket (post-order survey)
     cuisine_results, partner_results = calculate_outcomes_by_bucket(survey_with_metrics)
+    
+    # Calculate dropoff variety metrics (closed-response)
+    dropoff_variety = calculate_dropoff_variety_metrics(dropoff)
     
     # Generate output
     output = generate_output(cuisine_results, partner_results)
+    
+    # Add dropoff variety metrics to output
+    output["variety_demand_closed_response"] = dropoff_variety
+    output["methodology"] = (
+        "Two data sources: "
+        "(1) POST_ORDER_SURVEY joined to zones for kids_happy, reorder_intent, variety_complaints (open-text); "
+        "(2) DROPOFF_SURVEY for variety demand (closed-response 'Wider variety would make me order')"
+    )
+    output["source"] = (
+        "POST_ORDER_SURVEY-CONSOLIDATED.csv + DROPOFF_SURVEY-CONSOLIDATED.csv "
+        "joined to zone_quality_scores.csv via orders_segmented.csv"
+    )
     
     # Save output
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -427,14 +517,18 @@ def main():
     print("RESULTS SUMMARY")
     print("=" * 60)
     
-    print("\nCuisine Impact (5+ vs 1-2 cuisines):")
+    print("\nCuisine Impact (5+ vs 1-2 cuisines) - Post-Order Survey:")
     print(f"  Kids Happy: {output['cuisine_impact']['summary']['kids_happy_impact']}")
     print(f"  Reorder Intent: {output['cuisine_impact']['summary']['reorder_intent_impact']}")
-    print(f"  Variety Complaints: {output['cuisine_impact']['summary']['variety_complaint_impact']}")
+    print(f"  Variety Complaints (open-text): {output['cuisine_impact']['summary']['variety_complaint_impact']}")
     
-    print("\nPartner Impact (5+ vs 1-2 partners):")
+    print("\nPartner Impact (5+ vs 1-2 partners) - Post-Order Survey:")
     print(f"  Kids Happy: {output['partner_impact']['summary']['kids_happy_impact']}")
     print(f"  Reorder Intent: {output['partner_impact']['summary']['reorder_intent_impact']}")
+    
+    print("\nVariety Demand (Dropoff Survey - Closed Response):")
+    print(f"  'Wider variety would make me order': {dropoff_variety['want_more_variety_pct']}% (n={dropoff_variety['want_more_variety']})")
+    print(f"  'Variety is great': {dropoff_variety['variety_is_great_pct']}% (n={dropoff_variety['variety_is_great']})")
     print(f"  Variety Complaints: {output['partner_impact']['summary']['variety_complaint_impact']}")
     
     print(f"\nOutput saved to: {output_path}")

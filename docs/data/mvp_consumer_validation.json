@@ -1,6 +1,6 @@
 {
   "analysis_date": "2026-01-06",
-  "methodology": "Survey responses joined to zones via restaurant mapping, then grouped by cuisine/partner count buckets",
+  "methodology": "Two data sources: (1) POST_ORDER_SURVEY joined to zones for kids_happy, reorder_intent, variety_complaints (open-text); (2) DROPOFF_SURVEY for variety demand (closed-response 'Wider variety would make me order')",
   "cuisine_impact": {
     "buckets": {
       "1-2_cuisines": {
@@ -98,5 +98,13 @@
     "reorder_intent_validated": true,
     "variety_complaints_validated": true
   },
-  "source": "POST_ORDER_SURVEY-CONSOLIDATED.csv joined to zone_quality_scores.csv via ALL_DINNEROO_ORDERS.csv"
+  "source": "POST_ORDER_SURVEY-CONSOLIDATED.csv + DROPOFF_SURVEY-CONSOLIDATED.csv joined to zone_quality_scores.csv via orders_segmented.csv",
+  "variety_demand_closed_response": {
+    "total_dropoff_responses": 942,
+    "want_more_variety": 162,
+    "want_more_variety_pct": 17.2,
+    "variety_is_great": 122,
+    "variety_is_great_pct": 13.0,
+    "source": "DROPOFF_SURVEY-CONSOLIDATED.csv (closed-response questions)"
+  }
 }
