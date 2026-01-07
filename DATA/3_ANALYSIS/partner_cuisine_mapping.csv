@@ -1,0 +1,771 @@
+partner_name,base_name,original_cuisine,granular_cuisine,classification_method
+0131 - Fulham - 363 Fulham Road - PizzaExpress,0131,italian,Italian,cuisine_tag
+0141 - London - Notting Hill Gate - PizzaExpress,0141,italian,Italian,cuisine_tag
+0191 - Clapham - Lavender Hill - PizzaExpress,0191,italian,Italian,cuisine_tag
+0201 - Teddington - Waldegrave Road - PizzaExpress,0201,italian,Italian,cuisine_tag
+0231 - Highgate - High Street - PizzaExpress,0231,italian,Italian,cuisine_tag
+0241 - Fulham - 895 Fulham Road - PizzaExpress,0241,italian,Italian,cuisine_tag
+0251 - Oxford - Golden Cross - PizzaExpress,0251,italian,Italian,cuisine_tag
+0271 - South Woodford - High Road - PizzaExpress,0271,italian,Italian,cuisine_tag
+0311 - Wimbledon - High Street - PizzaExpress,0311,italian,Italian,cuisine_tag
+0341 - Beckenham - High Street - PizzaExpress,0341,italian,Italian,cuisine_tag
+0351 - Bromley - Widmore Road - PizzaExpress,0351,italian,Italian,cuisine_tag
+0381 - Bath - Theatre Royal - PizzaExpress,0381,italian,Italian,cuisine_tag
+0391 - Basingstoke - Winchester Road - PizzaExpress,0391,italian,Italian,cuisine_tag
+0401 - Richmond - Red Lion Street - PizzaExpress,0401,italian,Italian,cuisine_tag
+0411 - Camberley - Park Street - PizzaExpress,0411,italian,Italian,cuisine_tag
+0421 - Chichester - South Street - PizzaExpress,0421,italian,Italian,cuisine_tag
+0441 - Nottingham - King Street - PizzaExpress,0441,italian,Italian,cuisine_tag
+0461 - Canterbury - Best Lane - PizzaExpress,0461,italian,Italian,cuisine_tag
+0501 - Belfast - Bedford Street - PizzaExpress,0501,italian,Italian,cuisine_tag
+0531 - Twickenham - York Street - PizzaExpress,0531,italian,Italian,cuisine_tag
+0541 - Colchester - St Runwald Street - PizzaExpress,0541,italian,Italian,cuisine_tag
+0551 - Guildford - High Street - PizzaExpress,0551,italian,Italian,cuisine_tag
+0571 - York - Museum Street - PizzaExpress,0571,italian,Italian,cuisine_tag
+0591 - Reigate - High Street - PizzaExpress,0591,italian,Italian,cuisine_tag
+0601 - Walton on Thames - New Zealand Avenue - PizzaExpress,0601,italian,Italian,cuisine_tag
+0621 - Stanmore - Broadway - PizzaExpress,0621,italian,Italian,cuisine_tag
+0631 - Norwich - St Benedict Street - PizzaExpress,0631,italian,Italian,cuisine_tag
+0641 - Chelmsford - Moulsham Street - PizzaExpress,0641,italian,Italian,cuisine_tag
+0651 - Belsize Park - Haverstock Hill - PizzaExpress,0651,italian,Italian,cuisine_tag
+0671 - Ealing - Bond Street - PizzaExpress,0671,italian,Italian,cuisine_tag
+0711 - Leamington Spa - The Parade - PizzaExpress,0711,italian,Italian,cuisine_tag
+0741 - Tunbridge Wells - High Street - PizzaExpress,0741,italian,Italian,cuisine_tag
+0751 - Hitchin - Market Place - PizzaExpress,0751,italian,Italian,cuisine_tag
+0761 - London - Baker Street - PizzaExpress,0761,italian,Italian,cuisine_tag
+0771 - Farnham - Castle Street - PizzaExpress,0771,italian,Italian,cuisine_tag
+0781 - Clapham - Abbeville Road - PizzaExpress,0781,italian,Italian,cuisine_tag
+0811 - Southgate - Chaseside - PizzaExpress,0811,italian,Italian,cuisine_tag
+0871 - Eastbourne - Cornfield Road - PizzaExpress,0871,italian,Italian,cuisine_tag
+0931 - Dulwich - Village - PizzaExpress,0931,italian,Italian,cuisine_tag
+0961 - Henley - Market Place - PizzaExpress,0961,italian,Italian,cuisine_tag
+1051 - Wokingham - Broad Street - PizzaExpress,1051,italian,Italian,cuisine_tag
+1061 - Bexleyheath - Broadway - PizzaExpress,1061,italian,Italian,cuisine_tag
+1081 - Camden - Parkway - PizzaExpress,1081,italian,Italian,cuisine_tag
+1091 - Barnet - High Street - PizzaExpress,1091,italian,Italian,cuisine_tag
+1110877 - Bella Italia Pizza & Pasta - Bristol Baldwin Street,1110877,italian,Italian,cuisine_tag
+1113111 - Bella Italia Pizza & Pasta - Birmingham New Street,1113111,italian,Italian,cuisine_tag
+1113133 - Bella Italia Pizza & Pasta - Bristol Cribbs Causeway,1113133,italian,Italian,cuisine_tag
+1113177 - Bella Italia Pizza & Pasta - Oxford George Street,1113177,italian,Italian,cuisine_tag
+1131 - East Sheen - Upper Richmond Road - PizzaExpress,1131,italian,Italian,cuisine_tag
+1141 - Epsom - South Street - PizzaExpress,1141,italian,Italian,cuisine_tag
+1181 - London - Islington - PizzaExpress,1181,italian,Italian,cuisine_tag
+1211 - Loughton - High Road - PizzaExpress,1211,italian,Italian,cuisine_tag
+1231 - Mill Hill - The Broadway - PizzaExpress,1231,italian,Italian,cuisine_tag
+1241 - Muswell Hill - Broadway - PizzaExpress,1241,italian,Italian,cuisine_tag
+1271 - Ruislip - High Street - PizzaExpress,1271,italian,Italian,cuisine_tag
+1281 - St Albans - Verulam Road - PizzaExpress,1281,italian,Italian,cuisine_tag
+1291 - Shepherds Bush - Rockley Road - PizzaExpress,1291,italian,Italian,cuisine_tag
+1351 - Watford - High Street - PizzaExpress,1351,italian,Italian,cuisine_tag
+1381 - Woking - Goldsworth Road - PizzaExpress,1381,italian,Italian,cuisine_tag
+1401 - Chiswick - High Road - PizzaExpress,1401,italian,Italian,cuisine_tag
+1411 - Putney - Upper Richmond Road - PizzaExpress,1411,italian,Italian,cuisine_tag
+1431 - Wandsworth - Trinity Road - PizzaExpress,1431,italian,Italian,cuisine_tag
+1441 - Windsor - Thames Street - PizzaExpress,1441,italian,Italian,cuisine_tag
+1451 - Radlett - Watling Street - PizzaExpress,1451,italian,Italian,cuisine_tag
+1471 - St Johns Wood - Abbey Road - PizzaExpress,1471,italian,Italian,cuisine_tag
+1541 - Tonbridge - High Street - PizzaExpress,1541,italian,Italian,cuisine_tag
+1561 - Stratford East - Theatre Square - PizzaExpress,1561,italian,Italian,cuisine_tag
+1571 - Banstead - High Street - PizzaExpress,1571,italian,Italian,cuisine_tag
+1581 - Cardiff - High Street - PizzaExpress,1581,italian,Italian,cuisine_tag
+1601 - London - Kings Road - PizzaExpress,1601,italian,Italian,cuisine_tag
+1611 - Horsham - East Street - PizzaExpress,1611,italian,Italian,cuisine_tag
+1631 - Weybridge - Monument Hill - PizzaExpress,1631,italian,Italian,cuisine_tag
+1651 - Sidcup - Elm Parade Shopping Centre - PizzaExpress,1651,italian,Italian,cuisine_tag
+1761 - Godalming - High Street - PizzaExpress,1761,italian,Italian,cuisine_tag
+1821 - London - Tower Bridge - PizzaExpress,1821,italian,Italian,cuisine_tag
+1831 - London - Pimlico - PizzaExpress,1831,italian,Italian,cuisine_tag
+1861 - Harpenden - High Street - PizzaExpress,1861,italian,Italian,cuisine_tag
+1891 - Didsbury - Lapwing Lane - PizzaExpress,1891,italian,Italian,cuisine_tag
+1901 - Blackheath - Tranquil Vale - PizzaExpress,1901,italian,Italian,cuisine_tag
+1951 - Hove - Church Road - PizzaExpress,1951,italian,Italian,cuisine_tag
+1961 - Maidenhead - Bridge Street - PizzaExpress,1961,italian,Italian,cuisine_tag
+1991 - London - London Bridge - PizzaExpress,1991,italian,Italian,cuisine_tag
+2011 - London - Kennington Road - PizzaExpress,2011,italian,Italian,cuisine_tag
+2031 - London - Victoria Street - PizzaExpress,2031,italian,Italian,cuisine_tag
+2131 - West Wickham - High Street - PizzaExpress,2131,italian,Italian,cuisine_tag
+2141 - Barnes - High Street - PizzaExpress,2141,italian,Italian,cuisine_tag
+2151 - Amersham - Sycamore Road - PizzaExpress,2151,italian,Italian,cuisine_tag
+2171 - Welwyn Garden City - Howardsgate - PizzaExpress,2171,italian,Italian,cuisine_tag
+2211 - Hale - Ashley Road - PizzaExpress,2211,italian,Italian,cuisine_tag
+2311 - Harborne - High Street - PizzaExpress,2311,italian,Italian,cuisine_tag
+2341 - Greenwich - Church Street - PizzaExpress,2341,italian,Italian,cuisine_tag
+2351 - London - Royal Festival Hall - PizzaExpress,2351,italian,Italian,cuisine_tag
+2531 - Leeds - Street Lane - PizzaExpress,2531,italian,Italian,cuisine_tag
+2551 - Wimbledon - The Broadway - PizzaExpress,2551,italian,Italian,cuisine_tag
+2601 - Newbury - Market Place - PizzaExpress,2601,italian,Italian,cuisine_tag
+2671 - London - Euston Road - PizzaExpress,2671,italian,Italian,cuisine_tag
+2701 - Portsmouth - Gunwharf Quays Designer Outlet - PizzaExpress,2701,italian,Italian,cuisine_tag
+2811 - Worcester Park - Central Road - PizzaExpress,2811,italian,Italian,cuisine_tag
+2831 - Romford - The Brewery Shopping Centre - PizzaExpress,2831,italian,Italian,cuisine_tag
+2851 - London - Bishopsgate - PizzaExpress,2851,italian,Italian,cuisine_tag
+2871 - Braintree - Designer Village - PizzaExpress,2871,italian,Italian,cuisine_tag
+2881 - Cambridge - Regent Street - PizzaExpress,2881,italian,Italian,cuisine_tag
+2901 - Norwich - Forum Events Centre - PizzaExpress,2901,italian,Italian,cuisine_tag
+2951 - Hampton Court - Creek Road - PizzaExpress,2951,italian,Italian,cuisine_tag
+3031 - Salford Quays - Designer Outlet - PizzaExpress,Salford Quays,italian,Italian,cuisine_tag
+"3113001 - Banana Tree Thai, Vietnamese, Vegan - Maida Vale",Banana Tree Thai,Asian,Thai,known_mapping
+"3113002 - Banana Tree Thai, Vietnamese, Vegan - West Hampstead",Banana Tree Thai,Asian,Thai,known_mapping
+"3113003 - Banana Tree Thai, Vietnamese, Vegan - Battersea",Banana Tree Thai,Asian,Thai,known_mapping
+"3113004 - Banana Tree Thai, Vietnamese, Vegan - Angel Islington",Banana Tree Thai,Asian,Thai,known_mapping
+"3113005 - Banana Tree Thai, Vietnamese, Vegan - Westbourne Grove",Banana Tree Thai,Asian,Thai,known_mapping
+"3113007 - Banana Tree Thai, Vietnamese, Vegan - Milton Keynes The Hub",Banana Tree Thai,Asian,Thai,known_mapping
+"3113008 - Banana Tree Thai, Vietnamese, Vegan - Oxford",Banana Tree Thai,Asian,Thai,known_mapping
+"3113009 - Banana Tree Thai, Vietnamese, Vegan - Chelmsford",Banana Tree Thai,Asian,Thai,known_mapping
+"3113010 - Banana Tree Thai, Vietnamese, Vegan - Covent Garden",Banana Tree Thai,Asian,Thai,known_mapping
+"3113011 - Banana Tree Thai, Vietnamese, Vegan - London The O2",Banana Tree Thai,Asian,Thai,known_mapping
+"3113013 - Banana Tree Thai, Vietnamese, Vegan - Reigate",Banana Tree Thai,Asian,Thai,known_mapping
+"3113014 - Banana Tree Thai, Vietnamese, Vegan - Windsor",Banana Tree Thai,Asian,Thai,known_mapping
+"3113015 - Banana Tree Thai, Vietnamese, Vegan - Birmingham Bullring",Banana Tree Thai,Asian,Thai,known_mapping
+"3113016 - Banana Tree Thai, Vietnamese, Vegan - Greenwich",Banana Tree Thai,Asian,Thai,known_mapping
+"3113017 - Banana Tree Thai, Vietnamese, Vegan - Bath",Banana Tree Thai,Asian,Thai,known_mapping
+"3113018 - Banana Tree Thai, Vietnamese, Vegan - Henley",Banana Tree Thai,Asian,Thai,known_mapping
+3113019 - Banana Tree Thai - Vietnamese - Vegan - Salford Quays,Banana Tree Thai,Asian,Thai,known_mapping
+3113020 - Banana Tree Thai Vietnamese Vegan - Portsmouth Gunwharf Quays,Banana Tree Thai Vietnamese Vegan,Asian,Thai,known_mapping
+3113021 - Banana Tree Thai Vietnamese Vegan - Stevenage,Banana Tree Thai Vietnamese Vegan,thai,Thai,known_mapping
+3203 - London - Clerkenwell Road - PizzaExpress,London,italian,Italian,cuisine_tag
+3204 - Kew - Station Approach - Pizza Express,Kew,italian,Italian,cuisine_tag
+3210 - London - Millbank - PizzaExpress,London,italian,Italian,cuisine_tag
+3210 - Prezzo Braintree,Prezzo Braintree,italian,Italian,known_mapping
+3211 - Prezzo - Port Solent,Prezzo,italian,Italian,known_mapping
+3213 - Cardiff - Mermaid Quay - PizzaExpress,Cardiff,italian,Italian,cuisine_tag
+3219 - Belfast - Lisburn Road - PizzaExpress,Belfast,italian,Italian,cuisine_tag
+3220 - Warwick - Jury Street - PizzaExpress,Warwick,italian,Italian,cuisine_tag
+3223 - London - Bankside - PizzaExpress,London,italian,Italian,cuisine_tag
+3225 - Birmingham - Bullring Shopping Centre - PizzaExpress,Birmingham,italian,Italian,cuisine_tag
+3228 - Prezzo - Reading,Prezzo,italian,Italian,known_mapping
+3229 - Balham - Bedford Hill - PizzaExpress,Balham,italian,Italian,cuisine_tag
+3229 - Prezzo - The Promenade,Prezzo,italian,Italian,known_mapping
+3230 - London - Tower Hill - PizzaExpress,London,italian,Italian,cuisine_tag
+3233 - Hemel Hempstead - Riverside - PizzaExpress,Hemel Hempstead,italian,Italian,cuisine_tag
+3234 - Prezzo Pasta & Pizza – Euston,Prezzo Pasta & Pizza – Euston,italian,Italian,known_mapping
+3236 - West Bridgford - Bridgford Road - PizzaExpress,West Bridgford,italian,Italian,cuisine_tag
+3240 - Milton Keynes - Centre MK - PizzaExpress,Milton Keynes,italian,Italian,cuisine_tag
+3240 - Prezzo - Bournemouth,Prezzo,italian,Italian,known_mapping
+3245 - Brighton - Marina - PizzaExpress,Brighton,italian,Italian,cuisine_tag
+3248 - Esher - High Street - PizzaExpress,Esher,italian,Italian,cuisine_tag
+3252 - Braehead - Xscape - PizzaExpress,Braehead,italian,Italian,cuisine_tag
+3252 - Prezzo - Enfield,Prezzo,italian,Italian,known_mapping
+3258 - London - St Pauls - PizzaExpress,London,italian,Italian,cuisine_tag
+3259 - Reading - Oracle Shopping Centre - PizzaExpress,Reading,italian,Italian,cuisine_tag
+3262 - Prezzo - Cheam,Prezzo,italian,Italian,known_mapping
+3271 - Liverpool - Albert Dock - PizzaExpress,Liverpool,italian,Italian,cuisine_tag
+3276 Prezzo - Godalming,Godalming,italian,Italian,cuisine_tag
+3281 - Fleet - Fleet Road - PizzaExpress,Fleet,italian,Italian,cuisine_tag
+3284 - Bristol - Harbourside - PizzaExpress,Bristol,italian,Italian,cuisine_tag
+3286 - Cheam - Ewell Road - PizzaExpress,Cheam,italian,Italian,cuisine_tag
+3294 - Prezzo - Canterbury,Prezzo,italian,Italian,known_mapping
+3295 - Prezzo - Brighton,Prezzo,italian,Italian,known_mapping
+3296 - Prezzo - Harrow,Prezzo,italian,Italian,known_mapping
+3303 - Belfast - Victoria Square Shopping Centre - PizzaExpress,Belfast,italian,Italian,cuisine_tag
+3308 - Prezzo - Hornchurch,Prezzo,italian,Italian,known_mapping
+3311 - Edinburgh - George IV Bridge - PizzaExpress,Edinburgh,italian,Italian,cuisine_tag
+3320 - Brockwell Park - Herne Hill - PizzaExpress,Brockwell Park,italian,Italian,cuisine_tag
+3321 - Headingly - Ottley Road - PizzaExpress,Headingly,italian,Italian,cuisine_tag
+3322 - Gerrards Cross - Packhorse Road - PizzaExpress,Gerrards Cross,italian,Italian,cuisine_tag
+3323 - Prezzo - Stevenage,Prezzo,italian,Italian,known_mapping
+3328 - Prezzo - Nottingham,Prezzo,italian,Italian,known_mapping
+3329 - Bath - Southgate Shopping Centre - PizzaExpress,Bath,italian,Italian,cuisine_tag
+3331 - Prezzo - Leatherhead,Prezzo,italian,Italian,known_mapping
+3333 - Sheffield - Ecclesall Road - PizzaExpress,Sheffield,italian,Italian,cuisine_tag
+3335 - London - Brent Cross Shopping Centre - PizzaExpress,London,italian,Italian,cuisine_tag
+3335 - Prezzo Cheltenham Brewery,Prezzo Cheltenham Brewery,italian,Italian,known_mapping
+3339 - Basingstoke - Festival Place Shopping Centre - PizzaExpress,Basingstoke,italian,Italian,cuisine_tag
+3341 - Prezzo - Eastleigh,Prezzo,italian,Italian,known_mapping
+3342 - Surbition - St Marks Hill - PizzaExpress,Surbition,italian,Italian,cuisine_tag
+3346 - Prezzo Victoria Place,Prezzo Victoria Place,italian,Italian,known_mapping
+3347 - Prezzo - Cardiff,Prezzo,italian,Italian,known_mapping
+3350 - Prezzo Pasta & Pizza - St Martins Lane,Prezzo Pasta & Pizza,italian,Italian,known_mapping
+3351 - Edinburgh - Morningside - PizzaExpress,Edinburgh,italian,Italian,cuisine_tag
+3353 - Poole - Tower Park - PizzaExpress,Poole,italian,Italian,cuisine_tag
+3354 - Aldershot - Westgate Retail Park - PizzaExpress,Aldershot,italian,Italian,cuisine_tag
+3359 - Croydon - George Street - PizzaExpress,Croydon,italian,Italian,cuisine_tag
+3365 - Christchurch - High Street - PizzaExpress,Christchurch,italian,Italian,cuisine_tag
+3365 - Prezzo - Banstead,Prezzo,italian,Italian,known_mapping
+3370 - Prezzo - Glasgow Braehead,Prezzo,italian,Italian,known_mapping
+3370 - Wembley - Designer Outlet - PizzaExpress,Wembley,italian,Italian,cuisine_tag
+3372 - Prezzo - York Clifford Street,Prezzo,italian,Italian,known_mapping
+3374 - Sheffield - St Pauls Place - PizzaExpress,Sheffield,italian,Italian,cuisine_tag
+3376 - New Malden - High Street - PizzaExpress,New Malden,italian,Italian,cuisine_tag
+3377 - Prezzo - Uxbridge,Prezzo,italian,Italian,known_mapping
+3380 - Prezzo - Manchester Media City,Prezzo,italian,Italian,known_mapping
+3381 - Southampton - WestQuay Shopping Centre - PizzaExpress,Southampton,italian,Italian,cuisine_tag
+3386 - Epping - High Street - PizzaExpress,Epping,italian,Italian,cuisine_tag
+3389 - Harrow - St Georges Shopping Centre - PizzaExpress,Harrow,italian,Italian,cuisine_tag
+3393 - Prezzo - Bristol,Prezzo,italian,Italian,known_mapping
+3399 - Hatfield - Galleria Shopping Outlet - PizzaExpress,Hatfield,italian,Italian,cuisine_tag
+3400 - Cribbs Causeway - The Venue - PizzaExpress,Cribbs Causeway,italian,Italian,cuisine_tag
+3405 - Milton Keynes - MK1 Leisure Park - PizzaExpress,Milton Keynes,pizza,Other,unclassified
+3409 - Bracknell - The Lexicon Shopping - PizzaExpress Centre,Bracknell,italian,Italian,cuisine_tag
+3415 - Bristol - Cabot Circus Shopping Centre - PizzaExpress,Bristol,italian,Italian,cuisine_tag
+3427 - Croydon - Valley Leisure Park - PizzaExpress,Croydon,italian,Italian,cuisine_tag
+3432 - Bromley - St Marks Square,Bromley,italian,Italian,cuisine_tag
+3436 - London - Paddington - PizzaExpress,London,italian,Italian,cuisine_tag
+3437 - London - Gloucester Road - PizzaExpress,London,italian,Italian,cuisine_tag
+3446 - Belfast - Ballyhackamore - PizzaExpress,Belfast,italian,Italian,cuisine_tag
+3452 - Stockport - Redrock - PizzaExpress,Stockport,italian,Italian,cuisine_tag
+3456 - Bournemouth - BH2 Leisure - PizzaExpress,Bournemouth,italian,Italian,cuisine_tag
+3457 - Sutton - High Street - PizzaExpress,Sutton,italian,Italian,cuisine_tag
+3458 - The Plaza - Bluewater Shopping Centre - PizzaExpress,The Plaza,italian,Italian,cuisine_tag
+3463 - Leeds - Arena - PizzaExpress,Leeds,italian,Italian,cuisine_tag
+3465 - Eltham - High Street - PizzaExpress,Eltham,italian,Italian,cuisine_tag
+3466 - Berkhamsted - High Street - PizzaExpress,Berkhamsted,italian,Italian,cuisine_tag
+3472 - Liverpool - Speke - PizzaExpress,Liverpool,italian,Italian,cuisine_tag
+3475 - Cheltenham - Brewery Quarter - PizzaExpress,Cheltenham,italian,Italian,cuisine_tag
+3476 - PizzaExpress - Hackney Mare Street,PizzaExpress,italian,Italian,known_mapping
+3477 - PizzaExpress - Brighton Jubilee Street,PizzaExpress,italian,Italian,known_mapping
+3481 - Oxford – Summertown - PizzaExpress,Oxford – Summertown,italian,Italian,cuisine_tag
+3484 - Winchester High Street - PizzaExpress,Winchester High Street,Movie Night Restaurants,Other,unclassified
+3603 - Prezzo - Bath,Prezzo,italian,Italian,known_mapping
+3607 - Prezzo - Leeds,Prezzo,italian,Italian,known_mapping
+3614 - Prezzo - Windsor,Prezzo,italian,Italian,known_mapping
+3615 - Prezzo - Hatfield,Prezzo,italian,Italian,known_mapping
+3623 Prezzo - Letchworth,Letchworth,italian,Italian,cuisine_tag
+3629 - Prezzo - Milton Keynes - Leisure Park,Prezzo,italian,Italian,known_mapping
+3647 - Prezzo - Farnborough,Prezzo,italian,Italian,known_mapping
+3667 - Prezzo- Hemel Hempstead,Prezzo- Hemel Hempstead,italian,Italian,known_mapping
+3680 - Prezzo - Bournemouth West Central,Prezzo,italian,Italian,known_mapping
+4114633 - Bella Italia Pizza & Pasta - York Minster,4114633,italian,Italian,cuisine_tag
+5110 - Dublin - Dawson Street - Milano,5110,italian,Italian,cuisine_tag
+5112 - Dublin - Blanchardstown Shopping Centre - Milano,5112,italian,Italian,cuisine_tag
+5113 - Dublin - Liffey Valley Shopping Centre - Milano,5113,italian,Italian,cuisine_tag
+5113344 - Bella Italia Pizza & Pasta - Leeds Briggate,5113344,italian,Italian,cuisine_tag
+5113366 - Bella Italia Pizza & Pasta - Liverpool,5113366,italian,Italian,cuisine_tag
+5120 - Dublin - Temple Bar - Milano,5120,italian,Italian,cuisine_tag
+5130 - Galway - Middle Street - Milano,5130,italian,Italian,cuisine_tag
+5160 - Dublin - Clarion Quay - Milano,5160,italian,Italian,cuisine_tag
+5180 - Dublin - Dundrum Shopping Centre - Milano,5180,italian,Italian,cuisine_tag
+5190 - Dublin - Grand Canal - Milano,5190,italian,Italian,cuisine_tag
+5191 - Dublin - Haddington Road - Milano,5191,italian,Italian,cuisine_tag
+5193 - Dublin - Dun Laoghaire - Milano,5193,italian,Italian,cuisine_tag
+6110911 - Bella Italia Pizza & Pasta - Southampton Hanover,6110911,italian,Italian,cuisine_tag
+8103399 - Bella Italia Pizza & Pasta - Cambridge Leisure,8103399,italian,Italian,cuisine_tag
+8106500 - Bella Italia Pizza & Pasta - Salford Quays,8106500,italian,Italian,cuisine_tag
+8106630 - Bella Italia Pizza & Pasta - Wellington Street,8106630,italian,Italian,cuisine_tag
+8106830 - Bella Italia Pizza & Pasta - Uxbridge,8106830,italian,Italian,cuisine_tag
+8108050 - Bella Italia Pizza & Pasta - Milton Keynes Stadium,8108050,italian,Italian,cuisine_tag
+8108200 - Bella Italia Pizza & Pasta - Brighton Market Street,8108200,italian,Italian,cuisine_tag
+8108255 - Bella Italia Pizza & Pasta - South Kensington,8108255,italian,Italian,cuisine_tag
+8108344 - Bella Italia Pizza & Pasta - Milton Keynes 12th Street,8108344,italian,Italian,cuisine_tag
+8108366 - Bella Italia Pizza & Pasta - Queensway 55,8108366,italian,Italian,cuisine_tag
+8108411 - Bella Italia Pizza & Pasta - Norwich Red Lion Street,8108411,italian,Italian,cuisine_tag
+8114644 - Bella Italia Pizza & Pasta - Nottingham Cornerhouse,8114644,italian,Italian,cuisine_tag
+9013654 - Bella Italia Pizza & Pasta - Glasgow Sauchiehall Street,9013654,italian,Italian,cuisine_tag
+9015270 - Bella Italia Pizza & Pasta - Reading Oracle,9015270,Pasta,Other,unclassified
+9015300 - Bella Italia Pizza & Pasta - York Clifton Moor,9015300,italian,Italian,cuisine_tag
+9015460 - Bella Italia Pizza & Pasta - Bristol Abbeywood,9015460,italian,Italian,cuisine_tag
+9015470 - Bella Italia Pizza & Pasta - Taplow,9015470,italian,Italian,cuisine_tag
+9015490 - Bella Italia Pizza & Pasta - Dudley Castlegate,9015490,italian,Italian,cuisine_tag
+9111030 - Bella Italia Pizza & Pasta - Bluewater,9111030,italian,Italian,cuisine_tag
+9111040 - Bella Italia Pizza & Pasta - Portsmouth Gunwharf Quays,9111040,italian,Italian,cuisine_tag
+9111050 - Bella Italia Pizza & Pasta - Norwich Riverside,9111050,italian,Italian,cuisine_tag
+9112050 - Las Iguanas - Basingstoke,9112050,Latin American,American/Burgers,cuisine_tag
+9112070 - Las Iguanas - York Swinegate,9112070,Latin American,American/Burgers,cuisine_tag
+9113100 - Bella Italia Pizza & Pasta - Paddington,9113100,italian,Italian,cuisine_tag
+9114010 - Bella Italia Pizza & Pasta - Sheffield St. Pauls,9114010,italian,Italian,cuisine_tag
+9114050 - Bella Italia Pizza & Pasta - Bristol Aspects,9114050,pizza,Other,unclassified
+9114060 - Bella Italia - Croydon,9114060,Movie Night Restaurants,Other,unclassified
+9221010 - Las Iguanas - Cardiff Mill Lane,9221010,Latin American,American/Burgers,cuisine_tag
+9221030 - Las Iguanas - Bath,9221030,Latin American,American/Burgers,cuisine_tag
+9221040 - Las Iguanas - Birmingham Arcadian,9221040,Latin American,American/Burgers,cuisine_tag
+9221080 - Las Iguanas - Nottingham Chapel Quarter,9221080,Latin American,American/Burgers,cuisine_tag
+9221090 - Las Iguanas - Leeds Cloth Hall,9221090,Latin American,American/Burgers,cuisine_tag
+9221110 - Las Iguanas - Brighton,9221110,Latin American,American/Burgers,cuisine_tag
+9221120 - Las Iguanas - Bristol Harbourside,9221120,Latin American,American/Burgers,cuisine_tag
+9221131 - Las Iguanas - Ealing,9221131,Latin American,American/Burgers,cuisine_tag
+9221140 - Las Iguanas - Manchester Trafford Centre,9221140,Latin American,American/Burgers,cuisine_tag
+9221170 - Las Iguanas - Milton Keynes The Hub,9221170,Latin American,American/Burgers,cuisine_tag
+9221180 - Las Iguanas - Lakeside,9221180,Latin American,American/Burgers,cuisine_tag
+9221190 - Las Iguanas - Portsmouth Gunwharf Quays,9221190,Latin American,American/Burgers,cuisine_tag
+9221220 - Las Iguanas - Liverpool One,9221220,Latin American,American/Burgers,cuisine_tag
+9221240 - Las Iguanas - Reading Oracle,9221240,Latin American,American/Burgers,cuisine_tag
+9221250 - Las Iguanas - Cardiff Mermaid Quay,9221250,Latin American,American/Burgers,cuisine_tag
+9221280 - Las Iguanas - Sheffield Meadowhall,9221280,Latin American,American/Burgers,cuisine_tag
+9221290 - Las Iguanas - Cambridge Quayside,9221290,Latin American,American/Burgers,cuisine_tag
+9221350 - Las Iguanas - Wembley,9221350,Latin American,American/Burgers,cuisine_tag
+9221370 - Las Iguanas - Bristol Cribbs Causeway,9221370,Latin American,American/Burgers,cuisine_tag
+9221380 - Las Iguanas - Glasgow Nile Street,9221380,Burgers,American/Burgers,cuisine_tag
+9221390 - Las Iguanas - Leamington Spa,9221390,Latin American,American/Burgers,cuisine_tag
+9221650 - Las Iguanas - Chelmsford,9221650,Latin American,American/Burgers,cuisine_tag
+9221690 - Las Iguanas - Bracknell,9221690,Latin American,American/Burgers,cuisine_tag
+9221700 - Las Iguanas - Watford,9221700,Latin American,American/Burgers,cuisine_tag
+9221770 - Las Iguanas - Southampton West Quay,9221770,Latin American,American/Burgers,cuisine_tag
+9221790 - Las Iguanas - Canterbury,9221790,Burritos,Other,unclassified
+ASIA VILLA - St John Street,ASIA VILLA,Veganuary,Chinese,known_mapping
+Asia Villa - Borough High Street,Asia Villa,halal,Chinese,known_mapping
+Asia Villa - Canary Wharf,Asia Villa,Asian,Chinese,known_mapping
+Asia Villa - Romford,Asia Villa,Asian,Chinese,known_mapping
+Asia Villa - Wood Green,Asia Villa,Asian,Chinese,known_mapping
+Biblos,Biblos,Only on Deliveroo,Middle Eastern,known_mapping
+Biblos - Spike Island,Biblos,Only on Deliveroo,Middle Eastern,known_mapping
+Bill's Baker Street,Bill's Baker Street,Meal Deals,British,known_mapping
+Bill's Bath,Bill's Bath,Burgers,British,known_mapping
+Bill's Bluewater,Bill's Bluewater,Shawarma,British,known_mapping
+Bill's Braintree - BRT,Bill's Braintree,Burgers,British,known_mapping
+Bill's Brighton - BNC,Bill's Brighton,Burgers,British,known_mapping
+Bill's Bullring,Bill's Bullring,Burgers,British,known_mapping
+Bill's Cambridge - CAM,Bill's Cambridge,Burgers,British,known_mapping
+Bill's Canterbury - CAN,Bill's Canterbury,Burgers,British,known_mapping
+Bill's Cardiff - CAR,Bill's Cardiff,Burgers,British,known_mapping
+Bill's Cardiff Bay - CRDB,Bill's Cardiff Bay,Burgers,British,known_mapping
+Bill's Chelmsford - CLM,Bill's Chelmsford,Burgers,British,known_mapping
+Bill's Chichester - CHS,Bill's Chichester,Burgers,British,known_mapping
+Bill's Colchester - CLC,Bill's Colchester,Burgers,British,known_mapping
+Bill's Covent Garden - WC,Bill's Covent Garden,Meal Deals,British,known_mapping
+Bill's Eastbourne - EST,Bill's Eastbourne,Burgers,British,known_mapping
+Bill's Farnham - FARN,Bill's Farnham,breakfast,British,known_mapping
+Bill's Greenwich - LEW,Bill's Greenwich,Meal Deals,British,known_mapping
+Bill's Guildford - GUI,Bill's Guildford,Burgers,British,known_mapping
+Bill's Hammersmith - SBU,Bill's Hammersmith,Meal Deals,British,known_mapping
+Bill's Horsham - HOR,Bill's Horsham,Burgers,British,known_mapping
+Bill's Kingston - KIN,Bill's Kingston,Meal Deals,British,known_mapping
+Bill's Leeds - LC,Bill's Leeds,Burgers,British,known_mapping
+Bill's London Bridge,Bill's London Bridge,Meal Deals,British,known_mapping
+Bill's Milton Keynes,Bill's Milton Keynes,Burgers,British,known_mapping
+Bill's Newbury - NWB,Bill's Newbury,Burgers,British,known_mapping
+Bill's Norwich - NOR,Bill's Norwich,Burgers,British,known_mapping
+Bill's Nottingham - NTG,Bill's Nottingham,Burgers,British,known_mapping
+Bill's Reading - REA,Bill's Reading,Burgers,British,known_mapping
+Bill's Reigate - REI,Bill's Reigate,Meal Deals,British,known_mapping
+Bill's Richmond - RIC2,Bill's Richmond,Meal Deals,British,known_mapping
+Bill's Soho - MMS,Bill's Soho,Meal Deals,British,known_mapping
+Bill's Southampton - SOU,Bill's Southampton,Burgers,British,known_mapping
+Bill's St Albans - STA,Bill's St Albans,Burgers,British,known_mapping
+Bill's Trafford - ECC,Bill's Trafford,Burgers,British,known_mapping
+Bill's Tunbridge Wells - RTW,Bill's Tunbridge Wells,Burgers,British,known_mapping
+Bill's Victoria - VWP,Bill's Victoria,Meal Deals,British,known_mapping
+Bill's Westfield - SBU,Bill's Westfield,Meal Deals,British,known_mapping
+Bill's Wimbledon - WIM2,Bill's Wimbledon,Meal Deals,British,known_mapping
+Bill's Windsor - WIN,Bill's Windsor,Burgers,British,known_mapping
+Bill's York - YOR,Bill's York,Burgers,British,known_mapping
+Cacciari's - Battersea,Cacciari's,Alcohol,Italian,known_mapping
+Cacciari's Piadineria & Restaurant,Cacciari's Piadineria & Restaurant,italian,Italian,known_mapping
+Chaska,Chaska,indian,Indian,cuisine_tag
+Chaska Bites,Chaska Bites,indian,Indian,cuisine_tag
+Cocotte - Hoxton,Cocotte,Chicken,Grilled Chicken,cuisine_tag
+Cocotte - Parsons Green,Cocotte,Chicken,Grilled Chicken,cuisine_tag
+Cocotte - Queen's Park,Cocotte,Chicken,Grilled Chicken,cuisine_tag
+Cocotte - Richmond,Cocotte,Chicken,Grilled Chicken,cuisine_tag
+Cocotte - South Kensington,Cocotte,Chicken,Grilled Chicken,cuisine_tag
+Cocotte - Westbourne,Cocotte,Chicken,Grilled Chicken,cuisine_tag
+Dhoom by chaska,Dhoom by chaska,indian,Indian,cuisine_tag
+Dishoom - Editions - ACT,Dishoom,indian,Indian,known_mapping
+Dishoom - Editions - BCP,Dishoom,Curry,Indian,known_mapping
+Dishoom - Editions - BER,Dishoom,indian,Indian,known_mapping
+Dishoom - Editions - BLW,Dishoom,indian,Indian,known_mapping
+Dishoom - Editions - BRC,Dishoom,indian,Indian,known_mapping
+Dishoom - Editions - CRE,Dishoom,indian,Indian,known_mapping
+Dishoom - Editions - DUL,Dishoom,indian,Indian,known_mapping
+Dishoom - Editions - ISL,Dishoom,indian,Indian,known_mapping
+Dishoom - Editions - SWC,Dishoom,Curry,Indian,known_mapping
+Dishoom - Editions - WME,Dishoom,Curry,Indian,known_mapping
+Dishoom - Editions - WNW,Dishoom,Curry,Indian,known_mapping
+Farmer J - Farringdon,Farmer J,Salads,Healthy/Salads,known_mapping
+Farmer J - Fenchurch Street,Farmer J,Salads,Healthy/Salads,known_mapping
+Farmer J - Finsbury,Farmer J,Salads,Healthy/Salads,known_mapping
+Farmer J - Hammersmith,Farmer J,Salads,Healthy/Salads,known_mapping
+Farmer J - Holborn,Farmer J,Salads,Healthy/Salads,known_mapping
+Farmer J - Jubilee,Farmer J,Salads,Healthy/Salads,known_mapping
+Farmer J - King William Street,Farmer J,Salads,Healthy/Salads,known_mapping
+Farmer J - London Bridge,Farmer J,Salads,Healthy/Salads,known_mapping
+Farmer J - Russell Square,Farmer J,Salads,Healthy/Salads,known_mapping
+Farmer J - St James's Park,Farmer J,Salads,Healthy/Salads,known_mapping
+Giggling Squid - Bath,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Beaconsfield,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Berkhamsted,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Bracknell,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Brighton,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Cambridge,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Cardiff Bay,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Chelmsford,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Cheltenham,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Chichester,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Chislehurst,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Clifton,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Esher,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Farnham,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Guildford,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Harborne,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Harpenden,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Henley,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Hornchurch,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Horsham,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Hove,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Kingston,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Leamington Spa,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Leeds,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Norwich,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Oxford,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Portsmouth,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Reigate,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Tunbridge Wells,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Warwick,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Welwyn Garden City,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - West Bridgford,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Weybridge,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Wimbledon,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Winchester,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Windsor,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - Wokingham,Giggling Squid,thai,Thai,known_mapping
+Giggling Squid - York,Giggling Squid,Christmas Specials,Thai,known_mapping
+Giggling Squid West Bridgford,Giggling Squid West Bridgford,thai,Thai,known_mapping
+Hornsey - Tiffin Tin,Hornsey,indian,Indian,cuisine_tag
+Iro Sushi (BNC),Iro Sushi (BNC),sushi,Sushi,known_mapping
+Iro Sushi - Bromley,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Camden,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Clapham,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Croydon,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Dartford,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Eltham,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Fulham,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Highgate,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Lewisham,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Orpington,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Palmers Green,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Penge,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Purley,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Reading,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Sidcup,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Slough,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Stoke Newington,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Stratford,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Tower Bridge,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Walton,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Welling,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi - Woolwich,Iro Sushi,Asian,Sushi,known_mapping
+Iro Sushi Canterbury,Iro Sushi Canterbury,sushi,Sushi,known_mapping
+Iro Sushi Chingford,Iro Sushi Chingford,Asian,Sushi,known_mapping
+Iro Sushi Maidstone,Iro Sushi Maidstone,sushi,Sushi,known_mapping
+Iro Sushi Newbury,Iro Sushi Newbury,sushi,Sushi,known_mapping
+Iro Sushi Sevenoaks,Iro Sushi Sevenoaks,sushi,Sushi,known_mapping
+Iro Sushi Tonbridge,Iro Sushi Tonbridge,Asian,Sushi,known_mapping
+Iro Sushi West Hampstead,Iro Sushi West Hampstead,sushi,Sushi,known_mapping
+Itsu - Bishopsgate Plaza,Itsu,Salads,Japanese,known_mapping
+Jacob's Kitchen - Editions - BYR (NEW),Jacob's Kitchen,Mediterranean,Middle Eastern,cuisine_tag
+Jakob's Kitchen - Belsize Park,Jakob's Kitchen,lebanese,Middle Eastern,cuisine_tag
+Jakob's Kitchen - Editions - ACT,Jakob's Kitchen,Mediterranean,Middle Eastern,cuisine_tag
+Jakob's Kitchen - Editions - BRC,Jakob's Kitchen,Healthy Eating 2025,Healthy/Salads,cuisine_tag
+Jakob's Kitchen - Editions - BSY,Jakob's Kitchen,Middle Eastern,Middle Eastern,cuisine_tag
+Jakob's Kitchen - Editions - CAN,Jakob's Kitchen,Mediterranean,Middle Eastern,cuisine_tag
+Jakob's Kitchen - Editions - WHI,Jakob's Kitchen,Middle Eastern,Middle Eastern,cuisine_tag
+KOKORO - Tooting,KOKORO,sushi,Sushi,cuisine_tag
+KOKORO Harrow,KOKORO Harrow,sushi,Sushi,cuisine_tag
+KOKORO Poole,KOKORO Poole,sushi,Sushi,cuisine_tag
+KOKORO Portsmouth,KOKORO Portsmouth,sushi,Sushi,cuisine_tag
+KOKORO TUNBRIDGE WELLS,KOKORO TUNBRIDGE WELLS,sushi,Sushi,cuisine_tag
+Kokoro - Kingston,Kokoro,sushi,Sushi,cuisine_tag
+Kokoro - Redhill,Kokoro,sushi,Sushi,cuisine_tag
+Kokoro - Reigate,Kokoro,sushi,Sushi,cuisine_tag
+Kokoro - Uxbridge,Kokoro,sushi,Sushi,cuisine_tag
+Kokoro - Watford,Kokoro,sushi,Sushi,cuisine_tag
+Kokoro - Wood Green,Kokoro,sushi,Sushi,cuisine_tag
+Kokoro Colchester,Kokoro Colchester,sushi,Sushi,cuisine_tag
+Kokoro Epsom,Kokoro Epsom,sushi,Sushi,cuisine_tag
+Kokoro Morden,Kokoro Morden,sushi,Sushi,cuisine_tag
+Kokoro Sutton,Kokoro Sutton,sushi,Sushi,cuisine_tag
+Kricket - Bermondsey,Kricket,indian,Indian,known_mapping
+Kricket - Brixton,Kricket,indian,Indian,known_mapping
+Kricket - Canary Wharf,Kricket,indian,Indian,known_mapping
+Kricket - London Fields,Kricket,indian,Indian,known_mapping
+LEON - Angel,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Bath,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Battersea Power Station,LEON,Wraps,Healthy/Salads,known_mapping
+LEON - Birmingham,LEON,Wraps,Healthy/Salads,known_mapping
+LEON - Bluewater,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Brighton,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Brixton,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Broadwick Street,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Camden,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Canary Wharf,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Carnaby Street,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Cheapside,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Earl's Court,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Euston Road,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Hammersmith,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Hanover Square,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Horseferry Road,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Jubilee Place,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Kingston,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Kingsway,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Ludgate Circus,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Milton Keynes,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Moorgate,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - More London Place,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Notting Hill,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Pancras Square,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Regent Street,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Richmond,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Shepherds Bush,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Southbank Place,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Southwark Street,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Strand,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Victoria Place 2,LEON,Sandwiches,Healthy/Salads,known_mapping
+LEON - Wimbledon,LEON,Sandwiches,Healthy/Salads,known_mapping
+PIZAZA - Golders Green,PIZAZA,Kosher,Italian,known_mapping
+PIZAZA - Hendon,PIZAZA,Kosher,Italian,known_mapping
+Pho - Baker Street,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Balham,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Battersea,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Birmingham,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Birmingham - High Street Harborne,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Borough,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Bournemouth,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Brighton,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Bristol,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Cambridge,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Canary Wharf,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Canterbury,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Cardiff,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Cheltenham,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Chiswick,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Covent Garden,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Ealing,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Edinburgh,Pho,Pho,Vietnamese,known_mapping
+Pho - Editions - BRC,Pho,Vegan Friendly,Vietnamese,known_mapping
+Pho - Editions - CRE,Pho,Vegan Friendly,Vietnamese,known_mapping
+Pho - Editions - DUL,Pho,Vegan Friendly,Vietnamese,known_mapping
+Pho - Fulham Broadway,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Glasgow,Pho,Pho,Vietnamese,known_mapping
+Pho - Greenwich,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Guildford,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Islington,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Kingston,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Leeds,Pho,Gluten Free,Vietnamese,known_mapping
+Pho - Liverpool,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Liverpool 2,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Lothian Road,Pho,Pho,Vietnamese,known_mapping
+Pho - Manchester,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Milton Keynes,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Norwich,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Nottingham,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Oxford,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Portsmouth,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Reading,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Sheffield,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Soho,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Spitalfields,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - Stratford,Pho,Vegan Friendly,Vietnamese,known_mapping
+Pho - Tunbridge Wells,Pho,"Exclusive offers, from our exclusive restaurants",Vietnamese,known_mapping
+Pho - Westfield,Pho,Vegan Friendly,Vietnamese,known_mapping
+Pho - Wimbledon,Pho,Vietnamese,Vietnamese,known_mapping
+Pho - York,Pho,Vietnamese,Vietnamese,known_mapping
+Pizaza - Edgware,Pizaza,Kosher,Italian,known_mapping
+Remedy Kitchen - Editions - ACT,Remedy Kitchen,Healthy,Healthy/Salads,cuisine_tag
+Remedy Kitchen - Editions - BRC,Remedy Kitchen,Healthy,Healthy/Salads,cuisine_tag
+Remedy Kitchen - Editions - BSY,Remedy Kitchen,Healthy,Healthy/Salads,cuisine_tag
+Remedy Kitchen - Editions - BYR,Remedy Kitchen,Healthy,Healthy/Salads,cuisine_tag
+Remedy Kitchen - Editions - CAN,Remedy Kitchen,Mediterranean,Middle Eastern,cuisine_tag
+Remedy Kitchen - Editions - WHI,Remedy Kitchen,Healthy,Healthy/Salads,cuisine_tag
+Remedy Kitchen - Haverstock Hill,Remedy Kitchen,Healthy,Healthy/Salads,cuisine_tag
+Remedy Kitchen - Wandsworth Road,Remedy Kitchen,Healthy,Healthy/Salads,cuisine_tag
+Renao xian,Renao xian,Asian Fusion,Chinese,known_mapping
+Saravana Bhavan - Harrow,Saravana Bhavan,indian,Indian,cuisine_tag
+Saravana Bhavan - Ilford,Saravana Bhavan,indian,Indian,cuisine_tag
+Saravana Bhavan - Southall,Saravana Bhavan,indian,Indian,cuisine_tag
+Shaku Maku,Shaku Maku,Healthy Eating 2025,Healthy/Salads,cuisine_tag
+SoYo,SoYo,Kosher,Korean,known_mapping
+Soyo - Edgware,Soyo,Organic,Korean,known_mapping
+TUK TUK - Golders Green,TUK TUK,Asian Fusion,Thai,known_mapping
+Tadka House - Rathmines,Tadka House,Family favourites,Indian,known_mapping
+Taste Of Hong Kong-DCN,Taste Of Hong Kong-DCN,Roasteries,Chinese,known_mapping
+The Salad Project,The Salad Project,Salads,Healthy/Salads,known_mapping
+The Salad Project - Bond Street,The Salad Project,Chicken,Healthy/Salads,known_mapping
+The Salad Project - Editions - ACT,The Salad Project,Salads,Healthy/Salads,known_mapping
+The Salad Project - Editions - BCP,The Salad Project,Salads,Healthy/Salads,known_mapping
+The Salad Project - Fenchurch,The Salad Project,Salads,Healthy/Salads,known_mapping
+The Salad Project - Oxford Circus,The Salad Project,Salads,Healthy/Salads,known_mapping
+The Salad Project - Southwark Street,The Salad Project,Unknown,Healthy/Salads,known_mapping
+The Salad Project - Tottenham Court Road,The Salad Project,Salads,Healthy/Salads,known_mapping
+The Salad Project Victoria,The Salad Project Victoria,Unknown,Healthy/Salads,known_mapping
+The Tiffin Tin,The Tiffin Tin,halal,Indian,known_mapping
+The Tiffin Tin - Tufnell Park,The Tiffin Tin,indian,Indian,known_mapping
+The Tiffin Tin - West Hampstead,The Tiffin Tin,halal,Indian,known_mapping
+Tiffin Tin (wan),Tiffin Tin (wan),indian,Indian,cuisine_tag
+Tiffin Tin - Totteridge (Core),Tiffin Tin,indian,Indian,cuisine_tag
+Ting Thai - Byres Road,Ting Thai,Asian,Thai,known_mapping
+Ting Thai - West Nile Street,Ting Thai,Asian,Thai,known_mapping
+Ting Thai Lothian Road,Ting Thai Lothian Road,Asian,Thai,known_mapping
+Ting Thai Teviot Place,Ting Thai Teviot Place,Asian,Thai,known_mapping
+Tula Mexican - Lower Baggot Street,Tula Mexican,mexican,Mexican,cuisine_tag
+Umi Falafel (George's St Arcade),Umi Falafel (George's St Arcade),vegetarian,Middle Eastern,known_mapping
+Umi Falafel - Mary St,Umi Falafel,vegetarian,Middle Eastern,known_mapping
+Wagamama - Basingstoke - 129,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Bath - 150,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Battersea Power Station - 282,Wagamama,Asian,Japanese,known_mapping
+Wagamama - Birmingham Brindley Place - 179,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Birmingham New Street - 218,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Bletchley - 254,Wagamama,Asian,Japanese,known_mapping
+Wagamama - Bluewater - 180,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Bournemouth - 151,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Bracknell - 243,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Braintree Village - 273,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Brent Cross - 125,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Brighton Central - 132,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Bristol Cabot Circus - 200,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Bristol Clifton - 116,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Bristol Cribbs Causeway - 198,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Bromley - 232,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Camberley - 171,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Cambridge Leisure - 257,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Camden - 105,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Canary Wharf - 121,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Canterbury - 133,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Cardiff Library - 165,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Cardiff Mermaid Quay - 160,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Chelmsford - 248,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Cheltenham - 242,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Chichester - 202,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Clink Street - 137,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Colchester - 245,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Crawley - 264,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Croydon - 143,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Dublin Dundrum - 301,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Dublin Liffey valley - 300,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Ealing - 186,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Edinburgh Lothian Road - 177,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Edinburgh St Andrew Square - 238,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Enfield Southbury Leisure Park - 263,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Epsom - 289,Wagamama,Asian,Japanese,known_mapping
+Wagamama - Finchley Great North Leisure Park - 194,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Forest Hill Delivery Kitchen - 607,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Fulham Broadway - 187,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Glasgow City Centre - 123,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Glasgow Fort - 222,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Glasgow Silverburn - 155,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Glasgow St Enoch - 288,Wagamama,Asian,Japanese,known_mapping
+Wagamama - Great Marlborough Street - 221,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Guildford - 120,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Hammersmith - 199,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Hampstead - 184,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Hatfield Gelleria - 280,Wagamama,Asian,Japanese,known_mapping
+Wagamama - Holborn new - 188,Wagamama,Asian,Japanese,known_mapping
+Wagamama - Horsham - 174,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Islington - 118,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Kensington - 106,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Kingston - 110,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Leamington Spa - 185,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Leeds Trinity - 196,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Leeds White Rose - 241,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Leeds the Springs - 296,Wagamama,Asian,Japanese,known_mapping
+Wagamama - Liverpool One - 163,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Liverpool Speke - 246,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Manchester Didsbury - 256,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Manchester Media City - 181,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Manchester Printworks - 108,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Manchester St Peter's Square - 239,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Merry Hill - 285,Wagamama,Asian,Japanese,known_mapping
+Wagamama - Milton Keynes City Centre - 138,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Milton Keynes Xscape - 203,Wagamama,japanese,Japanese,known_mapping
+Wagamama - North Greenwich o2 - 172,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Norwich Chapel Field - 140,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Norwich Riverside - 279,Wagamama,Asian,Japanese,known_mapping
+Wagamama - Nottingham - 111,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Nottingham West Bridgford - 265,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Old Street - 252,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Oxford - 152,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Paddington - 266,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Portsmouth Gunwharf Quays - 169,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Putney - 128,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Reading - 130,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Reigate - 244,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Richmond - 126,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Romford - 271,Wagamama,Asian,Japanese,known_mapping
+Wagamama - Sevenoaks - 206,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Sheffield City Centre - 159,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Southampton Westquay - 191,Wagamama,japanese,Japanese,known_mapping
+Wagamama - St Albans - 117,Wagamama,japanese,Japanese,known_mapping
+Wagamama - St Pauls - 235,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Staines - 230,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Stevenage - 253,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Tower Place - 122,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Tunbridge Wells - 127,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Uxbridge - 217,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Victoria - 139,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Walton - 154,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Wandsworth - 195,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Watford Central - 192,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Watford Woodside - 294,Wagamama,Asian,Japanese,known_mapping
+Wagamama - Wembley - 205,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Westfield Stratford - 178,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Wigmore Street - 104,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Wimbledon - 134,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Winchester - 223,Wagamama,japanese,Japanese,known_mapping
+Wagamama - Windsor - 147,Wagamama,japanese,Japanese,known_mapping
+Wagamama - York City Centre - 182,Wagamama,japanese,Japanese,known_mapping
+Xian Street Food - Dublin,Xian Street Food,chinese,Chinese,cuisine_tag
+Xian Street Food -Redfining Noodles (Earl St North),Xian Street Food -Redfining Noodles (Earl St North),chinese,Chinese,cuisine_tag
+Xian Street Food Ballyfermot,Xian Street Food Ballyfermot,chinese,Chinese,cuisine_tag
+Xian Street Food Galway,Xian Street Food Galway,chinese,Chinese,cuisine_tag
+Yacob's Kitchen,Yacob's Kitchen,Healthy,Healthy/Salads,cuisine_tag
+Zaatar Rathmines,Zaatar Rathmines,Middle Eastern,Middle Eastern,cuisine_tag
+Zambrero,Zambrero,Tacos,Mexican,known_mapping
+Zambrero - Battersea,Zambrero,Tacos,Mexican,known_mapping
+Zambrero - Birmingham,Zambrero,Tacos,Mexican,known_mapping
+Zambrero - Chelmsford,Zambrero,Tacos,Mexican,known_mapping
+Zambrero - Crouch End,Zambrero,Tacos,Mexican,known_mapping
+Zambrero - Eastcheap,Zambrero,Tacos,Mexican,known_mapping
+Zambrero - Manchester,Zambrero,Tacos,Mexican,known_mapping
+Zambrero - Queen Victoria Street,Zambrero,Tacos,Mexican,known_mapping
+Zambrero Kentish Town,Zambrero Kentish Town,Tacos,Mexican,known_mapping
+Zambrero London Road,Zambrero London Road,Tacos,Mexican,known_mapping
+Zambrero Manchester Cross Street,Zambrero Manchester Cross Street,Tacos,Mexican,known_mapping
+Zumu - Editions - BRS,Zumu,Featured Restaurants,Sushi,known_mapping
+Zumuku - Editions - SAL,Zumuku,Featured Restaurants,Sushi,known_mapping
+Zumuku Sushi Didsbury,Zumuku Sushi Didsbury,Featured Restaurants,Sushi,known_mapping
+atis - Battersea,atis,Healthy,Healthy/Salads,cuisine_tag
+atis - Borough Yards,atis,Salads,Healthy/Salads,cuisine_tag
+atis - Canary Wharf,atis,Salads,Healthy/Salads,cuisine_tag
+atis - Eastcheap,atis,Salads,Healthy/Salads,cuisine_tag
+atis - Eccleston Yards,atis,Salads,Healthy/Salads,cuisine_tag
+atis - Notting Hill,atis,Salads,Healthy/Salads,cuisine_tag
+atis - Old Street,atis,Salads,Healthy/Salads,cuisine_tag
+atis - Regent Street,atis,Salads,Healthy/Salads,cuisine_tag
+itsu - Aldgate High Street 77,itsu,Salads,Japanese,known_mapping
+itsu - Baker St,itsu,Salads,Japanese,known_mapping
+itsu - Baker Street 132,itsu,Salads,Japanese,known_mapping
+itsu - Battersea,itsu,Salads,Japanese,known_mapping
+itsu - Brighton North Street,itsu,Salads,Japanese,known_mapping
+itsu - Bristol Broadmead,itsu,Salads,Japanese,known_mapping
+itsu - Bristol Cribbs Causeway,itsu,Salads,Japanese,known_mapping
+itsu - Brixton,itsu,Salads,Japanese,known_mapping
+itsu - Brunswick Centre,itsu,Salads,Japanese,known_mapping
+itsu - Cambridge Sidney Street,itsu,Salads,Japanese,known_mapping
+itsu - Camden High Street 191,itsu,Salads,Japanese,known_mapping
+itsu - City Road (2),itsu,Salads,Japanese,known_mapping
+itsu - Ealing Broadway,itsu,Salads,Japanese,known_mapping
+itsu - Edinburgh,itsu,Plus offers Oct 2024,Japanese,known_mapping
+itsu - Great Peter Street 16,itsu,Salads,Japanese,known_mapping
+itsu - Great Portland Street,itsu,Salads,Japanese,known_mapping
+itsu - Guildford,itsu,Salads,Japanese,known_mapping
+itsu - Hampstead,itsu,Salads,Japanese,known_mapping
+itsu - High Holborn 236,itsu,Salads,Japanese,known_mapping
+itsu - High St Kensington,itsu,Salads,Japanese,known_mapping
+itsu - Islington Angel Central,itsu,Salads,Japanese,known_mapping
+itsu - Jubilee Place,itsu,Salads,Japanese,known_mapping
+itsu - Kings Road 47,itsu,Salads,Japanese,known_mapping
+itsu - Kingston Clarence Street,itsu,Salads,Japanese,known_mapping
+itsu - Leeds Commercial Street,itsu,Salads,Japanese,known_mapping
+itsu - Milton Keynes,itsu,Salads,Japanese,known_mapping
+itsu - Notting Hill Gate 100,itsu,Salads,Japanese,known_mapping
+itsu - Oxford Cornmarket Street,itsu,Salads,Japanese,known_mapping
+itsu - Oxford Westgate,itsu,Salads,Japanese,known_mapping
+itsu - Paddington Sheldon Square,itsu,Salads,Japanese,known_mapping
+itsu - Paternoster Square,itsu,Salads,Japanese,known_mapping
+itsu - Piccadilly 167,itsu,Salads,Japanese,known_mapping
+itsu - Putney High Street,itsu,Salads,Japanese,known_mapping
+itsu - Reading Queen Victoria Street,itsu,Salads,Japanese,known_mapping
+itsu - Regent Street,itsu,Salads,Japanese,known_mapping
+itsu - Regent's Place 1,itsu,Salads,Japanese,known_mapping
+itsu - Richmond George Street,itsu,Salads,Japanese,known_mapping
+itsu - Southwark Street 65 (Bankside),itsu,Salads,Japanese,known_mapping
+itsu - St Albans,itsu,Salads,Japanese,known_mapping
+itsu - Stall Street,itsu,Salads,Japanese,known_mapping
+itsu - Stratford,itsu,Salads,Japanese,known_mapping
+itsu - The Glades,itsu,Salads,Japanese,known_mapping
+itsu - The Shard,itsu,Salads,Japanese,known_mapping
+itsu - Victoria Street 163,itsu,Salads,Japanese,known_mapping
+itsu - Westfield White City,itsu,Salads,Japanese,known_mapping
+itsu - Wimbledon Bridge House,itsu,Salads,Japanese,known_mapping
+itsu - Woking Mercia Walk,itsu,Salads,Japanese,known_mapping
+itsu Trafford Centre,itsu Trafford Centre,Salads,Japanese,known_mapping
+itsu – Oxford Street,itsu – Oxford Street,Salads,Japanese,known_mapping

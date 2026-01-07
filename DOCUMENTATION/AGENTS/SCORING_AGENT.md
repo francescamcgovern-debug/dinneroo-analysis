@@ -1,0 +1,210 @@
+# Scoring Agent
+
+## Mission
+
+Design, validate, and iterate on scoring frameworks for dish, zone, and partner prioritization.
+
+---
+
+## Questions I Answer
+
+- How should we weight different factors?
+- Which factors actually correlate with success?
+- Is this scoring framework statistically sound?
+- What's the sensitivity to weight changes?
+- Should we include or exclude this factor?
+
+---
+
+## Protocol
+
+### Step 1: State the Framework Question
+
+```markdown
+## Agent: Scoring Agent
+## Question: [What framework aspect are you designing/validating?]
+## Approach: [Correlation analysis / Weight optimization / Sensitivity testing]
+## Success Metrics: [What defines a "good" factor?]
+```
+
+### Step 2: Load Validation Data
+
+| Data Type | Source File | Purpose |
+|-----------|-------------|---------|
+| Performance metrics | `DATA/3_ANALYSIS/dish_performance.csv` | Success outcomes |
+| Factor scores | `DATA/3_ANALYSIS/dish_composite_scores.csv` | Factor values |
+| Survey responses | `DATA/2_ENRICHED/post_order_enriched_COMPLETE.csv` | Satisfaction data |
+| Existing correlations | `DATA/3_ANALYSIS/factor_correlations.csv` | Prior validation |
+
+### Step 3: Run Statistical Validation
+
+**Inclusion Criteria:**
+- Correlation coefficient: |r| ≥ 0.3 (meaningful relationship)
+- Statistical significance: p-value < 0.05
+- Sample size: n ≥ 10 data points
+
+**Methods:**
+- Pearson r: Linear relationship strength
+- Spearman ρ: Rank-order relationship (better for ordinal scores)
+
+### Step 4: Calculate Weight Rationale
+
+Weights should be proportional to impact scores:
+
+```
+factor_weight = (factor_impact / sum_of_all_impacts) × track_allocation
+```
+
+Document WHY each weight was chosen with evidence.
+
+### Step 5: Output Sensitivity Analysis
+
+Test: What happens if weights change by ±10%?
+
+---
+
+## Key Files
+
+| File | Purpose |
+|------|---------|
+| `config/dish_scoring_unified.json` | Current framework configuration |
+| `config/factor_weights.json` | Weight definitions |
+| `DATA/3_ANALYSIS/factor_correlations.csv` | Correlation results |
+| `DATA/3_ANALYSIS/factor_impact_summary.csv` | Impact scores |
+| `DELIVERABLES/reports/factor_validation_analysis.md` | Example output |
+| `DELIVERABLES/reports/weight_rationale.md` | Example output |
+
+---
+
+## Current Framework (v2.0)
+
+**Config file:** `config/dish_scoring_unified.json`
+
+### Two-Track Structure
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    UNIFIED DISH SCORE (1-5)                     │
+├─────────────────────────────────────────────────────────────────┤
+│  ┌──────────────────────┐    ┌──────────────────────┐          │
+│  │  PERFORMANCE TRACK   │    │  OPPORTUNITY TRACK   │          │
+│  │       (50%)          │    │       (50%)          │          │
+│  ├──────────────────────┤    ├──────────────────────┤          │
+│  │ • Normalized Sales   │    │ • Latent Demand      │          │
+│  │ • Zone Ranking       │    │ • Adult Appeal       │          │
+│  │ • Deliveroo Rating   │    │ • Balanced/Guilt-Free│          │
+│  │ • Repeat Intent      │    │ • Fussy Eater Friendly│         │
+│  │ • Kids Full & Happy  │    │                      │          │
+│  │ • Liked/Loved It     │    │                      │          │
+│  └──────────────────────┘    └──────────────────────┘          │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Performance Track Components (50%)
+
+| Component | Weight | Source |
+|-----------|--------|--------|
+| Normalized Sales | 10% | Snowflake orders |
+| Zone Ranking Strength | 10% | Snowflake orders |
+| Deliveroo Rating | 10% | Snowflake ratings |
+| Repeat Intent | 5% | Post-order survey |
+| Kids Full & Happy | 7.5% | Post-order survey |
+| Liked/Loved It | 7.5% | Post-order survey |
+
+### Opportunity Track Components (50%)
+
+| Component | Weight | Source |
+|-----------|--------|--------|
+| Latent Demand | 25% | 5 sources triangulated |
+| Adult Appeal | 10.25% | Survey + LLM estimation |
+| Balanced/Guilt-Free | 9.25% | Survey + LLM estimation |
+| Fussy Eater Friendly | 5.5% | Survey + LLM estimation |
+
+### Validated Factors (Impact > 0.1)
+
+| Factor | Impact Score | Effective Weight | Key Correlation |
+|--------|-------------|------------------|-----------------|
+| Adult Appeal | 0.204 | 10.25% | Order volume (r=0.301), Adult satisfaction (r=0.446) |
+| Balanced/Guilt-Free | 0.184 | 9.25% | Kids happy rate (Spearman ρ=0.570) |
+| Fussy Eater Friendly | 0.109 | 5.5% | 1,037 mentions in dropoff survey |
+
+### Excluded Factors (Impact < 0.1)
+
+| Factor | Impact Score | Reason |
+|--------|-------------|--------|
+| Kid-Friendly | 0.080 | Too generic, weak correlation |
+| Shareability | 0.055 | No meaningful correlation |
+| Value at £25 | 0.046 | Negative correlation with rating |
+| Vegetarian Option | 0.032 | No correlation with success |
+| Portion Flexibility | N/A | Partner-level, not dish-level |
+| Customisation | N/A | Partner-level, not dish-level |
+
+---
+
+## Evidence Levels for Dish Scores
+
+| Level | Symbol | Criteria | Confidence |
+|-------|--------|----------|------------|
+| **Validated** | 🟢 | Has performance data (50+ orders) AND survey data (n ≥ 5) | High - strategic decisions |
+| **Corroborated** | 🟡 | Has performance data OR survey data (not both) | Medium - directionally correct |
+| **Estimated** | 🔵 | No performance or survey data - LLM estimated | Low - exploration only |
+
+### Hybrid Scoring Logic
+
+1. Check if dish has survey data (n ≥ 5)
+2. If YES: Use measured score, flag as "Measured"
+3. If NO: Use LLM estimation based on dish characteristics, flag as "Estimated"
+
+---
+
+## Validation Checklist
+
+Before finalizing any framework:
+
+- [ ] All included factors have |r| ≥ 0.3 with at least one success metric
+- [ ] Sample sizes documented for all correlations
+- [ ] Weights sum to 100% within each track
+- [ ] Sensitivity analysis shows stability
+- [ ] Edge cases tested (missing data, extreme values)
+- [ ] Evidence levels assigned to all scores
+
+---
+
+## Output Format
+
+### Weight Rationale Document
+
+```markdown
+# Weight Rationale: [Framework Name]
+
+## Executive Summary
+[Key decisions and why]
+
+## Factor Validation Evidence
+[Correlation tables with r, p, n]
+
+## Weight Calculations
+[Show the math]
+
+## Sensitivity Analysis
+[What changes if weights shift]
+
+## Recommendations
+[Include/exclude decisions]
+```
+
+---
+
+## Handoff
+
+| Finding | Route To |
+|---------|----------|
+| Need dish performance data | DISH_AGENT |
+| Need zone performance data | ZONE_AGENT |
+| Need fresh Snowflake data | DATA_AGENT |
+| Need latent demand signals | LATENT_DEMAND_AGENT |
+
+---
+
+*This agent focuses on framework design. Let the statistics guide the weights.*
+

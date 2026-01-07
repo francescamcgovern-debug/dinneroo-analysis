@@ -1,228 +1,362 @@
-# Unified Dish Scoring Framework
+# Unified Dish Scoring Framework v2.0
 
 ## Overview
 
-This framework merges **Anna's Hit List** (performance-focused) with the **Family Fit Framework** (positioning-focused) to create a comprehensive dish scoring system.
+This framework scores dishes using a **two-track approach** that works for both existing Dinneroo dishes (with data) and potential new dishes (without data). 
 
----
-
-## Why Merge?
-
-| Approach | Strength | Weakness |
-|----------|----------|----------|
-| **Anna's Hit List** | Strong behavioral data (what sells) | Doesn't capture family-specific fit |
-| **Family Fit Framework** | Captures Dinneroo positioning | Light on actual performance data |
-| **Unified** | Both performance AND fit | More complex, more data required |
-
-**The unified approach ensures we prioritize dishes that BOTH perform well AND fit Dinneroo's family positioning.**
+**Key Innovation:** Factor weights are **validated through correlation analysis** - only factors that demonstrably impact dish success are included.
 
 ---
 
 ## Framework Structure
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                 UNIFIED DISH SCORING (100%)                      │
-├─────────────────────────────────────────────────────────────────┤
-│  PERFORMANCE (35%)                    ← Anna's behavioral data  │
-│  ├── Normalized Sales (10.5%)         Looker                    │
-│  ├── Zone Ranking Strength (8.75%)    Looker                    │
-│  ├── Deliveroo Rating (8.75%)         Looker                    │
-│  └── Repeat Intent (7%)               Post-Order Survey         │
-├─────────────────────────────────────────────────────────────────┤
-│  SATISFACTION (20%)                   ← Blended survey signals  │
-│  ├── Meal Satisfaction (10%)          Post-Order Survey         │
-│  └── Kids Happy Rate (10%)            Post-Order Survey         │
-├─────────────────────────────────────────────────────────────────┤
-│  FAMILY FIT (30%)                     ← Dinneroo positioning    │
-│  ├── Kid-Friendly (7.5%)              Survey + Assessment       │
-│  ├── Fussy Eater Friendly (7.5%)      Dropoff Survey            │
-│  ├── Balanced/Guilt-Free (6%)         Survey + Positioning      │
-│  ├── Portion Flexibility (6%)         Post-Order Survey         │
-│  └── Customisation (3%)               Dropoff Survey            │
-├─────────────────────────────────────────────────────────────────┤
-│  OPPORTUNITY (15%)                    ← Growth potential        │
-│  ├── Dish Suitability Rating (5.25%)  Pre-launch R&I (Anna)     │
-│  ├── Open-Text Requests (5.25%)       Post-Launch Survey        │
-│  └── Availability Gap (4.5%)          Menu Catalog              │
-└─────────────────────────────────────────────────────────────────┘
+UNIFIED DISH SCORE (1-5 scale)
+│
+├── PERFORMANCE TRACK (50%) ─────────────────────────────────
+│   │   "How well does this dish perform?"
+│   │   Source: Snowflake orders + Survey data
+│   │
+│   ├── Normalized Sales (10%)
+│   ├── Zone Ranking Strength (10%)
+│   ├── Deliveroo Rating (10%)
+│   ├── Repeat Intent (5%)
+│   ├── Kids Full & Happy (7.5%)
+│   └── Liked/Loved It (7.5%)
+│
+└── OPPORTUNITY TRACK (50%) ─────────────────────────────────
+    │   "How much potential does this dish have?"
+    │   Source: Latent demand signals + Validated fit factors
+    │
+    ├── Latent Demand Score (25%)
+    │   └── Combined from: open-text mentions, OG wishlist, barriers
+    │
+    └── Validated Fit Factors (25%)
+        ├── Adult Appeal (10.25%)
+        ├── Balanced/Guilt-Free (9.25%)
+        └── Fussy Eater Friendly (5.5%)
 ```
 
 ---
 
-## Category Details
+## Two-Track Approach
 
-### 1. Performance (35%) — Anna's Contribution
+### Why Two Tracks?
 
-**Purpose:** What families actually do. Behavioral data showing revealed demand.
+**Performance** shows what's working among available options, but creates **survivorship bias** - unavailable dishes score poorly not because families don't want them, but because they CAN'T order them.
 
-| Factor | Weight | Source | Calculation |
-|--------|--------|--------|-------------|
-| **Normalized Sales** | 10.5% | Looker | Orders / (zones × days listed) |
-| **Zone Ranking Strength** | 8.75% | Looker | % zones #1 + % zones top 5 |
-| **Deliveroo Rating** | 8.75% | Looker | Average star rating |
-| **Repeat Intent** | 7% | Survey | % likely to reorder |
+**Opportunity** captures latent demand and fit factors, allowing us to score dishes that aren't currently on Dinneroo.
 
-**Why 35%:** Behavioral data is the strongest signal. Anna's normalized metrics prevent availability bias (dishes in more zones don't automatically score higher).
+| Track | What It Measures | Data Source | Applies To |
+|-------|-----------------|-------------|------------|
+| **Performance** | Revealed preference - what families actually do | Snowflake + Surveys | Existing dishes with 50+ orders |
+| **Opportunity** | Latent demand + fit potential | Open-text + LLM | ALL dishes (existing + potential) |
 
----
+### Scoring Logic for Different Dish Types
 
-### 2. Satisfaction (20%) — Blended Signals
-
-**Purpose:** How families feel about the dish. Combines adult and child satisfaction.
-
-| Factor | Weight | Source | Calculation |
-|--------|--------|--------|-------------|
-| **Meal Satisfaction** | 10% | Post-Order Survey | % satisfied/very satisfied |
-| **Kids Happy Rate** | 10% | Post-Order Survey | % "full and happy" |
-
-**Why 20%:** Satisfaction predicts retention. Kids happy rate is critical—if kids don't eat it, families won't return.
+| Dish Status | Performance Score | Opportunity Score | Final Score |
+|-------------|------------------|-------------------|-------------|
+| On Dinneroo (50+ orders) | Calculated from data | Calculated | Weighted average |
+| On Dinneroo (<50 orders) | N/A | Calculated | Opportunity only |
+| Not on Dinneroo | N/A | Calculated | Opportunity only |
 
 ---
 
-### 3. Family Fit (30%) — Dinneroo Positioning
+## Performance Track Components (50%)
 
-**Purpose:** Does this dish work for Dinneroo's "balanced midweek family meal" positioning?
+### 1. Normalized Sales (10%)
 
-| Factor | Weight | Source | What It Captures |
-|--------|--------|--------|------------------|
-| **Kid-Friendly** | 7.5% | Survey + Assessment | Kids will actually eat it |
-| **Fussy Eater Friendly** | 7.5% | Dropoff Survey | Mild options for picky eaters |
-| **Balanced/Guilt-Free** | 6% | Survey + Positioning | Parents feel good serving it |
-| **Portion Flexibility** | 6% | Post-Order Survey | Feeds family of 4 |
-| **Customisation** | 3% | Dropoff Survey | Accommodates preferences |
+**What it measures:** Demand for dish, normalized for availability
 
-**Why 30%:** Dinneroo isn't just food delivery—it's positioned for balanced midweek family meals. A dish that sells well but doesn't fit this positioning shouldn't be prioritized.
+**Source:** Snowflake orders
+
+**Calculation:** Total orders / (zones available × days listed)
+
+| Score | Criteria |
+|-------|----------|
+| 5 | Top 10% of normalized sales |
+| 4 | Top 25% |
+| 3 | Top 50% |
+| 2 | Bottom 50% |
+| 1 | Bottom 25% |
+
+### 2. Zone Ranking Strength (10%)
+
+**What it measures:** Consistency of demand across zones
+
+**Source:** Snowflake orders
+
+**Calculation:** % of zones where dish ranks in top 5
+
+| Score | Criteria |
+|-------|----------|
+| 5 | Top 5 in 60%+ of zones |
+| 4 | Top 5 in 40%+ of zones |
+| 3 | Top 5 in 20%+ of zones |
+| 2 | Top 5 in 10%+ of zones |
+| 1 | Rarely in top 5 |
+
+### 3. Deliveroo Rating (10%)
+
+**What it measures:** Customer satisfaction signal
+
+**Source:** Snowflake ratings
+
+| Score | Criteria |
+|-------|----------|
+| 5 | 4.5+ stars |
+| 4 | 4.3-4.49 stars |
+| 3 | 4.0-4.29 stars |
+| 2 | 3.5-3.99 stars |
+| 1 | Below 3.5 stars |
+
+### 4. Repeat Intent (5%)
+
+**What it measures:** Forward-looking retention signal
+
+**Source:** Post-order survey
+
+**Question:** "I would like to order the same dish again"
+
+| Score | Criteria |
+|-------|----------|
+| 5 | 80%+ would reorder |
+| 4 | 70-79% |
+| 3 | 60-69% |
+| 2 | 50-59% |
+| 1 | Below 50% |
+
+### 5. Kids Full & Happy (7.5%)
+
+**What it measures:** Critical family success factor
+
+**Source:** Post-order survey
+
+**Question:** "How did your child(ren) react to the meal?"
+
+| Score | Criteria |
+|-------|----------|
+| 5 | 85%+ "full and happy" |
+| 4 | 75-84% |
+| 3 | 65-74% |
+| 2 | 55-64% |
+| 1 | Below 55% |
+
+### 6. Liked/Loved It (7.5%)
+
+**What it measures:** Adult satisfaction
+
+**Source:** Post-order survey
+
+**Question:** "How did you feel about the meal?"
+
+| Score | Criteria |
+|-------|----------|
+| 5 | 90%+ "Loved it" or "Liked it" |
+| 4 | 80-89% |
+| 3 | 70-79% |
+| 2 | 60-69% |
+| 1 | Below 60% |
 
 ---
 
-### 4. Opportunity (15%) — Growth Potential
+## Opportunity Track Components (50%)
 
-**Purpose:** Forward-looking signals for dishes with untapped potential.
+### 1. Latent Demand Score (25%)
 
-| Factor | Weight | Source | What It Captures |
-|--------|--------|--------|------------------|
-| **Dish Suitability Rating** | 5.25% | Pre-launch R&I | Consumer appeal before launch |
-| **Open-Text Requests** | 5.25% | Post-Launch Survey | Explicit unmet demand |
-| **Availability Gap** | 4.5% | Menu Catalog | Room for expansion |
+**What it measures:** Unmet demand for dish types
 
-**Why 15%:** Opportunity signals help identify growth, but shouldn't override proven performance. A dish people SAY they want isn't as strong as one they actually order.
+**Sources combined:**
+- Open-text mentions (45%): Dropoff survey, post-order survey, ratings comments
+- OG Survey wishlist (30%): % who want to eat this more
+- Barrier signals (25%): Dropoff responses indicating unmet needs
+
+**Methodology:** `scripts/phase2_analysis/extract_latent_demand.py`
+
+| Score | Criteria |
+|-------|----------|
+| 5 | 20+ combined mentions OR 15%+ wishlist |
+| 4 | 10-19 mentions OR 10-14% wishlist |
+| 3 | 5-9 mentions OR 5-9% wishlist |
+| 2 | 2-4 mentions |
+| 1 | 0-1 mentions |
+
+### 2. Validated Fit Factors (25%)
+
+These factors were **validated through correlation analysis** with success metrics. Only factors with impact score > 0.1 are included.
+
+See: `DELIVERABLES/reports/factor_validation_analysis.md`
+
+#### Adult Appeal (10.25%)
+
+**Validation:**
+- Impact score: 0.204 (highest of all factors)
+- Pearson correlation: 0.196 with success metrics
+- Spearman correlation: 0.213
+
+**What it measures:** Adults genuinely enjoy this dish
+
+| Score | Criteria |
+|-------|----------|
+| 5 | Restaurant-quality that adults actively want |
+| 4 | Adults genuinely enjoy it, good flavors |
+| 3 | Adults tolerate it, acceptable |
+| 2 | More kid-focused, adults wouldn't choose |
+| 1 | Adults wouldn't order for themselves |
+
+#### Balanced/Guilt-Free (9.25%)
+
+**Validation:**
+- Impact score: 0.184
+- Pearson correlation: 0.174
+- Spearman correlation: 0.286 (strong rank correlation)
+
+**What it measures:** Fits "balanced midweek meal" positioning
+
+| Score | Criteria |
+|-------|----------|
+| 5 | Clearly balanced: protein + veg + carbs, grilled/healthy |
+| 4 | Mostly balanced, some vegetables |
+| 3 | Neutral - can go either way |
+| 2 | Indulgent but some redeeming qualities |
+| 1 | Pure treat/indulgence |
+
+#### Fussy Eater Friendly (5.5%)
+
+**Validation:**
+- Impact score: 0.109 (just above threshold)
+- Supported by 1,037 mentions in dropoff survey
+
+**What it measures:** Picky eaters will accept this
+
+| Score | Criteria |
+|-------|----------|
+| 5 | Mild by default, universally appealing |
+| 4 | Mild option available, familiar ingredients |
+| 3 | Can be made mild on request |
+| 2 | Some unfamiliar ingredients |
+| 1 | Spicy/complex by nature |
 
 ---
 
-## Scoring Scale
+## Factors Excluded from Framework
 
-All factors are scored 1-5:
+The following factors were tested but **excluded due to weak correlation** with success metrics:
 
-| Score | Meaning |
-|-------|---------|
-| 5 | Excellent - top performer |
-| 4 | Good - above average |
-| 3 | Average - meets expectations |
-| 2 | Below average - needs improvement |
-| 1 | Poor - significant concerns |
+| Factor | Impact Score | Reason for Exclusion |
+|--------|-------------|---------------------|
+| Kid-Friendly | 0.080 | Below 0.1 threshold |
+| Shareability | 0.055 | No meaningful correlation |
+| Value at £25 | 0.046 | Negative correlation with rating |
+| Vegetarian Option | 0.032 | No meaningful correlation |
+| Portion Flexibility | N/A | Partner-level, not dish-type |
+| Customisation | N/A | Partner-level, not dish-type |
 
-**Composite Score** = Weighted sum of all factors (range 1.0 - 5.0)
+---
+
+## Hybrid Scoring Logic
+
+For fit factors, we use a **hybrid approach**:
+
+```
+IF survey data exists for this dish type (n >= 5):
+    → Use measured score from survey
+    → Flag as "Measured"
+ELSE:
+    → Use LLM estimation based on dish characteristics
+    → Flag as "Estimated"
+```
+
+### Evidence Levels
+
+| Level | Criteria | Confidence |
+|-------|----------|------------|
+| **Validated** | Has performance data (50+ orders) AND survey data | High - strategic decisions |
+| **Corroborated** | Has performance data OR survey data | Medium - directionally correct |
+| **Estimated** | No performance or survey data | Low - exploration only |
+
+---
+
+## Composite Score Calculation
+
+### For dishes WITH performance data:
+
+```
+Unified Score = Performance (50%) + Opportunity (50%)
+
+Performance = (normalized_sales × 0.10) + (zone_ranking × 0.10) + 
+              (rating × 0.10) + (repeat_intent × 0.05) + 
+              (kids_happy × 0.075) + (liked_loved × 0.075)
+
+Opportunity = (latent_demand × 0.25) + (adult_appeal × 0.1025) + 
+              (balanced × 0.0925) + (fussy_eater × 0.055)
+```
+
+### For dishes WITHOUT performance data:
+
+```
+Unified Score = Opportunity Score (normalized to 1-5 scale)
+```
 
 ---
 
 ## Tier Classification
 
-Based on composite score:
-
 | Tier | Score | Label | Action |
 |------|-------|-------|--------|
-| **Tier 1** | 4.0+ | **Must-Have** | Essential for every MVP zone. Prioritize availability. |
-| **Tier 2** | 3.5-3.99 | **Should-Have** | Important for zone strength. Recruit where gaps exist. |
-| **Tier 3** | 3.0-3.49 | **Nice-to-Have** | Good for variety. Add opportunistically. |
-| **Tier 4** | <3.0 | **Monitor** | Investigate underperformance. Consider removal. |
+| **Tier 1** | 4.0+ | Must-Have | Essential for every MVP zone |
+| **Tier 2** | 3.5-3.99 | Should-Have | Important for zone strength |
+| **Tier 3** | 3.0-3.49 | Nice-to-Have | Good for variety |
+| **Tier 4** | <3.0 | Monitor | Investigate or deprioritize |
 
 ---
 
-## Quadrant Analysis
+## 2x2 Quadrant Analysis (Action-Oriented)
 
-Plot dishes on **Performance vs Family Fit** axes:
+### For Dishes ON Dinneroo (with performance data)
+
+Plot dishes on **Performance vs Opportunity** axes:
 
 ```
-                    HIGH FAMILY FIT
+                    HIGH OPPORTUNITY
                           │
-         POTENTIAL        │        STAR ⭐
+         DEVELOP          │        PRIORITY
     (Good fit, not        │    (Proven winner)
      selling - why?)      │    
-                          │    ACTION: EXPAND
-    ACTION: INVESTIGATE   │
+                          │    ACTION: Expand aggressively
+    ACTION: Fix issues,   │
+    improve quality       │
                           │
     ──────────────────────┼──────────────────────
                           │
-         QUESTION MARK    │      CASH COW 💰
-    (Not fit, not         │    (Selling but 
-     selling)             │     off-brand)
+         MONITOR          │        PROTECT
+    (Not fit, not         │    (Selling well but 
+     selling)             │     limited opportunity)
                           │    
-    ACTION: REVIEW/REMOVE │    ACTION: MAINTAIN
+    ACTION: Watch,        │    ACTION: Maintain quality,
+    deprioritize          │    don't over-invest
                           │
-                    LOW FAMILY FIT
+                    LOW OPPORTUNITY
 ```
 
----
+### For Dishes NOT on Dinneroo (no performance data)
 
-## Data Requirements
+Since these dishes have no performance data, we use **opportunity score only**:
 
-### From Looker (Anna's data)
-- [ ] Average sales per dish (normalized for availability)
-- [ ] % zones where dish ranks #1
-- [ ] % zones where dish ranks top 5
-- [ ] Deliveroo rating by dish
+| Quadrant | Opportunity | What To Do |
+|----------|-------------|------------|
+| **Prospect** | High (≥3.0) | Expansion opportunity - recruit partners for these dishes |
+| **Monitor** | Low (<3.0) | Low priority for expansion |
 
-### From Post-Order Survey
-- [ ] Meal satisfaction score by dish
-- [ ] Kids happy rate by dish
-- [ ] Repeat intent by dish
+### Quadrant Actions Summary
 
-### From Pre-Launch Research
-- [ ] Dish suitability rating (Anna's R&I)
-
-### From Open-Text Analysis
-- [ ] Dish request counts
-
-### From Menu Catalog
-- [ ] Dish availability by zone
-
----
-
-## Evidence Levels
-
-| Level | Criteria | Confidence |
-|-------|----------|------------|
-| 🟢 **Validated** | 8+ of 13 factors have data | High - strategic decisions |
-| 🟡 **Corroborated** | 5-7 factors have data | Medium - directionally correct |
-| 🔵 **Estimated** | <5 factors have data | Low - exploration only |
-
----
-
-## Example Scoring
-
-### Family Chicken Katsu (Wagamama)
-
-| Category | Factor | Score | Weighted |
-|----------|--------|-------|----------|
-| **Performance** | Normalized Sales | 5 | 0.525 |
-| | Zone Ranking | 5 | 0.4375 |
-| | Deliveroo Rating | 4 | 0.35 |
-| | Repeat Intent | 4 | 0.28 |
-| **Satisfaction** | Meal Satisfaction | 4 | 0.40 |
-| | Kids Happy | 4 | 0.40 |
-| **Family Fit** | Kid-Friendly | 5 | 0.375 |
-| | Fussy Eater | 4 | 0.30 |
-| | Balanced | 3 | 0.18 |
-| | Portions | 4 | 0.24 |
-| | Customisation | 3 | 0.09 |
-| **Opportunity** | Suitability | 4 | 0.21 |
-| | Open-Text | 2 | 0.105 |
-| | Availability Gap | 2 | 0.09 |
-| | | | |
-| **TOTAL** | | | **4.08** |
-
-**Tier: 1 (Must-Have)** ✅
+| Quadrant | Performance | Opportunity | What To Do |
+|----------|-------------|-------------|------------|
+| **Priority** | High (≥3.5) | High (≥3.0) | Expand aggressively - these are your winners |
+| **Protect** | High (≥3.5) | Low (<3.0) | Maintain quality, don't over-invest in expansion |
+| **Develop** | Low (<3.5) | High (≥3.0) | Investigate issues, improve quality, fix problems |
+| **Prospect** | N/A (not on platform) | High (≥3.0) | Recruit partners - high expansion potential |
+| **Monitor** | Low (<3.5) or N/A | Low (<3.0) | Watch for changes, deprioritize for now |
 
 ---
 
@@ -232,39 +366,36 @@ Plot dishes on **Performance vs Family Fit** axes:
 `config/dish_scoring_unified.json`
 
 ### Scoring Script
-`scripts/phase2_analysis/01_score_dishes.py` (update to use unified framework)
+`scripts/phase2_analysis/01_score_dishes.py`
 
-### Output
-- `DATA/3_ANALYSIS/dish_scores_unified.csv`
-- `docs/data/priority_dishes.json`
-
----
-
-## Comparison: Old vs Unified
-
-| Aspect | Old 10-Factor | Unified 13-Factor |
-|--------|---------------|-------------------|
-| Performance data | 5% (on menu only) | 35% (Anna's metrics) |
-| Satisfaction | 8% (adult appeal) | 20% (adult + kids) |
-| Family fit | 87% | 30% |
-| Opportunity | 0% | 15% |
-| Behavioral vs Survey | Survey-heavy | Balanced |
-
-**Key improvement:** The unified framework balances what families SAY (survey) with what they DO (behavioral).
+### Outputs
+- `DATA/3_ANALYSIS/priority_100_unified.csv` - Master list (100 dishes)
+- `DATA/3_ANALYSIS/dish_2x2_unified.csv` - Quadrant assignments
+- `docs/data/priority_100_unified.json` - Dashboard data
+- `config/dish_types_master.json` - Master dish type definitions
 
 ---
 
-## When to Use Which
+## Changelog
 
-| Scenario | Framework | Why |
-|----------|-----------|-----|
-| Scoring existing dishes | Unified | Full data available |
-| Evaluating new dish ideas | Family Fit only | No performance data yet |
-| Partner recruitment | Opportunity factors | Focus on gaps |
-| Zone prioritization | Performance factors | Focus on proven demand |
+### v2.1 (2026-01-07)
+- **Expanded dish list:** 48 → 100 dish types
+- **Added non-Dinneroo dishes:** 69 dishes not currently on platform (expansion opportunities)
+- **Renamed quadrants:** Action-oriented names (Priority, Protect, Develop, Monitor)
+- **Added master config:** `config/dish_types_master.json` with all 100 dishes
+
+### v2.0 (2026-01-07)
+- **Factor validation:** Added correlation analysis to validate which factors impact success
+- **Removed factors:** Kid-friendly, shareability, value, vegetarian (weak correlation)
+- **Removed factors:** Portion flexibility, customisation (partner-level, not dish-type)
+- **Added:** Comprehensive latent demand scoring from all sources
+- **Added:** Hybrid scoring logic (survey data + LLM fallback)
+- **Added:** Evidence level flagging
+
+### v1.0 (2026-01-06)
+- Initial unified framework merging Anna's Hit List with Family Fit Framework
 
 ---
 
 *Configuration: `config/dish_scoring_unified.json`*
-*Last updated: 2026-01-06*
-
+*Validation Report: `DELIVERABLES/reports/factor_validation_analysis.md`*

@@ -1,0 +1,153 @@
+{
+  "generated_at": "2026-01-07T18:41:45.563414",
+  "summary": {
+    "status": "warn",
+    "total_comparisons": 3,
+    "passed": 2,
+    "warnings": 1,
+    "failures": 0
+  },
+  "comparisons": [
+    {
+      "metric": "site_count",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "anna_brand_count": 40,
+        "anna_total_sites": 756,
+        "snowflake_site_count": 770,
+        "snowflake_sites_sample": [
+          "0131 - Fulham - 363 Fulham Road - PizzaExpress",
+          "0141 - London - Notting Hill Gate - PizzaExpress",
+          "0191 - Clapham - Lavender Hill - PizzaExpress",
+          "0201 - Teddington - Waldegrave Road - PizzaExpress",
+          "0231 - Highgate - High Street - PizzaExpress"
+        ],
+        "snowflake_brand_count_estimated": 392,
+        "snowflake_brands_sample": [
+          "ACT",
+          "Aldgate High Street 77",
+          "Angel",
+          "Angel Islington",
+          "BCP",
+          "BER",
+          "BLW",
+          "BNC",
+          "BRC",
+          "BRS"
+        ],
+        "site_discrepancy_pct": 1.9,
+        "site_difference": "-14",
+        "explanation": "Snowflake site count is HIGHER than Anna's - investigate. This could indicate sites not in Anna's tracking or naming variations."
+      }
+    },
+    {
+      "metric": "zone_count",
+      "status": "warn",
+      "issues": [
+        "Zone count discrepancy 53.7% is notable (Snowflake: 201, Anna: 434)"
+      ],
+      "details": {
+        "anna_total_zones": 1306,
+        "anna_zones_with_dishes": 434,
+        "snowflake_zone_count": 201,
+        "discrepancy_pct": 53.7,
+        "difference": 233,
+        "explanation": "Snowflake count is lower than Anna's - this is EXPECTED. Order data only shows zones with orders, not all zones with coverage."
+      }
+    },
+    {
+      "metric": "dish_count",
+      "status": "pass",
+      "issues": [],
+      "details": {
+        "anna_dish_count": 155,
+        "snowflake_unique_items": 50614,
+        "explanation": "Snowflake menu catalog contains all menu item variations. Anna's list is curated family dishes (142). These are not directly comparable - Anna's is the authoritative list of family dishes."
+      }
+    }
+  ],
+  "missing_entities": {
+    "missing_partners": [
+      "bella italia",
+      "tadka house",
+      "giggling squid",
+      "dishoom",
+      "banana tree",
+      "cacciari's",
+      "farmer j",
+      "wagamama",
+      "ting thai",
+      "zumuku",
+      "prezzo",
+      "saravana bhavan",
+      "soyo-sgroup",
+      "jakob's kitchen",
+      "pizaza-sgroup",
+      "tula",
+      "itsu",
+      "tuk tuk-sgroup",
+      "asia villa",
+      "tiffin tin"
+    ],
+    "missing_zones": [
+      "drt",
+      "ehor",
+      "rthm",
+      "wloo",
+      "wot",
+      "naas",
+      "boz",
+      "oabd",
+      "oglc",
+      "drgh",
+      "so3",
+      "sti",
+      "bnb",
+      "ep1",
+      "tq03",
+      "ll01",
+      "rg01",
+      "g03",
+      "eh2",
+      "hrt"
+    ],
+    "coverage_analysis": {
+      "partners": {
+        "anna_total": 40,
+        "snowflake_total": 770,
+        "missing_from_orders": 37,
+        "coverage_pct": 1925.0
+      },
+      "zones": {
+        "anna_total": 1306,
+        "snowflake_total": 201,
+        "missing_from_orders": 1306,
+        "coverage_pct": 15.4
+      }
+    }
+  },
+  "known_differences": {
+    "order_derived_undercount": "\n    Order-derived counts will always be LOWER than Anna's ground truth because:\n    1. Partners can be onboarded but have zero orders yet\n    2. Zones can have dishes available that haven't been ordered\n    3. Order data only shows what was purchased, not what's available\n    \n    This is EXPECTED behavior. Anna's data is the authoritative source for \"what we have\".\n    Snowflake data shows \"what has been ordered\" (revealed preference).\n    ",
+    "menu_item_variations": "\n    Menu item names in Snowflake may differ from Anna's categorization due to:\n    1. Partner naming conventions\n    2. Menu item variations (e.g., \"Chicken Katsu\" vs \"Katsu Curry\")\n    3. Aggregation differences\n    "
+  },
+  "recommendations": [
+    {
+      "priority": "medium",
+      "metric": "zone_count",
+      "action": "Monitor zone_count discrepancy",
+      "details": "Zone count discrepancy 53.7% is notable (Snowflake: 201, Anna: 434)"
+    },
+    {
+      "priority": "info",
+      "metric": "data_usage",
+      "action": "Use Anna's ground truth for supply metrics",
+      "details": "Snowflake shows revealed preference (orders), Anna shows actual availability"
+    }
+  ],
+  "data_usage_guidance": {
+    "supply_metrics": "Use Anna's ground truth (anna_*.csv)",
+    "performance_metrics": "Use Snowflake data (orders, ratings)",
+    "preference_metrics": "Use surveys with triangulation"
+  }
+}

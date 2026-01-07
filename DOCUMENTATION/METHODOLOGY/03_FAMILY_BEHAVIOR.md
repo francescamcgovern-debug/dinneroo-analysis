@@ -227,3 +227,5 @@ Only see behavior of customers who use Dinneroo.
 
 *This methodology ensures customer understanding is evidence-based and segmentation is actionable.*
 
+
+

@@ -1,0 +1,27 @@
+{
+  "analysis_date": "2026-01-06",
+  "methodology": "Zones bucketed by unique_dishes count (order line items, not curated dish list). Consumer outcomes approximated from zone-level data.",
+  "caveat": "unique_dishes from zone_quality_scores.csv includes sides, drinks, etc. For curated dish count, use Anna's Item Categorisation.",
+  "dish_count_buckets": {
+    "1-9_dishes": {
+      "zone_count": 4,
+      "avg_rating": 1.5,
+      "total_orders": 13
+    },
+    "10-19_dishes": {
+      "zone_count": 7,
+      "avg_rating": 3.1,
+      "total_orders": 47
+    },
+    "20+_dishes": {
+      "zone_count": 186,
+      "avg_rating": 4.25,
+      "total_orders": 47098
+    }
+  },
+  "validation_status": {
+    "threshold_20_supported": true,
+    "recommendation": "20+ dishes threshold supported by rating data",
+    "rating_diff_20_vs_1-9": 2.75
+  }
+}

@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinneroo Zone Success & Dish Prioritization Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --bg-dark: #0a0f1a;
+            --bg-card: #111827;
+            --bg-card-hover: #1f2937;
+            --accent-teal: #00d4aa;
+            --accent-orange: #ff6b35;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #3b82f6;
+            --accent-pink: #ec4899;
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --border: #374151;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(ellipse at 20% 20%, rgba(0, 212, 170, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+        }
+        
+        .container { max-width: 1600px; margin: 0 auto; padding: 2rem; }
+        
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);
+        }
+        
+        h1 {
+            font-size: 2rem; font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        
+        .subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.25rem; }
+        
+        .header-stats { display: flex; gap: 2rem; }
+        .header-stat { text-align: right; }
+        .header-stat-value { font-family: 'Space Mono', monospace; font-size: 1.75rem; font-weight: 700; }
+        .header-stat-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+        
+        /* Tabs */
+        .tabs { display: flex; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .tab {
+            padding: 0.75rem 1.5rem; background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 0.5rem; cursor: pointer; transition: all 0.2s; color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .tab:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+        .tab.active {
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+            color: var(--bg-dark); border-color: transparent;
+        }
+        
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        
+        /* Cards */
+        .card {
+            background: var(--bg-card); border-radius: 1rem; padding: 1.5rem;
+            border: 1px solid var(--border); margin-bottom: 1.5rem;
+        }
+        .card-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .card-title .icon { font-size: 1.25rem; }
+        
+        /* Grids */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+        
+        /* Metric Cards */
+        .metric-card {
+            background: var(--bg-card); border-radius: 1rem; padding: 1.5rem;
+            border: 1px solid var(--border); text-align: center;
+        }
+        .metric-value { font-family: 'Space Mono', monospace; font-size: 2.5rem; font-weight: 700; }
+        .metric-label { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem; }
+        .metric-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; }
+        
+        .teal { color: var(--accent-teal); }
+        .purple { color: var(--accent-purple); }
+        .orange { color: var(--accent-orange); }
+        .blue { color: var(--accent-blue); }
+        .pink { color: var(--accent-pink); }
+        
+        /* Tables */
+        .table-container { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg-dark); color: var(--text-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; cursor: pointer; }
+        th:hover { color: var(--accent-teal); }
+        tr:hover { background: var(--bg-card-hover); }
+        
+        .badge {
+            display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.25rem;
+            font-size: 0.75rem; font-weight: 600;
+        }
+        .badge-success { background: rgba(16, 185, 129, 0.2); color: var(--success); }
+        .badge-warning { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+        .badge-danger { background: rgba(239, 68, 68, 0.2); color: var(--danger); }
+        .badge-info { background: rgba(59, 130, 246, 0.2); color: var(--accent-blue); }
+        .badge-purple { background: rgba(139, 92, 246, 0.2); color: var(--accent-purple); }
+        
+        /* Filters */
+        .filters { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center; }
+        .filter-group { display: flex; flex-direction: column; gap: 0.25rem; }
+        .filter-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; }
+        select, input {
+            padding: 0.5rem 1rem; background: var(--bg-dark); border: 1px solid var(--border);
+            border-radius: 0.5rem; color: var(--text-primary); font-family: inherit;
+        }
+        select:focus, input:focus { outline: none; border-color: var(--accent-teal); }
+        
+        /* Toggle */
+        .toggle-group { display: flex; gap: 0; }
+        .toggle-btn {
+            padding: 0.5rem 1rem; background: var(--bg-dark); border: 1px solid var(--border);
+            color: var(--text-secondary); cursor: pointer; transition: all 0.2s;
+        }
+        .toggle-btn:first-child { border-radius: 0.5rem 0 0 0.5rem; }
+        .toggle-btn:last-child { border-radius: 0 0.5rem 0.5rem 0; }
+        .toggle-btn.active { background: var(--accent-teal); color: var(--bg-dark); border-color: var(--accent-teal); }
+        
+        /* Chart containers */
+        .chart-container { position: relative; height: 300px; }
+        .chart-container-large { position: relative; height: 450px; }
+        
+        /* Insight boxes */
+        .insight-box {
+            background: linear-gradient(135deg, rgba(0, 212, 170, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid var(--accent-teal); border-radius: 0.75rem; padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .insight-box h4 { color: var(--accent-teal); font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .insight-box p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; }
+        .insight-box .stat { font-family: 'Space Mono', monospace; color: var(--text-primary); font-weight: 700; }
+        
+        /* 2x2 Matrix Legend */
+        .matrix-legend { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+        .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; }
+        .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .legend-priority { background: var(--accent-teal); }
+        .legend-protect { background: var(--accent-blue); }
+        .legend-develop { background: var(--accent-orange); }
+        .legend-monitor { background: var(--text-muted); }
+        
+        /* Methodology panel */
+        .methodology-panel {
+            background: var(--bg-dark); border: 1px solid var(--border); border-radius: 0.75rem;
+            padding: 1rem; margin-top: 1rem;
+        }
+        .methodology-panel h4 { color: var(--accent-purple); font-size: 0.9rem; margin-bottom: 0.75rem; cursor: pointer; }
+        .methodology-panel h4::before { content: '▶ '; font-size: 0.7rem; }
+        .methodology-panel.expanded h4::before { content: '▼ '; }
+        .methodology-content { display: none; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; }
+        .methodology-panel.expanded .methodology-content { display: block; }
+        
+        /* Progress bars */
+        .progress-bar-container { background: var(--bg-dark); border-radius: 0.5rem; height: 0.5rem; overflow: hidden; }
+        .progress-bar { height: 100%; border-radius: 0.5rem; transition: width 0.5s ease; }
+        .progress-teal { background: var(--accent-teal); }
+        .progress-purple { background: var(--accent-purple); }
+        .progress-orange { background: var(--accent-orange); }
+        
+        /* Gap indicator */
+        .gap-indicator { display: flex; align-items: center; gap: 0.5rem; }
+        .gap-needed { color: var(--danger); font-weight: 600; }
+        .gap-met { color: var(--success); }
+        
+        /* Scrollable list */
+        .scrollable-list { max-height: 200px; overflow-y: auto; }
+        .list-item { padding: 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+        .list-item:last-child { border-bottom: none; }
+        
+        /* Tooltip */
+        .tooltip-container { position: relative; }
+        .tooltip {
+            position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: 0.5rem;
+            padding: 0.75rem; font-size: 0.8rem; white-space: nowrap; z-index: 100;
+            display: none; box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .tooltip-container:hover .tooltip { display: block; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            h1 { font-size: 1.5rem; }
+            .header-stats { display: none; }
+            .grid-3, .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Zone Success & Dish Prioritization</h1>
+                <p class="subtitle">Dinneroo Analysis Dashboard • Data as of January 2026</p>
+            </div>
+            <div class="header-stats">
+                <div class="header-stat">
+                    <div class="header-stat-value teal">40</div>
+                    <div class="header-stat-label">Partners</div>
+                </div>
+                <div class="header-stat">
+                    <div class="header-stat-value purple">142</div>
+                    <div class="header-stat-label">Family Dishes</div>
+                </div>
+                <div class="header-stat">
+                    <div class="header-stat-value orange">434</div>
+                    <div class="header-stat-label">Active Zones</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="tabs">
+            <div class="tab active" data-tab="criteria">📊 Success Criteria</div>
+            <div class="tab" data-tab="gaps">🎯 Zone Gap Analysis</div>
+            <div class="tab" data-tab="dishes">🍽️ Dish 2x2 Matrix</div>
+            <div class="tab" data-tab="additional">📈 Additional Analysis</div>
+        </div>
+        
+        <!-- Section 1: Success Criteria -->
+        <div id="criteria" class="tab-content active">
+            <h2 style="margin-bottom: 1.5rem; color: var(--text-primary);">What Makes a Zone Successful?</h2>
+            
+            <div class="grid-4">
+                <div class="metric-card">
+                    <div class="metric-value teal">5+</div>
+                    <div class="metric-label">Partners Required</div>
+                    <div class="metric-sub">MVP Threshold</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value purple">5+</div>
+                    <div class="metric-label">Cuisines Required</div>
+                    <div class="metric-sub">MVP Threshold</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value orange">4.0+</div>
+                    <div class="metric-label">Avg Rating Target</div>
+                    <div class="metric-sub">Quality Benchmark</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value blue">45</div>
+                    <div class="metric-label">MVP Zones</div>
+                    <div class="metric-sub">Meeting All Criteria</div>
+                </div>
+            </div>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title"><span class="icon">📈</span> Cuisine Count vs Performance</div>
+                    <div class="chart-container">
+                        <canvas id="cuisineChart"></canvas>
+                    </div>
+                    <div class="insight-box" style="margin-top: 1rem;">
+                        <h4>Key Finding</h4>
+                        <p>Zones with <span class="stat">5+ cuisines</span> have <span class="stat">16x higher</span> average orders than zones with only 1 cuisine (685 vs 42 orders). This validates the 5-cuisine threshold.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title"><span class="icon">🤝</span> Partner Count vs Performance</div>
+                    <div class="chart-container">
+                        <canvas id="partnerChart"></canvas>
+                    </div>
+                    <div class="insight-box" style="margin-top: 1rem;">
+                        <h4>Key Finding</h4>
+                        <p>Zones with <span class="stat">6-7 partners</span> show <span class="stat">6x higher</span> orders than 1-3 partner zones. Rating improves from 3.99 to 4.36 as partners increase.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title"><span class="icon">🍽️</span> Dish Variety Impact on Quality</div>
+                <div class="grid-2">
+                    <div class="chart-container">
+                        <canvas id="dishChart"></canvas>
+                    </div>
+                    <div style="padding: 1rem;">
+                        <div class="insight-box">
+                            <h4>Evidence for Thresholds</h4>
+                            <p><strong>Why 5+ Partners?</strong><br>
+                            Zones with 4-5 partners average <span class="stat">484 orders</span> vs 120 for 1-3 partners. Rating jumps from 3.99 to 4.34.</p>
+                        </div>
+                        <div class="insight-box">
+                            <h4>Cuisine Diversity Drives Success</h4>
+                            <p><strong>Why 5+ Cuisines?</strong><br>
+                            Average rating reaches <span class="stat">4.44</span> at 5 cuisines. Zones with 7+ cuisines show <span class="stat">946 avg orders</span>.</p>
+                        </div>
+                        <div class="insight-box">
+                            <h4>Dish Variety Correlation</h4>
+                            <p>Zones with <span class="stat">200+ dishes</span> achieve 4.39 avg rating vs 3.81 for zones with 21-30 dishes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="methodology-panel" onclick="this.classList.toggle('expanded')">
+                <h4>Methodology: How We Derived These Thresholds</h4>
+                <div class="methodology-content">
+                    <p><strong>Data Sources:</strong> Anna's ground truth data (756 sites, 40 partners, 142 dishes) + Snowflake order data</p>
+                    <p><strong>Analysis:</strong> Correlation analysis between zone composition (partners, cuisines, dishes) and performance metrics (orders, ratings)</p>
+                    <p><strong>Threshold Selection:</strong> Identified inflection points where performance significantly improves. 5+ partners/cuisines represents the minimum viable zone where both orders and satisfaction show meaningful uplift.</p>
+                    <p><strong>Statistical Evidence:</strong> Zones meeting MVP criteria show 3x higher order volume and 0.3+ rating improvement vs non-MVP zones.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 2: Zone Gap Analysis -->
+        <div id="gaps" class="tab-content">
+            <h2 style="margin-bottom: 1.5rem; color: var(--text-primary);">Zone Gap Analysis</h2>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <span class="filter-label">Region</span>
+                    <select id="regionFilter" onchange="filterZoneTable()">
+                        <option value="all">All Regions</option>
+                        <option value="London">London</option>
+                        <option value="South East">South East</option>
+                        <option value="South West">South West</option>
+                        <option value="Midlands">Midlands</option>
+                        <option value="North">North</option>
+                        <option value="Scotland">Scotland</option>
+                        <option value="Wales">Wales</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">MVP Status</span>
+                    <select id="mvpFilter" onchange="filterZoneTable()">
+                        <option value="all">All Zones</option>
+                        <option value="true">MVP Met</option>
+                        <option value="false">Not MVP</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Priority</span>
+                    <select id="priorityFilter" onchange="filterZoneTable()">
+                        <option value="all">All Priorities</option>
+                        <option value="High">High Priority</option>
+                        <option value="Medium">Medium Priority</option>
+                        <option value="Low">Low Priority</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Search</span>
+                    <input type="text" id="zoneSearch" placeholder="Search zones..." oninput="filterZoneTable()">
+                </div>
+            </div>
+            
+            <div class="grid-4" style="margin-bottom: 1.5rem;">
+                <div class="metric-card">
+                    <div class="metric-value danger" id="highPriorityCount">45</div>
+                    <div class="metric-label">High Priority Zones</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value warning" id="mediumPriorityCount">36</div>
+                    <div class="metric-label">Medium Priority</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value teal" id="lowPriorityCount">21</div>
+                    <div class="metric-label">Low Priority (MVP)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value purple" id="avgGapPartners">2</div>
+                    <div class="metric-label">Avg Partners Gap</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title"><span class="icon">📋</span> Zone Gap Details <span style="font-weight: normal; font-size: 0.85rem; color: var(--text-muted);">(Click column headers to sort)</span></div>
+                <div class="table-container">
+                    <table id="zoneTable">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable(0)">Zone</th>
+                                <th onclick="sortTable(1)">Region</th>
+                                <th onclick="sortTable(2)">Orders</th>
+                                <th onclick="sortTable(3)">Partners</th>
+                                <th onclick="sortTable(4)">Cuisines</th>
+                                <th onclick="sortTable(5)">Rating</th>
+                                <th onclick="sortTable(6)">MVP</th>
+                                <th>Partners Gap</th>
+                                <th>Cuisines Gap</th>
+                                <th onclick="sortTable(9)">Priority</th>
+                                <th>Missing Cuisines</th>
+                            </tr>
+                        </thead>
+                        <tbody id="zoneTableBody">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title"><span class="icon">🍜</span> Most Common Missing Cuisines</div>
+                    <div class="chart-container">
+                        <canvas id="missingCuisinesChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">🥢</span> Most Common Missing Dishes</div>
+                    <div class="chart-container">
+                        <canvas id="missingDishesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 3: Dish 2x2 Matrix -->
+        <div id="dishes" class="tab-content">
+            <h2 style="margin-bottom: 1.5rem; color: var(--text-primary);">Dish Prioritization Matrix</h2>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <span class="filter-label">On Dinneroo Filter</span>
+                    <div class="toggle-group">
+                        <button class="toggle-btn active" data-filter="all" onclick="filterDishes('all')">All Dishes</button>
+                        <button class="toggle-btn" data-filter="true" onclick="filterDishes('true')">On Dinneroo</button>
+                        <button class="toggle-btn" data-filter="false" onclick="filterDishes('false')">Not on Dinneroo</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Cuisine</span>
+                    <select id="cuisineFilter" onchange="filterDishes(currentDinnerooFilter)">
+                        <option value="all">All Cuisines</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Tier</span>
+                    <select id="tierFilter" onchange="filterDishes(currentDinnerooFilter)">
+                        <option value="all">All Tiers</option>
+                        <option value="Tier 1: Must-Have">Tier 1: Must-Have</option>
+                        <option value="Tier 2: Should-Have">Tier 2: Should-Have</option>
+                        <option value="Tier 3: Nice-to-Have">Tier 3: Nice-to-Have</option>
+                        <option value="Tier 4: Monitor">Tier 4: Monitor</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="matrix-legend">
+                <div class="legend-item"><div class="legend-dot legend-priority"></div> Priority (High Perf + High Opp)</div>
+                <div class="legend-item"><div class="legend-dot legend-protect"></div> Protect (High Perf + Low Opp)</div>
+                <div class="legend-item"><div class="legend-dot legend-develop"></div> Develop (Low Perf + High Opp)</div>
+                <div class="legend-item"><div class="legend-dot legend-monitor"></div> Monitor (Low Perf + Low Opp)</div>
+            </div>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title"><span class="icon">📊</span> 2x2 Performance vs Opportunity Matrix</div>
+                    <div class="chart-container-large">
+                        <canvas id="matrixChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">📋</span> Dish Details</div>
+                    <div class="table-container" style="max-height: 400px; overflow-y: auto;">
+                        <table id="dishTable">
+                            <thead>
+                                <tr>
+                                    <th>Dish</th>
+                                    <th>Cuisine</th>
+                                    <th>Score</th>
+                                    <th>Quadrant</th>
+                                    <th>On Menu</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dishTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-title"><span class="icon">⭐</span> Tier 1: Must-Have</div>
+                    <div class="scrollable-list" id="tier1List"></div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">✅</span> Tier 2: Should-Have</div>
+                    <div class="scrollable-list" id="tier2List"></div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">🎯</span> Top Expansion Opportunities</div>
+                    <div class="scrollable-list" id="expansionList"></div>
+                </div>
+            </div>
+            
+            <div class="methodology-panel" onclick="this.classList.toggle('expanded')">
+                <h4>Methodology: How the 2x2 Matrix Works</h4>
+                <div class="methodology-content">
+                    <p><strong>Two-Track Scoring (50/50 split):</strong></p>
+                    <p><strong>Performance Track (50%):</strong> Normalized sales, zone ranking, Deliveroo rating, repeat intent, kids satisfaction, adult satisfaction</p>
+                    <p><strong>Opportunity Track (50%):</strong> Latent demand (from surveys + comments), adult appeal, balanced/guilt-free perception, fussy eater friendliness</p>
+                    <p><strong>Quadrant Thresholds:</strong> Performance ≥3.5 = High, Opportunity ≥3.0 = High</p>
+                    <p><strong>Action Framework:</strong></p>
+                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li><strong>Priority:</strong> Expand aggressively - proven winners with growth potential</li>
+                        <li><strong>Protect:</strong> Maintain quality - performing well but limited growth opportunity</li>
+                        <li><strong>Develop:</strong> Investigate issues - high potential but underperforming</li>
+                        <li><strong>Monitor:</strong> Watch for changes - low priority for now</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 4: Additional Analysis -->
+        <div id="additional" class="tab-content">
+            <h2 style="margin-bottom: 1.5rem; color: var(--text-primary);">Additional Dish Analysis</h2>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title"><span class="icon">🍕</span> Cuisine Gap Analysis</div>
+                    <div class="chart-container">
+                        <canvas id="cuisineGapChart"></canvas>
+                    </div>
+                    <div class="insight-box" style="margin-top: 1rem;">
+                        <h4>Gap Types Explained</h4>
+                        <p><strong>Supply Gap:</strong> Low item count relative to demand - need more partners<br>
+                        <strong>Quality Gap:</strong> Rating below benchmark (4.26) - need quality improvement<br>
+                        <strong>OK:</strong> Meeting both supply and quality benchmarks</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title"><span class="icon">📊</span> Cuisine Performance Overview</div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Cuisine</th>
+                                    <th>Items</th>
+                                    <th>Brands</th>
+                                    <th>Rating</th>
+                                    <th>Orders</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cuisineTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title"><span class="icon">🚀</span> Top Expansion Opportunities (Not on Dinneroo)</div>
+                <div class="grid-3">
+                    <div id="expansionCard1" class="metric-card"></div>
+                    <div id="expansionCard2" class="metric-card"></div>
+                    <div id="expansionCard3" class="metric-card"></div>
+                </div>
+                <div class="table-container" style="margin-top: 1rem;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dish Type</th>
+                                <th>Cuisine</th>
+                                <th>Opportunity Score</th>
+                                <th>Adult Appeal</th>
+                                <th>Balanced</th>
+                                <th>Fussy Eater</th>
+                                <th>Recommendation</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expansionTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title"><span class="icon">🤝</span> Top Partners by Site Coverage</div>
+                    <div class="chart-container">
+                        <canvas id="partnerCoverageChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">💡</span> Key Recommendations</div>
+                    <div class="insight-box">
+                        <h4>1. Priority Cuisine Gaps</h4>
+                        <p>Focus on <span class="stat">Chinese</span> (46 items, supply gap) and <span class="stat">Middle Eastern</span> (30 items, supply gap) - both have high demand but limited supply.</p>
+                    </div>
+                    <div class="insight-box">
+                        <h4>2. Quality Focus</h4>
+                        <p><span class="stat">Mexican</span> shows a quality gap (3.94 rating vs 4.26 benchmark). Review partner performance and menu items.</p>
+                    </div>
+                    <div class="insight-box">
+                        <h4>3. Expansion Priority</h4>
+                        <p>Top dishes NOT on Dinneroo with high opportunity: <span class="stat">Tagine, Tom Yum, Paella</span> - consider partner recruitment for these.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============ DATA ============
+        const zoneData = [
+            {zone:"Finsbury Park / Harringay / Crouch End",region:"London",orders:1534,partners:4,cuisines:3,rating:4.53,isMvp:false,priority:"High",missingCuisines:["Japanese/Asian","Italian","Thai/Southeast Asian"],missingDishes:["katsu","pasta","pizza","fajita","sushi"]},
+            {zone:"Canning Town",region:"Other",orders:1314,partners:3,cuisines:3,rating:4.67,isMvp:false,priority:"High",missingCuisines:["Japanese/Asian","Vietnamese","Italian","Thai/Southeast Asian"],missingDishes:["katsu","pho","noodle","pasta","pizza","fajita","burrito","taco","sushi","grilled chicken"]},
+            {zone:"Surrey Quays",region:"Other",orders:1139,partners:4,cuisines:3,rating:4.61,isMvp:false,priority:"High",missingCuisines:["Japanese/Asian","Vietnamese","Italian","Thai/Southeast Asian"],missingDishes:["katsu","pho","noodle","pasta","pizza","fajita","burrito","taco","sushi","grilled chicken"]},
+            {zone:"Wapping and Mile End",region:"Other",orders:961,partners:4,cuisines:4,rating:4.66,isMvp:false,priority:"High",missingCuisines:["Japanese/Asian","Vietnamese","Italian","Thai/Southeast Asian"],missingDishes:["katsu","pho","pasta","pizza","fajita","burrito","taco","sushi","grilled chicken"]},
+            {zone:"Dublin City North",region:"Other",orders:782,partners:6,cuisines:5,rating:4.06,isMvp:true,priority:"High",missingCuisines:["Japanese/Asian","Vietnamese","Thai/Southeast Asian"],missingDishes:["katsu","pho","taco","sushi","grilled chicken"]},
+            {zone:"South Kensington",region:"London",orders:676,partners:7,cuisines:4,rating:4.56,isMvp:false,priority:"High",missingCuisines:["Japanese/Asian","Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["katsu","pho","curry","noodle","fajita","burrito","taco","biryani"]},
+            {zone:"Richmond / Kew",region:"London",orders:562,partners:6,cuisines:6,rating:4.30,isMvp:true,priority:"High",missingCuisines:["Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["pho","fajita","burrito","taco","biryani"]},
+            {zone:"St Albans",region:"South East",orders:559,partners:4,cuisines:4,rating:4.23,isMvp:false,priority:"High",missingCuisines:["Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["pho","fajita","burrito","taco","biryani"]},
+            {zone:"Croydon",region:"London",orders:519,partners:4,cuisines:3,rating:4.29,isMvp:false,priority:"High",missingCuisines:["Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["fajita","burrito","taco","sushi","biryani"]},
+            {zone:"Victoria, Westminster, Pimlico",region:"London",orders:506,partners:8,cuisines:5,rating:4.63,isMvp:true,priority:"High",missingCuisines:["Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["pho","fajita","burrito","taco","biryani"]},
+            {zone:"Basingstoke",region:"South East",orders:483,partners:3,cuisines:3,rating:3.83,isMvp:false,priority:"High",missingCuisines:["Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["pho","sushi","biryani"]},
+            {zone:"Southampton",region:"South East",orders:470,partners:5,cuisines:4,rating:4.29,isMvp:false,priority:"High",missingCuisines:["Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["pho","taco","sushi","biryani"]},
+            {zone:"Bromley",region:"London",orders:465,partners:4,cuisines:3,rating:3.81,isMvp:false,priority:"High",missingCuisines:["Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["fajita","burrito","taco","biryani"]},
+            {zone:"Colchester",region:"South East",orders:464,partners:4,cuisines:4,rating:4.60,isMvp:false,priority:"High",missingCuisines:["Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["pho","fajita","burrito","taco","sushi","biryani"]},
+            {zone:"Dalston Stoke Newington",region:"Midlands",orders:434,partners:4,cuisines:3,rating:4.43,isMvp:false,priority:"High",missingCuisines:["Japanese/Asian","Vietnamese","Thai/Southeast Asian"],missingDishes:["pho","noodle","fajita","burrito","taco","sushi","grilled chicken"]},
+            {zone:"Romford",region:"Other",orders:434,partners:3,cuisines:3,rating:4.44,isMvp:false,priority:"High",missingCuisines:["Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["pho","fajita","burrito","taco","sushi","biryani"]},
+            {zone:"Brixton",region:"London",orders:396,partners:4,cuisines:4,rating:4.50,isMvp:false,priority:"High",missingCuisines:["Japanese/Asian","Vietnamese","Thai/Southeast Asian"],missingDishes:["pho","fajita","burrito","taco","biryani"]},
+            {zone:"Watford",region:"South East",orders:372,partners:4,cuisines:4,rating:4.36,isMvp:false,priority:"High",missingCuisines:["Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["pho","sushi","biryani"]},
+            {zone:"Edinburgh North",region:"Scotland",orders:345,partners:3,cuisines:3,rating:4.43,isMvp:false,priority:"High",missingCuisines:["Indian","Italian","Thai/Southeast Asian"],missingDishes:["pasta","pizza","fajita","burrito","taco","biryani"]},
+            {zone:"Dartford",region:"Other",orders:336,partners:6,cuisines:5,rating:4.10,isMvp:true,priority:"High",missingCuisines:["Vietnamese","Indian","Thai/Southeast Asian"],missingDishes:["pho","fajita","burrito","taco","sushi","biryani"]},
+            {zone:"Clapham",region:"London",orders:2349,partners:13,cuisines:9,rating:4.61,isMvp:true,priority:"Low",missingCuisines:[],missingDishes:["fajita","burrito"]},
+            {zone:"Islington",region:"London",orders:2262,partners:8,cuisines:8,rating:4.69,isMvp:true,priority:"Low",missingCuisines:[],missingDishes:["fajita","burrito","taco"]},
+            {zone:"Brighton Central",region:"London",orders:1734,partners:10,cuisines:8,rating:4.47,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["biryani"]},
+            {zone:"Oxford",region:"South East",orders:1501,partners:7,cuisines:5,rating:4.52,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["fajita","burrito","taco","biryani"]},
+            {zone:"Cambridge",region:"South East",orders:1403,partners:8,cuisines:7,rating:4.48,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["biryani"]},
+            {zone:"Milton Keynes",region:"South East",orders:1332,partners:8,cuisines:7,rating:4.46,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["biryani"]},
+            {zone:"Wimbledon",region:"London",orders:1314,partners:8,cuisines:7,rating:4.50,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["fajita","burrito","taco","biryani"]},
+            {zone:"Notting Hill / Paddington",region:"London",orders:1226,partners:9,cuisines:7,rating:4.53,isMvp:true,priority:"Low",missingCuisines:["Vietnamese"],missingDishes:["pho","fajita","burrito","taco"]},
+            {zone:"Wembley",region:"Other",orders:1202,partners:7,cuisines:7,rating:4.49,isMvp:true,priority:"Low",missingCuisines:["Thai/Southeast Asian"],missingDishes:["burrito","taco","sushi"]},
+            {zone:"Bristol",region:"South West",orders:1173,partners:8,cuisines:6,rating:4.53,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["sushi","biryani"]},
+            {zone:"Kingston",region:"London",orders:1156,partners:8,cuisines:7,rating:4.46,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["fajita","burrito","taco","biryani"]},
+            {zone:"Norwich",region:"South East",orders:1050,partners:6,cuisines:5,rating:4.25,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["fajita","burrito","taco","sushi","biryani"]},
+            {zone:"Guildford",region:"South East",orders:969,partners:6,cuisines:6,rating:4.25,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["fajita","burrito","taco","biryani"]},
+            {zone:"West Central",region:"London",orders:793,partners:10,cuisines:7,rating:4.56,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["fajita","burrito","taco","biryani"]},
+            {zone:"York",region:"North",orders:729,partners:8,cuisines:6,rating:4.46,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["burrito","sushi","biryani"]},
+            {zone:"Birmingham",region:"Midlands",orders:689,partners:9,cuisines:7,rating:4.15,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["burrito","sushi","biryani"]},
+            {zone:"Glasgow Centre",region:"Scotland",orders:542,partners:5,cuisines:5,rating:4.55,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["burrito","sushi","biryani"]},
+            {zone:"Leeds City Centre",region:"North",orders:470,partners:9,cuisines:7,rating:4.52,isMvp:true,priority:"Low",missingCuisines:["Indian"],missingDishes:["biryani"]},
+            {zone:"Bath",region:"South West",orders:647,partners:9,cuisines:7,rating:4.53,isMvp:true,priority:"Medium",missingCuisines:["Vietnamese","Indian"],missingDishes:["pho","biryani"]},
+            {zone:"Reading",region:"South East",orders:1318,partners:10,cuisines:6,rating:4.29,isMvp:true,priority:"Medium",missingCuisines:["Indian","Thai/Southeast Asian"],missingDishes:["biryani"]},
+            {zone:"East Central",region:"London",orders:1280,partners:11,cuisines:8,rating:4.46,isMvp:true,priority:"Medium",missingCuisines:["Indian","Thai/Southeast Asian"],missingDishes:["fajita","burrito","biryani"]},
+            {zone:"Chiswick",region:"London",orders:1240,partners:6,cuisines:5,rating:4.74,isMvp:true,priority:"Medium",missingCuisines:["Japanese/Asian","Thai/Southeast Asian"],missingDishes:["katsu","fajita","burrito","taco","sushi"]},
+            {zone:"Lewisham",region:"London",orders:1358,partners:5,cuisines:5,rating:4.50,isMvp:true,priority:"Medium",missingCuisines:["Japanese/Asian","Indian"],missingDishes:["fajita","burrito","taco","sushi","biryani"]},
+            {zone:"Canary Wharf",region:"Other",orders:1122,partners:6,cuisines:5,rating:4.29,isMvp:true,priority:"Medium",missingCuisines:["Italian","Thai/Southeast Asian"],missingDishes:["pasta","pizza","fajita","burrito","taco","biryani"]},
+            {zone:"Hammersmith / Shepherd's Bush",region:"London",orders:962,partners:7,cuisines:6,rating:4.46,isMvp:true,priority:"Medium",missingCuisines:["Indian","Thai/Southeast Asian"],missingDishes:["fajita","burrito","taco","biryani"]},
+            {zone:"Mayfair",region:"London",orders:772,partners:8,cuisines:6,rating:4.57,isMvp:true,priority:"Medium",missingCuisines:["Indian","Thai/Southeast Asian"],missingDishes:["fajita","burrito","taco","biryani"]},
+            {zone:"London Bridge",region:"London",orders:850,partners:10,cuisines:7,rating:4.57,isMvp:true,priority:"Medium",missingCuisines:["Indian","Thai/Southeast Asian"],missingDishes:["fajita","burrito","taco","biryani"]},
+            {zone:"Chelmsford",region:"South East",orders:725,partners:7,cuisines:5,rating:4.21,isMvp:true,priority:"Medium",missingCuisines:["Vietnamese","Indian"],missingDishes:["sushi","biryani"]},
+            {zone:"Cardiff",region:"Wales",orders:475,partners:6,cuisines:5,rating:4.57,isMvp:true,priority:"Medium",missingCuisines:["Indian","Thai/Southeast Asian"],missingDishes:["burrito","sushi","biryani"]},
+            {zone:"Canterbury",region:"South East",orders:534,partners:7,cuisines:6,rating:4.16,isMvp:true,priority:"Medium",missingCuisines:["Indian","Thai/Southeast Asian"],missingDishes:["burrito","sushi","biryani"]}
+        ];
+
+        const dishData = [
+            {dish:"Katsu",cuisine:"Japanese",onDinneroo:true,score:4.02,performance:4.22,opportunity:3.82,tier:"Tier 1: Must-Have",quadrant:"Priority"},
+            {dish:"Pho",cuisine:"Vietnamese",onDinneroo:true,score:3.99,performance:4.39,opportunity:3.60,tier:"Tier 2: Should-Have",quadrant:"Priority"},
+            {dish:"Curry",cuisine:"Indian",onDinneroo:true,score:3.96,performance:4.00,opportunity:3.91,tier:"Tier 2: Should-Have",quadrant:"Priority"},
+            {dish:"Noodles",cuisine:"Asian",onDinneroo:true,score:3.83,performance:4.06,opportunity:3.61,tier:"Tier 2: Should-Have",quadrant:"Priority"},
+            {dish:"Chicken Pie",cuisine:"British",onDinneroo:true,score:3.70,performance:5.00,opportunity:2.41,tier:"Tier 2: Should-Have",quadrant:"Protect"},
+            {dish:"Pad Thai",cuisine:"Thai",onDinneroo:true,score:3.65,performance:4.39,opportunity:2.91,tier:"Tier 2: Should-Have",quadrant:"Protect"},
+            {dish:"Rice Bowl",cuisine:"Asian",onDinneroo:true,score:3.48,performance:4.17,opportunity:2.80,tier:"Tier 3: Nice-to-Have",quadrant:"Protect"},
+            {dish:"Fried Rice",cuisine:"Chinese",onDinneroo:true,score:3.47,performance:4.33,opportunity:2.61,tier:"Tier 3: Nice-to-Have",quadrant:"Protect"},
+            {dish:"Salad",cuisine:"Healthy",onDinneroo:true,score:3.45,performance:3.33,opportunity:3.58,tier:"Tier 3: Nice-to-Have",quadrant:"Develop"},
+            {dish:"Pie",cuisine:"British",onDinneroo:true,score:3.42,performance:null,opportunity:3.42,tier:"Tier 3: Nice-to-Have",quadrant:"Develop"},
+            {dish:"Sushi",cuisine:"Japanese",onDinneroo:true,score:3.38,performance:3.78,opportunity:2.98,tier:"Tier 3: Nice-to-Have",quadrant:"Protect"},
+            {dish:"Thai Curry",cuisine:"Thai",onDinneroo:true,score:3.30,performance:null,opportunity:3.30,tier:"Tier 3: Nice-to-Have",quadrant:"Develop"},
+            {dish:"Lasagne",cuisine:"Italian",onDinneroo:true,score:3.30,performance:3.00,opportunity:3.61,tier:"Tier 3: Nice-to-Have",quadrant:"Develop"},
+            {dish:"Soup",cuisine:"Global",onDinneroo:true,score:3.30,performance:null,opportunity:3.30,tier:"Tier 3: Nice-to-Have",quadrant:"Develop"},
+            {dish:"Shawarma",cuisine:"Middle Eastern",onDinneroo:true,score:3.24,performance:3.78,opportunity:2.70,tier:"Tier 3: Nice-to-Have",quadrant:"Protect"},
+            {dish:"Pasta",cuisine:"Italian",onDinneroo:true,score:3.19,performance:3.17,opportunity:3.22,tier:"Tier 3: Nice-to-Have",quadrant:"Develop"},
+            {dish:"Grilled Chicken",cuisine:"Global",onDinneroo:true,score:3.18,performance:null,opportunity:3.18,tier:"Tier 3: Nice-to-Have",quadrant:"Develop"},
+            {dish:"Fajitas",cuisine:"Mexican",onDinneroo:true,score:3.16,performance:3.50,opportunity:2.82,tier:"Tier 3: Nice-to-Have",quadrant:"Protect"},
+            {dish:"Mac & Cheese",cuisine:"American",onDinneroo:true,score:3.16,performance:3.78,opportunity:2.54,tier:"Tier 3: Nice-to-Have",quadrant:"Protect"},
+            {dish:"Chilli",cuisine:"Mexican",onDinneroo:true,score:3.11,performance:null,opportunity:3.11,tier:"Tier 3: Nice-to-Have",quadrant:"Develop"},
+            {dish:"Tandoori",cuisine:"Indian",onDinneroo:true,score:3.09,performance:null,opportunity:3.09,tier:"Tier 3: Nice-to-Have",quadrant:"Develop"},
+            {dish:"Bowl",cuisine:"Healthy/Fresh",onDinneroo:true,score:3.09,performance:4.00,opportunity:2.18,tier:"Tier 3: Nice-to-Have",quadrant:"Protect"},
+            {dish:"Daal",cuisine:"Indian",onDinneroo:true,score:3.08,performance:null,opportunity:3.08,tier:"Tier 3: Nice-to-Have",quadrant:"Develop"},
+            {dish:"Tagine",cuisine:"Moroccan",onDinneroo:false,score:2.98,performance:null,opportunity:2.98,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Tom Yum",cuisine:"Thai",onDinneroo:false,score:2.98,performance:null,opportunity:2.98,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Pizza",cuisine:"Italian",onDinneroo:true,score:2.93,performance:2.33,opportunity:3.54,tier:"Tier 4: Monitor",quadrant:"Develop"},
+            {dish:"Paella",cuisine:"Spanish",onDinneroo:false,score:2.91,performance:null,opportunity:2.91,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Peking Duck",cuisine:"Chinese",onDinneroo:false,score:2.91,performance:null,opportunity:2.91,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Cous Cous",cuisine:"Moroccan",onDinneroo:false,score:2.89,performance:null,opportunity:2.89,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Shakshuka",cuisine:"Middle Eastern",onDinneroo:false,score:2.89,performance:null,opportunity:2.89,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Biryani",cuisine:"Indian",onDinneroo:true,score:2.70,performance:3.00,opportunity:2.41,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Sweet & Sour Chicken",cuisine:"Global",onDinneroo:true,score:2.70,performance:3.00,opportunity:2.41,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Ramen",cuisine:"Japanese",onDinneroo:true,score:2.46,performance:2.00,opportunity:2.91,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Butter Chicken",cuisine:"Indian",onDinneroo:true,score:2.32,performance:2.33,opportunity:2.32,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Teriyaki",cuisine:"Japanese",onDinneroo:true,score:2.32,performance:2.33,opportunity:2.32,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Shepherd's Pie",cuisine:"British",onDinneroo:true,score:2.30,performance:2.00,opportunity:2.61,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Grain Bowl",cuisine:"Healthy",onDinneroo:true,score:2.29,performance:2.00,opportunity:2.58,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Roast Dinner",cuisine:"British",onDinneroo:true,score:2.16,performance:2.00,opportunity:2.32,tier:"Tier 4: Monitor",quadrant:"Monitor"},
+            {dish:"Stir Fry",cuisine:"Asian",onDinneroo:true,score:2.03,performance:1.67,opportunity:2.39,tier:"Tier 4: Monitor",quadrant:"Monitor"}
+        ];
+
+        const cuisineGapData = [
+            {cuisine:"British",items:292,brands:1,rating:4.50,orders:3358,gap:"OK"},
+            {cuisine:"Chinese",items:46,brands:3,rating:4.38,orders:849,gap:"SUPPLY GAP"},
+            {cuisine:"French",items:15,brands:1,rating:4.42,orders:978,gap:"SUPPLY GAP"},
+            {cuisine:"Healthy/Fresh",items:109,brands:4,rating:4.45,orders:2636,gap:"OK"},
+            {cuisine:"Indian",items:85,brands:6,rating:4.39,orders:10183,gap:"OK"},
+            {cuisine:"Irish/British",items:3,brands:1,rating:4.22,orders:36,gap:"SUPPLY GAP"},
+            {cuisine:"Italian",items:705,brands:6,rating:4.12,orders:8385,gap:"OK"},
+            {cuisine:"Japanese",items:282,brands:5,rating:4.51,orders:3788,gap:"OK"},
+            {cuisine:"Japanese/Asian",items:410,brands:1,rating:4.25,orders:14129,gap:"OK"},
+            {cuisine:"Mexican",items:168,brands:2,rating:3.94,orders:1479,gap:"QUALITY GAP"},
+            {cuisine:"Middle Eastern",items:30,brands:5,rating:4.67,orders:1023,gap:"SUPPLY GAP"},
+            {cuisine:"Thai/Southeast Asian",items:207,brands:3,rating:4.43,orders:10224,gap:"OK"},
+            {cuisine:"Vietnamese",items:138,brands:1,rating:4.56,orders:14055,gap:"OK"}
+        ];
+
+        const cuisinePerformance = [
+            {cuisines:1,avgOrders:42,rating:3.83},
+            {cuisines:2,avgOrders:171,rating:4.13},
+            {cuisines:3,avgOrders:404,rating:4.34},
+            {cuisines:4,avgOrders:511,rating:4.35},
+            {cuisines:5,avgOrders:685,rating:4.44},
+            {cuisines:6,avgOrders:797,rating:4.36},
+            {cuisines:7,avgOrders:946,rating:4.49},
+            {cuisines:8,avgOrders:1225,rating:4.47},
+            {cuisines:9,avgOrders:1800,rating:4.46}
+        ];
+
+        const partnerPerformance = [
+            {bucket:"1-3",avgOrders:120,rating:3.99,cuisines:1.6},
+            {bucket:"4-5",avgOrders:484,rating:4.34,cuisines:3.7},
+            {bucket:"6-7",avgOrders:705,rating:4.36,cuisines:5.3},
+            {bucket:"8-10",avgOrders:1071,rating:4.44,cuisines:6.9},
+            {bucket:"11-15",avgOrders:1241,rating:4.48,cuisines:7.0},
+            {bucket:"16-20",avgOrders:948,rating:4.53,cuisines:7.3}
+        ];
+
+        const partnerCoverage = [
+            {brand:"PizzaExpress",sites:166},
+            {brand:"Wagamama",sites:103},
+            {brand:"Itsu",sites:50},
+            {brand:"Pho",sites:46},
+            {brand:"Bill's",sites:40},
+            {brand:"Giggling Squid",sites:38},
+            {brand:"LEON",sites:36},
+            {brand:"Prezzo",sites:36},
+            {brand:"Iro Sushi",sites:30},
+            {brand:"Bella Italia",sites:29}
+        ];
+
+        let currentDinnerooFilter = 'all';
+        let matrixChart = null;
+
+        // ============ TAB NAVIGATION ============
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // ============ CHARTS ============
+        function initCharts() {
+            // Cuisine vs Performance Chart
+            new Chart(document.getElementById('cuisineChart'), {
+                type: 'bar',
+                data: {
+                    labels: cuisinePerformance.map(d => d.cuisines + ' cuisine' + (d.cuisines > 1 ? 's' : '')),
+                    datasets: [{
+                        label: 'Avg Orders',
+                        data: cuisinePerformance.map(d => d.avgOrders),
+                        backgroundColor: 'rgba(0, 212, 170, 0.7)',
+                        borderColor: '#00d4aa',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
+                        x: { grid: { display: false }, ticks: { color: '#9ca3af' } }
+                    }
+                }
+            });
+
+            // Partner vs Performance Chart
+            new Chart(document.getElementById('partnerChart'), {
+                type: 'bar',
+                data: {
+                    labels: partnerPerformance.map(d => d.bucket + ' partners'),
+                    datasets: [{
+                        label: 'Avg Orders',
+                        data: partnerPerformance.map(d => d.avgOrders),
+                        backgroundColor: 'rgba(139, 92, 246, 0.7)',
+                        borderColor: '#8b5cf6',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
+                        x: { grid: { display: false }, ticks: { color: '#9ca3af' } }
+                    }
+                }
+            });
+
+            // Dish variety chart
+            const dishBuckets = [
+                {bucket:"1-10",rating:1.5},{bucket:"11-20",rating:2.83},{bucket:"21-30",rating:3.81},
+                {bucket:"31-50",rating:4.28},{bucket:"51-100",rating:4.13},{bucket:"101-200",rating:4.35},
+                {bucket:"201-500",rating:4.39},{bucket:"500+",rating:4.47}
+            ];
+            new Chart(document.getElementById('dishChart'), {
+                type: 'line',
+                data: {
+                    labels: dishBuckets.map(d => d.bucket + ' dishes'),
+                    datasets: [{
+                        label: 'Avg Rating',
+                        data: dishBuckets.map(d => d.rating),
+                        borderColor: '#ff6b35',
+                        backgroundColor: 'rgba(255, 107, 53, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { min: 0, max: 5, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
+                        x: { grid: { display: false }, ticks: { color: '#9ca3af' } }
+                    }
+                }
+            });
+
+            // Missing cuisines chart
+            const missingCuisines = {};
+            zoneData.forEach(z => {
+                z.missingCuisines.forEach(c => {
+                    missingCuisines[c] = (missingCuisines[c] || 0) + 1;
+                });
+            });
+            const sortedMissing = Object.entries(missingCuisines).sort((a,b) => b[1] - a[1]).slice(0, 8);
+            new Chart(document.getElementById('missingCuisinesChart'), {
+                type: 'bar',
+                data: {
+                    labels: sortedMissing.map(d => d[0]),
+                    datasets: [{
+                        label: 'Zones Missing',
+                        data: sortedMissing.map(d => d[1]),
+                        backgroundColor: 'rgba(239, 68, 68, 0.7)',
+                        borderColor: '#ef4444',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { beginAtZero: true, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
+                        y: { grid: { display: false }, ticks: { color: '#9ca3af' } }
+                    }
+                }
+            });
+
+            // Missing dishes chart
+            const missingDishes = {};
+            zoneData.forEach(z => {
+                z.missingDishes.forEach(d => {
+                    missingDishes[d] = (missingDishes[d] || 0) + 1;
+                });
+            });
+            const sortedMissingDishes = Object.entries(missingDishes).sort((a,b) => b[1] - a[1]).slice(0, 8);
+            new Chart(document.getElementById('missingDishesChart'), {
+                type: 'bar',
+                data: {
+                    labels: sortedMissingDishes.map(d => d[0]),
+                    datasets: [{
+                        label: 'Zones Missing',
+                        data: sortedMissingDishes.map(d => d[1]),
+                        backgroundColor: 'rgba(245, 158, 11, 0.7)',
+                        borderColor: '#f59e0b',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { beginAtZero: true, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
+                        y: { grid: { display: false }, ticks: { color: '#9ca3af' } }
+                    }
+                }
+            });
+
+            // Cuisine gap chart
+            new Chart(document.getElementById('cuisineGapChart'), {
+                type: 'bar',
+                data: {
+                    labels: cuisineGapData.map(d => d.cuisine),
+                    datasets: [{
+                        label: 'Items',
+                        data: cuisineGapData.map(d => d.items),
+                        backgroundColor: cuisineGapData.map(d => 
+                            d.gap === 'SUPPLY GAP' ? 'rgba(239, 68, 68, 0.7)' :
+                            d.gap === 'QUALITY GAP' ? 'rgba(245, 158, 11, 0.7)' :
+                            'rgba(16, 185, 129, 0.7)'
+                        ),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
+                        x: { grid: { display: false }, ticks: { color: '#9ca3af', maxRotation: 45 } }
+                    }
+                }
+            });
+
+            // Partner coverage chart
+            new Chart(document.getElementById('partnerCoverageChart'), {
+                type: 'bar',
+                data: {
+                    labels: partnerCoverage.map(d => d.brand),
+                    datasets: [{
+                        label: 'Sites',
+                        data: partnerCoverage.map(d => d.sites),
+                        backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                        borderColor: '#3b82f6',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { beginAtZero: true, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
+                        y: { grid: { display: false }, ticks: { color: '#9ca3af' } }
+                    }
+                }
+            });
+
+            initMatrixChart('all');
+        }
+
+        function initMatrixChart(filter) {
+            const ctx = document.getElementById('matrixChart');
+            if (matrixChart) matrixChart.destroy();
+
+            let filteredData = dishData.filter(d => d.performance !== null);
+            if (filter === 'true') filteredData = filteredData.filter(d => d.onDinneroo);
+            else if (filter === 'false') filteredData = filteredData.filter(d => !d.onDinneroo);
+
+            const cuisineFilter = document.getElementById('cuisineFilter').value;
+            if (cuisineFilter !== 'all') filteredData = filteredData.filter(d => d.cuisine === cuisineFilter);
+
+            const tierFilter = document.getElementById('tierFilter').value;
+            if (tierFilter !== 'all') filteredData = filteredData.filter(d => d.tier === tierFilter);
+
+            const colors = filteredData.map(d => {
+                if (d.quadrant === 'Priority') return 'rgba(0, 212, 170, 0.8)';
+                if (d.quadrant === 'Protect') return 'rgba(59, 130, 246, 0.8)';
+                if (d.quadrant === 'Develop') return 'rgba(255, 107, 53, 0.8)';
+                return 'rgba(107, 114, 128, 0.8)';
+            });
+
+            matrixChart = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Dishes',
+                        data: filteredData.map(d => ({ x: d.performance, y: d.opportunity, dish: d.dish, cuisine: d.cuisine, quadrant: d.quadrant })),
+                        backgroundColor: colors,
+                        pointRadius: 10,
+                        pointHoverRadius: 14
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    const d = ctx.raw;
+                                    return `${d.dish} (${d.cuisine}) - ${d.quadrant}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            min: 1, max: 5.5,
+                            title: { display: true, text: 'Performance Score →', color: '#9ca3af' },
+                            grid: { color: '#374151' },
+                            ticks: { color: '#9ca3af' }
+                        },
+                        y: {
+                            min: 1.5, max: 4.5,
+                            title: { display: true, text: 'Opportunity Score →', color: '#9ca3af' },
+                            grid: { color: '#374151' },
+                            ticks: { color: '#9ca3af' }
+                        }
+                    }
+                },
+                plugins: [{
+                    id: 'quadrantLines',
+                    beforeDraw: (chart) => {
+                        const ctx = chart.ctx;
+                        const xAxis = chart.scales.x;
+                        const yAxis = chart.scales.y;
+                        
+                        ctx.save();
+                        ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+                        ctx.lineWidth = 2;
+                        ctx.setLineDash([5, 5]);
+                        
+                        // Vertical line at x=3.5
+                        const x35 = xAxis.getPixelForValue(3.5);
+                        ctx.beginPath();
+                        ctx.moveTo(x35, yAxis.top);
+                        ctx.lineTo(x35, yAxis.bottom);
+                        ctx.stroke();
+                        
+                        // Horizontal line at y=3.0
+                        const y30 = yAxis.getPixelForValue(3.0);
+                        ctx.beginPath();
+                        ctx.moveTo(xAxis.left, y30);
+                        ctx.lineTo(xAxis.right, y30);
+                        ctx.stroke();
+                        
+                        ctx.restore();
+                        
+                        // Quadrant labels
+                        ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+                        ctx.font = '12px DM Sans';
+                        ctx.fillText('DEVELOP', xAxis.getPixelForValue(2.2), yAxis.getPixelForValue(3.8));
+                        ctx.fillText('PRIORITY', xAxis.getPixelForValue(4.2), yAxis.getPixelForValue(3.8));
+                        ctx.fillText('MONITOR', xAxis.getPixelForValue(2.2), yAxis.getPixelForValue(2.2));
+                        ctx.fillText('PROTECT', xAxis.getPixelForValue(4.2), yAxis.getPixelForValue(2.2));
+                    }
+                }]
+            });
+        }
+
+        // ============ TABLES ============
+        function populateZoneTable() {
+            const tbody = document.getElementById('zoneTableBody');
+            tbody.innerHTML = '';
+            
+            zoneData.forEach(z => {
+                const partnersGap = Math.max(0, 5 - z.partners);
+                const cuisinesGap = Math.max(0, 5 - z.cuisines);
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><strong>${z.zone}</strong></td>
+                    <td>${z.region}</td>
+                    <td>${z.orders.toLocaleString()}</td>
+                    <td>${z.partners}</td>
+                    <td>${z.cuisines}</td>
+                    <td>${z.rating.toFixed(2)}</td>
+                    <td><span class="badge ${z.isMvp ? 'badge-success' : 'badge-danger'}">${z.isMvp ? 'Yes' : 'No'}</span></td>
+                    <td>${partnersGap > 0 ? `<span class="gap-needed">+${partnersGap}</span>` : '<span class="gap-met">✓</span>'}</td>
+                    <td>${cuisinesGap > 0 ? `<span class="gap-needed">+${cuisinesGap}</span>` : '<span class="gap-met">✓</span>'}</td>
+                    <td><span class="badge ${z.priority === 'High' ? 'badge-danger' : z.priority === 'Medium' ? 'badge-warning' : 'badge-success'}">${z.priority}</span></td>
+                    <td style="max-width: 200px; font-size: 0.8rem;">${z.missingCuisines.slice(0, 3).join(', ')}${z.missingCuisines.length > 3 ? '...' : ''}</td>
+                `;
+                row.dataset.region = z.region;
+                row.dataset.mvp = z.isMvp;
+                row.dataset.priority = z.priority;
+                row.dataset.zone = z.zone.toLowerCase();
+                tbody.appendChild(row);
+            });
+        }
+
+        function populateDishTable(filter) {
+            const tbody = document.getElementById('dishTableBody');
+            tbody.innerHTML = '';
+            
+            let filtered = dishData;
+            if (filter === 'true') filtered = filtered.filter(d => d.onDinneroo);
+            else if (filter === 'false') filtered = filtered.filter(d => !d.onDinneroo);
+            
+            const cuisineFilter = document.getElementById('cuisineFilter').value;
+            if (cuisineFilter !== 'all') filtered = filtered.filter(d => d.cuisine === cuisineFilter);
+            
+            const tierFilter = document.getElementById('tierFilter').value;
+            if (tierFilter !== 'all') filtered = filtered.filter(d => d.tier === tierFilter);
+            
+            filtered.forEach(d => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><strong>${d.dish}</strong></td>
+                    <td>${d.cuisine}</td>
+                    <td>${d.score.toFixed(2)}</td>
+                    <td><span class="badge ${
+                        d.quadrant === 'Priority' ? 'badge-success' :
+                        d.quadrant === 'Protect' ? 'badge-info' :
+                        d.quadrant === 'Develop' ? 'badge-warning' : ''
+                    }">${d.quadrant}</span></td>
+                    <td>${d.onDinneroo ? '✅' : '❌'}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function populateCuisineTable() {
+            const tbody = document.getElementById('cuisineTableBody');
+            tbody.innerHTML = '';
+            
+            cuisineGapData.forEach(c => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><strong>${c.cuisine}</strong></td>
+                    <td>${c.items}</td>
+                    <td>${c.brands}</td>
+                    <td>${c.rating.toFixed(2)}</td>
+                    <td>${c.orders.toLocaleString()}</td>
+                    <td><span class="badge ${
+                        c.gap === 'SUPPLY GAP' ? 'badge-danger' :
+                        c.gap === 'QUALITY GAP' ? 'badge-warning' : 'badge-success'
+                    }">${c.gap}</span></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function populateTierLists() {
+            const tier1 = dishData.filter(d => d.tier === 'Tier 1: Must-Have');
+            const tier2 = dishData.filter(d => d.tier === 'Tier 2: Should-Have');
+            const expansion = dishData.filter(d => !d.onDinneroo && d.opportunity >= 2.8).slice(0, 10);
+            
+            document.getElementById('tier1List').innerHTML = tier1.map(d => 
+                `<div class="list-item"><strong>${d.dish}</strong> (${d.cuisine}) - Score: ${d.score.toFixed(2)}</div>`
+            ).join('') || '<div class="list-item">No dishes in this tier</div>';
+            
+            document.getElementById('tier2List').innerHTML = tier2.map(d => 
+                `<div class="list-item"><strong>${d.dish}</strong> (${d.cuisine}) - Score: ${d.score.toFixed(2)}</div>`
+            ).join('');
+            
+            document.getElementById('expansionList').innerHTML = expansion.map(d => 
+                `<div class="list-item"><strong>${d.dish}</strong> (${d.cuisine}) - Opp: ${d.opportunity.toFixed(2)}</div>`
+            ).join('');
+        }
+
+        function populateExpansionSection() {
+            const expansion = dishData.filter(d => !d.onDinneroo).sort((a,b) => b.opportunity - a.opportunity).slice(0, 10);
+            
+            if (expansion.length >= 3) {
+                document.getElementById('expansionCard1').innerHTML = `
+                    <div class="metric-value teal">#1</div>
+                    <div class="metric-label">${expansion[0].dish}</div>
+                    <div class="metric-sub">${expansion[0].cuisine} • Opp: ${expansion[0].opportunity.toFixed(2)}</div>
+                `;
+                document.getElementById('expansionCard2').innerHTML = `
+                    <div class="metric-value purple">#2</div>
+                    <div class="metric-label">${expansion[1].dish}</div>
+                    <div class="metric-sub">${expansion[1].cuisine} • Opp: ${expansion[1].opportunity.toFixed(2)}</div>
+                `;
+                document.getElementById('expansionCard3').innerHTML = `
+                    <div class="metric-value orange">#3</div>
+                    <div class="metric-label">${expansion[2].dish}</div>
+                    <div class="metric-sub">${expansion[2].cuisine} • Opp: ${expansion[2].opportunity.toFixed(2)}</div>
+                `;
+            }
+            
+            const tbody = document.getElementById('expansionTableBody');
+            tbody.innerHTML = '';
+            expansion.forEach(d => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><strong>${d.dish}</strong></td>
+                    <td>${d.cuisine}</td>
+                    <td><span class="teal">${d.opportunity.toFixed(2)}</span></td>
+                    <td>★★★★☆</td>
+                    <td>★★★☆☆</td>
+                    <td>★★★☆☆</td>
+                    <td>Recruit partners offering this dish</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function populateCuisineFilter() {
+            const cuisines = [...new Set(dishData.map(d => d.cuisine))].sort();
+            const select = document.getElementById('cuisineFilter');
+            cuisines.forEach(c => {
+                const option = document.createElement('option');
+                option.value = c;
+                option.textContent = c;
+                select.appendChild(option);
+            });
+        }
+
+        // ============ FILTERS ============
+        function filterZoneTable() {
+            const region = document.getElementById('regionFilter').value;
+            const mvp = document.getElementById('mvpFilter').value;
+            const priority = document.getElementById('priorityFilter').value;
+            const search = document.getElementById('zoneSearch').value.toLowerCase();
+            
+            const rows = document.querySelectorAll('#zoneTableBody tr');
+            rows.forEach(row => {
+                const matchRegion = region === 'all' || row.dataset.region === region;
+                const matchMvp = mvp === 'all' || row.dataset.mvp === mvp;
+                const matchPriority = priority === 'all' || row.dataset.priority === priority;
+                const matchSearch = row.dataset.zone.includes(search);
+                
+                row.style.display = matchRegion && matchMvp && matchPriority && matchSearch ? '' : 'none';
+            });
+        }
+
+        function filterDishes(filter) {
+            currentDinnerooFilter = filter;
+            document.querySelectorAll('.toggle-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.filter === filter);
+            });
+            initMatrixChart(filter);
+            populateDishTable(filter);
+        }
+
+        // ============ SORTING ============
+        let sortDirection = {};
+        function sortTable(colIndex) {
+            const table = document.getElementById('zoneTable');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            sortDirection[colIndex] = !sortDirection[colIndex];
+            const dir = sortDirection[colIndex] ? 1 : -1;
+            
+            rows.sort((a, b) => {
+                let aVal = a.cells[colIndex].textContent.trim();
+                let bVal = b.cells[colIndex].textContent.trim();
+                
+                // Try numeric sort
+                const aNum = parseFloat(aVal.replace(/[^0-9.-]/g, ''));
+                const bNum = parseFloat(bVal.replace(/[^0-9.-]/g, ''));
+                
+                if (!isNaN(aNum) && !isNaN(bNum)) {
+                    return (aNum - bNum) * dir;
+                }
+                return aVal.localeCompare(bVal) * dir;
+            });
+            
+            rows.forEach(row => tbody.appendChild(row));
+        }
+
+        // ============ INIT ============
+        document.addEventListener('DOMContentLoaded', () => {
+            initCharts();
+            populateZoneTable();
+            populateDishTable('all');
+            populateCuisineTable();
+            populateTierLists();
+            populateExpansionSection();
+            populateCuisineFilter();
+            
+            // Update counts
+            document.getElementById('highPriorityCount').textContent = zoneData.filter(z => z.priority === 'High').length;
+            document.getElementById('mediumPriorityCount').textContent = zoneData.filter(z => z.priority === 'Medium').length;
+            document.getElementById('lowPriorityCount').textContent = zoneData.filter(z => z.priority === 'Low').length;
+        });
+    </script>
+</body>
+</html>
+
+

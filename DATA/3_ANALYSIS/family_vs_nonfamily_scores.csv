@@ -1,0 +1,33 @@
+dish_type,cuisine,on_dinneroo,family_score,nonfamily_score,score_diff,normalized_sales,zone_ranking,deliveroo_rating,repeat_intent,kids_full_happy,liked_loved,latent_demand,adult_appeal,balanced_guilt_free,fussy_eater_friendly,family_rank,nonfamily_rank,rank_change,mover_type
+Indian Curry,Indian,True,4.292,4.344,0.052,4.0,5.0,5.0,5.0,5.0,5.0,4.0,4.2,3.5,2.5,1,1,0,Stable
+Pho,Vietnamese,True,4.289,4.341,0.052,5.0,5.0,5.0,5.0,5.0,5.0,4.0,3.2,3.5,2.5,2,2,0,Stable
+East Asian Curry,Asian,True,4.083,4.104,0.021,2.0,3.0,4.0,5.0,5.0,5.0,5.0,4.6,3.5,2.5,3,3,0,Stable
+Katsu,Japanese,True,4.071,3.964,-0.107,3.0,4.0,4.0,5.0,5.0,5.0,4.0,3.9,3.5,4.5,4,4,0,Stable
+Noodles,Asian,True,4.03,3.917,-0.113,3.0,3.0,5.0,5.0,5.0,5.0,4.0,3.5,3.5,4.5,5,6,-1,Stable
+Lasagne,Italian,True,3.914,3.933,0.019,2.0,3.0,5.0,4.0,4.0,4.0,5.0,4.3,2.5,3.5,6,5,1,Stable
+Sushi,Japanese,True,3.77,3.744,-0.026,3.0,4.0,5.0,5.0,5.0,5.0,3.0,3.5,3.5,2.5,7,9,-2,Stable
+Risotto,Italian,False,3.738,3.816,0.079,3.0,3.0,3.0,3.0,3.0,3.0,5.0,4.6,3.5,3.5,8,7,1,Stable
+Pizza,Italian,True,3.736,3.665,-0.071,2.0,4.0,3.0,4.0,4.0,4.0,5.0,3.0,2.5,4.5,9,10,-1,Stable
+Pastry Pie,British,False,3.697,3.769,0.073,3.0,3.0,3.0,3.0,3.0,3.0,5.0,4.2,3.5,3.5,10,8,2,Stable
+Pasta,Italian,True,3.68,3.601,-0.079,1.0,3.0,3.0,4.0,4.0,4.0,5.0,3.5,3.5,4.5,11,11,0,Stable
+Biryani,Indian,True,3.675,3.572,-0.103,4.0,4.0,5.0,5.0,5.0,5.0,2.0,3.5,3.5,3.5,12,13,-1,Stable
+Casserole / Stew,British,False,3.529,3.576,0.047,3.0,3.0,3.0,3.0,3.0,3.0,4.0,5.0,3.5,3.5,13,12,1,Stable
+Protein & Veg,Healthy,True,3.52,3.566,0.046,3.0,4.0,4.0,3.0,3.0,3.0,3.0,4.5,4.5,3.5,14,14,0,Stable
+Paella,Spanish,False,3.457,3.494,0.037,3.0,3.0,3.0,3.0,3.0,3.0,4.0,4.3,3.5,3.5,15,15,0,Stable
+Shepherd's Pie,British,True,3.284,3.059,-0.225,2.0,1.0,4.0,5.0,5.0,5.0,2.0,5.0,3.5,4.5,16,22,-6,Down (benefits from family)
+Fajitas,Mexican,True,3.225,3.055,-0.17,1.0,2.0,3.0,5.0,5.0,5.0,3.0,3.5,3.5,3.5,17,23,-6,Down (benefits from family)
+Shawarma,Middle Eastern,True,3.22,3.112,-0.108,2.0,2.0,5.0,5.0,5.0,5.0,2.0,3.5,3.5,2.5,18,20,-2,Stable
+Fried Rice,Asian,True,3.188,3.034,-0.153,3.0,2.0,5.0,5.0,4.0,4.0,2.0,3.5,2.5,4.5,19,24,-5,Down (benefits from family)
+Rice Bowl,Asian,True,3.172,3.017,-0.155,3.0,4.0,4.0,4.0,4.0,4.0,1.0,3.5,4.5,4.5,20,25,-5,Down (benefits from family)
+Sausage & Mash,British,False,3.166,3.159,-0.007,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.9,3.5,3.5,21,17,4,Up (benefits from non-family)
+Jacket Potato,British,False,3.166,3.159,-0.007,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.9,3.5,3.5,21,17,4,Up (benefits from non-family)
+Tagine,Moroccan,False,3.152,3.206,0.054,3.0,3.0,3.0,3.0,3.0,3.0,3.0,4.3,3.5,2.5,23,16,7,Up (benefits from non-family)
+Tacos,Mexican,True,3.147,3.137,-0.01,1.0,2.0,3.0,3.0,3.0,3.0,4.0,4.2,3.5,3.5,24,19,5,Up (benefits from non-family)
+Fish & Chips,British,False,3.125,3.112,-0.013,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.5,3.5,3.5,25,20,5,Up (benefits from non-family)
+Grain Bowl,Healthy,True,3.118,2.931,-0.186,2.0,2.0,5.0,5.0,5.0,5.0,1.0,3.5,4.5,3.5,26,26,0,Stable
+Roast,British,False,2.728,2.655,-0.072,3.0,3.0,3.0,3.0,3.0,3.0,1.0,4.5,3.5,3.5,27,27,0,Stable
+Chilli,Mexican,True,2.707,2.632,-0.075,1.0,1.0,2.0,3.0,3.0,3.0,3.0,4.3,3.5,3.5,28,28,0,Stable
+Poke,Healthy,True,2.317,2.184,-0.134,1.0,1.0,3.0,3.0,3.0,3.0,1.0,3.5,4.5,3.5,29,29,0,Stable
+Burrito Bowl,Mexican,True,2.317,2.184,-0.134,1.0,1.0,3.0,3.0,3.0,3.0,1.0,3.5,4.5,3.5,29,29,0,Stable
+Quesadilla,Mexican,True,2.297,2.16,-0.137,1.0,1.0,3.0,3.0,3.0,3.0,1.0,4.2,3.5,3.5,31,31,0,Stable
+Nachos,Mexican,True,2.132,1.971,-0.161,1.0,1.0,3.0,3.0,3.0,3.0,1.0,3.5,2.5,3.5,32,32,0,Stable

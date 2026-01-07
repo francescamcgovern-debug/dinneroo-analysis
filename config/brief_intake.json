@@ -1,0 +1,68 @@
+{
+  "version": "1.0",
+  "description": "Maps common brief types to required analysis, data sources, and outputs",
+  
+  "brief_types": {
+    "dish_recommendation": {
+      "description": "What dishes should we prioritize?",
+      "required_analysis": ["dish_scoring", "dish_indices"],
+      "data_sources": [
+        "DATA/3_ANALYSIS/anna_family_dishes.csv",
+        "DATA/3_ANALYSIS/priority_100_dishes.csv",
+        "DATA/3_ANALYSIS/dish_indices.csv"
+      ],
+      "output_format": "ranked_list_with_rationale",
+      "methodology": "Two-track scoring (performance + opportunity)"
+    },
+    "zone_health": {
+      "description": "Which zones are performing well/poorly?",
+      "required_analysis": ["zone_analysis", "mvp_status"],
+      "data_sources": [
+        "DATA/3_ANALYSIS/anna_zone_dish_counts.csv",
+        "DATA/3_ANALYSIS/zone_mvp_status.csv"
+      ],
+      "output_format": "zone_scorecard",
+      "methodology": "MVP criteria (5+ partners, 5+ cuisines)"
+    },
+    "coverage_gaps": {
+      "description": "Where are we missing cuisines/partners?",
+      "required_analysis": ["cuisine_gap_analysis", "partner_cuisine_matrix"],
+      "data_sources": [
+        "DATA/3_ANALYSIS/cuisine_gap_analysis.csv",
+        "DATA/3_ANALYSIS/partner_cuisine_matrix.csv"
+      ],
+      "output_format": "gap_matrix",
+      "methodology": "Compare zone coverage vs MVP requirements"
+    },
+    "partner_recruitment": {
+      "description": "Which partners should we recruit?",
+      "required_analysis": ["partner_cuisine_matrix", "cuisine_gap_analysis"],
+      "data_sources": [
+        "DATA/3_ANALYSIS/anna_partner_coverage.csv",
+        "DATA/3_ANALYSIS/cuisine_gap_analysis.csv"
+      ],
+      "output_format": "recruitment_priority_list",
+      "methodology": "Match partner cuisines to zone gaps"
+    },
+    "anna_slides": {
+      "description": "Generate data for Anna's presentation",
+      "required_analysis": ["all"],
+      "data_sources": [
+        "DATA/3_ANALYSIS/anna_family_dishes.csv",
+        "DATA/3_ANALYSIS/anna_zone_dish_counts.csv",
+        "DATA/3_ANALYSIS/dish_indices.csv",
+        "DATA/3_ANALYSIS/priority_100_dishes.csv"
+      ],
+      "output_format": "presentation_data_csv",
+      "methodology": "Aggregate key metrics for slides"
+    }
+  },
+  
+  "output_locations": {
+    "reports": "DELIVERABLES/reports/",
+    "dashboards": "DELIVERABLES/dashboards/",
+    "presentation_data": "DELIVERABLES/presentation_data/"
+  }
+}
+
+

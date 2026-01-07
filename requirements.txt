@@ -1,16 +1,19 @@
-# Dinneroo Analysis Pipeline Requirements
-# Python 3.8+
+# Dinneroo Analysis Pipeline Dependencies
 
-# Data processing
-pandas>=1.5.0
-numpy>=1.21.0
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
 
-# Data validation
-jsonschema>=4.0.0
+# Database
+snowflake-connector-python>=3.0.0
 
-# Optional: Snowflake connector (for refreshing data)
-# snowflake-connector-python>=2.7.0
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
 
-# Optional: Visualization (if running locally)
-# matplotlib>=3.5.0
+# PowerPoint Generation
+python-pptx>=0.6.21
 
+# Utilities
+python-dateutil>=2.8.0
+pathlib2>=2.3.0

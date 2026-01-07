@@ -307,3 +307,5 @@ Based on the analysis, an ideal zone should have:
 
 *Report generated: 5 January 2026*
 
+
+

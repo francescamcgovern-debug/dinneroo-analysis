@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-01-06T16:14:52.346961",
+  "factor_weights": {
+    "kid_friendly": {
+      "weight": 0.15,
+      "description": "Kids will actually eat it - familiar flavours, not too spicy",
+      "source": "survey"
+    },
+    "balanced_guilt_free": {
+      "weight": 0.12,
+      "description": "Parents feel good serving it on a Tuesday - not a treat, a proper meal",
+      "source": "survey"
+    },
+    "adult_appeal": {
+      "weight": 0.08,
+      "description": "Adults enjoy it too - important for non-parent orderers",
+      "source": "survey"
+    },
+    "portion_flexibility": {
+      "weight": 0.15,
+      "description": "Can appropriately feed 2 adults + 2 kids",
+      "source": "survey"
+    },
+    "fussy_eater_friendly": {
+      "weight": 0.15,
+      "description": "Mild options available, customisable for picky kids",
+      "source": "dropoff_survey"
+    },
+    "customisation": {
+      "weight": 0.1,
+      "description": "Individual preferences can be accommodated within the order",
+      "source": "dropoff_survey"
+    },
+    "value_at_25": {
+      "weight": 0.1,
+      "description": "Feels worth it for a family of 4 at the \u00a325 price point",
+      "source": "survey"
+    },
+    "shareability": {
+      "weight": 0.05,
+      "description": "Can come in one big portion for family sharing at the table",
+      "source": "og_survey"
+    },
+    "vegetarian_option": {
+      "weight": 0.05,
+      "description": "Good veggie alternative available (not an afterthought)",
+      "source": "dropoff_and_ratings"
+    },
+    "on_dinneroo_menu": {
+      "weight": 0.05,
+      "description": "Actually available on Dinneroo (verified against menu catalog)",
+      "source": "menu_catalog"
+    }
+  },
+  "mvp_thresholds": {
+    "repeat_rate_min": {
+      "value": 0.2,
+      "justification": "20% repeat rate is achievable (top 41% of zones) while still being meaningful. Validated: zones with 20%+ repeat rate have significantly better outcomes."
+    },
+    "rating_min": {
+      "value": 4.3,
+      "justification": "4.3+ rating shows statistically significant correlation with repeat rate (p<0.05). 4.5 threshold showed NO significant difference (p=0.21)."
+    },
+    "cuisine_count_min": {
+      "value": 4,
+      "justification": "Cuisine count has STRONGEST correlation with repeat rate (r=0.514). Zones with 4+ cuisines have significantly higher repeat rates (p<0.001)."
+    }
+  },
+  "evidence_types": {
+    "Measured": "3+ factors have direct survey data (n\u22655 per dish)",
+    "Blended": "1-2 factors have survey data, rest estimated",
+    "Estimated": "No matching survey data available"
+  },
+  "score_conversion": {
+    "description": "Convert survey success rates to 1-5 scores",
+    "90_100_percent": 5,
+    "75_89_percent": 4,
+    "60_74_percent": 3,
+    "40_59_percent": 2,
+    "0_39_percent": 1
+  }
+}

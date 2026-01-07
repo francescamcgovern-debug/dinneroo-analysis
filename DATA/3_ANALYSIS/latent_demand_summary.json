@@ -1,0 +1,52 @@
+{
+  "generated": "2026-01-07T15:58:23.546041",
+  "sources": {
+    "dropoff_responses": 942,
+    "post_order_responses": 1599,
+    "ratings": 10713,
+    "og_survey_dishes": 36
+  },
+  "total_dish_types_scored": 83,
+  "top_10_by_latent_demand": [
+    {
+      "dish_type": "Pie",
+      "latent_demand_score": 3
+    },
+    {
+      "dish_type": "Noodles",
+      "latent_demand_score": 3
+    },
+    {
+      "dish_type": "Vegetarian",
+      "latent_demand_score": 3
+    },
+    {
+      "dish_type": "Kids Menu",
+      "latent_demand_score": 3
+    },
+    {
+      "dish_type": "Gnocchi",
+      "latent_demand_score": 2
+    },
+    {
+      "dish_type": "Fish & Chips",
+      "latent_demand_score": 2
+    },
+    {
+      "dish_type": "Burger",
+      "latent_demand_score": 2
+    },
+    {
+      "dish_type": "Pasta",
+      "latent_demand_score": 2
+    },
+    {
+      "dish_type": "Healthy",
+      "latent_demand_score": 2
+    },
+    {
+      "dish_type": "Pizza",
+      "latent_demand_score": 2
+    }
+  ]
+}

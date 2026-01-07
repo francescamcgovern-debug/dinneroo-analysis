@@ -1,0 +1,872 @@
+{
+  "generated_at": "2026-01-07T13:55:34.999059",
+  "post_order_analysis": {
+    "segment_counts": {
+      "Family": 729,
+      "Couple": 369,
+      "Other": 255,
+      "Single": 190,
+      "Friends/Sharers": 56
+    },
+    "segment_analysis": {
+      "Family": {
+        "n": 729,
+        "metrics": {
+          "satisfaction": {
+            "loved_liked_pct": 85.6,
+            "distribution": {
+              "Loved it": 46.0,
+              "Liked it": 39.6,
+              "Neutral": 9.0,
+              "Did not enjoy it": 5.4
+            }
+          },
+          "repeat_intent": {
+            "agree_pct": 75.2,
+            "distribution": {
+              "Agree": 38.5,
+              "Strongly agree": 36.7,
+              "Neither agree nor disagree": 11.5,
+              "Disagree": 6.9,
+              "Strongly disagree": 6.4
+            }
+          },
+          "dish_choice_reasons": {
+            "Sounded appealing to my children": 30.9,
+            "Sounded appealing to adults": 25.5,
+            "Healthy option": 15.2,
+            "Familiar dish": 30.0,
+            "Good value for money": 45.4,
+            "Familiar cuisine": 19.1,
+            "Flexibility of options": 5.9,
+            "There was an offer on this dish": 22.6,
+            "Estimated order time": 3.3,
+            "Estimated delivery time": 5.5,
+            "Portion size": 17.8,
+            "Something we don't cook at home": 21.5,
+            "Other - Write In (Required)": 3.0
+          },
+          "top_restaurants": {
+            "Wagamama": 161,
+            "Pho": 109,
+            "Dishoom": 72,
+            "PizzaExpress": 65,
+            "Giggling Squid": 59
+          },
+          "overall_rating": {
+            "satisfied_pct": 81.4,
+            "distribution": {
+              "Very Satisfied": 41.8,
+              "Satisfied": 39.6,
+              "Neutral": 9.7,
+              "Dissatisfied": 5.3,
+              "Very Dissatisfied": 3.6
+            }
+          },
+          "food_adequacy": {
+            "agree_pct": 77.3,
+            "distribution": {
+              "Agree": 42.1,
+              "Strongly agree": 35.1,
+              "Disagree": 8.7,
+              "Neither agree nor disagree": 8.6,
+              "Strongly disagree": 5.4
+            }
+          }
+        }
+      },
+      "Couple": {
+        "n": 369,
+        "metrics": {
+          "satisfaction": {
+            "loved_liked_pct": 87.1,
+            "distribution": {
+              "Loved it": 50.8,
+              "Liked it": 36.3,
+              "Neutral": 9.0,
+              "Did not enjoy it": 3.9
+            }
+          },
+          "repeat_intent": {
+            "agree_pct": 75.3,
+            "distribution": {
+              "Agree": 40.1,
+              "Strongly agree": 35.2,
+              "Neither agree nor disagree": 14.8,
+              "Strongly disagree": 4.9,
+              "Disagree": 4.9
+            }
+          },
+          "dish_choice_reasons": {
+            "Sounded appealing to my children": 1.1,
+            "Sounded appealing to adults": 22.2,
+            "Healthy option": 14.1,
+            "Familiar dish": 28.5,
+            "Good value for money": 56.6,
+            "Familiar cuisine": 19.5,
+            "Flexibility of options": 8.1,
+            "There was an offer on this dish": 24.4,
+            "Estimated order time": 3.3,
+            "Estimated delivery time": 7.0,
+            "Portion size": 24.1,
+            "Something we don't cook at home": 24.9,
+            "Other - Write In (Required)": 4.9
+          },
+          "top_restaurants": {
+            "Pho": 91,
+            "Dishoom": 54,
+            "Wagamama": 50,
+            "Banana Tree": 27,
+            "Giggling Squid": 24
+          },
+          "overall_rating": {
+            "satisfied_pct": 87.5,
+            "distribution": {
+              "Very Satisfied": 46.1,
+              "Satisfied": 41.4,
+              "Neutral": 8.7,
+              "Dissatisfied": 2.2,
+              "Very Dissatisfied": 1.6
+            }
+          },
+          "food_adequacy": {
+            "agree_pct": 81.1,
+            "distribution": {
+              "Strongly agree": 46.1,
+              "Agree": 35.0,
+              "Neither agree nor disagree": 8.4,
+              "Disagree": 7.2,
+              "Strongly disagree": 3.3
+            }
+          }
+        }
+      },
+      "Single": {
+        "n": 190,
+        "metrics": {
+          "satisfaction": {
+            "loved_liked_pct": 84.6,
+            "distribution": {
+              "Liked it": 46.3,
+              "Loved it": 38.3,
+              "Neutral": 12.0,
+              "Did not enjoy it": 3.4
+            }
+          },
+          "repeat_intent": {
+            "agree_pct": 71.9,
+            "distribution": {
+              "Agree": 45.6,
+              "Strongly agree": 26.3,
+              "Neither agree nor disagree": 17.5,
+              "Disagree": 7.0,
+              "Strongly disagree": 3.5
+            }
+          },
+          "dish_choice_reasons": {
+            "Sounded appealing to my children": 0.5,
+            "Sounded appealing to adults": 21.1,
+            "Healthy option": 14.2,
+            "Familiar dish": 36.3,
+            "Good value for money": 47.4,
+            "Familiar cuisine": 22.6,
+            "Flexibility of options": 5.8,
+            "There was an offer on this dish": 27.4,
+            "Estimated order time": 3.7,
+            "Estimated delivery time": 7.4,
+            "Portion size": 26.8,
+            "Something we don't cook at home": 20.0,
+            "Other - Write In (Required)": 3.2
+          },
+          "top_restaurants": {
+            "Pho": 37,
+            "Dishoom": 30,
+            "PizzaExpress": 23,
+            "Bill's": 10,
+            "Banana Tree": 9
+          },
+          "overall_rating": {
+            "satisfied_pct": 84.0,
+            "distribution": {
+              "Satisfied": 57.4,
+              "Very Satisfied": 26.6,
+              "Neutral": 13.6,
+              "Dissatisfied": 1.2,
+              "Very Dissatisfied": 1.2
+            }
+          },
+          "food_adequacy": {
+            "agree_pct": 80.6,
+            "distribution": {
+              "Agree": 45.1,
+              "Strongly agree": 35.4,
+              "Neither agree nor disagree": 10.3,
+              "Disagree": 8.0,
+              "Strongly disagree": 1.1
+            }
+          }
+        }
+      },
+      "Friends/Sharers": {
+        "n": 56,
+        "metrics": {
+          "satisfaction": {
+            "loved_liked_pct": 88.9,
+            "distribution": {
+              "Loved it": 48.1,
+              "Liked it": 40.7,
+              "Did not enjoy it": 7.4,
+              "Neutral": 3.7
+            }
+          },
+          "repeat_intent": {
+            "agree_pct": 77.4,
+            "distribution": {
+              "Agree": 39.6,
+              "Strongly agree": 37.7,
+              "Neither agree nor disagree": 11.3,
+              "Strongly disagree": 7.5,
+              "Disagree": 3.8
+            }
+          },
+          "dish_choice_reasons": {
+            "Sounded appealing to my children": 0.0,
+            "Sounded appealing to adults": 21.4,
+            "Healthy option": 23.2,
+            "Familiar dish": 42.9,
+            "Good value for money": 46.4,
+            "Familiar cuisine": 14.3,
+            "Flexibility of options": 8.9,
+            "There was an offer on this dish": 25.0,
+            "Estimated order time": 1.8,
+            "Estimated delivery time": 7.1,
+            "Portion size": 26.8,
+            "Something we don't cook at home": 17.9,
+            "Other - Write In (Required)": 10.7
+          },
+          "top_restaurants": {
+            "Pho": 12,
+            "Dishoom": 8,
+            "Wagamama": 8,
+            "Banana Tree": 8,
+            "Itsu": 4
+          },
+          "overall_rating": {
+            "satisfied_pct": 86.8,
+            "distribution": {
+              "Very Satisfied": 52.8,
+              "Satisfied": 34.0,
+              "Neutral": 7.5,
+              "Dissatisfied": 3.8,
+              "Very Dissatisfied": 1.9
+            }
+          },
+          "food_adequacy": {
+            "agree_pct": 86.8,
+            "distribution": {
+              "Strongly agree": 49.1,
+              "Agree": 37.7,
+              "Disagree": 7.5,
+              "Neither agree nor disagree": 3.8,
+              "Strongly disagree": 1.9
+            }
+          }
+        }
+      },
+      "Other": {
+        "n": 255,
+        "metrics": {
+          "satisfaction": {
+            "loved_liked_pct": 87.1,
+            "distribution": {
+              "Liked it": 46.0,
+              "Loved it": 41.1,
+              "Neutral": 8.9,
+              "Did not enjoy it": 4.0
+            }
+          },
+          "repeat_intent": {
+            "agree_pct": 75.0,
+            "distribution": {
+              "Strongly agree": 37.9,
+              "Agree": 37.1,
+              "Neither agree nor disagree": 13.8,
+              "Strongly disagree": 6.0,
+              "Disagree": 5.2
+            }
+          },
+          "dish_choice_reasons": {
+            "Sounded appealing to my children": 3.1,
+            "Sounded appealing to adults": 16.5,
+            "Healthy option": 10.2,
+            "Familiar dish": 17.6,
+            "Good value for money": 27.1,
+            "Familiar cuisine": 9.8,
+            "Flexibility of options": 2.7,
+            "There was an offer on this dish": 18.4,
+            "Estimated order time": 1.2,
+            "Estimated delivery time": 3.5,
+            "Portion size": 14.5,
+            "Something we don't cook at home": 9.4,
+            "Other - Write In (Required)": 1.6
+          },
+          "top_restaurants": {
+            "Pho": 24,
+            "Dishoom": 20,
+            "Wagamama": 19,
+            "PizzaExpress": 13,
+            "Banana Tree": 12
+          },
+          "overall_rating": {
+            "satisfied_pct": 81.7,
+            "distribution": {
+              "Satisfied": 42.6,
+              "Very Satisfied": 39.1,
+              "Neutral": 10.4,
+              "Dissatisfied": 7.8
+            }
+          },
+          "food_adequacy": {
+            "agree_pct": 74.2,
+            "distribution": {
+              "Strongly agree": 37.1,
+              "Agree": 37.1,
+              "Neither agree nor disagree": 10.5,
+              "Disagree": 8.1,
+              "Strongly disagree": 7.3
+            }
+          }
+        }
+      }
+    }
+  },
+  "dropoff_analysis": {
+    "segment_counts": {
+      "Family": 354,
+      "Other": 225,
+      "Couple": 201,
+      "Single": 120,
+      "Friends/Sharers": 42
+    },
+    "segment_analysis": {
+      "Family": {
+        "n": 354,
+        "metrics": {
+          "appeal": {
+            "appealing_pct": 50.3,
+            "distribution": {
+              "Quite appealing": 38.5,
+              "Very appealing": 27.6,
+              "Somewhat appealing": 22.7,
+              "Slightly appealing": 9.8,
+              "Not at all appealing": 1.4
+            }
+          },
+          "barriers": {
+            "The price (including fees) was higher than promised": 1.7,
+            "The price (including fees) was higher than I expected": 5.4,
+            "There wasn\u2019t an option that suited everyone": 8.2,
+            "The meals didn\u2019t look appealing to my children": 3.1,
+            "I wasn\u2019t sure the food would arrive hot or on time": 2.0,
+            "I wasn\u2019t confident we'd get enough food for the price": 7.3,
+            "I wasn\u2019t sure if the food fitted dietary needs": 1.1,
+            "I couldn\u2019t customise or swap ingredients": 4.2,
+            "I wasn\u2019t sure it was a subscription": 0.0,
+            "We don't eat between 4": 1.7,
+            "I decided not to do delivery": 3.1,
+            "Other - Please write In (Required)": 2.3
+          },
+          "improvements_wanted": {
+            "Clearer portion information": 9.0,
+            "Clearer ingredient information": 2.0,
+            "Clearer images of the food": 4.5,
+            "Clearer prices upfront (no surprises)": 7.9,
+            "More kid-friendly options": 8.5,
+            "Wider variety of dishes and cuisines": 20.6,
+            "More visible halal / vegetarian / allergen details": 6.5,
+            "More options to customise or add sides": 17.5,
+            "More confidence that it will arrive on time": 3.4,
+            "A discount or loyalty offer": 16.1,
+            "Assurance that it\u2019s not a subscription": 1.7,
+            "Better app speed or clearer screens": 0.6,
+            "The ability to schedule in advance": 1.7,
+            "Total price under \u00a325": 22.6,
+            "More balanced meal options": 5.4,
+            "Nothing, it just wasn't the right time.": 5.6,
+            "Other - Please write In (Required)": 4.0
+          },
+          "appealing_aspects": {
+            "\u00a325 is good value": 59.0,
+            "This will save me time": 38.7,
+            "I don\u2019t want to think about cooking": 36.4,
+            "My children will love getting delivery midweek": 17.5,
+            "I\u2019d like to have more balanced/nutritious food midweek": 12.4,
+            "The variety of dishes and cuisines are great for me/my family": 13.6,
+            "The customisation and add-on options are great for me/my family": 7.9,
+            "4": 26.0,
+            "Other (please specify)": 0.8
+          }
+        }
+      },
+      "Couple": {
+        "n": 201,
+        "metrics": {
+          "appeal": {
+            "appealing_pct": 45.3,
+            "distribution": {
+              "Quite appealing": 41.7,
+              "Somewhat appealing": 24.0,
+              "Very appealing": 21.4,
+              "Slightly appealing": 12.5,
+              "Not at all appealing": 0.5
+            }
+          },
+          "barriers": {
+            "The price (including fees) was higher than promised": 2.5,
+            "The price (including fees) was higher than I expected": 3.5,
+            "There wasn\u2019t an option that suited everyone": 5.5,
+            "The meals didn\u2019t look appealing to my children": 0.0,
+            "I wasn\u2019t sure the food would arrive hot or on time": 1.0,
+            "I wasn\u2019t confident we'd get enough food for the price": 6.0,
+            "I wasn\u2019t sure if the food fitted dietary needs": 1.0,
+            "I couldn\u2019t customise or swap ingredients": 2.0,
+            "I wasn\u2019t sure it was a subscription": 0.5,
+            "We don't eat between 4": 2.0,
+            "I decided not to do delivery": 2.0,
+            "Other - Please write In (Required)": 2.5
+          },
+          "improvements_wanted": {
+            "Clearer portion information": 11.9,
+            "Clearer ingredient information": 1.5,
+            "Clearer images of the food": 8.5,
+            "Clearer prices upfront (no surprises)": 8.5,
+            "More kid-friendly options": 0.5,
+            "Wider variety of dishes and cuisines": 18.4,
+            "More visible halal / vegetarian / allergen details": 3.5,
+            "More options to customise or add sides": 17.4,
+            "More confidence that it will arrive on time": 5.5,
+            "A discount or loyalty offer": 16.9,
+            "Assurance that it\u2019s not a subscription": 2.0,
+            "Better app speed or clearer screens": 2.0,
+            "The ability to schedule in advance": 2.0,
+            "Total price under \u00a325": 30.3,
+            "More balanced meal options": 8.5,
+            "Nothing, it just wasn't the right time.": 7.0,
+            "Other - Please write In (Required)": 3.5
+          },
+          "appealing_aspects": {
+            "\u00a325 is good value": 53.2,
+            "This will save me time": 30.3,
+            "I don\u2019t want to think about cooking": 30.8,
+            "My children will love getting delivery midweek": 3.0,
+            "I\u2019d like to have more balanced/nutritious food midweek": 10.9,
+            "The variety of dishes and cuisines are great for me/my family": 14.4,
+            "The customisation and add-on options are great for me/my family": 9.0,
+            "4": 18.9,
+            "Other (please specify)": 0.5
+          }
+        }
+      },
+      "Single": {
+        "n": 120,
+        "metrics": {
+          "appeal": {
+            "appealing_pct": 46.8,
+            "distribution": {
+              "Quite appealing": 31.5,
+              "Very appealing": 27.0,
+              "Somewhat appealing": 19.8,
+              "Slightly appealing": 16.2,
+              "Not at all appealing": 5.4
+            }
+          },
+          "barriers": {
+            "The price (including fees) was higher than promised": 0.8,
+            "The price (including fees) was higher than I expected": 5.0,
+            "There wasn\u2019t an option that suited everyone": 6.7,
+            "The meals didn\u2019t look appealing to my children": 0.8,
+            "I wasn\u2019t sure the food would arrive hot or on time": 0.0,
+            "I wasn\u2019t confident we'd get enough food for the price": 3.3,
+            "I wasn\u2019t sure if the food fitted dietary needs": 0.8,
+            "I couldn\u2019t customise or swap ingredients": 6.7,
+            "I wasn\u2019t sure it was a subscription": 0.8,
+            "We don't eat between 4": 5.0,
+            "I decided not to do delivery": 3.3,
+            "Other - Please write In (Required)": 3.3
+          },
+          "improvements_wanted": {
+            "Clearer portion information": 9.2,
+            "Clearer ingredient information": 2.5,
+            "Clearer images of the food": 5.0,
+            "Clearer prices upfront (no surprises)": 10.8,
+            "More kid-friendly options": 0.8,
+            "Wider variety of dishes and cuisines": 19.2,
+            "More visible halal / vegetarian / allergen details": 5.0,
+            "More options to customise or add sides": 14.2,
+            "More confidence that it will arrive on time": 2.5,
+            "A discount or loyalty offer": 21.7,
+            "Assurance that it\u2019s not a subscription": 3.3,
+            "Better app speed or clearer screens": 0.0,
+            "The ability to schedule in advance": 5.8,
+            "Total price under \u00a325": 22.5,
+            "More balanced meal options": 6.7,
+            "Nothing, it just wasn't the right time.": 8.3,
+            "Other - Please write In (Required)": 2.5
+          },
+          "appealing_aspects": {
+            "\u00a325 is good value": 55.8,
+            "This will save me time": 33.3,
+            "I don\u2019t want to think about cooking": 33.3,
+            "My children will love getting delivery midweek": 3.3,
+            "I\u2019d like to have more balanced/nutritious food midweek": 14.2,
+            "The variety of dishes and cuisines are great for me/my family": 18.3,
+            "The customisation and add-on options are great for me/my family": 6.7,
+            "4": 10.8,
+            "Other (please specify)": 1.7
+          }
+        }
+      },
+      "Friends/Sharers": {
+        "n": 42,
+        "metrics": {
+          "appeal": {
+            "appealing_pct": 46.3,
+            "distribution": {
+              "Quite appealing": 29.3,
+              "Slightly appealing": 24.4,
+              "Very appealing": 24.4,
+              "Somewhat appealing": 22.0
+            }
+          },
+          "barriers": {
+            "The price (including fees) was higher than promised": 2.4,
+            "The price (including fees) was higher than I expected": 4.8,
+            "There wasn\u2019t an option that suited everyone": 2.4,
+            "The meals didn\u2019t look appealing to my children": 0.0,
+            "I wasn\u2019t sure the food would arrive hot or on time": 0.0,
+            "I wasn\u2019t confident we'd get enough food for the price": 7.1,
+            "I wasn\u2019t sure if the food fitted dietary needs": 2.4,
+            "I couldn\u2019t customise or swap ingredients": 9.5,
+            "I wasn\u2019t sure it was a subscription": 0.0,
+            "We don't eat between 4": 2.4,
+            "I decided not to do delivery": 9.5,
+            "Other - Please write In (Required)": 0.0
+          },
+          "improvements_wanted": {
+            "Clearer portion information": 11.9,
+            "Clearer ingredient information": 4.8,
+            "Clearer images of the food": 9.5,
+            "Clearer prices upfront (no surprises)": 16.7,
+            "More kid-friendly options": 0.0,
+            "Wider variety of dishes and cuisines": 19.0,
+            "More visible halal / vegetarian / allergen details": 9.5,
+            "More options to customise or add sides": 19.0,
+            "More confidence that it will arrive on time": 4.8,
+            "A discount or loyalty offer": 31.0,
+            "Assurance that it\u2019s not a subscription": 2.4,
+            "Better app speed or clearer screens": 0.0,
+            "The ability to schedule in advance": 4.8,
+            "Total price under \u00a325": 33.3,
+            "More balanced meal options": 2.4,
+            "Nothing, it just wasn't the right time.": 4.8,
+            "Other - Please write In (Required)": 4.8
+          },
+          "appealing_aspects": {
+            "\u00a325 is good value": 45.2,
+            "This will save me time": 23.8,
+            "I don\u2019t want to think about cooking": 21.4,
+            "My children will love getting delivery midweek": 0.0,
+            "I\u2019d like to have more balanced/nutritious food midweek": 19.0,
+            "The variety of dishes and cuisines are great for me/my family": 11.9,
+            "The customisation and add-on options are great for me/my family": 4.8,
+            "4": 7.1,
+            "Other (please specify)": 0.0
+          }
+        }
+      },
+      "Other": {
+        "n": 225,
+        "metrics": {
+          "appeal": {
+            "appealing_pct": 46.3,
+            "distribution": {
+              "Quite appealing": 39.8,
+              "Very appealing": 27.8,
+              "Somewhat appealing": 18.5,
+              "Slightly appealing": 12.0,
+              "Not at all appealing": 1.9
+            }
+          },
+          "barriers": {
+            "The price (including fees) was higher than promised": 1.3,
+            "The price (including fees) was higher than I expected": 0.9,
+            "There wasn\u2019t an option that suited everyone": 3.6,
+            "The meals didn\u2019t look appealing to my children": 0.4,
+            "I wasn\u2019t sure the food would arrive hot or on time": 1.3,
+            "I wasn\u2019t confident we'd get enough food for the price": 2.2,
+            "I wasn\u2019t sure if the food fitted dietary needs": 1.3,
+            "I couldn\u2019t customise or swap ingredients": 1.8,
+            "I wasn\u2019t sure it was a subscription": 0.0,
+            "We don't eat between 4": 2.7,
+            "I decided not to do delivery": 1.8,
+            "Other - Please write In (Required)": 0.0
+          },
+          "improvements_wanted": {
+            "Clearer portion information": 3.1,
+            "Clearer ingredient information": 1.8,
+            "Clearer images of the food": 4.0,
+            "Clearer prices upfront (no surprises)": 3.1,
+            "More kid-friendly options": 1.8,
+            "Wider variety of dishes and cuisines": 9.3,
+            "More visible halal / vegetarian / allergen details": 6.2,
+            "More options to customise or add sides": 8.0,
+            "More confidence that it will arrive on time": 2.2,
+            "A discount or loyalty offer": 8.0,
+            "Assurance that it\u2019s not a subscription": 0.9,
+            "Better app speed or clearer screens": 0.4,
+            "The ability to schedule in advance": 1.8,
+            "Total price under \u00a325": 10.2,
+            "More balanced meal options": 5.3,
+            "Nothing, it just wasn't the right time.": 4.4,
+            "Other - Please write In (Required)": 2.2
+          },
+          "appealing_aspects": {
+            "\u00a325 is good value": 25.8,
+            "This will save me time": 13.8,
+            "I don\u2019t want to think about cooking": 14.2,
+            "My children will love getting delivery midweek": 0.4,
+            "I\u2019d like to have more balanced/nutritious food midweek": 4.9,
+            "The variety of dishes and cuisines are great for me/my family": 8.0,
+            "The customisation and add-on options are great for me/my family": 3.6,
+            "4": 7.1,
+            "Other (please specify)": 1.8
+          }
+        }
+      }
+    }
+  },
+  "segment_differences": [
+    {
+      "metric": "Satisfaction (Loved/Liked %)",
+      "segment": "Couple",
+      "segment_n": 369,
+      "family_value": 85.6,
+      "segment_value": 87.1,
+      "difference": 1.5,
+      "index_vs_family": 102.0,
+      "significant": false
+    },
+    {
+      "metric": "Repeat Intent (Agree %)",
+      "segment": "Couple",
+      "segment_n": 369,
+      "family_value": 75.2,
+      "segment_value": 75.3,
+      "difference": 0.1,
+      "index_vs_family": 100.0,
+      "significant": false
+    },
+    {
+      "metric": "Overall Satisfied %",
+      "segment": "Couple",
+      "segment_n": 369,
+      "family_value": 81.4,
+      "segment_value": 87.5,
+      "difference": 6.1,
+      "index_vs_family": 107.0,
+      "significant": false
+    },
+    {
+      "metric": "Food Adequacy (Agree %)",
+      "segment": "Couple",
+      "segment_n": 369,
+      "family_value": 77.3,
+      "segment_value": 81.1,
+      "difference": 3.8,
+      "index_vs_family": 105.0,
+      "significant": false
+    },
+    {
+      "metric": "\"Child Appeal\" Cited %",
+      "segment": "Couple",
+      "segment_n": 369,
+      "family_value": 30.9,
+      "segment_value": 1.1,
+      "difference": -29.8,
+      "index_vs_family": 4.0,
+      "significant": "True"
+    },
+    {
+      "metric": "\"Adult Appeal\" Cited %",
+      "segment": "Couple",
+      "segment_n": 369,
+      "family_value": 25.5,
+      "segment_value": 22.2,
+      "difference": -3.3,
+      "index_vs_family": 87.0,
+      "significant": "False"
+    },
+    {
+      "metric": "\"Good Value\" Cited %",
+      "segment": "Couple",
+      "segment_n": 369,
+      "family_value": 45.4,
+      "segment_value": 56.6,
+      "difference": 11.2,
+      "index_vs_family": 125.0,
+      "significant": "False"
+    },
+    {
+      "metric": "Satisfaction (Loved/Liked %)",
+      "segment": "Single",
+      "segment_n": 190,
+      "family_value": 85.6,
+      "segment_value": 84.6,
+      "difference": -1.0,
+      "index_vs_family": 99.0,
+      "significant": false
+    },
+    {
+      "metric": "Repeat Intent (Agree %)",
+      "segment": "Single",
+      "segment_n": 190,
+      "family_value": 75.2,
+      "segment_value": 71.9,
+      "difference": -3.3,
+      "index_vs_family": 96.0,
+      "significant": false
+    },
+    {
+      "metric": "Overall Satisfied %",
+      "segment": "Single",
+      "segment_n": 190,
+      "family_value": 81.4,
+      "segment_value": 84.0,
+      "difference": 2.6,
+      "index_vs_family": 103.0,
+      "significant": false
+    },
+    {
+      "metric": "Food Adequacy (Agree %)",
+      "segment": "Single",
+      "segment_n": 190,
+      "family_value": 77.3,
+      "segment_value": 80.6,
+      "difference": 3.3,
+      "index_vs_family": 104.0,
+      "significant": false
+    },
+    {
+      "metric": "\"Child Appeal\" Cited %",
+      "segment": "Single",
+      "segment_n": 190,
+      "family_value": 30.9,
+      "segment_value": 0.5,
+      "difference": -30.4,
+      "index_vs_family": 2.0,
+      "significant": "True"
+    },
+    {
+      "metric": "\"Adult Appeal\" Cited %",
+      "segment": "Single",
+      "segment_n": 190,
+      "family_value": 25.5,
+      "segment_value": 21.1,
+      "difference": -4.4,
+      "index_vs_family": 83.0,
+      "significant": "False"
+    },
+    {
+      "metric": "\"Good Value\" Cited %",
+      "segment": "Single",
+      "segment_n": 190,
+      "family_value": 45.4,
+      "segment_value": 47.4,
+      "difference": 2.0,
+      "index_vs_family": 104.0,
+      "significant": "False"
+    },
+    {
+      "metric": "Satisfaction (Loved/Liked %)",
+      "segment": "Friends/Sharers",
+      "segment_n": 56,
+      "family_value": 85.6,
+      "segment_value": 88.9,
+      "difference": 3.3,
+      "index_vs_family": 104.0,
+      "significant": false
+    },
+    {
+      "metric": "Repeat Intent (Agree %)",
+      "segment": "Friends/Sharers",
+      "segment_n": 56,
+      "family_value": 75.2,
+      "segment_value": 77.4,
+      "difference": 2.2,
+      "index_vs_family": 103.0,
+      "significant": false
+    },
+    {
+      "metric": "Overall Satisfied %",
+      "segment": "Friends/Sharers",
+      "segment_n": 56,
+      "family_value": 81.4,
+      "segment_value": 86.8,
+      "difference": 5.4,
+      "index_vs_family": 107.0,
+      "significant": false
+    },
+    {
+      "metric": "Food Adequacy (Agree %)",
+      "segment": "Friends/Sharers",
+      "segment_n": 56,
+      "family_value": 77.3,
+      "segment_value": 86.8,
+      "difference": 9.5,
+      "index_vs_family": 112.0,
+      "significant": false
+    },
+    {
+      "metric": "\"Child Appeal\" Cited %",
+      "segment": "Friends/Sharers",
+      "segment_n": 56,
+      "family_value": 30.9,
+      "segment_value": 0.0,
+      "difference": -30.9,
+      "index_vs_family": 0.0,
+      "significant": "True"
+    },
+    {
+      "metric": "\"Adult Appeal\" Cited %",
+      "segment": "Friends/Sharers",
+      "segment_n": 56,
+      "family_value": 25.5,
+      "segment_value": 21.4,
+      "difference": -4.1,
+      "index_vs_family": 84.0,
+      "significant": "False"
+    },
+    {
+      "metric": "\"Good Value\" Cited %",
+      "segment": "Friends/Sharers",
+      "segment_n": 56,
+      "family_value": 45.4,
+      "segment_value": 46.4,
+      "difference": 1.0,
+      "index_vs_family": 102.0,
+      "significant": "False"
+    }
+  ],
+  "summary": {
+    "total_post_order_responses": 1599,
+    "total_dropoff_responses": 942,
+    "segments_analyzed": [
+      "Family",
+      "Couple",
+      "Single",
+      "Friends/Sharers",
+      "Other"
+    ],
+    "significant_differences_found": 3
+  }
+}

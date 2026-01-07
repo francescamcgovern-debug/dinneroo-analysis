@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# IDE
+.cursor/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Temporary files
+*.tmp
+*.bak
+

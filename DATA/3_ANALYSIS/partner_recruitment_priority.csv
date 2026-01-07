@@ -1,0 +1,17 @@
+partner,cuisine_gap,dish_types,priority,demand_signal,current_dinneroo_supply,fit_score,on_deliveroo,deliveroo_orders,deliveroo_zones,cuisine_demand_orders,recommendation
+Cocotte,Grilled Chicken,"Rotisserie Chicken, Roast Chicken",Critical,High,Zero,85,Yes,946,1,0,Recruit
+The Athenian,Greek,"Souvlaki, Gyros, Mezze",Critical,Medium,Zero,85,Yes,36398,1,5881,Recruit
+Korean Dinner Party,Korean,"Bibimbap, Bulgogi, Korean Fried Chicken",Critical,Medium,Zero,80,Yes,2598,1,5218,Recruit
+Roosters,Grilled Chicken,"Grilled Chicken, Wings",Critical,High,Zero,75,Yes,603,1,0,Recruit
+On The Bab,Korean,"Korean Street Food, Bibimbap",Critical,Medium,Zero,75,Yes,223921,1,5218,Recruit
+Kimchee,Korean,"Korean BBQ, Bibimbap",Critical,Medium,Zero,70,Yes,10,1,5218,Recruit
+Nando's,Portuguese,Peri-Peri Chicken,High,High,Zero,95,Yes,19981,1,19837,Recruit
+Pieminister,British,"Pies, Mash, Gravy",High,High,Limited,85,Yes,106,1,18228,Recruit
+Casa do Frango,Portuguese,"Frango, Portuguese Chicken",High,High,Zero,85,Yes,289,1,19837,Recruit
+Turtle Bay,Caribbean,"Jerk Chicken, Caribbean Curry, Rice & Peas",High,Low-Medium,Zero,80,Yes,196,1,2490,Recruit
+The Chippy,British,Fish & Chips,High,High,Limited,80,Yes,36398,1,18228,Recruit
+Rudie's,Caribbean,"Jerk, Caribbean",High,Low-Medium,Zero,75,Unknown,0,0,2490,Recruit
+Ping Pong,Chinese,"Dim Sum, Chinese",Medium,High,Underrepresented,75,Yes,2746,1,24190,Consider
+Gokyuzu,Turkish/Mediterranean,"Kebab, Mezze, Grilled Meats",Low,Unknown,Unknown,80,Yes,765,1,0,Consider
+Comptoir Libanais,Mediterranean,"Mezze, Shawarma, Falafel",Low,Unknown,Unknown,75,Yes,503,1,2283,Consider
+Busaba,Thai/Asian,"Thai, Asian",Low,Unknown,Unknown,70,Unknown,0,0,0,Consider

@@ -1,0 +1,1307 @@
+zone_code,zone_name,city,large_city,region,num_brands,asian,italian,indian,healthy,mexican,middle_eastern,british,total_dishes,num_cuisines
+SRH,Shoreham,Brighton,South East England,South England and Wales,8,19,9,0,2,6,0,0,36,4
+HVNT,Havant,Portsmouth,South West and Wales,South England and Wales,1,0,5,0,0,0,0,0,5,1
+BOHV,Bournebridge/ Havering,London,Commuter Belt North,Greater London,3,10,4,0,0,0,0,0,14,2
+ABI,Abingdon,Oxford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SOUE,Southampton East,Southampton,South West and Wales,South England and Wales,7,9,18,0,0,6,3,1,37,5
+BRX,Brixton,London,CL Grow,Core London,12,23,8,7,8,3,3,1,53,7
+GRE,Greenwich,London,OL South,Greater London,11,31,8,4,5,0,3,1,52,6
+AYL,Aylesbury,Aylesbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CAM,Cambridge,Cambridge,South East England,South England and Wales,8,21,13,0,0,6,3,1,44,5
+DID,Didsbury and Withington,Manchester,North West England,North England,3,5,4,0,0,0,0,0,9,2
+NPSS,Newport Pagnell Service Station,Milton Keynes,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+MOS,Moseley,Birmingham,Midlands,North England,8,17,4,0,2,9,0,0,32,4
+WAN,Wandsworth,London,CL Heartland,Core London,16,31,8,4,11,3,6,1,64,7
+SUA,Stratford upon Avon,Coventry,Midlands,North England,1,0,4,0,0,0,0,0,4,1
+CAN,Canterbury,Canterbury,South East England,South England and Wales,7,13,13,0,0,6,3,1,36,5
+SAN,St Andrews,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BAL,Balham,London,CL Heartland,Core London,14,26,4,7,8,3,3,0,51,6
+FLK,Folkestone,Canterbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+KSHY,Kingsbury Green/ The Hyde,London,OL North,Greater London,4,9,4,4,0,0,0,0,17,3
+MHW,Mahon West,Cork,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+HOR,Horsham,Crawley,Commuter Belt South,Greater London,4,9,8,0,0,0,3,1,21,4
+FCH,Finsbury Park / Harringay / Crouch End,London,CL Grow,Core London,16,32,4,10,8,3,3,0,60,6
+WEY,Weybridge,London,Commuter Belt South,Greater London,5,12,4,0,0,0,0,0,16,2
+FAR,Fareham,Portsmouth,South West and Wales,South England and Wales,1,0,5,0,0,0,0,0,5,1
+MVK,Maida Vale / Kilburn,London,CL Grow,Core London,15,25,13,7,11,0,6,1,63,6
+WAT,Watford,London,Commuter Belt North,Greater London,4,7,4,0,0,6,0,0,17,3
+WGR,Wood Green,London,OL North,Greater London,9,20,4,7,0,3,0,0,34,4
+WAL,Walthamstow,London,OL North,Greater London,6,11,4,7,0,0,0,0,22,3
+CHU,Cheshunt,London,Commuter Belt North,Greater London,4,4,9,0,0,3,0,0,16,3
+CHL,Chorley,Preston,North West England,North England,0,0,0,0,0,0,0,0,0,0
+HAM,Hampstead,London,CL Heartland,Core London,17,29,19,7,5,3,6,1,70,7
+LET,Letchworth Garden City,London,Commuter Belt North,Greater London,4,9,9,0,0,0,0,0,18,2
+STA,St Albans,London,Commuter Belt North,Greater London,6,16,13,0,0,0,3,1,33,4
+WOT,Walton on Thames,London,Commuter Belt South,Greater London,8,26,8,0,0,0,3,1,38,4
+STH,Southport,Preston,North West England,North England,0,0,0,0,0,0,0,0,0,0
+BAS,Basingstoke,Reading,South East England,South England and Wales,3,4,4,0,0,6,0,0,14,3
+COOL,Coolock,Dublin,Greater Dublin,Ireland and Scotland,2,11,4,0,0,0,0,0,15,2
+HOS,Horsforth,Leeds,North East and Yorkshire,North England,2,3,4,0,0,0,0,0,7,2
+CHM,Chesham,London,Commuter Belt North,Greater London,2,3,4,0,0,0,0,0,7,2
+BROM,Bromsgrove,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+LHP,Littlehampton,Brighton,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+RONT,Ronanstown,Dublin,Greater Dublin,Ireland and Scotland,3,15,4,0,0,0,0,0,19,2
+OLEE,Greater Leeds,Leeds,North East and Yorkshire,North England,3,7,4,0,0,0,0,0,11,2
+SKEA,South Kearsley,Manchester,North West England,North England,9,23,18,0,0,6,3,1,51,5
+SHM,Southam,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WALK,Walkington,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+HUY,Huyton,Liverpool,North West England,North England,1,4,0,0,0,0,0,0,4,1
+HX01,HX01,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+WLOO,Waterloo & Southbank,London,CL Corporate,Core London,8,21,14,0,2,0,0,0,37,3
+SG03,SG03,London,Commuter Belt North,Greater London,2,0,9,0,0,0,0,0,9,1
+LLZ,Lockleaze,Bristol,South West and Wales,South England and Wales,7,16,14,0,0,6,0,0,36,3
+BELB,Belbroughton,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+PLYN,Plymouth North,Plymouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CA01,CA01,Carlisle,North West England,North England,0,0,0,0,0,0,0,0,0,0
+NLB,Northfield/Longbridge,Birmingham,Midlands,North England,2,5,4,0,0,0,0,0,9,2
+KDM,Kidderminster,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+TTH,Tintinhull,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+GOO,Goole,Doncaster,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SHRL,Shrewley,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+NP01,NP01,Newport,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CPP,Crystal Palace / Penge,London,OL South,Greater London,5,11,4,4,0,0,0,0,19,3
+BAR,Barnet,London,Commuter Belt North,Greater London,4,4,9,3,0,0,0,0,16,3
+REI,Reigate,Crawley,Commuter Belt South,Greater London,6,17,8,0,0,0,3,1,29,4
+LEY,Leyton,London,OL North,Greater London,8,18,4,3,3,0,3,0,31,5
+WOK,Woking,London,Commuter Belt South,Greater London,5,19,4,0,0,0,0,0,23,2
+CHE,Cheltenham,Cheltenham,South West and Wales,South England and Wales,5,12,9,0,0,0,0,0,21,2
+GBL,Greenbank / Liberton,Edinburgh,Scotland,Ireland and Scotland,4,13,4,0,0,0,0,0,17,2
+CW,Canary Wharf,London,CL Corporate,Core London,13,29,8,4,11,0,6,1,59,6
+EPS,Epsom,London,Commuter Belt South,Greater London,4,7,9,0,0,0,0,0,16,2
+SOS,Southend on Sea,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+HAR,Harrogate,Harrogate,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+BILL,Billericay,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+PRE,Prestwich,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+HCN,Hounslow Central,London,OL South,Greater London,4,4,4,1,0,3,0,0,12,4
+RTW,Royal Tunbridge Wells,Royal Tunbridge Wells,Commuter Belt South,Greater London,7,19,8,0,0,0,3,1,31,4
+HME,"Highgate, Muswell Hill, East Finchley",London,OL North,Greater London,12,21,4,7,5,3,3,0,43,6
+FIN,Finchley,London,OL North,Greater London,9,15,10,7,0,0,0,0,32,3
+PTC,Patchway,Bristol,South West and Wales,South England and Wales,5,11,9,0,0,6,0,0,26,3
+LGHB,Leighton Buzzard,Aylesbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BEC,Beckenham,London,OL South,Greater London,4,6,4,4,0,0,0,0,14,3
+BRK,Brockley / Forest Hill,London,OL South,Greater London,11,25,8,7,3,0,6,1,50,6
+PRL,Purley,London,Commuter Belt South,Greater London,4,6,10,0,0,0,0,0,16,2
+BFSW,Belfast Southwest,Belfast,Regional Ireland,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1
+SWN,Streatham / West Norwood,London,OL South,Greater London,9,21,4,7,2,0,0,0,34,4
+NWK,Newark-on-Trent,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SIT,Sittingbourne,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CCS,Cardiff City Stadium,Cardiff,South West and Wales,South England and Wales,7,14,13,0,0,6,3,1,37,5
+BRT,Braintree,Chelmsford,South East England,South England and Wales,4,6,13,0,0,0,3,1,23,4
+ELME,Elmers End/ Kelsey Park,London,OL South,Greater London,4,13,4,0,0,0,0,0,17,2
+DOWN,Downham/ Hither Green,London,OL South,Greater London,4,13,4,0,0,0,0,0,17,2
+ANBY,Anlaby Common,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+BA01,BA01,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HCR,Hunts Cross,Liverpool,North West England,North England,2,4,4,0,0,0,0,0,8,2
+G04,G04,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+HUD,Huddersfield,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+TQ02,TQ02,Torquay,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+GRY,Grays,London,Commuter Belt North,Greater London,3,5,0,0,0,6,0,0,11,2
+HML,Hamilton,Glasgow,Scotland,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1
+DH01,DH01,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+TF01,TF01,Telford,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+NMDS,North Maidstone,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SWAN,Swansea North,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+TF02,TF02,Telford,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DE04,DE04,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+NORN,Norwich North,Norwich,South East England,South England and Wales,6,14,13,0,0,0,3,1,31,4
+BRGG,Bailriff & Galgate,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+THR,Thornbury,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CLE,Coleraine,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BA02,BA02,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+OX02,OX02,Oxford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BD02,BD02,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+WSH,Washington,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+PTS,Portishead,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+STAS,St Ann's,Nottingham,Midlands,North England,8,14,18,0,0,6,3,1,42,5
+CHEA,Cheadle,Manchester,North West England,North England,2,4,4,0,0,0,0,0,8,2
+LE05,LE05,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+LS01,LS01,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+RSH,Rushden,Northampton,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+MK02,MK02,Milton Keynes,South East England,South England and Wales,1,4,0,0,0,0,0,0,4,1
+CARR,Carrigaline,Cork,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+USH,Undercliffe and Swain House,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DAV,Daventry,Northampton,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+MUM,Mumbles,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BPG,Bishopbriggs,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+WCH,Winchester,Southampton,South West and Wales,South England and Wales,3,7,4,0,0,0,0,0,11,2
+TAL,Tallaght,Dublin,Greater Dublin,Ireland and Scotland,2,11,4,0,0,0,0,0,15,2
+WTV,Waterlooville,Portsmouth,South West and Wales,South England and Wales,1,0,5,0,0,0,0,0,5,1
+GRV,Gravesend,London,Commuter Belt South,Greater London,5,6,13,0,2,0,3,1,25,5
+FLT,Feltham,London,OL South,Greater London,4,7,4,0,0,3,0,0,14,3
+ROM,Romford,London,Commuter Belt North,Greater London,6,13,9,1,0,0,0,0,23,3
+GGW,Glasgow West,Glasgow,Scotland,Ireland and Scotland,8,16,14,0,0,6,0,0,36,3
+YTE,Yate,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SHI,Shirley,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BSL,Basildon,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+DCW,Durham City West,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+LE03,LE03,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+MALH,Malahide,Dublin,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+DUBP,Dublin Port,Dublin,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+KEA,Kearsley,Manchester,North West England,North England,4,6,8,0,0,6,3,1,24,5
+OSWA,Outer Swansea,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+PH02,PH02,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+EVI,Evington,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CHNW,Cheltenham North-West,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SUD,Sudbury,Colchester,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HG01,HG01,Harrogate,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+NEW,Newcastle,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+TN3,TN3,Royal Tunbridge Wells,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+ILB,Inch and Liberton,Edinburgh,Scotland,Ireland and Scotland,2,4,4,0,0,0,0,0,8,2
+G05,G05,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+DEA,Deal,Canterbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+OCLBM,Outer Clydebank,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+SWAE,Swansea East,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ME05,ME05,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DY03,DY03,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WBCH,West Bromwich,Birmingham,Midlands,North England,7,17,9,0,0,6,0,0,32,3
+WLG,Willington,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+TN2,TN2,Royal Tunbridge Wells,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+KNOW,Knowle/Dorridge,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+GFK,Giffnock,Glasgow,Scotland,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1
+BRO,Bromley,London,OL South,Greater London,5,16,4,0,0,0,0,0,20,2
+ASRT,Ashbourne & Ratoath,Navan,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+LL03,LL03,Wrexham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NGH,Gateshead,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DUM,Dumfries,Dumfries,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+NG03,NG03,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+LBR,London Bridge,London,CL Corporate,Core London,16,31,13,7,8,3,6,1,69,7
+EBRD,East Bradford,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+PO05,PO05,Isle of Wight,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ONGH,Outer Gateshead,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+LUR,Lurgan,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+HR01,HR01,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CB04,CB04,Cambridge,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+KY03,KY03,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+LDEW,Lower Dewsbury,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CB02,CB02,Cambridge,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WOMB,Wombourne,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+FK03,FK03,Stirling,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+L01,L01,Liverpool,North West England,North England,0,0,0,0,0,0,0,0,0,0
+LN03,LN03,Lincoln,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DEW,Dewsbury,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+RG03,RG03,Reading,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+PECN,Peckham North,London,CL Grow,Core London,4,7,0,3,3,0,3,0,16,4
+KA01,KA01,Ayr,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+NRCK,New Rackheath,Norwich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+MKW,Mackworth,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DL02,DL02,Darlington,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+LA02,LA02,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SVB,Severn Beach,Bristol,South West and Wales,South England and Wales,4,11,4,0,0,6,0,0,21,3
+NPS,Neepsend,Sheffield,North East and Yorkshire,North England,2,0,9,0,0,0,0,0,9,1
+ALF,Alfreton,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+OEDG,Outer City of Edinburgh,Edinburgh,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BS02,BS02,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BRDG,Bridgend,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BLCK,Blackhall,Middlesbrough,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+RUG,Rugby,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+ABB,Abbey,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CB01,CB01,Cambridge,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+EHOR,East Horsley and Ockham,London,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+YO01,YO01,York,North East and Yorkshire,North England,1,0,5,0,0,0,0,0,5,1
+TQY,Torquay,Torquay,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DNZY,Danzey Green,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WVR,Waverley,Camberley,Commuter Belt South,Greater London,3,5,8,0,0,0,3,1,17,4
+S2,S2,Sheffield,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CM6,CM6,Chelmsford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WR03,WR03,Worcester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DYT,Drayton,Norwich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+EDC,Edinburgh Central,Edinburgh,Scotland,Ireland and Scotland,5,20,4,0,0,0,0,0,24,2
+HAV,Haverhill,Cambridge,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LEA,Leatherhead,London,Commuter Belt South,Greater London,5,10,9,0,0,0,0,0,19,2
+SG01,SG01,Milton Keynes,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WOL,Wolverhampton,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+EPP,Epping,London,Commuter Belt North,Greater London,2,0,4,0,0,3,0,0,7,2
+BGR,Bangor,Wrexham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SLE,Sale,Manchester,North West England,North England,4,6,8,0,0,6,3,1,24,5
+BN03,BN03,Brighton,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+IKLY,Ilkley,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CTTN,Carterton,Oxford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+PNTH,Penarth,Cardiff,South West and Wales,South England and Wales,5,9,8,0,0,6,3,1,27,5
+EH2,EH2,Edinburgh,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BRD1,Bradford Central,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+RWB,Royal Wootton Bassett,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CCN01,CCN01,County Cavan,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BS04,BS04,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BRD2,Saltaire,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+NORW,Norwich West,Norwich,South East England,South England and Wales,6,14,13,0,0,0,3,1,31,4
+IOWC,Isle of Wight - Cowes,Isle of Wight,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+EX1,EX1,Exeter,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+FLW,Fleetwood,Preston,North West England,North England,0,0,0,0,0,0,0,0,0,0
+BB1,BB1,Blackburn,North West England,North England,0,0,0,0,0,0,0,0,0,0
+WBRS,West Bristol,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SA,SA,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+TS02,TS02,Middlesbrough,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CRS,Carlisle,Carlisle,North West England,North England,0,0,0,0,0,0,0,0,0,0
+RH01,RH01,Crawley,Commuter Belt South,Greater London,3,5,8,0,0,0,3,1,17,4
+PRSN,Preston,Preston,North West England,North England,0,0,0,0,0,0,0,0,0,0
+INK,Inkberrow,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+ME01,ME01,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WRTF,Waterford,Waterford,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BH01,BH01,Bournemouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CLD02,CLD02,County Longford,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+LSEA,Leeds Southeast,Leeds,North East and Yorkshire,North England,8,21,14,0,0,6,3,1,45,5
+CBE,Camborne,Falmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LUL,Lullingstone,London,Commuter Belt South,Greater London,1,2,0,0,0,0,0,0,2,1
+SY01,SY01,Shrewsbury,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NDND,North Dundee,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+EXEW,Exeter West,Exeter,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DON,Doncaster,Doncaster,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SOL,Solihull,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CMO02,CMO02,County Mayo,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BRH,Burghill,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+KKL,Kirkcaldy,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+FLM,Falmouth,Falmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ME04,ME04,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DEV,Devizes,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HGH,Higham,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LUT,Luton,London,Commuter Belt North,Greater London,2,3,4,0,0,0,0,0,7,2
+EDND,East Dundee,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+NE02,NE02,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SAU,Saint Austell,Plymouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SHLT,Shilton,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CLE 2.00,CLE 2.00,County Leitrim,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+NWOL,North Wolverhampton,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CCL01,CCL01,Carlow,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BURG,Burgh,Carlisle,North West England,North England,0,0,0,0,0,0,0,0,0,0
+DKN,Dickens Heath,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+EVER,Everton,Bournemouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LECN,Leconfield,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+PTF,Pontefract,Leeds,North East and Yorkshire,North England,1,4,0,0,0,0,0,0,4,1
+GU03,GU03,London,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+TIV,Tiverton,Exeter,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+GLOW,Gloucester West,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+TQ01,TQ01,Torquay,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+OBRD2,Outer Bradford 2,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+OTT,Ottershaw,London,Commuter Belt South,Greater London,3,14,0,0,0,0,0,0,14,1
+CAER,Caerau,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+EH1,EH1,Edinburgh,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+RG01,RG01,Reading,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+BRM,Birmingham,Birmingham,Midlands,North England,10,19,13,0,2,9,3,1,47,6
+BCD,Bangor County Down,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+POT,Potters Bar,London,Commuter Belt North,Greater London,4,4,9,3,0,0,0,0,16,3
+LYMM,Lymm,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+DDY,Dudley,Birmingham,Midlands,North England,2,4,5,0,0,0,0,0,9,2
+WRG,Warrington,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+KIL,Kilmarnock,Ayr,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CF01,CF01,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LN02,LN02,Lincoln,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+ME06,ME06,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CC3,CC3,Cork,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+PO04,PO04,Portsmouth,South West and Wales,South England and Wales,4,9,8,0,0,0,3,1,21,4
+GU02,GU02,Camberley,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+KLK,Kilkenny,Kilkenny,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+WELL,Wellingborough,Northampton,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+PEM,Pembury,Royal Tunbridge Wells,Commuter Belt South,Greater London,6,17,8,0,0,0,3,1,29,4
+SPRK,Sparkbrook,Birmingham,Midlands,North England,7,16,8,0,2,3,3,1,33,6
+HBAM,Holbeck and Armley,Leeds,North East and Yorkshire,North England,4,13,4,0,0,6,3,1,27,5
+KRK,Kirkby,Liverpool,North West England,North England,0,0,0,0,0,0,0,0,0,0
+IV04,IV04,Inverness,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BDN,Blaydon,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CRICK,Crick,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WTH,Witham,Chelmsford,South East England,South England and Wales,4,6,13,0,0,0,3,1,23,4
+LAN,Lancaster,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+STK,Stockport/Heaton Moor,Manchester,North West England,North England,3,5,4,0,0,0,0,0,9,2
+DG03,DG03,Dumfries,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+YOR,York,York,North East and Yorkshire,North England,8,14,18,0,0,6,3,1,42,5
+HESW,Heswall,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+DRK,Durkar,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+HEYS,Heysham,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SWI,Swindon,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+RUN,Runcorn,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+BRCK,Bracknell,Camberley,Commuter Belt South,Greater London,4,7,4,0,0,6,0,0,17,3
+WME,Wapping and Mile End,London,CL Grow,Core London,13,29,4,4,11,0,3,0,51,5
+AYS,Aylesford,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+COS,Cosham,Portsmouth,South West and Wales,South England and Wales,1,0,5,0,0,0,0,0,5,1
+DOV,Dover,Canterbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DH03,DH03,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+STL,Southall,London,OL North,Greater London,6,16,4,1,0,6,0,0,27,4
+MTY,Merthyr Tydfil,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WDND,West Dundee,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+PER,Perth,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+TSHM,Topsham,Exeter,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DY02,DY02,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BKPL,Blackpool,Preston,North West England,North England,0,0,0,0,0,0,0,0,0,0
+ELTP,Eltham Palace,London,OL South,Greater London,3,7,4,0,0,0,0,0,11,2
+DT02,DT02,Dorchester,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CST,Chester,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+TQ03,TQ03,Torquay,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CRN01,CRN01,County Roscommon,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+HLT,Heslington,York,North East and Yorkshire,North England,7,14,14,0,0,6,3,1,38,5
+EBS,Eaton Bishop,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+PE01,PE01,Peterborough,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+EBOL,East Bolton,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+BRD,Bridlington,York,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+NTG,Nottingham,Nottingham,Midlands,North England,8,14,18,0,0,6,3,1,42,5
+CGT,Craigentinny,Edinburgh,Scotland,Ireland and Scotland,4,20,0,0,0,0,0,0,20,1
+LL01,LL01,Wrexham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NWH,Newhall and Brightside,Sheffield,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+PSNT,Port Solent,Portsmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CHRL,Charlcombe,Bath,South West and Wales,South England and Wales,2,3,0,0,0,6,0,0,9,2
+CNV,Canvey Island,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+AYCL,Aycliffe,Darlington,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+HP02,HP02,Aylesbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BRSN,Braunstone,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+NP02,NP02,Newport,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+OWAK,Outer Wakefield,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+OLH,Oldham,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+LLA,Llanelli,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LE02,LE02,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+IOWR,Isle of Wight - Ryde,Isle of Wight,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+POL,Polesworth,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SP03,SP03,Salisbury,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SN01,SN01,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NN03,NN03,Northampton,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+ABT,Arbourthorne,Sheffield,North East and Yorkshire,North England,4,9,9,0,0,0,0,0,18,2
+SK03,SK03,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+EDS,Edinburgh South,Edinburgh,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+WDC,Woolwich Dockyard and Charlton Park,London,OL South,Greater London,2,6,0,0,0,0,0,0,6,1
+NOXF,North Oxford,Oxford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CV02,CV02,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+HD01,HD01,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+WLWT,Walworth,London,CL Grow,Core London,14,31,8,7,11,0,3,1,61,6
+GCE,Glasgow Centre East,Glasgow,Scotland,Ireland and Scotland,3,4,5,0,0,6,0,0,15,3
+WLL,Wallingford,Oxford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ME,Manchester East,Manchester,North West England,North England,2,4,0,0,0,3,0,0,7,2
+WWP,Wibsey and Westwood Park,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DRY,Derry City Centre,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+OTF,Otford,Royal Tunbridge Wells,Commuter Belt South,Greater London,2,6,0,0,0,0,0,0,6,1
+RYA,Royal Arsenal,London,OL South,Greater London,2,2,4,0,0,0,0,0,6,2
+ML04,ML04,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CLE 1.00,CLE 1.00,County Leitrim,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BLP,Belper,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+OX03,OX03,Oxford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SWIS,Swindon South,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CHIN,Chinbrook Meadows,London,OL South,Greater London,2,2,4,0,0,0,0,0,6,2
+NLIN,North Lincoln,Lincoln,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+GLC,Glasgow Centre,Glasgow,Scotland,Ireland and Scotland,7,16,9,0,0,6,0,0,31,3
+ELIN,East Lincoln,Lincoln,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+MLG,Mollington,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+KNWL,Knowle,Bristol,South West and Wales,South England and Wales,8,19,14,0,0,6,0,0,39,3
+CWX02,CWX02,Waterford,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+OX01,OX01,Oxford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WRKH,Weatheroak Hill,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+STNW,Stanwix,Carlisle,North West England,North England,0,0,0,0,0,0,0,0,0,0
+WKS,Worksop,Sheffield,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BRLF,Brailsford,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CK02,CK02,Naas,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+WAR,Warwick,Coventry,Midlands,North England,4,7,4,0,0,6,0,0,17,3
+SHIN,Shincliffe,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+OAD,Oadby,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DL01,DL01,Darlington,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SY02,SY02,Shrewsbury,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WV02,WV02,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+NR1,NR1,Norwich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CLR02,CLR02,Limerick,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CWM,Cwmbran,Newport,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+STI,Stirling,Stirling,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+TD02,TD02,Edinburgh,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+EGEN,Egham and Englefield Green,London,Commuter Belt North,Greater London,6,14,13,0,0,0,3,1,31,4
+BLO,Blofield,Norwich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BIRK,Birkenhead,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+WALT,Waltham,Chelmsford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CSTL,Castleknock,Dublin,Greater Dublin,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1
+SWA,Swansea,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+S3,S3,Sheffield,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+TURT,Turton,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SCB,Scarborough,York,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DUND,Dundonald,Belfast,Regional Ireland,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1
+ST01,ST01,Stoke-on-Trent,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CNG,Congleton,Crewe,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SY03,SY03,Shrewsbury,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DNF,Dunfermline,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+SABD,South Aberdeen,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BLY,Ballymena,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+DNS,Dunstable,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+LBEV,Lower Beverley,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+BLLG,Ballingham,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ABE,Aberdare,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+STR,Stratford,London,OL North,Greater London,12,24,4,10,5,0,3,0,46,5
+SK02,SK02,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+HP01,HP01,Aylesbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WPRS,West Preston,Preston,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CDO01,CDO01,County Donegal,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+HG02,HG02,Harrogate,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+GL01,GL01,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CC4,CC4,Cork,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+LD02,LD02,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+PKCH,Pucklechurch,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ABD,Aberdeen,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+SBRD,South Bradford,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CNK,Cannock,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+HSF,Horsham St Faith,Norwich,South East England,South England and Wales,1,0,5,0,0,0,0,0,5,1
+NP03,NP03,Newport,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BLCN,Blacon,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CV01,CV01,Coventry,Midlands,North England,2,3,4,0,0,0,0,0,7,2
+DY01,DY01,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+NTH,Northampton,Northampton,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+OILB,Outer Inch and Liberton,Edinburgh,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+MDF,Mordiford,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SHL,St Helens,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CROS,Crosby,Liverpool,North West England,North England,0,0,0,0,0,0,0,0,0,0
+DRU,Drumcondra,Dublin,Greater Dublin,Ireland and Scotland,5,12,4,5,0,0,1,0,22,4
+CO03,CO03,Colchester,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NN01,NN01,Northampton,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+KND,Kendal,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+TD03,TD03,Edinburgh,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+RHY,Rhyl,Wrexham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HTN,Hilton,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+HULM,Hulme,Manchester,North West England,North England,6,26,0,0,0,3,0,0,29,2
+OGCE,Outer Glasgow East,Glasgow,Scotland,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1
+ILK,Ilkeston,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+NWTL,Newton Longville,Milton Keynes,South East England,South England and Wales,10,23,18,0,2,6,3,1,53,6
+WEM,Wembley,London,OL North,Greater London,12,19,9,7,3,6,3,0,47,6
+IP3,IP3,Ipswich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HUL,Hull,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+BPL,Barnstaple,Exeter,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WR02,WR02,Worcester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BRNK,Brinklow,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CLS,Clacton-on-Sea,Colchester,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BA03,BA03,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+GRM,Grimsby,Doncaster,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+HDT,Hadlow and Tudeley,Royal Tunbridge Wells,Commuter Belt South,Greater London,2,2,4,0,0,0,0,0,6,2
+DMB,Dumbarton,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+DDL,Didley,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+OABD,Outer Aberdeen,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+LE04,LE04,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+LTH,Leith,Edinburgh,Scotland,Ireland and Scotland,4,20,0,0,0,0,0,0,20,1
+UPT,Upton Park,London,OL North,Greater London,9,18,4,7,3,0,3,0,35,5
+CM3,CM3,Chelmsford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WMT,Weymouth,Dorchester,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+KY02,KY02,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+RGL,Rugeley,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+NG02,NG02,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+GL02,GL02,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+RH02,RH02,Crawley,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+MRG,Margate,Canterbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SND,Sunderland,Sunderland,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CH01,CH01,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+DOR,Dorking,Crawley,Commuter Belt South,Greater London,4,14,4,0,0,0,3,1,22,4
+CLO02,CLO02,Portlaoise,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+DN03,DN03,Doncaster,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+TN1,TN1,Royal Tunbridge Wells,Commuter Belt South,Greater London,5,12,8,0,0,0,3,1,24,4
+WFD,Wilford,Nottingham,Midlands,North England,4,7,4,0,0,6,0,0,17,3
+ESL,Eastleigh,Southampton,South West and Wales,South England and Wales,2,3,5,0,0,0,0,0,8,2
+SWU,Swansea University,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LE07,LE07,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BLSM,Blunsdon,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+TR01,TR01,Falmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SLF,Sleaford,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+PLY,Plymouth,Plymouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CM02,County Meath 2,Navan,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+WRO,Wrotham,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CM7,CM7,Chelmsford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BTHN,Bath North,Bath,South West and Wales,South England and Wales,9,21,13,0,2,6,3,1,46,6
+BCLV,Bishop's Cleeve,Cheltenham,South West and Wales,South England and Wales,4,9,9,0,0,0,0,0,18,2
+NG04,NG04,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+LEV,Leven,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+WV01,WV01,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+HP03,HP03,Aylesbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BATL,Batley,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+PO02,PO02,Portsmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CYR,Calverley and Ravenscliffe,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+BING,Bingham,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CV03,CV03,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+TAU,Taunton,Taunton Central,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+TR02,TR02,Falmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NUN,Nuneaton,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+PLTN,Plympton,Plymouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+YO02,YO02,York,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+ESHE,East Sheffield,Sheffield,North East and Yorkshire,North England,3,5,9,0,0,0,0,0,14,2
+PRT,Portlethen,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+L02,L02,Liverpool,North West England,North England,0,0,0,0,0,0,0,0,0,0
+LNNO,Lancaster North,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+RTHM,Rotherham,Sheffield,North East and Yorkshire,North England,1,0,0,0,0,6,0,0,6,1
+SO2,SO2,Southampton,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HAL,Halifax,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CLAY,Clayton and Allerton,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+RG05,RG05,Reading,Commuter Belt South,Greater London,3,8,4,0,0,0,0,0,12,2
+STAV,Staverton,Cheltenham,South West and Wales,South England and Wales,5,12,9,0,0,0,0,0,21,2
+NPL,North Paisley,Glasgow,Scotland,Ireland and Scotland,2,0,9,0,0,0,0,0,9,1
+AST,Aston,Birmingham,Midlands,North England,9,16,13,0,2,9,3,1,44,6
+WRX,Wrexham,Wrexham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+STDN,Saltdean,Brighton,South East England,South England and Wales,6,9,13,0,0,6,3,1,32,5
+RTH,Rutherglen,Glasgow,Scotland,Ireland and Scotland,2,4,0,0,0,6,0,0,10,2
+DUV,Duvant,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DUNS,Dunswell,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+WAK,Wakefield,Leeds,North East and Yorkshire,North England,1,4,0,0,0,0,0,0,4,1
+LD03,LD03,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BDND,Ballumbie Dundee,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+NKT,Newmarket,Cambridge,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DEE,Deeside,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+LIN,Lincoln,Lincoln,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DAIR,Dublin Airport,Dublin,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CKY01,CKY01,County Kerry,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+PH04,PH04,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+PA01,PA01,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+ORAN,Oranmore,Galway,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+SLO,Slough,London,Commuter Belt North,Greater London,8,16,18,0,0,0,3,1,38,4
+LGH,Leigh,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+WHITT,Whittington,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CPH,Coopers Hill,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CD2,County Dublin 2,Dublin,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+DURU,Durham University,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+STRN,Stretton,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+LIV,Liverpool City Centre,Liverpool,North West England,North England,4,9,5,0,0,6,0,0,20,3
+DRGH,Drighlington and Adwalton,Leeds,North East and Yorkshire,North England,2,4,0,0,0,6,0,0,10,2
+ONEW,Outer Newcastle,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CLW,Carlow,Carlow,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+RG04,RG04,Reading,Commuter Belt South,Greater London,1,0,4,0,0,0,0,0,4,1
+RH04,RH04,Crawley,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+CF03,CF03,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CO02,CO02,Colchester,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+TRU,Truro,Falmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LDE,Leeds East,Leeds,North East and Yorkshire,North England,4,2,18,0,0,0,3,1,24,4
+BARK,Barking,London,OL North,Greater London,5,13,4,1,0,0,0,0,18,3
+STAI,Staines,London,Commuter Belt North,Greater London,1,4,0,0,0,0,0,0,4,1
+BN01,BN01,Brighton,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ALSM,Adwick Le Street,Doncaster,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SVLE,Southville,Bristol,South West and Wales,South England and Wales,7,19,9,0,0,6,0,0,34,3
+STNB,Stonebridge,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+NG05,NG05,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+EBW,Ebbw Vale,Newport,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SO3,SO3,Southampton,South West and Wales,South England and Wales,2,3,4,0,0,0,0,0,7,2
+OMK,Ormskirk,Liverpool,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SRD,Stroud/Stonehouse,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WSB,Wisbech,Peterborough,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+FET,Fettes,Edinburgh,Scotland,Ireland and Scotland,4,20,0,0,0,0,0,0,20,1
+WIT,Witney,Oxford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SASH,Saltash,Plymouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NORE,Norwich East,Norwich,South East England,South England and Wales,6,14,13,0,0,0,3,1,31,4
+HEN,Henley on Thames,Reading,Commuter Belt South,Greater London,3,8,4,0,0,0,0,0,12,2
+GLOE,Gloucester East,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CW01,CW01,Dublin,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BOZ,Bozeat,Northampton,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DWT,Derwenthorpe,York,North East and Yorkshire,North England,7,14,14,0,0,6,3,1,38,5
+BTH,Bath,Bath,South West and Wales,South England and Wales,9,21,13,0,2,6,3,1,46,6
+CLN,Clowne,Sheffield,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+EDN,Edinburgh North,Edinburgh,Scotland,Ireland and Scotland,5,20,4,0,0,0,0,0,24,2
+BEE,Beeston,Leeds,North East and Yorkshire,North England,5,7,10,0,0,6,0,0,23,3
+KSF,Kingswinford,Birmingham,Midlands,North England,2,4,5,0,0,0,0,0,9,2
+BA04,BA04,Bath,South West and Wales,South England and Wales,1,0,4,0,0,0,0,0,4,1
+MOD,Marston on Dove,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+ASTL,Astley,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WBRD,West Bradford,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DD03,DD03,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+GLEN,Glenfield,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+FK01,FK01,Stirling,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BS03,BS03,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HOLL,Hollywood,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+KENM,Kenilworth,Coventry,Midlands,North England,1,4,0,0,0,0,0,0,4,1
+OL02,OL02,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+NRY,Newry,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BLF,Bulford,Salisbury,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+PL02,PL02,Plymouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WOXF,West Oxford,Oxford,South East England,South England and Wales,2,3,4,0,0,0,0,0,7,2
+WPNG,Wapping,London,CL Grow,Core London,8,16,4,4,5,0,3,0,32,5
+ST04,ST04,Stoke-on-Trent,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CO01,CO01,Colchester,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SMDS,South Maidstone,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HAMP,Hamilton Park,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+OLR,Ollerton,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SK01,SK01,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+LTLT,Littleton,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+DG01,DG01,Dumfries,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+OBOU,Outer Bournemouth,Bournemouth,South West and Wales,South England and Wales,2,3,4,0,0,0,0,0,7,2
+PH03,PH03,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BRWD,Brewood,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+FARN,Farnham,Camberley,Commuter Belt South,Greater London,3,5,8,0,0,0,3,1,17,4
+WBOL,West Bolton,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CNEM,Colne,Blackburn,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SOT,Stoke-on-Trent,Stoke-on-Trent,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SDY,Sheddocksley,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+COTT,Cottingham,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SRFH,Sheriffhales,Telford,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DNA,Donabate,Dublin,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+HRT,Hartlepool,Middlesbrough,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+NPRS,North Preston,Preston,North West England,North England,0,0,0,0,0,0,0,0,0,0
+ELY,Ely,Cambridge,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NE03,NE03,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+BXS,Bexhill-on-Sea,Royal Tunbridge Wells,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+GRN,Grantham,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+IPS,Ipswich,Ipswich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CK01,CK01,Naas,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CTN02,CTN02,Limerick,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+EDSW,Edinburgh Southwest,Edinburgh,Scotland,Ireland and Scotland,4,13,4,0,0,0,0,0,17,2
+WKT,Workington,Carlisle,North West England,North England,0,0,0,0,0,0,0,0,0,0
+BIG,Biggin Hill,London,Commuter Belt South,Greater London,2,2,4,0,0,0,0,0,6,2
+CTBR,Coatbridge & Airdrie,Glasgow,Scotland,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1
+CCN02,CCN02,County Cavan,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+LEDA,Lees / Dalbury,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+OVR,Overton,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+RSN,Rossendale,Blackburn,North West England,North England,0,0,0,0,0,0,0,0,0,0
+HRB,Harbury,Coventry,Midlands,North England,1,0,4,0,0,0,0,0,4,1
+PPT,Poppleton,York,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SN03,SN03,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DLST,Dalston,Carlisle,North West England,North England,0,0,0,0,0,0,0,0,0,0
+BOD,Bridge of Dean,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+FRW,Fairwater,Cardiff,South West and Wales,South England and Wales,2,0,4,0,0,6,0,0,10,2
+HND,Hedge End,Southampton,South West and Wales,South England and Wales,2,3,5,0,0,0,0,0,8,2
+KNV,Kinver,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CHF,Chesterfield,Sheffield,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+MGTG,Margaretting,Chelmsford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+MC,Manchester Central,Manchester,North West England,North England,8,26,10,0,0,3,0,0,39,3
+WOLL,Wollaton,Nottingham,Midlands,North England,8,14,18,0,0,6,3,1,42,5
+SAL,Salford,Manchester,North West England,North England,9,26,14,0,0,3,0,0,43,3
+DRAY,Drayton & Farlington,Portsmouth,South West and Wales,South England and Wales,3,3,9,0,0,0,0,0,12,2
+MK03,MK03,Milton Keynes,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BRY,Bury,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SK04,SK04,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CLBM,Clydebank,Glasgow,Scotland,Ireland and Scotland,2,0,9,0,0,0,0,0,9,1
+RGU,Robert Gordon,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+SSEA,Southsea,Portsmouth,South West and Wales,South England and Wales,9,20,14,0,0,6,0,0,40,3
+BGH,Burgess Hill,Crawley,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ASHC,Ashford Common,London,Commuter Belt North,Greater London,1,4,0,0,0,0,0,0,4,1
+SCLM,South Chelmsford,Chelmsford,South East England,South England and Wales,7,14,8,0,0,9,3,1,35,5
+NAAS,Naas,Naas,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+LANG,Langley and Middle Green,London,Commuter Belt North,Greater London,7,16,13,0,0,0,3,1,33,4
+SKC,South Kensington,London,CL Heartland,Core London,17,20,21,4,14,3,6,1,69,7
+HIT,Hitchin,London,Commuter Belt North,Greater London,4,9,9,0,0,0,0,0,18,2
+BRS,Bristol,Bristol,South West and Wales,South England and Wales,7,19,9,0,0,6,0,0,34,3
+EST,Eastbourne,Brighton,South East England,South England and Wales,2,2,8,0,0,0,3,1,14,4
+ALH,Altrincham and Hale,Manchester,North West England,North England,2,2,8,0,0,0,3,1,14,4
+EC,East Central,London,CL Corporate,Core London,19,31,18,7,14,3,6,1,80,7
+CKT,Camden/Kentish Town,London,CL Grow,Core London,16,25,13,7,11,3,6,1,66,7
+BRW,Brentwood,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+LS,Liverpool South,Liverpool,North West England,North England,5,9,9,0,0,6,0,0,24,3
+ERD,East Reading,Reading,Commuter Belt South,Greater London,12,28,18,0,0,9,3,1,59,5
+EUST,Euston,London,CL Grow,Core London,7,13,4,0,8,0,0,0,25,3
+BSY,Bermondsey,London,CL Grow,Core London,15,26,8,7,11,3,6,1,62,7
+BOU,Bournemouth,Bournemouth,South West and Wales,South England and Wales,4,9,9,0,0,0,0,0,18,2
+BRAD,Bradville,Milton Keynes,South East England,South England and Wales,10,23,18,0,2,6,3,1,53,6
+LEIX,Leixlip,Dublin,Greater Dublin,Ireland and Scotland,3,15,4,0,0,0,0,0,19,2
+SEV,Sevenoaks,Royal Tunbridge Wells,Commuter Belt South,Greater London,2,6,0,0,0,0,0,0,6,1
+OXF,Oxford,Oxford,South East England,South England and Wales,7,24,9,0,0,0,0,0,33,2
+BTC,Belfast,Belfast,Regional Ireland,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1
+BTE,Belfast East,Belfast,Regional Ireland,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1
+WBR,West Bridgford,Nottingham,Midlands,North England,8,14,18,0,0,6,3,1,42,5
+DAL,Dalston Stoke Newington,London,CL Grow,Core London,18,32,4,10,14,3,3,0,66,6
+EMH,Edgware / Mill Hill,London,OL North,Greater London,8,13,10,7,0,0,0,0,30,3
+HRO,Harrow,London,OL North,Greater London,7,7,9,5,0,6,0,0,27,4
+WLW,Woolwich,London,OL South,Greater London,2,2,4,0,0,0,0,0,6,2
+MAID,Maidenhead,London,Commuter Belt North,Greater London,2,0,9,0,0,0,0,0,9,1
+UXB,Uxbridge,London,Commuter Belt North,Greater London,7,12,9,1,0,0,0,0,22,3
+WLY,Welwyn Garden City,London,Commuter Belt North,Greater London,5,12,9,0,0,0,0,0,21,2
+SWF,South Woodford,London,OL North,Greater London,4,0,4,4,0,3,0,0,11,3
+ANS,Anstey,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+FSF,Filton / Fishponds / Stoke Bishop,Bristol,South West and Wales,South England and Wales,5,14,4,0,0,6,0,0,24,3
+RNP,Raynes Park,London,OL South,Greater London,9,24,13,0,2,0,3,1,43,5
+HAST,Hastings,Royal Tunbridge Wells,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+VKO,"Vauxhall, Kennington and Oval",London,CL Grow,Core London,16,31,18,7,11,0,3,1,71,6
+TOO,Tooting,London,OL South,Greater London,13,29,8,4,8,3,3,1,56,7
+TWI,Twickenham / Teddington,London,OL South,Greater London,10,24,8,0,5,3,3,1,44,6
+GUI,Guildford,London,Commuter Belt South,Greater London,7,21,13,0,0,0,3,1,38,4
+BNC,Brighton Central,Brighton,South East England,South England and Wales,11,23,18,0,2,6,3,1,53,6
+RMG,Ramsgate,Canterbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+GOS,Gosport,Portsmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HSL,Haslemere,Camberley,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CVS,Caversham,Reading,Commuter Belt South,Greater London,12,28,18,0,0,9,3,1,59,5
+STRD,Strood,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+STS,Southside,Glasgow,Scotland,Ireland and Scotland,7,16,9,0,0,6,0,0,31,3
+SWO,Swords,Dublin,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BFC,Belfast Central,Belfast,Regional Ireland,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1
+BOR,Bognor Regis,Portsmouth,South East England,South England and Wales,4,9,8,0,0,0,3,1,21,4
+CLH,Chislehurst,London,Commuter Belt South,Greater London,5,16,4,0,0,0,0,0,20,2
+CGF,Chingford,London,Commuter Belt North,Greater London,6,6,9,3,0,3,0,0,21,4
+FUL,Fulham,London,CL Heartland,Core London,17,25,16,4,14,3,6,1,69,7
+BEL,Belsize Park / St John's Wood,London,CL Heartland,Core London,17,25,18,7,11,3,6,1,71,7
+KIN,Kingston,London,OL South,Greater London,10,24,8,0,5,3,3,1,44,6
+LEW,Lewisham,London,OL South,Greater London,10,18,8,7,3,0,6,1,43,6
+PUT,Putney & Barnes,London,CL Heartland,Core London,13,21,8,4,14,0,6,1,54,6
+FRH,Farnborough,Camberley,Commuter Belt South,Greater London,3,4,9,0,0,0,0,0,13,2
+HBY,Herne Bay,Canterbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LCH,Lichfield,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CHP,Chippenham,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HUN,Huntingdon,Peterborough,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+STM,Stamford,Peterborough,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SLS,Salisbury,Salisbury,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WKN,Wokingham,Camberley,Commuter Belt South,Greater London,4,7,4,0,0,6,0,0,17,3
+HGV,Hazel Grove,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+BNB,Banbury,Oxford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SHR,Shrewsbury,Shrewsbury,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+MK,Milton Keynes,Milton Keynes,South East England,South England and Wales,10,23,18,0,2,6,3,1,53,6
+HWH,Haywards Heath,Crawley,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BEX,Bexleyheath,London,Commuter Belt South,Greater London,5,11,8,0,0,0,3,1,23,4
+MHB,Market Harborough,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BRAY,Bray,Dublin,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+NLEE,North Leeds,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DUK,Dundalk,Dundalk,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+DRO,Drogheda,Dundalk,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+PDB,Ponders End and Brimsdown,London,Commuter Belt North,Greater London,3,6,5,0,0,0,0,0,11,2
+LSB,Lisburn,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CL02,CL02,Dundalk,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+NTT,Netherthorpe,Sheffield,North East and Yorkshire,North England,4,9,9,0,0,0,0,0,18,2
+LEI,Leicester,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WNBR,Wanborough,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CDN,Coldean,Brighton,South East England,South England and Wales,10,23,18,0,0,6,3,1,51,5
+KYHM,Keyham,Plymouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+OBTE,Outer Belfast East,Belfast,Regional Ireland,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1
+PET,Peterborough,Peterborough,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+MEL,Melksham,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SHN,Shankill,Dublin,Greater Dublin,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1
+WCOV,West Coventry,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+KETT,Kettering,Northampton,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+NEM,North East Manchester,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+NCT,Nether Compton,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+OSHE,Outer Sheffield,Sheffield,North East and Yorkshire,North England,2,0,5,0,0,6,0,0,11,2
+RAIN,Rainton,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+HD02,HD02,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+EPRS,East Preston,Preston,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CM8,CM8,Chelmsford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BOO,Bootle/ Anfield,Liverpool,North West England,North England,3,9,5,0,0,0,0,0,14,2
+WHV,Whitehaven,Carlisle,North West England,North England,0,0,0,0,0,0,0,0,0,0
+KLT,Kellet,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+FRO,Frome,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CC2,CC2,Cork,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+MTHW,Motherwell Town,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+OPSL,Outer Paisely,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CSO01,CSO01,County Sligo,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+IV03,IV03,Inverness,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+SKM,Skelmersdale,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+LGRN,Littlefield Green,London,Commuter Belt North,Greater London,2,0,9,0,0,0,0,0,9,1
+PNZ,Penzance,Falmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CFG,Carrickfergus,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+ELT,Eltham,London,OL South,Greater London,2,2,4,0,0,0,0,0,6,2
+WS,WS,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BARBY,Barby,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+PO01,PO01,Portsmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ALL,Alloa,Stirling,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BVS,Bournville / Stirchley,Birmingham,Midlands,North England,3,8,4,0,0,0,0,0,12,2
+G03,G03,Glasgow,Scotland,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1
+ML06,ML06,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CNS,Consett,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+NBG,Nechells / Bordesley Green,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+TOTN,Tottenham,London,OL North,Greater London,5,16,0,3,0,0,0,0,19,2
+ERSW,Earlswood,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DD01,DD01,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+GL03,GL03,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ST03,ST03,Stoke-on-Trent,North West England,North England,0,0,0,0,0,0,0,0,0,0
+MORE,Morecambe,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+BALL,Ballincollig,Cork,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+FLNT,Flint,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SOUC,Southcoates,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+IP1,IP1,Ipswich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BGW,Bridgwater,Taunton Central,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NAV,Navan,Navan,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+PH01,PH01,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+DE03,DE03,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+LIM,Limerick,Limerick,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BRME,Bournemouth East,Bournemouth,South West and Wales,South England and Wales,4,9,9,0,0,0,0,0,18,2
+SHE,Sheffield,Sheffield,North East and Yorkshire,North England,4,9,9,0,0,0,0,0,18,2
+DCS,Dublin City South,Dublin,Greater Dublin,Ireland and Scotland,10,16,4,8,0,5,4,0,37,5
+SBU,Hammersmith / Shepherd's Bush,London,CL Heartland,Core London,14,20,13,4,14,0,6,1,58,6
+ORP,Orpington,London,Commuter Belt South,Greater London,5,16,4,0,0,0,0,0,20,2
+MLH,Mulhuddart,Dublin,Greater Dublin,Ireland and Scotland,3,15,4,0,0,0,0,0,19,2
+NBRD,North Bradford,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+MDWF,Meadowfield,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+ERDN,Erdington,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CIR,Cirencester,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+PR01,PR01,Preston,North West England,North England,0,0,0,0,0,0,0,0,0,0
+PCH,Pilton / Corstorphine Hill,Edinburgh,Scotland,Ireland and Scotland,4,13,4,0,0,0,0,0,17,2
+WDN,Widnes,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+FAS,Farsley and Swinnow,Leeds,North East and Yorkshire,North England,1,0,4,0,0,0,0,0,4,1
+MID,Middlesbrough,Middlesbrough,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+VWP,"Victoria, Westminster, Pimlico",London,CL Corporate,Core London,13,18,16,4,14,0,3,1,56,6
+GVN,Govan,Glasgow,Scotland,Ireland and Scotland,2,4,4,0,0,0,0,0,8,2
+CTN01,CTN01,Limerick,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+ML05,ML05,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+GYAR,Great Yarmouth,Norwich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+EXE,Exeter,Exeter,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LVN,Livingston,Edinburgh,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+G02,G02,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CAR,Cardiff,Cardiff,South West and Wales,South England and Wales,7,14,13,0,0,6,3,1,37,5
+NWM,New Milton,Bournemouth,South West and Wales,South England and Wales,1,0,4,0,0,0,0,0,4,1
+KLY,King’s Lynn,Peterborough,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NR2,NR2,Norwich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LLV,Lower Lune Valley,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+IV01,IV01,Inverness,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BRP,Bearpark,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SBLD,South Bellsdyke,Stirling,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BLK,Blackwood,Newport,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NEH,New Earswick and Huntington,York,North East and Yorkshire,North England,8,14,18,0,0,6,3,1,42,5
+THERN,Thearne,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+WTB,Wetherby,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+EXEE,Exeter East,Exeter,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SS01,SS01,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+WHH,Whitacre Heath,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+HTS,Hethersett,Norwich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WKEA,West Kearsley,Manchester,North West England,North England,1,2,4,0,0,0,3,1,10,4
+SOU,Southampton,Southampton,South West and Wales,South England and Wales,7,9,18,0,0,6,3,1,37,5
+CVB,Cove Bay,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+WND,Wallsend and Walker,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+HCK,Hockley Heath,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BBH,Bubbenhall,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+TEW,Tewkesbury,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+JDT,Jordanthorpe,Sheffield,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SSH,South Shields,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+GCK,Greenock,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CBW,Camberwell,London,CL Grow,Core London,7,11,9,3,5,0,0,0,28,4
+RDC,Redcar,Middlesbrough,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+BTHS,Bath South,Bath,South West and Wales,South England and Wales,9,21,13,0,2,6,3,1,46,6
+TA02,TA02,Taunton Central,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+GU01,GU01,Camberley,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+DND,Dundee,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+YTM,Yetminster,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+FAZ,Fazeley,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SUB,Swansea University Bay Campus,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+KNU,Knutsford,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+RUAB,Ruabon,Wrexham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+KLG,Killinghall,Harrogate,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+THRP,Thrapston,Northampton,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SHMM,Seaham,Sunderland,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+WYM,Wymondham,Norwich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+EXES,Exeter South,Exeter,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ESTN,Easton,Bristol,South West and Wales,South England and Wales,7,19,9,0,0,6,0,0,34,3
+L03,L03,Liverpool,North West England,North England,0,0,0,0,0,0,0,0,0,0
+TLR,Tollerton,Nottingham,Midlands,North England,3,7,4,0,0,0,0,0,11,2
+CBH,Cobham,London,Commuter Belt South,Greater London,6,12,9,0,0,0,0,0,21,2
+TA01,TA01,Taunton Central,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SCU,Scunthorpe,Doncaster,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DT01,DT01,Dorchester,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LS02,LS02,Leeds,North East and Yorkshire,North England,1,4,0,0,0,0,0,0,4,1
+LNGE,Long Eaton,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CLV,Coalville,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+ME02,ME02,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LE08,LE08,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WWD,Wisewood,Sheffield,North East and Yorkshire,North England,3,9,4,0,0,0,0,0,13,2
+CCL02,CCL02,Carlow,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+SPL,South Pollok,Glasgow,Scotland,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1
+LLAN,Llanrumney,Cardiff,South West and Wales,South England and Wales,1,4,0,0,0,0,0,0,4,1
+HOB,Horbury,Leeds,North East and Yorkshire,North England,1,4,0,0,0,0,0,0,4,1
+CHES,Cheltenham South,Cheltenham,South West and Wales,South England and Wales,5,12,9,0,0,0,0,0,21,2
+LCK,Lickey,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DCT,Didcot,Oxford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+EOXF,East Oxford,Oxford,South East England,South England and Wales,6,21,9,0,0,0,0,0,30,2
+CRH,Crownhill,Milton Keynes,South East England,South England and Wales,10,23,18,0,2,6,3,1,53,6
+WLD,Walderslade,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+RAI,Rainham - Chatham,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SAYS,South Aylesford,Maidstone,South East England,South England and Wales,1,2,0,0,0,0,0,0,2,1
+NAD,New Addington,London,Commuter Belt South,Greater London,1,0,4,0,0,0,0,0,4,1
+BTHW,Bath West,Bath,South West and Wales,South England and Wales,9,21,13,0,2,6,3,1,46,6
+BTHE,Batheaston & Bathford,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NHP,Notting Hill / Paddington,London,CL Heartland,Core London,16,23,21,4,14,0,6,1,69,6
+HEM,Hemel Hempstead,London,Commuter Belt North,Greater London,6,16,13,0,0,0,3,1,33,4
+SUR,Surrey Quays,London,CL Grow,Core London,9,14,8,7,3,0,6,1,39,6
+HWC,High Wycombe,London,Commuter Belt North,Greater London,1,3,0,0,0,0,0,0,3,1
+WOR,Worcester,Worcester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BWD,Borehamwood,London,Commuter Belt North,Greater London,5,5,10,0,0,6,0,0,21,3
+BSE,Bury St Edmunds,Ipswich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HOW,Howth,Dublin,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+REA,Reading,Reading,Commuter Belt South,Greater London,11,23,18,0,0,9,3,1,54,5
+WRD,West Reading,Reading,Commuter Belt South,Greater London,10,20,18,0,0,9,3,1,51,5
+COR,Cork,Cork,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+LEAB,Leavesden and Abbots Langley,London,Commuter Belt North,Greater London,5,9,8,0,0,6,3,1,27,5
+ASHD,Ashtead,London,Commuter Belt South,Greater London,4,7,9,0,0,0,0,0,16,2
+BOW,Bow,London,CL Grow,Core London,10,18,4,7,5,0,3,0,37,5
+WOB,Woburn,Milton Keynes,South East England,South England and Wales,10,23,18,0,2,6,3,1,53,6
+OKNH,Keynsham,Bristol,South West and Wales,South England and Wales,2,4,5,0,0,0,0,0,9,2
+RKCO,Rickmansworth and Croxley Green,London,Commuter Belt North,Greater London,4,7,4,0,0,6,0,0,17,3
+POO,Poole,Bournemouth,South West and Wales,South England and Wales,5,12,9,0,0,0,0,0,21,2
+BRA,Bramhall,Manchester,North West England,North England,2,4,4,0,0,0,0,0,8,2
+RIC,Richmond / Kew,London,CL Heartland,Core London,9,18,8,4,5,3,3,1,42,7
+SUT,Sutton,London,OL South,Greater London,7,14,14,0,0,0,0,0,28,2
+BKS,Berkhamsted,London,Commuter Belt North,Greater London,3,3,9,0,0,0,0,0,12,2
+SHW,Shirley / Wickham,London,Commuter Belt South,Greater London,5,13,9,0,0,0,0,0,22,2
+BSF,Bishops Stortford,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+HAY,Hayes,London,OL North,Greater London,5,7,9,1,0,0,0,0,17,3
+WTY,Whitley,Reading,Commuter Belt South,Greater London,10,20,18,0,0,9,3,1,51,5
+NBR,Newbridge,Naas,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+MDS,Maidstone,Maidstone,South East England,South England and Wales,1,2,0,0,0,0,0,0,2,1
+OAW,Oakwood and Chapeltown,Leeds,North East and Yorkshire,North England,9,21,18,0,0,6,3,1,49,5
+STF,Stafford,Stoke-on-Trent,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DDK,"Dun laoghaire, Dalkey, Killiney",Dublin,Greater Dublin,Ireland and Scotland,4,4,4,5,0,5,0,0,18,4
+EAB,East Barnet,London,OL North,Greater London,4,6,4,3,0,0,0,0,13,3
+HRF,Hertford,London,Commuter Belt North,Greater London,2,7,0,0,0,0,0,0,7,1
+WTL,Whiteley,Portsmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+GWE,Glasgow West End,Glasgow,Scotland,Ireland and Scotland,8,16,14,0,0,6,0,0,36,3
+ENF,Enfield,London,Commuter Belt North,Greater London,4,6,9,0,0,0,0,0,15,2
+WIM,Wimbledon,London,CL Heartland,Core London,10,24,8,4,5,0,3,1,45,6
+MLV,Malvern,Worcester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SCF,Sutton Coldfield,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SNS,Saint Neots,Peterborough,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DUL,Dulwich,London,OL South,Greater London,10,18,4,7,5,0,3,0,37,5
+TRB,Trowbridge,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WSM,Weston-super-Mare,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+EDMT,Edmonton,London,OL North,Greater London,5,12,9,0,0,0,0,0,21,2
+WLSL,Walsall,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+HAN,Hanley,Stoke-on-Trent,North West England,North England,0,0,0,0,0,0,0,0,0,0
+S4,S4,Sheffield,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+WLM,Wilmslow,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SPBR,Spring Grove/ Brentford,London,OL South,Greater London,8,18,8,0,5,3,3,1,38,6
+NWB,Newbury,Reading,South East England,South England and Wales,3,4,8,0,0,0,3,1,16,4
+DUN,Dundrum,Dublin,Greater Dublin,Ireland and Scotland,10,16,4,8,0,5,4,0,37,5
+HER,Hereford,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+GAL,Galway,Galway,Regional Ireland,Ireland and Scotland,2,11,4,0,0,0,0,0,15,2
+ILF,Ilford,London,OL North,Greater London,7,10,9,4,0,3,0,0,26,4
+STEV,Stevenage,London,Commuter Belt North,Greater London,5,12,9,0,0,0,0,0,21,2
+RLS,Royal Leamington Spa,Coventry,Midlands,North England,4,7,4,0,0,6,0,0,17,3
+CLM,Chelmsford,Chelmsford,South East England,South England and Wales,7,14,8,0,0,9,3,1,35,5
+ASH,Ashford,Royal Tunbridge Wells,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ISL,Islington,London,CL Heartland,Core London,20,31,18,10,14,3,6,1,83,7
+CLA,Clapham,London,CL Heartland,Core London,18,25,18,7,14,3,6,1,74,7
+SID,Sidcup,London,Commuter Belt South,Greater London,3,5,4,0,0,0,0,0,9,2
+PGS,Palmers Green / Southgate,London,OL North,Greater London,9,20,9,7,0,0,0,0,36,3
+CRW,Crawley,Crawley,Commuter Belt South,Greater London,4,9,8,0,0,0,3,1,21,4
+FING,Finglas,Dublin,Greater Dublin,Ireland and Scotland,4,11,4,5,0,0,1,0,21,4
+WRT,Worthing,Brighton,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CHS,Chichester,Portsmouth,South East England,South England and Wales,4,9,8,0,0,0,3,1,21,4
+HRL,Harlow,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+CHI,Chiswick,London,CL Grow,Core London,12,18,13,4,8,6,6,1,56,7
+DRT,Dartford,London,Commuter Belt South,Greater London,7,8,13,0,2,6,3,1,33,6
+ESLE,Eastleigh Central,Southampton,South West and Wales,South England and Wales,3,7,5,0,0,0,0,0,12,2
+ABH,Acomb and Holgate,York,North East and Yorkshire,North England,8,14,18,0,0,6,3,1,42,5
+DCN,Dublin City North,Dublin,Greater Dublin,Ireland and Scotland,10,16,4,8,0,5,4,0,37,5
+CRE,Crewe,Crewe,North West England,North England,0,0,0,0,0,0,0,0,0,0
+UPM,Upminster,London,Commuter Belt North,Greater London,4,13,5,0,0,0,0,0,18,2
+STAN,Stanmore,London,OL North,Greater London,7,8,15,0,0,6,0,0,29,3
+GBC,Golders Green / Brent Cross,London,OL North,Greater London,10,25,10,7,0,0,0,0,42,3
+WIN,Windsor,London,Commuter Belt North,Greater London,8,16,18,0,0,0,3,1,38,4
+BLA,Blanchardstown,Dublin,Greater Dublin,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1
+ADV,Andover,Salisbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BXB,Broxbourne,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+WKB,West Kirby,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+RNH,Rainham,London,Commuter Belt North,Greater London,6,13,9,0,0,6,0,0,28,3
+FLE,Fleet,Camberley,Commuter Belt South,Greater London,5,9,13,0,0,0,3,1,26,4
+EVE,Evesham,Worcester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+NRT,Northwich,Crewe,North West England,North England,0,0,0,0,0,0,0,0,0,0
+EAL,Ealing,London,CL Grow,Core London,9,16,4,5,3,6,3,0,37,6
+BED,Bedford,Milton Keynes,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CRO,Croydon,London,OL South,Greater London,4,6,9,0,0,0,0,0,15,2
+SLEE,South Leeds,Leeds,North East and Yorkshire,North England,1,4,0,0,0,0,0,0,4,1
+MAC,Macclesfield,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+M01,M01,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+MNS,Mansfield,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DOC,Dorchester,Dorchester,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+HOO,Hooe,Plymouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ORTHM,Outer Rotherham,Sheffield,North East and Yorkshire,North England,2,0,4,0,0,6,0,0,10,2
+CHLS,Chellaston,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CRN02,CRN02,County Roscommon,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+INV,Inverness,Inverness,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BRGR,Burton Green,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WCK,Whickham,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+NDB,North Dublin,Dublin,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+WICK,Wickford Town,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+KBG,Kings Bridge,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LASH,Long Ashton,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+EX3,EX3,Exeter,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+KY01,KY01,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+WLH,Willenhall,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CLTM,Cramlington,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+LA01,LA01,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+AUL,Ashton-under-Lyne,Manchester,North West England,North England,1,0,4,0,0,0,0,0,4,1
+GLO,Gloucester,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NWPA,Newport Pagnell,Milton Keynes,South East England,South England and Wales,3,4,9,0,0,0,0,0,13,2
+FK02,FK02,Stirling,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+SBB,Stanton by Bridge,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CG01,CG01,Galway,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+TON,Tonbridge,Royal Tunbridge Wells,Commuter Belt South,Greater London,6,14,8,0,0,0,3,1,26,4
+NOR,Norwich,Norwich,South East England,South England and Wales,6,14,13,0,0,0,3,1,31,4
+PHN,Peacehaven,Brighton,South East England,South England and Wales,2,0,9,0,0,0,0,0,9,1
+PTL,Portlaoise,Portlaoise,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+ALD,Aldershot,Camberley,Commuter Belt South,Greater London,5,9,13,0,0,0,3,1,26,4
+RSL,Ruislip,London,OL North,Greater London,5,7,9,1,0,0,0,0,17,3
+MNG,Morningside,Edinburgh,Scotland,Ireland and Scotland,4,13,4,0,0,0,0,0,17,2
+PIN,Pinner,London,Commuter Belt North,Greater London,6,7,9,1,0,6,0,0,23,4
+HRP,Harpenden,London,Commuter Belt North,Greater London,5,16,8,0,0,0,3,1,28,4
+BROA,Broadstone,Bournemouth,South West and Wales,South England and Wales,2,3,4,0,0,0,0,0,7,2
+ARND,Arnold,Nottingham,Midlands,North England,8,14,18,0,0,6,3,1,42,5
+BCT,Bicester,Oxford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CRHT,Cardiff Heath,Cardiff,South West and Wales,South England and Wales,7,14,13,0,0,6,3,1,37,5
+CLC,Colchester,Colchester,South East England,South England and Wales,4,9,8,0,0,0,3,1,21,4
+CWX01,CWX01,Waterford,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+WNW,Winwick,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+OGLC,Outer Glasgow,Glasgow,Scotland,Ireland and Scotland,3,7,5,0,0,0,0,0,12,2
+BFW,Belfast West,Belfast,Regional Ireland,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1
+GLS,Glossop,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+ATH,Atherstone,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+GRMT,Grangemouth,Stirling,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BS01,BS01,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DER,Derby,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CM4,CM4,Chelmsford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CD1,County Dublin 1,Dublin,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CNN,Canning Town,London,OL North,Greater London,14,31,8,4,11,0,6,1,61,6
+CHH,Cheetham Hill,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+HOL,Holbrooks/ Binley,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+AB2,AB2,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+ST02,ST02,Stoke-on-Trent,North West England,North England,0,0,0,0,0,0,0,0,0,0
+STB,Stourbridge,Birmingham,Midlands,North England,1,4,0,0,0,0,0,0,4,1
+DCSW,Dublin Central South West,Dublin,Greater Dublin,Ireland and Scotland,4,11,4,3,0,0,1,0,19,4
+FXR,Foxrock,Dublin,Greater Dublin,Ireland and Scotland,3,4,4,5,0,0,0,0,13,3
+SHEER,Sheerness,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DE02,DE02,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BOS,Boston,Peterborough,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+DG02,DG02,Dumfries,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+PREN,Pontprennau,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SO4,SO4,Bournemouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WA02,WA02,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+GLH,Gillingham,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+PO03,PO03,Portsmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LA03,LA03,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+BLCM,Balsall Common,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+KGH,Keighley,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+ABR,Aberystwyth,Shrewsbury,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LTL,Littletown,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+S1,S1,Sheffield,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+HR02,HR02,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ORNF,Outer Renfrew,Glasgow,Scotland,Ireland and Scotland,1,0,5,0,0,0,0,0,5,1
+HU02,HU02,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DH02,DH02,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+NSH,North Shields,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+G01,G01,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+AB1,AB1,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+PEC,Peckham,London,CL Heartland,Core London,7,9,4,7,3,0,3,0,26,5
+BOL,Bolton,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+ME03,ME03,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NUT,Nunthorpe and South Bank,York,North East and Yorkshire,North England,8,14,18,0,0,6,3,1,42,5
+FAK,Falkirk,Stirling,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+WCT,White City,London,CL Grow,Core London,7,18,13,0,2,0,3,1,37,5
+CRDB,Cardiff Bay Area,Cardiff,South West and Wales,South England and Wales,7,14,13,0,0,6,3,1,37,5
+CSTS,Chester South,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+NUNS,Nuns Island,Galway,Regional Ireland,Ireland and Scotland,2,11,4,0,0,0,0,0,15,2
+CALDE,Caldecott,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+ASSU,Ascot and Sunninghill,Camberley,Commuter Belt South,Greater London,4,7,4,0,0,6,0,0,17,3
+PL01,PL01,Plymouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DN02,DN02,Doncaster,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SN02,SN02,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BLR,Blackburn,Blackburn,North West England,North England,0,0,0,0,0,0,0,0,0,0
+TS01,TS01,Middlesbrough,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+EP1,Ellesmere Port Zone 1,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+YEO,Yeovil,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CANF,Canford,Bournemouth,South West and Wales,South England and Wales,2,3,4,0,0,0,0,0,7,2
+CV04,CV04,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+LOW,Lowestoft,Norwich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+MFLD,Mirfield,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+WA03,WA03,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SCC,Sheffield City Centre,Sheffield,North East and Yorkshire,North England,4,9,9,0,0,0,0,0,18,2
+CW1,CW1,Crewe,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CLON,Clontarf,Dublin,Greater Dublin,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1
+WR01,WR01,Worcester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+LTE,Little Eaton,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+INNS,Innsworth,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+PAI,Paignton,Torquay,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SPA,Spalding,Peterborough,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+PR02,PR02,Preston,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SP01,SP01,Salisbury,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CHSS,Chessington,London,Commuter Belt South,Greater London,3,7,4,0,0,0,0,0,11,2
+NBOL,North Bolton,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+WLCT,Walcot,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+TLF,Telford,Telford,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+HEA,Headingley,Leeds,North East and Yorkshire,North England,9,21,18,0,0,6,3,1,49,5
+PL03,PL03,Plymouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LE06,LE06,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BN02,BN02,Brighton,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CDW,Curdworth,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+IV05,IV05,Inverness,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CLO01,CLO01,Portlaoise,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+HATF,Hatfield/ Hatfield Park,London,Commuter Belt North,Greater London,4,7,9,0,0,0,0,0,16,2
+LC,Leeds City Centre,Leeds,North East and Yorkshire,North England,9,21,18,0,0,6,3,1,49,5
+NE01,NE01,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DN01,DN01,Doncaster,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+BT2,BT2,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+OPTY,Outer Pontypridd,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CLM01,CLM01,Limerick,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BL,BL,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+ROCH,Rochdale,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+SG02,SG02,Cambridge,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WC,West Central,London,CL Corporate,Core London,17,29,18,4,14,3,6,1,75,7
+EWLSL,East Walsall,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CM01,County Meath 1,Navan,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+EXM,Exmouth,Exeter,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CWH01,CWH01,County Westmeath,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+SDW,Sandwell,Birmingham,Midlands,North England,1,0,5,0,0,0,0,0,5,1
+UDND,Upper Dundee,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CB03,CB03,Cambridge,South East England,South England and Wales,3,3,4,0,0,6,0,0,13,3
+ROMS,Romsley,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WHM,Whitinghton Marsh,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+STP,Stoke Poges,London,Commuter Belt North,Greater London,3,5,4,0,0,0,0,0,9,2
+WOLS,Wolverhampton South,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CC1,CC1,Cork,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+ASHT,Ash and Tongham,Camberley,Commuter Belt South,Greater London,4,5,13,0,0,0,3,1,22,4
+BIF,Barrow-in-Furness,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+LWS,Lewes,Brighton,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+THT,Thetford,Ipswich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+FLX,Felixstowe,Ipswich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WA01,WA01,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+DE01,DE01,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+OXLS,Oxleas,London,OL South,Greater London,2,2,4,0,0,0,0,0,6,2
+OL01,OL01,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+NGF,Gosforth,Newcastle,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+LE01,LE01,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+ABF,Arborfield and Finchampstead,Camberley,Commuter Belt South,Greater London,2,3,4,0,0,0,0,0,7,2
+OGGW,Outer Glasgow West,Glasgow,Scotland,Ireland and Scotland,3,4,9,0,0,0,0,0,13,2
+PA02,PA02,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+EDM,Musselburgh,Edinburgh,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BNYB,Bonnybridge,Stirling,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CDON,Castle Donington,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BH02,BH02,Bournemouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+COY01,COY01,County Offaly,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+DRG,Darlington,Darlington,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+TD01,TD01,Edinburgh,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+FRL,Frimley and Frimley Green,Camberley,Commuter Belt South,Greater London,3,4,9,0,0,0,0,0,13,2
+CMB,Camberley,Camberley,Commuter Belt South,Greater London,5,7,9,0,0,6,0,0,22,3
+RMSY,Romsey,Southampton,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NN02,NN02,Northampton,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+KYLE,Kylemore,Dublin,Greater Dublin,Ireland and Scotland,3,15,4,0,0,0,0,0,19,2
+BLH,Bell Heath,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WNS,Winsford,Crewe,North West England,North England,0,0,0,0,0,0,0,0,0,0
+PLAW,Plumstead and Abbey Wood,London,OL South,Greater London,2,2,4,0,0,0,0,0,6,2
+HLO,Halesowen,Birmingham,Midlands,North England,6,12,9,0,0,6,0,0,27,3
+RNF,Renfrew,Glasgow,Scotland,Ireland and Scotland,3,4,9,0,0,0,0,0,13,2
+WTHR,Wetheral,Carlisle,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CM2,CM2,London,Commuter Belt North,Greater London,1,0,4,0,0,0,0,0,4,1
+COY02,COY02,County Offaly,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CHRC,Cheltenham Racecourse,Cheltenham,South West and Wales,South England and Wales,5,12,9,0,0,0,0,0,21,2
+IOWN,Isle of Wight - Newport,Isle of Wight,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WHT,Whitstable,Canterbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LL02,LL02,Wrexham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CKK01,CKK01,Kilkenny,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+NTA,Newtownabbey,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+TBU,Taplow and Burnham,London,Commuter Belt North,Greater London,3,4,9,0,0,0,0,0,13,2
+OKPT,Old Kirkpatrick,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BH03,BH03,Bournemouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CG02,CG02,Galway,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CWT01,CWT01,Waterford,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+DESB,Desborough,Northampton,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CLR01,CLR01,Limerick,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+RUS,Rusholme,Manchester,North West England,North England,5,10,4,0,0,3,0,0,17,3
+CM1,CM1,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+CW2,CW2,Crewe,North West England,North England,0,0,0,0,0,0,0,0,0,0
+PORT,Portobello Beach,Edinburgh,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+HLYT,Bellshill & Holytown,Glasgow,Scotland,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1
+NWQ,Newquay,Falmouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+IOWS,Isle of Wight - Sandown,Isle of Wight,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SHER,Sherburn,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CMN01,CMN01,Dundalk,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+ACG,Acocks Green,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CH02,CH02,Birkenhead,North West England,North England,0,0,0,0,0,0,0,0,0,0
+COB,Cobh,Cork,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+RG02,RG02,Reading,Commuter Belt South,Greater London,1,0,4,0,0,0,0,0,4,1
+SPD,Spondon,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SEL,Selby,York,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+ECOV,East Coventry,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+GOD,Godalming,London,Commuter Belt South,Greater London,7,21,13,0,0,0,3,1,38,4
+DCE,Durham City East,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CL01,CL01,Dundalk,Greater Dublin,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BNS,Barnsley,Sheffield,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SWD,Swadlincote,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+PLST,Plymstock,Plymouth,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+PE02,PE02,Peterborough,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+LUTT,Lutterworth,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CLD01,CLD01,County Longford,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CKK02,CKK02,Kilkenny,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CBRA,Cabra,Dublin,Greater Dublin,Ireland and Scotland,5,12,4,5,0,0,1,0,22,4
+CSC,Cribbs Causeway Shopping Centre,Bristol,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+YVT,Yeovilton,Bath,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CBN,Cumbernauld,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BUNY,Bunny,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WLTN,Walton,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+QDG,Quedgeley,Cheltenham,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+PE04,PE04,Peterborough,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CRB,Corby,Northampton,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CDSL,Codsall,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+IP2,IP2,Ipswich,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+WRSW,Whitley Row/ Sevenoaks Weald,Royal Tunbridge Wells,Commuter Belt South,Greater London,1,4,0,0,0,0,0,0,4,1
+IRV,Irvine,Ayr,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CHO,Chorlton,Manchester,North West England,North England,12,29,18,0,0,9,3,1,60,5
+BSW,Bishopsworth,Bristol,South West and Wales,South England and Wales,3,0,9,0,0,6,0,0,15,2
+CM5,CM5,Chelmsford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+PSL,Paisley,Glasgow,Scotland,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1
+EKL,East Kilbride,Glasgow,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BT3,BT3,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+EX2,EX2,Exeter,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BT4,BT4,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+TAM,Tamworth,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+HUR,Hurn,Bournemouth,South West and Wales,South England and Wales,1,0,5,0,0,0,0,0,5,1
+DUR,Durham,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+LLDN,Llanedeyrn,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+DESF,Desford,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WLIN,West Lincoln,Lincoln,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+SP02,SP02,Salisbury,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+BRN,Burnley,Blackburn,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CMO01,CMO01,County Mayo,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+LD01,LD01,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ELEL,Ellel,Lancaster,North West England,North England,0,0,0,0,0,0,0,0,0,0
+BT1,BT1,Belfast,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+NWT,Newton Abbot,Torquay,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+EMDS,East Maidstone,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NG01,NG01,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+PTY,Pontypridd,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+MMB,Melton Mowbray,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+HAX,Haxby,York,North East and Yorkshire,North England,1,0,5,0,0,0,0,0,5,1
+RTHT,Rotherhithe,London,CL Grow,Core London,7,16,4,4,2,0,3,0,29,5
+PR03,PR03,Preston,North West England,North England,0,0,0,0,0,0,0,0,0,0
+HLM,Hailsham,Brighton,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CHN,Chignall,Chelmsford,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CDO02,CDO02,County Donegal,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+MMS,Mayfair,London,CL Corporate,Core London,18,26,21,4,14,3,6,1,75,7
+SLIN,South Lincoln,Lincoln,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+GTAM,Gotham,Nottingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CT01,CT01,Canterbury,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+MLY,Morley and New Brighton,Leeds,North East and Yorkshire,North England,1,4,0,0,0,0,0,0,4,1
+WRGT,Wroughton,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SLEI,South Leicester,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CDH,Credenhill,Hereford,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CRA,Cranfield,Milton Keynes,South East England,South England and Wales,1,4,0,0,0,0,0,0,4,1
+POR,Portsmouth,Portsmouth,South West and Wales,South England and Wales,9,20,14,0,0,6,0,0,40,3
+EGS,East Grinstead,Crawley,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+KNB,Knaresborough,Harrogate,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+HGHB,Highbridge,Taunton Central,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+AYR,Ayr,Ayr,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+PE03,PE03,Peterborough,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SOUW,Southampton West,Southampton,South West and Wales,South England and Wales,5,6,13,0,0,6,3,1,29,5
+SO1,SO1,Southampton,South West and Wales,South England and Wales,1,4,0,0,0,0,0,0,4,1
+NPR,Newport - Telford,Telford,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+TOY,Totley,Sheffield,North East and Yorkshire,North England,1,0,4,0,0,0,0,0,4,1
+PH05,PH05,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CF02,CF02,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+NEA,Neath,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+COV,Coventry,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+CT02,CT02,Canterbury,South East England,South England and Wales,1,0,5,0,0,0,0,0,5,1
+HORM,Horley,Crawley,Commuter Belt South,Greater London,6,17,8,0,0,0,3,1,29,4
+MK01,MK01,Milton Keynes,South East England,South England and Wales,1,0,4,0,0,0,0,0,4,1
+OBRD1,Outer Bradford 1,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+RED,Redditch,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SOXF,South Oxford,Oxford,South East England,South England and Wales,7,24,9,0,0,0,0,0,33,2
+PTT,Port Talbot,Swansea,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SIV,Saint Ives,Peterborough,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+LOU,Loughborough,Leicester,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BSTW,Bestwood,Nottingham,Midlands,North England,7,11,18,0,0,6,3,1,39,5
+BRRY,Barry,Cardiff,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+KA02,KA02,Ayr,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+CLBK,Colnbrook,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+STNL,Stoneleigh,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+AB3,AB3,Aberdeen,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+ECLS,Eccles-ays,Maidstone,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+KNH,Hillfields,Bristol,South West and Wales,South England and Wales,6,19,9,0,0,0,0,0,28,2
+ALC,Alcester,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BEV,Beverley,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+DD02,DD02,Fife & Perthshire,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+GRC,Gerrards Cross,London,Commuter Belt North,Greater London,3,7,4,0,0,0,0,0,11,2
+B,B,Birmingham,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+SWIC,Swindon Centre,Swindon,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+CTP,Cotgrave Park,Nottingham,Midlands,North England,3,7,4,0,0,0,0,0,11,2
+HU01,HU01,Hull,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+GGDP,Godden Green/ Deer Park,Royal Tunbridge Wells,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+LN01,LN01,Lincoln,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+CLEC,Cleckheaton,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+WDF,South Woodham Ferrers,London,Commuter Belt North,Greater London,0,0,0,0,0,0,0,0,0,0
+ACC,Accrington,Blackburn,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CSTR,Caistor St Edmund,Norwich,South East England,South England and Wales,2,0,9,0,0,0,0,0,9,1
+WUD,Wath upon Dearne,Sheffield,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+BSAL,Beausale,Coventry,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+BTR,Burton upon Trent,Derby,Midlands,North England,0,0,0,0,0,0,0,0,0,0
+WDBY,West Derby,Liverpool,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CA02,CA02,Carlisle,North West England,North England,0,0,0,0,0,0,0,0,0,0
+WGN,Wigan,Wigan,North West England,North England,0,0,0,0,0,0,0,0,0,0
+CKY02,CKY02,County Kerry,Regional Ireland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+BD01,BD01,Leeds,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+NWP,Newport,Newport,South West and Wales,South England and Wales,0,0,0,0,0,0,0,0,0,0
+ALT,Alton,Camberley,South East England,South England and Wales,0,0,0,0,0,0,0,0,0,0
+SCR,Sacriston,Durham,North East and Yorkshire,North England,0,0,0,0,0,0,0,0,0,0
+BSTH,Bishopthorpe,York,North East and Yorkshire,North England,1,0,4,0,0,0,0,0,4,1
+IV02,IV02,Inverness,Scotland,Ireland and Scotland,0,0,0,0,0,0,0,0,0,0
+DNB,Danbury,Chelmsford,South East England,South England and Wales,4,9,8,0,0,0,3,1,21,4
+SBOL,South Bolton,Manchester,North West England,North England,0,0,0,0,0,0,0,0,0,0
+ESH,Esher,London,Commuter Belt South,Greater London,7,24,8,0,0,0,3,1,36,4
+EDG,Edgbaston,Birmingham,Midlands,North England,10,19,13,0,2,9,3,1,47,6
+RH03,RH03,Crawley,Commuter Belt South,Greater London,0,0,0,0,0,0,0,0,0,0
+ECC,Eccles,Manchester,North West England,North England,8,18,18,0,0,6,3,1,46,5

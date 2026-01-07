@@ -1,0 +1,1208 @@
+region,cuisine,order_count,order_share,national_share,index_vs_national,regional_strength
+Ireland,Indian,1296,10.92,6.88,158.7,Strong
+Ireland,Chinese,1193,10.05,3.81,263.8,Strong
+Ireland,Italian,1075,9.05,8.85,102.3,Moderate
+Ireland,Burgers,838,7.06,10.93,64.6,Weak
+Ireland,American,800,6.74,5.66,119.1,Moderate
+Ireland,Japanese,710,5.98,8.95,66.9,Weak
+Ireland,Chicken,524,4.41,5.91,74.6,Weak
+Ireland,Healthy,505,4.25,3.26,130.4,Strong
+Ireland,Irish,449,3.78,0.1,3621.7,Strong
+Ireland,Middle Eastern,422,3.55,1.07,333.3,Strong
+Ireland,Beer,415,3.5,0.07,5277.2,Strong
+Ireland,Roasteries,271,2.28,0.04,5404.3,Strong
+Ireland,Thai,271,2.28,2.53,90.1,Moderate
+Ireland,Korean,237,2.0,0.81,245.5,Strong
+Ireland,Mexican,238,2.0,0.5,403.1,Strong
+Ireland,Burritos,202,1.7,0.42,400.5,Strong
+Ireland,Sandwiches,163,1.37,1.12,122.5,Strong
+Ireland,Family Favourites,147,1.24,0.24,520.6,Strong
+Ireland,Vegetarian,127,1.07,0.35,305.0,Strong
+Ireland,Wraps,122,1.03,0.14,724.5,Strong
+Ireland,Gyros,121,1.02,0.14,748.2,Strong
+Ireland,Brazilian,117,0.99,0.05,1898.8,Strong
+Ireland,Comfort Food,117,0.99,0.03,3436.4,Strong
+Ireland,Lebanese,113,0.95,0.81,117.8,Moderate
+Ireland,Breakfast,109,0.92,0.96,95.9,Moderate
+Ireland,Street Food,99,0.83,0.04,1890.6,Strong
+Ireland,Halal,94,0.79,1.36,58.2,Weak
+Ireland,New To Deliveroo,90,0.76,0.24,320.4,Strong
+Ireland,Portuguese,79,0.67,3.09,21.5,Weak
+Ireland,Coffee,73,0.61,0.44,138.3,Strong
+Ireland,Dim Sum,64,0.54,0.06,837.5,Strong
+Ireland,Café,62,0.52,1.21,43.2,Weak
+Ireland,Restaurant Award Winners 2024,53,0.45,0.01,4938.4,Strong
+Ireland,Mediterranean,47,0.4,0.42,94.2,Moderate
+Ireland,Only On Deliveroo,42,0.35,0.15,237.4,Strong
+Ireland,Asian,39,0.33,3.42,9.6,Weak
+Ireland,Bubble Tea,39,0.33,0.43,76.5,Weak
+Ireland,Vietnamese,39,0.33,4.06,8.1,Weak
+Ireland,Win With Coca-Cola,38,0.32,0.01,2232.2,Strong
+Ireland,Donuts,28,0.24,0.04,666.6,Strong
+Ireland,Taiwanese,29,0.24,0.06,427.0,Strong
+Ireland,Gluten Free,27,0.23,0.22,104.8,Moderate
+Ireland,Turkish,27,0.23,1.1,20.7,Weak
+Ireland,Nepalese,26,0.22,0.05,401.5,Strong
+Ireland,British,24,0.2,2.84,7.1,Weak
+Ireland,Acai,22,0.19,0.08,246.7,Strong
+Ireland,Dessert,21,0.18,1.03,17.1,Weak
+Ireland,Poke,18,0.15,0.14,106.8,Moderate
+Ireland,Bbq,16,0.13,0.06,212.5,Strong
+Ireland,Pastry Shop,15,0.13,0.0,5066.6,Strong
+Ireland,Brunch,14,0.12,0.23,52.0,Weak
+Ireland,Hot Dogs,14,0.12,0.09,129.8,Strong
+Ireland,Bakery Shop,12,0.1,0.0,4053.2,Strong
+Ireland,Asian Fusion,11,0.09,0.11,83.4,Moderate
+Ireland,Vegan Friendly,11,0.09,0.74,12.5,Weak
+Ireland,Argentinian,9,0.08,0.05,150.1,Strong
+Ireland,French,9,0.08,0.06,119.2,Moderate
+Ireland,Noodles,10,0.08,0.27,30.7,Weak
+Ireland,Wings,10,0.08,2.01,4.2,Weak
+Ireland,Bagels,8,0.07,0.36,18.7,Weak
+Ireland,Iconic Taste Iconic Prizes Ireland,8,0.07,0.0,5404.3,Strong
+Ireland,Smoothie,8,0.07,0.01,1029.4,Strong
+Ireland,Juices,7,0.06,0.86,6.8,Weak
+Ireland,Milkshakes,7,0.06,0.19,30.9,Weak
+Ireland,Fast Food,6,0.05,0.02,245.7,Strong
+Ireland,Vegan,6,0.05,0.11,44.9,Weak
+Ireland,Russian,5,0.04,0.04,106.4,Moderate
+Ireland,Western,5,0.04,0.02,185.1,Strong
+Ireland,African,3,0.03,0.11,23.6,Weak
+Ireland,Ice Cream,4,0.03,0.09,35.6,Weak
+Ireland,Algerian,2,0.02,0.0,5404.3,Strong
+Ireland,Popular Restaurants,2,0.02,0.15,11.5,Weak
+Ireland,Tip Match,2,0.02,0.01,183.2,Strong
+Ireland,Afghan,1,0.01,0.02,37.5,Weak
+Ireland,Bakery,1,0.01,1.37,0.6,Weak
+Ireland,Drinks,1,0.01,0.28,3.0,Weak
+Ireland,Shopping,1,0.01,0.24,3.6,Weak
+Ireland,Spanish,1,0.01,0.02,51.0,Weak
+Ireland,Waffles,1,0.01,0.2,4.2,Weak
+London,Indian,19501,9.02,6.88,131.2,Strong
+London,Japanese,18723,8.66,8.95,96.8,Moderate
+London,Burgers,17405,8.05,10.93,73.7,Weak
+London,Italian,17135,7.93,8.85,89.5,Moderate
+London,Healthy,12253,5.67,3.26,173.8,Strong
+London,Chicken,11714,5.42,5.91,91.6,Moderate
+London,American,9054,4.19,5.66,74.0,Weak
+London,Chinese,8486,3.93,3.81,103.1,Moderate
+London,Vietnamese,8098,3.75,4.06,92.2,Moderate
+London,Asian,7819,3.62,3.42,105.9,Moderate
+London,Portuguese,5769,2.67,3.09,86.3,Moderate
+London,Wings,5118,2.37,2.01,117.6,Moderate
+London,British,4687,2.17,2.84,76.3,Weak
+London,Bakery,3554,1.64,1.37,120.1,Strong
+London,Thai,3326,1.54,2.53,60.7,Weak
+London,Sandwiches,3136,1.45,1.12,129.5,Strong
+London,Vegan Friendly,3081,1.43,0.74,191.7,Strong
+London,Juices,2975,1.38,0.86,159.8,Strong
+London,Middle Eastern,2739,1.27,1.07,118.8,Moderate
+London,Halal,2431,1.12,1.36,82.6,Moderate
+London,Korean,2345,1.08,0.81,133.4,Strong
+London,Turkish,2293,1.06,1.1,96.7,Moderate
+London,Café,2270,1.05,1.21,87.0,Moderate
+London,Breakfast,2190,1.01,0.96,105.8,Moderate
+London,Dessert,2192,1.01,1.03,98.2,Moderate
+London,Lebanese,2125,0.98,0.81,121.7,Strong
+London,Mediterranean,1894,0.88,0.42,208.6,Strong
+London,German,1649,0.76,0.87,87.9,Moderate
+London,Deliveroo Hop,1583,0.73,0.36,202.2,Strong
+London,Bagels,1560,0.72,0.36,200.0,Strong
+London,Tacos,1411,0.65,0.41,157.8,Strong
+London,Greek,1275,0.59,0.92,64.4,Weak
+London,Caribbean,1206,0.56,0.39,143.8,Strong
+London,Kosher,1101,0.51,0.19,264.0,Strong
+London,Mexican,961,0.44,0.5,89.4,Moderate
+London,Burritos,907,0.42,0.42,98.8,Moderate
+London,Bubble Tea,877,0.41,0.43,94.5,Moderate
+London,Drinks,847,0.39,0.28,138.4,Strong
+London,Vegetarian,778,0.36,0.35,102.6,Moderate
+London,Big Brand Stores,713,0.33,0.26,127.0,Strong
+London,Gluten Free,705,0.33,0.22,150.3,Strong
+London,Shopping,718,0.33,0.24,140.9,Strong
+London,Brunch,693,0.32,0.23,141.4,Strong
+London,Family Favourites,623,0.29,0.24,121.2,Strong
+London,Coffee,570,0.26,0.44,59.3,Weak
+London,Meal Deals,560,0.26,0.44,59.4,Weak
+London,Nachos,562,0.26,0.44,58.7,Weak
+London,Noodles,504,0.23,0.27,85.1,Moderate
+London,Poke,492,0.23,0.14,160.3,Strong
+London,Vegan,474,0.22,0.11,194.9,Strong
+London,Milkshakes,426,0.2,0.19,103.1,Moderate
+London,Only On Deliveroo,439,0.2,0.15,136.3,Strong
+London,New To Deliveroo,421,0.19,0.24,82.3,Moderate
+London,Acai,384,0.18,0.08,236.5,Strong
+London,Easter Groceries,387,0.18,0.06,296.8,Strong
+London,Hot Dogs,393,0.18,0.09,200.1,Strong
+London,Cantonese,372,0.17,0.12,144.7,Strong
+London,Asian Fusion,337,0.16,0.11,140.3,Strong
+London,International,338,0.16,0.07,210.3,Strong
+London,Specialist Stores,341,0.16,0.06,242.7,Strong
+London,Grill,310,0.14,0.16,91.3,Moderate
+London,Ice Cream,303,0.14,0.09,148.2,Strong
+London,The Feed,307,0.14,0.05,296.8,Strong
+London,Steak,285,0.13,0.07,186.3,Strong
+London,Dim Sum,265,0.12,0.06,190.5,Strong
+London,French,241,0.11,0.06,175.3,Strong
+London,Waffles,238,0.11,0.2,54.5,Weak
+London,Featured Restaurants,217,0.1,0.23,44.5,Weak
+London,African,200,0.09,0.11,86.3,Moderate
+London,Christmas Specials,185,0.09,0.06,139.4,Strong
+London,Dumplings,198,0.09,0.05,202.0,Strong
+London,Great For Lunch,189,0.09,0.05,170.0,Strong
+London,Hawaiian,194,0.09,0.04,214.1,Strong
+London,Midautumn2025,193,0.09,0.03,296.8,Strong
+London,Persian,186,0.09,0.04,220.0,Strong
+London,Russian,189,0.09,0.04,220.9,Strong
+London,Wraps,197,0.09,0.14,64.3,Weak
+London,Bbq,175,0.08,0.06,127.6,Strong
+London,Popular Restaurants,164,0.08,0.15,51.8,Weak
+London,Restaurants In Your Area,173,0.08,0.05,164.1,Strong
+London,Restaurants Only On Deliveroo,171,0.08,0.09,88.3,Moderate
+London,Seafood,181,0.08,0.07,125.8,Strong
+London,Singaporean,165,0.08,0.03,281.5,Strong
+London,Veganuary,146,0.07,0.02,296.8,Strong
+London,7Mar Off,127,0.06,0.04,131.8,Strong
+London,Gyros,131,0.06,0.14,44.5,Weak
+London,Iranian,132,0.06,0.04,145.7,Strong
+London,Malaysian,125,0.06,0.06,99.7,Moderate
+London,Stir Fry,137,0.06,0.18,35.3,Weak
+London,Taiwanese,128,0.06,0.06,103.5,Moderate
+London,Argentinian,110,0.05,0.05,100.8,Moderate
+London,Bo Bun,101,0.05,0.02,291.1,Strong
+London,Brazilian,101,0.05,0.05,90.0,Moderate
+London,Cakes,115,0.05,0.09,56.6,Weak
+London,Shawarma,107,0.05,0.06,84.0,Moderate
+London,Sichuan,113,0.05,0.07,79.5,Weak
+London,Sweet Treats,109,0.05,0.03,193.7,Strong
+London,Wing Fest 2025,109,0.05,0.03,155.6,Strong
+London,Deliveroo Students Offers,90,0.04,0.02,222.6,Strong
+London,Donuts,87,0.04,0.04,113.8,Moderate
+London,Health Conscious,91,0.04,0.06,65.7,Weak
+London,Meal Deal,89,0.04,0.07,58.1,Weak
+London,Movie Night Restaurants,83,0.04,0.09,43.1,Weak
+London,Nepalese,88,0.04,0.05,74.6,Weak
+London,Wine,83,0.04,0.03,141.6,Strong
+London,Fast Food,66,0.03,0.02,148.4,Strong
+London,Pakistani,74,0.03,0.05,73.0,Weak
+London,Pancakes,73,0.03,0.03,113.5,Moderate
+London,Plus April,68,0.03,0.01,288.4,Strong
+London,Project Love - August,62,0.03,0.01,296.8,Strong
+London,Soup,63,0.03,0.01,215.0,Strong
+London,Spanish,57,0.03,0.02,159.6,Strong
+London,Accessorize,34,0.02,0.01,131.1,Strong
+London,Afghan,44,0.02,0.02,90.7,Moderate
+London,Arabic,37,0.02,0.01,215.4,Strong
+London,Deliveroo Editions,52,0.02,0.01,285.8,Strong
+London,Egyptian,35,0.02,0.01,253.4,Strong
+London,Falafel,42,0.02,0.02,111.3,Moderate
+London,Filipino,46,0.02,0.01,189.6,Strong
+London,Flowers,51,0.02,0.01,204.6,Strong
+London,Jamaican,34,0.02,0.03,56.7,Weak
+London,June Free Delivery Weekend,47,0.02,0.03,63.7,Weak
+London,Local Gems,46,0.02,0.01,278.7,Strong
+London,Pickup Deals,47,0.02,0.01,290.7,Strong
+London,Project Love - December,53,0.02,0.01,296.8,Strong
+London,Quick Service Restaurants,48,0.02,0.03,68.8,Weak
+London,Western,41,0.02,0.02,83.4,Moderate
+London,14 Days Free Delivery,12,0.01,0.0,187.5,Strong
+London,Austrian,14,0.01,0.0,296.8,Strong
+London,Bangladeshi,25,0.01,0.01,130.2,Strong
+London,Beauty & Personal Care,11,0.01,0.0,296.8,Strong
+London,Biryani,24,0.01,0.01,101.8,Moderate
+London,Black Friday,15,0.01,0.01,103.5,Moderate
+London,Chips,18,0.01,0.0,281.2,Strong
+London,Cookies,31,0.01,0.02,88.5,Moderate
+London,Crêpe,11,0.01,0.01,98.9,Moderate
+London,Ethiopian,24,0.01,0.01,125.0,Strong
+London,Florists,14,0.01,0.0,277.0,Strong
+London,Gifting,15,0.01,0.01,92.8,Moderate
+London,Great For Gifting,25,0.01,0.01,98.9,Moderate
+London,Hardware & Maintenance,21,0.01,0.02,49.1,Weak
+London,In-Store Prices – Selected Items,21,0.01,0.07,13.1,Weak
+London,Indonesian,11,0.01,0.0,116.6,Moderate
+London,Meat,23,0.01,0.1,10.6,Weak
+London,Nfl Big Game Night,15,0.01,0.05,14.3,Weak
+London,Nigerian,21,0.01,0.03,31.8,Weak
+London,Organic,22,0.01,0.02,46.6,Weak
+London,Our Picks,11,0.01,0.0,163.3,Strong
+London,Perfect For Sharing,26,0.01,0.01,220.5,Strong
+London,Peruvian,19,0.01,0.01,148.4,Strong
+London,Pie,11,0.01,0.02,30.2,Weak
+London,Plus Offers September,15,0.01,0.01,69.6,Weak
+London,Protein Shops,17,0.01,0.0,296.8,Strong
+London,Ramadan 2025,12,0.01,0.0,178.1,Strong
+London,Snacks,17,0.01,0.0,186.9,Strong
+London,Sri Lankan,14,0.01,0.02,33.5,Weak
+London,"Stationary, Cards & Books",12,0.01,0.01,81.0,Moderate
+London,Street Food,11,0.01,0.04,11.5,Weak
+London,Supermarket,25,0.01,0.11,10.8,Weak
+London,Tea,17,0.01,0.0,201.9,Strong
+London,50% Off,3,0.0,0.0,222.6,Strong
+London,Americain,3,0.0,0.0,148.4,Strong
+London,Ann Summers Deliveroo Hop,10,0.0,0.0,247.4,Strong
+London,Australian,5,0.0,0.0,296.8,Strong
+London,Bakeries,2,0.0,0.0,197.9,Strong
+London,Bao,2,0.0,0.03,2.9,Weak
+London,Belgian,1,0.0,0.0,18.6,Weak
+London,"Big Flavours, Small Prices",2,0.0,0.0,59.4,Weak
+London,Catering,2,0.0,0.0,197.9,Strong
+London,Comfort Food,7,0.0,0.03,11.3,Weak
+London,Consumer Electronics,3,0.0,0.0,178.1,Strong
+London,Cook From Home,10,0.0,0.0,197.9,Strong
+London,Diy Stores,2,0.0,0.0,197.9,Strong
+London,Doughnuts,10,0.0,0.0,106.0,Moderate
+London,Fish,3,0.0,0.0,30.7,Weak
+London,Fish Shop,3,0.0,0.0,222.6,Strong
+London,French Tacos,4,0.0,0.0,54.0,Weak
+London,Gelato,1,0.0,0.02,2.8,Weak
+London,Georgian,5,0.0,0.01,40.1,Weak
+London,Halloween Rx 2022,5,0.0,0.0,61.8,Weak
+London,Healf Deliveroo Hop,3,0.0,0.0,296.8,Strong
+London,Household Goods,2,0.0,0.0,18.6,Weak
+London,Irish,1,0.0,0.1,0.4,Weak
+London,Maplin Deliveroo Hop,3,0.0,0.0,127.2,Strong
+London,Moon Festival,1,0.0,0.0,296.8,Strong
+London,Moroccan,3,0.0,0.0,44.5,Weak
+London,New To Roo,1,0.0,0.0,59.4,Weak
+London,Odg Cross Partner Offer Carousel Uk,10,0.0,0.0,269.9,Strong
+London,Only On Deliveroo 2024,6,0.0,0.0,296.8,Strong
+London,Personal Care,9,0.0,0.0,178.1,Strong
+London,Pet Food,7,0.0,0.0,103.9,Moderate
+London,Pharmacy,8,0.0,0.01,69.8,Weak
+London,Plus March 2025,3,0.0,0.0,148.4,Strong
+London,Plus Member Offers,1,0.0,0.03,1.7,Weak
+London,Poké,2,0.0,0.0,25.8,Weak
+London,Polish,1,0.0,0.01,4.4,Weak
+London,Pork,3,0.0,0.0,296.8,Strong
+London,Romanian,7,0.0,0.01,34.6,Weak
+London,Shopping-Popular-Brands,9,0.0,0.0,98.9,Moderate
+London,Smash Burger,5,0.0,0.0,123.7,Strong
+London,Takeaways,8,0.0,0.01,49.5,Weak
+London,Tapas,10,0.0,0.01,51.2,Weak
+London,Travel Ready,3,0.0,0.0,296.8,Strong
+London,Unilever Esports,4,0.0,0.01,16.0,Weak
+London,£10 Off Groceries And Shopping,4,0.0,0.0,84.8,Moderate
+Midlands,Japanese,1368,12.76,8.95,142.7,Strong
+Midlands,Burgers,1066,9.94,10.93,91.0,Moderate
+Midlands,American,986,9.2,5.66,162.6,Strong
+Midlands,Italian,972,9.07,8.85,102.4,Moderate
+Midlands,Vietnamese,760,7.09,4.06,174.5,Strong
+Midlands,Chicken,613,5.72,5.91,96.7,Moderate
+Midlands,Wings,584,5.45,2.01,270.7,Strong
+Midlands,Asian,514,4.8,3.42,140.4,Strong
+Midlands,Indian,499,4.66,6.88,67.7,Weak
+Midlands,Chinese,361,3.37,3.81,88.4,Moderate
+Midlands,Thai,320,2.99,2.53,117.8,Moderate
+Midlands,Korean,267,2.49,0.81,306.3,Strong
+Midlands,Portuguese,237,2.21,3.09,71.5,Weak
+Midlands,Halal,181,1.69,1.36,124.1,Strong
+Midlands,Café,134,1.25,1.21,103.5,Moderate
+Midlands,German,131,1.22,0.87,140.9,Strong
+Midlands,Dessert,127,1.18,1.03,114.8,Moderate
+Midlands,British,111,1.04,2.84,36.4,Weak
+Midlands,Wraps,88,0.82,0.14,578.8,Strong
+Midlands,Bubble Tea,84,0.78,0.43,182.6,Strong
+Midlands,Coffee,84,0.78,0.44,176.3,Strong
+Midlands,Greek,81,0.76,0.92,82.4,Moderate
+Midlands,Stir Fry,80,0.75,0.18,415.3,Strong
+Midlands,Burritos,76,0.71,0.42,166.9,Strong
+Midlands,Noodles,59,0.55,0.27,200.8,Strong
+Midlands,Healthy,57,0.53,3.26,16.3,Weak
+Midlands,Tacos,55,0.51,0.41,124.0,Strong
+Midlands,Vegan,54,0.5,0.11,447.7,Strong
+Midlands,Middle Eastern,52,0.49,1.07,45.5,Weak
+Midlands,Lebanese,46,0.43,0.81,53.1,Weak
+Midlands,Nachos,45,0.42,0.44,94.8,Moderate
+Midlands,Brunch,38,0.35,0.23,156.3,Strong
+Midlands,Grill,35,0.33,0.16,207.8,Strong
+Midlands,Caribbean,33,0.31,0.39,79.3,Weak
+Midlands,Roast,31,0.29,0.01,5622.9,Strong
+Midlands,Cookies,29,0.27,0.02,1669.1,Strong
+Midlands,Juices,28,0.26,0.86,30.3,Weak
+Midlands,Turkish,28,0.26,1.1,23.8,Weak
+Midlands,Nigerian,25,0.23,0.03,763.5,Strong
+Midlands,Poke,25,0.23,0.14,164.3,Strong
+Midlands,Sandwiches,24,0.22,1.12,20.0,Weak
+Midlands,Jamaican,18,0.17,0.03,605.3,Strong
+Midlands,Mexican,17,0.16,0.5,31.9,Weak
+Midlands,Shopping,17,0.16,0.24,67.3,Weak
+Midlands,Donuts,16,0.15,0.04,421.9,Strong
+Midlands,Breakfast,15,0.14,0.96,14.6,Weak
+Midlands,Gluten Free,15,0.14,0.22,64.5,Weak
+Midlands,Bakery,14,0.13,1.37,9.5,Weak
+Midlands,New To Deliveroo,14,0.13,0.24,55.2,Weak
+Midlands,Vegan Friendly,14,0.13,0.74,17.6,Weak
+Midlands,Milkshakes,12,0.11,0.19,58.6,Weak
+Midlands,Waffles,12,0.11,0.2,55.4,Weak
+Midlands,Meal Deals,11,0.1,0.44,23.5,Weak
+Midlands,Seafood,11,0.1,0.07,154.2,Strong
+Midlands,Nfl Big Game Night,10,0.09,0.05,192.5,Strong
+Midlands,African,9,0.08,0.11,78.3,Weak
+Midlands,Cakes,9,0.08,0.09,89.3,Moderate
+Midlands,Pie,9,0.08,0.02,498.8,Strong
+Midlands,Vegetarian,9,0.08,0.35,23.9,Weak
+Midlands,Biryani,7,0.07,0.01,598.6,Strong
+Midlands,Just A Bite Away,8,0.07,0.02,377.0,Strong
+Midlands,Peruvian,7,0.07,0.01,1102.6,Strong
+Midlands,Tapas,7,0.07,0.01,722.4,Strong
+Midlands,Family Favourites,6,0.06,0.24,23.5,Weak
+Midlands,Hawaiian,6,0.06,0.04,133.5,Strong
+Midlands,Only On Deliveroo,5,0.05,0.15,31.3,Weak
+Midlands,Steak,5,0.05,0.07,65.9,Weak
+Midlands,Brazilian,4,0.04,0.05,71.9,Weak
+Midlands,Drinks,4,0.04,0.28,13.2,Weak
+Midlands,Great For Lunch,4,0.04,0.05,72.6,Weak
+Midlands,Plus Offers Nov 2024,4,0.04,0.0,4788.5,Strong
+Midlands,Sri Lankan,4,0.04,0.02,193.1,Strong
+Midlands,Halloween Rx 2022,3,0.03,0.0,748.2,Strong
+Midlands,Movie Night Restaurants,3,0.03,0.09,31.4,Weak
+Midlands,Movie Night Snacks,3,0.03,0.0,4489.2,Strong
+Midlands,Western,3,0.03,0.02,123.0,Strong
+Midlands,14 Days Free Delivery,2,0.02,0.0,630.1,Strong
+Midlands,Accessorize,2,0.02,0.01,155.5,Strong
+Midlands,Bbq,2,0.02,0.06,29.4,Weak
+Midlands,Egyptian,2,0.02,0.01,292.0,Strong
+Midlands,Gyros,2,0.02,0.14,13.7,Weak
+Midlands,Bagels,1,0.01,0.36,2.6,Weak
+Midlands,Cantonese,1,0.01,0.12,7.8,Weak
+Midlands,Cold & Flu,1,0.01,0.0,1197.1,Strong
+Midlands,Fish Shop,1,0.01,0.0,1496.4,Strong
+Midlands,Ice Cream,1,0.01,0.09,9.9,Weak
+Midlands,Neapolitan,1,0.01,0.03,32.5,Weak
+North,Vietnamese,1703,11.51,4.06,283.2,Strong
+North,Burgers,1617,10.92,10.93,100.0,Moderate
+North,Japanese,1541,10.41,8.95,116.4,Moderate
+North,Italian,1320,8.92,8.85,100.7,Moderate
+North,American,1081,7.3,5.66,129.1,Strong
+North,Indian,846,5.72,6.88,83.1,Moderate
+North,Chinese,735,4.97,3.81,130.4,Strong
+North,Chicken,617,4.17,5.91,70.5,Weak
+North,Thai,487,3.29,2.53,129.9,Strong
+North,British,342,2.31,2.84,81.3,Moderate
+North,Portuguese,342,2.31,3.09,74.7,Weak
+North,Middle Eastern,304,2.05,1.07,192.6,Strong
+North,Café,222,1.5,1.21,124.2,Strong
+North,Mexican,222,1.5,0.5,301.6,Strong
+North,Gluten Free,188,1.27,0.22,585.5,Strong
+North,Healthy,185,1.25,3.26,38.3,Weak
+North,Wings,180,1.22,2.01,60.4,Weak
+North,German,174,1.18,0.87,135.5,Strong
+North,Asian,171,1.16,3.42,33.8,Weak
+North,Burritos,171,1.16,0.42,271.9,Strong
+North,Dessert,165,1.11,1.03,108.0,Moderate
+North,Greek,155,1.05,0.92,114.2,Moderate
+North,Breakfast,144,0.97,0.96,101.6,Moderate
+North,Halal,130,0.88,1.36,64.5,Weak
+North,Christmas Specials,118,0.8,0.06,1298.3,Strong
+North,Bubble Tea,105,0.71,0.43,165.3,Strong
+North,Juices,93,0.63,0.86,72.9,Weak
+North,Nachos,92,0.62,0.44,140.3,Strong
+North,Neapolitan,78,0.53,0.03,1837.6,Strong
+North,Bakery,76,0.51,1.37,37.5,Weak
+North,Noodles,75,0.51,0.27,184.8,Strong
+North,Sichuan,71,0.48,0.07,729.3,Strong
+North,Vegetarian,68,0.46,0.35,131.0,Strong
+North,Hot Dogs,65,0.44,0.09,483.3,Strong
+North,Korean,61,0.41,0.81,50.7,Weak
+North,Sandwiches,57,0.39,1.12,34.4,Weak
+North,Caribbean,50,0.34,0.39,87.0,Moderate
+North,Coffee,35,0.24,0.44,53.2,Weak
+North,New To Deliveroo,33,0.22,0.24,94.2,Moderate
+North,Tacos,33,0.22,0.41,53.9,Weak
+North,Vegan Friendly,30,0.2,0.74,27.3,Weak
+North,Bbq,28,0.19,0.06,298.2,Strong
+North,Cookies,28,0.19,0.02,1167.1,Strong
+North,Turkish,27,0.18,1.1,16.6,Weak
+North,Poke,25,0.17,0.14,119.0,Moderate
+North,Gelato,24,0.16,0.02,972.3,Strong
+North,Pie,24,0.16,0.02,963.3,Strong
+North,Wraps,23,0.16,0.14,109.6,Moderate
+North,Meal Deals,22,0.15,0.44,34.1,Weak
+North,Only On Deliveroo,22,0.15,0.15,99.8,Moderate
+North,Lebanese,20,0.14,0.81,16.7,Weak
+North,Vegan,21,0.14,0.11,126.1,Strong
+North,Malaysian,19,0.13,0.06,221.4,Strong
+North,Drinks,18,0.12,0.28,43.0,Weak
+North,Seafood,17,0.11,0.07,172.6,Strong
+North,Stir Fry,16,0.11,0.18,60.2,Weak
+North,Brunch,15,0.1,0.23,44.7,Weak
+North,Steak,14,0.09,0.07,133.7,Strong
+North,Waffles,13,0.09,0.2,43.4,Weak
+North,Dim Sum,12,0.08,0.06,126.0,Strong
+North,Mediterranean,12,0.08,0.42,19.3,Weak
+North,Shopping,12,0.08,0.24,34.4,Weak
+North,Asian Fusion,10,0.07,0.11,60.8,Weak
+North,Hawaiian,11,0.07,0.04,177.3,Strong
+North,Rice,10,0.07,0.0,4334.9,Strong
+North,Beer,9,0.06,0.07,91.8,Moderate
+North,Gyros,9,0.06,0.14,44.6,Weak
+North,In-Store Prices – Selected Items,9,0.06,0.07,82.0,Moderate
+North,Brazilian,7,0.05,0.05,91.1,Moderate
+North,Meat,7,0.05,0.1,46.9,Weak
+North,Big Brand Stores,6,0.04,0.26,15.6,Weak
+North,Family Favourites,6,0.04,0.24,17.0,Weak
+North,Hong Kongese,6,0.04,0.0,896.9,Strong
+North,Cantonese,5,0.03,0.12,28.4,Weak
+North,Coffee Week 2024,5,0.03,0.0,4334.9,Strong
+North,Donuts,5,0.03,0.04,95.5,Moderate
+North,Featured Restaurants,5,0.03,0.23,15.0,Weak
+North,Grill,4,0.03,0.16,17.2,Weak
+North,Meal Deal,4,0.03,0.07,38.1,Weak
+North,Moroccan,4,0.03,0.0,867.0,Strong
+North,North England Exclusives,4,0.03,0.0,4334.9,Strong
+North,Nurofen And Nuromol,4,0.03,0.0,2477.1,Strong
+North,Pancakes,4,0.03,0.03,90.8,Moderate
+North,Quick Service Restaurants,4,0.03,0.03,83.8,Moderate
+North,Sunny Weather,4,0.03,0.0,4334.9,Strong
+North,Yoghurt,4,0.03,0.0,4334.9,Strong
+North,Cakes,3,0.02,0.09,21.6,Weak
+North,Falafel,3,0.02,0.02,116.1,Moderate
+North,Ice Cream,3,0.02,0.09,21.4,Weak
+North,Jacket Potato,3,0.02,0.0,406.4,Strong
+North,Jamaican,3,0.02,0.03,73.1,Weak
+North,Milkshakes,3,0.02,0.19,10.6,Weak
+North,Nigerian,3,0.02,0.03,66.3,Weak
+North,Poké,3,0.02,0.0,565.4,Strong
+North,Accessorize,1,0.01,0.01,56.3,Weak
+North,African,2,0.01,0.11,12.6,Weak
+North,Bangladeshi,2,0.01,0.01,152.1,Strong
+North,Black Friday,1,0.01,0.01,100.8,Moderate
+North,Cold & Flu,1,0.01,0.0,867.0,Strong
+North,Crêpe,1,0.01,0.01,131.4,Strong
+North,Doughnuts,1,0.01,0.0,154.8,Strong
+North,Ethiopian,1,0.01,0.01,76.1,Weak
+North,"Exclusive Offers, From Our Exclusive Restaurants",2,0.01,0.02,59.0,Weak
+North,Festive Gifting,1,0.01,0.0,309.6,Strong
+North,Flowers,1,0.01,0.01,58.6,Weak
+North,Gifting,1,0.01,0.01,90.3,Moderate
+North,Great For Lunch,2,0.01,0.05,26.3,Weak
+North,Hardware & Maintenance,2,0.01,0.02,68.3,Weak
+North,June Free Delivery Weekend,1,0.01,0.03,19.8,Weak
+North,New On Roo,1,0.01,0.0,4334.9,Strong
+North,Persian,2,0.01,0.04,34.5,Weak
+North,Shawarma,2,0.01,0.06,22.9,Weak
+North,Sheffield Free Delivery,1,0.01,0.0,4334.9,Strong
+North,Spanish,1,0.01,0.02,40.9,Weak
+North,Sri Lankan,2,0.01,0.02,69.9,Weak
+North,Syrian,2,0.01,0.0,510.0,Strong
+North,Taiwanese,2,0.01,0.06,23.6,Weak
+North,Tibetan,2,0.01,0.0,4334.9,Strong
+North,Venezuelan,1,0.01,0.0,722.5,Strong
+North,£10 Off Groceries And Shopping,1,0.01,0.0,309.6,Strong
+Other,Burgers,34129,12.56,10.93,114.9,Moderate
+Other,Italian,26064,9.59,8.85,108.3,Moderate
+Other,Japanese,23164,8.52,8.95,95.3,Moderate
+Other,Indian,17279,6.36,6.88,92.5,Moderate
+Other,Chicken,17150,6.31,5.91,106.7,Moderate
+Other,American,15890,5.85,5.66,103.4,Moderate
+Other,Portuguese,9966,3.67,3.09,118.6,Moderate
+Other,Chinese,9891,3.64,3.81,95.6,Moderate
+Other,Asian,9582,3.53,3.42,103.2,Moderate
+Other,British,9205,3.39,2.84,119.2,Moderate
+Other,Thai,8111,2.98,2.53,117.8,Moderate
+Other,Vietnamese,7402,2.72,4.06,67.0,Weak
+Other,Healthy,5372,1.98,3.26,60.6,Weak
+Other,Wings,5067,1.86,2.01,92.6,Moderate
+Other,Halal,4680,1.72,1.36,126.5,Strong
+Other,Bakery,4244,1.56,1.37,114.0,Moderate
+Other,Café,3693,1.36,1.21,112.5,Moderate
+Other,Turkish,3662,1.35,1.1,122.9,Strong
+Other,Dessert,2941,1.08,1.03,104.8,Moderate
+Other,Sandwiches,2886,1.06,1.12,94.8,Moderate
+Other,Breakfast,2661,0.98,0.96,102.3,Moderate
+Other,German,2472,0.91,0.87,104.9,Moderate
+Other,Greek,2405,0.88,0.92,96.5,Moderate
+Other,Middle Eastern,2338,0.86,1.07,80.7,Moderate
+Other,Lebanese,2292,0.84,0.81,104.4,Moderate
+Other,Juices,1973,0.73,0.86,84.3,Moderate
+Other,Meal Deals,1938,0.71,0.44,163.6,Strong
+Other,Coffee,1666,0.61,0.44,137.9,Strong
+Other,Korean,1582,0.58,0.81,71.6,Weak
+Other,Vegan Friendly,1373,0.51,0.74,68.0,Weak
+Other,Bubble Tea,1133,0.42,0.43,97.1,Moderate
+Other,Mexican,1127,0.41,0.5,83.4,Moderate
+Other,Nachos,1060,0.39,0.44,88.1,Moderate
+Other,Caribbean,1034,0.38,0.39,98.0,Moderate
+Other,Vegetarian,954,0.35,0.35,100.1,Moderate
+Other,Featured Restaurants,804,0.3,0.23,131.3,Strong
+Other,Burritos,785,0.29,0.42,68.0,Weak
+Other,Waffles,783,0.29,0.2,142.5,Strong
+Other,Big Brand Stores,764,0.28,0.26,108.2,Moderate
+Other,Deliveroo Hop,741,0.27,0.36,75.3,Weak
+Other,New To Deliveroo,721,0.27,0.24,112.1,Moderate
+Other,Tacos,746,0.27,0.41,66.3,Weak
+Other,Drinks,673,0.25,0.28,87.5,Moderate
+Other,Mediterranean,588,0.22,0.42,51.5,Weak
+Other,Bagels,571,0.21,0.36,58.2,Weak
+Other,Milkshakes,561,0.21,0.19,108.0,Moderate
+Other,Brunch,555,0.2,0.23,90.1,Moderate
+Other,Shopping,554,0.2,0.24,86.4,Moderate
+Other,Grill,521,0.19,0.16,122.0,Strong
+Other,Stir Fry,510,0.19,0.18,104.4,Moderate
+Other,Family Favourites,496,0.18,0.24,76.7,Weak
+Other,Meat,453,0.17,0.1,165.3,Strong
+Other,Movie Night Restaurants,462,0.17,0.09,190.7,Strong
+Other,Wraps,434,0.16,0.14,112.6,Moderate
+Other,Gyros,409,0.15,0.14,110.5,Moderate
+Other,Noodles,405,0.15,0.27,54.4,Weak
+Other,Supermarket,417,0.15,0.11,143.3,Strong
+Other,Cakes,384,0.14,0.09,150.3,Strong
+Other,In-Store Prices – Selected Items,379,0.14,0.07,188.0,Strong
+Other,Restaurants Only On Deliveroo,376,0.14,0.09,154.4,Strong
+Other,African,345,0.13,0.11,118.4,Moderate
+Other,Asian Fusion,334,0.12,0.11,110.6,Moderate
+Other,Meal Deal,329,0.12,0.07,170.7,Strong
+Other,Poke,312,0.11,0.14,80.9,Moderate
+Other,Gluten Free,272,0.1,0.22,46.1,Weak
+Other,Ice Cream,275,0.1,0.09,107.0,Moderate
+Other,Coca Cola Zero Sugar Competition,245,0.09,0.04,226.8,Strong
+Other,Popular Restaurants,237,0.09,0.15,59.5,Weak
+Other,Irish,220,0.08,0.1,77.5,Weak
+Other,Pakistani,213,0.08,0.05,167.1,Strong
+Other,Royally Good Offers,208,0.08,0.04,195.6,Strong
+Other,Shawarma,221,0.08,0.06,138.0,Strong
+Other,Cantonese,198,0.07,0.12,61.3,Weak
+Other,Nfl Big Game Night,194,0.07,0.05,147.3,Strong
+Other,Only On Deliveroo,189,0.07,0.15,46.7,Weak
+Other,Seafood,185,0.07,0.07,102.3,Moderate
+Other,Spicy Nuggets,197,0.07,0.07,110.2,Moderate
+Other,Taiwanese,197,0.07,0.06,126.7,Strong
+Other,Bao,164,0.06,0.03,188.9,Strong
+Other,Malaysian,171,0.06,0.06,108.5,Moderate
+Other,Plus Member Offers,176,0.06,0.03,234.8,Strong
+Other,Quick Service Restaurants,151,0.06,0.03,172.2,Strong
+Other,Vegan,158,0.06,0.11,51.7,Weak
+Other,Bbq,139,0.05,0.06,80.6,Moderate
+Other,Family Meal Deals,132,0.05,0.02,232.6,Strong
+Other,Health Conscious,148,0.05,0.06,85.0,Moderate
+Other,Iranian,136,0.05,0.04,119.4,Moderate
+Other,June Free Delivery Weekend,138,0.05,0.03,148.8,Strong
+Other,Kosher,137,0.05,0.19,26.1,Weak
+Other,Restaurants In Your Area,140,0.05,0.05,105.6,Moderate
+Other,Spring Summer Free Delivery,148,0.05,0.02,236.1,Strong
+Other,7Mar Off,103,0.04,0.04,85.0,Moderate
+Other,Afghan,96,0.04,0.02,157.4,Strong
+Other,Argentinian,122,0.04,0.05,88.9,Moderate
+Other,"Exclusive Offers, From Our Exclusive Restaurants",107,0.04,0.02,171.8,Strong
+Other,French,109,0.04,0.06,63.1,Weak
+Other,Great For Lunch,114,0.04,0.05,81.6,Moderate
+Other,Hot Dogs,111,0.04,0.09,45.0,Weak
+Other,International,96,0.04,0.07,47.5,Weak
+Other,Jamaican,103,0.04,0.03,136.6,Strong
+Other,Neapolitan,100,0.04,0.03,128.3,Strong
+Other,Organic,116,0.04,0.02,195.6,Strong
+Other,Brazilian,85,0.03,0.05,60.3,Weak
+Other,Dumplings,80,0.03,0.05,64.9,Weak
+Other,Free Delivery (Uk),92,0.03,0.01,236.1,Strong
+Other,Hardware & Maintenance,71,0.03,0.02,132.0,Strong
+Other,Nepalese,87,0.03,0.05,58.7,Weak
+Other,Nigerian,88,0.03,0.03,106.0,Moderate
+Other,Specialist Stores,76,0.03,0.06,43.0,Weak
+Other,Sri Lankan,89,0.03,0.02,169.5,Strong
+Other,Steak,82,0.03,0.07,42.6,Weak
+Other,Waitrose,79,0.03,0.01,236.1,Strong
+Other,Wine,91,0.03,0.03,123.5,Strong
+Other,Wing Fest 2025,95,0.03,0.03,107.8,Moderate
+Other,Christmas Specials,56,0.02,0.06,33.6,Weak
+Other,Comfort Food,60,0.02,0.03,77.0,Weak
+Other,Dim Sum,58,0.02,0.06,33.2,Weak
+Other,Donuts,50,0.02,0.04,52.0,Weak
+Other,Fast Food,60,0.02,0.02,107.3,Moderate
+Other,Great For Gifting,50,0.02,0.01,157.4,Strong
+Other,Hawaiian,54,0.02,0.04,47.4,Weak
+Other,Just A Bite Away,43,0.02,0.02,79.9,Weak
+Other,Lunch For Less,45,0.02,0.01,236.1,Strong
+Other,New Customer 20% Off Watford,58,0.02,0.02,131.7,Strong
+Other,Pancakes,61,0.02,0.03,75.4,Weak
+Other,Persian,58,0.02,0.04,54.6,Weak
+Other,Polish,60,0.02,0.01,208.3,Strong
+Other,Romanian,49,0.02,0.01,192.8,Strong
+Other,Russian,60,0.02,0.04,55.8,Weak
+Other,Sweet Treats,44,0.02,0.03,62.2,Weak
+Other,Tip Match,50,0.02,0.01,200.1,Strong
+Other,Western,59,0.02,0.02,95.4,Moderate
+Other,Win With Coca-Cola,54,0.02,0.01,138.6,Strong
+Other,Acai,37,0.01,0.08,18.1,Weak
+Other,Accessorize,22,0.01,0.01,67.5,Weak
+Other,Afternoon Tea,30,0.01,0.0,236.1,Strong
+Other,Arabic,14,0.01,0.01,64.8,Weak
+Other,Bangladeshi,25,0.01,0.01,103.5,Moderate
+Other,Bento,25,0.01,0.0,236.1,Strong
+Other,Biryani,39,0.01,0.01,131.5,Strong
+Other,Cookies,16,0.01,0.02,36.3,Weak
+Other,Crêpe,21,0.01,0.01,150.2,Strong
+Other,Cuban,15,0.01,0.0,236.1,Strong
+Other,Deliveroo Students Offers,30,0.01,0.02,59.0,Weak
+Other,Egg-Cellent Easter Deals,31,0.01,0.0,236.1,Strong
+Other,Ethiopian,32,0.01,0.01,132.5,Strong
+Other,Falafel,24,0.01,0.02,50.6,Weak
+Other,Filipino,25,0.01,0.01,82.0,Moderate
+Other,Fish,26,0.01,0.0,211.7,Strong
+Other,Flash Sale,17,0.01,0.0,236.1,Strong
+Other,Flowers,22,0.01,0.01,70.2,Weak
+Other,French Tacos,17,0.01,0.0,182.4,Strong
+Other,Fries,22,0.01,0.0,236.1,Strong
+Other,Gelato,20,0.01,0.02,44.1,Weak
+Other,Georgian,32,0.01,0.01,204.2,Strong
+Other,Gifting,25,0.01,0.01,123.0,Strong
+Other,Here To Deliver,19,0.01,0.0,236.1,Strong
+Other,Hong Kongese,17,0.01,0.0,138.4,Strong
+Other,Household Goods,30,0.01,0.0,221.3,Strong
+Other,Indonesian,17,0.01,0.0,143.3,Strong
+Other,Jacket Potato,19,0.01,0.0,140.2,Strong
+Other,Morrisons,38,0.01,0.01,236.1,Strong
+Other,New Flavours,17,0.01,0.0,236.1,Strong
+Other,Pastries,19,0.01,0.0,236.1,Strong
+Other,Pharmacy,26,0.01,0.01,180.5,Strong
+Other,Piadina,15,0.01,0.0,236.1,Strong
+Other,Plus Offers July,19,0.01,0.0,186.9,Strong
+Other,Plus Offers September,16,0.01,0.01,59.0,Weak
+Other,Ramadan Vibes,36,0.01,0.01,236.1,Strong
+Other,Restaurant Award Winners 2025,18,0.01,0.01,121.4,Strong
+Other,Sichuan Spicy,28,0.01,0.0,236.1,Strong
+Other,Smoothie,16,0.01,0.01,89.9,Moderate
+Other,Soup,16,0.01,0.01,43.4,Weak
+Other,Spanish,24,0.01,0.02,53.5,Weak
+Other,"Stationary, Cards & Books",32,0.01,0.01,171.7,Strong
+Other,Street Food,27,0.01,0.04,22.5,Weak
+Other,Syrian,15,0.01,0.0,208.3,Strong
+Other,Takeaways,33,0.01,0.01,162.3,Strong
+Other,Tapas,34,0.01,0.01,138.4,Strong
+Other,Unilever Esports,22,0.01,0.01,70.2,Weak
+Other,Up To 50% Off Holiday Essentials,39,0.01,0.01,236.1,Strong
+Other,Veganuary 2024,32,0.01,0.0,236.1,Strong
+Other,£7 Off Promotion,19,0.01,0.0,236.1,Strong
+Other,40% Off Restaurants,3,0.0,0.0,236.1,Strong
+Other,50% Off,1,0.0,0.0,59.0,Weak
+Other,Aug Bh Uk,13,0.0,0.0,236.1,Strong
+Other,August Free Delivery Weekend,13,0.0,0.0,236.1,Strong
+Other,Autumn Meal Deals,6,0.0,0.0,177.1,Strong
+Other,Bag Great Savings On Your Groceries,3,0.0,0.0,141.7,Strong
+Other,Bakeries,1,0.0,0.0,78.7,Weak
+Other,Balkan,1,0.0,0.0,236.1,Strong
+Other,Battlefield 6,5,0.0,0.0,236.1,Strong
+Other,Beef,1,0.0,0.0,236.1,Strong
+Other,Beer,1,0.0,0.07,0.6,Weak
+Other,Belgian,5,0.0,0.0,73.8,Weak
+Other,Benjerrys,2,0.0,0.0,236.1,Strong
+Other,"Big Flavours, Small Prices",8,0.0,0.0,188.9,Strong
+Other,Black Friday,8,0.0,0.01,43.9,Weak
+Other,Bo Bun,2,0.0,0.02,4.6,Weak
+Other,Boba,1,0.0,0.0,118.0,Moderate
+Other,Burger King,5,0.0,0.0,236.1,Strong
+Other,Butcher,3,0.0,0.0,236.1,Strong
+Other,Capitaland Malls,2,0.0,0.0,236.1,Strong
+Other,Cash Payment,1,0.0,0.0,236.1,Strong
+Other,Catering,1,0.0,0.0,78.7,Weak
+Other,Cheese,1,0.0,0.0,236.1,Strong
+Other,Chips,1,0.0,0.0,12.4,Weak
+Other,Chocolate,7,0.0,0.0,236.1,Strong
+Other,Chopstix Lny,1,0.0,0.0,7.9,Weak
+Other,Christmas Gifting,1,0.0,0.0,236.1,Strong
+Other,Churros,1,0.0,0.0,236.1,Strong
+Other,Coca-Cola Christmas Ni,13,0.0,0.0,236.1,Strong
+Other,Coca-Cola Christmas Roi,1,0.0,0.0,236.1,Strong
+Other,Coffee Week,1,0.0,0.0,47.2,Weak
+Other,Cold & Flu,2,0.0,0.0,94.4,Moderate
+Other,Consumer Electronics,1,0.0,0.0,47.2,Weak
+Other,Cook From Home,5,0.0,0.0,78.7,Weak
+Other,Curated Plus Diamond Carousel,13,0.0,0.0,236.1,Strong
+Other,Danone Olympics,1,0.0,0.0,236.1,Strong
+Other,Deliveroo Dinner Party,13,0.0,0.0,236.1,Strong
+Other,Deliveroo Editions,2,0.0,0.01,8.7,Weak
+Other,Discovery Wines & Spirits,5,0.0,0.0,236.1,Strong
+Other,Diy Stores,1,0.0,0.0,78.7,Weak
+Other,Doughnuts,9,0.0,0.0,75.9,Weak
+Other,Drone Delivery,1,0.0,0.0,236.1,Strong
+Other,Dutch,1,0.0,0.0,236.1,Strong
+Other,Editions Bristol,5,0.0,0.0,65.6,Weak
+Other,Egyptian,4,0.0,0.01,23.0,Weak
+Other,Electricals,6,0.0,0.0,236.1,Strong
+Other,Electronics,12,0.0,0.0,236.1,Strong
+Other,Emirati,6,0.0,0.0,236.1,Strong
+Other,Fatayer,2,0.0,0.0,236.1,Strong
+Other,Festive Gifting,12,0.0,0.0,202.4,Strong
+Other,Festive Groceries,1,0.0,0.0,236.1,Strong
+Other,Five Guys (Be),1,0.0,0.0,236.1,Strong
+Other,Florists,1,0.0,0.0,15.7,Weak
+Other,Football Deals,2,0.0,0.0,236.1,Strong
+Other,Fresh Food,6,0.0,0.0,59.0,Weak
+Other,Fruit,1,0.0,0.0,236.1,Strong
+Other,Gastronomie,1,0.0,0.0,236.1,Strong
+Other,Gcp-Refresh-Fastest-Delivery,10,0.0,0.0,236.1,Strong
+Other,Gyg Sg,1,0.0,0.0,236.1,Strong
+Other,Halloween Rx 2022,8,0.0,0.0,78.7,Weak
+Other,Holiday Season,1,0.0,0.0,236.1,Strong
+Other,Hot Pot,1,0.0,0.0,236.1,Strong
+Other,Ice Cream Stores,1,0.0,0.0,236.1,Strong
+Other,Incredible Black Friday Deals,3,0.0,0.0,236.1,Strong
+Other,Israeli,3,0.0,0.0,236.1,Strong
+Other,Joe & The Juice,11,0.0,0.0,236.1,Strong
+Other,Katsu,2,0.0,0.0,78.7,Weak
+Other,Kids Menu,13,0.0,0.03,15.4,Weak
+Other,Late Night Delivery,4,0.0,0.0,236.1,Strong
+Other,Local Gems,3,0.0,0.01,14.5,Weak
+Other,Local Offers (Uk),8,0.0,0.0,236.1,Strong
+Other,Love Local Takeaway,1,0.0,0.0,236.1,Strong
+Other,Lunar New Year Deals,3,0.0,0.0,236.1,Strong
+Other,Magnum Ice Cream Delivery,10,0.0,0.0,236.1,Strong
+Other,Manaqeesh,1,0.0,0.0,236.1,Strong
+Other,Matcha,2,0.0,0.0,236.1,Strong
+Other,Meal Card (Fr),6,0.0,0.0,236.1,Strong
+Other,Meal For 2,1,0.0,0.0,236.1,Strong
+Other,Medicine,2,0.0,0.0,236.1,Strong
+Other,Moroccan,2,0.0,0.0,23.6,Weak
+Other,Naan,9,0.0,0.0,236.1,Strong
+Other,Nasi Lemak,1,0.0,0.0,236.1,Strong
+Other,National Day,1,0.0,0.0,236.1,Strong
+Other,Noodle Bar,5,0.0,0.0,236.1,Strong
+Other,Odg Cross Partner Offer Carousel Uk,1,0.0,0.0,21.5,Weak
+Other,Organic Stores,1,0.0,0.0,236.1,Strong
+Other,Our Picks,9,0.0,0.0,106.2,Moderate
+Other,Pastry Shop,1,0.0,0.0,14.8,Weak
+Other,Perfect For Sharing,9,0.0,0.01,60.7,Weak
+Other,Personal Care,6,0.0,0.0,94.4,Moderate
+Other,Peruvian,12,0.0,0.01,74.6,Weak
+Other,Pet Food,12,0.0,0.0,141.7,Strong
+Other,Pets,10,0.0,0.0,236.1,Strong
+Other,Pick Up (Sg),1,0.0,0.0,236.1,Strong
+Other,Pickup Deals,1,0.0,0.01,4.9,Weak
+Other,Pie,12,0.0,0.02,26.2,Weak
+Other,Pinsa,1,0.0,0.0,236.1,Strong
+Other,Plus April,2,0.0,0.01,6.7,Weak
+Other,Plus March 2025,3,0.0,0.0,118.0,Moderate
+Other,Plus Offers Dec 2024,1,0.0,0.0,236.1,Strong
+Other,Poké,10,0.0,0.0,102.6,Moderate
+Other,Pâtisserie,1,0.0,0.0,236.1,Strong
+Other,Quality Street,2,0.0,0.0,236.1,Strong
+Other,Ramadan,1,0.0,0.0,236.1,Strong
+Other,Ramadan 2025,8,0.0,0.0,94.4,Moderate
+Other,Reckitt Benckiser,1,0.0,0.0,236.1,Strong
+Other,Regional Restaurant Award Winner 2025,3,0.0,0.0,236.1,Strong
+Other,Restaurant Award Winners 2024,5,0.0,0.01,20.4,Weak
+Other,Savoury Snacks,1,0.0,0.0,236.1,Strong
+Other,School Essentials,4,0.0,0.0,236.1,Strong
+Other,Service Guarantee,7,0.0,0.0,236.1,Strong
+Other,Shopping-Popular-Brands,11,0.0,0.0,96.2,Moderate
+Other,Sichuan,4,0.0,0.07,2.2,Weak
+Other,Singaporean,9,0.0,0.03,12.2,Weak
+Other,Smash Burger,7,0.0,0.0,137.7,Strong
+Other,Snacks,10,0.0,0.0,87.4,Moderate
+Other,Tea,8,0.0,0.0,75.5,Weak
+Other,The Comeback Sale,1,0.0,0.0,236.1,Strong
+Other,The Perfume Shop,1,0.0,0.0,236.1,Strong
+Other,Today'S Best Deals,1,0.0,0.0,236.1,Strong
+Other,Toy & Games,2,0.0,0.0,236.1,Strong
+Other,Tunisian,1,0.0,0.0,236.1,Strong
+Other,Valentine'S Day Deals,1,0.0,0.0,236.1,Strong
+Other,Vegetables,1,0.0,0.0,236.1,Strong
+Other,Venezuelan,5,0.0,0.0,196.7,Strong
+Other,Vitamins,1,0.0,0.0,236.1,Strong
+Other,Voucher (Be),1,0.0,0.0,236.1,Strong
+Other,Vox (Uae),5,0.0,0.0,236.1,Strong
+Other,Wing Fest 2024,1,0.0,0.0,236.1,Strong
+Other,£10 Off Groceries And Shopping,9,0.0,0.0,151.8,Strong
+Scotland,Vietnamese,1197,10.06,4.06,247.7,Strong
+Scotland,Burgers,1179,9.91,10.93,90.7,Moderate
+Scotland,Japanese,1165,9.79,8.95,109.5,Moderate
+Scotland,Asian,1113,9.36,3.42,273.9,Strong
+Scotland,Italian,1001,8.42,8.85,95.1,Moderate
+Scotland,Indian,667,5.61,6.88,81.5,Moderate
+Scotland,Chinese,633,5.32,3.81,139.7,Strong
+Scotland,American,588,4.94,5.66,87.4,Moderate
+Scotland,Chicken,416,3.5,5.91,59.1,Weak
+Scotland,British,412,3.46,2.84,121.9,Strong
+Scotland,Wings,378,3.18,2.01,157.9,Strong
+Scotland,Portuguese,350,2.94,3.09,95.2,Moderate
+Scotland,Burritos,249,2.09,0.42,492.7,Strong
+Scotland,German,210,1.77,0.87,203.5,Strong
+Scotland,Sandwiches,162,1.36,1.12,121.5,Strong
+Scotland,Halal,148,1.24,1.36,91.4,Moderate
+Scotland,Dessert,123,1.03,1.03,100.2,Moderate
+Scotland,Healthy,119,1.0,3.26,30.7,Weak
+Scotland,Korean,118,0.99,0.81,122.0,Strong
+Scotland,Mexican,114,0.96,0.5,192.7,Strong
+Scotland,Plus Offers Oct 2024,114,0.96,0.02,5393.9,Strong
+Scotland,Greek,110,0.92,0.92,100.9,Moderate
+Scotland,Thai,105,0.88,2.53,34.8,Weak
+Scotland,Café,100,0.84,1.21,69.6,Weak
+Scotland,Nachos,98,0.82,0.44,186.0,Strong
+Scotland,Just A Bite Away,76,0.64,0.02,3227.8,Strong
+Scotland,Cantonese,64,0.54,0.12,452.4,Strong
+Scotland,Breakfast,59,0.5,0.96,51.8,Weak
+Scotland,Bubble Tea,54,0.45,0.43,105.8,Moderate
+Scotland,Middle Eastern,50,0.42,1.07,39.4,Weak
+Scotland,Tacos,49,0.41,0.41,99.5,Moderate
+Scotland,Noodles,46,0.39,0.27,141.1,Strong
+Scotland,Royally Good Offers,43,0.36,0.04,924.1,Strong
+Scotland,Shawarma,40,0.34,0.06,570.8,Strong
+Scotland,Bagels,39,0.33,0.36,90.9,Moderate
+Scotland,Donuts,28,0.24,0.04,665.3,Strong
+Scotland,Unilever Esports,26,0.22,0.01,1895.1,Strong
+Scotland,Canadian,23,0.19,0.0,5393.9,Strong
+Scotland,Movie Night Restaurants,23,0.19,0.09,216.9,Strong
+Scotland,Malaysian,20,0.17,0.06,290.0,Strong
+Scotland,Spanish,20,0.17,0.02,1017.7,Strong
+Scotland,Drinks,19,0.16,0.28,56.4,Weak
+Scotland,Gyros,19,0.16,0.14,117.3,Moderate
+Scotland,Vegetarian,18,0.15,0.35,43.2,Weak
+Scotland,Coffee,17,0.14,0.44,32.2,Weak
+Scotland,Lebanese,16,0.13,0.81,16.7,Weak
+Scotland,Acai,14,0.12,0.08,156.7,Strong
+Scotland,African,14,0.12,0.11,109.8,Moderate
+Scotland,Bakery And Patisserie,14,0.12,0.0,5393.9,Strong
+Scotland,Cakes,14,0.12,0.09,125.2,Strong
+Scotland,Nepalese,14,0.12,0.05,215.8,Strong
+Scotland,Shopping,14,0.12,0.24,49.9,Weak
+Scotland,Meal Deal,12,0.1,0.07,142.3,Strong
+Scotland,Black Friday,11,0.09,0.01,1379.8,Strong
+Scotland,Christmas Specials,11,0.09,0.06,150.6,Strong
+Scotland,New To Deliveroo,11,0.09,0.24,39.1,Weak
+Scotland,Caribbean,10,0.08,0.39,21.7,Weak
+Scotland,Featured Restaurants,9,0.08,0.23,33.6,Weak
+Scotland,Turkish,10,0.08,1.1,7.7,Weak
+Scotland,Wraps,9,0.08,0.14,53.3,Weak
+Scotland,Vegan Friendly,8,0.07,0.74,9.0,Weak
+Scotland,Brunch,7,0.06,0.23,25.9,Weak
+Scotland,Tapas,7,0.06,0.01,651.0,Strong
+Scotland,Juices,5,0.04,0.86,4.9,Weak
+Scotland,Stir Fry,5,0.04,0.18,23.4,Weak
+Scotland,Autumn Free Delivery,4,0.03,0.0,5393.9,Strong
+Scotland,Bakery,3,0.03,1.37,1.8,Weak
+Scotland,Bakery Shop,4,0.03,0.0,1348.5,Strong
+Scotland,Bao,4,0.03,0.03,105.2,Moderate
+Scotland,Bbq,4,0.03,0.06,53.0,Weak
+Scotland,Belgian,3,0.03,0.0,1011.4,Strong
+Scotland,Brazilian,3,0.03,0.05,48.6,Weak
+Scotland,Family Favourites,4,0.03,0.24,14.1,Weak
+Scotland,Gluten Free,3,0.03,0.22,11.6,Weak
+Scotland,Great For Lunch,3,0.03,0.05,49.0,Weak
+Scotland,Pakistani,4,0.03,0.05,71.7,Weak
+Scotland,Plus Offers July,4,0.03,0.0,899.0,Strong
+Scotland,Steak,4,0.03,0.07,47.5,Weak
+Scotland,Sweet Treats,4,0.03,0.03,129.2,Strong
+Scotland,Waffles,4,0.03,0.2,16.6,Weak
+Scotland,Gifting,2,0.02,0.01,224.7,Strong
+Scotland,Ice Cream,2,0.02,0.09,17.8,Weak
+Scotland,Meal Deals,2,0.02,0.44,3.9,Weak
+Scotland,Pancakes,2,0.02,0.03,56.5,Weak
+Scotland,Poke,2,0.02,0.14,11.8,Weak
+Scotland,Asian Fusion,1,0.01,0.11,7.6,Weak
+Scotland,Cheap Eats,1,0.01,0.0,5393.9,Strong
+Scotland,Coca Cola Zero Sugar Competition,1,0.01,0.04,21.2,Weak
+Scotland,Dumplings,1,0.01,0.05,18.5,Weak
+Scotland,French,1,0.01,0.06,13.2,Weak
+Scotland,Halloween Rx 2022,1,0.01,0.0,224.7,Strong
+Scotland,Hardware & Maintenance,1,0.01,0.02,42.5,Weak
+Scotland,June Free Delivery Weekend,1,0.01,0.03,24.6,Weak
+Scotland,Moroccan,1,0.01,0.0,269.7,Strong
+Scotland,Nfl Big Game Night,1,0.01,0.05,17.3,Weak
+Scotland,Persian,1,0.01,0.04,21.5,Weak
+Scotland,Pie,1,0.01,0.02,49.9,Weak
+Scotland,Plus Offers Nov 2024,1,0.01,0.0,1078.8,Strong
+South East,Burgers,12600,14.25,10.93,130.3,Strong
+South East,Japanese,8856,10.01,8.95,111.9,Moderate
+South East,Italian,7968,9.01,8.85,101.8,Moderate
+South East,American,6782,7.67,5.66,135.5,Strong
+South East,Chicken,6190,7.0,5.91,118.3,Moderate
+South East,Vietnamese,4938,5.58,4.06,137.4,Strong
+South East,Indian,3239,3.66,6.88,53.3,Weak
+South East,British,2809,3.18,2.84,111.8,Moderate
+South East,Thai,2729,3.09,2.53,121.8,Strong
+South East,Chinese,2690,3.04,3.81,79.9,Weak
+South East,Portuguese,2677,3.03,3.09,97.9,Moderate
+South East,Healthy,2176,2.46,3.26,75.4,Weak
+South East,Asian,2142,2.42,3.42,70.9,Weak
+South East,Greek,1366,1.54,0.92,168.5,Strong
+South East,Café,1161,1.31,1.21,108.7,Moderate
+South East,Wings,1110,1.26,2.01,62.4,Weak
+South East,Turkish,957,1.08,1.1,98.7,Moderate
+South East,Dessert,933,1.05,1.03,102.2,Moderate
+South East,Halal,930,1.05,1.36,77.3,Weak
+South East,Breakfast,921,1.04,0.96,108.8,Moderate
+South East,Nachos,859,0.97,0.44,219.3,Strong
+South East,Middle Eastern,851,0.96,1.07,90.2,Moderate
+South East,German,841,0.95,0.87,109.6,Moderate
+South East,Bakery,732,0.83,1.37,60.4,Weak
+South East,Sandwiches,673,0.76,1.12,67.9,Weak
+South East,Noodles,609,0.69,0.27,251.2,Strong
+South East,Korean,576,0.65,0.81,80.1,Moderate
+South East,Popular Restaurants,537,0.61,0.15,414.4,Strong
+South East,Lebanese,496,0.56,0.81,69.4,Weak
+South East,Juices,437,0.49,0.86,57.4,Weak
+South East,Bubble Tea,419,0.47,0.43,110.4,Moderate
+South East,Mexican,405,0.46,0.5,92.1,Moderate
+South East,Coffee,382,0.43,0.44,97.2,Moderate
+South East,Stir Fry,368,0.42,0.18,231.5,Strong
+South East,Tacos,333,0.38,0.41,91.0,Moderate
+South East,Featured Restaurants,320,0.36,0.23,160.5,Strong
+South East,Vegetarian,276,0.31,0.35,89.0,Moderate
+South East,Meal Deals,256,0.29,0.44,66.4,Weak
+South East,Burritos,251,0.28,0.42,66.8,Weak
+South East,Vegan Friendly,247,0.28,0.74,37.6,Weak
+South East,Family Favourites,240,0.27,0.24,114.1,Moderate
+South East,Sichuan,234,0.26,0.07,402.3,Strong
+South East,Spicy Nuggets,224,0.25,0.07,385.1,Strong
+South East,Drinks,213,0.24,0.28,85.1,Moderate
+South East,Only On Deliveroo,216,0.24,0.15,163.9,Strong
+South East,New To Deliveroo,200,0.23,0.24,95.6,Moderate
+South East,Supermarket,199,0.23,0.11,210.1,Strong
+South East,Milkshakes,197,0.22,0.19,116.6,Moderate
+South East,Shopping,183,0.21,0.24,87.7,Moderate
+South East,Waffles,185,0.21,0.2,103.5,Moderate
+South East,Big Brand Stores,174,0.2,0.26,75.7,Weak
+South East,Gluten Free,157,0.18,0.22,81.8,Moderate
+South East,Meat,159,0.18,0.1,178.3,Strong
+South East,Mediterranean,146,0.17,0.42,39.3,Weak
+South East,Caribbean,138,0.16,0.39,40.2,Weak
+South East,Health Conscious,139,0.16,0.06,245.3,Strong
+South East,Bagels,130,0.15,0.36,40.7,Weak
+South East,Brunch,129,0.15,0.23,64.3,Weak
+South East,Nepalese,124,0.14,0.05,257.0,Strong
+South East,Street Food,125,0.14,0.04,320.4,Strong
+South East,Grill,119,0.13,0.16,85.6,Moderate
+South East,African,89,0.1,0.11,93.8,Moderate
+South East,Gyros,76,0.09,0.14,63.1,Weak
+South East,Cakes,67,0.08,0.09,80.6,Moderate
+South East,Kids Menu,70,0.08,0.03,255.2,Strong
+South East,Gelato,62,0.07,0.02,420.3,Strong
+South East,Nigerian,59,0.07,0.03,218.4,Strong
+South East,April Free Delivery Weekend,50,0.06,0.01,725.4,Strong
+South East,In-Store Prices – Selected Items,57,0.06,0.07,86.9,Moderate
+South East,Nfl Big Game Night,56,0.06,0.05,130.6,Strong
+South East,Pancakes,49,0.06,0.03,186.1,Strong
+South East,Steak,54,0.06,0.07,86.3,Moderate
+South East,Bbq,43,0.05,0.06,76.6,Weak
+South East,Cantonese,48,0.05,0.12,45.6,Weak
+South East,Falafel,42,0.05,0.02,272.0,Strong
+South East,French,48,0.05,0.06,85.3,Moderate
+South East,International,43,0.05,0.07,65.4,Weak
+South East,New Customer 20% Off Watford,46,0.05,0.02,320.9,Strong
+South East,"Exclusive Offers, From Our Exclusive Restaurants",38,0.04,0.02,187.5,Strong
+South East,Hardware & Maintenance,32,0.04,0.02,182.8,Strong
+South East,June Free Delivery Weekend,32,0.04,0.03,106.0,Moderate
+South East,Malaysian,37,0.04,0.06,72.2,Weak
+South East,Plus Offers September,33,0.04,0.01,374.1,Strong
+South East,Poke,37,0.04,0.14,29.5,Weak
+South East,Seafood,33,0.04,0.07,56.1,Weak
+South East,Western,34,0.04,0.02,168.9,Strong
+South East,Wraps,31,0.04,0.14,24.7,Weak
+South East,Chopstix Lny,29,0.03,0.0,701.3,Strong
+South East,Christmas Specials,24,0.03,0.06,44.2,Weak
+South East,Accessorize,16,0.02,0.01,150.7,Strong
+South East,Asian Fusion,20,0.02,0.11,20.3,Weak
+South East,Brazilian,16,0.02,0.05,34.9,Weak
+South East,Dim Sum,14,0.02,0.06,24.6,Weak
+South East,Fresh Food,18,0.02,0.0,544.1,Strong
+South East,Meal Deal,21,0.02,0.07,33.5,Weak
+South East,Pie,15,0.02,0.02,100.8,Moderate
+South East,Smoothie,18,0.02,0.01,310.9,Strong
+South East,Unilever Esports,22,0.02,0.01,215.7,Strong
+South East,14 Days Free Delivery,5,0.01,0.0,190.9,Strong
+South East,Argentinian,9,0.01,0.05,20.2,Weak
+South East,Bao,6,0.01,0.03,21.2,Weak
+South East,Belgian,7,0.01,0.0,317.4,Strong
+South East,Black Friday,8,0.01,0.01,135.0,Strong
+South East,Bowls,6,0.01,0.0,725.4,Strong
+South East,Coca Cola Zero Sugar Competition,9,0.01,0.04,25.6,Weak
+South East,Donuts,13,0.01,0.04,41.5,Weak
+South East,Doughnuts,8,0.01,0.0,207.3,Strong
+South East,Dumplings,12,0.01,0.05,29.9,Weak
+South East,Editions Bristol,13,0.01,0.0,523.9,Strong
+South East,Gifting,5,0.01,0.01,75.6,Weak
+South East,Great For Lunch,12,0.01,0.05,26.4,Weak
+South East,Halloween Rx 2022,7,0.01,0.0,211.6,Strong
+South East,Ice Cream,10,0.01,0.09,12.0,Weak
+South East,Jacket Potato,10,0.01,0.0,226.7,Strong
+South East,Moroccan,10,0.01,0.0,362.7,Strong
+South East,Poké,8,0.01,0.0,252.3,Strong
+South East,Polish,7,0.01,0.01,74.7,Weak
+South East,Shawarma,8,0.01,0.06,15.4,Weak
+South East,Shopping-Popular-Brands,7,0.01,0.0,188.1,Strong
+South East,Soup,8,0.01,0.01,66.7,Weak
+South East,Sweet Treats,9,0.01,0.03,39.1,Weak
+South East,Taiwanese,11,0.01,0.06,21.7,Weak
+South East,Takeaways,7,0.01,0.01,105.8,Moderate
+South East,Tip Match,7,0.01,0.01,86.1,Moderate
+South East,Vegan,9,0.01,0.11,9.0,Weak
+South East,7Mar Off,1,0.0,0.04,2.5,Weak
+South East,Afghan,2,0.0,0.02,10.1,Weak
+South East,Americain,3,0.0,0.0,362.7,Strong
+South East,Ann Summers Deliveroo Hop,2,0.0,0.0,120.9,Strong
+South East,Autumn Meal Deals,2,0.0,0.0,181.4,Strong
+South East,Bangladeshi,3,0.0,0.01,38.2,Weak
+South East,Boba,1,0.0,0.0,362.7,Strong
+South East,Deliveroo Students April Offers,3,0.0,0.0,725.4,Strong
+South East,Diwali 2024,3,0.0,0.0,725.4,Strong
+South East,Family Meal Deals,2,0.0,0.02,10.8,Weak
+South East,Festive Gifting,1,0.0,0.0,51.8,Weak
+South East,Filipino,1,0.0,0.01,10.1,Weak
+South East,French Tacos,1,0.0,0.0,33.0,Weak
+South East,Iranian,1,0.0,0.04,2.7,Weak
+South East,Katsu,4,0.0,0.0,483.6,Strong
+South East,Maplin Deliveroo Hop,4,0.0,0.0,414.5,Strong
+South East,Movie Night Restaurants,1,0.0,0.09,1.3,Weak
+South East,New To Roo,4,0.0,0.0,580.3,Strong
+South East,Organic,2,0.0,0.02,10.4,Weak
+South East,Pakistani,3,0.0,0.05,7.2,Weak
+South East,Persian,4,0.0,0.04,11.6,Weak
+South East,Pet Food,1,0.0,0.0,36.3,Weak
+South East,Quick Service Restaurants,4,0.0,0.03,14.0,Weak
+South East,Romanian,4,0.0,0.01,48.4,Weak
+South East,Wing Fest 2025,4,0.0,0.03,14.0,Weak
+South West,Japanese,1506,12.28,8.95,137.3,Strong
+South West,Vietnamese,1457,11.88,4.06,292.5,Strong
+South West,Italian,948,7.73,8.85,87.3,Moderate
+South West,Burgers,914,7.45,10.93,68.2,Weak
+South West,Thai,837,6.83,2.53,269.4,Strong
+South West,American,781,6.37,5.66,112.6,Moderate
+South West,Indian,652,5.32,6.88,77.3,Weak
+South West,Asian,535,4.36,3.42,127.7,Strong
+South West,British,524,4.27,2.84,150.4,Strong
+South West,Chicken,437,3.56,5.91,60.3,Weak
+South West,Greek,432,3.52,0.92,384.3,Strong
+South West,Chinese,370,3.02,3.81,79.2,Weak
+South West,Portuguese,338,2.76,3.09,89.1,Moderate
+South West,Wings,307,2.5,2.01,124.4,Strong
+South West,Healthy,241,1.97,3.26,60.3,Weak
+South West,Bakery,152,1.24,1.37,90.5,Moderate
+South West,Kids Menu,116,0.95,0.03,3049.8,Strong
+South West,Café,105,0.86,1.21,70.9,Weak
+South West,Gyros,98,0.8,0.14,586.7,Strong
+South West,Nachos,98,0.8,0.44,180.4,Strong
+South West,Featured Restaurants,91,0.74,0.23,329.3,Strong
+South West,Mexican,91,0.74,0.5,149.2,Strong
+South West,Dessert,77,0.63,1.03,60.8,Weak
+South West,Lebanese,71,0.58,0.81,71.7,Weak
+South West,Sandwiches,68,0.55,1.12,49.5,Weak
+South West,Halal,57,0.46,1.36,34.2,Weak
+South West,7Mar Off,55,0.45,0.04,1006.2,Strong
+South West,Waffles,54,0.44,0.2,217.8,Strong
+South West,German,50,0.41,0.87,47.0,Weak
+South West,Middle Eastern,50,0.41,1.07,38.2,Weak
+South West,Burritos,46,0.38,0.42,88.3,Moderate
+South West,Supermarket,46,0.38,0.11,350.3,Strong
+South West,Bubble Tea,42,0.34,0.43,79.8,Weak
+South West,Argentinian,41,0.33,0.05,662.1,Strong
+South West,Nfl Big Game Night,35,0.29,0.05,588.8,Strong
+South West,Pie,36,0.29,0.02,1744.0,Strong
+South West,Breakfast,33,0.27,0.96,28.1,Weak
+South West,Noodles,33,0.27,0.27,98.2,Moderate
+South West,Bao,29,0.24,0.03,740.1,Strong
+South West,Drinks,29,0.24,0.28,83.6,Moderate
+South West,Only On Deliveroo,28,0.23,0.15,153.2,Strong
+South West,Korean,23,0.19,0.81,23.1,Weak
+South West,Gluten Free,21,0.17,0.22,78.9,Weak
+South West,Street Food,21,0.17,0.04,388.2,Strong
+South West,Coffee,20,0.16,0.44,36.7,Weak
+South West,Jamaican,20,0.16,0.03,587.9,Strong
+South West,New To Deliveroo,20,0.16,0.24,68.9,Weak
+South West,Vegetarian,20,0.16,0.35,46.5,Weak
+South West,Milkshakes,19,0.15,0.19,81.1,Moderate
+South West,Restaurant Award Winners 2025,17,0.14,0.01,2541.3,Strong
+South West,Sri Lankan,15,0.12,0.02,632.9,Strong
+South West,Acai,13,0.11,0.08,141.1,Strong
+South West,Cantonese,13,0.11,0.12,89.1,Moderate
+South West,Caribbean,13,0.11,0.39,27.3,Weak
+South West,Grill,13,0.11,0.16,67.5,Weak
+South West,Nepalese,11,0.09,0.05,164.4,Strong
+South West,Big Brand Stores,10,0.08,0.26,31.4,Weak
+South West,Steak,8,0.07,0.07,92.2,Moderate
+South West,Pakistani,7,0.06,0.05,121.7,Strong
+South West,Bagels,6,0.05,0.36,13.6,Weak
+South West,Cakes,6,0.05,0.09,52.1,Weak
+South West,Great For Lunch,6,0.05,0.05,95.1,Moderate
+South West,Neapolitan,5,0.04,0.03,142.2,Strong
+South West,Coffee Week,4,0.03,0.0,4185.6,Strong
+South West,Family Favourites,4,0.03,0.24,13.7,Weak
+South West,Hawaiian,4,0.03,0.04,77.8,Weak
+South West,Tacos,4,0.03,0.41,7.9,Weak
+South West,Accessorize,2,0.02,0.01,135.9,Strong
+South West,Bag Great Savings On Your Groceries,2,0.02,0.0,2092.8,Strong
+South West,Nurofen And Nuromol,3,0.02,0.0,2242.3,Strong
+South West,Shopping,3,0.02,0.24,10.4,Weak
+South West,Spanish,3,0.02,0.02,148.1,Strong
+South West,Turkish,3,0.02,1.1,2.2,Weak
+South West,Vegan Friendly,2,0.02,0.74,2.2,Weak
+South West,Cold & Flu,1,0.01,0.0,1046.4,Strong
+South West,Consumer Electronics,1,0.01,0.0,1046.4,Strong
+South West,Falafel,1,0.01,0.02,46.7,Weak
+South West,Ice Cream,1,0.01,0.09,8.6,Weak
+South West,In-Store Prices – Selected Items,1,0.01,0.07,11.0,Weak
+South West,Juices,1,0.01,0.86,0.9,Weak
+South West,Mediterranean,1,0.01,0.42,1.9,Weak
+South West,Movie Night Snacks,1,0.01,0.0,1308.0,Strong
+South West,Nurofen And Lemsip,1,0.01,0.0,5232.0,Strong
+South West,Spicy Nuggets,1,0.01,0.07,12.4,Weak
+South West,Sweet Treats,1,0.01,0.03,31.3,Weak
+South West,Western,1,0.01,0.02,35.8,Weak
+Wales,Vietnamese,471,12.73,4.06,313.3,Strong
+Wales,Burgers,376,10.16,10.93,93.0,Moderate
+Wales,Japanese,364,9.84,8.95,109.9,Moderate
+Wales,American,335,9.05,5.66,160.0,Strong
+Wales,Italian,321,8.67,8.85,98.0,Moderate
+Wales,Chicken,283,7.65,5.91,129.3,Strong
+Wales,Wings,160,4.32,2.01,214.8,Strong
+Wales,Indian,143,3.86,6.88,56.2,Weak
+Wales,British,114,3.08,2.84,108.4,Moderate
+Wales,Halal,81,2.19,1.36,160.8,Strong
+Wales,Chinese,79,2.13,3.81,56.0,Weak
+Wales,Portuguese,79,2.13,3.09,69.0,Weak
+Wales,Thai,67,1.81,2.53,71.5,Weak
+Wales,Cantonese,62,1.68,0.12,1408.7,Strong
+Wales,Greek,57,1.54,0.92,168.0,Strong
+Wales,Dessert,44,1.19,1.03,115.2,Moderate
+Wales,Burritos,39,1.05,0.42,248.0,Strong
+Wales,German,39,1.05,0.87,121.5,Strong
+Wales,Stir Fry,37,1.0,0.18,556.3,Strong
+Wales,Middle Eastern,36,0.97,1.07,91.2,Moderate
+Wales,Argentinian,33,0.89,0.05,1765.7,Strong
+Wales,Health Conscious,33,0.89,0.06,1391.9,Strong
+Wales,Turkish,30,0.81,1.1,73.9,Weak
+Wales,Nachos,28,0.76,0.44,170.8,Strong
+Wales,Restaurants Only On Deliveroo,28,0.76,0.09,844.2,Strong
+Wales,African,26,0.7,0.11,655.1,Strong
+Wales,Tacos,24,0.65,0.41,156.7,Strong
+Wales,Sandwiches,22,0.59,1.12,53.0,Weak
+Wales,Healthy,20,0.54,3.26,16.6,Weak
+Wales,Noodles,18,0.49,0.27,177.4,Strong
+Wales,Fine Dining,16,0.43,0.0,17335.9,Strong
+Wales,Mexican,16,0.43,0.5,86.9,Moderate
+Wales,Only On Deliveroo,15,0.41,0.15,272.0,Strong
+Wales,Acai,12,0.32,0.08,431.6,Strong
+Wales,Drinks,12,0.32,0.28,114.6,Moderate
+Wales,Shopping,11,0.3,0.24,126.0,Strong
+Wales,Bakery,10,0.27,1.37,19.7,Weak
+Wales,Breakfast,10,0.27,0.96,28.2,Weak
+Wales,Gyros,9,0.24,0.14,178.5,Strong
+Wales,In-Store Prices – Selected Items,9,0.24,0.07,327.8,Strong
+Wales,Korean,9,0.24,0.81,29.9,Weak
+Wales,Ice Cream,8,0.22,0.09,228.5,Strong
+Wales,Juices,8,0.22,0.86,25.1,Weak
+Wales,Meal Deals,8,0.22,0.44,49.6,Weak
+Wales,New To Deliveroo,8,0.22,0.24,91.4,Moderate
+Wales,Mediterranean,7,0.19,0.42,45.0,Weak
+Wales,Waffles,7,0.19,0.2,93.6,Moderate
+Wales,Asian,6,0.16,3.42,4.7,Weak
+Wales,Caribbean,6,0.16,0.39,41.8,Weak
+Wales,Grill,6,0.16,0.16,103.2,Moderate
+Wales,Hong Kongese,6,0.16,0.0,3586.7,Strong
+Wales,Wraps,6,0.16,0.14,114.3,Moderate
+Wales,Cakes,5,0.14,0.09,143.7,Strong
+Wales,Coffee,5,0.14,0.44,30.4,Weak
+Wales,Meat,5,0.14,0.1,134.0,Strong
+Wales,Brunch,4,0.11,0.23,47.7,Weak
+Wales,Gluten Free,4,0.11,0.22,49.8,Weak
+Wales,Lebanese,4,0.11,0.81,13.4,Weak
+Wales,Vegan Friendly,4,0.11,0.74,14.5,Weak
+Wales,Western,3,0.08,0.02,356.2,Strong
+Wales,Bangladeshi,2,0.05,0.01,608.3,Strong
+Wales,Pancakes,2,0.05,0.03,181.5,Strong
+Wales,Roast,2,0.05,0.01,1050.7,Strong
+Wales,Steak,2,0.05,0.07,76.4,Weak
+Wales,Afghan,1,0.03,0.02,120.4,Strong
+Wales,Bubble Tea,1,0.03,0.43,6.3,Weak
+Wales,Café,1,0.03,1.21,2.2,Weak
+Wales,Milkshakes,1,0.03,0.19,14.1,Weak
+Wales,Plus Offers July,1,0.03,0.0,722.3,Strong

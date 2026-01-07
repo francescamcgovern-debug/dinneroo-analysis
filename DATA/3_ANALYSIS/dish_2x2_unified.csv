@@ -1,0 +1,101 @@
+dish_type,performance_score,opportunity_score,quadrant,unified_score
+Katsu,4.22,3.82,Priority,4.02
+Pho,4.39,3.6,Priority,3.99
+Curry,4.0,3.91,Priority,3.96
+Noodles,4.06,3.61,Priority,3.83
+Chicken Pie,5.0,2.41,Protect,3.7
+Pad Thai,4.39,2.91,Protect,3.65
+Rice Bowl,4.17,2.8,Protect,3.48
+Fried Rice,4.33,2.61,Protect,3.47
+Salad,3.33,3.58,Develop,3.45
+Pie,,3.42,Develop,3.42
+Sushi,3.78,2.98,Protect,3.38
+Soup,,3.3,Develop,3.3
+Thai Curry,,3.3,Develop,3.3
+Lasagne,3.0,3.61,Develop,3.3
+Shawarma,3.78,2.7,Protect,3.24
+Pasta,3.17,3.22,Develop,3.19
+Grilled Chicken,,3.18,Develop,3.18
+Fajitas,3.5,2.82,Protect,3.16
+Mac & Cheese,3.78,2.54,Protect,3.16
+Chilli,,3.11,Develop,3.11
+Tandoori,,3.09,Develop,3.09
+Bowl,4.0,2.18,Protect,3.09
+Daal,,3.08,Develop,3.08
+Tagine,,2.98,Monitor,2.98
+Tom Yum,,2.98,Monitor,2.98
+Pizza,2.33,3.54,Develop,2.93
+Paella,,2.91,Monitor,2.91
+Peking Duck,,2.91,Monitor,2.91
+Cous Cous,,2.89,Monitor,2.89
+Shakshuka,,2.89,Monitor,2.89
+Acai Bowl,,2.87,Monitor,2.87
+Stroganoff,,2.82,Monitor,2.82
+Grilled Chicken with Sides,3.0,2.59,Monitor,2.8
+Dolma,,2.78,Monitor,2.78
+Jacket Potato,,2.72,Monitor,2.72
+Banh Mi,,2.71,Monitor,2.71
+Moussaka,,2.71,Monitor,2.71
+Gyros,,2.71,Monitor,2.71
+Jollof Rice,,2.71,Monitor,2.71
+Spanakopita,,2.71,Monitor,2.71
+Enchiladas,,2.71,Monitor,2.71
+Suya,,2.71,Monitor,2.71
+Fish Tacos,,2.71,Monitor,2.71
+Lamb Kofta,,2.71,Monitor,2.71
+Nasi Goreng,,2.71,Monitor,2.71
+Japchae,,2.71,Monitor,2.71
+Bulgogi,,2.71,Monitor,2.71
+Biryani,3.0,2.41,Monitor,2.7
+Sweet & Sour Chicken,3.0,2.41,Monitor,2.7
+Risotto,,2.7,Monitor,2.7
+Jerk Chicken,,2.7,Monitor,2.7
+Filled Pasta,,2.7,Monitor,2.7
+Gnocchi,,2.7,Monitor,2.7
+Pulled Pork,,2.63,Monitor,2.63
+Tempura,,2.63,Monitor,2.63
+Casserole,,2.61,Monitor,2.61
+Plantain,,2.61,Monitor,2.61
+Rotisserie Chicken,,2.61,Monitor,2.61
+Curry Goat,,2.59,Monitor,2.59
+Oxtail,,2.59,Monitor,2.59
+Buddha Bowl,,2.58,Monitor,2.58
+Schnitzel,,2.54,Monitor,2.54
+Fish & Chips,,2.54,Monitor,2.54
+Sweet & Sour,,2.54,Monitor,2.54
+Poke Bowl,,2.47,Monitor,2.47
+Ramen,2.0,2.91,Monitor,2.46
+Bratwurst,,2.42,Monitor,2.42
+Pierogi,,2.42,Monitor,2.42
+Pasty,,2.42,Monitor,2.42
+Dim Sum,,2.41,Monitor,2.41
+Falafel,,2.39,Monitor,2.39
+Bibimbap,,2.39,Monitor,2.39
+Hummus Plate,,2.39,Monitor,2.39
+Hot Dog,,2.33,Monitor,2.33
+Butter Chicken,2.33,2.32,Monitor,2.32
+Souvlaki,,2.32,Monitor,2.32
+Teriyaki,2.33,2.32,Monitor,2.32
+Gyoza,,2.32,Monitor,2.32
+Tikka Masala,,2.32,Monitor,2.32
+Satay,,2.32,Monitor,2.32
+Udon,,2.32,Monitor,2.32
+Laksa,,2.3,Monitor,2.3
+Shepherd's Pie,2.0,2.61,Monitor,2.3
+Rendang,,2.3,Monitor,2.3
+Grain Bowl,2.0,2.58,Monitor,2.29
+Sandwich,,2.22,Monitor,2.22
+Korma,,2.22,Monitor,2.22
+Greek Mezze,,2.2,Monitor,2.2
+Korean Fried Chicken,2.0,2.34,Monitor,2.17
+Roast Dinner,2.0,2.32,Monitor,2.16
+Wings,,2.13,Monitor,2.13
+BBQ Ribs,,2.13,Monitor,2.13
+Cottage Pie,,2.11,Monitor,2.11
+Wrap,,2.11,Monitor,2.11
+Burrito,,2.11,Monitor,2.11
+Veggie Fajitas,2.0,2.2,Monitor,2.1
+Halloumi Wrap,2.0,2.11,Monitor,2.05
+Baked Pasta,,2.04,Monitor,2.04
+Bangers & Mash,,2.04,Monitor,2.04
+Stir Fry,1.67,2.39,Monitor,2.03

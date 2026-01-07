@@ -1,0 +1,760 @@
+partner,dinneroo_orders,unique_customers,avg_order_value,current_zones,orders_per_zone,expansion_potential
+Dishoom - Editions - BLW,1133,796,33.437263901147396,1,1133.0,High
+Dishoom - Editions - ISL,1094,784,36.47604204753199,1,1094.0,High
+Dishoom - Editions - CRE,882,603,35.18502267573696,1,882.0,High
+Dishoom - Editions - BCP,832,598,36.7294110576923,1,832.0,High
+Dishoom - Editions - ACT,711,500,35.911645569620255,1,711.0,High
+Dishoom - Editions - WME,706,535,34.577365439093484,1,706.0,High
+Dishoom - Editions - WNW,685,481,35.56846715328467,1,685.0,High
+Dishoom - Editions - BER,680,480,33.12511764705882,1,680.0,High
+Dishoom - Editions - DUL,675,494,36.46048888888889,1,675.0,High
+Pho - Bristol,659,498,30.911699544764797,1,659.0,High
+Dishoom - Editions - SWC,652,480,36.490598159509204,1,652.0,High
+Dishoom - Editions - BRC,623,435,34.52012841091493,1,623.0,High
+Pho - Editions - CRE,617,452,30.484116693679095,1,617.0,High
+Pho - Editions - DUL,564,398,31.057251773049646,1,564.0,High
+Pho - Brighton,557,417,31.107486535008974,1,557.0,High
+"3113003 - Banana Tree Thai, Vietnamese, Vegan - Battersea",549,401,28.260582877959926,1,549.0,High
+Pho - Greenwich,510,354,29.8861568627451,1,510.0,High
+Pho - Canary Wharf,484,368,29.185330578512396,1,484.0,High
+Pho - Cambridge,460,290,31.016217391304345,1,460.0,High
+Pho - Norwich,445,296,29.23408988764045,1,445.0,High
+"3113002 - Banana Tree Thai, Vietnamese, Vegan - West Hampstead",437,338,27.52192219679634,1,437.0,High
+"3113007 - Banana Tree Thai, Vietnamese, Vegan - Milton Keynes The Hub",422,286,28.46559241706161,1,422.0,High
+Pho - Reading,403,297,29.8460794044665,1,403.0,High
+Farmer J - Hammersmith,397,290,30.480554156171287,1,397.0,High
+Pho - Kingston,396,300,30.899368686868687,1,396.0,High
+"3113008 - Banana Tree Thai, Vietnamese, Vegan - Oxford",393,279,27.705114503816795,1,393.0,High
+Pho - Editions - BRC,392,275,29.955102040816325,1,392.0,High
+Pho - Chiswick,386,285,31.322772020725388,1,386.0,High
+Pho - Birmingham - High Street Harborne,377,242,29.38816976127321,1,377.0,High
+Pho - Oxford,377,270,30.2015649867374,1,377.0,High
+Pho - Wimbledon,372,284,30.705860215053765,1,372.0,High
+"3113016 - Banana Tree Thai, Vietnamese, Vegan - Greenwich",370,260,28.21116216216216,1,370.0,High
+Pho - Ealing,362,251,30.81328729281768,1,362.0,High
+Pho - York,346,251,30.11878612716763,1,346.0,High
+Pho - Battersea,343,252,30.127405247813414,1,343.0,High
+Pho - Nottingham,330,240,30.175727272727272,1,330.0,High
+Pho - Milton Keynes,321,223,30.55165109034268,1,321.0,High
+"3113004 - Banana Tree Thai, Vietnamese, Vegan - Angel Islington",309,239,27.815177993527506,1,309.0,High
+Kricket - London Fields,307,272,32.86332247557004,1,307.0,High
+Wagamama - Croydon - 143,297,239,35.02390572390573,1,297.0,High
+Pho - Lothian Road,291,212,29.6513058419244,1,291.0,High
+Pho - Islington,290,238,29.457379310344827,1,290.0,High
+Pho - Fulham Broadway,287,229,29.44731707317073,1,287.0,High
+Pho - Cardiff,284,202,30.776725352112678,1,284.0,High
+Pho - Stratford,284,230,30.551901408450703,1,284.0,High
+Giggling Squid - Cambridge,274,203,31.50379562043796,1,274.0,High
+Giggling Squid - Wimbledon,273,236,31.031465201465203,1,273.0,High
+"3113009 - Banana Tree Thai, Vietnamese, Vegan - Chelmsford",272,197,29.873161764705884,1,272.0,High
+Wagamama - Wimbledon - 134,272,215,34.194301470588236,1,272.0,High
+Pho - Sheffield,271,201,29.144206642066422,1,271.0,High
+Wagamama - Finchley Great North Leisure Park - 194,269,203,35.05921933085502,1,269.0,High
+Farmer J - St James's Park,268,176,30.129701492537315,1,268.0,High
+Pho - Baker Street,268,198,30.34597014925373,1,268.0,High
+Pho - Bournemouth,262,196,30.119160305343513,1,262.0,High
+Wagamama - Forest Hill Delivery Kitchen - 607,262,211,32.69328244274809,1,262.0,High
+Wagamama - Bournemouth - 151,261,211,34.5144061302682,1,261.0,High
+Pho - Glasgow,258,173,30.745620155038758,1,258.0,High
+Wagamama - Ealing - 186,258,197,34.88015503875969,1,258.0,High
+Wagamama - Basingstoke - 129,256,198,34.66640625,1,256.0,High
+Wagamama - Reading - 130,253,206,34.34826086956522,1,253.0,High
+"3113001 - Banana Tree Thai, Vietnamese, Vegan - Maida Vale",252,202,25.398888888888887,1,252.0,High
+Pho - Guildford,252,189,30.867142857142856,1,252.0,High
+Wagamama - Bromley - 232,251,199,36.87816733067729,1,251.0,High
+"3113015 - Banana Tree Thai, Vietnamese, Vegan - Birmingham Bullring",250,188,26.436239999999998,1,250.0,High
+3113019 - Banana Tree Thai - Vietnamese - Vegan - Salford Quays,247,192,26.42599190283401,1,247.0,High
+Wagamama - Uxbridge - 217,241,206,36.11298755186722,1,241.0,High
+Wagamama - Enfield Southbury Leisure Park - 263,240,194,37.2155,1,240.0,High
+Cacciari's Piadineria & Restaurant,237,183,34.36286919831224,1,237.0,High
+Wagamama - Romford - 271,232,174,37.333103448275864,1,232.0,High
+Giggling Squid - Chislehurst,227,196,35.07678414096917,1,227.0,High
+Pho - Borough,225,165,30.63382222222222,1,225.0,High
+Pho - Spitalfields,225,168,30.632844444444444,1,225.0,High
+Wagamama - Guildford - 120,222,182,36.14599099099099,1,222.0,High
+Wagamama - Camberley - 171,221,179,39.01710407239819,1,221.0,High
+Wagamama - Bracknell - 243,220,180,38.29600000000001,1,220.0,High
+Kricket - Brixton,214,201,33.13714953271028,1,214.0,High
+Cocotte - South Kensington,211,158,30.195023696682462,1,211.0,High
+Ting Thai Lothian Road,209,172,32.15023923444976,1,209.0,High
+Wagamama - Brighton Central - 132,207,180,33.86719806763285,1,207.0,High
+Wagamama - Kingston - 110,206,176,35.505582524271844,1,206.0,High
+Chaska,202,165,32.723861386138616,1,202.0,High
+Wagamama - Westfield Stratford - 178,202,156,32.57886138613861,1,202.0,High
+Bill's Baker Street,100,70,30.8121,1,100.0,Low
+Asia Villa - Wood Green,98,79,31.15969387755102,1,98.0,Low
+Xian Street Food - Dublin,98,91,37.653775510204085,1,98.0,Low
+Giggling Squid - Chichester,97,79,32.22515463917526,1,97.0,Low
+Giggling Squid - West Bridgford,96,83,30.231145833333333,1,96.0,Low
+Kricket - Canary Wharf,96,95,31.2578125,1,96.0,Low
+2341 - Greenwich - Church Street - PizzaExpress,95,74,29.87378947368421,1,95.0,Low
+Giggling Squid - Tunbridge Wells,95,81,34.04,1,95.0,Low
+0541 - Colchester - St Runwald Street - PizzaExpress,94,70,32.6213829787234,1,94.0,Low
+Giggling Squid - Berkhamsted,93,69,32.13881720430108,1,93.0,Low
+itsu - Guildford,93,79,31.306559139784945,1,93.0,Low
+itsu Trafford Centre,93,72,31.498494623655915,1,93.0,Low
+Bill's Horsham - HOR,92,71,35.673478260869565,1,92.0,Low
+Giggling Squid - Beaconsfield,91,75,34.2434065934066,1,91.0,Low
+Giggling Squid - Oxford,91,82,30.66384615384615,1,91.0,Low
+Wagamama - Bristol Cabot Circus - 200,91,81,33.62538461538461,1,91.0,Low
+Wagamama - Bristol Cribbs Causeway - 198,91,66,33.55263736263736,1,91.0,Low
+Pho - Covent Garden,90,80,29.622888888888887,1,90.0,Low
+Wagamama - Nottingham West Bridgford - 265,90,73,38.593333333333334,1,90.0,Low
+Bill's Reigate - REI,89,80,33.849213483146066,1,89.0,Low
+Cocotte - Richmond,87,76,31.447471264367813,1,87.0,Low
+Dhoom by chaska,86,72,32.42267441860465,1,86.0,Low
+Wagamama - Cardiff Library - 165,86,77,35.072558139534884,1,86.0,Low
+Wagamama - Cheltenham - 242,86,73,37.15802325581396,1,86.0,Low
+itsu - Milton Keynes,86,66,29.198953488372094,1,86.0,Low
+Bill's Milton Keynes,84,70,30.920119047619046,1,84.0,Low
+6110911 - Bella Italia Pizza & Pasta - Southampton Hanover,83,61,27.75361445783133,1,83.0,Low
+3259 - Reading - Oracle Shopping Centre - PizzaExpress,81,67,31.794938271604938,1,81.0,Low
+Jakob's Kitchen - Editions - ACT,81,70,28.302098765432095,1,81.0,Low
+Wagamama - Birmingham New Street - 218,81,65,35.49358024691358,1,81.0,Low
+Wagamama - Paddington - 266,81,60,33.873456790123456,1,81.0,Low
+Bill's Newbury - NWB,80,65,35.87425,1,80.0,Low
+Wagamama - Old Street - 252,80,66,32.483125,1,80.0,Low
+itsu - Richmond George Street,80,61,29.01125,1,80.0,Low
+9112050 - Las Iguanas - Basingstoke,79,63,30.94645569620253,1,79.0,Low
+Bill's Canterbury - CAN,79,50,30.214303797468354,1,79.0,Low
+Farmer J - Finsbury,79,69,32.72202531645569,1,79.0,Low
+Giggling Squid - Reigate,79,72,36.01974683544304,1,79.0,Low
+Wagamama - Glasgow Silverburn - 155,79,57,35.432784810126584,1,79.0,Low
+9221110 - Las Iguanas - Brighton,78,68,29.633589743589745,1,78.0,Low
+Asia Villa - Borough High Street,78,65,33.30717948717949,1,78.0,Low
+Asia Villa - Romford,78,68,33.350641025641025,1,78.0,Low
+Wagamama - Manchester Media City - 181,78,74,34.19166666666666,1,78.0,Low
+itsu - Edinburgh,77,71,29.8587012987013,1,77.0,Low
+itsu - Wimbledon Bridge House,77,61,30.560389610389613,1,77.0,Low
+Bill's London Bridge,76,61,30.968947368421052,1,76.0,Low
+Wagamama - Wigmore Street - 104,76,59,33.203421052631576,1,76.0,Low
+"3113018 - Banana Tree Thai, Vietnamese, Vegan - Henley",75,59,29.623333333333335,1,75.0,Low
+Giggling Squid - Leeds,75,68,29.53,1,75.0,Low
+Wagamama - Milton Keynes City Centre - 138,75,65,35.123733333333334,1,75.0,Low
+itsu - Leeds Commercial Street,75,66,30.3224,1,75.0,Low
+Bill's Hammersmith - SBU,74,57,30.51702702702703,1,74.0,Low
+Jakob's Kitchen - Editions - WHI,74,61,28.8104054054054,1,74.0,Low
+Wagamama - Braintree Village - 273,74,61,35.7472972972973,1,74.0,Low
+9221240 - Las Iguanas - Reading Oracle,73,64,31.419589041095893,1,73.0,Low
+Giggling Squid - Henley,73,68,34.03698630136986,1,73.0,Low
+Saravana Bhavan - Ilford,73,61,32.59164383561644,1,73.0,Low
+Wagamama - Portsmouth Gunwharf Quays - 169,73,64,33.97547945205479,1,73.0,Low
+Wagamama - Winchester - 223,73,61,35.219589041095894,1,73.0,Low
+itsu - Stratford,73,65,29.86876712328767,1,73.0,Low
+2831 - Romford - The Brewery Shopping Centre - PizzaExpress,71,47,32.940563380281695,1,71.0,Low
+3409 - Bracknell - The Lexicon Shopping - PizzaExpress Centre,71,62,36.08718309859155,1,71.0,Low
+Wagamama - Bletchley - 254,70,65,35.367,1,70.0,Low
+itsu - Hampstead,70,63,28.832428571428572,1,70.0,Low
+9221170 - Las Iguanas - Milton Keynes The Hub,69,52,30.931594202898555,1,69.0,Low
+9221690 - Las Iguanas - Bracknell,69,56,33.11449275362319,1,69.0,Low
+Giggling Squid - Windsor,69,54,31.144347826086957,1,69.0,Low
+Wagamama - Fulham Broadway - 187,69,58,36.876666666666665,1,69.0,Low
+itsu - Kingston Clarence Street,68,57,31.33764705882353,1,68.0,Low
+8103399 - Bella Italia Pizza & Pasta - Cambridge Leisure,67,46,29.500149253731344,1,67.0,Low
+9114060 - Bella Italia - Croydon,67,49,28.769701492537312,1,67.0,Low
+Bill's Nottingham - NTG,67,55,32.7544776119403,1,67.0,Low
+Wagamama - Chichester - 202,67,61,34.579850746268654,1,67.0,Low
+Wagamama - Kensington - 106,67,61,33.42044776119403,1,67.0,Low
+Wagamama - Milton Keynes Xscape - 203,67,57,34.888208955223874,1,67.0,Low
+0931 - Dulwich - Village - PizzaExpress,66,51,32.445151515151515,1,66.0,Low
+2551 - Wimbledon - The Broadway - PizzaExpress,66,52,30.7,1,66.0,Low
+Bill's Bluewater,66,51,33.130606060606056,1,66.0,Low
+0551 - Guildford - High Street - PizzaExpress,65,51,31.584,1,65.0,Low
+1241 - Muswell Hill - Broadway - PizzaExpress,65,51,31.79015384615385,1,65.0,Low
+itsu - The Glades,65,56,30.902461538461537,1,65.0,Low
+0811 - Southgate - Chaseside - PizzaExpress,64,53,32.69953125,1,64.0,Low
+1611 - Horsham - East Street - PizzaExpress,64,49,33.93546875,1,64.0,Low
+Bill's Richmond - RIC2,64,55,35.80828125,1,64.0,Low
+Bill's Westfield - SBU,64,53,30.41046875,1,64.0,Low
+Wagamama - Liverpool One - 163,64,59,36.11515625,1,64.0,Low
+Giggling Squid - York,63,54,34.603809523809524,1,63.0,Low
+Wagamama - Dublin Dundrum - 301,63,57,40.07857142857143,1,63.0,Low
+itsu - Brixton,63,57,30.576190476190476,1,63.0,Low
+itsu - Oxford Westgate,63,45,29.92222222222222,1,63.0,Low
+0251 - Oxford - Golden Cross - PizzaExpress,62,46,31.09741935483871,1,62.0,Low
+1051 - Wokingham - Broad Street - PizzaExpress,62,51,35.72741935483871,1,62.0,Low
+1651 - Sidcup - Elm Parade Shopping Centre - PizzaExpress,62,39,30.66548387096774,1,62.0,Low
+itsu - Ealing Broadway,62,50,32.09645161290322,1,62.0,Low
+0341 - Beckenham - High Street - PizzaExpress,61,43,30.622459016393442,1,61.0,Low
+0671 - Ealing - Bond Street - PizzaExpress,61,49,32.38655737704918,1,61.0,Low
+9015270 - Bella Italia Pizza & Pasta - Reading Oracle,61,55,27.927540983606555,1,61.0,Low
+9221290 - Las Iguanas - Cambridge Quayside,61,43,30.534754098360654,1,61.0,Low
+9221700 - Las Iguanas - Watford,61,54,34.15655737704918,1,61.0,Low
+1891 - Didsbury - Lapwing Lane - PizzaExpress,60,46,28.374333333333333,1,60.0,Low
+Wagamama - Norwich Chapel Field - 140,60,50,34.859500000000004,1,60.0,Low
+3339 - Basingstoke - Festival Place Shopping Centre - PizzaExpress,59,50,34.75322033898305,1,59.0,Low
+5180 - Dublin - Dundrum Shopping Centre - Milano,58,45,37.62155172413794,1,58.0,Low
+KOKORO Harrow,57,53,31.961228070175437,1,57.0,Low
+0271 - South Woodford - High Road - PizzaExpress,56,54,31.711071428571426,1,56.0,Low
+3475 - Cheltenham - Brewery Quarter - PizzaExpress,56,45,29.925714285714285,1,56.0,Low
+ASIA VILLA - St John Street,56,50,29.604107142857142,1,56.0,Low
+8108200 - Bella Italia Pizza & Pasta - Brighton Market Street,55,45,30.382545454545454,1,55.0,Low
+Bill's Windsor - WIN,55,46,32.649454545454546,1,55.0,Low
+Wagamama - Cardiff Mermaid Quay - 160,55,40,34.30654545454545,1,55.0,Low
+itsu - Westfield White City,55,43,30.646,1,55.0,Low
+1351 - Watford - High Street - PizzaExpress,54,52,31.37314814814815,1,54.0,Low
+1381 - Woking - Goldsworth Road - PizzaExpress,54,42,31.450740740740738,1,54.0,Low
+8108411 - Bella Italia Pizza & Pasta - Norwich Red Lion Street,54,31,24.69703703703704,1,54.0,Low
+Bill's Bullring,54,48,33.827222222222225,1,54.0,Low
+Tadka House - Rathmines,54,46,35.91462962962963,1,54.0,Low
+itsu - Woking Mercia Walk,54,48,32.42296296296296,1,54.0,Low
+Bill's Tunbridge Wells - RTW,53,42,33.57471698113208,1,53.0,Low
+Farmer J - Russell Square,53,38,29.597169811320754,1,53.0,Low
+Wagamama - Leeds Trinity - 196,53,51,31.79,1,53.0,Low
+1441 - Windsor - Thames Street - PizzaExpress,52,40,32.16519230769231,1,52.0,Low
+3240 - Milton Keynes - Centre MK - PizzaExpress,52,34,33.80442307692307,1,52.0,Low
+Giggling Squid - Leamington Spa,52,42,30.192884615384614,1,52.0,Low
+Giggling Squid - Winchester,52,41,32.949038461538464,1,52.0,Low
+Shaku Maku,52,47,40.52153846153846,1,52.0,Low
+0231 - Highgate - High Street - PizzaExpress,51,40,28.906666666666666,1,51.0,Low
+0411 - Camberley - Park Street - PizzaExpress,51,40,33.62392156862745,1,51.0,Low
+0461 - Canterbury - Best Lane - PizzaExpress,51,37,30.946666666666665,1,51.0,Low
+1761 - Godalming - High Street - PizzaExpress,51,30,35.66294117647059,1,51.0,Low
+3354 - Aldershot - Westgate Retail Park - PizzaExpress,51,47,33.23764705882353,1,51.0,Low
+3359 - Croydon - George Street - PizzaExpress,51,37,30.698627450980393,1,51.0,Low
+5160 - Dublin - Clarion Quay - Milano,51,41,34.56470588235294,1,51.0,Low
+9221120 - Las Iguanas - Bristol Harbourside,51,45,31.129019607843137,1,51.0,Low
+9221131 - Las Iguanas - Ealing,51,48,32.111372549019606,1,51.0,Low
+9221380 - Las Iguanas - Glasgow Nile Street,51,45,28.929019607843138,1,51.0,Low
+Bill's York - YOR,51,45,34.410000000000004,1,51.0,Low
+0531 - Twickenham - York Street - PizzaExpress,50,42,32.6474,1,50.0,Low
+8108255 - Bella Italia Pizza & Pasta - South Kensington,50,34,26.235,1,50.0,Low
+Wagamama - Manchester St Peter's Square - 239,50,49,31.7866,1,50.0,Low
+5120 - Dublin - Temple Bar - Milano,49,45,36.45183673469388,1,49.0,Low
+Wagamama - Glasgow City Centre - 123,49,43,36.395918367346944,1,49.0,Low
+Wagamama - St Pauls - 235,49,36,33.373877551020406,1,49.0,Low
+Wagamama - Dublin Liffey valley - 300,48,39,38.683749999999996,1,48.0,Low
+itsu - Bristol Cribbs Causeway,48,39,29.98875,1,48.0,Low
+0391 - Basingstoke - Winchester Road - PizzaExpress,47,36,31.45787234042553,1,47.0,Low
+0441 - Nottingham - King Street - PizzaExpress,47,44,29.80276595744681,1,47.0,Low
+1281 - St Albans - Verulam Road - PizzaExpress,47,32,30.572340425531916,1,47.0,Low
+1951 - Hove - Church Road - PizzaExpress,47,35,32.91914893617022,1,47.0,Low
+3342 - Surbition - St Marks Hill - PizzaExpress,47,36,30.452340425531915,1,47.0,Low
+8114644 - Bella Italia Pizza & Pasta - Nottingham Cornerhouse,47,38,29.157021276595746,1,47.0,Low
+itsu - Putney High Street,47,38,33.87404255319149,1,47.0,Low
+1061 - Bexleyheath - Broadway - PizzaExpress,46,35,31.68826086956522,1,46.0,Low
+1271 - Ruislip - High Street - PizzaExpress,46,33,31.816086956521737,1,46.0,Low
+2881 - Cambridge - Regent Street - PizzaExpress,46,38,32.46108695652174,1,46.0,Low
+9221650 - Las Iguanas - Chelmsford,46,39,33.04978260869565,1,46.0,Low
+9221770 - Las Iguanas - Southampton West Quay,46,41,35.54760869565217,1,46.0,Low
+Bill's Victoria - VWP,46,38,30.169999999999998,1,46.0,Low
+Wagamama - Crawley - 264,46,42,34.161521739130436,1,46.0,Low
+Wagamama - Edinburgh St Andrew Square - 238,46,42,29.82282608695652,1,46.0,Low
+0601 - Walton on Thames - New Zealand Avenue - PizzaExpress,45,30,33.466,1,45.0,Low
+1113111 - Bella Italia Pizza & Pasta - Birmingham New Street,45,30,26.17488888888889,1,45.0,Low
+1291 - Shepherds Bush - Rockley Road - PizzaExpress,45,39,29.746222222222222,1,45.0,Low
+3353 - Poole - Tower Park - PizzaExpress,45,36,33.086666666666666,1,45.0,Low
+8106630 - Bella Italia Pizza & Pasta - Wellington Street,45,41,27.68488888888889,1,45.0,Low
+SoYo,45,37,32.954,1,45.0,Low
+itsu - Islington Angel Central,45,34,31.46333333333333,1,45.0,Low
+1091 - Barnet - High Street - PizzaExpress,44,31,32.6175,1,44.0,Low
+1113177 - Bella Italia Pizza & Pasta - Oxford George Street,44,35,28.414545454545454,1,44.0,Low
+1471 - St Johns Wood - Abbey Road - PizzaExpress,44,36,30.60181818181818,1,44.0,Low
+3477 - PizzaExpress - Brighton Jubilee Street,44,31,30.93431818181818,1,44.0,Low
+9013654 - Bella Italia Pizza & Pasta - Glasgow Sauchiehall Street,44,36,25.41772727272727,1,44.0,Low
+Wagamama - Liverpool Speke - 246,44,35,38.7575,1,44.0,Low
+0641 - Chelmsford - Moulsham Street - PizzaExpress,43,40,33.413953488372094,1,43.0,Low
+1861 - Harpenden - High Street - PizzaExpress,43,28,31.188372093023254,1,43.0,Low
+8106500 - Bella Italia Pizza & Pasta - Salford Quays,43,35,27.278837209302324,1,43.0,Low
+9221080 - Las Iguanas - Nottingham Chapel Quarter,43,28,28.81372093023256,1,43.0,Low
+Remedy Kitchen - Haverstock Hill,43,32,29.673953488372092,1,43.0,Low
+Tula Mexican - Lower Baggot Street,43,34,35.27511627906976,1,43.0,Low
+1181 - London - Islington - PizzaExpress,42,33,31.68595238095238,1,42.0,Low
+3465 - Eltham - High Street - PizzaExpress,42,33,32.388333333333335,1,42.0,Low
+Bill's Bath,42,36,35.0247619047619,1,42.0,Low
+Wagamama - Victoria - 139,42,34,35.63214285714285,1,42.0,Low
+1541 - Tonbridge - High Street - PizzaExpress,41,34,35.818536585365855,1,41.0,Low
+3351 - Edinburgh - Morningside - PizzaExpress,41,31,32.07073170731707,1,41.0,Low
+3405 - Milton Keynes - MK1 Leisure Park - PizzaExpress,41,34,33.44243902439024,1,41.0,Low
+3476 - PizzaExpress - Hackney Mare Street,41,37,31.077317073170732,1,41.0,Low
+8108366 - Bella Italia Pizza & Pasta - Queensway 55,41,41,29.720243902439023,1,41.0,Low
+Bill's Trafford - ECC,41,37,36.00878048780488,1,41.0,Low
+itsu - Camden High Street 191,41,38,31.03341463414634,1,41.0,Low
+KOKORO - Tooting,40,40,30.584750000000003,1,40.0,Low
+Zambrero - Eastcheap,40,35,31.478249999999996,1,40.0,Low
+0241 - Fulham - 895 Fulham Road - PizzaExpress,39,33,29.382564102564103,1,39.0,Low
+3321 - Headingly - Ottley Road - PizzaExpress,39,31,32.734358974358976,1,39.0,Low
+3322 - Gerrards Cross - Packhorse Road - PizzaExpress,39,26,31.130256410256408,1,39.0,Low
+3458 - The Plaza - Bluewater Shopping Centre - PizzaExpress,39,32,33.988461538461536,1,39.0,Low
+9112070 - Las Iguanas - York Swinegate,39,35,30.392307692307693,1,39.0,Low
+Bill's Braintree - BRT,39,32,33.183846153846154,1,39.0,Low
+Bill's Leeds - LC,39,34,34.39897435897436,1,39.0,Low
+Soyo - Edgware,39,31,36.92974358974359,1,39.0,Low
+Zumuku - Editions - SAL,39,33,32.35333333333333,1,39.0,Low
+0711 - Leamington Spa - The Parade - PizzaExpress,38,29,33.124736842105264,1,38.0,Low
+3457 - Sutton - High Street - PizzaExpress,38,29,29.81578947368421,1,38.0,Low
+9221350 - Las Iguanas - Wembley,38,32,27.359210526315792,1,38.0,Low
+Bill's Chelmsford - CLM,38,34,34.6371052631579,1,38.0,Low
+Giggling Squid - Warwick,38,35,31.24,1,38.0,Low
+Wagamama - Tower Place - 122,38,30,32.82394736842105,1,38.0,Low
+itsu – Oxford Street,38,25,31.516315789473687,1,38.0,Low
+0651 - Belsize Park - Haverstock Hill - PizzaExpress,37,28,29.56621621621622,1,37.0,Low
+2311 - Harborne - High Street - PizzaExpress,37,34,31.486216216216217,1,37.0,Low
+2901 - Norwich - Forum Events Centre - PizzaExpress,37,31,34.204054054054055,1,37.0,Low
+9111030 - Bella Italia Pizza & Pasta - Bluewater,37,30,30.146486486486488,1,37.0,Low
+9221090 - Las Iguanas - Leeds Cloth Hall,37,33,32.41459459459459,1,37.0,Low
+Giggling Squid - Cardiff Bay,37,29,29.69108108108108,1,37.0,Low
+0191 - Clapham - Lavender Hill - PizzaExpress,36,28,27.24361111111111,1,36.0,Low
+0741 - Tunbridge Wells - High Street - PizzaExpress,36,27,34.63472222222222,1,36.0,Low
+0771 - Farnham - Castle Street - PizzaExpress,36,35,35.326388888888886,1,36.0,Low
+1411 - Putney - Upper Richmond Road - PizzaExpress,36,35,31.035555555555554,1,36.0,Low
+1821 - London - Tower Bridge - PizzaExpress,36,32,32.471666666666664,1,36.0,Low
+2811 - Worcester Park - Central Road - PizzaExpress,36,29,34.15694444444444,1,36.0,Low
+3236 - West Bridgford - Bridgford Road - PizzaExpress,36,31,30.2225,1,36.0,Low
+3335 - London - Brent Cross Shopping Centre - PizzaExpress,36,32,31.908055555555556,1,36.0,Low
+Kokoro Colchester,36,29,33.900000000000006,1,36.0,Low
+Ting Thai - West Nile Street,36,33,31.193333333333335,1,36.0,Low
+1231 - Mill Hill - The Broadway - PizzaExpress,35,32,30.135428571428573,1,35.0,Low
+1431 - Wandsworth - Trinity Road - PizzaExpress,35,26,31.558,1,35.0,Low
+2011 - London - Kennington Road - PizzaExpress,35,31,30.801142857142857,1,35.0,Low
+2601 - Newbury - Market Place - PizzaExpress,35,25,34.234,1,35.0,Low
+4114633 - Bella Italia Pizza & Pasta - York Minster,35,26,27.153142857142857,1,35.0,Low
+Kokoro Sutton,35,32,34.05771428571428,1,35.0,Low
+1831 - London - Pimlico - PizzaExpress,34,26,28.80735294117647,1,34.0,Low
+2171 - Welwyn Garden City - Howardsgate - PizzaExpress,34,27,33.923529411764704,1,34.0,Low
+3415 - Bristol - Cabot Circus Shopping Centre - PizzaExpress,34,30,32.176764705882356,1,34.0,Low
+8108050 - Bella Italia Pizza & Pasta - Milton Keynes Stadium,34,29,28.84676470588235,1,34.0,Low
+LEON - Birmingham,34,27,27.62029411764706,1,34.0,Low
+1901 - Blackheath - Tranquil Vale - PizzaExpress,33,28,29.696666666666665,1,33.0,Low
+Wagamama - Birmingham Brindley Place - 179,33,31,35.516666666666666,1,33.0,Low
+Xian Street Food Ballyfermot,33,31,34.738181818181815,1,33.0,Low
+1401 - Chiswick - High Road - PizzaExpress,32,27,28.43,1,32.0,Low
+3229 - Balham - Bedford Hill - PizzaExpress,32,24,28.359375,1,32.0,Low
+9221390 - Las Iguanas - Leamington Spa,32,25,30.34875,1,32.0,Low
+LEON - Jubilee Place,32,30,28.67,1,32.0,Low
+LEON - Kingston,32,27,26.51625,1,32.0,Low
+1211 - Loughton - High Road - PizzaExpress,31,26,33.79032258064516,1,31.0,Low
+3456 - Bournemouth - BH2 Leisure - PizzaExpress,31,28,31.583548387096776,1,31.0,Low
+5191 - Dublin - Haddington Road - Milano,31,26,45.01870967741935,1,31.0,Low
+9111050 - Bella Italia Pizza & Pasta - Norwich Riverside,31,24,28.74225806451613,1,31.0,Low
+Bill's Eastbourne - EST,31,22,34.70258064516129,1,31.0,Low
+Remedy Kitchen - Editions - BSY,30,24,26.76033333333333,1,30.0,Low
+Saravana Bhavan - Southall,30,29,31.238,1,30.0,Low
+Wagamama - Sevenoaks - 206,30,29,39.744,1,30.0,Low
+0421 - Chichester - South Street - PizzaExpress,29,24,31.225517241379308,1,29.0,Low
+0591 - Reigate - High Street - PizzaExpress,29,24,34.62172413793103,1,29.0,Low
+3252 - Braehead - Xscape - PizzaExpress,29,20,32.05310344827586,1,29.0,Low
+3284 - Bristol - Harbourside - PizzaExpress,29,28,29.690344827586205,1,29.0,Low
+3370 - Wembley - Designer Outlet - PizzaExpress,29,25,31.312758620689653,1,29.0,Low
+3481 - Oxford – Summertown - PizzaExpress,29,23,33.654137931034484,1,29.0,Low
+LEON - Wimbledon,29,25,25.292758620689657,1,29.0,Low
+Zumuku Sushi Didsbury,29,26,39.78068965517242,1,29.0,Low
+0401 - Richmond - Red Lion Street - PizzaExpress,28,18,32.27107142857143,1,28.0,Low
+3452 - Stockport - Redrock - PizzaExpress,28,21,30.509642857142858,1,28.0,Low
+Giggling Squid - Bath,28,24,33.127500000000005,1,28.0,Low
+Wagamama - Merry Hill - 285,28,24,35.90642857142857,1,28.0,Low
+3389 - Harrow - St Georges Shopping Centre - PizzaExpress,27,25,30.283703703703704,1,27.0,Low
+8108344 - Bella Italia Pizza & Pasta - Milton Keynes 12th Street,27,20,30.965925925925927,1,27.0,Low
+9015460 - Bella Italia Pizza & Pasta - Bristol Abbeywood,27,26,26.52,1,27.0,Low
+Kokoro - Watford,27,25,34.45518518518519,1,27.0,Low
+0311 - Wimbledon - High Street - PizzaExpress,26,22,32.690384615384616,1,26.0,Low
+0631 - Norwich - St Benedict Street - PizzaExpress,26,25,32.994615384615386,1,26.0,Low
+1571 - Banstead - High Street - PizzaExpress,26,19,37.994615384615386,1,26.0,Low
+2211 - Hale - Ashley Road - PizzaExpress,26,23,30.39653846153846,1,26.0,Low
+2871 - Braintree - Designer Village - PizzaExpress,26,23,31.723846153846157,1,26.0,Low
+3281 - Fleet - Fleet Road - PizzaExpress,26,20,33.36038461538462,1,26.0,Low
+3365 - Christchurch - High Street - PizzaExpress,26,21,35.85076923076923,1,26.0,Low
+5112 - Dublin - Blanchardstown Shopping Centre - Milano,26,21,35.44576923076923,1,26.0,Low
+9221370 - Las Iguanas - Bristol Cribbs Causeway,26,22,32.51346153846154,1,26.0,Low
+Bill's Chichester - CHS,26,24,32.879615384615384,1,26.0,Low
+Giggling Squid - Portsmouth,26,23,31.375384615384615,1,26.0,Low
+LEON - Richmond,26,23,30.82730769230769,1,26.0,Low
+Saravana Bhavan - Harrow,26,25,33.629615384615384,1,26.0,Low
+itsu - City Road (2),26,22,29.93846153846154,1,26.0,Low
+9111040 - Bella Italia Pizza & Pasta - Portsmouth Gunwharf Quays,25,24,29.777199999999997,1,25.0,Low
+9221010 - Las Iguanas - Cardiff Mill Lane,25,19,31.014,1,25.0,Low
+9221180 - Las Iguanas - Lakeside,25,20,32.1108,1,25.0,Low
+Bill's Cardiff - CAR,25,20,31.687600000000003,1,25.0,Low
+LEON - Brighton,25,23,25.712799999999998,1,25.0,Low
+Remedy Kitchen - Editions - CAN,25,24,27.698800000000002,1,25.0,Low
+Wagamama - Leeds White Rose - 241,25,22,34.9816,1,25.0,Low
+Wagamama - Leeds the Springs - 296,25,22,32.894,1,25.0,Low
+itsu - Battersea,25,22,31.432399999999998,1,25.0,Low
+3376 - New Malden - High Street - PizzaExpress,24,20,30.0425,1,24.0,Low
+3400 - Cribbs Causeway - The Venue - PizzaExpress,24,23,31.581666666666667,1,24.0,Low
+5113 - Dublin - Liffey Valley Shopping Centre - Milano,24,22,40.37625,1,24.0,Low
+9221220 - Las Iguanas - Liverpool One,24,22,32.660833333333336,1,24.0,Low
+Iro Sushi Chingford,24,19,37.10333333333333,1,24.0,Low
+0351 - Bromley - Widmore Road - PizzaExpress,23,20,30.336521739130436,1,23.0,Low
+0381 - Bath - Theatre Royal - PizzaExpress,23,20,34.66347826086957,1,23.0,Low
+0751 - Hitchin - Market Place - PizzaExpress,23,19,33.24782608695652,1,23.0,Low
+3031 - Salford Quays - Designer Outlet - PizzaExpress,23,19,32.31391304347826,1,23.0,Low
+3233 - Hemel Hempstead - Riverside - PizzaExpress,23,20,29.399565217391306,1,23.0,Low
+3381 - Southampton - WestQuay Shopping Centre - PizzaExpress,23,20,33.006521739130434,1,23.0,Low
+3432 - Bromley - St Marks Square,23,16,31.80608695652174,1,23.0,Low
+9221250 - Las Iguanas - Cardiff Mermaid Quay,23,17,32.97695652173913,1,23.0,Low
+Bill's Covent Garden - WC,23,20,33.60913043478261,1,23.0,Low
+Iro Sushi - Lewisham,23,18,33.589999999999996,1,23.0,Low
+Iro Sushi - Purley,23,19,30.38086956521739,1,23.0,Low
+Wagamama - Glasgow St Enoch - 288,23,19,33.92086956521739,1,23.0,Low
+1141 - Epsom - South Street - PizzaExpress,22,21,36.38136363636364,1,22.0,Low
+2851 - London - Bishopsgate - PizzaExpress,22,21,30.640454545454546,1,22.0,Low
+3252 - Prezzo - Enfield,22,19,32.385,1,22.0,Low
+3308 - Prezzo - Hornchurch,22,19,29.53409090909091,1,22.0,Low
+9221040 - Las Iguanas - Birmingham Arcadian,22,22,23.656818181818185,1,22.0,Low
+9221140 - Las Iguanas - Manchester Trafford Centre,22,19,37.25954545454545,1,22.0,Low
+1081 - Camden - Parkway - PizzaExpress,21,18,31.316666666666666,1,21.0,Low
+1631 - Weybridge - Monument Hill - PizzaExpress,21,16,28.64761904761905,1,21.0,Low
+3204 - Kew - Station Approach - Pizza Express,21,18,32.495714285714286,1,21.0,Low
+3341 - Prezzo - Eastleigh,21,18,34.59190476190476,1,21.0,Low
+3427 - Croydon - Valley Leisure Park - PizzaExpress,21,15,30.14190476190476,1,21.0,Low
+3437 - London - Gloucester Road - PizzaExpress,21,13,29.775714285714283,1,21.0,Low
+3466 - Berkhamsted - High Street - PizzaExpress,21,17,33.27333333333333,1,21.0,Low
+5110 - Dublin - Dawson Street - Milano,21,18,46.24761904761905,1,21.0,Low
+5193 - Dublin - Dun Laoghaire - Milano,21,19,40.13095238095238,1,21.0,Low
+9221790 - Las Iguanas - Canterbury,21,14,28.796666666666667,1,21.0,Low
+Iro Sushi - Camden,21,14,28.685714285714283,1,21.0,Low
+Iro Sushi - Palmers Green,21,17,32.26428571428571,1,21.0,Low
+KOKORO Poole,21,19,32.010000000000005,1,21.0,Low
+LEON - Bluewater,21,20,26.23761904761905,1,21.0,Low
+LEON - Camden,21,21,24.583333333333332,1,21.0,Low
+PIZAZA - Hendon,21,21,50.317619047619054,1,21.0,Low
+itsu - Paternoster Square,21,15,29.35333333333333,1,21.0,Low
+0201 - Teddington - Waldegrave Road - PizzaExpress,20,19,28.813,1,20.0,Low
+0961 - Henley - Market Place - PizzaExpress,20,18,34.805,1,20.0,Low
+2131 - West Wickham - High Street - PizzaExpress,20,17,33.8555,1,20.0,Low
+2531 - Leeds - Street Lane - PizzaExpress,20,19,35.035000000000004,1,20.0,Low
+3228 - Prezzo - Reading,20,17,30.622000000000003,1,20.0,Low
+3248 - Esher - High Street - PizzaExpress,20,16,32.878,1,20.0,Low
+3320 - Brockwell Park - Herne Hill - PizzaExpress,20,20,33.707499999999996,1,20.0,Low
+Chaska Bites,20,20,31.232999999999997,1,20.0,Low
+Kokoro Epsom,20,19,34.567,1,20.0,Low
+Zambrero - Crouch End,20,19,36.5165,1,20.0,Low
+3323 - Prezzo - Stevenage,19,19,31.00315789473684,1,19.0,Low
+3647 - Prezzo - Farnborough,19,18,33.0878947368421,1,19.0,Low
+5113366 - Bella Italia Pizza & Pasta - Liverpool,19,18,28.132105263157893,1,19.0,Low
+9015470 - Bella Italia Pizza & Pasta - Taplow,19,18,28.121052631578944,1,19.0,Low
+9221190 - Las Iguanas - Portsmouth Gunwharf Quays,19,17,30.94157894736842,1,19.0,Low
+Farmer J - Holborn,19,15,30.057894736842105,1,19.0,Low
+Giggling Squid West Bridgford,19,19,30.747368421052634,1,19.0,Low
+Itsu - Bishopsgate Plaza,19,15,25.49736842105263,1,19.0,Low
+Kokoro - Redhill,19,16,31.49105263157895,1,19.0,Low
+itsu - Aldgate High Street 77,19,19,26.992631578947368,1,19.0,Low
+itsu - High St Kensington,19,19,35.997894736842106,1,19.0,Low
+0131 - Fulham - 363 Fulham Road - PizzaExpress,18,17,38.585,1,18.0,Low
+0571 - York - Museum Street - PizzaExpress,18,16,30.944444444444443,1,18.0,Low
+0621 - Stanmore - Broadway - PizzaExpress,18,15,32.29666666666667,1,18.0,Low
+1961 - Maidenhead - Bridge Street - PizzaExpress,18,17,30.233333333333334,1,18.0,Low
+2151 - Amersham - Sycamore Road - PizzaExpress,18,16,37.31444444444444,1,18.0,Low
+3220 - Warwick - Jury Street - PizzaExpress,18,15,31.641666666666666,1,18.0,Low
+9015490 - Bella Italia Pizza & Pasta - Dudley Castlegate,18,15,29.617222222222225,1,18.0,Low
+Iro Sushi - Croydon,18,14,29.137222222222224,1,18.0,Low
+Iro Sushi - Highgate,18,11,32.03388888888889,1,18.0,Low
+LEON - Canary Wharf,18,17,31.811111111111114,1,18.0,Low
+Wagamama - Holborn new - 188,18,16,40.370555555555555,1,18.0,Low
+itsu - The Shard,18,13,28.767777777777773,1,18.0,Low
+0781 - Clapham - Abbeville Road - PizzaExpress,17,16,29.368823529411763,1,17.0,Low
+5190 - Dublin - Grand Canal - Milano,17,15,39.09647058823529,1,17.0,Low
+9221030 - Las Iguanas - Bath,17,15,30.426470588235293,1,17.0,Low
+9221280 - Las Iguanas - Sheffield Meadowhall,17,14,29.421176470588232,1,17.0,Low
+Iro Sushi - Reading,17,16,31.89941176470588,1,17.0,Low
+LEON - Angel,17,13,25.524117647058823,1,17.0,Low
+The Tiffin Tin,17,15,33.98058823529412,1,17.0,Low
+itsu - Notting Hill Gate 100,17,13,30.768235294117645,1,17.0,Low
+1131 - East Sheen - Upper Richmond Road - PizzaExpress,16,15,31.229375,1,16.0,Low
+3234 - Prezzo Pasta & Pizza – Euston,16,14,28.123124999999998,1,16.0,Low
+3286 - Cheam - Ewell Road - PizzaExpress,16,14,32.8925,1,16.0,Low
+3311 - Edinburgh - George IV Bridge - PizzaExpress,16,14,28.994374999999998,1,16.0,Low
+3333 - Sheffield - Ecclesall Road - PizzaExpress,16,12,34.15625,1,16.0,Low
+Iro Sushi - Fulham,16,13,31.291249999999998,1,16.0,Low
+PIZAZA - Golders Green,16,15,40.533125,1,16.0,Low
+Pho - Liverpool 2,16,16,27.434375,1,16.0,Low
+Wagamama - Great Marlborough Street - 221,16,15,30.254375,1,16.0,Low
+atis - Notting Hill,16,15,29.26875,1,16.0,Low
+1581 - Cardiff - High Street - PizzaExpress,15,14,33.03066666666667,1,15.0,Low
+3377 - Prezzo - Uxbridge,15,14,26.769333333333336,1,15.0,Low
+3484 - Winchester High Street - PizzaExpress,15,11,31.86,1,15.0,Low
+9113100 - Bella Italia Pizza & Pasta - Paddington,15,15,26.790000000000003,1,15.0,Low
+Kokoro - Wood Green,15,15,34.711999999999996,1,15.0,Low
+Xian Street Food Galway,15,14,36.898,1,15.0,Low
+Zambrero London Road,15,15,38.827999999999996,1,15.0,Low
+0141 - London - Notting Hill Gate - PizzaExpress,14,14,32.18571428571429,1,14.0,Low
+3262 - Prezzo - Cheam,14,14,30.268571428571427,1,14.0,Low
+3296 - Prezzo - Harrow,14,14,27.772142857142857,1,14.0,Low
+3374 - Sheffield - St Pauls Place - PizzaExpress,14,13,32.66142857142857,1,14.0,Low
+Iro Sushi - Stoke Newington,14,13,29.529999999999998,1,14.0,Low
+Iro Sushi Canterbury,14,11,33.635714285714286,1,14.0,Low
+KOKORO Portsmouth,14,14,31.122142857142855,1,14.0,Low
+LEON - Moorgate,14,14,26.202142857142857,1,14.0,Low
+Remedy Kitchen - Wandsworth Road,14,14,28.879285714285714,1,14.0,Low
+Zambrero Kentish Town,14,14,33.42642857142857,1,14.0,Low
+itsu - Kings Road 47,14,12,29.733571428571427,1,14.0,Low
+itsu - Regent Street,14,11,35.31428571428571,1,14.0,Low
+3350 - Prezzo Pasta & Pizza - St Martins Lane,13,8,25.443076923076923,1,13.0,Low
+3365 - Prezzo - Banstead,13,10,30.680769230769233,1,13.0,Low
+3399 - Hatfield - Galleria Shopping Outlet - PizzaExpress,13,11,29.234615384615385,1,13.0,Low
+3472 - Liverpool - Speke - PizzaExpress,13,13,34.660769230769226,1,13.0,Low
+9114010 - Bella Italia Pizza & Pasta - Sheffield St. Pauls,13,10,26.04769230769231,1,13.0,Low
+9114050 - Bella Italia Pizza & Pasta - Bristol Aspects,13,13,28.213076923076922,1,13.0,Low
+Iro Sushi - Orpington,13,13,40.473846153846154,1,13.0,Low
+Kokoro - Kingston,13,13,35.386923076923075,1,13.0,Low
+LEON - Bath,13,12,28.415384615384614,1,13.0,Low
+LEON - Battersea Power Station,13,13,30.468461538461536,1,13.0,Low
+The Tiffin Tin - West Hampstead,13,13,41.4076923076923,1,13.0,Low
+Tiffin Tin (wan),13,13,41.856923076923074,1,13.0,Low
+Zambrero,13,13,32.64923076923077,1,13.0,Low
+Zambrero Manchester Cross Street,13,12,35.44769230769231,1,13.0,Low
+2141 - Barnes - High Street - PizzaExpress,12,8,32.32,1,12.0,Low
+3219 - Belfast - Lisburn Road - PizzaExpress,12,12,33.68416666666666,1,12.0,Low
+3240 - Prezzo - Bournemouth,12,11,30.49416666666667,1,12.0,Low
+3328 - Prezzo - Nottingham,12,10,27.780833333333334,1,12.0,Low
+3372 - Prezzo - York Clifford Street,12,12,30.6875,1,12.0,Low
+5113344 - Bella Italia Pizza & Pasta - Leeds Briggate,12,9,29.89833333333333,1,12.0,Low
+Iro Sushi - Bromley,12,11,37.972500000000004,1,12.0,Low
+Iro Sushi - Penge,12,10,32.88833333333333,1,12.0,Low
+Iro Sushi - Woolwich,12,10,33.82,1,12.0,Low
+Jakob's Kitchen - Editions - BRC,12,11,26.359166666666667,1,12.0,Low
+LEON - Hanover Square,12,11,27.613333333333333,1,12.0,Low
+LEON - More London Place,12,11,27.12,1,12.0,Low
+Tiffin Tin - Totteridge (Core),12,11,46.14416666666667,1,12.0,Low
+Wagamama - Manchester Printworks - 108,12,12,32.52166666666667,1,12.0,Low
+itsu - High Holborn 236,12,8,31.695833333333336,1,12.0,Low
+2701 - Portsmouth - Gunwharf Quays Designer Outlet - PizzaExpress,11,11,33.49272727272727,1,11.0,Low
+3225 - Birmingham - Bullring Shopping Centre - PizzaExpress,11,9,33.375454545454545,1,11.0,Low
+3294 - Prezzo - Canterbury,11,9,28.762727272727272,1,11.0,Low
+3329 - Bath - Southgate Shopping Centre - PizzaExpress,11,7,30.180909090909093,1,11.0,Low
+3331 - Prezzo - Leatherhead,11,11,28.465454545454545,1,11.0,Low
+3680 - Prezzo - Bournemouth West Central,11,11,28.174545454545456,1,11.0,Low
+Biblos,11,11,26.318181818181817,1,11.0,Low
+LEON - Earl's Court,11,10,26.96181818181818,1,11.0,Low
+atis - Eccleston Yards,11,8,31.44909090909091,1,11.0,Low
+atis - Regent Street,11,10,32.125454545454545,1,11.0,Low
+itsu - Paddington Sheldon Square,11,11,30.815454545454546,1,11.0,Low
+1451 - Radlett - Watling Street - PizzaExpress,10,9,36.261,1,10.0,Low
+3203 - London - Clerkenwell Road - PizzaExpress,10,8,29.581,1,10.0,Low
+3615 - Prezzo - Hatfield,10,10,28.892000000000003,1,10.0,Low
+Bill's Cardiff Bay - CRDB,10,10,29.592000000000002,1,10.0,Low
+Iro Sushi - Slough,10,7,31.264999999999997,1,10.0,Low
+Iro Sushi West Hampstead,10,9,32.766000000000005,1,10.0,Low
+Kokoro Morden,10,10,33.288,1,10.0,Low
+LEON - Hammersmith,10,10,23.485999999999997,1,10.0,Low
+Renao xian,10,10,57.104,1,10.0,Low
+Wagamama - Glasgow Fort - 222,10,10,44.575,1,10.0,Low
+Zambrero - Battersea,10,9,32.399,1,10.0,Low
+Zambrero - Queen Victoria Street,10,10,34.327999999999996,1,10.0,Low
+0501 - Belfast - Bedford Street - PizzaExpress,9,8,35.028888888888886,1,9.0,Low
+2671 - London - Euston Road - PizzaExpress,9,8,30.004444444444445,1,9.0,Low
+3210 - Prezzo Braintree,9,9,29.709999999999997,1,9.0,Low
+3436 - London - Paddington - PizzaExpress,9,8,29.52333333333333,1,9.0,Low
+3607 - Prezzo - Leeds,9,8,34.75555555555556,1,9.0,Low
+3614 - Prezzo - Windsor,9,8,39.583333333333336,1,9.0,Low
+Iro Sushi - Dartford,9,9,31.88666666666667,1,9.0,Low
+Iro Sushi - Walton,9,8,30.784444444444446,1,9.0,Low
+Iro Sushi Maidstone,9,5,34.30888888888889,1,9.0,Low
+KOKORO TUNBRIDGE WELLS,9,8,33.260000000000005,1,9.0,Low
+Remedy Kitchen - Editions - WHI,9,7,31.57333333333333,1,9.0,Low
+The Tiffin Tin - Tufnell Park,9,9,32.87222222222223,1,9.0,Low
+3245 - Brighton - Marina - PizzaExpress,8,6,31.0875,1,8.0,Low
+3276 Prezzo - Godalming,8,8,28.74125,1,8.0,Low
+3446 - Belfast - Ballyhackamore - PizzaExpress,8,6,27.763749999999998,1,8.0,Low
+3463 - Leeds - Arena - PizzaExpress,8,4,28.715,1,8.0,Low
+3629 - Prezzo - Milton Keynes - Leisure Park,8,7,28.7525,1,8.0,Low
+Iro Sushi - Eltham,8,7,36.3675,1,8.0,Low
+Iro Sushi - Sidcup,8,8,31.93375,1,8.0,Low
+Iro Sushi - Tower Bridge,8,8,32.32375,1,8.0,Low
+LEON - Southwark Street,8,7,24.24625,1,8.0,Low
+Pizaza - Edgware,8,7,44.0575,1,8.0,Low
+Remedy Kitchen - Editions - BYR,8,6,28.58,1,8.0,Low
+Zambrero - Birmingham,8,8,33.56625,1,8.0,Low
+itsu - Southwark Street 65 (Bankside),8,8,26.68,1,8.0,Low
+1601 - London - Kings Road - PizzaExpress,7,6,38.00428571428571,1,7.0,Low
+2351 - London - Royal Festival Hall - PizzaExpress,7,5,27.354285714285712,1,7.0,Low
+2951 - Hampton Court - Creek Road - PizzaExpress,7,7,33.25857142857143,1,7.0,Low
+3258 - London - St Pauls - PizzaExpress,7,7,28.10571428571429,1,7.0,Low
+3386 - Epping - High Street - PizzaExpress,7,7,39.04714285714285,1,7.0,Low
+3393 - Prezzo - Bristol,7,7,35.114285714285714,1,7.0,Low
+3603 - Prezzo - Bath,7,7,30.057142857142857,1,7.0,Low
+Iro Sushi Tonbridge,7,7,28.918571428571425,1,7.0,Low
+LEON - Notting Hill,7,6,25.445714285714285,1,7.0,Low
+The Salad Project - Tottenham Court Road,7,4,32.3,1,7.0,Low
+Zaatar Rathmines,7,6,35.45142857142857,1,7.0,Low
+atis - Battersea,7,4,29.975714285714282,1,7.0,Low
+0761 - London - Baker Street - PizzaExpress,6,6,27.623333333333335,1,6.0,Low
+3223 - London - Bankside - PizzaExpress,6,6,44.935,1,6.0,Low
+3347 - Prezzo - Cardiff,6,6,23.741666666666664,1,6.0,Low
+3667 - Prezzo- Hemel Hempstead,6,5,23.776666666666667,1,6.0,Low
+Bill's Soho - MMS,6,5,27.363333333333333,1,6.0,Low
+Iro Sushi - Clapham,6,6,49.73166666666666,1,6.0,Low
+LEON - Milton Keynes,6,6,23.39833333333333,1,6.0,Low
+LEON - Shepherds Bush,6,6,27.42,1,6.0,Low
+Remedy Kitchen - Editions - ACT,6,6,32.163333333333334,1,6.0,Low
+atis - Borough Yards,6,6,28.863333333333333,1,6.0,Low
+itsu - Piccadilly 167,6,6,32.75666666666667,1,6.0,Low
+1991 - London - London Bridge - PizzaExpress,5,5,38.138,1,5.0,Low
+3295 - Prezzo - Brighton,5,5,28.288,1,5.0,Low
+3303 - Belfast - Victoria Square Shopping Centre - PizzaExpress,5,5,31.157999999999998,1,5.0,Low
+3346 - Prezzo Victoria Place,5,5,31.674,1,5.0,Low
+3380 - Prezzo - Manchester Media City,5,5,26.24,1,5.0,Low
+9015300 - Bella Italia Pizza & Pasta - York Clifton Moor,5,5,27.727999999999998,1,5.0,Low
+Iro Sushi - Stratford,5,5,28.663999999999998,1,5.0,Low
+LEON - Horseferry Road,5,3,22.674,1,5.0,Low
+The Salad Project,5,5,30.369999999999997,1,5.0,Low
+atis - Old Street,5,5,32.708000000000006,1,5.0,Low
+itsu - Baker Street 132,5,5,28.154000000000003,1,5.0,Low
+0871 - Eastbourne - Cornfield Road - PizzaExpress,4,4,30.3475,1,4.0,Low
+"3113005 - Banana Tree Thai, Vietnamese, Vegan - Westbourne Grove",4,4,39.655,1,4.0,Low
+3229 - Prezzo - The Promenade,4,4,30.455,1,4.0,Low
+3370 - Prezzo - Glasgow Braehead,4,4,31.5475,1,4.0,Low
+3623 Prezzo - Letchworth,4,4,32.364999999999995,1,4.0,Low
+Biblos - Spike Island,4,3,27.425,1,4.0,Low
+Hornsey - Tiffin Tin,4,4,31.8575,1,4.0,Low
+Iro Sushi Newbury,4,4,33.63,1,4.0,Low
+Iro Sushi Sevenoaks,4,4,45.4675,1,4.0,Low
+LEON - Broadwick Street,4,2,36.035000000000004,1,4.0,Low
+The Salad Project - Fenchurch,4,4,33.8425,1,4.0,Low
+atis - Eastcheap,4,4,28.8575,1,4.0,Low
+itsu - Great Peter Street 16,4,3,32.692499999999995,1,4.0,Low
+itsu - Victoria Street 163,4,4,44.160000000000004,1,4.0,Low
+3210 - London - Millbank - PizzaExpress,3,3,25.903333333333336,1,3.0,Low
+3211 - Prezzo - Port Solent,3,3,25.546666666666667,1,3.0,Low
+3213 - Cardiff - Mermaid Quay - PizzaExpress,3,3,31.106666666666666,1,3.0,Low
+5130 - Galway - Middle Street - Milano,3,3,35.6,1,3.0,Low
+Iro Sushi (BNC),3,3,33.443333333333335,1,3.0,Low
+LEON - Brixton,3,2,32.086666666666666,1,3.0,Low
+LEON - Ludgate Circus,3,3,38.596666666666664,1,3.0,Low
+LEON - Regent Street,3,3,28.72666666666667,1,3.0,Low
+Remedy Kitchen - Editions - BRC,3,3,26.763333333333332,1,3.0,Low
+The Salad Project - Bond Street,3,2,28.88,1,3.0,Low
+The Salad Project - Editions - ACT,3,3,27.996666666666666,1,3.0,Low
+3335 - Prezzo Cheltenham Brewery,2,2,26.835,1,2.0,Low
+Kokoro - Reigate,2,2,36.93,1,2.0,Low
+LEON - Cheapside,2,2,20.54,1,2.0,Low
+LEON - Kingsway,2,2,28.555,1,2.0,Low
+LEON - Pancras Square,2,1,40.415,1,2.0,Low
+LEON - Victoria Place 2,2,2,31.854999999999997,1,2.0,Low
+The Salad Project - Editions - BCP,2,2,27.125,1,2.0,Low
+The Salad Project - Oxford Circus,2,2,29.625,1,2.0,Low
+The Salad Project - Southwark Street,2,2,22.78,1,2.0,Low
+Zambrero - Manchester,2,2,29.715000000000003,1,2.0,Low
+Zumu - Editions - BRS,2,2,30.6,1,2.0,Low
+atis - Canary Wharf,2,2,48.25,1,2.0,Low
+itsu - Baker St,2,2,24.869999999999997,1,2.0,Low
+itsu - Brunswick Centre,2,2,27.525,1,2.0,Low
+itsu - Great Portland Street,2,2,31.28,1,2.0,Low
+itsu - Regent's Place 1,2,2,29.299999999999997,1,2.0,Low
+2031 - London - Victoria Street - PizzaExpress,1,1,27.75,1,1.0,Low
+3230 - London - Tower Hill - PizzaExpress,1,1,27.75,1,1.0,Low
+Farmer J - King William Street,1,1,35.99,1,1.0,Low
+Kokoro - Uxbridge,1,1,38.98,1,1.0,Low
+LEON - Carnaby Street,1,1,31.57,1,1.0,Low
+LEON - Euston Road,1,1,22.75,1,1.0,Low
+LEON - Strand,1,1,29.71,1,1.0,Low
+Umi Falafel (George's St Arcade),1,1,42.99,1,1.0,Low
+Umi Falafel - Mary St,1,1,29.65,1,1.0,Low
+Kricket - Bermondsey,199,179,30.936582914572863,1,199.0,Medium
+Pho - Balham,199,166,31.0221608040201,1,199.0,Medium
+Wagamama - Bristol Clifton - 116,197,168,34.27568527918781,1,197.0,Medium
+Pho - Canterbury,196,139,29.746428571428574,1,196.0,Medium
+Wagamama - St Albans - 117,196,154,38.69913265306122,1,196.0,Medium
+3113021 - Banana Tree Thai Vietnamese Vegan - Stevenage,195,140,29.748153846153848,1,195.0,Medium
+Pho - Cheltenham,195,149,30.484769230769228,1,195.0,Medium
+Wagamama - Walton - 154,195,151,38.374923076923075,1,195.0,Medium
+Wagamama - Epsom - 289,194,146,35.88149484536083,1,194.0,Medium
+"3113017 - Banana Tree Thai, Vietnamese, Vegan - Bath",193,131,29.78466321243523,1,193.0,Medium
+Farmer J - Jubilee,192,156,29.06921875,1,192.0,Medium
+Ting Thai Teviot Place,190,160,31.49142105263158,1,190.0,Medium
+Pho - Liverpool,189,152,29.254656084656084,1,189.0,Medium
+Farmer J - Farringdon,187,130,29.909251336898393,1,187.0,Medium
+Wagamama - Watford Central - 192,187,148,34.14732620320856,1,187.0,Medium
+Giggling Squid - Bracknell,182,132,33.715329670329666,1,182.0,Medium
+Cocotte - Hoxton,181,163,29.934419889502763,1,181.0,Medium
+Wagamama - Hampstead - 184,181,155,36.72889502762431,1,181.0,Medium
+Wagamama - Colchester - 245,180,129,33.67188888888889,1,180.0,Medium
+Wagamama - Manchester Didsbury - 256,180,139,34.742000000000004,1,180.0,Medium
+Giggling Squid - Clifton,178,146,32.31623595505618,1,178.0,Medium
+"3113014 - Banana Tree Thai, Vietnamese, Vegan - Windsor",176,116,29.72659090909091,1,176.0,Medium
+Wagamama - Battersea Power Station - 282,176,135,33.806079545454544,1,176.0,Medium
+Giggling Squid - Kingston,173,140,31.387398843930633,1,173.0,Medium
+Giggling Squid - Harborne,172,145,28.932674418604652,1,172.0,Medium
+Giggling Squid - Farnham,171,131,32.77590643274854,1,171.0,Medium
+Wagamama - Canary Wharf - 121,167,135,30.37245508982036,1,167.0,Medium
+Giggling Squid - Guildford,165,119,30.176484848484847,1,165.0,Medium
+"3113011 - Banana Tree Thai, Vietnamese, Vegan - London The O2",164,129,26.80067073170732,1,164.0,Medium
+Giggling Squid - Weybridge,164,138,32.378597560975614,1,164.0,Medium
+Jakob's Kitchen - Editions - CAN,164,113,28.21280487804878,1,164.0,Medium
+Bill's Brighton - BNC,161,123,30.39472049689441,1,161.0,Medium
+Bill's Greenwich - LEW,160,129,31.021687500000002,1,160.0,Medium
+Giggling Squid - Brighton,160,138,29.818,1,160.0,Medium
+Cocotte - Parsons Green,158,130,30.630379746835445,1,158.0,Medium
+Wagamama - Islington - 118,157,135,33.487643312101916,1,157.0,Medium
+Wagamama - Putney - 128,157,113,33.421910828025474,1,157.0,Medium
+"3113013 - Banana Tree Thai, Vietnamese, Vegan - Reigate",155,102,30.760064516129034,1,155.0,Medium
+Farmer J - Fenchurch Street,153,106,30.07091503267974,1,153.0,Medium
+Giggling Squid - Hove,153,138,33.77444444444444,1,153.0,Medium
+Wagamama - Richmond - 126,153,132,35.8897385620915,1,153.0,Medium
+Pho - Manchester,152,133,28.873157894736845,1,152.0,Medium
+Cocotte - Westbourne,148,122,30.597500000000004,1,148.0,Medium
+itsu - Cambridge Sidney Street,146,111,31.013493150684933,1,146.0,Medium
+3113020 - Banana Tree Thai Vietnamese Vegan - Portsmouth Gunwharf Quays,144,115,29.103055555555557,1,144.0,Medium
+Giggling Squid - Cheltenham,144,113,33.39965277777778,1,144.0,Medium
+Giggling Squid - Esher,144,122,35.69104166666667,1,144.0,Medium
+Giggling Squid - Norwich,144,114,30.928472222222222,1,144.0,Medium
+Wagamama - Chelmsford - 248,143,105,36.1606993006993,1,143.0,Medium
+itsu - Bristol Broadmead,143,128,30.813286713286715,1,143.0,Medium
+Bill's Wimbledon - WIM2,142,102,32.030985915492955,1,142.0,Medium
+Giggling Squid - Harpenden,142,123,35.96704225352112,1,142.0,Medium
+Jacob's Kitchen - Editions - BYR (NEW),142,103,29.383380281690137,1,142.0,Medium
+Farmer J - London Bridge,141,109,29.85049645390071,1,141.0,Medium
+Wagamama - Cambridge Leisure - 257,140,120,33.88257142857143,1,140.0,Medium
+Wagamama - Hammersmith - 199,140,107,32.02514285714286,1,140.0,Medium
+Jakob's Kitchen - Editions - BSY,139,107,28.404316546762587,1,139.0,Medium
+Wagamama - Bluewater - 180,138,112,38.05782608695652,1,138.0,Medium
+itsu - St Albans,137,105,33.33678832116789,1,137.0,Medium
+"3113010 - Banana Tree Thai, Vietnamese, Vegan - Covent Garden",135,101,26.870666666666665,1,135.0,Medium
+Wagamama - Norwich Riverside - 279,131,102,34.28038167938931,1,131.0,Medium
+Pho - Soho,128,100,30.67234375,1,128.0,Medium
+Wagamama - Reigate - 244,128,101,37.581796875,1,128.0,Medium
+Yacob's Kitchen,128,98,28.86953125,1,128.0,Medium
+Giggling Squid - Hornchurch,127,104,30.223464566929135,1,127.0,Medium
+Pho - Portsmouth,127,100,29.46937007874016,1,127.0,Medium
+TUK TUK - Golders Green,127,95,33.42992125984252,1,127.0,Medium
+Asia Villa - Canary Wharf,126,102,29.390396825396827,1,126.0,Medium
+Bill's Reading - REA,126,96,30.77547619047619,1,126.0,Medium
+Giggling Squid - Chelmsford,126,91,32.7115873015873,1,126.0,Medium
+Giggling Squid - Horsham,126,86,33.31293650793651,1,126.0,Medium
+Wagamama - Southampton Westquay - 191,126,107,33.33095238095238,1,126.0,Medium
+Wagamama - Windsor - 147,126,108,37.74388888888888,1,126.0,Medium
+itsu - Brighton North Street,125,108,31.637520000000002,1,125.0,Medium
+itsu - Oxford Cornmarket Street,124,96,32.13709677419355,1,124.0,Medium
+Bill's St Albans - STA,123,97,35.44495934959349,1,123.0,Medium
+Wagamama - Bath - 150,123,102,38.46650406504065,1,123.0,Medium
+Wagamama - Nottingham - 111,123,106,32.78252032520325,1,123.0,Medium
+Wagamama - Wembley - 205,122,102,32.308196721311475,1,122.0,Medium
+Bill's Kingston - KIN,121,83,31.60611570247934,1,121.0,Medium
+Wagamama - Hatfield Gelleria - 280,120,96,39.356,1,120.0,Medium
+Pho - Edinburgh,119,107,30.149159663865547,1,119.0,Medium
+Taste Of Hong Kong-DCN,119,102,42.32226890756303,1,119.0,Medium
+Wagamama - Edinburgh Lothian Road - 177,119,96,34.786974789915966,1,119.0,Medium
+Wagamama - Staines - 230,119,103,34.09521008403361,1,119.0,Medium
+Pho - Tunbridge Wells,118,93,33.07542372881356,1,118.0,Medium
+Bill's Colchester - CLC,116,78,33.037586206896556,1,116.0,Medium
+Giggling Squid - Wokingham,116,88,34.909224137931034,1,116.0,Medium
+Wagamama - Tunbridge Wells - 127,116,89,35.895775862068966,1,116.0,Medium
+Wagamama - Oxford - 152,115,103,32.59669565217391,1,115.0,Medium
+Ting Thai - Byres Road,114,99,31.461228070175437,1,114.0,Medium
+Wagamama - Leamington Spa - 185,114,88,35.631052631578946,1,114.0,Medium
+Pho - Birmingham,113,87,28.35575221238938,1,113.0,Medium
+Bill's Farnham - FARN,112,84,34.331607142857145,1,112.0,Medium
+Wagamama - Wandsworth - 195,112,88,32.283928571428575,1,112.0,Medium
+Wagamama - Canterbury - 133,111,95,35.34549549549549,1,111.0,Medium
+Wagamama - Stevenage - 253,111,93,34.31261261261261,1,111.0,Medium
+Pho - Leeds,110,89,30.145727272727274,1,110.0,Medium
+Wagamama - Clink Street - 137,109,84,35.872018348623854,1,109.0,Medium
+Wagamama - Horsham - 174,108,86,37.69731481481482,1,108.0,Medium
+Wagamama - Watford Woodside - 294,108,87,35.66425925925926,1,108.0,Medium
+Wagamama - York City Centre - 182,108,101,38.531666666666666,1,108.0,Medium
+Bill's Southampton - SOU,107,89,34.83252336448598,1,107.0,Medium
+Wagamama - Brent Cross - 125,106,87,34.626603773584904,1,106.0,Medium
+Giggling Squid - Welwyn Garden City,105,87,32.23152380952381,1,105.0,Medium
+itsu - Reading Queen Victoria Street,105,90,30.096857142857143,1,105.0,Medium
+Bill's Cambridge - CAM,104,85,32.10105769230769,1,104.0,Medium
+Bill's Guildford - GUI,104,77,32.23586538461539,1,104.0,Medium
+Jakob's Kitchen - Belsize Park,104,87,27.79971153846154,1,104.0,Medium
+Wagamama - North Greenwich o2 - 172,104,78,33.04326923076923,1,104.0,Medium
+itsu - Jubilee Place,104,84,27.383942307692305,1,104.0,Medium
+itsu - Stall Street,103,75,30.145242718446603,1,103.0,Medium
+Bill's Norwich - NOR,102,85,32.17088235294118,1,102.0,Medium
+Wagamama - Camden - 105,102,87,33.0771568627451,1,102.0,Medium
+Xian Street Food -Redfining Noodles (Earl St North),102,91,36.96019607843137,1,102.0,Medium
+1561 - Stratford East - Theatre Square - PizzaExpress,101,85,29.005346534653466,1,101.0,Medium
+Wagamama - Sheffield City Centre - 159,101,84,34.202871287128715,1,101.0,Medium

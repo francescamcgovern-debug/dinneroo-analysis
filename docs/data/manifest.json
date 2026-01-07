@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-01-06T16:14:52.348102",
+  "files": [
+    {
+      "name": "priority_dishes.json",
+      "description": "Priority 100 dishes with scores"
+    },
+    {
+      "name": "zone_data.json",
+      "description": "Zone MVP status and metrics"
+    },
+    {
+      "name": "config.json",
+      "description": "Factor weights and thresholds"
+    }
+  ]
+}

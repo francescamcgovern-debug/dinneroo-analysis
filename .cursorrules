@@ -1,315 +1,55 @@
-# Dinneroo Zone Analysis - Task-Based Pipeline
+# Dinneroo Zone Analysis
 
-## How This System Works
+You analyze Dinneroo (Deliveroo's £25 family meal proposition) data.
 
-This is a **task-based analysis pipeline** following Denis Rothman's methodology:
-- **AI as Augmentation** - Scripts do data processing, LLM adds reasoning and synthesis
-- **Structured Approach** - Clear phases: Prepare → Analyze → Synthesize → Iterate
-- **Explainability** - Every score has documented evidence, every threshold is justified
-- **Iterative Refinement** - Pipeline can re-run as data/requirements change
+## On Every Request
 
-### On Every Request:
+1. Identify the work type from the routing table below
+2. Read that agent's brief in `DOCUMENTATION/AGENTS/`
+3. Follow the agent's protocol exactly
 
-1. **Read this file first** (you're doing that now)
-2. **Read relevant methodology** in `DOCUMENTATION/METHODOLOGY/`
-3. **Run or reference scripts** in `scripts/`
-4. **Check configuration** in `config/`
-5. **Produce outputs** following standards
+## Agent Routing
 
----
+| Work Type | Agent | Trigger Keywords |
+|-----------|-------|------------------|
+| Scoring frameworks, weights, validation | `SCORING_AGENT.md` | score, weight, factor, framework, correlation |
+| Dish prioritization, performance | `01_DISH_AGENT.md` | dish, cuisine, prioritize, menu, tier |
+| Zone MVP, health, coverage | `ZONE_AGENT.md` | zone, MVP, coverage, area |
+| Missing cuisines, expansion | `GAP_AGENT.md` | gap, missing, expand, opportunity |
+| Partner recruitment, expansion | `PARTNER_AGENT.md` | partner, recruit, Nando's, expand partner |
+| Family eating, regional, price, segments | `FAMILY_BEHAVIOR_AGENT.md` | families eat, at home, regional, price, transcript, couple, single, segment |
+| Unmet demand, open-text mining | `LATENT_DEMAND_AGENT.md` | latent, unmet, want, barrier, open-text |
+| Data refresh, validation | `DATA_AGENT.md` | refresh, pull, validate, Snowflake, reconcile |
+| Dashboards, visualization | `DASHBOARD_AGENT.md` | dashboard, visualize, chart, interactive |
 
-## Pipeline Overview
+## Anti-Drift Check
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                 DINNEROO ANALYSIS PIPELINE                   │
-├─────────────────────────────────────────────────────────────┤
-│  CONFIGURATION (config/)                                     │
-│  • factor_weights.json - 10-factor weights (adjustable)     │
-│  • mvp_thresholds.json - Zone MVP criteria                  │
-│  • evidence_standards.json - Sample size requirements       │
-├─────────────────────────────────────────────────────────────┤
-│  PHASE 1: DATA PREPARATION (scripts/phase1_data/)           │
-│  01_load_sources.py      → Load all data sources            │
-│  02_extract_survey.py    → Survey-backed scores             │
-│  03_validate_data.py     → Quality checks                   │
-│  04_validate_config.py   → Config evidence validation       │
-├─────────────────────────────────────────────────────────────┤
-│  PHASE 2: ANALYSIS (scripts/phase2_analysis/)               │
-│  01_score_dishes.py      → 10-factor dish scoring           │
-│  02_analyze_zones.py     → Zone MVP status & gaps           │
-│  03_segment_customers.py → Family behavior patterns         │
-├─────────────────────────────────────────────────────────────┤
-│  PHASE 3: SYNTHESIS (scripts/phase3_synthesis/)             │
-│  01_generate_priority_list.py  → Priority 100 Dishes        │
-│  02_generate_zone_report.py    → Zone MVP Report            │
-│  03_export_dashboard_data.py   → JSON for dashboards        │
-├─────────────────────────────────────────────────────────────┤
-│  DELIVERABLES (docs/ for GitHub Pages)                      │
-│  • Priority Dishes Dashboard                                 │
-│  • Zone MVP Dashboard                                        │
-│  • Executive Reports (MD)                                    │
-└─────────────────────────────────────────────────────────────┘
-```
+Before reporting ANY finding, verify:
+- [ ] Did I read the relevant agent brief?
+- [ ] Did I cite sources with sample sizes?
+- [ ] Is this from fresh analysis, not assumptions?
+- [ ] Does this answer the stated question?
 
-### Running the Pipeline
+## Key Paths
 
-```bash
-python scripts/run_pipeline.py --all        # Full pipeline
-python scripts/run_pipeline.py --phase 1    # Data preparation only
-python scripts/run_pipeline.py --phase 2    # Analysis only
-python scripts/run_pipeline.py --dashboards # Update dashboards
-```
+| Resource | Path |
+|----------|------|
+| Agent briefs | `DOCUMENTATION/AGENTS/` |
+| Agent index | `DOCUMENTATION/AGENTS/INDEX.md` |
+| Shared context | `DOCUMENTATION/SHARED/` |
+| Ground truth (supply) | `DOCUMENTATION/CONTEXT/08_GROUND_TRUTH_DATA.md` |
+| Data sources | `DOCUMENTATION/SHARED/05_DATA_SOURCES_INVENTORY.md` |
+| Quality standards | `DOCUMENTATION/SHARED/04_QUALITY_STANDARDS.md` |
+| Definitions | `DOCUMENTATION/SHARED/03_DEFINITIONS.md` |
+
+## Critical Rules
+
+1. **Supply metrics** (what we have): Use Anna's data (`anna_*.csv`)
+2. **Performance metrics** (how it performs): Use Snowflake order data
+3. **Preference metrics** (what customers want): Use surveys WITH triangulation
+4. **Never weight any single source > 50%**
+5. **Never use OG Survey alone** for dish recommendations
 
 ---
 
-## Core Rules
-
-### 1. Evidence Standards
-- ALWAYS cite sources with sample sizes: `(Source: X, n=Y)`
-- ALWAYS indicate evidence level: 🔵 Single | 🟡 Corroborated | 🟢 Validated
-- NEVER make strategic recommendations from a single source
-- See `DOCUMENTATION/METHODOLOGY/04_EVIDENCE_STANDARDS.md` for full standards
-
-### 2. Two-Track Dish Scoring (Survivorship Bias Solution)
-**Order volume shows what works among AVAILABLE options, not what families WANT.**
-
-We use a **Two-Track Scoring System** to separate performance from opportunity:
-
-| Track | Purpose | Data Sources |
-|-------|---------|--------------|
-| **Track A: Performance** | How well is this dish doing? | Orders, ratings, survey satisfaction |
-| **Track B: Opportunity** | How much do families want this? | Latent demand, 10-factor fit, partner capability |
-
-**Key Principle:** Unavailable dishes get Track B scores only - they're not penalized for having no orders.
-
-- See `DOCUMENTATION/METHODOLOGY/01_DISH_SCORING.md` for full two-track methodology
-- Rating threshold is **4.5** (not 4.0) to align with Deliveroo standards
-
-### 3. Success Metrics Over Volume
-**Success = families returning happy, not just ordering once.**
-- Order volume is a survivorship bias metric - it shows activity, not success
-- **Repeat Rate** (25% weight) is the PRIMARY success signal
-- **Satisfaction/Rating** (25% weight) shows if families are happy
-- Volume (10% weight) is LOWEST priority - only relevant after retention is healthy
-- Use **Zone Health Score** (not Quality Score) to rank zones
-- See `config/mvp_thresholds.json` for full weighting and `DOCUMENTATION/METHODOLOGY/02_ZONE_MVP.md` for methodology
-
-**BLENDED Approach: Behavioral + Survey Data**
-- Behavioral data (Snowflake): Repeat rate, star ratings, volume - shows what families DO
-- Survey data (Post-Order): Satisfaction rate, kids happy rate - shows how families FEEL
-- Triangulation provides more robust success signal than either source alone
-- Fallback: If survey n < 20, use behavioral proxies
-
-### 4. Strategic Positioning: Balanced Midweek Meals
-**Dinneroo is designed for BALANCED MIDWEEK MEALS** - not indulgent weekend treats.
-- Families want nutritious options they feel good about serving on a Tuesday
-- "Balanced" = protein + veg + carbs in reasonable proportions
-- Grilled chicken with customizable sides fits this positioning well
-- When recommending dishes/partners, ask: "Does this fit the balanced midweek meal positioning?"
-
-### 5. Dish Types, Not Brands
-**Think about what families want to EAT, not specific partner names.**
-- The question isn't "should we recruit Nando's?" - it's "do families want Grilled Chicken with Sides?"
-- Dish-type thinking expands options (multiple partners can serve the same need)
-- See `DOCUMENTATION/METHODOLOGY/01_DISH_SCORING.md` for the Dish Types Framework
-
-### 6. Menu Gap Analysis
-**The same partner may serve DIFFERENT items on Dinneroo vs regular Deliveroo.**
-- ✅ Check `DATA/1_SOURCE/snowflake/DINNEROO_MENU_CATALOG.csv`
-- ❌ Do NOT assume orders from a partner = items on Dinneroo menu
-
-### 7. Config Validation (CRITICAL)
-**Every cuisine or dish recommendation in config MUST be evidence-based.**
-
-Before adding ANY recommendation to `config/mvp_thresholds.json`:
-1. Check actual performance in `DATA/3_ANALYSIS/cuisine_performance.csv`
-2. Verify repeat rate meets threshold (≥15% for required, ≥15% for recommended)
-3. Verify rating meets minimum (≥4.0)
-4. Add `source`, `evidence`, and `validated` fields
-
-**Required fields for every recommendation:**
-```json
-{
-  "cuisine": "Example",
-  "reason": "Why this is recommended",
-  "source": "cuisine_performance.csv",
-  "evidence": {
-    "order_count": 1000,
-    "repeat_rate": 0.20,
-    "avg_rating": 4.5
-  },
-  "validated": "2026-01-06"
-}
-```
-
-**Run validation before committing config changes:**
-```bash
-python scripts/phase1_data/04_validate_config.py
-```
-
-The pipeline will FAIL if config contains unfounded recommendations.
-
-### 8. MVP Criteria Consumer Validation (CRITICAL)
-**MVP thresholds MUST be validated against consumer outcomes, not just order volume.**
-
-Before presenting MVP criteria (cuisine count, partner count thresholds):
-1. Run `scripts/phase2_analysis/04_validate_mvp_consumer_outcomes.py`
-2. Verify consumer outcomes are linked to zone-level variety:
-   - Kids full & happy rate by cuisine/partner bucket
-   - Reorder intent by cuisine/partner bucket
-   - Variety complaint rate by cuisine/partner bucket
-3. All metrics must have sample sizes (n=X)
-4. The pipeline will FAIL if `mvp_consumer_validation.json` is missing
-
-**MVP Criteria Validation Checklist (MUST complete before presenting):**
-- [ ] Kids happy rate by zone type calculated (5+ cuisines vs 3-4 vs 1-2)
-- [ ] Reorder intent by zone type calculated
-- [ ] Variety complaints by zone type calculated
-- [ ] All metrics have sample sizes (n=X)
-- [ ] Consumer validation data exists at `docs/data/mvp_consumer_validation.json`
-
-**Why this matters:**
-Order volume alone shows activity, not success. MVP criteria must prove that 5 cuisines/5 partners actually makes families happier and more likely to return - not just that they order more.
-
----
-
-## 10-Factor Family Meal Framework
-
-When prioritizing dishes, score against these 10 factors:
-
-| Factor | Weight | Description |
-|--------|--------|-------------|
-| Kid-Friendly | 15% | Kids will actually eat it |
-| Balanced/Guilt-Free | 12% | Parents feel good serving it |
-| Adult Appeal | 8% | Adults enjoy it too |
-| Portion Flexibility | 15% | Can feed 2 adults + 2 kids |
-| Fussy Eater Friendly | 15% | Mild options available |
-| Customisation | 10% | Individual preferences accommodated |
-| Value at £25 | 10% | Worth it for family of 4 |
-| Shareability | 5% | Family sharing at table |
-| Vegetarian Option | 5% | Good veggie alternative |
-| On Dinneroo Menu | 5% | Actually available |
-
-**Weights are configurable** in `config/factor_weights.json`.
-
-See `DOCUMENTATION/METHODOLOGY/01_DISH_SCORING.md` for full methodology.
-
----
-
-## File Structure
-
-```
-NEW_PROJECT/
-├── .cursorrules                    ← You are here
-├── config/
-│   ├── factor_weights.json         ← Adjustable 10-factor weights
-│   ├── mvp_thresholds.json         ← Zone MVP criteria
-│   └── evidence_standards.json     ← Sample size requirements
-├── scripts/
-│   ├── phase1_data/                ← Data loading scripts
-│   ├── phase2_analysis/            ← Analysis scripts
-│   ├── phase3_synthesis/           ← Report generation scripts
-│   └── run_pipeline.py             ← One-command execution
-├── DOCUMENTATION/
-│   ├── METHODOLOGY/                ← How we analyze
-│   │   ├── 01_DISH_SCORING.md      ← 10-factor methodology
-│   │   ├── 02_ZONE_MVP.md          ← MVP criteria methodology
-│   │   ├── 03_FAMILY_BEHAVIOR.md   ← Segmentation methodology
-│   │   └── 04_EVIDENCE_STANDARDS.md
-│   └── CONTEXT/                    ← Background information
-│       ├── business_context.md
-│       ├── data_sources.md
-│       └── definitions.md
-├── DATA/
-│   ├── 1_SOURCE/                   ← Raw data (DO NOT MODIFY)
-│   ├── 2_ENRICHED/                 ← Processed data
-│   └── 3_ANALYSIS/                 ← Script outputs
-├── docs/                           ← GitHub Pages
-│   ├── dashboards/                 ← Dynamic HTML dashboards
-│   └── data/                       ← JSON data for dashboards
-└── DELIVERABLES/
-    └── reports/                    ← Markdown reports
-```
-
----
-
-## What NOT to Do
-
-❌ Make up data or replicate old findings
-❌ Use a single data source for strategic recommendations
-❌ Use OG Survey ALONE for dish recommendations
-❌ Weight any source > 50%
-❌ Report findings without sample sizes
-❌ Use "significant" without a p-value
-❌ Modify files in `DATA/1_SOURCE/`
-❌ Assume previous findings are still valid
-❌ **Assume top-selling dishes = what families want (survivorship bias)**
-❌ **Skip latent demand analysis when recommending dishes**
-❌ **Think in brand names instead of dish types**
-❌ **Assume orders from a partner = Dinneroo menu items**
-❌ **Add cuisine/dish recommendations to config without source citation**
-❌ **Add recommendations without validating against performance data**
-❌ **Assume "kid-friendly" or "familiar" = good for Dinneroo without evidence**
-❌ **Use order line items as "dish count" - this includes sides, drinks, sauces**
-❌ **Confuse "unique items ordered" with "family dishes on menu"**
-
-### 9. Dish Counts Must Use Anna's Item Categorisation (CRITICAL)
-**"Unique dishes" per zone = family dishes from Anna's curated list, NOT order line items.**
-
-The correct source for dish counts:
-- ✅ `DELIVERABLES/reports/Dish Analysis Dec-25.xlsx` > `Item Categorisation` sheet
-- ✅ Filter to `Include = 1` (155 curated family dishes)
-- ✅ Map brands to zones via orders, sum dish counts per brand
-
-WRONG approach:
-- ❌ Counting unique `MENU_ITEM_LIST` entries from orders (includes sides, drinks)
-- ❌ Using `unique_dishes` from `zone_quality_scores.csv` (order line items)
-
-Example:
-- ❌ WRONG: "Clapham has 533 dishes" (order line items)
-- ✅ CORRECT: "Clapham has 45 family dishes" (from Anna's Item Categorisation)
-
----
-
-## Anti-Replication Rules
-
-**Do NOT assume from previous analysis:**
-- Which dishes are "winners" or "losers"
-- Which zones are "high performing" or "low performing"
-- Which partners are "best" or "worst"
-- Which cuisines are "essential" or "nice-to-have"
-
-**Every insight must come from fresh analysis of the current data.**
-
-If you find yourself writing something like "Pizza is a top performer" without having just calculated it from the data, STOP and run the analysis first.
-
----
-
-## LLM Capabilities to Use
-
-Use LLM for:
-1. **Theme Extraction** - Analyze open-text responses to discover patterns
-2. **Gap Identification** - Compare high vs low performers to find differences
-3. **Recommendation Generation** - Synthesize data into actionable recommendations
-4. **Cross-Source Synthesis** - Combine insights from multiple data sources
-5. **Smart Discovery** - Identify dishes that existing partners COULD make (Track B Opportunity scoring)
-
-Do NOT use LLM to:
-- Make up data
-- Replicate old findings without fresh analysis
-- Skip the evidence standards
-- Score unavailable dishes based on performance (use Track B instead)
-
----
-
-## Getting Started
-
-1. Run `python scripts/run_pipeline.py --list` to see available scripts
-2. Run `python scripts/run_pipeline.py --all` for full analysis
-3. Check `docs/` for dashboards
-4. Check `DELIVERABLES/reports/` for reports
-
----
-
-*This pipeline is designed for reproducible, evidence-based analysis. Let the data tell the story.*
+*Read the agent brief before starting. Let the data tell the story.*

@@ -1,0 +1,110 @@
+{
+  "version": "2.0",
+  "last_updated": "2026-01-07",
+  "description": "Registry of all completed analyses with their sources and key findings",
+  
+  "ground_truth_data": {
+    "description": "Authoritative data sources from Anna's spreadsheet - use these for supply metrics",
+    "sources": {
+      "anna_family_dishes": {
+        "file": "DATA/3_ANALYSIS/anna_family_dishes.csv",
+        "source": "Dish Analysis Dec-25 - Item Categorisation.csv",
+        "description": "142 curated family dishes with brand, cuisine, and dish type",
+        "use_for": ["dish_list", "cuisine_breakdown", "partner_dish_mapping"]
+      },
+      "anna_partner_coverage": {
+        "file": "DATA/3_ANALYSIS/anna_partner_coverage.csv",
+        "source": "Dish Analysis Dec-25 - Onboarded Sites.csv",
+        "description": "40 partners with 756 total onboarded sites",
+        "use_for": ["partner_count", "site_count", "partner_availability"]
+      },
+      "anna_zone_dish_counts": {
+        "file": "DATA/3_ANALYSIS/anna_zone_dish_counts.csv",
+        "source": "Dish Analysis Dec-25 - Zone X Dish Mapping.csv",
+        "description": "1306 zones with dish counts, cuisine breakdown, and brand counts",
+        "use_for": ["zone_dish_count", "zone_cuisine_count", "zone_brand_count", "mvp_status"]
+      }
+    },
+    "note": "Always use Anna's data for supply metrics (what we have). Use Snowflake order data for behavioral metrics (how it performs)."
+  },
+
+  "completed_analyses": {
+    "dish_scoring": {
+      "file": "DATA/3_ANALYSIS/priority_100_dishes.csv",
+      "description": "Top 100 priority dishes with Track A (performance) and Track B (opportunity) scores",
+      "methodology": "Two-track scoring combining order volume, satisfaction, and latent demand",
+      "key_findings": [
+        "142 family dishes identified across 40 partners",
+        "Top cuisines: Asian (67 dishes), Italian (31), Indian (19), Healthy (17), Mexican (14)",
+        "Top dish types: Rice Bowl, Pasta, Grain Bowl, Noodles, Curry"
+      ]
+    },
+    "dish_indices": {
+      "file": "DATA/3_ANALYSIS/dish_indices.csv",
+      "description": "Demand and preference indices for 2x2 matrix visualization",
+      "categories": {
+        "Expand": "High demand + High preference - protect and expand",
+        "Recruit": "High demand + Low preference - recruit partners for these",
+        "Fix": "Low demand + High preference - fix availability issues",
+        "Monitor": "Low demand + Low preference - monitor or deprioritize"
+      }
+    },
+    "zone_analysis": {
+      "file": "DATA/3_ANALYSIS/zone_mvp_status.csv",
+      "description": "MVP status for each zone based on partner and cuisine thresholds",
+      "thresholds": {
+        "partner_count_min": 5,
+        "cuisine_count_min": 5
+      },
+      "key_findings": [
+        "434 zones have at least one family dish available",
+        "Top zones by dish variety: Islington (83), East Central (80), West Central (75)"
+      ]
+    },
+    "cuisine_gap_analysis": {
+      "file": "DATA/3_ANALYSIS/cuisine_gap_analysis.csv",
+      "description": "Gaps in cuisine coverage by zone",
+      "key_findings": [
+        "Core cuisines: Asian, Italian, Indian, Healthy, Mexican, Middle Eastern, British",
+        "Most common gaps: Middle Eastern, British, Healthy in suburban zones"
+      ]
+    },
+    "partner_cuisine_matrix": {
+      "file": "DATA/3_ANALYSIS/partner_cuisine_matrix.csv",
+      "description": "Matrix showing which partners offer which cuisines",
+      "use_for": "Identifying recruitment opportunities"
+    }
+  },
+
+  "behavioral_data": {
+    "description": "Order and rating data from Snowflake - use for performance metrics",
+    "sources": {
+      "orders": {
+        "file": "DATA/2_ENRICHED/orders_enriched.csv",
+        "use_for": ["order_volume", "repeat_rate", "basket_size"]
+      },
+      "ratings": {
+        "file": "DATA/2_ENRICHED/ratings_enriched.csv",
+        "use_for": ["satisfaction", "kids_happy_rate", "variety_complaints"]
+      }
+    }
+  },
+
+  "survey_data": {
+    "description": "Survey responses for qualitative insights",
+    "sources": {
+      "og_survey": {
+        "file": "DATA/1_SOURCE/OG Survey/",
+        "bias_warning": "Reflects opinions of surveyed users, not all customers",
+        "use_for": ["preference_discovery", "latent_demand", "theme_extraction"],
+        "must_triangulate": true
+      },
+      "post_order_survey": {
+        "file": "DATA/1_SOURCE/anna_slides/Dish Analysis Dec-25 - Post Order Survey Data.csv",
+        "use_for": ["satisfaction_validation", "kids_feedback"]
+      }
+    }
+  }
+}
+
+

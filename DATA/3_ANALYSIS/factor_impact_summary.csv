@@ -1,0 +1,8 @@
+factor,pearson_mean,pearson_max,pearson_min,spearman_mean,spearman_max,spearman_min,significant_count,meaningful_count,avg_n,impact_score
+adult_appeal,0.196,0.446,-0.118,0.213,0.61,-0.088,0,2,16.2,0.204
+balanced_guilt_free,0.174,0.224,0.056,0.286,0.57,0.162,0,0,16.2,0.184
+fussy_eater_friendly,-0.059,0.236,-0.331,-0.164,0.147,-0.501,0,1,16.2,0.109
+kid_friendly,-0.019,0.29,-0.375,-0.132,0.245,-0.508,0,1,16.2,0.08
+shareability,-0.028,0.084,-0.177,-0.109,0.107,-0.309,0,0,16.2,0.055
+value_at_25,-0.051,0.115,-0.302,-0.013,0.386,-0.37,0,1,16.2,0.046
+vegetarian_option,0.064,0.237,-0.153,-0.015,0.314,-0.538,0,0,16.2,0.032

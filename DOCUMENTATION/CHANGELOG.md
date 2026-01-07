@@ -4,6 +4,37 @@ All notable changes to the Dinneroo Zone Analysis project.
 
 ---
 
+## [3.1.0] - 2026-01-07
+
+### Added - Ground Truth Data Reconciliation
+
+**Reconciled supply data with Anna's authoritative spreadsheet.**
+
+#### New Data Files
+- `DATA/3_ANALYSIS/anna_family_dishes.csv` - 142 curated family dishes from Anna's Item Categorisation
+- `DATA/3_ANALYSIS/anna_partner_coverage.csv` - 40 partners with 756 onboarded sites
+- `DATA/3_ANALYSIS/anna_zone_dish_counts.csv` - 1,306 zones with dish/cuisine/brand counts
+
+#### New Config Files
+- `config/analysis_registry.json` - Registry of all analyses with ground truth markers
+- `config/data_source_map.json` - Maps questions to appropriate data sources
+- `config/brief_intake.json` - Maps brief types to required analysis
+
+#### New Documentation
+- `DOCUMENTATION/CONTEXT/08_GROUND_TRUTH_DATA.md` - Explains data hierarchy and when to use each source
+
+#### Changed
+- Updated `.cursorrules` to mandate using Anna's data for supply metrics
+- Added anti-pattern: "Don't use order-derived counts for supply metrics"
+
+#### Key Insight
+Order-derived data significantly understated availability:
+- Partners: ~25-30 (orders) vs 40 (ground truth) = +33%
+- Sites: ~400 (orders) vs 756 (ground truth) = +89%
+- Zones with dishes: ~200 (orders) vs 434 (ground truth) = +117%
+
+---
+
 ## [3.0.0] - 2026-01-05
 
 ### Changed - Architecture Upgrade
@@ -96,4 +127,5 @@ This project uses semantic versioning:
 - **Major** (X.0.0): Architecture changes, breaking changes
 - **Minor** (0.X.0): New features, methodology updates
 - **Patch** (0.0.X): Bug fixes, documentation updates
+
 

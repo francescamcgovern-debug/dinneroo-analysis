@@ -1,0 +1,22 @@
+metric,segment,segment_n,family_value,segment_value,difference,index_vs_family,significant
+Satisfaction (Loved/Liked %),Couple,369,85.6,87.1,1.5,102.0,False
+Repeat Intent (Agree %),Couple,369,75.2,75.3,0.1,100.0,False
+Overall Satisfied %,Couple,369,81.4,87.5,6.1,107.0,False
+Food Adequacy (Agree %),Couple,369,77.3,81.1,3.8,105.0,False
+"""Child Appeal"" Cited %",Couple,369,30.9,1.1,-29.8,4.0,True
+"""Adult Appeal"" Cited %",Couple,369,25.5,22.2,-3.3,87.0,False
+"""Good Value"" Cited %",Couple,369,45.4,56.6,11.2,125.0,False
+Satisfaction (Loved/Liked %),Single,190,85.6,84.6,-1.0,99.0,False
+Repeat Intent (Agree %),Single,190,75.2,71.9,-3.3,96.0,False
+Overall Satisfied %,Single,190,81.4,84.0,2.6,103.0,False
+Food Adequacy (Agree %),Single,190,77.3,80.6,3.3,104.0,False
+"""Child Appeal"" Cited %",Single,190,30.9,0.5,-30.4,2.0,True
+"""Adult Appeal"" Cited %",Single,190,25.5,21.1,-4.4,83.0,False
+"""Good Value"" Cited %",Single,190,45.4,47.4,2.0,104.0,False
+Satisfaction (Loved/Liked %),Friends/Sharers,56,85.6,88.9,3.3,104.0,False
+Repeat Intent (Agree %),Friends/Sharers,56,75.2,77.4,2.2,103.0,False
+Overall Satisfied %,Friends/Sharers,56,81.4,86.8,5.4,107.0,False
+Food Adequacy (Agree %),Friends/Sharers,56,77.3,86.8,9.5,112.0,False
+"""Child Appeal"" Cited %",Friends/Sharers,56,30.9,0.0,-30.9,0.0,True
+"""Adult Appeal"" Cited %",Friends/Sharers,56,25.5,21.4,-4.1,84.0,False
+"""Good Value"" Cited %",Friends/Sharers,56,45.4,46.4,1.0,102.0,False

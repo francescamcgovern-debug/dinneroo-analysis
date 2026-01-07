@@ -1,0 +1,24 @@
+dish_type,demand_strength,consumer_preference,quadrant,x_position,y_position,bubble_size,label_for_chart,evidence_type,framework_score
+South Asian / Indian Curry,2.9,1.1,Core Drivers,2.9,1.1,13,South Asian Curry,Measured,3.27
+Biryani,2.5,1.0,Core Drivers,2.5,1.0,6,Biryani,Measured,3.08
+Pho,4.2,1.1,Core Drivers,4.2,1.1,1,Pho,Measured,3.29
+Sushi,1.5,1.0,Core Drivers,1.5,1.0,1,Sushi,Measured,3.06
+Katsu,1.2,1.0,Core Drivers,1.2,1.0,9,Katsu,Measured,3.40
+Rice Bowl,1.2,1.0,Core Drivers,1.2,1.0,21,Rice Bowl,Measured,3.86
+Noodles,1.2,1.0,Core Drivers,1.2,1.0,13,Noodles,Measured,3.32
+Fried Rice,1.0,1.0,Core Drivers,1.0,1.0,5,Fried Rice,Measured,3.32
+Shepherd's Pie,0.3,1.1,Preference Drivers,0.3,1.1,1,Shepherd's Pie,Measured,3.00
+Fajitas,0.4,1.1,Preference Drivers,0.4,1.1,3,Fajitas,Measured,3.29
+East Asian Curry,0.9,1.0,Preference Drivers,0.9,1.0,11,East Asian Curry,Measured,3.08
+Grain Bowl,0.7,1.0,Preference Drivers,0.7,1.0,17,Grain Bowl,Measured,3.67
+Shawarma,0.3,1.0,Preference Drivers,0.3,1.0,3,Shawarma,Measured,3.08
+Protein & Veg,1.6,0.9,Demand Boosters,1.6,0.9,4,Protein & Veg,Blended,3.67
+Pizza,1.0,0.9,Demand Boosters,1.0,0.9,5,Pizza,Measured,3.72
+Lasagne,0.6,0.9,Deprioritised,0.6,0.9,3,Lasagne,Measured,3.00
+Pasta,0.6,0.9,Deprioritised,0.6,0.9,23,Pasta,Measured,3.68
+Tacos,0.4,0.9,Deprioritised,0.4,0.9,3,Tacos,Estimated,3.00
+Chilli,0.2,0.9,Deprioritised,0.2,0.9,3,Chilli,Estimated,3.00
+Burrito / Burrito Bowl,0.1,0.85,Deprioritised,0.1,0.85,3,Burrito,Estimated,3.11
+Quesadilla,0.1,0.85,Deprioritised,0.1,0.85,1,Quesadilla,Estimated,3.00
+Poke,0.1,0.85,Deprioritised,0.1,0.85,1,Poke,Estimated,3.67
+Nachos,0.0,0.85,Deprioritised,0.0,0.85,1,Nachos,Estimated,2.87

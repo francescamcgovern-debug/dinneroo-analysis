@@ -1,0 +1,877 @@
+{
+  "version": "2.0",
+  "description": "Master list of 100 dish types with metadata and LLM-estimated factor scores",
+  "generated": "2026-01-07",
+  "total_dishes": 108,
+  "factor_definitions": {
+    "adult_appeal": "How appealing is this dish to adults? (1=kid food, 5=restaurant quality)",
+    "balanced_guilt_free": "How balanced/healthy is this dish? (1=very indulgent, 5=very healthy)",
+    "fussy_eater_friendly": "How suitable for fussy eaters? (1=adventurous, 5=very plain/familiar)"
+  },
+  "dishes": [
+    {
+      "dish_type": "Pizza",
+      "cuisine": "Italian",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Pasta",
+      "cuisine": "Italian",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Lasagne",
+      "cuisine": "Italian",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Risotto",
+      "cuisine": "Italian",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Gnocchi",
+      "cuisine": "Italian",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Filled Pasta",
+      "cuisine": "Italian",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Baked Pasta",
+      "cuisine": "Italian",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Katsu",
+      "cuisine": "Japanese",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Sushi",
+      "cuisine": "Japanese",
+      "on_dinneroo": true,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 2
+    },
+    {
+      "dish_type": "Ramen",
+      "cuisine": "Japanese",
+      "on_dinneroo": true,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Teriyaki",
+      "cuisine": "Japanese",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Gyoza",
+      "cuisine": "Japanese",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Tempura",
+      "cuisine": "Japanese",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Udon",
+      "cuisine": "Japanese",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Fried Rice",
+      "cuisine": "Chinese",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Noodles",
+      "cuisine": "Asian",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Stir Fry",
+      "cuisine": "Asian",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Sweet & Sour",
+      "cuisine": "Chinese",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Spring Rolls",
+      "cuisine": "Chinese",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Dim Sum",
+      "cuisine": "Chinese",
+      "on_dinneroo": false,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Peking Duck",
+      "cuisine": "Chinese",
+      "on_dinneroo": false,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Pad Thai",
+      "cuisine": "Thai",
+      "on_dinneroo": true,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Thai Curry",
+      "cuisine": "Thai",
+      "on_dinneroo": true,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 2
+    },
+    {
+      "dish_type": "Tom Yum",
+      "cuisine": "Thai",
+      "on_dinneroo": false,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 2
+    },
+    {
+      "dish_type": "Satay",
+      "cuisine": "Thai",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Pho",
+      "cuisine": "Vietnamese",
+      "on_dinneroo": true,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Banh Mi",
+      "cuisine": "Vietnamese",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Korean Fried Chicken",
+      "cuisine": "Korean",
+      "on_dinneroo": true,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Bibimbap",
+      "cuisine": "Korean",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Bulgogi",
+      "cuisine": "Korean",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Japchae",
+      "cuisine": "Korean",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Laksa",
+      "cuisine": "Malaysian",
+      "on_dinneroo": false,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 2
+    },
+    {
+      "dish_type": "Nasi Goreng",
+      "cuisine": "Indonesian",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Rendang",
+      "cuisine": "Indonesian",
+      "on_dinneroo": false,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 2
+    },
+    {
+      "dish_type": "Curry",
+      "cuisine": "Indian",
+      "on_dinneroo": true,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Butter Chicken",
+      "cuisine": "Indian",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Tikka Masala",
+      "cuisine": "Indian",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Korma",
+      "cuisine": "Indian",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Biryani",
+      "cuisine": "Indian",
+      "on_dinneroo": true,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Tandoori",
+      "cuisine": "Indian",
+      "on_dinneroo": true,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Daal",
+      "cuisine": "Indian",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Samosa",
+      "cuisine": "Indian",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Fajitas",
+      "cuisine": "Mexican",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Tacos",
+      "cuisine": "Mexican",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Burrito",
+      "cuisine": "Mexican",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Quesadilla",
+      "cuisine": "Mexican",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Nachos",
+      "cuisine": "Mexican",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Enchiladas",
+      "cuisine": "Mexican",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Fish Tacos",
+      "cuisine": "Mexican",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Chilli",
+      "cuisine": "Mexican",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Shawarma",
+      "cuisine": "Middle Eastern",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Falafel",
+      "cuisine": "Middle Eastern",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Hummus Plate",
+      "cuisine": "Middle Eastern",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Shakshuka",
+      "cuisine": "Middle Eastern",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Lamb Kofta",
+      "cuisine": "Middle Eastern",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Gyros",
+      "cuisine": "Greek",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Souvlaki",
+      "cuisine": "Greek",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Moussaka",
+      "cuisine": "Greek",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Spanakopita",
+      "cuisine": "Greek",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Dolma",
+      "cuisine": "Greek",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 2
+    },
+    {
+      "dish_type": "Greek Mezze",
+      "cuisine": "Greek",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Fish & Chips",
+      "cuisine": "British",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Roast Dinner",
+      "cuisine": "British",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Mac & Cheese",
+      "cuisine": "American",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Burger",
+      "cuisine": "American",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Pie",
+      "cuisine": "British",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Bangers & Mash",
+      "cuisine": "British",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Shepherd's Pie",
+      "cuisine": "British",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Cottage Pie",
+      "cuisine": "British",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Jacket Potato",
+      "cuisine": "British",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Casserole",
+      "cuisine": "British",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Pasty",
+      "cuisine": "British",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Wings",
+      "cuisine": "American",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Chicken Nuggets",
+      "cuisine": "American",
+      "on_dinneroo": false,
+      "adult_appeal": 2,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Hot Dog",
+      "cuisine": "American",
+      "on_dinneroo": false,
+      "adult_appeal": 2,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "BBQ Ribs",
+      "cuisine": "American",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Pulled Pork",
+      "cuisine": "American",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Jerk Chicken",
+      "cuisine": "Caribbean",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Jollof Rice",
+      "cuisine": "African",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Curry Goat",
+      "cuisine": "Caribbean",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 2
+    },
+    {
+      "dish_type": "Plantain",
+      "cuisine": "Caribbean",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Suya",
+      "cuisine": "African",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Oxtail",
+      "cuisine": "Caribbean",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 2
+    },
+    {
+      "dish_type": "Schnitzel",
+      "cuisine": "German",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Bratwurst",
+      "cuisine": "German",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Pierogi",
+      "cuisine": "Polish",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 2,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Stroganoff",
+      "cuisine": "Russian",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Tagine",
+      "cuisine": "Moroccan",
+      "on_dinneroo": false,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 2
+    },
+    {
+      "dish_type": "Paella",
+      "cuisine": "Spanish",
+      "on_dinneroo": false,
+      "adult_appeal": 5,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Cous Cous",
+      "cuisine": "Moroccan",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Salad",
+      "cuisine": "Healthy",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Poke Bowl",
+      "cuisine": "Hawaiian",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 2
+    },
+    {
+      "dish_type": "Buddha Bowl",
+      "cuisine": "Healthy",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Grain Bowl",
+      "cuisine": "Healthy",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Rice Bowl",
+      "cuisine": "Asian",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Acai Bowl",
+      "cuisine": "Healthy",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Soup",
+      "cuisine": "Global",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Sandwich",
+      "cuisine": "Global",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Wrap",
+      "cuisine": "Global",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Grilled Chicken",
+      "cuisine": "Global",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Rotisserie Chicken",
+      "cuisine": "Global",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Chinese Family Meal",
+      "cuisine": "Chinese",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Grilled Chicken with Sides",
+      "cuisine": "Global",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 5,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Veggie Fajitas",
+      "cuisine": "Mexican",
+      "on_dinneroo": true,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Chicken Pie",
+      "cuisine": "British",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Halloumi Wrap",
+      "cuisine": "Global",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 4
+    },
+    {
+      "dish_type": "Sweet & Sour Chicken",
+      "cuisine": "Global",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 5
+    },
+    {
+      "dish_type": "Bowl",
+      "cuisine": "Healthy/Fresh",
+      "on_dinneroo": true,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 3
+    }
+  ]
+}

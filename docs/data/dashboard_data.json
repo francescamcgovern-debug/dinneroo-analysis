@@ -1,0 +1,3168 @@
+{
+  "metadata": {
+    "generated": "2026-01-07T18:46:30.802824",
+    "version": "1.0",
+    "sources": {
+      "postOrder": {
+        "name": "Post-Order Survey",
+        "type": "survey",
+        "description": "Feedback from customers after placing a Dinneroo order",
+        "n": 1599,
+        "lastUpdated": "2026-01-06"
+      },
+      "dropoff": {
+        "name": "Dropoff Survey",
+        "type": "survey",
+        "description": "Feedback from people who browsed but didn't order",
+        "n": 838,
+        "lastUpdated": "2026-01-06"
+      },
+      "orders": {
+        "name": "Snowflake Orders",
+        "type": "behavioral",
+        "description": "Actual Dinneroo orders (revealed preference)",
+        "n": 82350,
+        "lastUpdated": "2026-01-06"
+      },
+      "ratings": {
+        "name": "Snowflake Ratings",
+        "type": "behavioral",
+        "description": "Customer ratings and comments",
+        "n": 10713,
+        "lastUpdated": "2026-01-06"
+      },
+      "annaGroundTruth": {
+        "name": "Anna's Ground Truth",
+        "type": "supply",
+        "description": "Authoritative supply data (what we have)",
+        "dishes": 155,
+        "partners": 40,
+        "sites": 756,
+        "lastUpdated": "2025-12-01"
+      },
+      "transcripts": {
+        "name": "Customer Transcripts",
+        "type": "qualitative",
+        "description": "88 customer interview transcripts",
+        "n": 88,
+        "lastUpdated": "2025-12-15"
+      },
+      "ogSurvey": {
+        "name": "OG Survey",
+        "type": "historical",
+        "description": "Pre-launch survey (stated preference)",
+        "n": 400,
+        "lastUpdated": "2025-06-01",
+        "biasWarning": true,
+        "warning": "Pre-launch stated preference - validate with behavioral data"
+      }
+    }
+  },
+  "dishes": [
+    {
+      "rank": 1,
+      "dishType": "Pho",
+      "cuisine": "Vietnamese",
+      "onDinneroo": true,
+      "strategicPriority": "Core Driver",
+      "performance": {
+        "avgSalesPerDish": 136.0,
+        "pctZonesTop5": "100%",
+        "deliverooRating": 4.6,
+        "mealSatisfaction": "92%",
+        "repeatIntent": "89%"
+      },
+      "opportunity": {
+        "dishSuitability": 2.2,
+        "openTextRequests": 18,
+        "wishlistPct": NaN
+      },
+      "context": {
+        "demandStrength": 4.2,
+        "consumerPreference": 1.1,
+        "coverageGap": "48%"
+      }
+    },
+    {
+      "rank": 2,
+      "dishType": "Indian Curry",
+      "cuisine": "Indian",
+      "onDinneroo": true,
+      "strategicPriority": "Core Driver",
+      "performance": {
+        "avgSalesPerDish": 98.0,
+        "pctZonesTop5": "64%",
+        "deliverooRating": 4.7,
+        "mealSatisfaction": "93%",
+        "repeatIntent": "85%"
+      },
+      "opportunity": {
+        "dishSuitability": 3.2,
+        "openTextRequests": 15,
+        "wishlistPct": "5.9%"
+      },
+      "context": {
+        "demandStrength": 2.9,
+        "consumerPreference": 1.1,
+        "coverageGap": "74%"
+      }
+    },
+    {
+      "rank": 3,
+      "dishType": "Biryani",
+      "cuisine": "Indian",
+      "onDinneroo": true,
+      "strategicPriority": "Core Driver",
+      "performance": {
+        "avgSalesPerDish": 86.0,
+        "pctZonesTop5": "54%",
+        "deliverooRating": 4.6,
+        "mealSatisfaction": "91%",
+        "repeatIntent": "83%"
+      },
+      "opportunity": {
+        "dishSuitability": null,
+        "openTextRequests": 2,
+        "wishlistPct": NaN
+      },
+      "context": {
+        "demandStrength": 2.5,
+        "consumerPreference": 1.0,
+        "coverageGap": "79%"
+      }
+    },
+    {
+      "rank": 4,
+      "dishType": "Protein & Veg",
+      "cuisine": "Healthy",
+      "onDinneroo": true,
+      "strategicPriority": "Demand Booster",
+      "performance": {
+        "avgSalesPerDish": 44.0,
+        "pctZonesTop5": "44%",
+        "deliverooRating": 4.4,
+        "mealSatisfaction": "71%",
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 3.5,
+        "openTextRequests": 5,
+        "wishlistPct": "7.9%"
+      },
+      "context": {
+        "demandStrength": 1.6,
+        "consumerPreference": 0.9,
+        "coverageGap": "93%"
+      }
+    },
+    {
+      "rank": 5,
+      "dishType": "Sushi",
+      "cuisine": "Japanese",
+      "onDinneroo": true,
+      "strategicPriority": "Core Driver",
+      "performance": {
+        "avgSalesPerDish": 32.0,
+        "pctZonesTop5": "56%",
+        "deliverooRating": 4.7,
+        "mealSatisfaction": "93%",
+        "repeatIntent": "81%"
+      },
+      "opportunity": {
+        "dishSuitability": null,
+        "openTextRequests": 6,
+        "wishlistPct": NaN
+      },
+      "context": {
+        "demandStrength": 1.5,
+        "consumerPreference": 1.0,
+        "coverageGap": "63%"
+      }
+    },
+    {
+      "rank": 6,
+      "dishType": "Rice Bowl",
+      "cuisine": "Asian",
+      "onDinneroo": true,
+      "strategicPriority": "Core Driver",
+      "performance": {
+        "avgSalesPerDish": 29.0,
+        "pctZonesTop5": "41%",
+        "deliverooRating": 4.4,
+        "mealSatisfaction": "84%",
+        "repeatIntent": "77%"
+      },
+      "opportunity": {
+        "dishSuitability": 2.5,
+        "openTextRequests": 0,
+        "wishlistPct": "4.2%"
+      },
+      "context": {
+        "demandStrength": 1.2,
+        "consumerPreference": 1.0,
+        "coverageGap": "12%"
+      }
+    },
+    {
+      "rank": 7,
+      "dishType": "Noodles",
+      "cuisine": "Asian",
+      "onDinneroo": true,
+      "strategicPriority": "Core Driver",
+      "performance": {
+        "avgSalesPerDish": 28.0,
+        "pctZonesTop5": "37%",
+        "deliverooRating": 4.5,
+        "mealSatisfaction": "88%",
+        "repeatIntent": "88%"
+      },
+      "opportunity": {
+        "dishSuitability": 2.5,
+        "openTextRequests": 15,
+        "wishlistPct": "12.9%"
+      },
+      "context": {
+        "demandStrength": 1.2,
+        "consumerPreference": 1.0,
+        "coverageGap": "21%"
+      }
+    },
+    {
+      "rank": 8,
+      "dishType": "Katsu",
+      "cuisine": "Japanese",
+      "onDinneroo": true,
+      "strategicPriority": "Core Driver",
+      "performance": {
+        "avgSalesPerDish": 29.0,
+        "pctZonesTop5": "41%",
+        "deliverooRating": 4.3,
+        "mealSatisfaction": "87%",
+        "repeatIntent": "85%"
+      },
+      "opportunity": {
+        "dishSuitability": 2.9,
+        "openTextRequests": 9,
+        "wishlistPct": "11.1%"
+      },
+      "context": {
+        "demandStrength": 1.2,
+        "consumerPreference": 1.0,
+        "coverageGap": "5%"
+      }
+    },
+    {
+      "rank": 9,
+      "dishType": "Pizza",
+      "cuisine": "Italian",
+      "onDinneroo": true,
+      "strategicPriority": "Demand Booster",
+      "performance": {
+        "avgSalesPerDish": 11.0,
+        "pctZonesTop5": "49%",
+        "deliverooRating": 4.1,
+        "mealSatisfaction": "81%",
+        "repeatIntent": "75%"
+      },
+      "opportunity": {
+        "dishSuitability": 2.0,
+        "openTextRequests": 25,
+        "wishlistPct": "3.7%"
+      },
+      "context": {
+        "demandStrength": 1.0,
+        "consumerPreference": 0.9,
+        "coverageGap": "4%"
+      }
+    },
+    {
+      "rank": 10,
+      "dishType": "Fried Rice",
+      "cuisine": "Asian",
+      "onDinneroo": true,
+      "strategicPriority": "Deprioritised",
+      "performance": {
+        "avgSalesPerDish": 41.0,
+        "pctZonesTop5": "17%",
+        "deliverooRating": 4.5,
+        "mealSatisfaction": "79%",
+        "repeatIntent": "81%"
+      },
+      "opportunity": {
+        "dishSuitability": 2.5,
+        "openTextRequests": 2,
+        "wishlistPct": NaN
+      },
+      "context": {
+        "demandStrength": 1.0,
+        "consumerPreference": 1.0,
+        "coverageGap": "42%"
+      }
+    },
+    {
+      "rank": 11,
+      "dishType": "East Asian Curry",
+      "cuisine": "Asian",
+      "onDinneroo": true,
+      "strategicPriority": "Preference Driver",
+      "performance": {
+        "avgSalesPerDish": 18.0,
+        "pctZonesTop5": "31%",
+        "deliverooRating": 4.4,
+        "mealSatisfaction": "87%",
+        "repeatIntent": "84%"
+      },
+      "opportunity": {
+        "dishSuitability": 3.6,
+        "openTextRequests": 1,
+        "wishlistPct": "19.1%"
+      },
+      "context": {
+        "demandStrength": 0.9,
+        "consumerPreference": 1.0,
+        "coverageGap": "3%"
+      }
+    },
+    {
+      "rank": 12,
+      "dishType": "Grain Bowl",
+      "cuisine": "Healthy",
+      "onDinneroo": true,
+      "strategicPriority": "Preference Driver",
+      "performance": {
+        "avgSalesPerDish": 21.0,
+        "pctZonesTop5": "18%",
+        "deliverooRating": 4.7,
+        "mealSatisfaction": "86%",
+        "repeatIntent": "90%"
+      },
+      "opportunity": {
+        "dishSuitability": null,
+        "openTextRequests": 0,
+        "wishlistPct": NaN
+      },
+      "context": {
+        "demandStrength": 0.7,
+        "consumerPreference": 1.0,
+        "coverageGap": "76%"
+      }
+    },
+    {
+      "rank": 13,
+      "dishType": "Pasta",
+      "cuisine": "Italian",
+      "onDinneroo": true,
+      "strategicPriority": "Deprioritised",
+      "performance": {
+        "avgSalesPerDish": 8.0,
+        "pctZonesTop5": "25%",
+        "deliverooRating": 4.2,
+        "mealSatisfaction": "78%",
+        "repeatIntent": "74%"
+      },
+      "opportunity": {
+        "dishSuitability": 2.5,
+        "openTextRequests": 29,
+        "wishlistPct": "1.2%"
+      },
+      "context": {
+        "demandStrength": 0.6,
+        "consumerPreference": 0.9,
+        "coverageGap": "3%"
+      }
+    },
+    {
+      "rank": 14,
+      "dishType": "Lasagne",
+      "cuisine": "Italian",
+      "onDinneroo": true,
+      "strategicPriority": "Deprioritised",
+      "performance": {
+        "avgSalesPerDish": 13.0,
+        "pctZonesTop5": "22%",
+        "deliverooRating": 4.6,
+        "mealSatisfaction": "77%",
+        "repeatIntent": "75%"
+      },
+      "opportunity": {
+        "dishSuitability": 3.3,
+        "openTextRequests": 6,
+        "wishlistPct": "15.6%"
+      },
+      "context": {
+        "demandStrength": 0.6,
+        "consumerPreference": 0.9,
+        "coverageGap": "66%"
+      }
+    },
+    {
+      "rank": 15,
+      "dishType": "Fajitas",
+      "cuisine": "Mexican",
+      "onDinneroo": true,
+      "strategicPriority": "Preference Driver",
+      "performance": {
+        "avgSalesPerDish": 9.0,
+        "pctZonesTop5": "12%",
+        "deliverooRating": 4.2,
+        "mealSatisfaction": "96%",
+        "repeatIntent": "100%"
+      },
+      "opportunity": {
+        "dishSuitability": 2.5,
+        "openTextRequests": 0,
+        "wishlistPct": "5.2%"
+      },
+      "context": {
+        "demandStrength": 0.4,
+        "consumerPreference": 1.1,
+        "coverageGap": "68%"
+      }
+    },
+    {
+      "rank": 16,
+      "dishType": "Tacos",
+      "cuisine": "Mexican",
+      "onDinneroo": true,
+      "strategicPriority": "Deprioritised",
+      "performance": {
+        "avgSalesPerDish": 7.0,
+        "pctZonesTop5": "18%",
+        "deliverooRating": 4.1,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 3.2,
+        "openTextRequests": 1,
+        "wishlistPct": "10.6%"
+      },
+      "context": {
+        "demandStrength": 0.4,
+        "consumerPreference": 0.9,
+        "coverageGap": "84%"
+      }
+    },
+    {
+      "rank": 17,
+      "dishType": "Shawarma",
+      "cuisine": "Middle Eastern",
+      "onDinneroo": true,
+      "strategicPriority": "Preference Driver",
+      "performance": {
+        "avgSalesPerDish": 10.0,
+        "pctZonesTop5": "10%",
+        "deliverooRating": 4.5,
+        "mealSatisfaction": "90%",
+        "repeatIntent": "86%"
+      },
+      "opportunity": {
+        "dishSuitability": null,
+        "openTextRequests": 2,
+        "wishlistPct": NaN
+      },
+      "context": {
+        "demandStrength": 0.3,
+        "consumerPreference": 1.0,
+        "coverageGap": "57%"
+      }
+    },
+    {
+      "rank": 18,
+      "dishType": "Shepherd's Pie",
+      "cuisine": "British",
+      "onDinneroo": true,
+      "strategicPriority": "Preference Driver",
+      "performance": {
+        "avgSalesPerDish": 11.0,
+        "pctZonesTop5": "8%",
+        "deliverooRating": 4.3,
+        "mealSatisfaction": "91%",
+        "repeatIntent": "100%"
+      },
+      "opportunity": {
+        "dishSuitability": 4.4,
+        "openTextRequests": 3,
+        "wishlistPct": NaN
+      },
+      "context": {
+        "demandStrength": 0.3,
+        "consumerPreference": 1.1,
+        "coverageGap": "57%"
+      }
+    },
+    {
+      "rank": 19,
+      "dishType": "Chilli",
+      "cuisine": "Mexican",
+      "onDinneroo": true,
+      "strategicPriority": "Deprioritised",
+      "performance": {
+        "avgSalesPerDish": 6.0,
+        "pctZonesTop5": "5%",
+        "deliverooRating": 3.8,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 3.3,
+        "openTextRequests": 3,
+        "wishlistPct": "5.2%"
+      },
+      "context": {
+        "demandStrength": 0.2,
+        "consumerPreference": 0.9,
+        "coverageGap": "68%"
+      }
+    },
+    {
+      "rank": 20,
+      "dishType": "Burrito Bowl",
+      "cuisine": "Mexican",
+      "onDinneroo": true,
+      "strategicPriority": "Deprioritised",
+      "performance": {
+        "avgSalesPerDish": 7.0,
+        "pctZonesTop5": "0%",
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 2.5,
+        "openTextRequests": 0,
+        "wishlistPct": NaN
+      },
+      "context": {
+        "demandStrength": 0.1,
+        "consumerPreference": null,
+        "coverageGap": "84%"
+      }
+    },
+    {
+      "rank": 21,
+      "dishType": "Quesadilla",
+      "cuisine": "Mexican",
+      "onDinneroo": true,
+      "strategicPriority": "Deprioritised",
+      "performance": {
+        "avgSalesPerDish": 6.0,
+        "pctZonesTop5": "0%",
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 3.2,
+        "openTextRequests": 0,
+        "wishlistPct": NaN
+      },
+      "context": {
+        "demandStrength": 0.1,
+        "consumerPreference": null,
+        "coverageGap": "99%"
+      }
+    },
+    {
+      "rank": 22,
+      "dishType": "Poke",
+      "cuisine": "Healthy",
+      "onDinneroo": true,
+      "strategicPriority": "Deprioritised",
+      "performance": {
+        "avgSalesPerDish": 3.0,
+        "pctZonesTop5": "0%",
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": null,
+        "openTextRequests": 1,
+        "wishlistPct": NaN
+      },
+      "context": {
+        "demandStrength": 0.1,
+        "consumerPreference": null,
+        "coverageGap": "63%"
+      }
+    },
+    {
+      "rank": 23,
+      "dishType": "Nachos",
+      "cuisine": "Mexican",
+      "onDinneroo": true,
+      "strategicPriority": "Deprioritised",
+      "performance": {
+        "avgSalesPerDish": 1.0,
+        "pctZonesTop5": "0%",
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": null,
+        "openTextRequests": 1,
+        "wishlistPct": NaN
+      },
+      "context": {
+        "demandStrength": 0.0,
+        "consumerPreference": null,
+        "coverageGap": "85%"
+      }
+    },
+    {
+      "rank": 24,
+      "dishType": "Casserole / Stew",
+      "cuisine": "British",
+      "onDinneroo": false,
+      "strategicPriority": "Prospect",
+      "performance": {
+        "avgSalesPerDish": null,
+        "pctZonesTop5": NaN,
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 4.3,
+        "openTextRequests": 1,
+        "wishlistPct": "12.3%"
+      },
+      "context": {
+        "demandStrength": null,
+        "consumerPreference": null,
+        "coverageGap": "100%"
+      }
+    },
+    {
+      "rank": 25,
+      "dishType": "Risotto",
+      "cuisine": "Italian",
+      "onDinneroo": false,
+      "strategicPriority": "Prospect",
+      "performance": {
+        "avgSalesPerDish": null,
+        "pctZonesTop5": NaN,
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 3.6,
+        "openTextRequests": 0,
+        "wishlistPct": "15.1%"
+      },
+      "context": {
+        "demandStrength": null,
+        "consumerPreference": null,
+        "coverageGap": "100%"
+      }
+    },
+    {
+      "rank": 26,
+      "dishType": "Roast",
+      "cuisine": "British",
+      "onDinneroo": false,
+      "strategicPriority": "Prospect",
+      "performance": {
+        "avgSalesPerDish": null,
+        "pctZonesTop5": NaN,
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 3.5,
+        "openTextRequests": 1,
+        "wishlistPct": "4.7%"
+      },
+      "context": {
+        "demandStrength": null,
+        "consumerPreference": null,
+        "coverageGap": "100%"
+      }
+    },
+    {
+      "rank": 27,
+      "dishType": "Tagine",
+      "cuisine": "Moroccan",
+      "onDinneroo": false,
+      "strategicPriority": "Prospect",
+      "performance": {
+        "avgSalesPerDish": null,
+        "pctZonesTop5": NaN,
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 3.3,
+        "openTextRequests": 0,
+        "wishlistPct": "9.9%"
+      },
+      "context": {
+        "demandStrength": null,
+        "consumerPreference": null,
+        "coverageGap": "100%"
+      }
+    },
+    {
+      "rank": 28,
+      "dishType": "Paella",
+      "cuisine": "Spanish",
+      "onDinneroo": false,
+      "strategicPriority": "Prospect",
+      "performance": {
+        "avgSalesPerDish": null,
+        "pctZonesTop5": NaN,
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 3.3,
+        "openTextRequests": 0,
+        "wishlistPct": "14.8%"
+      },
+      "context": {
+        "demandStrength": null,
+        "consumerPreference": null,
+        "coverageGap": "100%"
+      }
+    },
+    {
+      "rank": 29,
+      "dishType": "Pastry Pie",
+      "cuisine": "British",
+      "onDinneroo": false,
+      "strategicPriority": "Prospect",
+      "performance": {
+        "avgSalesPerDish": null,
+        "pctZonesTop5": NaN,
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 3.2,
+        "openTextRequests": 6,
+        "wishlistPct": "17.3%"
+      },
+      "context": {
+        "demandStrength": null,
+        "consumerPreference": null,
+        "coverageGap": "100%"
+      }
+    },
+    {
+      "rank": 30,
+      "dishType": "Jacket Potato",
+      "cuisine": "British",
+      "onDinneroo": false,
+      "strategicPriority": "Prospect",
+      "performance": {
+        "avgSalesPerDish": null,
+        "pctZonesTop5": NaN,
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 2.9,
+        "openTextRequests": 0,
+        "wishlistPct": "9.9%"
+      },
+      "context": {
+        "demandStrength": null,
+        "consumerPreference": null,
+        "coverageGap": "100%"
+      }
+    },
+    {
+      "rank": 31,
+      "dishType": "Sausage & Mash",
+      "cuisine": "British",
+      "onDinneroo": false,
+      "strategicPriority": "Prospect",
+      "performance": {
+        "avgSalesPerDish": null,
+        "pctZonesTop5": NaN,
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 2.9,
+        "openTextRequests": 0,
+        "wishlistPct": "6.2%"
+      },
+      "context": {
+        "demandStrength": null,
+        "consumerPreference": null,
+        "coverageGap": "100%"
+      }
+    },
+    {
+      "rank": 32,
+      "dishType": "Fish & Chips",
+      "cuisine": "British",
+      "onDinneroo": false,
+      "strategicPriority": "Prospect",
+      "performance": {
+        "avgSalesPerDish": null,
+        "pctZonesTop5": NaN,
+        "deliverooRating": null,
+        "mealSatisfaction": NaN,
+        "repeatIntent": NaN
+      },
+      "opportunity": {
+        "dishSuitability": 2.5,
+        "openTextRequests": 5,
+        "wishlistPct": "8.9%"
+      },
+      "context": {
+        "demandStrength": null,
+        "consumerPreference": null,
+        "coverageGap": "100%"
+      }
+    }
+  ],
+  "zones": [
+    {
+      "zone": "Finsbury Park / Harringay / Crouch End",
+      "region": "London",
+      "orders": 1534,
+      "partners": 4,
+      "cuisinesCount": 3,
+      "avgRating": 4.528,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Indian', 'Vietnamese', 'Mexican']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Italian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['pho', 'curry', 'noodle', 'rice', 'burrito', 'taco', 'biryani', 'grilled chicken']",
+      "missingDishTypes": "['katsu', 'pasta', 'pizza', 'fajita', 'sushi']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Canning Town",
+      "region": "Other",
+      "orders": 1314,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.6702702702702705,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Indian', 'Middle Eastern', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "20%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Italian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Chinese']",
+      "dishCoverage": "23%",
+      "presentDishTypes": "['curry', 'rice', 'biryani']",
+      "missingDishTypes": "['katsu', 'pho', 'noodle', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'sushi', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Surrey Quays",
+      "region": "Other",
+      "orders": 1139,
+      "partners": 4,
+      "cuisinesCount": 3,
+      "avgRating": 4.606217616580311,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Indian', 'Middle Eastern', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "20%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Italian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Chinese']",
+      "dishCoverage": "23%",
+      "presentDishTypes": "['curry', 'rice', 'biryani']",
+      "missingDishTypes": "['katsu', 'pho', 'noodle', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'sushi', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Wapping and Mile End",
+      "region": "Other",
+      "orders": 961,
+      "partners": 4,
+      "cuisinesCount": 4,
+      "avgRating": 4.662068965517242,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Indian', 'Chinese', 'Middle Eastern', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "20%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Italian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican']",
+      "dishCoverage": "31%",
+      "presentDishTypes": "['curry', 'noodle', 'rice', 'biryani']",
+      "missingDishTypes": "['katsu', 'pho', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'sushi', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Dublin City North",
+      "region": "Other",
+      "orders": 782,
+      "partners": 6,
+      "cuisinesCount": 5,
+      "avgRating": 4.058252427184466,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Indian', 'Chinese', 'Irish/British', 'Italian', 'Middle Eastern']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'biryani']",
+      "missingDishTypes": "['katsu', 'pho', 'taco', 'sushi', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "South Kensington",
+      "region": "London",
+      "orders": 676,
+      "partners": 7,
+      "cuisinesCount": 4,
+      "avgRating": 4.556701030927835,
+      "isMvp": false,
+      "mvpCriteriaMet": 2,
+      "cuisinesAvailable": "['French', 'Italian', 'Japanese', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "20%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "38%",
+      "presentDishTypes": "['rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Richmond / Kew",
+      "region": "London",
+      "orders": 562,
+      "partners": 6,
+      "cuisinesCount": 6,
+      "avgRating": 4.3023255813953485,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese', 'Japanese/Asian', 'French', 'Italian', 'British', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "St Albans",
+      "region": "South East",
+      "orders": 559,
+      "partners": 4,
+      "cuisinesCount": 4,
+      "avgRating": 4.22680412371134,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['British', 'Japanese', 'Japanese/Asian', 'Italian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Croydon",
+      "region": "London",
+      "orders": 519,
+      "partners": 4,
+      "cuisinesCount": 3,
+      "avgRating": 4.2894736842105265,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian', 'Japanese/Asian', 'Japanese']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Victoria, Westminster, Pimlico",
+      "region": "London",
+      "orders": 506,
+      "partners": 8,
+      "cuisinesCount": 5,
+      "avgRating": 4.633333333333334,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Healthy/Fresh', 'Italian', 'Japanese/Asian', 'British', 'Japanese']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Basingstoke",
+      "region": "South East",
+      "orders": 483,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 3.8333333333333335,
+      "isMvp": false,
+      "mvpCriteriaMet": 0,
+      "cuisinesAvailable": "['Japanese/Asian', 'Mexican', 'Italian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "77%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Southampton",
+      "region": "South East",
+      "orders": 470,
+      "partners": 5,
+      "cuisinesCount": 4,
+      "avgRating": 4.288888888888889,
+      "isMvp": false,
+      "mvpCriteriaMet": 2,
+      "cuisinesAvailable": "['British', 'Mexican', 'Japanese/Asian', 'Italian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Bromley",
+      "region": "London",
+      "orders": 465,
+      "partners": 4,
+      "cuisinesCount": 3,
+      "avgRating": 3.8135593220338984,
+      "isMvp": false,
+      "mvpCriteriaMet": 0,
+      "cuisinesAvailable": "['Japanese', 'Japanese/Asian', 'Italian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Colchester",
+      "region": "South East",
+      "orders": 464,
+      "partners": 4,
+      "cuisinesCount": 4,
+      "avgRating": 4.597014925373134,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Japanese/Asian', 'British', 'Italian', 'Japanese']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Dalston Stoke Newington",
+      "region": "Midlands",
+      "orders": 434,
+      "partners": 4,
+      "cuisinesCount": 3,
+      "avgRating": 4.426470588235294,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Indian', 'Italian', 'Japanese']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "46%",
+      "presentDishTypes": "['katsu', 'curry', 'rice', 'pasta', 'pizza', 'biryani']",
+      "missingDishTypes": "['pho', 'noodle', 'fajita', 'burrito', 'taco', 'sushi', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Romford",
+      "region": "Other",
+      "orders": 434,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.43859649122807,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian', 'Chinese', 'Japanese/Asian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Brixton",
+      "region": "London",
+      "orders": 396,
+      "partners": 4,
+      "cuisinesCount": 4,
+      "avgRating": 4.5,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Indian', 'Italian', 'Japanese', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Watford",
+      "region": "South East",
+      "orders": 372,
+      "partners": 4,
+      "cuisinesCount": 4,
+      "avgRating": 4.357142857142857,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Japanese/Asian', 'Japanese', 'Mexican', 'Italian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "77%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Edinburgh North",
+      "region": "Scotland",
+      "orders": 345,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.4324324324324325,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Japanese', 'Japanese/Asian', 'Vietnamese']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Indian', 'Italian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pasta', 'pizza', 'fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Dartford",
+      "region": "Other",
+      "orders": 336,
+      "partners": 6,
+      "cuisinesCount": 5,
+      "avgRating": 4.102564102564102,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese/Asian', 'British', 'Japanese', 'Italian', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Farnham",
+      "region": "Other",
+      "orders": 306,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.673076923076923,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['British', 'Italian', 'Thai/Southeast Asian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "46%",
+      "presentDishTypes": "['curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['katsu', 'pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Easton",
+      "region": "Other",
+      "orders": 297,
+      "partners": 5,
+      "cuisinesCount": 4,
+      "avgRating": 4.375,
+      "isMvp": false,
+      "mvpCriteriaMet": 2,
+      "cuisinesAvailable": "['Middle Eastern', 'Japanese', 'Japanese/Asian', 'Italian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Putney & Barnes",
+      "region": "London",
+      "orders": 296,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.702127659574468,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Japanese', 'Japanese/Asian', 'Italian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Epsom",
+      "region": "South East",
+      "orders": 292,
+      "partners": 4,
+      "cuisinesCount": 3,
+      "avgRating": 4.125,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Japanese/Asian', 'Italian', 'Japanese']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Belsize Park / St John's Wood",
+      "region": "Other",
+      "orders": 278,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.7924528301886795,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian', 'Middle Eastern', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "20%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Chinese']",
+      "dishCoverage": "31%",
+      "presentDishTypes": "['curry', 'rice', 'pasta', 'pizza']",
+      "missingDishTypes": "['katsu', 'pho', 'noodle', 'fajita', 'burrito', 'taco', 'sushi', 'biryani', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Golders Green / Brent Cross",
+      "region": "London",
+      "orders": 275,
+      "partners": 3,
+      "cuisinesCount": 1,
+      "avgRating": 4.0,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian']",
+      "essentialCuisineCoverage": "20%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "46%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Walton on Thames",
+      "region": "Other",
+      "orders": 275,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.472222222222222,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Japanese/Asian', 'Italian', 'Japanese']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Camden/Kentish Town",
+      "region": "London",
+      "orders": 249,
+      "partners": 6,
+      "cuisinesCount": 5,
+      "avgRating": 4.111111111111111,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese', 'Japanese/Asian', 'Mexican', 'Italian', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'taco', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Uxbridge",
+      "region": "Other",
+      "orders": 242,
+      "partners": 4,
+      "cuisinesCount": 3,
+      "avgRating": 4.404761904761905,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Japanese/Asian', 'Italian', 'Japanese']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Didsbury and Withington",
+      "region": "Other",
+      "orders": 236,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.722222222222222,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Japanese/Asian', 'Japanese', 'Italian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Cribbs Causeway Shopping Centre",
+      "region": "Other",
+      "orders": 220,
+      "partners": 5,
+      "cuisinesCount": 4,
+      "avgRating": 3.8666666666666663,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian', 'Japanese/Asian', 'Japanese', 'Mexican']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Henley on Thames",
+      "region": "Other",
+      "orders": 181,
+      "partners": 3,
+      "cuisinesCount": 2,
+      "avgRating": 4.277777777777778,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian', 'Thai/Southeast Asian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Newton Longville",
+      "region": "Other",
+      "orders": 181,
+      "partners": 5,
+      "cuisinesCount": 3,
+      "avgRating": 4.045454545454546,
+      "isMvp": false,
+      "mvpCriteriaMet": 2,
+      "cuisinesAvailable": "['Japanese/Asian', 'Italian', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Eccles",
+      "region": "Other",
+      "orders": 175,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.0256410256410255,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['British', 'Japanese', 'Mexican']",
+      "essentialCuisineCoverage": "0%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Indian', 'Italian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'fajita', 'taco', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'pasta', 'pizza', 'burrito', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Highgate, Muswell Hill, East Finchley",
+      "region": "Other",
+      "orders": 168,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.416666666666667,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian', 'Indian', 'Japanese']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "46%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Hatfield/ Hatfield Park",
+      "region": "Other",
+      "orders": 160,
+      "partners": 3,
+      "cuisinesCount": 2,
+      "avgRating": 4.388888888888889,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian', 'Japanese/Asian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Manchester Central",
+      "region": "London",
+      "orders": 156,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.363636363636363,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Mexican', 'Vietnamese', 'Japanese/Asian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Indian', 'Italian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['pasta', 'pizza', 'fajita', 'burrito', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Braintree",
+      "region": "Other",
+      "orders": 151,
+      "partners": 4,
+      "cuisinesCount": 3,
+      "avgRating": 3.9047619047619047,
+      "isMvp": false,
+      "mvpCriteriaMet": 0,
+      "cuisinesAvailable": "['Italian', 'British', 'Japanese/Asian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Newbury",
+      "region": "Other",
+      "orders": 148,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.478260869565218,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['British', 'Italian', 'Japanese']",
+      "essentialCuisineCoverage": "20%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "38%",
+      "presentDishTypes": "['katsu', 'curry', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'noodle', 'rice', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Harrow",
+      "region": "London",
+      "orders": 126,
+      "partners": 4,
+      "cuisinesCount": 3,
+      "avgRating": 4.333333333333333,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Japanese', 'Indian', 'Italian']",
+      "essentialCuisineCoverage": "40%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'biryani']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Sutton",
+      "region": "London",
+      "orders": 101,
+      "partners": 3,
+      "cuisinesCount": 2,
+      "avgRating": 4.125,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian', 'Japanese']",
+      "essentialCuisineCoverage": "20%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'biryani', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Edgware / Mill Hill",
+      "region": "Other",
+      "orders": 95,
+      "partners": 3,
+      "cuisinesCount": 1,
+      "avgRating": 3.8333333333333335,
+      "isMvp": false,
+      "mvpCriteriaMet": 0,
+      "cuisinesAvailable": "['Italian']",
+      "essentialCuisineCoverage": "20%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "46%",
+      "presentDishTypes": "['curry', 'noodle', 'rice', 'pasta', 'pizza', 'taco']",
+      "missingDishTypes": "['katsu', 'pho', 'fajita', 'burrito', 'sushi', 'biryani', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Dublin City South",
+      "region": "Other",
+      "orders": 93,
+      "partners": 3,
+      "cuisinesCount": 2,
+      "avgRating": 4.823529411764706,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Middle Eastern', 'Indian']",
+      "essentialCuisineCoverage": "20%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Italian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Chinese']",
+      "dishCoverage": "31%",
+      "presentDishTypes": "['rice', 'pizza', 'biryani', 'grilled chicken']",
+      "missingDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'pasta', 'fajita', 'burrito', 'taco', 'sushi']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Chingford",
+      "region": "Other",
+      "orders": 77,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.2,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian', 'Mexican', 'Japanese']",
+      "essentialCuisineCoverage": "20%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Vietnamese', 'Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'noodle', 'rice', 'pasta', 'pizza', 'burrito', 'taco']",
+      "missingDishTypes": "['pho', 'curry', 'fajita', 'sushi', 'biryani', 'grilled chicken']",
+      "recruitmentPriority": "High"
+    },
+    {
+      "zone": "Clapham",
+      "region": "London",
+      "orders": 2349,
+      "partners": 13,
+      "cuisinesCount": 9,
+      "avgRating": 4.6104651162790695,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese/Asian', 'Vietnamese', 'Indian', 'Thai/Southeast Asian', 'Italian', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Japanese']",
+      "essentialCuisineCoverage": "100%",
+      "missingEssentialCuisines": "[]",
+      "missingRecommendedCuisines": "['British', 'Chinese']",
+      "dishCoverage": "85%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'taco', 'sushi', 'biryani', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Islington",
+      "region": "London",
+      "orders": 2262,
+      "partners": 8,
+      "cuisinesCount": 8,
+      "avgRating": 4.68956043956044,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese/Asian', 'Japanese', 'Indian', 'Vietnamese', 'Chinese', 'Thai/Southeast Asian', 'Italian', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "100%",
+      "missingEssentialCuisines": "[]",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Middle Eastern']",
+      "dishCoverage": "77%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'biryani', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Brighton Central",
+      "region": "London",
+      "orders": 1734,
+      "partners": 10,
+      "cuisinesCount": 8,
+      "avgRating": 4.465863453815261,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'British', 'Thai/Southeast Asian', 'Mexican', 'Italian', 'Japanese/Asian', 'Japanese', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Middle Eastern', 'Chinese']",
+      "dishCoverage": "92%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Oxford",
+      "region": "South East",
+      "orders": 1501,
+      "partners": 7,
+      "cuisinesCount": 5,
+      "avgRating": 4.515723270440252,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'Japanese', 'Italian', 'Vietnamese', 'Japanese/Asian']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Cambridge",
+      "region": "South East",
+      "orders": 1403,
+      "partners": 8,
+      "cuisinesCount": 7,
+      "avgRating": 4.482300884955753,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'British', 'Japanese/Asian', 'Italian', 'Thai/Southeast Asian', 'Japanese', 'Mexican']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "92%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Milton Keynes",
+      "region": "South East",
+      "orders": 1332,
+      "partners": 8,
+      "cuisinesCount": 7,
+      "avgRating": 4.4581005586592175,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'British', 'Vietnamese', 'Italian', 'Japanese/Asian', 'Japanese', 'Mexican']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "92%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Wimbledon",
+      "region": "London",
+      "orders": 1314,
+      "partners": 8,
+      "cuisinesCount": 7,
+      "avgRating": 4.5,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Italian', 'Japanese/Asian', 'Vietnamese', 'Thai/Southeast Asian', 'Japanese', 'British', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Notting Hill / Paddington",
+      "region": "London",
+      "orders": 1226,
+      "partners": 9,
+      "cuisinesCount": 7,
+      "avgRating": 4.525114155251141,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese/Asian', 'Indian', 'French', 'Japanese', 'Healthy/Fresh', 'Italian', 'Thai/Southeast Asian']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Vietnamese']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'biryani', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Wembley",
+      "region": "Other",
+      "orders": 1202,
+      "partners": 7,
+      "cuisinesCount": 7,
+      "avgRating": 4.489795918367347,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese/Asian', 'Indian', 'Italian', 'Mexican', 'Vietnamese', 'Healthy/Fresh', 'Middle Eastern']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Chinese']",
+      "dishCoverage": "77%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'biryani', 'grilled chicken']",
+      "missingDishTypes": "['burrito', 'taco', 'sushi']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Bristol",
+      "region": "South West",
+      "orders": 1173,
+      "partners": 8,
+      "cuisinesCount": 6,
+      "avgRating": 4.533707865168539,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'Thai/Southeast Asian', 'Japanese/Asian', 'Middle Eastern', 'Mexican', 'Italian']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Chinese']",
+      "dishCoverage": "85%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['sushi', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Kingston",
+      "region": "London",
+      "orders": 1156,
+      "partners": 8,
+      "cuisinesCount": 7,
+      "avgRating": 4.461538461538462,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'Vietnamese', 'Japanese/Asian', 'British', 'Italian', 'Japanese', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Norwich",
+      "region": "South East",
+      "orders": 1050,
+      "partners": 6,
+      "cuisinesCount": 5,
+      "avgRating": 4.248322147651007,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'Vietnamese', 'Italian', 'Japanese/Asian', 'British']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Guildford",
+      "region": "South East",
+      "orders": 969,
+      "partners": 6,
+      "cuisinesCount": 6,
+      "avgRating": 4.247787610619469,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'Japanese/Asian', 'Thai/Southeast Asian', 'Japanese', 'British', 'Italian']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "West Central",
+      "region": "London",
+      "orders": 793,
+      "partners": 10,
+      "cuisinesCount": 7,
+      "avgRating": 4.563025210084033,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'Healthy/Fresh', 'Japanese', 'Vietnamese', 'Italian', 'Japanese/Asian', 'British']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "York",
+      "region": "North",
+      "orders": 729,
+      "partners": 8,
+      "cuisinesCount": 6,
+      "avgRating": 4.456310679611651,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Italian', 'British', 'Mexican', 'Japanese/Asian', 'Vietnamese', 'Thai/Southeast Asian']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "77%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['burrito', 'sushi', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Birmingham",
+      "region": "Midlands",
+      "orders": 689,
+      "partners": 9,
+      "cuisinesCount": 7,
+      "avgRating": 4.154411764705882,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese/Asian', 'Thai/Southeast Asian', 'Vietnamese', 'British', 'Italian', 'Healthy/Fresh', 'Mexican']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Middle Eastern', 'Chinese']",
+      "dishCoverage": "77%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['burrito', 'sushi', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Glasgow Centre",
+      "region": "Scotland",
+      "orders": 542,
+      "partners": 5,
+      "cuisinesCount": 5,
+      "avgRating": 4.5476190476190474,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'Mexican', 'Japanese/Asian', 'Italian', 'Thai/Southeast Asian']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "77%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['burrito', 'sushi', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Cheltenham",
+      "region": "South West",
+      "orders": 512,
+      "partners": 5,
+      "cuisinesCount": 4,
+      "avgRating": 4.378378378378378,
+      "isMvp": false,
+      "mvpCriteriaMet": 2,
+      "cuisinesAvailable": "['Vietnamese', 'Japanese/Asian', 'Thai/Southeast Asian', 'Italian']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Leeds City Centre",
+      "region": "North",
+      "orders": 470,
+      "partners": 9,
+      "cuisinesCount": 7,
+      "avgRating": 4.521739130434782,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Mexican', 'Japanese', 'Thai/Southeast Asian', 'Japanese/Asian', 'Vietnamese', 'Italian', 'British']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "92%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Southsea",
+      "region": "Other",
+      "orders": 435,
+      "partners": 7,
+      "cuisinesCount": 5,
+      "avgRating": 4.180327868852459,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Italian', 'Japanese/Asian', 'Vietnamese', 'Thai/Southeast Asian', 'Mexican']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "85%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['sushi', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Royal Tunbridge Wells",
+      "region": "South East",
+      "orders": 426,
+      "partners": 6,
+      "cuisinesCount": 6,
+      "avgRating": 4.4363636363636365,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'British', 'Thai/Southeast Asian', 'Japanese/Asian', 'Italian', 'Japanese']",
+      "essentialCuisineCoverage": "80%",
+      "missingEssentialCuisines": "['Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Low"
+    },
+    {
+      "zone": "Brockley / Forest Hill",
+      "region": "London",
+      "orders": 1478,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.612068965517241,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Vietnamese', 'Indian', 'Japanese/Asian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Italian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'biryani', 'grilled chicken']",
+      "missingDishTypes": "['pasta', 'pizza', 'fajita', 'burrito', 'taco', 'sushi']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Lewisham",
+      "region": "London",
+      "orders": 1358,
+      "partners": 5,
+      "cuisinesCount": 5,
+      "avgRating": 4.495575221238938,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'Italian', 'Thai/Southeast Asian', 'British', 'Japanese']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Reading",
+      "region": "South East",
+      "orders": 1318,
+      "partners": 10,
+      "cuisinesCount": 6,
+      "avgRating": 4.293103448275862,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Mexican', 'Vietnamese', 'Japanese/Asian', 'Italian', 'Japanese', 'British']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "92%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "East Central",
+      "region": "London",
+      "orders": 1280,
+      "partners": 11,
+      "cuisinesCount": 8,
+      "avgRating": 4.459090909090909,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'French', 'Healthy/Fresh', 'Japanese/Asian', 'Japanese', 'Middle Eastern', 'Italian', 'Mexican']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Chinese']",
+      "dishCoverage": "77%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'taco', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Chiswick",
+      "region": "London",
+      "orders": 1240,
+      "partners": 6,
+      "cuisinesCount": 5,
+      "avgRating": 4.737864077669903,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'Indian', 'Healthy/Fresh', 'Middle Eastern', 'Italian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'biryani', 'grilled chicken']",
+      "missingDishTypes": "['katsu', 'fajita', 'burrito', 'taco', 'sushi']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Canary Wharf",
+      "region": "Other",
+      "orders": 1122,
+      "partners": 6,
+      "cuisinesCount": 5,
+      "avgRating": 4.294520547945205,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Indian', 'Japanese', 'Japanese/Asian', 'Vietnamese', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Italian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pasta', 'pizza', 'fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Hammersmith / Shepherd's Bush",
+      "region": "London",
+      "orders": 962,
+      "partners": 7,
+      "cuisinesCount": 6,
+      "avgRating": 4.456647398843931,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Italian', 'Healthy/Fresh', 'British', 'Japanese/Asian', 'Japanese', 'Vietnamese']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Ealing",
+      "region": "London",
+      "orders": 904,
+      "partners": 5,
+      "cuisinesCount": 5,
+      "avgRating": 4.201680672268908,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese/Asian', 'Japanese', 'Vietnamese', 'Italian', 'Mexican']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "77%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Wandsworth",
+      "region": "London",
+      "orders": 853,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.691275167785235,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Indian', 'Japanese/Asian', 'Italian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'biryani', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "London Bridge",
+      "region": "London",
+      "orders": 850,
+      "partners": 10,
+      "cuisinesCount": 7,
+      "avgRating": 4.572519083969466,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese/Asian', 'Vietnamese', 'Healthy/Fresh', 'Japanese', 'Italian', 'British', 'Chinese']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Mexican', 'Middle Eastern']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Hampstead",
+      "region": "Other",
+      "orders": 797,
+      "partners": 5,
+      "cuisinesCount": 4,
+      "avgRating": 4.472,
+      "isMvp": false,
+      "mvpCriteriaMet": 2,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'Japanese/Asian', 'Japanese', 'Indian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Italian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'sushi', 'biryani', 'grilled chicken']",
+      "missingDishTypes": "['pasta', 'pizza', 'fajita', 'burrito', 'taco']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Mayfair",
+      "region": "London",
+      "orders": 772,
+      "partners": 8,
+      "cuisinesCount": 6,
+      "avgRating": 4.568345323741007,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese', 'Vietnamese', 'Italian', 'British', 'Japanese/Asian', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Mexican', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Nottingham",
+      "region": "London",
+      "orders": 759,
+      "partners": 7,
+      "cuisinesCount": 5,
+      "avgRating": 4.4324324324324325,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'British', 'Italian', 'Japanese/Asian', 'Mexican']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "85%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Chelmsford",
+      "region": "South East",
+      "orders": 725,
+      "partners": 7,
+      "cuisinesCount": 5,
+      "avgRating": 4.208791208791209,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['British', 'Thai/Southeast Asian', 'Japanese/Asian', 'Italian', 'Mexican']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "85%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Edinburgh Central",
+      "region": "London",
+      "orders": 722,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.511363636363637,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Vietnamese', 'Thai/Southeast Asian', 'Italian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Indian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['katsu', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Stratford",
+      "region": "London",
+      "orders": 665,
+      "partners": 5,
+      "cuisinesCount": 4,
+      "avgRating": 4.262626262626263,
+      "isMvp": false,
+      "mvpCriteriaMet": 2,
+      "cuisinesAvailable": "['Japanese/Asian', 'Italian', 'Vietnamese', 'Japanese']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Bath",
+      "region": "South West",
+      "orders": 647,
+      "partners": 9,
+      "cuisinesCount": 7,
+      "avgRating": 4.533980582524272,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'Italian', 'Japanese/Asian', 'Japanese', 'British', 'Mexican', 'Healthy/Fresh']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['Middle Eastern', 'Chinese']",
+      "dishCoverage": "85%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'sushi', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Bournemouth",
+      "region": "South East",
+      "orders": 634,
+      "partners": 4,
+      "cuisinesCount": 3,
+      "avgRating": 4.263736263736264,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian', 'Japanese/Asian', 'Vietnamese']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Fulham",
+      "region": "London",
+      "orders": 615,
+      "partners": 5,
+      "cuisinesCount": 5,
+      "avgRating": 4.574257425742574,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['French', 'Vietnamese', 'Japanese/Asian', 'Japanese', 'Italian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Bracknell",
+      "region": "Other",
+      "orders": 585,
+      "partners": 4,
+      "cuisinesCount": 4,
+      "avgRating": 4.553846153846154,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'Japanese/Asian', 'Italian', 'Mexican']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "85%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'burrito', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Edgbaston",
+      "region": "Other",
+      "orders": 574,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.67741935483871,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'Vietnamese', 'Italian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Japanese/Asian', 'Indian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['katsu', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Reigate",
+      "region": "South East",
+      "orders": 541,
+      "partners": 6,
+      "cuisinesCount": 5,
+      "avgRating": 4.506666666666667,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese/Asian', 'Thai/Southeast Asian', 'British', 'Italian', 'Japanese']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "46%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani', 'grilled chicken']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Salford",
+      "region": "Other",
+      "orders": 535,
+      "partners": 6,
+      "cuisinesCount": 4,
+      "avgRating": 4.257425742574258,
+      "isMvp": false,
+      "mvpCriteriaMet": 2,
+      "cuisinesAvailable": "['Italian', 'Japanese', 'Japanese/Asian', 'Thai/Southeast Asian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Canterbury",
+      "region": "South East",
+      "orders": 534,
+      "partners": 7,
+      "cuisinesCount": 6,
+      "avgRating": 4.158730158730159,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'Japanese/Asian', 'Italian', 'British', 'Mexican', 'Japanese']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "77%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['burrito', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Windsor",
+      "region": "South East",
+      "orders": 517,
+      "partners": 6,
+      "cuisinesCount": 4,
+      "avgRating": 4.298701298701299,
+      "isMvp": false,
+      "mvpCriteriaMet": 2,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'Japanese/Asian', 'Italian', 'British']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Cardiff",
+      "region": "Wales",
+      "orders": 475,
+      "partners": 6,
+      "cuisinesCount": 5,
+      "avgRating": 4.571428571428571,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Vietnamese', 'Japanese/Asian', 'Mexican', 'Italian', 'British']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "77%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'taco', 'grilled chicken']",
+      "missingDishTypes": "['burrito', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Sheffield City Centre",
+      "region": "North",
+      "orders": 442,
+      "partners": 4,
+      "cuisinesCount": 3,
+      "avgRating": 4.267605633802817,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Vietnamese', 'Italian', 'Japanese/Asian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Horsham",
+      "region": "Other",
+      "orders": 416,
+      "partners": 4,
+      "cuisinesCount": 4,
+      "avgRating": 4.409090909090909,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['British', 'Japanese/Asian', 'Thai/Southeast Asian', 'Italian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Stevenage",
+      "region": "Other",
+      "orders": 369,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.523076923076923,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Japanese/Asian', 'Thai/Southeast Asian', 'Italian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Liverpool City Centre",
+      "region": "North",
+      "orders": 307,
+      "partners": 5,
+      "cuisinesCount": 4,
+      "avgRating": 4.2926829268292686,
+      "isMvp": false,
+      "mvpCriteriaMet": 2,
+      "cuisinesAvailable": "['Italian', 'Japanese/Asian', 'Mexican', 'Vietnamese']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Indian', 'Thai/Southeast Asian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "69%",
+      "presentDishTypes": "['katsu', 'pho', 'curry', 'noodle', 'rice', 'pasta', 'fajita', 'burrito', 'grilled chicken']",
+      "missingDishTypes": "['pizza', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Royal Leamington Spa",
+      "region": "Other",
+      "orders": 257,
+      "partners": 4,
+      "cuisinesCount": 4,
+      "avgRating": 4.366666666666666,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Mexican', 'Japanese/Asian', 'Italian', 'Thai/Southeast Asian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['British', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "West Bridgford",
+      "region": "Other",
+      "orders": 239,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.291666666666667,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'Japanese/Asian', 'Italian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Chichester",
+      "region": "North",
+      "orders": 237,
+      "partners": 4,
+      "cuisinesCount": 4,
+      "avgRating": 4.133333333333334,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Italian', 'Thai/Southeast Asian', 'British', 'Japanese/Asian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "54%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Cardiff Bay Area",
+      "region": "Wales",
+      "orders": 144,
+      "partners": 5,
+      "cuisinesCount": 5,
+      "avgRating": 4.777777777777778,
+      "isMvp": true,
+      "mvpCriteriaMet": 3,
+      "cuisinesAvailable": "['Japanese/Asian', 'Thai/Southeast Asian', 'Mexican', 'British', 'Italian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "62%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza', 'fajita', 'grilled chicken']",
+      "missingDishTypes": "['pho', 'burrito', 'taco', 'sushi', 'biryani']",
+      "recruitmentPriority": "Medium"
+    },
+    {
+      "zone": "Winchester",
+      "region": "North",
+      "orders": 126,
+      "partners": 3,
+      "cuisinesCount": 3,
+      "avgRating": 4.0,
+      "isMvp": false,
+      "mvpCriteriaMet": 1,
+      "cuisinesAvailable": "['Thai/Southeast Asian', 'Japanese/Asian', 'Italian']",
+      "essentialCuisineCoverage": "60%",
+      "missingEssentialCuisines": "['Vietnamese', 'Indian']",
+      "missingRecommendedCuisines": "['British', 'Mexican', 'Healthy/Fresh', 'Middle Eastern', 'Chinese']",
+      "dishCoverage": "46%",
+      "presentDishTypes": "['katsu', 'curry', 'noodle', 'rice', 'pasta', 'pizza']",
+      "missingDishTypes": "['pho', 'fajita', 'burrito', 'taco', 'sushi', 'biryani', 'grilled chicken']",
+      "recruitmentPriority": "Medium"
+    }
+  ],
+  "cuisineGaps": [
+    {
+      "cuisine": "British",
+      "itemCount": 292,
+      "brandCount": 1,
+      "avgRating": 4.503401360544218,
+      "ratingCount": 588,
+      "orderCount": 3358,
+      "gapType": "OK",
+      "supplyVsAvg": 152.4,
+      "ratingVsBenchmark": 105.7
+    },
+    {
+      "cuisine": "Chinese",
+      "itemCount": 46,
+      "brandCount": 3,
+      "avgRating": 4.379571150097466,
+      "ratingCount": 110,
+      "orderCount": 849,
+      "gapType": "SUPPLY GAP",
+      "supplyVsAvg": 24.0,
+      "ratingVsBenchmark": 102.8
+    },
+    {
+      "cuisine": "French",
+      "itemCount": 15,
+      "brandCount": 1,
+      "avgRating": 4.420454545454546,
+      "ratingCount": 176,
+      "orderCount": 978,
+      "gapType": "SUPPLY GAP",
+      "supplyVsAvg": 7.8,
+      "ratingVsBenchmark": 103.8
+    },
+    {
+      "cuisine": "Healthy/Fresh",
+      "itemCount": 109,
+      "brandCount": 4,
+      "avgRating": 4.4514900026052615,
+      "ratingCount": 405,
+      "orderCount": 2636,
+      "gapType": "OK",
+      "supplyVsAvg": 56.9,
+      "ratingVsBenchmark": 104.5
+    },
+    {
+      "cuisine": "Indian",
+      "itemCount": 85,
+      "brandCount": 6,
+      "avgRating": 4.391014769089712,
+      "ratingCount": 1647,
+      "orderCount": 10183,
+      "gapType": "OK",
+      "supplyVsAvg": 44.4,
+      "ratingVsBenchmark": 103.1
+    },
+    {
+      "cuisine": "Irish/British",
+      "itemCount": 3,
+      "brandCount": 1,
+      "avgRating": 4.222222222222222,
+      "ratingCount": 9,
+      "orderCount": 36,
+      "gapType": "SUPPLY GAP",
+      "supplyVsAvg": 1.6,
+      "ratingVsBenchmark": 99.1
+    },
+    {
+      "cuisine": "Italian",
+      "itemCount": 705,
+      "brandCount": 6,
+      "avgRating": 4.116058280202213,
+      "ratingCount": 1163,
+      "orderCount": 8385,
+      "gapType": "OK",
+      "supplyVsAvg": 368.1,
+      "ratingVsBenchmark": 96.6
+    },
+    {
+      "cuisine": "Japanese",
+      "itemCount": 282,
+      "brandCount": 5,
+      "avgRating": 4.510647789518545,
+      "ratingCount": 493,
+      "orderCount": 3788,
+      "gapType": "OK",
+      "supplyVsAvg": 147.2,
+      "ratingVsBenchmark": 105.9
+    },
+    {
+      "cuisine": "Japanese/Asian",
+      "itemCount": 410,
+      "brandCount": 1,
+      "avgRating": 4.24640555280119,
+      "ratingCount": 2017,
+      "orderCount": 14129,
+      "gapType": "OK",
+      "supplyVsAvg": 214.1,
+      "ratingVsBenchmark": 99.7
+    },
+    {
+      "cuisine": "Mexican",
+      "itemCount": 168,
+      "brandCount": 2,
+      "avgRating": 3.935747663551402,
+      "ratingCount": 250,
+      "orderCount": 1479,
+      "gapType": "QUALITY GAP",
+      "supplyVsAvg": 87.7,
+      "ratingVsBenchmark": 92.4
+    },
+    {
+      "cuisine": "Middle Eastern",
+      "itemCount": 30,
+      "brandCount": 5,
+      "avgRating": 4.665697674418604,
+      "ratingCount": 182,
+      "orderCount": 1023,
+      "gapType": "SUPPLY GAP",
+      "supplyVsAvg": 15.7,
+      "ratingVsBenchmark": 109.5
+    },
+    {
+      "cuisine": "Thai/Southeast Asian",
+      "itemCount": 207,
+      "brandCount": 3,
+      "avgRating": 4.425224875930521,
+      "ratingCount": 1516,
+      "orderCount": 10224,
+      "gapType": "OK",
+      "supplyVsAvg": 108.1,
+      "ratingVsBenchmark": 103.9
+    },
+    {
+      "cuisine": "Vietnamese",
+      "itemCount": 138,
+      "brandCount": 1,
+      "avgRating": 4.559904534606205,
+      "ratingCount": 2095,
+      "orderCount": 14055,
+      "gapType": "OK",
+      "supplyVsAvg": 72.0,
+      "ratingVsBenchmark": 107.0
+    }
+  ],
+  "latentDemand": {
+    "generated": "2026-01-07T15:58:23.546041",
+    "sources": {
+      "dropoff_responses": 942,
+      "post_order_responses": 1599,
+      "ratings": 10713,
+      "og_survey_dishes": 36
+    },
+    "total_dish_types_scored": 83,
+    "top_10_by_latent_demand": [
+      {
+        "dish_type": "Pie",
+        "latent_demand_score": 3
+      },
+      {
+        "dish_type": "Noodles",
+        "latent_demand_score": 3
+      },
+      {
+        "dish_type": "Vegetarian",
+        "latent_demand_score": 3
+      },
+      {
+        "dish_type": "Kids Menu",
+        "latent_demand_score": 3
+      },
+      {
+        "dish_type": "Gnocchi",
+        "latent_demand_score": 2
+      },
+      {
+        "dish_type": "Fish & Chips",
+        "latent_demand_score": 2
+      },
+      {
+        "dish_type": "Burger",
+        "latent_demand_score": 2
+      },
+      {
+        "dish_type": "Pasta",
+        "latent_demand_score": 2
+      },
+      {
+        "dish_type": "Healthy",
+        "latent_demand_score": 2
+      },
+      {
+        "dish_type": "Pizza",
+        "latent_demand_score": 2
+      }
+    ]
+  },
+  "surveySignals": {
+    "postOrder": {
+      "totalResponses": 1599,
+      "satisfactionDistribution": {
+        "Loved it": 603,
+        "Liked it": 531,
+        "Neutral": 121,
+        "Did not enjoy it": 62
+      },
+      "topRestaurants": [],
+      "topDishes": []
+    },
+    "dropoff": {
+      "totalResponses": 942,
+      "barriers": {},
+      "wishlistDishes": []
+    },
+    "combined": {
+      "totalSurveyResponses": 2541
+    }
+  },
+  "behavioral": {
+    "orders": {
+      "totalOrders": 82350,
+      "uniqueCustomers": 51579,
+      "uniquePartners": 770,
+      "uniqueZones": 201,
+      "topZones": [
+        {
+          "zone": "Clapham",
+          "orders": 2687
+        },
+        {
+          "zone": "Islington",
+          "orders": 2535
+        },
+        {
+          "zone": "Brighton Central",
+          "orders": 1974
+        },
+        {
+          "zone": "Finsbury Park / Harringay / Crouch End",
+          "orders": 1814
+        },
+        {
+          "zone": "Brockley / Forest Hill",
+          "orders": 1735
+        },
+        {
+          "zone": "Oxford",
+          "orders": 1674
+        },
+        {
+          "zone": "Cambridge",
+          "orders": 1597
+        },
+        {
+          "zone": "Milton Keynes",
+          "orders": 1549
+        },
+        {
+          "zone": "Wimbledon",
+          "orders": 1529
+        },
+        {
+          "zone": "Lewisham",
+          "orders": 1525
+        }
+      ],
+      "topPartners": [
+        {
+          "partner": "Dishoom - Editions - ISL",
+          "orders": 1338
+        },
+        {
+          "partner": "Dishoom - Editions - BLW",
+          "orders": 1260
+        },
+        {
+          "partner": "Dishoom - Editions - CRE",
+          "orders": 1029
+        },
+        {
+          "partner": "Dishoom - Editions - BCP",
+          "orders": 979
+        },
+        {
+          "partner": "Dishoom - Editions - WME",
+          "orders": 828
+        },
+        {
+          "partner": "Dishoom - Editions - ACT",
+          "orders": 809
+        },
+        {
+          "partner": "Dishoom - Editions - BER",
+          "orders": 803
+        },
+        {
+          "partner": "Pho - Bristol",
+          "orders": 788
+        },
+        {
+          "partner": "Dishoom - Editions - WNW",
+          "orders": 781
+        },
+        {
+          "partner": "Dishoom - Editions - DUL",
+          "orders": 772
+        }
+      ]
+    },
+    "ratings": {
+      "totalRatings": 10797,
+      "avgRating": 4.432745262764865,
+      "ratingDistribution": {
+        "1": 662,
+        "2": 317,
+        "3": 607,
+        "4": 1264,
+        "5": 7863
+      }
+    },
+    "partners": {}
+  },
+  "groundTruth": {
+    "partners": [
+      {
+        "brand": "PizzaExpress",
+        "total_sites": 166,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Wagamama",
+        "total_sites": 103,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Itsu",
+        "total_sites": 50,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Pho",
+        "total_sites": 46,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Bill's",
+        "total_sites": 40,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Giggling Squid",
+        "total_sites": 38,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "LEON",
+        "total_sites": 36,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Prezzo",
+        "total_sites": 36,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Iro Sushi",
+        "total_sites": 30,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Bella Italia",
+        "total_sites": 29,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Las Iguanas",
+        "total_sites": 29,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Kokoro",
+        "total_sites": 19,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Banana Tree",
+        "total_sites": 18,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Zambrero UK",
+        "total_sites": 11,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Dishoom",
+        "total_sites": 11,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Milano",
+        "total_sites": 10,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "atis",
+        "total_sites": 9,
+        "site_phase": "Deepening Supply: Existing Px"
+      },
+      {
+        "brand": "Farmer J",
+        "total_sites": 9,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Jakob's Kitchen",
+        "total_sites": 8,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Jakob's Kitchen - Remedy",
+        "total_sites": 6,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Tiffin Tin",
+        "total_sites": 6,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Asia Villa",
+        "total_sites": 5,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Xian Street Food",
+        "total_sites": 5,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Cocotte",
+        "total_sites": 5,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Chaska",
+        "total_sites": 4,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Ting Thai",
+        "total_sites": 4,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Umi Falafel",
+        "total_sites": 3,
+        "site_phase": "Ire Launch"
+      },
+      {
+        "brand": "Kricket",
+        "total_sites": 3,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Saravana Bhavan",
+        "total_sites": 3,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "PIZAZA-SGroup",
+        "total_sites": 3,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "SOYO-SGroup",
+        "total_sites": 2,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Tadka House",
+        "total_sites": 1,
+        "site_phase": "Ire Launch"
+      },
+      {
+        "brand": "TUK TUK-SGroup",
+        "total_sites": 1,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Shaku Maku",
+        "total_sites": 1,
+        "site_phase": "Ire Launch"
+      },
+      {
+        "brand": "Tula",
+        "total_sites": 1,
+        "site_phase": "Ire Launch"
+      },
+      {
+        "brand": "Zaatar Rathmines",
+        "total_sites": 1,
+        "site_phase": "Ire Launch"
+      },
+      {
+        "brand": "Cacciari's",
+        "total_sites": 1,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Zumuku",
+        "total_sites": 1,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Zumuku Sushi",
+        "total_sites": 1,
+        "site_phase": "Existing Sites (P1 & P2 Launch)"
+      },
+      {
+        "brand": "Taste of Hong Kong",
+        "total_sites": 1,
+        "site_phase": "Ire Launch"
+      }
+    ],
+    "zones": {
+      "totalZones": 1306,
+      "zonesWithDishes": 434
+    },
+    "dishes": {},
+    "summary": {
+      "totalBrands": 40,
+      "totalSites": 756
+    }
+  }
+}

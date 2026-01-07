@@ -1,0 +1,7 @@
+price_band,dinneroo_orders,dinneroo_share,non_dinneroo_orders,non_dinneroo_share,sweet_spot
+£0-15,1,0.0,79319,10.8,No
+£15-20,1050,1.6,133286,18.2,No
+£20-25,8887,13.5,123652,16.9,No
+£25-30,29444,44.6,104863,14.3,No
+£30-40,17187,26.0,149897,20.4,Yes
+£40+,9505,14.4,142211,19.4,No

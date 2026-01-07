@@ -1242,23 +1242,6 @@
   },
   {
     "rank": 74,
-    "dish_type": "Buddha Bowl",
-    "priority_score": 2.4,
-    "category": "Monitor",
-    "evidence_type": "Opportunity",
-    "track_a_score": null,
-    "track_b_score": 2.4,
-    "discovery_score": null,
-    "order_volume": 0,
-    "avg_rating": null,
-    "cuisine": "Healthy/Fresh",
-    "gap_type": "No Gap",
-    "potential_partners": "Farmer J",
-    "recommended_action": "Monitor Buddha Bowl for changes in demand",
-    "evidence_flag": "Opportunity: 2.4/5"
-  },
-  {
-    "rank": 75,
     "dish_type": "Poke Bowl",
     "priority_score": 2.4,
     "category": "Monitor",
@@ -1275,24 +1258,24 @@
     "evidence_flag": "Opportunity: 2.4/5 | Orders: 39"
   },
   {
-    "rank": 76,
-    "dish_type": "Bowl",
-    "priority_score": 2.37,
+    "rank": 75,
+    "dish_type": "Buddha Bowl",
+    "priority_score": 2.4,
     "category": "Monitor",
     "evidence_type": "Opportunity",
     "track_a_score": null,
-    "track_b_score": 2.37,
+    "track_b_score": 2.4,
     "discovery_score": null,
-    "order_volume": 4517,
+    "order_volume": 0,
     "avg_rating": null,
     "cuisine": "Healthy/Fresh",
     "gap_type": "No Gap",
     "potential_partners": "Farmer J",
-    "recommended_action": "Monitor Bowl for changes in demand",
-    "evidence_flag": "Opportunity: 2.4/5 | Orders: 4517"
+    "recommended_action": "Monitor Buddha Bowl for changes in demand",
+    "evidence_flag": "Opportunity: 2.4/5"
   },
   {
-    "rank": 77,
+    "rank": 76,
     "dish_type": "Sweet & Sour Chicken",
     "priority_score": 2.37,
     "category": "Monitor",
@@ -1309,7 +1292,7 @@
     "evidence_flag": "Opportunity: 2.4/5 | Orders: 1081"
   },
   {
-    "rank": 78,
+    "rank": 77,
     "dish_type": "Rotisserie Chicken",
     "priority_score": 2.37,
     "category": "Monitor",
@@ -1326,7 +1309,41 @@
     "evidence_flag": "Opportunity: 2.4/5"
   },
   {
+    "rank": 78,
+    "dish_type": "Bowl",
+    "priority_score": 2.37,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "track_a_score": null,
+    "track_b_score": 2.37,
+    "discovery_score": null,
+    "order_volume": 4517,
+    "avg_rating": null,
+    "cuisine": "Healthy/Fresh",
+    "gap_type": "No Gap",
+    "potential_partners": "Farmer J",
+    "recommended_action": "Monitor Bowl for changes in demand",
+    "evidence_flag": "Opportunity: 2.4/5 | Orders: 4517"
+  },
+  {
     "rank": 79,
+    "dish_type": "Korma",
+    "priority_score": 2.2,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "track_a_score": null,
+    "track_b_score": 2.2,
+    "discovery_score": null,
+    "order_volume": 0,
+    "avg_rating": null,
+    "cuisine": "Indian",
+    "gap_type": "No Gap",
+    "potential_partners": "Dishoom",
+    "recommended_action": "Monitor Korma for changes in demand",
+    "evidence_flag": "Opportunity: 2.2/5"
+  },
+  {
+    "rank": 80,
     "dish_type": "Tikka Masala",
     "priority_score": 2.2,
     "category": "Monitor",
@@ -1343,7 +1360,7 @@
     "evidence_flag": "Opportunity: 2.2/5 | Orders: 19"
   },
   {
-    "rank": 80,
+    "rank": 81,
     "dish_type": "Cottage Pie",
     "priority_score": 2.2,
     "category": "Monitor",
@@ -1357,23 +1374,6 @@
     "gap_type": "No Gap",
     "potential_partners": "Bill's",
     "recommended_action": "Monitor Cottage Pie for changes in demand",
-    "evidence_flag": "Opportunity: 2.2/5"
-  },
-  {
-    "rank": 81,
-    "dish_type": "Korma",
-    "priority_score": 2.2,
-    "category": "Monitor",
-    "evidence_type": "Opportunity",
-    "track_a_score": null,
-    "track_b_score": 2.2,
-    "discovery_score": null,
-    "order_volume": 0,
-    "avg_rating": null,
-    "cuisine": "Indian",
-    "gap_type": "No Gap",
-    "potential_partners": "Dishoom",
-    "recommended_action": "Monitor Korma for changes in demand",
     "evidence_flag": "Opportunity: 2.2/5"
   },
   {
@@ -1412,23 +1412,6 @@
   },
   {
     "rank": 84,
-    "dish_type": "Bibimbap",
-    "priority_score": 2.0,
-    "category": "Monitor",
-    "evidence_type": "Opportunity",
-    "track_a_score": null,
-    "track_b_score": 2.0,
-    "discovery_score": null,
-    "order_volume": 0,
-    "avg_rating": null,
-    "cuisine": "Korean",
-    "gap_type": "No Gap",
-    "potential_partners": "New recruitment needed",
-    "recommended_action": "Monitor Bibimbap for changes in demand",
-    "evidence_flag": "Opportunity: 2.0/5"
-  },
-  {
-    "rank": 85,
     "dish_type": "Bangers & Mash",
     "priority_score": 2.0,
     "category": "Monitor",
@@ -1445,7 +1428,7 @@
     "evidence_flag": "Opportunity: 2.0/5"
   },
   {
-    "rank": 86,
+    "rank": 85,
     "dish_type": "Souvlaki",
     "priority_score": 2.0,
     "category": "Monitor",
@@ -1459,6 +1442,23 @@
     "gap_type": "No Gap",
     "potential_partners": "New recruitment needed",
     "recommended_action": "Monitor Souvlaki for changes in demand",
+    "evidence_flag": "Opportunity: 2.0/5"
+  },
+  {
+    "rank": 86,
+    "dish_type": "Bibimbap",
+    "priority_score": 2.0,
+    "category": "Monitor",
+    "evidence_type": "Opportunity",
+    "track_a_score": null,
+    "track_b_score": 2.0,
+    "discovery_score": null,
+    "order_volume": 0,
+    "avg_rating": null,
+    "cuisine": "Korean",
+    "gap_type": "No Gap",
+    "potential_partners": "New recruitment needed",
+    "recommended_action": "Monitor Bibimbap for changes in demand",
     "evidence_flag": "Opportunity: 2.0/5"
   }
 ]

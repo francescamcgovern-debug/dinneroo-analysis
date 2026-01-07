@@ -1,0 +1,87 @@
+{
+  "version": "1.0",
+  "description": "Maps specific questions to data sources for ad-hoc analysis",
+  
+  "question_routing": {
+    "what_dishes_do_we_have": {
+      "primary_source": "DATA/3_ANALYSIS/anna_family_dishes.csv",
+      "answer_type": "list",
+      "columns": ["brand", "item", "cuisine", "high_level_dish", "granular_dish", "protein"]
+    },
+    "what_cuisines_do_we_have": {
+      "primary_source": "DATA/3_ANALYSIS/anna_family_dishes.csv",
+      "answer_type": "aggregation",
+      "group_by": "cuisine",
+      "count_column": "item"
+    },
+    "what_partners_do_we_have": {
+      "primary_source": "DATA/3_ANALYSIS/anna_partner_coverage.csv",
+      "answer_type": "list",
+      "columns": ["brand", "total_sites"]
+    },
+    "which_zones_have_coverage": {
+      "primary_source": "DATA/3_ANALYSIS/anna_zone_dish_counts.csv",
+      "answer_type": "filter",
+      "filter": "total_dishes > 0",
+      "columns": ["zone_name", "num_brands", "num_cuisines", "total_dishes"]
+    },
+    "which_zones_meet_mvp": {
+      "primary_source": "DATA/3_ANALYSIS/anna_zone_dish_counts.csv",
+      "answer_type": "filter",
+      "filter": "num_brands >= 5 AND num_cuisines >= 5",
+      "columns": ["zone_name", "num_brands", "num_cuisines", "total_dishes"]
+    },
+    "what_dishes_perform_best": {
+      "primary_source": "DATA/3_ANALYSIS/priority_100_dishes.csv",
+      "answer_type": "ranked_list",
+      "sort_by": "priority_score",
+      "columns": ["dish_type", "priority_score", "demand_index", "preference_index"]
+    },
+    "what_are_the_coverage_gaps": {
+      "primary_source": "DATA/3_ANALYSIS/cuisine_gap_analysis.csv",
+      "answer_type": "list",
+      "columns": ["zone_name", "missing_cuisines", "gap_priority"]
+    },
+    "which_dishes_to_prioritize": {
+      "primary_source": "DATA/3_ANALYSIS/dish_indices.csv",
+      "answer_type": "categorized_list",
+      "category_column": "quadrant",
+      "categories": {
+        "Expand": "High demand + High preference",
+        "Recruit": "High demand + Low preference", 
+        "Fix": "Low demand + High preference",
+        "Monitor": "Low demand + Low preference"
+      }
+    }
+  },
+  
+  "data_hierarchy": {
+    "supply_metrics": {
+      "description": "What we have available",
+      "authoritative_source": "Anna's spreadsheet data",
+      "files": [
+        "DATA/3_ANALYSIS/anna_family_dishes.csv",
+        "DATA/3_ANALYSIS/anna_partner_coverage.csv",
+        "DATA/3_ANALYSIS/anna_zone_dish_counts.csv"
+      ]
+    },
+    "performance_metrics": {
+      "description": "How things perform",
+      "authoritative_source": "Snowflake order data",
+      "files": [
+        "DATA/2_ENRICHED/orders_enriched.csv",
+        "DATA/2_ENRICHED/ratings_enriched.csv"
+      ]
+    },
+    "preference_metrics": {
+      "description": "What customers want",
+      "authoritative_source": "Survey data (with triangulation)",
+      "files": [
+        "DATA/1_SOURCE/OG Survey/",
+        "DATA/1_SOURCE/anna_slides/Dish Analysis Dec-25 - Post Order Survey Data.csv"
+      ]
+    }
+  }
+}
+
+

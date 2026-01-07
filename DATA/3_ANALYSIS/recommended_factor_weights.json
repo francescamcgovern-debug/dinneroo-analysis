@@ -1,0 +1,9 @@
+{
+  "weights": {
+    "adult_appeal": 0.41,
+    "balanced_guilt_free": 0.37,
+    "fussy_eater_friendly": 0.219
+  },
+  "generated": "2026-01-07T11:53:27.075853",
+  "methodology": "Based on correlation with success metrics"
+}
