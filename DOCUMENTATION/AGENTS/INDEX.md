@@ -104,6 +104,36 @@ This index helps you find the right agent for your task. Each agent has a specif
 
 ---
 
+## Dashboard Data Flow
+
+All agents feed into the **Consumer Insight Tracker** dashboard (`docs/dashboards/consumer_insight_tracker.html`).
+
+| Agent | Dashboard Section | Key Data Files |
+|-------|-------------------|----------------|
+| DISH_AGENT | Dishes tab, 2x2 Matrix | `priority_100_unified.csv`, `dish_composite_scores.csv` |
+| ZONE_AGENT | Zones tab, Overview KPIs | `zone_gap_report.csv`, `anna_zone_dish_counts.csv` |
+| GAP_AGENT | Cuisine Gaps tab | `cuisine_gap_analysis.csv` |
+| PARTNER_AGENT | Partner section | `partner_composite_scores.csv` |
+| FAMILY_BEHAVIOR_AGENT | Family Insights | `segment_comparison.csv` |
+| LATENT_DEMAND_AGENT | Latent Demand tab | `latent_demand_scores.csv` |
+| DATA_AGENT | Data Guide tab | Validation metadata |
+| SCORING_AGENT | Interactive sliders | `dish_scoring_unified.json` |
+
+### Regenerating the Dashboard
+
+```bash
+# Step 1: Validate data quality
+python3 scripts/validate_data_quality.py
+
+# Step 2: Prepare dashboard data (aggregates all agent outputs)
+python3 scripts/prepare_dashboard_data.py
+
+# Step 3: Generate dashboard (embeds data into HTML)
+python3 scripts/generate_dashboard.py
+```
+
+---
+
 ## Shared Context
 
 All agents should read these when needed:

@@ -222,6 +222,39 @@ From `DOCUMENTATION/CONTEXT/08_GROUND_TRUTH_DATA.md`:
 
 ---
 
+## Dashboard Integration
+
+This agent provides data validation and freshness information to the dashboard.
+
+| Output | Dashboard Location | Data File |
+|--------|-------------------|-----------|
+| Data freshness | Data Guide tab, header | Generated at build time |
+| Source metadata | Provenance modals | `dashboard_data.json` |
+| Validation status | Evidence indicators | Quality checks |
+| Sample sizes | Inline throughout | From source files |
+
+**Dashboard data pipeline scripts:**
+```bash
+# Validate all data sources
+python3 scripts/validate_data_quality.py
+
+# Reconcile Snowflake vs Anna's ground truth
+python3 scripts/reconcile_with_ground_truth.py
+
+# Prepare dashboard data (aggregates all sources)
+python3 scripts/prepare_dashboard_data.py
+
+# Generate final dashboard
+python3 scripts/generate_dashboard.py
+```
+
+**Key files for dashboard data:**
+- `scripts/prepare_dashboard_data.py` - Aggregates all agent outputs
+- `scripts/generate_dashboard.py` - Embeds data into HTML
+- `docs/data/dashboard_data.json` - Prepared data for embedding
+
+---
+
 ## Anti-Drift Rules
 
 - ❌ Don't assume data is fresh without checking dates

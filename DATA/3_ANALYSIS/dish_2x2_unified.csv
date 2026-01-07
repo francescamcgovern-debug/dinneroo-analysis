@@ -1,101 +1,101 @@
 dish_type,performance_score,opportunity_score,quadrant,unified_score
-Katsu,4.22,3.82,Priority,4.02
-Pho,4.39,3.6,Priority,3.99
-Curry,4.0,3.91,Priority,3.96
-Noodles,4.06,3.61,Priority,3.83
-Chicken Pie,5.0,2.41,Protect,3.7
-Pad Thai,4.39,2.91,Protect,3.65
-Rice Bowl,4.17,2.8,Protect,3.48
-Fried Rice,4.33,2.61,Protect,3.47
-Salad,3.33,3.58,Develop,3.45
-Pie,,3.42,Develop,3.42
-Sushi,3.78,2.98,Protect,3.38
-Soup,,3.3,Develop,3.3
-Thai Curry,,3.3,Develop,3.3
-Lasagne,3.0,3.61,Develop,3.3
-Shawarma,3.78,2.7,Protect,3.24
-Pasta,3.17,3.22,Develop,3.19
-Grilled Chicken,,3.18,Develop,3.18
-Fajitas,3.5,2.82,Protect,3.16
-Mac & Cheese,3.78,2.54,Protect,3.16
-Chilli,,3.11,Develop,3.11
-Tandoori,,3.09,Develop,3.09
-Bowl,4.0,2.18,Protect,3.09
-Daal,,3.08,Develop,3.08
-Tagine,,2.98,Monitor,2.98
-Tom Yum,,2.98,Monitor,2.98
-Pizza,2.33,3.54,Develop,2.93
-Paella,,2.91,Monitor,2.91
-Peking Duck,,2.91,Monitor,2.91
-Cous Cous,,2.89,Monitor,2.89
-Shakshuka,,2.89,Monitor,2.89
-Acai Bowl,,2.87,Monitor,2.87
-Stroganoff,,2.82,Monitor,2.82
-Grilled Chicken with Sides,3.0,2.59,Monitor,2.8
-Dolma,,2.78,Monitor,2.78
-Jacket Potato,,2.72,Monitor,2.72
-Banh Mi,,2.71,Monitor,2.71
-Moussaka,,2.71,Monitor,2.71
-Gyros,,2.71,Monitor,2.71
-Jollof Rice,,2.71,Monitor,2.71
-Spanakopita,,2.71,Monitor,2.71
-Enchiladas,,2.71,Monitor,2.71
-Suya,,2.71,Monitor,2.71
-Fish Tacos,,2.71,Monitor,2.71
-Lamb Kofta,,2.71,Monitor,2.71
-Nasi Goreng,,2.71,Monitor,2.71
-Japchae,,2.71,Monitor,2.71
-Bulgogi,,2.71,Monitor,2.71
-Biryani,3.0,2.41,Monitor,2.7
-Sweet & Sour Chicken,3.0,2.41,Monitor,2.7
-Risotto,,2.7,Monitor,2.7
-Jerk Chicken,,2.7,Monitor,2.7
-Filled Pasta,,2.7,Monitor,2.7
-Gnocchi,,2.7,Monitor,2.7
-Pulled Pork,,2.63,Monitor,2.63
-Tempura,,2.63,Monitor,2.63
-Casserole,,2.61,Monitor,2.61
-Plantain,,2.61,Monitor,2.61
-Rotisserie Chicken,,2.61,Monitor,2.61
-Curry Goat,,2.59,Monitor,2.59
-Oxtail,,2.59,Monitor,2.59
-Buddha Bowl,,2.58,Monitor,2.58
-Schnitzel,,2.54,Monitor,2.54
-Fish & Chips,,2.54,Monitor,2.54
-Sweet & Sour,,2.54,Monitor,2.54
-Poke Bowl,,2.47,Monitor,2.47
-Ramen,2.0,2.91,Monitor,2.46
-Bratwurst,,2.42,Monitor,2.42
-Pierogi,,2.42,Monitor,2.42
-Pasty,,2.42,Monitor,2.42
-Dim Sum,,2.41,Monitor,2.41
-Falafel,,2.39,Monitor,2.39
-Bibimbap,,2.39,Monitor,2.39
-Hummus Plate,,2.39,Monitor,2.39
-Hot Dog,,2.33,Monitor,2.33
-Butter Chicken,2.33,2.32,Monitor,2.32
-Souvlaki,,2.32,Monitor,2.32
-Teriyaki,2.33,2.32,Monitor,2.32
-Gyoza,,2.32,Monitor,2.32
-Tikka Masala,,2.32,Monitor,2.32
-Satay,,2.32,Monitor,2.32
-Udon,,2.32,Monitor,2.32
-Laksa,,2.3,Monitor,2.3
-Shepherd's Pie,2.0,2.61,Monitor,2.3
-Rendang,,2.3,Monitor,2.3
-Grain Bowl,2.0,2.58,Monitor,2.29
-Sandwich,,2.22,Monitor,2.22
-Korma,,2.22,Monitor,2.22
-Greek Mezze,,2.2,Monitor,2.2
-Korean Fried Chicken,2.0,2.34,Monitor,2.17
-Roast Dinner,2.0,2.32,Monitor,2.16
-Wings,,2.13,Monitor,2.13
-BBQ Ribs,,2.13,Monitor,2.13
-Cottage Pie,,2.11,Monitor,2.11
-Wrap,,2.11,Monitor,2.11
-Burrito,,2.11,Monitor,2.11
-Veggie Fajitas,2.0,2.2,Monitor,2.1
-Halloumi Wrap,2.0,2.11,Monitor,2.05
-Baked Pasta,,2.04,Monitor,2.04
-Bangers & Mash,,2.04,Monitor,2.04
-Stir Fry,1.67,2.39,Monitor,2.03
+Curry,4.96969696969697,4.912037037037037,Priority,4.94
+Noodles,4.818181818181818,4.9907407407407405,Priority,4.9
+Pho,4.818181818181818,4.981481481481481,Priority,4.9
+Katsu,4.924242424242424,4.847222222222222,Priority,4.89
+Salad,4.327272727272727,4.962962962962963,Priority,4.65
+Pasta,4.327272727272727,4.692592592592592,Priority,4.51
+Chicken Pie,5.0,2.6444444444444444,Protect,3.82
+Pad Thai,4.63030303030303,2.6444444444444444,Protect,3.64
+Rice Bowl,4.924242424242424,2.0703703703703704,Protect,3.5
+Sushi,3.642424242424242,3.140740740740741,Priority,3.39
+Lasagne,3.0969696969696967,3.6222222222222222,Priority,3.36
+Ramen,1.7878787878787878,4.912037037037037,Develop,3.35
+Biryani,4.024242424242424,2.6444444444444444,Protect,3.33
+Grilled Chicken with Sides,3.0969696969696967,3.474074074074074,Priority,3.29
+Teriyaki,4.327272727272727,2.237037037037037,Protect,3.28
+Bowl,4.878787878787879,1.6296296296296298,Protect,3.25
+Pizza,3.0969696969696967,3.233333333333333,Priority,3.17
+Fried Rice,4.818181818181818,1.462962962962963,Protect,3.14
+Sweet & Sour Chicken,3.0969696969696967,2.6444444444444444,Protect,2.87
+Fajitas,3.460606060606061,2.237037037037037,Protect,2.85
+Mac & Cheese,4.327272727272727,1.2777777777777777,Protect,2.8
+Shawarma,3.642424242424242,1.7037037037037037,Protect,2.67
+Butter Chicken,3.0969696969696967,2.237037037037037,Protect,2.67
+Tacos,1.1818181818181819,4.118518518518519,Develop,2.65
+Grain Bowl,1.7878787878787878,3.362962962962963,Develop,2.58
+Stir Fry,1.7878787878787878,2.496296296296296,Monitor,2.14
+Korean Fried Chicken,1.7878787878787878,2.4222222222222225,Monitor,2.11
+Burger,1.1818181818181819,3.011111111111111,Develop,2.1
+Roast Dinner,1.7878787878787878,2.237037037037037,Monitor,2.01
+Quesadilla,2.533333333333333,1.2777777777777777,Monitor,1.91
+Veggie Fajitas,1.7878787878787878,1.7037037037037037,Monitor,1.75
+Shepherd's Pie,1.7878787878787878,1.462962962962963,Monitor,1.63
+Halloumi Wrap,1.7878787878787878,1.462962962962963,Monitor,1.63
+Risotto,,4.118518518518519,Prospect,
+Gnocchi,,4.118518518518519,Prospect,
+Filled Pasta,,4.118518518518519,Prospect,
+Baked Pasta,,1.2777777777777777,Monitor,
+Gyoza,,4.828703703703703,Prospect,
+Tempura,,3.77037037037037,Prospect,
+Udon,,2.237037037037037,Monitor,
+Sweet & Sour,,3.233333333333333,Prospect,
+Spring Rolls,,1.1111111111111112,Monitor,
+Dim Sum,,2.6444444444444444,Monitor,
+Peking Duck,,4.912037037037037,Prospect,
+Thai Curry,,4.805555555555555,Develop,
+Tom Yum,,4.9490740740740735,Prospect,
+Satay,,4.828703703703703,Prospect,
+Banh Mi,,4.433333333333334,Prospect,
+Bibimbap,,2.496296296296296,Monitor,
+Bulgogi,,4.433333333333334,Prospect,
+Japchae,,4.433333333333334,Prospect,
+Laksa,,2.0703703703703704,Monitor,
+Nasi Goreng,,4.433333333333334,Prospect,
+Rendang,,4.805555555555555,Prospect,
+Tikka Masala,,2.237037037037037,Monitor,
+Korma,,1.7962962962962963,Monitor,
+Tandoori,,4.972222222222222,Develop,
+Daal,,3.362962962962963,Develop,
+Samosa,,1.1111111111111112,Monitor,
+Burrito,,1.462962962962963,Monitor,
+Nachos,,1.1111111111111112,Monitor,
+Enchiladas,,4.433333333333334,Prospect,
+Fish Tacos,,4.433333333333334,Prospect,
+Chilli,,3.6222222222222222,Develop,
+Falafel,,4.87962962962963,Prospect,
+Hummus Plate,,2.496296296296296,Monitor,
+Shakshuka,,4.87962962962963,Prospect,
+Lamb Kofta,,4.433333333333334,Prospect,
+Gyros,,4.433333333333334,Prospect,
+Souvlaki,,2.237037037037037,Monitor,
+Moussaka,,4.433333333333334,Prospect,
+Spanakopita,,4.433333333333334,Prospect,
+Dolma,,4.7481481481481485,Prospect,
+Greek Mezze,,1.7037037037037037,Monitor,
+Fish & Chips,,3.233333333333333,Develop,
+Pie,,4.935185185185185,Develop,
+Bangers & Mash,,1.2777777777777777,Monitor,
+Cottage Pie,,1.462962962962963,Monitor,
+Jacket Potato,,4.692592592592592,Prospect,
+Casserole,,3.6222222222222222,Prospect,
+Pasty,,3.011111111111111,Prospect,
+Wings,,1.5925925925925926,Monitor,
+Chicken Nuggets,,1.037037037037037,Monitor,
+Hot Dog,,2.3851851851851853,Monitor,
+BBQ Ribs,,3.77037037037037,Prospect,
+Pulled Pork,,3.77037037037037,Prospect,
+Jerk Chicken,,4.118518518518519,Prospect,
+Jollof Rice,,4.433333333333334,Prospect,
+Curry Goat,,3.474074074074074,Prospect,
+Plantain,,3.6222222222222222,Prospect,
+Suya,,4.433333333333334,Prospect,
+Oxtail,,3.474074074074074,Prospect,
+Schnitzel,,3.233333333333333,Prospect,
+Bratwurst,,3.011111111111111,Prospect,
+Pierogi,,3.011111111111111,Prospect,
+Stroganoff,,4.847222222222222,Prospect,
+Tagine,,4.9490740740740735,Prospect,
+Paella,,4.912037037037037,Prospect,
+Cous Cous,,4.87962962962963,Prospect,
+Poke Bowl,,3.1037037037037036,Develop,

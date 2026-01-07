@@ -1,0 +1,5 @@
+dishes_per_partner,zones,repeat_rate,repeat_rate_n,avg_rating,avg_rating_n,kids_happy_pct,kids_happy_n,liked_loved_pct,liked_loved_n,enough_food_pct,enough_food_n,food_hot_pct,food_hot_n
+3-4,14,20.9,6179,4.24,1039,84.0,41,83.3,109,75.7,109,66.6,109
+4-5,15,21.6,8669,4.36,1690,61.3,76,89.0,147,75.8,147,58.3,147
+5-6,24,22.3,13109,4.4,2521,67.3,103,86.9,247,81.0,247,63.0,247
+6+,41,20.0,21064,4.44,4123,76.3,185,88.0,418,76.2,418,73.1,418

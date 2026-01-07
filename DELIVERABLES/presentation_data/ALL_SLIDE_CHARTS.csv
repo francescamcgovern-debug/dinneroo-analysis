@@ -1,0 +1,171 @@
+SLIDE 5 - MVP THRESHOLD EVIDENCE
+=================================
+
+CHART 1: PARTNERS IMPACT ON ZONE PERFORMANCE
+Partners,Avg Orders,Avg Rating,Zones (n=)
+1-2,68,4.14,95
+3,355,4.34,21
+4,450,4.38,25
+5,537,4.28,16
+6-7,705,4.36,16
+8-10,1071,4.44,15
+11+,1095,4.50,9
+Key: 5+ partners = 5x more orders than 1-2 (537 vs 68)
+
+CHART 2: CUISINES IMPACT ON ZONE PERFORMANCE
+Cuisines,Avg Orders,Avg Rating,Zones (n=),Satisfaction %
+1-2,89,4.14,102,33%
+3,404,4.34,30,81%
+4,511,4.35,24,82%
+5,685,4.44,13,81%
+6,797,4.36,11,78%
+7+,1157,4.47,17,78%
+Key: Satisfaction cliff at 3 cuisines (33% → 81%). Orders peak at 5+.
+
+WHY 5 IS THE THRESHOLD
+Threshold,Orders Uplift vs Previous,Note
+3 cuisines,+136%,Satisfaction recovers from cliff
+4 cuisines,+26%,Steady improvement
+5 cuisines,+34%,LARGEST JUMP - sweet spot
+6 cuisines,+16%,Diminishing returns begin
+
+
+SLIDE 6 - ZONE MVP STATUS
+=========================
+
+ZONE DISTRIBUTION
+Status,Zones,% of Active
+MVP Ready (5+ brands AND 5+ cuisines),109,25%
+Has 5+ brands only,98,23%
+Has 5+ cuisines only,3,1%
+Needs both,224,52%
+Total Active Zones,434,100%
+Zones with 0 dishes,872,-
+Total Zones Tracked,1306,-
+
+MVP vs NON-MVP PERFORMANCE
+Zone Status,Zones,Avg Orders,Avg Rating,Order Share
+MVP (5+/5+),42,939,4.43,61%
+Non-MVP,58,437,4.36,39%
+Key: MVP zones = 2.1x more orders. 42% of zones generate 61% of orders.
+
+
+SLIDE 8 - SCORING FRAMEWORK
+===========================
+
+DEMAND METRICS
+Metric,Sample Size,Source,What It Measures
+Avg Sales per Dish,71437 orders,Snowflake,Actual purchase behaviour
+% Zones in Top 5,197 zones,Looker,Demand consistency across zones
+Open-Text Requests,372 mentions,Surveys,Explicit unmet demand
+
+PREFERENCE METRICS
+Metric,Sample Size,Source,What It Measures
+Deliveroo Rating,10713 ratings,Looker,Post-delivery satisfaction (1-5)
+Meal Satisfaction %,1363 surveys,Post-order survey,% who Liked/Loved the meal
+Repeat Intent %,1363 surveys,Post-order survey,% who would order again
+Dish Suitability,404 surveys,OG Survey,Pre-launch appeal (new dishes only)
+
+
+SLIDE 9 - QUADRANT SUMMARY
+==========================
+
+QUADRANT PERFORMANCE
+Quadrant,Dishes,Total Sales,% of Sales,Satisfaction %
+Core Drivers,8,479,73%,88%
+Preference Drivers,5,69,11%,90%
+Demand Boosters,2,55,8%,76%
+Deprioritised,8,51,8%,78%
+
+CORE DRIVERS (8 dishes)
+Dish,Sales,Rating,Satisfaction %
+Pho,136,4.6,92%
+South Asian / Indian Curry,98,4.7,93%
+Biryani,86,4.6,91%
+Fried Rice,41,4.5,79%
+Sushi,32,4.7,93%
+Katsu,29,4.3,87%
+Rice Bowl,29,4.4,84%
+Noodles,28,4.5,88%
+
+PREFERENCE DRIVERS (5 dishes)
+Dish,Sales,Rating,Satisfaction %
+Grain Bowl,21,4.7,86%
+East Asian Curry,18,4.4,87%
+Shepherd's Pie,11,4.3,91%
+Shawarma,10,4.5,90%
+Fajitas,9,4.2,96%
+
+DEMAND BOOSTERS (2 dishes)
+Dish,Sales,Rating,Satisfaction %
+Protein & Veg,44,4.4,71%
+Pizza,11,4.1,81%
+
+DEPRIORITISED (8 dishes)
+Dish,Sales,Rating,Satisfaction %
+Lasagne,13,4.6,77%
+Pasta,8,4.2,78%
+Tacos,7,4.1,-
+Burrito / Burrito Bowl,7,-,-
+Chilli,6,3.8,-
+Quesadilla,6,-,-
+Poke,3,-,-
+Nachos,1,-,-
+
+
+SLIDE 10 - DISH SCORING TABLE
+=============================
+
+FULL DISH SCORES (paste into spreadsheet)
+Dish,Avg Sales,% Rank #1,% Top 5,Open-Text Req,Rating,Satisfaction %,Repeat %,Suitability,Quadrant
+Pho,136,56%,100%,18,4.6,92%,89%,2.2,Core Driver
+South Asian / Indian Curry,98,32%,64%,15,4.7,93%,85%,3.2,Core Driver
+Biryani,86,0%,54%,2,4.6,91%,83%,-,Core Driver
+Protein & Veg,44,6%,44%,5,4.4,71%,-,3.5,Demand Booster
+Fried Rice,41,4%,17%,2,4.5,79%,81%,2.5,Core Driver
+Sushi,32,8%,56%,6,4.7,93%,81%,-,Core Driver
+Katsu,29,19%,41%,9,4.3,87%,85%,2.9,Core Driver
+Rice Bowl,29,11%,41%,0,4.4,84%,77%,2.5,Core Driver
+Noodles,28,2%,37%,15,4.5,88%,88%,2.5,Core Driver
+Grain Bowl,21,4%,18%,0,4.7,86%,90%,-,Preference Driver
+East Asian Curry,18,1%,31%,1,4.4,87%,84%,3.6,Preference Driver
+Lasagne,13,4%,22%,6,4.6,77%,75%,3.3,Deprioritised
+Shepherd's Pie,11,3%,8%,3,4.3,91%,100%,4.4,Preference Driver
+Pizza,11,16%,49%,25,4.1,81%,75%,2.0,Demand Booster
+Shawarma,10,1%,10%,2,4.5,90%,86%,-,Preference Driver
+Fajitas,9,2%,12%,0,4.2,96%,100%,2.5,Preference Driver
+Pasta,8,1%,25%,29,4.2,78%,74%,2.5,Deprioritised
+Tacos,7,0%,18%,1,4.1,-,-,3.2,Deprioritised
+Burrito / Burrito Bowl,7,0%,0%,0,-,-,-,2.5,Deprioritised
+Chilli,6,0%,5%,3,3.8,-,-,3.3,Deprioritised
+Quesadilla,6,0%,0%,0,-,-,-,3.2,Deprioritised
+Poke,3,0%,0%,1,-,-,-,-,Deprioritised
+Nachos,1,0%,0%,1,-,-,-,-,Deprioritised
+
+
+SLIDE 13 - COVERAGE GAPS & NEXT STEPS
+=====================================
+
+CORE DRIVERS - Priority Gaps
+Dish,Coverage Gap %,Avg Sales,Opportunity,Next Steps
+South Asian/Indian Curry,74%,98,#1,Recruit Indian partners (Dishoom Kricket Tiffin Tin)
+Biryani,79%,86,#2,Same as above - Indian recruitment
+Pho,48%,136,#3,Expand Asian providers with pho
+Sushi,63%,32,#5,Work with Itsu Iro Sushi Kokoro
+Fried Rice,42%,41,#6,Add to existing Asian partner menus
+Katsu,5%,-,Low,Small gap - maintain
+Rice Bowl,12%,-,Low,Small gap - maintain
+Noodles,21%,-,Low,Understand which noodles work best
+
+PREFERENCE DRIVERS - Recruit & Merchandise
+Dish,Coverage Gap %,Avg Sales,Next Steps
+Grain Bowl,76%,21,Recruit Farmer J and healthy providers
+Fajitas,68%,9,Expand Mexican (Las Iguanas Zambrero)
+Shawarma,57%,10,Expand Middle Eastern coverage
+Shepherd's Pie,57%,11,British comfort food (Bill's Jakob's)
+East Asian Curry,3%,-,Small gap - maintain
+
+DEMAND BOOSTERS - Improve Quality
+Dish,Coverage Gap %,Avg Sales,Next Steps
+Protein & Veg,93%,44,Add to multi-cuisine menus (Farmer J LEON Bill's)
+Pizza,4%,-,Small gap - focus on execution quality

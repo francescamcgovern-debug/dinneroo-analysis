@@ -359,6 +359,30 @@ From `FULL_ORDER_HISTORY.csv` analysis (IS_DINNEROO=False):
 
 ---
 
+## Dashboard Integration
+
+This agent feeds family-specific insights into the Consumer Insight Tracker dashboard.
+
+| Output | Dashboard Location | Data File |
+|--------|-------------------|-----------|
+| Segment comparison | Family Insights section | `segment_comparison.csv` |
+| Regional patterns | Regional Analysis | `regional_cuisine_preferences.csv` |
+| Price sensitivity | Data Guide context | `price_sensitivity_analysis.csv` |
+| Non-Dinneroo demand | Latent Demand context | `non_dinneroo_cuisine_demand.csv` |
+
+**Family signals in dashboard scoring:**
+- "Kids Full & Happy" - toggleable weight in dish scoring
+- "Fussy Eater Friendly" - toggleable weight in dish scoring
+- Family Focus preset - applies family-weighted scoring
+
+**To update dashboard with family data:**
+```bash
+python3 scripts/prepare_dashboard_data.py
+python3 scripts/generate_dashboard.py
+```
+
+---
+
 ## Anti-Bias Rules
 
 - ❌ Don't assume London patterns apply nationally

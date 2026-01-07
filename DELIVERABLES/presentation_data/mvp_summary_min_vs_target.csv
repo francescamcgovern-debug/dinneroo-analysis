@@ -1,0 +1,4 @@
+criterion,minimum_threshold,target_threshold,minimum_evidence,target_evidence,below_minimum_repeat_rate,at_minimum_repeat_rate,at_target_repeat_rate,below_minimum_kids_happy,at_minimum_kids_happy,at_target_kids_happy
+Partners,3,5,+4.5pp repeat rate at 3 partners,+9.4pp kids happy at 5 partners,13.9,18.4,21.6,65.1,70.0,79.5
+Cuisines,3,5,+13.6pp liked/loved at 3 cuisines,+4.2pp repeat rate at 5 cuisines,18.3,19.1,23.3,67.4,76.2,66.9
+Dishes per Partner,4,5,Baseline performance,Peak repeat rate (22.3%),20.9,21.6,22.3,84.0,61.3,67.3

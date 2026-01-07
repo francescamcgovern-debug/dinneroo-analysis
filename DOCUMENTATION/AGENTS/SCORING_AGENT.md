@@ -195,6 +195,33 @@ Before finalizing any framework:
 
 ---
 
+## Dashboard Integration
+
+This agent defines the scoring framework used in the Consumer Insight Tracker dashboard.
+
+| Output | Dashboard Location | Data File |
+|--------|-------------------|-----------|
+| Weight configurations | Interactive sliders | `config/dish_scoring_unified.json` |
+| Evidence levels | Evidence indicators | Metadata in dashboard |
+| Factor correlations | Data Guide context | `factor_correlations.csv` |
+| Preset configurations | Preset buttons | Hardcoded in dashboard |
+
+**Dashboard scoring features:**
+- Interactive weight sliders (adjustable by users)
+- Preset buttons: Default, Behavioral Only, OG Survey Match, Family Focus
+- Evidence level indicators (🟢 Validated, 🟡 Corroborated, 🔵 Estimated)
+- Real-time score recalculation
+
+**To update dashboard scoring config:**
+```bash
+# Edit config/dish_scoring_unified.json
+# Then regenerate dashboard
+python3 scripts/prepare_dashboard_data.py
+python3 scripts/generate_dashboard.py
+```
+
+---
+
 ## Handoff
 
 | Finding | Route To |

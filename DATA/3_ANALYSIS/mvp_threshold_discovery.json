@@ -1,0 +1,1169 @@
+{
+  "generated": "2026-01-07",
+  "methodology": "Hierarchical analysis - partners first, then cuisines controlling for partners, then dishes controlling for both",
+  "metrics": {
+    "tier_1_core": {
+      "repeat_rate": {
+        "source": "Snowflake",
+        "definition": "% customers with 2+ orders"
+      },
+      "kids_happy": {
+        "source": "Survey",
+        "definition": "% Full and happy (families only)"
+      },
+      "liked_loved": {
+        "source": "Survey",
+        "definition": "% Loved it or Liked it"
+      }
+    },
+    "tier_2_supporting": {
+      "avg_rating": {
+        "source": "Snowflake",
+        "definition": "Mean star rating"
+      },
+      "reorder_intent": {
+        "source": "Survey",
+        "definition": "% Agree/Strongly agree to reorder"
+      },
+      "enough_food": {
+        "source": "Survey",
+        "definition": "% Agree/Strongly agree portions adequate"
+      }
+    },
+    "tier_3_diagnostic": {
+      "order_volume": {
+        "source": "Snowflake",
+        "definition": "Total orders"
+      },
+      "food_hot": {
+        "source": "Survey",
+        "definition": "% Agree/Strongly agree food hot"
+      },
+      "food_on_time": {
+        "source": "Survey",
+        "definition": "% Agree/Strongly agree on time"
+      }
+    }
+  },
+  "step_1_partners": {
+    "total_zones_analyzed": 197,
+    "by_partner_count": [
+      {
+        "bucket": "10+",
+        "zones": 12,
+        "behavioral": {
+          "repeat_rate": {
+            "value": 0.2275259196912871,
+            "n": 9979,
+            "reliable": "True"
+          },
+          "avg_rating": {
+            "value": 4.453125400687893,
+            "n": 1997,
+            "reliable": "True"
+          },
+          "order_volume": {
+            "value": 723.5833333333334,
+            "n": 12,
+            "reliable": true
+          }
+        },
+        "survey": {
+          "kids_happy": {
+            "value": 0.6442340067340068,
+            "n": 61,
+            "reliable": true
+          },
+          "liked_loved": {
+            "value": 0.8381749829118249,
+            "n": 173,
+            "reliable": true
+          },
+          "reorder_intent": {
+            "value": null,
+            "n": 0,
+            "reliable": false
+          },
+          "enough_food": {
+            "value": 0.7344000784790259,
+            "n": 173,
+            "reliable": true
+          },
+          "food_hot": {
+            "value": 0.5858161818688133,
+            "n": 173,
+            "reliable": true
+          },
+          "food_on_time": {
+            "value": 0.8792245765929976,
+            "n": 173,
+            "reliable": true
+          }
+        }
+      },
+      {
+        "bucket": "7-9",
+        "zones": 17,
+        "behavioral": {
+          "repeat_rate": {
+            "value": 0.24684664719791882,
+            "n": 12696,
+            "reliable": "True"
+          },
+          "avg_rating": {
+            "value": 4.421368183411381,
+            "n": 2529,
+            "reliable": "True"
+          },
+          "order_volume": {
+            "value": 675.7058823529412,
+            "n": 17,
+            "reliable": true
+          }
+        },
+        "survey": {
+          "kids_happy": {
+            "value": 0.6989612511671335,
+            "n": 115,
+            "reliable": true
+          },
+          "liked_loved": {
+            "value": 0.8599418359084374,
+            "n": 246,
+            "reliable": true
+          },
+          "reorder_intent": {
+            "value": null,
+            "n": 0,
+            "reliable": false
+          },
+          "enough_food": {
+            "value": 0.7866855506711833,
+            "n": 246,
+            "reliable": true
+          },
+          "food_hot": {
+            "value": 0.6554751076114097,
+            "n": 246,
+            "reliable": true
+          },
+          "food_on_time": {
+            "value": 0.8119431938354009,
+            "n": 246,
+            "reliable": true
+          }
+        }
+      },
+      {
+        "bucket": "5-6",
+        "zones": 27,
+        "behavioral": {
+          "repeat_rate": {
+            "value": 0.21561118713813945,
+            "n": 12999,
+            "reliable": "True"
+          },
+          "avg_rating": {
+            "value": 4.324059495091982,
+            "n": 2401,
+            "reliable": "True"
+          },
+          "order_volume": {
+            "value": 398.85185185185185,
+            "n": 27,
+            "reliable": true
+          }
+        },
+        "survey": {
+          "kids_happy": {
+            "value": 0.7945903361344538,
+            "n": 125,
+            "reliable": true
+          },
+          "liked_loved": {
+            "value": 0.8209587949925339,
+            "n": 271,
+            "reliable": true
+          },
+          "reorder_intent": {
+            "value": null,
+            "n": 0,
+            "reliable": false
+          },
+          "enough_food": {
+            "value": 0.7798159596228469,
+            "n": 271,
+            "reliable": true
+          },
+          "food_hot": {
+            "value": 0.6579740404027394,
+            "n": 271,
+            "reliable": true
+          },
+          "food_on_time": {
+            "value": 0.8082274710895573,
+            "n": 271,
+            "reliable": true
+          }
+        }
+      },
+      {
+        "bucket": "3-4",
+        "zones": 46,
+        "behavioral": {
+          "repeat_rate": {
+            "value": 0.18433260656813577,
+            "n": 15611,
+            "reliable": "True"
+          },
+          "avg_rating": {
+            "value": 4.3639036839856375,
+            "n": 2832,
+            "reliable": "True"
+          },
+          "order_volume": {
+            "value": 261.5,
+            "n": 46,
+            "reliable": true
+          }
+        },
+        "survey": {
+          "kids_happy": {
+            "value": 0.7004627556351695,
+            "n": 123,
+            "reliable": true
+          },
+          "liked_loved": {
+            "value": 0.9095832999866613,
+            "n": 265,
+            "reliable": true
+          },
+          "reorder_intent": {
+            "value": null,
+            "n": 0,
+            "reliable": false
+          },
+          "enough_food": {
+            "value": 0.7549462451647325,
+            "n": 265,
+            "reliable": true
+          },
+          "food_hot": {
+            "value": 0.6992119514472457,
+            "n": 265,
+            "reliable": true
+          },
+          "food_on_time": {
+            "value": 0.8871817393624117,
+            "n": 265,
+            "reliable": true
+          }
+        }
+      },
+      {
+        "bucket": "1-2",
+        "zones": 95,
+        "behavioral": {
+          "repeat_rate": {
+            "value": 0.13911064443077306,
+            "n": 6035,
+            "reliable": "True"
+          },
+          "avg_rating": {
+            "value": 4.135550278518344,
+            "n": 952,
+            "reliable": "True"
+          },
+          "order_volume": {
+            "value": 44.10526315789474,
+            "n": 95,
+            "reliable": true
+          }
+        },
+        "survey": {
+          "kids_happy": {
+            "value": 0.6507936507936508,
+            "n": 37,
+            "reliable": true
+          },
+          "liked_loved": {
+            "value": 0.8522222222222222,
+            "n": 73,
+            "reliable": true
+          },
+          "reorder_intent": {
+            "value": null,
+            "n": 0,
+            "reliable": false
+          },
+          "enough_food": {
+            "value": 0.7077777777777778,
+            "n": 73,
+            "reliable": true
+          },
+          "food_hot": {
+            "value": 0.5849999999999999,
+            "n": 73,
+            "reliable": true
+          },
+          "food_on_time": {
+            "value": 0.7694444444444444,
+            "n": 73,
+            "reliable": true
+          }
+        }
+      }
+    ],
+    "inflection_analysis": {
+      "repeat_rate": {
+        "from": "1-2",
+        "to": "3-4",
+        "delta": 0.0452,
+        "delta_pct": "+4.5pp",
+        "reliable": "True"
+      },
+      "avg_rating": {
+        "from": "1-2",
+        "to": "3-4",
+        "delta": 0.2284,
+        "delta_pct": "+22.8pp",
+        "reliable": "True"
+      },
+      "kids_happy": {
+        "from": "3-4",
+        "to": "5-6",
+        "delta": 0.0941,
+        "delta_pct": "+9.4pp",
+        "reliable": true
+      },
+      "liked_loved": {
+        "from": "1-2",
+        "to": "3-4",
+        "delta": 0.0574,
+        "delta_pct": "+5.7pp",
+        "reliable": true
+      },
+      "reorder_intent": null
+    },
+    "consensus": {
+      "3-4": 3,
+      "5-6": 1
+    },
+    "recommendation": {
+      "threshold": "3-4",
+      "confidence": "HIGH",
+      "rationale": "3 of 4 metrics show inflection at 3-4"
+    }
+  },
+  "step_2_cuisines_within_partners": {
+    "filter_applied": "Only zones with 3+ partners",
+    "zones_after_filter": 102,
+    "by_cuisine_count": [
+      {
+        "bucket": "7+",
+        "zones": 17,
+        "behavioral": {
+          "repeat_rate": {
+            "value": 0.23780164967611211,
+            "n": 15306,
+            "reliable": "True"
+          },
+          "avg_rating": {
+            "value": 4.474585278333927,
+            "n": 3146,
+            "reliable": "True"
+          },
+          "order_volume": {
+            "value": 802.1176470588235,
+            "n": 17,
+            "reliable": true
+          }
+        },
+        "survey": {
+          "kids_happy": {
+            "value": 0.7038780663780664,
+            "n": 116,
+            "reliable": true
+          },
+          "liked_loved": {
+            "value": 0.8514996467614585,
+            "n": 279,
+            "reliable": true
+          },
+          "reorder_intent": {
+            "value": null,
+            "n": 0,
+            "reliable": false
+          },
+          "enough_food": {
+            "value": 0.7761616033119599,
+            "n": 279,
+            "reliable": true
+          },
+          "food_hot": {
+            "value": 0.6391649734629947,
+            "n": 279,
+            "reliable": true
+          },
+          "food_on_time": {
+            "value": 0.8818029348046847,
+            "n": 279,
+            "reliable": true
+          }
+        }
+      },
+      {
+        "bucket": "5-6",
+        "zones": 24,
+        "behavioral": {
+          "repeat_rate": {
+            "value": 0.23295173717432635,
+            "n": 13763,
+            "reliable": "True"
+          },
+          "avg_rating": {
+            "value": 4.399137183671055,
+            "n": 2564,
+            "reliable": "True"
+          },
+          "order_volume": {
+            "value": 490.7916666666667,
+            "n": 24,
+            "reliable": true
+          }
+        },
+        "survey": {
+          "kids_happy": {
+            "value": 0.6692861202451995,
+            "n": 142,
+            "reliable": true
+          },
+          "liked_loved": {
+            "value": 0.8179055339478895,
+            "n": 313,
+            "reliable": true
+          },
+          "reorder_intent": {
+            "value": null,
+            "n": 0,
+            "reliable": false
+          },
+          "enough_food": {
+            "value": 0.7762472788731483,
+            "n": 313,
+            "reliable": true
+          },
+          "food_hot": {
+            "value": 0.6207141688096557,
+            "n": 313,
+            "reliable": true
+          },
+          "food_on_time": {
+            "value": 0.7982129387512903,
+            "n": 313,
+            "reliable": true
+          }
+        }
+      },
+      {
+        "bucket": "3-4",
+        "zones": 54,
+        "behavioral": {
+          "repeat_rate": {
+            "value": 0.19099317608801092,
+            "n": 20132,
+            "reliable": "True"
+          },
+          "avg_rating": {
+            "value": 4.345898663434955,
+            "n": 3693,
+            "reliable": "True"
+          },
+          "order_volume": {
+            "value": 296.0740740740741,
+            "n": 54,
+            "reliable": true
+          }
+        },
+        "survey": {
+          "kids_happy": {
+            "value": 0.7616313511050352,
+            "n": 150,
+            "reliable": true
+          },
+          "liked_loved": {
+            "value": 0.9040177731911478,
+            "n": 333,
+            "reliable": true
+          },
+          "reorder_intent": {
+            "value": null,
+            "n": 0,
+            "reliable": false
+          },
+          "enough_food": {
+            "value": 0.7636372958540141,
+            "n": 333,
+            "reliable": true
+          },
+          "food_hot": {
+            "value": 0.7036064180057988,
+            "n": 333,
+            "reliable": true
+          },
+          "food_on_time": {
+            "value": 0.8665435156518748,
+            "n": 333,
+            "reliable": true
+          }
+        }
+      },
+      {
+        "bucket": "1-2",
+        "zones": 7,
+        "behavioral": {
+          "repeat_rate": {
+            "value": 0.18291496401339277,
+            "n": 2084,
+            "reliable": "True"
+          },
+          "avg_rating": {
+            "value": 4.252024255971625,
+            "n": 356,
+            "reliable": "True"
+          },
+          "order_volume": {
+            "value": 223.57142857142858,
+            "n": 7,
+            "reliable": true
+          }
+        },
+        "survey": {
+          "kids_happy": {
+            "value": 0.6738095238095239,
+            "n": 16,
+            "reliable": false
+          },
+          "liked_loved": {
+            "value": 0.7678571428571428,
+            "n": 30,
+            "reliable": true
+          },
+          "reorder_intent": {
+            "value": null,
+            "n": 0,
+            "reliable": false
+          },
+          "enough_food": {
+            "value": 0.6741071428571428,
+            "n": 30,
+            "reliable": true
+          },
+          "food_hot": {
+            "value": 0.581845238095238,
+            "n": 30,
+            "reliable": true
+          },
+          "food_on_time": {
+            "value": 0.8191964285714286,
+            "n": 30,
+            "reliable": true
+          }
+        }
+      }
+    ],
+    "inflection_analysis": {
+      "repeat_rate": {
+        "from": "3-4",
+        "to": "5-6",
+        "delta": 0.042,
+        "delta_pct": "+4.2pp",
+        "reliable": "True"
+      },
+      "avg_rating": {
+        "from": "1-2",
+        "to": "3-4",
+        "delta": 0.0939,
+        "delta_pct": "+9.4pp",
+        "reliable": "True"
+      },
+      "kids_happy": {
+        "from": "1-2",
+        "to": "3-4",
+        "delta": 0.0878,
+        "delta_pct": "+8.8pp",
+        "reliable": false
+      },
+      "liked_loved": {
+        "from": "1-2",
+        "to": "3-4",
+        "delta": 0.1362,
+        "delta_pct": "+13.6pp",
+        "reliable": true
+      },
+      "reorder_intent": null
+    },
+    "adds_independent_value": true,
+    "recommendation": {
+      "threshold": "3-4",
+      "confidence": "HIGH",
+      "rationale": "Cuisines add value beyond partners"
+    }
+  },
+  "step_3_dishes_within_partners_and_cuisines": {
+    "filter_applied": "Only zones with 3+ partners AND 3+ cuisines AND Dinneroo dishes",
+    "zones_after_filter": 94,
+    "dishes_per_zone": {
+      "buckets": [
+        {
+          "bucket": "51+",
+          "zones": 26,
+          "behavioral": {
+            "repeat_rate": {
+              "value": 0.21204732953607014,
+              "n": 19635,
+              "reliable": "True"
+            },
+            "avg_rating": {
+              "value": 4.5149797069636834,
+              "n": 3880,
+              "reliable": "True"
+            },
+            "order_volume": {
+              "value": 646.0769230769231,
+              "n": 26,
+              "reliable": true
+            }
+          },
+          "survey": {
+            "kids_happy": {
+              "value": 0.7538723792547322,
+              "n": 165,
+              "reliable": true
+            },
+            "liked_loved": {
+              "value": 0.8669929402750123,
+              "n": 397,
+              "reliable": true
+            },
+            "reorder_intent": {
+              "value": null,
+              "n": 0,
+              "reliable": false
+            },
+            "enough_food": {
+              "value": 0.7326056952614741,
+              "n": 397,
+              "reliable": true
+            },
+            "food_hot": {
+              "value": 0.7010220493135175,
+              "n": 397,
+              "reliable": true
+            },
+            "food_on_time": {
+              "value": 0.8780555564912188,
+              "n": 397,
+              "reliable": true
+            }
+          }
+        },
+        {
+          "bucket": "31-50",
+          "zones": 39,
+          "behavioral": {
+            "repeat_rate": {
+              "value": 0.22404367825767318,
+              "n": 21237,
+              "reliable": "True"
+            },
+            "avg_rating": {
+              "value": 4.391137571001642,
+              "n": 4156,
+              "reliable": "True"
+            },
+            "order_volume": {
+              "value": 465.61538461538464,
+              "n": 39,
+              "reliable": true
+            }
+          },
+          "survey": {
+            "kids_happy": {
+              "value": 0.6827359731771496,
+              "n": 169,
+              "reliable": true
+            },
+            "liked_loved": {
+              "value": 0.8645241600857543,
+              "n": 388,
+              "reliable": true
+            },
+            "reorder_intent": {
+              "value": null,
+              "n": 0,
+              "reliable": false
+            },
+            "enough_food": {
+              "value": 0.7966083450232001,
+              "n": 388,
+              "reliable": true
+            },
+            "food_hot": {
+              "value": 0.6527887906511096,
+              "n": 388,
+              "reliable": true
+            },
+            "food_on_time": {
+              "value": 0.8315199611848162,
+              "n": 388,
+              "reliable": true
+            }
+          }
+        },
+        {
+          "bucket": "16-30",
+          "zones": 23,
+          "behavioral": {
+            "repeat_rate": {
+              "value": 0.19497529289567841,
+              "n": 6801,
+              "reliable": "True"
+            },
+            "avg_rating": {
+              "value": 4.3199619694611275,
+              "n": 1122,
+              "reliable": "True"
+            },
+            "order_volume": {
+              "value": 229.95652173913044,
+              "n": 23,
+              "reliable": true
+            }
+          },
+          "survey": {
+            "kids_happy": {
+              "value": 0.775,
+              "n": 66,
+              "reliable": true
+            },
+            "liked_loved": {
+              "value": 0.9014327485380117,
+              "n": 121,
+              "reliable": true
+            },
+            "reorder_intent": {
+              "value": null,
+              "n": 0,
+              "reliable": false
+            },
+            "enough_food": {
+              "value": 0.8085254803675855,
+              "n": 121,
+              "reliable": true
+            },
+            "food_hot": {
+              "value": 0.6613659147869674,
+              "n": 121,
+              "reliable": true
+            },
+            "food_on_time": {
+              "value": 0.8921345029239767,
+              "n": 121,
+              "reliable": true
+            }
+          }
+        },
+        {
+          "bucket": "1-15",
+          "zones": 6,
+          "behavioral": {
+            "repeat_rate": {
+              "value": 0.16769665554784796,
+              "n": 1348,
+              "reliable": "True"
+            },
+            "avg_rating": {
+              "value": 4.076023391812865,
+              "n": 215,
+              "reliable": "True"
+            },
+            "order_volume": {
+              "value": 167.33333333333334,
+              "n": 6,
+              "reliable": true
+            }
+          },
+          "survey": {
+            "kids_happy": {
+              "value": 0.4,
+              "n": 5,
+              "reliable": false
+            },
+            "liked_loved": {
+              "value": 0.8222222222222222,
+              "n": 15,
+              "reliable": false
+            },
+            "reorder_intent": {
+              "value": null,
+              "n": 0,
+              "reliable": false
+            },
+            "enough_food": {
+              "value": 0.6666666666666666,
+              "n": 15,
+              "reliable": false
+            },
+            "food_hot": {
+              "value": 0.6666666666666666,
+              "n": 15,
+              "reliable": false
+            },
+            "food_on_time": {
+              "value": 0.711111111111111,
+              "n": 15,
+              "reliable": false
+            }
+          }
+        }
+      ],
+      "inflection_analysis": {
+        "repeat_rate": {
+          "from": "16-30",
+          "to": "31-50",
+          "delta": 0.0291,
+          "delta_pct": "+2.9pp",
+          "reliable": "True"
+        },
+        "avg_rating": {
+          "from": "1-15",
+          "to": "16-30",
+          "delta": 0.2439,
+          "delta_pct": "+24.4pp",
+          "reliable": "True"
+        },
+        "kids_happy": {
+          "from": "1-15",
+          "to": "16-30",
+          "delta": 0.375,
+          "delta_pct": "+37.5pp",
+          "reliable": false
+        },
+        "liked_loved": {
+          "from": "1-15",
+          "to": "16-30",
+          "delta": 0.0792,
+          "delta_pct": "+7.9pp",
+          "reliable": false
+        }
+      },
+      "significant_inflections": 2
+    },
+    "dishes_per_partner": {
+      "buckets": [
+        {
+          "bucket": "3-4",
+          "zones": 14,
+          "behavioral": {
+            "repeat_rate": {
+              "value": 0.2091307192893526,
+              "n": 6179,
+              "reliable": "True"
+            },
+            "avg_rating": {
+              "value": 4.241534783134388,
+              "n": 1039,
+              "reliable": "True"
+            },
+            "order_volume": {
+              "value": 365.7857142857143,
+              "n": 14,
+              "reliable": true
+            }
+          },
+          "survey": {
+            "kids_happy": {
+              "value": 0.8400000000000001,
+              "n": 41,
+              "reliable": true
+            },
+            "liked_loved": {
+              "value": 0.833178726035869,
+              "n": 109,
+              "reliable": true
+            },
+            "reorder_intent": {
+              "value": null,
+              "n": 0,
+              "reliable": false
+            },
+            "enough_food": {
+              "value": 0.757385075242218,
+              "n": 109,
+              "reliable": true
+            },
+            "food_hot": {
+              "value": 0.665630797773655,
+              "n": 109,
+              "reliable": true
+            },
+            "food_on_time": {
+              "value": 0.7693774479488765,
+              "n": 109,
+              "reliable": true
+            }
+          }
+        },
+        {
+          "bucket": "4-5",
+          "zones": 15,
+          "behavioral": {
+            "repeat_rate": {
+              "value": 0.2163783539423674,
+              "n": 8669,
+              "reliable": "True"
+            },
+            "avg_rating": {
+              "value": 4.362852383508594,
+              "n": 1690,
+              "reliable": "True"
+            },
+            "order_volume": {
+              "value": 493.2,
+              "n": 15,
+              "reliable": true
+            }
+          },
+          "survey": {
+            "kids_happy": {
+              "value": 0.6129432075860647,
+              "n": 76,
+              "reliable": true
+            },
+            "liked_loved": {
+              "value": 0.8898917623729654,
+              "n": 147,
+              "reliable": true
+            },
+            "reorder_intent": {
+              "value": null,
+              "n": 0,
+              "reliable": false
+            },
+            "enough_food": {
+              "value": 0.7582453041945522,
+              "n": 147,
+              "reliable": true
+            },
+            "food_hot": {
+              "value": 0.5826240739210664,
+              "n": 147,
+              "reliable": true
+            },
+            "food_on_time": {
+              "value": 0.8812922071662673,
+              "n": 147,
+              "reliable": true
+            }
+          }
+        },
+        {
+          "bucket": "5-6",
+          "zones": 24,
+          "behavioral": {
+            "repeat_rate": {
+              "value": 0.22325903083684753,
+              "n": 13109,
+              "reliable": "True"
+            },
+            "avg_rating": {
+              "value": 4.402053647888682,
+              "n": 2521,
+              "reliable": "True"
+            },
+            "order_volume": {
+              "value": 476.4166666666667,
+              "n": 24,
+              "reliable": true
+            }
+          },
+          "survey": {
+            "kids_happy": {
+              "value": 0.6734722222222221,
+              "n": 103,
+              "reliable": true
+            },
+            "liked_loved": {
+              "value": 0.8693642568512551,
+              "n": 247,
+              "reliable": true
+            },
+            "reorder_intent": {
+              "value": null,
+              "n": 0,
+              "reliable": false
+            },
+            "enough_food": {
+              "value": 0.8097341209053295,
+              "n": 247,
+              "reliable": true
+            },
+            "food_hot": {
+              "value": 0.6304761109264958,
+              "n": 247,
+              "reliable": true
+            },
+            "food_on_time": {
+              "value": 0.8370815873676285,
+              "n": 247,
+              "reliable": true
+            }
+          }
+        },
+        {
+          "bucket": "6+",
+          "zones": 41,
+          "behavioral": {
+            "repeat_rate": {
+              "value": 0.20023959928302396,
+              "n": 21064,
+              "reliable": "True"
+            },
+            "avg_rating": {
+              "value": 4.438671781286935,
+              "n": 4123,
+              "reliable": "True"
+            },
+            "order_volume": {
+              "value": 421.8780487804878,
+              "n": 41,
+              "reliable": true
+            }
+          },
+          "survey": {
+            "kids_happy": {
+              "value": 0.7631570672346073,
+              "n": 185,
+              "reliable": true
+            },
+            "liked_loved": {
+              "value": 0.8796293175669857,
+              "n": 418,
+              "reliable": true
+            },
+            "reorder_intent": {
+              "value": null,
+              "n": 0,
+              "reliable": false
+            },
+            "enough_food": {
+              "value": 0.7615824083044993,
+              "n": 418,
+              "reliable": true
+            },
+            "food_hot": {
+              "value": 0.7308340218987025,
+              "n": 418,
+              "reliable": true
+            },
+            "food_on_time": {
+              "value": 0.8819156723527181,
+              "n": 418,
+              "reliable": true
+            }
+          }
+        }
+      ],
+      "inflection_analysis": {
+        "repeat_rate": {
+          "from": "3-4",
+          "to": "4-5",
+          "delta": 0.0072,
+          "delta_pct": "+0.7pp",
+          "reliable": "True"
+        },
+        "avg_rating": {
+          "from": "3-4",
+          "to": "4-5",
+          "delta": 0.1213,
+          "delta_pct": "+12.1pp",
+          "reliable": "True"
+        },
+        "kids_happy": {
+          "from": "5-6",
+          "to": "6+",
+          "delta": 0.0897,
+          "delta_pct": "+9.0pp",
+          "reliable": true
+        },
+        "liked_loved": {
+          "from": "3-4",
+          "to": "4-5",
+          "delta": 0.0567,
+          "delta_pct": "+5.7pp",
+          "reliable": true
+        }
+      },
+      "significant_inflections": 3
+    },
+    "preferred_approach": "dishes_per_partner",
+    "adds_independent_value": true,
+    "recommendation": {
+      "threshold": "TBD based on inflection",
+      "confidence": "MEDIUM",
+      "rationale": "Dishes per partner shows stronger independent effect"
+    }
+  },
+  "correlations": {
+    "partner_cuisine": 0.894,
+    "partner_dish": 0.608,
+    "cuisine_dish": 0.585,
+    "warnings": [
+      "High correlation (0.89) between partners and cuisines - interpret with caution",
+      null
+    ]
+  },
+  "final_recommendations": {
+    "mvp_criteria": [
+      {
+        "criterion": "partners",
+        "threshold": "3-4",
+        "confidence": "HIGH",
+        "is_primary": true,
+        "evidence_summary": "3 of 4 metrics show inflection at 3-4"
+      },
+      {
+        "criterion": "cuisines",
+        "threshold": "3-4",
+        "confidence": "HIGH",
+        "is_primary": false,
+        "adds_value_beyond_partners": true,
+        "evidence_summary": "Cuisines add value beyond partners"
+      },
+      {
+        "criterion": "dishes",
+        "threshold": "TBD based on inflection",
+        "confidence": "MEDIUM",
+        "is_primary": false,
+        "adds_value_beyond_above": true,
+        "evidence_summary": "Dishes per partner shows stronger independent effect"
+      }
+    ],
+    "simplification_possible": false,
+    "simplification_note": "All three criteria add independent value"
+  },
+  "data_quality_notes": {
+    "zones_analyzed": 197,
+    "zones_with_repeat_rate": 197,
+    "zones_with_ratings": 192,
+    "zones_with_survey": 120,
+    "min_behavioral_sample": 30,
+    "min_survey_sample": 20,
+    "limitations": [
+      "Survey sample sizes are small in some buckets",
+      "Behavioral and survey data may not perfectly align",
+      "Correlations between factors make independent effects hard to isolate"
+    ]
+  }
+}

@@ -1,1 +1,43 @@
-
+{
+  "mvp_criteria": {
+    "cuisines_min": {
+      "value": 5,
+      "justification": "Covers diverse family preferences - Italian, Indian, Asian, Chicken, Thai"
+    },
+    "partners_min": {
+      "value": 5,
+      "justification": "Provides cuisine redundancy and availability"
+    },
+    "dishes_min": {
+      "value": 21,
+      "justification": "Minimum 3 dishes per core cuisine × 7 cuisines"
+    },
+    "rating_min": {
+      "value": 4.0,
+      "justification": "Families are satisfied - benchmark is 4.2"
+    },
+    "repeat_rate_min": {
+      "value": 35,
+      "justification": "Families find value and return - top zones: 40%+"
+    }
+  },
+  "essential_cuisines": [
+    "Italian",
+    "Indian", 
+    "Japanese/Asian",
+    "Chicken (Grilled)",
+    "Thai/Vietnamese"
+  ],
+  "recommended_cuisines": [
+    "Mexican/Latin",
+    "Burgers",
+    "Mediterranean"
+  ],
+  "tier_1_dishes": [
+    "Pizza",
+    "Pasta",
+    "Tikka Masala",
+    "Teriyaki",
+    "Grilled Chicken"
+  ]
+}

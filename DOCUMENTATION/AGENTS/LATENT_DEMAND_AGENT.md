@@ -188,6 +188,29 @@ latent_demand_final = max(1, min(5, round(latent_demand_raw)))
 
 ---
 
+## Dashboard Integration
+
+This agent feeds the **Latent Demand** tab in the Consumer Insight Tracker dashboard.
+
+| Output | Dashboard Location | Data File |
+|--------|-------------------|-----------|
+| Open-text themes | Latent Demand tab | `latent_demand_scores.csv` |
+| Unmet needs by tier | Demand Tiers section | `latent_demand_summary.json` |
+| Dietary gaps | Inclusion Gaps | Extracted from surveys |
+| Quote examples | Hover tooltips | From open-text fields |
+
+**Latent demand in dish scoring:**
+- Latent Demand component = 25% of Opportunity track
+- Sources triangulated: Open-text (45%) + OG Survey wishlist (30%) + Barrier signals (25%)
+
+**To update dashboard with latent demand:**
+```bash
+python3 scripts/prepare_dashboard_data.py
+python3 scripts/generate_dashboard.py
+```
+
+---
+
 ## Anti-Bias Rules
 
 - ❌ Don't assume themes from prior analysis - extract fresh

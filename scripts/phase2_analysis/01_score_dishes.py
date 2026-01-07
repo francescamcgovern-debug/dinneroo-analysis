@@ -38,9 +38,31 @@ def load_master_dish_types():
         return pd.DataFrame()
 
 def load_performance_data():
-    """Load performance data from existing analysis."""
+    """Load performance data from existing analysis.
+    
+    Tries multiple sources in order of preference:
+    1. dish_performance.csv (from extraction script with all dish types)
+    2. dish_performance_scores.csv (legacy file)
+    """
+    # Try the newer extraction output first
+    perf_path = DATA_PATH / "3_ANALYSIS" / "dish_performance.csv"
+    if perf_path.exists():
+        df = pd.read_csv(perf_path)
+        print(f"Loaded dish_performance.csv: {len(df)} dish types")
+        # Rename columns to match expected format
+        col_map = {
+            'adult_satisfaction_rate': 'adult_satisfaction',
+            'kids_happy_rate': 'kids_happy',
+            'portions_adequate_rate': 'portions_adequate',
+            'n': 'survey_n'
+        }
+        df = df.rename(columns=col_map)
+        return df
+    
+    # Fall back to legacy file
     try:
         df = pd.read_csv(DATA_PATH / "3_ANALYSIS" / "dish_performance_scores.csv")
+        print(f"Loaded dish_performance_scores.csv: {len(df)} dish types")
         return df
     except Exception as e:
         print(f"Warning: Could not load performance scores: {e}")
@@ -234,76 +256,165 @@ def calculate_opportunity_score(row, latent_demand_df, config):
     return weighted_score, evidence, scores
 
 def estimate_adult_appeal(dish_type):
-    """Estimate adult appeal based on dish type characteristics."""
-    high_appeal = ['Pho', 'Ramen', 'Sushi', 'Thai', 'Curry', 'Shawarma', 'Biryani', 
-                   'Pad Thai', 'Korean Fried Chicken', 'Greek Mezze']
-    medium_appeal = ['Katsu', 'Rice Bowl', 'Noodles', 'Fajitas', 'Burrito', 'Salad',
-                     'Grilled Chicken', 'Teriyaki', 'Stir Fry']
-    low_appeal = ['Pizza', 'Mac & Cheese', 'Pasta', 'Fish & Chips', 'Burger']
+    """Estimate adult appeal based on dish type characteristics.
+    
+    Uses full 1-5 range with more granular differentiation:
+    5 = Restaurant-quality, adults actively seek out
+    4 = Adults genuinely enjoy
+    3 = Adults tolerate, acceptable
+    2 = More kid-focused, adults wouldn't choose
+    1 = Pure kid food, adults avoid
+    """
+    # Score 5: Restaurant-quality dishes adults actively want
+    score_5 = ['Pho', 'Ramen', 'Sushi', 'Thai Curry', 'Biryani', 'Pad Thai', 
+               'Korean Fried Chicken', 'Greek Mezze', 'Shawarma', 'Tagine',
+               'Tandoori', 'Laksa', 'Dim Sum', 'Peking Duck', 'Paella',
+               'Rendang', 'Tom Yum', 'Bulgogi', 'Bibimbap']
+    
+    # Score 4: Adults genuinely enjoy
+    score_4 = ['Katsu', 'Curry', 'Noodles', 'Fajitas', 'Salad', 'Teriyaki',
+               'Stir Fry', 'Rice Bowl', 'Burrito', 'Tacos', 'Grilled Chicken',
+               'Gyoza', 'Satay', 'Falafel', 'Wings', 'Tikka Masala',
+               'Butter Chicken', 'Daal', 'Risotto', 'Poke Bowl']
+    
+    # Score 3: Adults tolerate, neutral
+    score_3 = ['Pizza', 'Pasta', 'Lasagne', 'Fried Rice', 'Quesadilla',
+               'Pie', 'Roast Dinner', 'Fish & Chips', 'Soup', 'Bowl',
+               'Enchiladas', 'Chilli', 'Wrap', 'Sandwich']
+    
+    # Score 2: More kid-focused
+    score_2 = ['Mac & Cheese', 'Burger', 'Nachos', 'Spring Rolls',
+               'Chicken Nuggets', 'Hot Dog', 'Bangers & Mash']
+    
+    # Score 1: Pure kid food
+    score_1 = []  # Very few dishes are truly 1
     
     dish_lower = dish_type.lower()
     
-    for d in high_appeal:
+    for d in score_5:
         if d.lower() in dish_lower:
             return 5
-    for d in medium_appeal:
+    for d in score_4:
         if d.lower() in dish_lower:
             return 4
-    for d in low_appeal:
+    for d in score_3:
         if d.lower() in dish_lower:
             return 3
-    
-    return 3  # Default
-
-def estimate_balanced(dish_type):
-    """Estimate balanced/guilt-free score based on dish type."""
-    very_balanced = ['Salad', 'Grilled Chicken', 'Poke Bowl', 'Buddha Bowl', 'Grain Bowl',
-                     'Rice Bowl', 'Pho', 'Stir Fry']
-    balanced = ['Katsu', 'Teriyaki', 'Fajitas', 'Shawarma', 'Curry', 'Noodles']
-    neutral = ['Pad Thai', 'Ramen', 'Biryani', 'Sushi', 'Tacos']
-    indulgent = ['Pizza', 'Burger', 'Mac & Cheese', 'Fish & Chips', 'Lasagne']
-    
-    dish_lower = dish_type.lower()
-    
-    for d in very_balanced:
-        if d.lower() in dish_lower:
-            return 5
-    for d in balanced:
-        if d.lower() in dish_lower:
-            return 4
-    for d in neutral:
-        if d.lower() in dish_lower:
-            return 3
-    for d in indulgent:
+    for d in score_2:
         if d.lower() in dish_lower:
             return 2
+    for d in score_1:
+        if d.lower() in dish_lower:
+            return 1
+    
+    return 3  # Default for unknown
+
+def estimate_balanced(dish_type):
+    """Estimate balanced/guilt-free score based on dish type.
+    
+    Uses full 1-5 range:
+    5 = Clearly balanced, visible protein + veg + carbs, healthy
+    4 = Mostly balanced, some vegetables
+    3 = Neutral - can go either way
+    2 = Indulgent but some redeeming qualities
+    1 = Pure treat/indulgence
+    """
+    # Score 5: Very healthy/balanced
+    score_5 = ['Salad', 'Grilled Chicken', 'Poke Bowl', 'Buddha Bowl', 
+               'Grain Bowl', 'Pho', 'Daal', 'Tandoori', 'Soup',
+               'Grilled Chicken with Sides', 'Bibimbap']
+    
+    # Score 4: Mostly balanced
+    score_4 = ['Rice Bowl', 'Stir Fry', 'Teriyaki', 'Sushi', 'Fajitas',
+               'Shawarma', 'Falafel', 'Wrap', 'Tacos', 'Thai Curry',
+               'Ramen', 'Noodles', 'Katsu', 'Curry']
+    
+    # Score 3: Neutral
+    score_3 = ['Pad Thai', 'Biryani', 'Burrito', 'Quesadilla', 'Gyoza',
+               'Fried Rice', 'Roast Dinner', 'Pie', 'Chilli',
+               'Tikka Masala', 'Butter Chicken', 'Enchiladas']
+    
+    # Score 2: Indulgent
+    score_2 = ['Pizza', 'Burger', 'Pasta', 'Lasagne', 'Fish & Chips',
+               'Wings', 'Nachos', 'Spring Rolls', 'Tempura',
+               'Korean Fried Chicken', 'BBQ Ribs', 'Pulled Pork']
+    
+    # Score 1: Pure indulgence
+    score_1 = ['Mac & Cheese', 'Chicken Nuggets', 'Hot Dog']
+    
+    dish_lower = dish_type.lower()
+    
+    for d in score_5:
+        if d.lower() in dish_lower:
+            return 5
+    for d in score_4:
+        if d.lower() in dish_lower:
+            return 4
+    for d in score_3:
+        if d.lower() in dish_lower:
+            return 3
+    for d in score_2:
+        if d.lower() in dish_lower:
+            return 2
+    for d in score_1:
+        if d.lower() in dish_lower:
+            return 1
     
     return 3  # Default
 
 def estimate_fussy_eater(dish_type):
-    """Estimate fussy eater friendliness based on dish type."""
-    very_friendly = ['Pizza', 'Pasta', 'Mac & Cheese', 'Chicken', 'Fish & Chips',
-                     'Burger', 'Fajitas', 'Katsu']
-    friendly = ['Rice Bowl', 'Noodles', 'Teriyaki', 'Fried Rice', 'Grilled Chicken']
-    neutral = ['Curry', 'Lasagne', 'Stir Fry', 'Shawarma']
-    challenging = ['Pho', 'Ramen', 'Sushi', 'Thai', 'Biryani', 'Korean']
+    """Estimate fussy eater friendliness based on dish type.
+    
+    Uses full 1-5 range:
+    5 = Mild by default, universally appealing, no 'scary' ingredients
+    4 = Mild option available, familiar ingredients
+    3 = Can be made mild on request
+    2 = Some unfamiliar ingredients, may need adaptation
+    1 = Spicy/complex by nature, difficult to adapt
+    """
+    # Score 5: Very fussy-eater friendly
+    score_5 = ['Pizza', 'Pasta', 'Mac & Cheese', 'Fish & Chips', 'Burger',
+               'Chicken Nuggets', 'Hot Dog', 'Quesadilla', 'Jacket Potato',
+               'Bangers & Mash', 'Grilled Chicken with Sides', 'Schnitzel']
+    
+    # Score 4: Friendly with familiar ingredients
+    score_4 = ['Katsu', 'Fajitas', 'Noodles', 'Rice Bowl', 'Teriyaki',
+               'Fried Rice', 'Lasagne', 'Pie', 'Roast Dinner', 'Wings',
+               'Nachos', 'Wrap', 'Sandwich', 'Grilled Chicken', 'Spring Rolls']
+    
+    # Score 3: Can be adapted
+    score_3 = ['Curry', 'Stir Fry', 'Tacos', 'Burrito', 'Chilli',
+               'Tikka Masala', 'Butter Chicken', 'Korma', 'Risotto',
+               'Soup', 'Shawarma', 'Enchiladas', 'Gyoza']
+    
+    # Score 2: Unfamiliar ingredients
+    score_2 = ['Pho', 'Ramen', 'Sushi', 'Pad Thai', 'Biryani',
+               'Thai Curry', 'Falafel', 'Bibimbap', 'Satay',
+               'Dim Sum', 'Daal', 'Tandoori', 'Gyros']
+    
+    # Score 1: Very challenging for fussy eaters
+    score_1 = ['Tom Yum', 'Laksa', 'Rendang', 'Tagine', 'Dolma',
+               'Shakshuka', 'Curry Goat', 'Oxtail', 'Bulgogi']
     
     dish_lower = dish_type.lower()
     
-    for d in very_friendly:
+    for d in score_5:
         if d.lower() in dish_lower:
             return 5
-    for d in friendly:
+    for d in score_4:
         if d.lower() in dish_lower:
             return 4
-    for d in neutral:
+    for d in score_3:
         if d.lower() in dish_lower:
             return 3
-    for d in challenging:
+    for d in score_2:
         if d.lower() in dish_lower:
             return 2
+    for d in score_1:
+        if d.lower() in dish_lower:
+            return 1
     
-    return 3  # Default
+    return 3  # Default for unknown
 
 def calculate_unified_score(perf_score, opp_score, config):
     """Calculate the unified score combining both tracks."""
@@ -317,6 +428,58 @@ def calculate_unified_score(perf_score, opp_score, config):
     # Both scores are on 1-5 scale, weighted average stays on 1-5 scale
     unified = (perf_score * perf_weight + opp_score * opp_weight)
     return unified, 'full'
+
+
+def normalize_scores(df, score_column, output_column=None):
+    """Normalize scores to use the full 1-5 range using percentile ranking.
+    
+    This ensures weight changes have real impact by spreading scores across
+    the full range instead of clustering in a narrow band.
+    
+    Args:
+        df: DataFrame with scores
+        score_column: Column name containing raw scores
+        output_column: Column name for normalized scores (default: same as input)
+    
+    Returns:
+        DataFrame with normalized scores
+    """
+    if output_column is None:
+        output_column = score_column
+    
+    if score_column not in df.columns:
+        return df
+    
+    # Get valid scores
+    valid_mask = df[score_column].notna()
+    if valid_mask.sum() == 0:
+        return df
+    
+    # Calculate percentile ranks (0-100)
+    percentiles = df.loc[valid_mask, score_column].rank(pct=True) * 100
+    
+    # Convert percentiles to 1-5 scale
+    # 0-20th percentile -> 1
+    # 20-40th percentile -> 2
+    # 40-60th percentile -> 3
+    # 60-80th percentile -> 4
+    # 80-100th percentile -> 5
+    def percentile_to_score(pct):
+        if pct <= 20:
+            return 1 + (pct / 20) * 0.8  # 1.0 - 1.8
+        elif pct <= 40:
+            return 2 + ((pct - 20) / 20) * 0.8  # 2.0 - 2.8
+        elif pct <= 60:
+            return 3 + ((pct - 40) / 20) * 0.8  # 3.0 - 3.8
+        elif pct <= 80:
+            return 4 + ((pct - 60) / 20) * 0.8  # 4.0 - 4.8
+        else:
+            return 4.8 + ((pct - 80) / 20) * 0.2  # 4.8 - 5.0
+    
+    df.loc[valid_mask, output_column] = percentiles.apply(percentile_to_score)
+    
+    return df
+
 
 def assign_tier(score, config):
     """Assign tier based on score."""
@@ -344,9 +507,14 @@ def assign_quadrant(perf_score, opp_score, has_performance_data=True, on_dinnero
     Key logic:
     - Prospect is ONLY for dishes NOT on Dinneroo (true expansion opportunities)
     - Dishes ON Dinneroo without performance data go to Develop (need to track)
+    
+    Thresholds are set to create balanced quadrants after normalization.
+    Using median-based thresholds (3.0) for both axes.
     """
-    perf_threshold = 3.5
-    opp_threshold = 3.0
+    # Use median-based thresholds for balanced quadrants
+    # After normalization, scores are spread across full 1-5 range
+    perf_threshold = 3.0  # Median performance
+    opp_threshold = 3.0   # Median opportunity
     
     # For dishes NOT on Dinneroo, use opportunity-only logic
     if not on_dinneroo:
@@ -510,8 +678,44 @@ def main():
             'fussy_eater_friendly': opp_components.get('fussy_eater'),
         })
     
-    # Create DataFrame and sort
+    # Create DataFrame
     results_df = pd.DataFrame(results)
+    
+    # Apply normalization to spread scores across full 1-5 range
+    print("\n5. Normalizing scores...")
+    
+    # Store raw scores before normalization
+    results_df['performance_score_raw'] = results_df['performance_score']
+    results_df['opportunity_score_raw'] = results_df['opportunity_score']
+    
+    # Normalize performance scores
+    results_df = normalize_scores(results_df, 'performance_score')
+    print(f"   Performance score range: {results_df['performance_score'].min():.2f} - {results_df['performance_score'].max():.2f}")
+    
+    # Normalize opportunity scores
+    results_df = normalize_scores(results_df, 'opportunity_score')
+    print(f"   Opportunity score range: {results_df['opportunity_score'].min():.2f} - {results_df['opportunity_score'].max():.2f}")
+    
+    # Recalculate unified scores with normalized values
+    for idx, row in results_df.iterrows():
+        perf_score = row['performance_score']
+        opp_score = row['opportunity_score']
+        unified, _ = calculate_unified_score(perf_score, opp_score, config)
+        results_df.at[idx, 'unified_score'] = round(unified, 2)
+        
+        # Recalculate quadrant with normalized scores
+        has_perf_data = pd.notna(perf_score)
+        is_on_dinneroo = row.get('on_dinneroo', True)
+        results_df.at[idx, 'quadrant'] = assign_quadrant(
+            perf_score, opp_score, 
+            has_performance_data=has_perf_data, 
+            on_dinneroo=is_on_dinneroo
+        )
+        
+        # Recalculate tier
+        results_df.at[idx, 'tier'] = assign_tier(unified, config)
+    
+    # Sort and rank
     results_df = results_df.sort_values('unified_score', ascending=False).reset_index(drop=True)
     results_df['rank'] = results_df.index + 1
     
@@ -520,7 +724,8 @@ def main():
                  'performance_score', 'opportunity_score', 'tier', 'quadrant', 
                  'evidence_level', 'order_volume', 'avg_rating', 'adult_satisfaction',
                  'kids_happy', 'latent_demand_score', 'adult_appeal', 
-                 'balanced_guilt_free', 'fussy_eater_friendly']
+                 'balanced_guilt_free', 'fussy_eater_friendly',
+                 'performance_score_raw', 'opportunity_score_raw']
     results_df = results_df[[c for c in col_order if c in results_df.columns]]
     
     # Limit to top 100
@@ -529,7 +734,7 @@ def main():
     print(f"   Scored {len(results_df)} dishes")
     
     # Save outputs
-    print("\n5. Saving outputs...")
+    print("\n6. Saving outputs...")
     
     # CSV
     csv_path = DATA_PATH / "3_ANALYSIS" / "priority_100_unified.csv"

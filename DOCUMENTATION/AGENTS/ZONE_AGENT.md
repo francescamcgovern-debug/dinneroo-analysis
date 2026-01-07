@@ -111,12 +111,28 @@ For each zone not at MVP:
 
 | File | Purpose |
 |------|---------|
-| `DATA/3_ANALYSIS/anna_zone_dish_counts.csv` | Ground truth - 1,306 zones |
+| `DATA/3_ANALYSIS/anna_zone_dish_counts.csv` | **Ground truth - 1,306 zones** (ALWAYS use for supply) |
+| `DATA/3_ANALYSIS/zone_gap_report.csv` | Gap analysis for ALL zones |
 | `DATA/3_ANALYSIS/zone_mvp_status.csv` | MVP calculations |
 | `DATA/3_ANALYSIS/zone_stats.csv` | Performance metrics |
 | `DATA/3_ANALYSIS/zone_quality_scores.csv` | Health scores |
 | `config/mvp_thresholds.json` | Threshold definitions |
 | `DELIVERABLES/reports/mvp_zone_report_product_director.md` | Example output |
+
+## Critical: Zone Coverage
+
+**ALWAYS analyze ALL 1,306 zones from Anna's ground truth, not just zones with orders.**
+
+| Source | Zone Count | Use For |
+|--------|------------|---------|
+| Anna's ground truth | **1,306** | Supply metrics (what we have) |
+| Snowflake orders | ~642 | Performance metrics (zones with activity) |
+| zone_gap_report.csv | **1,306** | Gap analysis (must include all zones) |
+
+To regenerate zone_gap_report.csv with all zones:
+```bash
+python scripts/phase2_analysis/analyze_all_zones.py
+```
 
 ---
 
@@ -184,14 +200,46 @@ Top performing zones to use as benchmarks:
 
 ---
 
+## Dashboard Integration
+
+This agent feeds the **Zones** tab and Overview KPIs in the Consumer Insight Tracker dashboard.
+
+| Output | Dashboard Location | Data File |
+|--------|-------------------|-----------|
+| Zone count (1,306) | Overview KPI | `anna_zone_dish_counts.csv` |
+| MVP status breakdown | Zones tab, MVP Status | `zone_mvp_status.csv` |
+| Zone health scores | Zone Performance | `zone_quality_scores.csv` |
+| Coverage gaps | Zones tab, Gaps | `zone_gap_report.csv` |
+| Benchmark zones | Zone Comparison | `zone_stats.csv` |
+
+**Key dashboard metrics from this agent:**
+- "Zones Analyzed: 1,306" (from Anna's ground truth)
+- MVP Ready / Near MVP / Developing / Early Stage breakdown
+- Zone-level cuisine coverage
+- Recruitment priority by zone
+
+**To regenerate zone analysis for dashboard:**
+```bash
+# Regenerate zone_gap_report.csv with all 1,306 zones
+python3 scripts/phase2_analysis/analyze_all_zones.py
+
+# Update dashboard
+python3 scripts/prepare_dashboard_data.py
+python3 scripts/generate_dashboard.py
+```
+
+---
+
 ## Anti-Drift Rules
 
 - ❌ Don't derive supply from order data (use Anna's ground truth)
 - ❌ Don't weight volume highest (it's an outcome, not a driver)
 - ❌ Don't assume zone performance without fresh calculation
+- ❌ **Don't analyze only zones with orders - use ALL 1,306 zones from Anna's data**
 - ✅ Use repeat rate as primary success signal
 - ✅ Distinguish supply metrics from performance metrics
 - ✅ Compare against benchmark zones
+- ✅ **Always report total zones (1,306) alongside zones with orders (~642)**
 
 ---
 

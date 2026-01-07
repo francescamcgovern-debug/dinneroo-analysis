@@ -218,6 +218,24 @@ From `DATA/3_ANALYSIS/cuisine_gap_analysis.csv`:
 
 ---
 
+## Dashboard Integration
+
+This agent feeds the **Cuisine Gaps** tab in the Consumer Insight Tracker dashboard.
+
+| Output | Dashboard Location | Data File |
+|--------|-------------------|-----------|
+| Cuisine gap counts | Cuisine Gaps tab | `cuisine_gap_analysis.csv` |
+| Zone-cuisine matrix | Gaps by Zone | `zone_gap_report.csv` |
+| Recruitment priorities | Quick Wins section | Derived from gaps |
+
+**To update dashboard with gap data:**
+```bash
+python3 scripts/prepare_dashboard_data.py
+python3 scripts/generate_dashboard.py
+```
+
+---
+
 ## Anti-Drift Rules
 
 - ❌ Don't assume gaps without checking Anna's ground truth

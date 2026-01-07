@@ -192,6 +192,32 @@ From `DATA/3_ANALYSIS/priority_100_unified.csv`:
 
 ---
 
+## Dashboard Integration
+
+This agent is the **primary data source** for the Consumer Insight Tracker dashboard.
+
+| Output | Dashboard Location | Data File |
+|--------|-------------------|-----------|
+| Priority 100 rankings | Dishes tab, main table | `priority_100_unified.csv` |
+| 2x2 quadrant classification | Dish Demand Matrix | `dish_2x2_unified.csv` |
+| Performance scores | Interactive sliders | `dish_composite_scores.csv` |
+| Opportunity scores | Interactive sliders | `dish_composite_scores.csv` |
+| Dish validation | Validation Panel | Cross-referenced with OG Survey |
+
+**Dashboard features powered by this agent:**
+- Interactive 2x2 matrix (Performance vs Opportunity)
+- Weight sliders for adjusting scoring
+- Preset configurations (Default, Behavioral Only, OG Survey Match, Family Focus)
+- Dish List Validation panel (OG Survey vs Live vs Weighted)
+
+**To update dashboard with dish data:**
+```bash
+python3 scripts/prepare_dashboard_data.py
+python3 scripts/generate_dashboard.py
+```
+
+---
+
 ## Anti-Drift Rules
 
 - ❌ Don't assume top dishes without fresh calculation

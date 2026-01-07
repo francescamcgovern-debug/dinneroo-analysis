@@ -16,8 +16,61 @@
 6. [Slide 10: Dish Scoring Data Table](#slide-10-dish-scoring-data-table)
 7. [Slide 13: Coverage Gaps & Next Steps](#slide-13-coverage-gaps--next-steps)
 8. [Niche Dish Recommendations](#niche-dish-recommendations)
-9. [Data Sources & Sample Sizes](#data-sources--sample-sizes)
-10. [Caveats & Limitations](#caveats--limitations)
+9. [Provocative Insights](#provocative-insights)
+10. [Data Sources & Sample Sizes](#data-sources--sample-sizes)
+11. [Caveats & Limitations](#caveats--limitations)
+
+---
+
+## ⚠️ Provocative Insights (Discussion Starters)
+
+> These insights challenge assumptions and are designed to spark exec discussion
+
+### "Family" Dinneroo Isn't Just Reaching Families
+
+```
+WHO IS ACTUALLY ORDERING?
+
+┌─────────────────────────┬─────────┬─────────┬─────────────────────────┐
+│ Household Type          │ Orders  │ % Total │ Satisfaction            │
+├─────────────────────────┼─────────┼─────────┼─────────────────────────┤
+│ Families WITH kids      │ 729     │ 46%     │ 74% satisfied           │
+│ Couples/singles NO kids │ 870     │ 54%     │ 68% satisfied           │
+└─────────────────────────┴─────────┴─────────┴─────────────────────────┘
+
+54% of "Family Dinneroo" customers don't have children at home.
+
+BUT: Families with kids are MORE satisfied (74% vs 68%)
+→ The product works better for its intended audience
+
+QUESTIONS FOR DISCUSSION:
+• Is 46% families "good enough" or should we target better?
+• Should we rebrand/reposition to include couples?
+• Or double down on families since they're happier?
+
+The data suggests the product IS right for families - 
+we just haven't reached enough of them yet.
+
+Source: Post-order survey (n=1,599)
+```
+
+### What Families With Kids Actually Order
+
+```
+TOP DISHES BY HOUSEHOLD TYPE
+
+FAMILIES WITH KIDS:              COUPLES/SINGLES (NO KIDS):
+1. Katsu Curry (30)              1. Katsu Curry (14)
+2. Katsu (15)                    2. Chicken Ruby (7)
+3. Sushi (12)                    3. Pad Thai (7)
+4. Curry (9)                     4. Chicken (7)
+5. Chicken Katsu Curry (8)       5. Pho the whole fam (6)
+
+INSIGHT: Katsu dominates for families with kids
+→ Kid-friendly, not too spicy, familiar format
+
+Source: Post-order survey (n=1,599)
+```
 
 ---
 
@@ -76,6 +129,35 @@ Cuisines,Avg Orders,Avg Rating,Zones (n=),Satisfaction %
 - Callout: "34% more orders than 4 cuisines" (685 vs 511)
 - Callout: "Satisfaction jumps from 33% → 80%+ at 3+ cuisines"
 - Callout: "Rating peaks at 4.44 for 5 cuisines"
+
+### ⚠️ PROVOCATION: The Variety Cliff
+
+```
+SATISFACTION COLLAPSES BELOW 3 CUISINES
+
+┌──────────────┬──────────────┬─────────────────────────────────────┐
+│ Cuisines     │ Satisfaction │ Visual                              │
+├──────────────┼──────────────┼─────────────────────────────────────┤
+│ 1-2 cuisines │ 33%          │ ██░░░░░░░░ ← CLIFF                  │
+│ 3 cuisines   │ 81%          │ ████████░░ ← Recovery               │
+│ 4 cuisines   │ 82%          │ ████████░░                          │
+│ 5 cuisines   │ 81%          │ ████████░░                          │
+│ 6+ cuisines  │ 78%          │ ████████░░                          │
+└──────────────┴──────────────┴─────────────────────────────────────┘
+
+THE CLIFF: Satisfaction drops from 80% → 33% below 3 cuisines
+That's a 47 percentage point drop!
+
+IMPLICATION:
+• Minimum viable variety = 3 cuisines (not 5)
+• Below 3, customers are actively dissatisfied
+• 5 is optimal for ORDERS, but 3 is the floor for SATISFACTION
+
+This means our 80 monoculture zones (1 cuisine) are not just 
+underperforming - they're actively disappointing customers.
+
+Source: Post-order survey (n=1,020 with zone data)
+```
 
 ### Why 5? (Narrative Text)
 
@@ -212,6 +294,63 @@ drives ORDER VOLUME (more customers) rather than SATISFACTION (happier
 customers). Both are important, but MVP is the acquisition lever.
 
 Source: Post-order survey merged with zone data (n=1,020)
+```
+
+### ⚠️ PROVOCATION: Monoculture Zones Are Set Up to Fail
+
+```
+80 ZONES HAVE ONLY 1 CUISINE (18% of active zones)
+
+┌─────────────────────┬───────┬─────────┬─────────────────────────────┐
+│ Cuisines Available  │ Zones │ % Total │ Can They Succeed?           │
+├─────────────────────┼───────┼─────────┼─────────────────────────────┤
+│ 1 cuisine           │ 80    │ 18%     │ ❌ NO - set up to fail      │
+│ 2 cuisines          │ 123   │ 28%     │ ⚠️ RISKY - below cliff      │
+│ 3-4 cuisines        │ 119   │ 27%     │ ✓ OK - above variety cliff  │
+│ 5+ cuisines         │ 112   │ 26%     │ ✓✓ MVP - optimal            │
+└─────────────────────┴───────┴─────────┴─────────────────────────────┘
+
+MONOCULTURE ZONES CAN NEVER:
+• Meet MVP criteria (requires 5+ cuisines)
+• Satisfy variety needs (satisfaction crashes below 3 cuisines)
+• Compete with zones that have choice
+
+QUESTION FOR DISCUSSION:
+Should we even be operating in 1-cuisine zones?
+• Option A: Exit these zones entirely
+• Option B: Don't market Dinneroo there until we recruit more partners
+• Option C: Accept lower performance as "better than nothing"
+
+These 80 zones are dragging down our averages and disappointing customers.
+```
+
+### ⚠️ PROVOCATION: London Is 45% of Orders
+
+```
+REGIONAL CONCENTRATION
+
+┌─────────────┬───────┬────────────┬─────────────┐
+│ Region      │ Zones │ Orders     │ % of Total  │
+├─────────────┼───────┼────────────┼─────────────┤
+│ London      │ 33    │ 29,153     │ 45%         │
+│ South East  │ 24    │ 13,590     │ 21%         │
+│ Other       │ 26    │ 14,780     │ 23%         │
+│ South West  │ 9     │ 2,332      │ 4%          │
+│ North       │ 8     │ 2,311      │ 4%          │
+└─────────────┴───────┴────────────┴─────────────┘
+
+33% of zones generate 45% of orders
+
+QUESTION: Is Dinneroo a national proposition or a London one?
+
+If we're honest:
+• London works (dense population, delivery culture, partner supply)
+• Outside London is struggling (sparse coverage, lower demand)
+
+Should we:
+a) Double down on London and the South East?
+b) Invest heavily in regional expansion?
+c) Accept regional variation as natural?
 ```
 
 ### Pastable Text
@@ -380,34 +519,31 @@ Sources:
 
 > Anna's request: "[Fran to edit: Number of times a dish is mentioned...]" and "[Fran to edit: Suitability score out of 5...]"
 
-### Why These Metrics? (CORRELATION ANALYSIS)
+### Why These Metrics? (DATA QUALITY & PURPOSE)
 
 ```
-METRIC CORRELATION WITH ACTUAL SALES
+WHAT EACH METRIC TELLS US
 
-We validated which metrics best predict dish performance by correlating 
-each metric with actual sales data (n=23 dishes with complete data):
+┌─────────────────────────┬─────────────────────────────────────────────────┐
+│ Metric                  │ What It Uniquely Tells Us                       │
+├─────────────────────────┼─────────────────────────────────────────────────┤
+│ Avg Sales per Dish      │ DEMAND - What people actually order             │
+│ % Zones in Top 5        │ CONSISTENCY - Is demand widespread or localised?│
+│ Deliveroo Rating        │ QUALITY - Immediate post-delivery reaction      │
+│ Meal Satisfaction       │ DEEPER QUALITY - Prompted reflection on meal    │
+│ Repeat Intent           │ STICKINESS - Will they come back? (stated)      │
+│ Open-Text Requests      │ UNMET DEMAND - What's missing from the menu?    │
+│ Dish Suitability        │ PRE-LAUNCH APPEAL - For dishes not yet on menu  │
+└─────────────────────────┴─────────────────────────────────────────────────┘
 
-┌─────────────────────────┬─────────────┬─────────────────────────────────┐
-│ Metric                  │ Correlation │ Interpretation                  │
-├─────────────────────────┼─────────────┼─────────────────────────────────┤
-│ Deliveroo Rating        │ 0.54        │ STRONG - Best predictor of sales│
-│ Meal Satisfaction       │ 0.28        │ MODERATE - Useful signal        │
-│ Repeat Intent           │ 0.06        │ WEAK - Less predictive than     │
-│                         │             │ expected (may indicate intent   │
-│                         │             │ vs action gap)                  │
-└─────────────────────────┴─────────────┴─────────────────────────────────┘
+WHY WE USE MULTIPLE METRICS:
+• Sales alone misses quality issues (high demand ≠ high satisfaction)
+• Satisfaction alone misses demand (loved by few ≠ mass appeal)
+• Open-text alone misses reality (what people ask for ≠ what they'll buy)
 
-KEY INSIGHT: Deliveroo Rating is the strongest predictor of sales
-• High-rated dishes sell more → quality drives demand
-• Satisfaction is useful but less predictive
-• Repeat Intent shows weak correlation - customers SAY they'll reorder 
-  but actual behaviour differs (common survey bias)
-
-IMPLICATION FOR WEIGHTING:
-• We weight Deliveroo Rating heavily in preference scoring
-• Satisfaction is secondary signal
-• Repeat Intent informs but doesn't drive recommendations
+The 2x2 framework combines DEMAND metrics (Sales, Top 5 %) with 
+PREFERENCE metrics (Rating, Satisfaction) to identify dishes that 
+are both popular AND loved.
 ```
 
 ### Metric Reliability Assessment
@@ -568,6 +704,89 @@ INSIGHT: Core Drivers are 35% of dishes but 73% of sales
 → Quadrant classification correctly identifies high-value dishes
 ```
 
+### ⚠️ PROVOCATION: Pho Is Carrying the Business
+
+```
+PHO CONCENTRATION RISK
+
+Pho alone = 136 sales (28% of ALL Core Driver sales)
+
+┌─────────────────────────────┬────────┬─────────────┐
+│ Dish                        │ Sales  │ % of Core   │
+├─────────────────────────────┼────────┼─────────────┤
+│ Pho                         │ 136    │ 28%         │
+│ Indian Curry                │ 98     │ 20%         │
+│ Biryani                     │ 86     │ 18%         │
+│ All other Core Drivers (5)  │ 159    │ 33%         │
+└─────────────────────────────┴────────┴─────────────┘
+
+ONE DISH from ONE CUISINE is propping up 28% of our best-performing segment.
+
+QUESTIONS FOR DISCUSSION:
+• What happens if Pho restaurants leave the platform?
+• Should we actively recruit more Pho providers as insurance?
+• Is this concentration a strength (we know what works) or a risk?
+```
+
+### ⚠️ PROVOCATION: This Is an Asian Food Play
+
+```
+ASIAN DOMINANCE IN CORE DRIVERS
+
+6 of 8 Core Drivers are Asian dishes:
+• Pho (Vietnamese)
+• Indian Curry (South Asian)
+• Biryani (South Asian)
+• Katsu (Japanese)
+• Noodles (Pan-Asian)
+• Fried Rice (Pan-Asian)
+
+Only 2 non-Asian Core Drivers:
+• Sushi (Japanese - still Asian)
+• Rice Bowl (often Asian)
+
+STRATEGIC IMPLICATION:
+This isn't "family meals delivered" - it's "Asian food for families"
+
+Should we:
+a) Lean into Asian dominance and own that positioning?
+b) Actively recruit non-Asian dishes to diversify?
+c) Accept that Asian food IS what families want for delivery?
+
+The data suggests families choose Asian food for delivery because:
+• Harder to cook at home (time-saving value)
+• Naturally shareable (family-style portions)
+• Flavour profiles that appeal to adults AND kids
+```
+
+### ⚠️ PROVOCATION: Hidden Gems Are a Merchandising Failure
+
+```
+THE HIDDEN GEMS PROBLEM
+
+Preference Drivers have 90% satisfaction but only 11% of sales
+
+┌─────────────────┬──────────────┬────────┬─────────────────────────┐
+│ Dish            │ Satisfaction │ Sales  │ The Problem             │
+├─────────────────┼──────────────┼────────┼─────────────────────────┤
+│ Fajitas         │ 96%          │ 9      │ Nobody knows it's there │
+│ Shepherd's Pie  │ 91%          │ 11     │ Not promoted            │
+│ Grain Bowl      │ 86%          │ 21     │ Lost in the menu        │
+│ Shawarma        │ 90%          │ 10     │ Under-merchandised      │
+└─────────────────┴──────────────┴────────┴─────────────────────────┘
+
+These dishes aren't failing because customers don't like them.
+They're failing because customers don't FIND them.
+
+QUESTION: Is this a merchandising failure?
+• Are these dishes buried in the app?
+• Do they have poor imagery?
+• Are they only available in limited zones?
+
+If we could increase discovery of Preference Drivers by 50%, 
+we'd add ~35 sales with 90% satisfaction.
+```
+
 ### Pastable Text
 
 ```
@@ -679,6 +898,36 @@ Shepherd's Pie,11,3%,8%,3,4.3,91%,100%,4.4
 Sushi,32,8%,56%,6,4.7,93%,81%,-
 ```
 
+### ⚠️ PROVOCATION: The Familiarity Trap
+
+```
+CUSTOMERS ASK FOR FAMILIAR, NOT WHAT MAKES THEM HAPPY
+
+┌─────────────┬────────────────┬──────────────┬─────────────┬─────────────────┐
+│ Dish        │ Open-Text Req  │ Satisfaction │ Preference  │ The Trap        │
+├─────────────┼────────────────┼──────────────┼─────────────┼─────────────────┤
+│ Pasta       │ 29 (HIGHEST)   │ 78%          │ 0.9 (LOW)   │ ⚠️ TRAP         │
+│ Pizza       │ 25 (2nd)       │ 81%          │ 0.9 (LOW)   │ ⚠️ TRAP         │
+├─────────────┼────────────────┼──────────────┼─────────────┼─────────────────┤
+│ Pho         │ 18             │ 92%          │ 1.1 (HIGH)  │ ✓ Genuine       │
+│ Curry       │ 15             │ 93%          │ 1.1 (HIGH)  │ ✓ Genuine       │
+│ Fajitas     │ 0              │ 96%          │ 1.1 (HIGH)  │ ✓ Hidden gem    │
+└─────────────┴────────────────┴──────────────┴─────────────┴─────────────────┘
+
+THE FAMILIARITY TRAP:
+• Pasta and Pizza get the MOST open-text requests (29 and 25)
+• But they have the LOWEST preference scores (0.9)
+• Customers ask for what's familiar, not what makes them happy
+
+WHY THIS MATTERS:
+• If we just listened to open-text, we'd prioritise Pasta and Pizza
+• But the data shows these dishes UNDERPERFORM on satisfaction
+• Meanwhile, Fajitas (96% satisfaction) gets ZERO requests
+
+LESSON: Don't let open-text drive the menu.
+Triangulate with satisfaction and actual orders.
+```
+
 ### Open-Text Requests - Full Breakdown
 
 ```
@@ -692,11 +941,11 @@ Category-level requests (not dish-specific):
 • Healthy options: 24 mentions
 
 Dish-specific requests:
-• Pasta: 29 mentions
-• Pizza: 25 mentions
-• Pho: 18 mentions
+• Pasta: 29 mentions ← FAMILIARITY TRAP (78% satisfaction)
+• Pizza: 25 mentions ← FAMILIARITY TRAP (81% satisfaction)
+• Pho: 18 mentions ← GENUINE DEMAND (92% satisfaction)
 • Noodles: 15 mentions
-• Curry (general): 15 mentions
+• Curry (general): 15 mentions ← GENUINE DEMAND (93% satisfaction)
 • Katsu: 9 mentions
 • Lasagne: 6 mentions
 • Sushi: 6 mentions
@@ -837,6 +1086,46 @@ DEPRIORITISED - Monitor Only (8% of sales, 78% satisfaction)
 │ Poke                     │ 0.1    │ -     │ 63%          │ Deprioritised                                   │
 │ Pasta                    │ 0.6    │ 0.9   │ 3%           │ Deprioritised - baked pasta preferable          │
 └──────────────────────────┴────────┴───────┴──────────────┴─────────────────────────────────────────────────┘
+```
+
+### ⚠️ PROVOCATION: The Mexican Paradox
+
+```
+6 MEXICAN DISHES ON THE MENU - ONLY 1 WORKS
+
+┌─────────────────────────┬────────┬───────┬────────┬─────────────────────────┐
+│ Dish                    │ Sales  │ Pref  │ Quadrant│ Verdict                │
+├─────────────────────────┼────────┼───────┼────────┼─────────────────────────┤
+│ Fajitas                 │ 9      │ 1.1   │ Pref   │ ✓ WORKS (96% sat)       │
+│ Tacos                   │ 7      │ 0.9   │ Depri  │ ✗ Underperforming       │
+│ Burrito / Burrito Bowl  │ 7      │ -     │ Depri  │ ✗ Underperforming       │
+│ Chilli                  │ 6      │ 0.9   │ Depri  │ ✗ Underperforming       │
+│ Quesadilla              │ 6      │ -     │ Depri  │ ✗ Underperforming       │
+│ Nachos                  │ 1      │ -     │ Depri  │ ✗ Underperforming       │
+├─────────────────────────┼────────┼───────┼────────┼─────────────────────────┤
+│ TOTAL MEXICAN           │ 36     │ -     │ -      │ 6% of all dish sales    │
+└─────────────────────────┴────────┴───────┴────────┴─────────────────────────┘
+
+Compare to Asian:
+• 6 Asian Core Drivers generate 450+ sales
+• 6 Mexican dishes generate 36 sales
+• Asian dishes are 12x more productive
+
+THE PARADOX:
+• Mexican food is familiar to UK families
+• Mexican restaurants are on the platform
+• But customers don't order Mexican for delivery
+
+WHY? Possible reasons:
+• Mexican is "easy to make at home" (tacos, quesadillas)
+• Doesn't travel well (nachos go soggy)
+• Not perceived as "balanced" for midweek
+• Less kid-friendly flavour profiles?
+
+QUESTION: Should we cut Mexican entirely?
+• Keep Fajitas (the one that works)
+• Deprioritise the rest
+• Stop recruiting Mexican partners
 ```
 
 ---

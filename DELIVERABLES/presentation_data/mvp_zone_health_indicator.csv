@@ -1,0 +1,5 @@
+total_dishes_per_zone,repeat_rate,note
+1-15,16.8,Below minimum
+16-30,19.5,Minimum
+31-50,22.4,Target
+51+,21.2,Diminishing returns

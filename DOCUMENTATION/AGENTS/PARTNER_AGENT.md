@@ -38,7 +38,7 @@ This agent bridges strategy to execution.
 | **Anna's Coverage** | `DATA/3_ANALYSIS/anna_partner_coverage.csv` | Ground truth | Authoritative partner list |
 | **Dish-Partner Mapping** | `DATA/3_ANALYSIS/partner_cuisine_mapping.csv` | Mapping | Which partners serve which dishes |
 | **Full Order History** | `DATA/1_SOURCE/snowflake/FULL_ORDER_HISTORY.csv` | ~800K | Partners on Deliveroo (not Dinneroo) |
-| **Zone Gap Report** | `DATA/3_ANALYSIS/zone_gap_report.csv` | ~100 zones | What's missing where |
+| **Zone Gap Report** | `DATA/3_ANALYSIS/zone_gap_report.csv` | **1,306 zones** | What's missing where (ALL zones from Anna's ground truth) |
 | **Partner Composite Scores** | `DATA/3_ANALYSIS/partner_composite_scores.csv` | Scored | Partner rankings |
 
 ---
@@ -267,6 +267,25 @@ From `DATA/3_ANALYSIS/partner_composite_scores.csv`:
 
 ## Notes
 [Any special considerations]
+```
+
+---
+
+## Dashboard Integration
+
+This agent feeds partner-related insights into the Consumer Insight Tracker dashboard.
+
+| Output | Dashboard Location | Data File |
+|--------|-------------------|-----------|
+| Partner performance | Overview KPIs | `partner_composite_scores.csv` |
+| Recruitment priorities | Quick Wins section | Derived from gap analysis |
+| Partner-cuisine mapping | Cuisine Gaps context | `partner_cuisine_mapping.csv` |
+| Expansion candidates | Recommendations | Zone coverage analysis |
+
+**To update dashboard with partner data:**
+```bash
+python3 scripts/prepare_dashboard_data.py
+python3 scripts/generate_dashboard.py
 ```
 
 ---
