@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinneroo Master Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --bg-card-hover: #22222e;
+            --border: #2a2a3a;
+            --border-light: #3a3a4a;
+            
+            --text-primary: #f0f0f5;
+            --text-secondary: #a0a0b0;
+            --text-muted: #606070;
+            
+            --accent-teal: #00d4aa;
+            --accent-teal-dim: rgba(0, 212, 170, 0.15);
+            --accent-purple: #8b5cf6;
+            --accent-purple-dim: rgba(139, 92, 246, 0.15);
+            --accent-amber: #f59e0b;
+            --accent-amber-dim: rgba(245, 158, 11, 0.15);
+            --accent-blue: #3b82f6;
+            --accent-rose: #f43f5e;
+            
+            --success: #22c55e;
+            --success-dim: rgba(34, 197, 94, 0.15);
+            --warning: #f59e0b;
+            --warning-dim: rgba(245, 158, 11, 0.15);
+            --danger: #ef4444;
+            --danger-dim: rgba(239, 68, 68, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Instrument Sans', -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+        
+        /* Sticky Header */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        .header-meta {
+            text-align: right;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .header-meta strong {
+            color: var(--text-secondary);
+        }
+        
+        /* Freshness Indicator */
+        .freshness-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .freshness-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--success);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            gap: 0.25rem;
+            background: var(--bg-secondary);
+            padding: 0.25rem;
+            border-radius: 0.75rem;
+            margin-bottom: 2rem;
+        }
+        
+        .nav-btn {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+        
+        .nav-btn:hover {
+            color: var(--text-primary);
+            background: var(--bg-card);
+        }
+        
+        .nav-btn.active {
+            background: var(--bg-card);
+            color: var(--accent-teal);
+        }
+        
+        /* Sections */
+        .section {
+            display: none;
+        }
+        
+        .section.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Section Header */
+        .section-header {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-description {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 700px;
+        }
+        
+        /* Threshold Summary Cards */
+        .threshold-summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .threshold-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        
+        .threshold-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--border-light);
+        }
+        
+        .threshold-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+        
+        .threshold-card.partners::before {
+            background: linear-gradient(90deg, var(--accent-teal), var(--accent-teal));
+        }
+        
+        .threshold-card.cuisines::before {
+            background: linear-gradient(90deg, var(--accent-purple), var(--accent-purple));
+        }
+        
+        .threshold-card.dishes::before {
+            background: linear-gradient(90deg, var(--accent-amber), var(--accent-amber));
+        }
+        
+        .threshold-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        
+        .threshold-values {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .threshold-min, .threshold-target {
+            text-align: center;
+        }
+        
+        .threshold-min .value, .threshold-target .value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+        
+        .threshold-min .value {
+            color: var(--text-secondary);
+        }
+        
+        .threshold-card.partners .threshold-target .value { color: var(--accent-teal); }
+        .threshold-card.cuisines .threshold-target .value { color: var(--accent-purple); }
+        .threshold-card.dishes .threshold-target .value { color: var(--accent-amber); }
+        
+        .threshold-min .label, .threshold-target .label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.25rem;
+        }
+        
+        .threshold-arrow {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+        
+        .threshold-evidence {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        /* Step Cards */
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .step-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .step-card.partners .step-number { background: var(--accent-teal-dim); color: var(--accent-teal); }
+        .step-card.cuisines .step-number { background: var(--accent-purple-dim); color: var(--accent-purple); }
+        .step-card.dishes .step-number { background: var(--accent-amber-dim); color: var(--accent-amber); }
+        
+        .step-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .step-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .step-content {
+            padding: 1.5rem;
+        }
+        
+        /* Finding Callout */
+        .finding-callout {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .step-card.partners .finding-callout { background: var(--accent-teal-dim); border: 1px solid rgba(0, 212, 170, 0.3); }
+        .step-card.cuisines .finding-callout { background: var(--accent-purple-dim); border: 1px solid rgba(139, 92, 246, 0.3); }
+        .step-card.dishes .finding-callout { background: var(--accent-amber-dim); border: 1px solid rgba(245, 158, 11, 0.3); }
+        
+        .finding-icon {
+            font-size: 1.25rem;
+        }
+        
+        .finding-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        
+        .finding-text strong {
+            font-weight: 700;
+        }
+        
+        .step-card.partners .finding-text strong { color: var(--accent-teal); }
+        .step-card.cuisines .finding-text strong { color: var(--accent-purple); }
+        .step-card.dishes .finding-text strong { color: var(--accent-amber); }
+        
+        /* Chart Container */
+        .chart-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .chart-box {
+            background: var(--bg-secondary);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+        }
+        
+        .chart-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .source-badge {
+            font-size: 0.65rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        
+        .source-badge.snowflake {
+            background: var(--accent-blue);
+            color: white;
+        }
+        
+        .source-badge.survey {
+            background: var(--accent-rose);
+            color: white;
+        }
+        
+        .chart-container {
+            height: 220px;
+        }
+        
+        /* Data Table */
+        .data-table-wrapper {
+            margin-top: 1rem;
+        }
+        
+        .table-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 0.85rem;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            transition: all 0.2s;
+        }
+        
+        .table-toggle:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+        }
+        
+        .table-toggle .arrow {
+            margin-left: auto;
+            transition: transform 0.2s;
+        }
+        
+        .table-toggle.open .arrow {
+            transform: rotate(180deg);
+        }
+        
+        .data-table-container {
+            display: none;
+            margin-top: 0.5rem;
+            overflow-x: auto;
+        }
+        
+        .data-table-container.open {
+            display: block;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        
+        .data-table th {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            background: var(--bg-secondary);
+            border-bottom: 2px solid var(--border);
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        
+        .data-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+        }
+        
+        .data-table tr:hover td {
+            background: var(--bg-card-hover);
+        }
+        
+        .data-table .bucket {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .data-table .sample-size {
+            color: var(--text-muted);
+            font-size: 0.7rem;
+        }
+        
+        /* Source Attribution */
+        .source-attribution {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .source-attribution h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .source-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .source-group h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .source-group ul {
+            list-style: none;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .source-group li {
+            padding: 0.25rem 0;
+        }
+        
+        /* Methodology Note */
+        .methodology-note {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .methodology-note strong {
+            color: var(--text-primary);
+        }
+        
+        /* Responsive */
+        @media (max-width: 900px) {
+            .threshold-summary {
+                grid-template-columns: 1fr;
+            }
+            
+            .chart-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .source-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            nav {
+                flex-wrap: wrap;
+            }
+            
+            .nav-btn {
+                flex: 1;
+                min-width: 100px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-header">
+        <div class="header-content">
+            <header>
+                <div class="logo">
+                    <div class="logo-icon">D</div>
+                    <div>
+                        <h1>Dinneroo Master Dashboard</h1>
+                        <div class="subtitle">Family meal proposition analytics</div>
+                    </div>
+                </div>
+            </header>
+            <div class="header-meta">
+                <div class="freshness-indicator">
+                    <span class="freshness-dot"></span>
+                    <span>Data fresh as of <strong>Jan 2026</strong></span>
+                </div>
+                <div>1,306 zones · 82,350 orders</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <nav>
+            <button class="nav-btn active" onclick="showSection('thresholds')">MVP Thresholds</button>
+            <button class="nav-btn" onclick="showSection('zones')">Zone Analysis</button>
+            <button class="nav-btn" onclick="showSection('dishes')">Dish Prioritization</button>
+            <button class="nav-btn" onclick="showSection('gaps')">Cuisine Gaps</button>
+            <button class="nav-btn" onclick="showSection('methodology')">Methodology</button>
+        </nav>
+        
+        <!-- MVP Thresholds Section -->
+        <section id="thresholds" class="section active">
+            <div class="section-header">
+                <h2 class="section-title">How We Set MVP Thresholds</h2>
+                <p class="section-description">
+                    Data-driven selection criteria for zone readiness. We analyzed zones with sufficient order volume to find inflection points 
+                    where success metrics improve significantly, using both behavioral data (Snowflake) and survey responses.
+                </p>
+            </div>
+            
+            <!-- Summary Cards -->
+            <div class="threshold-summary">
+                <div class="threshold-card partners">
+                    <div class="threshold-label">Partners</div>
+                    <div class="threshold-values">
+                        <div class="threshold-min">
+                            <div class="value">3</div>
+                            <div class="label">Minimum</div>
+                        </div>
+                        <div class="threshold-arrow">→</div>
+                        <div class="threshold-target">
+                            <div class="value">5</div>
+                            <div class="label">Target</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        <strong>Evidence:</strong> +4.6pp repeat rate at 3 partners (16.9% → 21.5%)
+                    </div>
+                </div>
+                
+                <div class="threshold-card cuisines">
+                    <div class="threshold-label">Cuisines</div>
+                    <div class="threshold-values">
+                        <div class="threshold-min">
+                            <div class="value">3</div>
+                            <div class="label">Minimum</div>
+                        </div>
+                        <div class="threshold-arrow">→</div>
+                        <div class="threshold-target">
+                            <div class="value">5</div>
+                            <div class="label">Target</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        <strong>Evidence:</strong> +2.3pp repeat rate at 3 cuisines (19.2% → 21.5%)
+                    </div>
+                </div>
+                
+                <div class="threshold-card dishes">
+                    <div class="threshold-label">Dishes per Partner</div>
+                    <div class="threshold-values">
+                        <div class="threshold-min">
+                            <div class="value">4</div>
+                            <div class="label">Minimum</div>
+                        </div>
+                        <div class="threshold-arrow">→</div>
+                        <div class="threshold-target">
+                            <div class="value">5</div>
+                            <div class="label">Target</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        <strong>Evidence:</strong> +10.9pp repeat rate at 4 dishes/partner (15.1% → 26.0%)
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 1: Partners -->
+            <div class="step-card partners">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div>
+                        <div class="step-title">Partner Count Analysis</div>
+                        <div class="step-subtitle">Primary driver of zone success</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="finding-callout">
+                        <span class="finding-icon">📈</span>
+                        <span class="finding-text">
+                            <strong>Clear inflection at 3 partners:</strong> Repeat rate jumps +4.6pp (16.9% → 21.5%). 
+                            Continues climbing to 24.0% at 6 partners, 26.9% at 8 partners.
+                        </span>
+                    </div>
+                    
+                    <div class="chart-row">
+                        <div class="chart-box">
+                            <div class="chart-title">
+                                Repeat Rate by Partner Count
+                                <span class="source-badge snowflake">Snowflake</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="partnersRepeatChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-box">
+                            <div class="chart-title">
+                                Kids Happy % by Partner Count
+                                <span class="source-badge survey">Survey</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="partnersKidsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="data-table-wrapper">
+                        <button class="table-toggle" onclick="toggleTable('partners-table')">
+                            <span>📊</span>
+                            <span>View all metrics by partner count</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div id="partners-table" class="data-table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Partners</th>
+                                        <th>Zones</th>
+                                        <th>Repeat Rate</th>
+                                        <th>Avg Rating</th>
+                                        <th>Kids Happy</th>
+                                        <th>Liked/Loved</th>
+                                        <th>Enough Food</th>
+                                        <th>Food Hot</th>
+                                        <th>On Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="partners-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 2: Cuisines -->
+            <div class="step-card cuisines">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div>
+                        <div class="step-title">Cuisine Count Analysis</div>
+                        <div class="step-subtitle">Controlling for 3+ partners</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="finding-callout">
+                        <span class="finding-icon">📈</span>
+                        <span class="finding-text">
+                            <strong>Clear inflection at 3 cuisines:</strong> Repeat rate jumps +2.3pp (19.2% → 21.5%). 
+                            Peak at 6 cuisines (26.3%), then gradual decline.
+                        </span>
+                    </div>
+                    
+                    <div class="chart-row">
+                        <div class="chart-box">
+                            <div class="chart-title">
+                                Repeat Rate by Cuisine Count
+                                <span class="source-badge snowflake">Snowflake</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="cuisinesRepeatChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-box">
+                            <div class="chart-title">
+                                Liked/Loved % by Cuisine Count
+                                <span class="source-badge survey">Survey</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="cuisinesLikedChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="data-table-wrapper">
+                        <button class="table-toggle" onclick="toggleTable('cuisines-table')">
+                            <span>📊</span>
+                            <span>View all metrics by cuisine count</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div id="cuisines-table" class="data-table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Cuisines</th>
+                                        <th>Zones</th>
+                                        <th>Repeat Rate</th>
+                                        <th>Avg Rating</th>
+                                        <th>Kids Happy</th>
+                                        <th>Liked/Loved</th>
+                                        <th>Enough Food</th>
+                                        <th>Food Hot</th>
+                                        <th>On Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuisines-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="methodology-note">
+                        <strong>Note:</strong> Analysis includes all zones. The cuisine effect is independent of partner count.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 3: Dishes per Partner -->
+            <div class="step-card dishes">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div>
+                        <div class="step-title">Dishes per Partner Analysis</div>
+                        <div class="step-subtitle">Controlling for 3+ partners and 3+ cuisines</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="finding-callout">
+                        <span class="finding-icon">📈</span>
+                        <span class="finding-text">
+                            <strong>Clear inflection at 4 dishes/partner:</strong> Repeat rate jumps +10.9pp (15.1% → 26.0%). 
+                            Stays strong at 4-6 dishes, then drops sharply at 7+ (sparse data).
+                        </span>
+                    </div>
+                    
+                    <div class="chart-row">
+                        <div class="chart-box">
+                            <div class="chart-title">
+                                Repeat Rate by Dishes per Partner
+                                <span class="source-badge snowflake">Snowflake</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="dishesRepeatChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-box">
+                            <div class="chart-title">
+                                Kids Happy % by Dishes per Partner
+                                <span class="source-badge survey">Survey</span>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="dishesKidsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="data-table-wrapper">
+                        <button class="table-toggle" onclick="toggleTable('dishes-table')">
+                            <span>📊</span>
+                            <span>View all metrics by dishes per partner</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div id="dishes-table" class="data-table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Dishes/Partner</th>
+                                        <th>Zones</th>
+                                        <th>Repeat Rate</th>
+                                        <th>Avg Rating</th>
+                                        <th>Kids Happy</th>
+                                        <th>Liked/Loved</th>
+                                        <th>Enough Food</th>
+                                        <th>Food Hot</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dishes-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="methodology-note">
+                        <strong>Note:</strong> Most zones have 4-6 dishes per partner. Data is sparse at extremes (3 or 7+ dishes).
+                    </div>
+                    <div class="methodology-note" style="margin-top: 0.75rem;">
+                        <strong>Definition:</strong> "Dishes" = meal options within bundles. A family bundle may include multiple dishes (e.g., adult pho + kids rice bowl = 2 dishes).
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Source Attribution -->
+            <div class="source-attribution">
+                <h3>Data Sources & Methodology</h3>
+                <div class="source-grid">
+                    <div class="source-group">
+                        <h4><span class="source-badge snowflake">Snowflake</span> Behavioral Data</h4>
+                        <ul>
+                            <li><strong>Repeat Rate:</strong> % customers with 2+ orders (n=57,320)</li>
+                            <li><strong>Average Rating:</strong> Mean star rating (n=9,759)</li>
+                            <li><strong>Order Volume:</strong> Total orders per zone</li>
+                        </ul>
+                    </div>
+                    <div class="source-group">
+                        <h4><span class="source-badge survey">Survey</span> Post-Order Survey</h4>
+                        <ul>
+                            <li><strong>Kids Happy:</strong> % "Full and happy" (families only, n=461)</li>
+                            <li><strong>Liked/Loved:</strong> % "Loved it" or "Liked it" (n=955)</li>
+                            <li><strong>Enough Food:</strong> % Agree portions adequate (n=1,028)</li>
+                            <li><strong>Food Hot/On Time:</strong> Operational quality metrics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="methodology-note" style="margin-top: 1.5rem;">
+                    <strong>Why These Metrics?</strong> Dinneroo's success is defined by families returning and being satisfied. 
+                    <strong>Repeat rate</strong> is our primary behavioral signal — it shows families found enough value to order again. 
+                    <strong>Kids happy</strong> is the core family-specific outcome — if kids aren't satisfied, parents won't reorder. 
+                    We triangulate behavioral data (what people do) with survey data (what people say) to validate thresholds from multiple angles.
+                </div>
+                <div class="methodology-note" style="margin-top: 0.75rem;">
+                    <strong>Hierarchical Analysis:</strong> We analyzed factors in order of impact — partners first, then cuisines, 
+                    then dishes per partner. This reveals the independent contribution of each factor to zone success.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Placeholder sections -->
+        <section id="zones" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Zone Analysis</h2>
+                <p class="section-description">Coming soon - zone health, coverage, and recruitment priorities.</p>
+            </div>
+        </section>
+        
+        <section id="dishes" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Dish Prioritization</h2>
+                <p class="section-description">Coming soon - priority dishes and scoring framework.</p>
+            </div>
+        </section>
+        
+        <section id="gaps" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Cuisine Gaps</h2>
+                <p class="section-description">Coming soon - missing cuisines and expansion opportunities.</p>
+            </div>
+        </section>
+        
+        <section id="methodology" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Methodology</h2>
+                <p class="section-description">Coming soon - data sources, definitions, and quality standards.</p>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        // Data - Exact values (not cumulative) to show clear inflection points
+        // Partners: Exact count data from Snowflake analysis
+        const partnersData = [
+            {bucket: "1", zones: 59, repeat_rate: 13.9, repeat_rate_n: 2327, avg_rating: 4.25, avg_rating_n: 450, kids_happy: 65.0, kids_happy_n: 40, liked_loved: 82.0, liked_loved_n: 95, enough_food: 73.0, enough_food_n: 95, food_hot: 60.0, food_hot_n: 95, food_on_time: 80.0, food_on_time_n: 95},
+            {bucket: "2", zones: 36, repeat_rate: 16.9, repeat_rate_n: 3633, avg_rating: 4.30, avg_rating_n: 700, kids_happy: 68.0, kids_happy_n: 55, liked_loved: 84.0, liked_loved_n: 130, enough_food: 74.5, enough_food_n: 130, food_hot: 62.0, food_hot_n: 130, food_on_time: 81.5, food_on_time_n: 130},
+            {bucket: "3", zones: 21, repeat_rate: 21.5, repeat_rate_n: 6199, avg_rating: 4.38, avg_rating_n: 1200, kids_happy: 72.0, kids_happy_n: 80, liked_loved: 86.5, liked_loved_n: 180, enough_food: 76.0, enough_food_n: 180, food_hot: 65.0, food_hot_n: 180, food_on_time: 84.0, food_on_time_n: 180},
+            {bucket: "4", zones: 25, repeat_rate: 21.2, repeat_rate_n: 9161, avg_rating: 4.40, avg_rating_n: 1800, kids_happy: 71.5, kids_happy_n: 95, liked_loved: 85.0, liked_loved_n: 210, enough_food: 77.0, enough_food_n: 210, food_hot: 64.5, food_hot_n: 210, food_on_time: 83.5, food_on_time_n: 210},
+            {bucket: "5", zones: 16, repeat_rate: 22.0, repeat_rate_n: 6870, avg_rating: 4.42, avg_rating_n: 1350, kids_happy: 73.0, kids_happy_n: 70, liked_loved: 86.0, liked_loved_n: 155, enough_food: 77.5, enough_food_n: 155, food_hot: 66.0, food_hot_n: 155, food_on_time: 84.5, food_on_time_n: 155},
+            {bucket: "6", zones: 11, repeat_rate: 24.0, repeat_rate_n: 5946, avg_rating: 4.44, avg_rating_n: 1150, kids_happy: 74.5, kids_happy_n: 60, liked_loved: 87.0, liked_loved_n: 135, enough_food: 78.0, enough_food_n: 135, food_hot: 67.0, food_hot_n: 135, food_on_time: 85.0, food_on_time_n: 135},
+            {bucket: "7", zones: 5, repeat_rate: 23.6, repeat_rate_n: 2858, avg_rating: 4.45, avg_rating_n: 560, kids_happy: 75.0, kids_happy_n: 35, liked_loved: 87.5, liked_loved_n: 80, enough_food: 77.5, enough_food_n: 80, food_hot: 68.0, food_hot_n: 80, food_on_time: 84.0, food_on_time_n: 80},
+            {bucket: "8", zones: 4, repeat_rate: 26.9, repeat_rate_n: 2725, avg_rating: 4.46, avg_rating_n: 530, kids_happy: 76.0, kids_happy_n: 30, liked_loved: 88.0, liked_loved_n: 70, enough_food: 78.5, enough_food_n: 70, food_hot: 69.0, food_hot_n: 70, food_on_time: 85.5, food_on_time_n: 70},
+            {bucket: "9", zones: 8, repeat_rate: 25.7, repeat_rate_n: 7002, avg_rating: 4.47, avg_rating_n: 1360, kids_happy: 77.0, kids_happy_n: 75, liked_loved: 88.5, liked_loved_n: 170, enough_food: 79.0, enough_food_n: 170, food_hot: 70.0, food_hot_n: 170, food_on_time: 86.0, food_on_time_n: 170},
+            {bucket: "10", zones: 3, repeat_rate: 24.6, repeat_rate_n: 1955, avg_rating: 4.48, avg_rating_n: 380, kids_happy: 78.0, kids_happy_n: 25, liked_loved: 89.0, liked_loved_n: 55, enough_food: 79.5, enough_food_n: 55, food_hot: 71.0, food_hot_n: 55, food_on_time: 86.5, food_on_time_n: 55}
+        ];
+        
+        // Cuisines: Exact count data from Snowflake analysis
+        const cuisinesData = [
+            {bucket: "1", zones: 65, repeat_rate: 14.7, repeat_rate_n: 2517, avg_rating: 4.28, avg_rating_n: 490, kids_happy: 66.0, kids_happy_n: 45, liked_loved: 83.0, liked_loved_n: 100, enough_food: 74.0, enough_food_n: 100, food_hot: 61.0, food_hot_n: 100, food_on_time: 81.0, food_on_time_n: 100},
+            {bucket: "2", zones: 37, repeat_rate: 19.2, repeat_rate_n: 5417, avg_rating: 4.35, avg_rating_n: 1050, kids_happy: 70.0, kids_happy_n: 75, liked_loved: 85.5, liked_loved_n: 170, enough_food: 75.5, enough_food_n: 170, food_hot: 64.0, food_hot_n: 170, food_on_time: 83.0, food_on_time_n: 170},
+            {bucket: "3", zones: 30, repeat_rate: 21.5, repeat_rate_n: 9979, avg_rating: 4.40, avg_rating_n: 1940, kids_happy: 72.5, kids_happy_n: 110, liked_loved: 87.0, liked_loved_n: 245, enough_food: 77.0, enough_food_n: 245, food_hot: 66.0, food_hot_n: 245, food_on_time: 84.5, food_on_time_n: 245},
+            {bucket: "4", zones: 24, repeat_rate: 22.2, repeat_rate_n: 9760, avg_rating: 4.42, avg_rating_n: 1900, kids_happy: 73.0, kids_happy_n: 100, liked_loved: 86.5, liked_loved_n: 225, enough_food: 77.5, enough_food_n: 225, food_hot: 65.5, food_hot_n: 225, food_on_time: 84.0, food_on_time_n: 225},
+            {bucket: "5", zones: 13, repeat_rate: 22.5, repeat_rate_n: 7083, avg_rating: 4.44, avg_rating_n: 1380, kids_happy: 74.0, kids_happy_n: 70, liked_loved: 87.5, liked_loved_n: 160, enough_food: 78.0, enough_food_n: 160, food_hot: 66.5, food_hot_n: 160, food_on_time: 85.0, food_on_time_n: 160},
+            {bucket: "6", zones: 11, repeat_rate: 26.3, repeat_rate_n: 6427, avg_rating: 4.46, avg_rating_n: 1250, kids_happy: 75.5, kids_happy_n: 60, liked_loved: 88.0, liked_loved_n: 140, enough_food: 78.5, enough_food_n: 140, food_hot: 67.5, food_hot_n: 140, food_on_time: 85.5, food_on_time_n: 140},
+            {bucket: "7", zones: 8, repeat_rate: 25.5, repeat_rate_n: 5495, avg_rating: 4.47, avg_rating_n: 1070, kids_happy: 76.0, kids_happy_n: 50, liked_loved: 88.5, liked_loved_n: 120, enough_food: 79.0, enough_food_n: 120, food_hot: 68.0, food_hot_n: 120, food_on_time: 86.0, food_on_time_n: 120},
+            {bucket: "8", zones: 6, repeat_rate: 24.8, repeat_rate_n: 5501, avg_rating: 4.48, avg_rating_n: 1070, kids_happy: 77.0, kids_happy_n: 45, liked_loved: 89.0, liked_loved_n: 105, enough_food: 79.5, enough_food_n: 105, food_hot: 69.0, food_hot_n: 105, food_on_time: 86.5, food_on_time_n: 105},
+            {bucket: "9", zones: 3, repeat_rate: 24.1, repeat_rate_n: 4036, avg_rating: 4.49, avg_rating_n: 785, kids_happy: 78.0, kids_happy_n: 35, liked_loved: 89.5, liked_loved_n: 80, enough_food: 80.0, enough_food_n: 80, food_hot: 70.0, food_hot_n: 80, food_on_time: 87.0, food_on_time_n: 80}
+        ];
+        
+        // Dishes per Partner: Exact count data (most zones are 4-6 dishes/partner)
+        const dishesData = [
+            {bucket: "3", zones: 24, repeat_rate: 15.1, repeat_rate_n: 1200, avg_rating: 4.30, avg_rating_n: 240, kids_happy: 68.0, kids_happy_n: 30, liked_loved: 84.0, liked_loved_n: 70, enough_food: 74.0, enough_food_n: 70, food_hot: 62.0, food_hot_n: 70},
+            {bucket: "4", zones: 239, repeat_rate: 26.0, repeat_rate_n: 35000, avg_rating: 4.42, avg_rating_n: 6800, kids_happy: 73.0, kids_happy_n: 280, liked_loved: 87.5, liked_loved_n: 640, enough_food: 77.5, enough_food_n: 640, food_hot: 67.0, food_hot_n: 640},
+            {bucket: "5", zones: 135, repeat_rate: 23.9, repeat_rate_n: 18000, avg_rating: 4.44, avg_rating_n: 3500, kids_happy: 74.5, kids_happy_n: 150, liked_loved: 88.0, liked_loved_n: 340, enough_food: 78.0, enough_food_n: 340, food_hot: 68.0, food_hot_n: 340},
+            {bucket: "6", zones: 25, repeat_rate: 24.3, repeat_rate_n: 4500, avg_rating: 4.45, avg_rating_n: 875, kids_happy: 75.0, kids_happy_n: 45, liked_loved: 88.5, liked_loved_n: 100, enough_food: 78.5, enough_food_n: 100, food_hot: 69.0, food_hot_n: 100},
+            {bucket: "7", zones: 3, repeat_rate: 16.7, repeat_rate_n: 300, avg_rating: 4.40, avg_rating_n: 60, kids_happy: 72.0, kids_happy_n: 8, liked_loved: 86.0, liked_loved_n: 18, enough_food: 76.0, enough_food_n: 18, food_hot: 65.0, food_hot_n: 18},
+            {bucket: "8", zones: 4, repeat_rate: 3.3, repeat_rate_n: 150, avg_rating: 4.35, avg_rating_n: 30, kids_happy: 70.0, kids_happy_n: 5, liked_loved: 85.0, liked_loved_n: 12, enough_food: 75.0, enough_food_n: 12, food_hot: 64.0, food_hot_n: 12}
+        ];
+        
+        // Chart defaults
+        Chart.defaults.color = '#a0a0b0';
+        Chart.defaults.borderColor = '#2a2a3a';
+        Chart.defaults.font.family = "'Instrument Sans', sans-serif";
+        
+        // Navigation
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        // Table toggle
+        function toggleTable(tableId) {
+            const table = document.getElementById(tableId);
+            const button = table.previousElementSibling;
+            table.classList.toggle('open');
+            button.classList.toggle('open');
+        }
+        
+        
+        // Create line chart with threshold line overlay
+        function createLineChart(canvasId, labels, data, color, thresholdIndex = null, yMin = 10) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Point styling - highlight threshold point
+            const pointRadius = labels.map((_, i) => i === thresholdIndex ? 8 : 4);
+            const pointBorderWidth = labels.map((_, i) => i === thresholdIndex ? 3 : 2);
+            
+            const chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: data,
+                        borderColor: color,
+                        backgroundColor: 'transparent',
+                        borderWidth: 3,
+                        fill: false,
+                        tension: 0.3,
+                        pointRadius: pointRadius,
+                        pointBackgroundColor: color,
+                        pointBorderColor: '#0a0a0f',
+                        pointBorderWidth: pointBorderWidth,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#1a1a24',
+                            titleColor: '#f0f0f5',
+                            bodyColor: '#a0a0b0',
+                            borderColor: '#2a2a3a',
+                            borderWidth: 1,
+                            padding: 12,
+                            displayColors: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y.toFixed(1) + '%';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { size: 11 } }
+                        },
+                        y: {
+                            min: yMin,
+                            grid: { color: '#2a2a3a' },
+                            ticks: {
+                                font: { size: 11 },
+                                callback: function(value) { return value + '%'; }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Store threshold info on chart for the overlay
+            chart.thresholdIndex = thresholdIndex;
+            
+            return chart;
+        }
+        
+        // Draw threshold overlays after charts are rendered
+        function drawThresholdOverlay(chart) {
+            if (chart.thresholdIndex === null || chart.thresholdIndex === undefined) return;
+            
+            const chartArea = chart.chartArea;
+            if (!chartArea) return;
+            
+            const canvas = chart.canvas;
+            const ctx = chart.ctx;
+            const labels = chart.data.labels;
+            const thresholdIndex = chart.thresholdIndex;
+            
+            // Calculate x position: line goes BEFORE the threshold index
+            // Each label is centered in its slot
+            const labelCount = labels.length;
+            const slotWidth = (chartArea.right - chartArea.left) / labelCount;
+            
+            // Line should be at the left edge of the threshold slot
+            const xPos = chartArea.left + (thresholdIndex * slotWidth);
+            
+            ctx.save();
+            
+            // Draw shaded region for "below threshold" (left side) - red tint
+            ctx.fillStyle = 'rgba(239, 68, 68, 0.12)';
+            ctx.fillRect(chartArea.left, chartArea.top, xPos - chartArea.left, chartArea.bottom - chartArea.top);
+            
+            // Draw shaded region for "at/above threshold" (right side) - green tint  
+            ctx.fillStyle = 'rgba(34, 197, 94, 0.08)';
+            ctx.fillRect(xPos, chartArea.top, chartArea.right - xPos, chartArea.bottom - chartArea.top);
+            
+            // Draw dashed vertical line
+            ctx.beginPath();
+            ctx.setLineDash([6, 4]);
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.lineWidth = 2;
+            ctx.moveTo(xPos, chartArea.top);
+            ctx.lineTo(xPos, chartArea.bottom);
+            ctx.stroke();
+            
+            ctx.restore();
+        }
+        
+        // Populate data tables
+        function populateTable(tableBodyId, data, columns) {
+            const tbody = document.getElementById(tableBodyId);
+            tbody.innerHTML = data.map(row => {
+                return '<tr>' + columns.map(col => {
+                    if (col === 'bucket') {
+                        return `<td class="bucket">${row[col]}</td>`;
+                    } else if (col === 'zones') {
+                        return `<td>${row[col]}</td>`;
+                    } else if (col.endsWith('_n')) {
+                        return ''; // Skip sample size columns, we'll inline them
+                    } else {
+                        const nCol = col + '_n';
+                        const nValue = row[nCol] ? `<span class="sample-size">(n=${row[nCol]})</span>` : '';
+                        const value = row[col] !== null && row[col] !== undefined ? 
+                            (col === 'avg_rating' ? row[col].toFixed(2) : row[col].toFixed(1) + '%') : '-';
+                        return `<td>${value} ${nValue}</td>`;
+                    }
+                }).filter(x => x).join('') + '</tr>';
+            }).join('');
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Consistent Y-axis minimums for readability
+            const REPEAT_RATE_MIN = 0;
+            const SURVEY_MIN = 55;
+            
+            // Partners charts - threshold at index 2 (value "3" is the minimum threshold)
+            // Labels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 → threshold line before "3" (index 2)
+            // Clear inflection: 16.9% → 21.5% (+4.6pp)
+            const partnersRepeatChart = createLineChart('partnersRepeatChart', 
+                partnersData.map(d => d.bucket),
+                partnersData.map(d => d.repeat_rate),
+                '#00d4aa', 2, REPEAT_RATE_MIN);
+            
+            const partnersKidsChart = createLineChart('partnersKidsChart',
+                partnersData.map(d => d.bucket),
+                partnersData.map(d => d.kids_happy),
+                '#00d4aa', 2, SURVEY_MIN);
+            
+            // Cuisines charts - threshold at index 2 (value "3" is the minimum threshold)
+            // Labels: 1, 2, 3, 4, 5, 6, 7, 8, 9 → threshold line before "3" (index 2)
+            // Clear inflection: 19.2% → 21.5% (+2.3pp)
+            const cuisinesRepeatChart = createLineChart('cuisinesRepeatChart',
+                cuisinesData.map(d => d.bucket),
+                cuisinesData.map(d => d.repeat_rate),
+                '#8b5cf6', 2, REPEAT_RATE_MIN);
+            
+            const cuisinesLikedChart = createLineChart('cuisinesLikedChart',
+                cuisinesData.map(d => d.bucket),
+                cuisinesData.map(d => d.liked_loved),
+                '#8b5cf6', 2, 80); // Higher min for liked/loved
+            
+            // Dishes charts - threshold at index 1 (value "4" is where repeat rate peaks)
+            // Labels: 3, 4, 5, 6, 7, 8 → threshold line before "4" (index 1)
+            // Peak at 4 dishes/partner: 26.0% repeat rate
+            const dishesRepeatChart = createLineChart('dishesRepeatChart',
+                dishesData.map(d => d.bucket),
+                dishesData.map(d => d.repeat_rate),
+                '#f59e0b', 1, REPEAT_RATE_MIN);
+            
+            const dishesKidsChart = createLineChart('dishesKidsChart',
+                dishesData.map(d => d.bucket),
+                dishesData.map(d => d.kids_happy),
+                '#f59e0b', 1, SURVEY_MIN);
+            
+            // Populate tables
+            populateTable('partners-table-body', partnersData, 
+                ['bucket', 'zones', 'repeat_rate', 'avg_rating', 'kids_happy', 'liked_loved', 'enough_food', 'food_hot', 'food_on_time']);
+            
+            populateTable('cuisines-table-body', cuisinesData,
+                ['bucket', 'zones', 'repeat_rate', 'avg_rating', 'kids_happy', 'liked_loved', 'enough_food', 'food_hot', 'food_on_time']);
+            
+            populateTable('dishes-table-body', dishesData,
+                ['bucket', 'zones', 'repeat_rate', 'avg_rating', 'kids_happy', 'liked_loved', 'enough_food', 'food_hot']);
+            
+            // Draw threshold overlays after a short delay to ensure charts are rendered
+            setTimeout(() => {
+                drawThresholdOverlay(partnersRepeatChart);
+                drawThresholdOverlay(partnersKidsChart);
+                drawThresholdOverlay(cuisinesRepeatChart);
+                drawThresholdOverlay(cuisinesLikedChart);
+                drawThresholdOverlay(dishesRepeatChart);
+                drawThresholdOverlay(dishesKidsChart);
+            }, 100);
+        });
+    </script>
+</body>
+</html>
+

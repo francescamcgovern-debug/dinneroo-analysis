@@ -93,22 +93,53 @@ Create self-contained HTML dashboards with interactive visualizations. Make data
 
 | File | Purpose |
 |------|---------|
-| `DELIVERABLES/dashboards/` | Dashboard output folder |
-| `docs/dashboards/` | Published dashboards |
+| `DELIVERABLES/dashboards/dinneroo_master_dashboard.html` | **The single master dashboard** |
 | `DATA/3_ANALYSIS/*.csv` | Data sources |
-| `docs/data/*.json` | Pre-processed data |
+| `DELIVERABLES/presentation_data/*.csv` | Pre-processed data for charts |
 
 ---
 
-## Existing Dashboards
+## The Master Dashboard
 
-| Dashboard | File | Purpose |
-|-----------|------|---------|
-| Priority Dishes | `priority_dishes.html` | Dish rankings and quadrants |
-| Zone MVP | `mvp_zone_dashboard.html` | Zone health and status |
-| Zone Strategy | `zone_dish_strategy.html` | Zone-dish mapping |
-| Dish Prioritization | `dish_prioritization_2026-01-05.html` | Historical snapshot |
-| Family Behavior | `family_eating_behavior_2026-01-05.html` | Customer insights |
+**One dashboard to rule them all:** `DELIVERABLES/dashboards/dinneroo_master_dashboard.html`
+
+| Section | Content |
+|---------|---------|
+| **MVP Thresholds** | Data-driven threshold discovery with hierarchical analysis |
+| **Zone Analysis** | Zone health, coverage, and recruitment priorities |
+| **Dish Prioritization** | Priority dishes and scoring framework |
+| **Cuisine Gaps** | Missing cuisines and expansion opportunities |
+| **Methodology** | Data sources, definitions, and quality standards |
+
+---
+
+## Data Flow: Agent → Dashboard
+
+The **Master Dashboard** aggregates data from all agents:
+
+| Agent | Data Provided | Dashboard Section |
+|-------|---------------|-------------------|
+| **SCORING_AGENT** | MVP thresholds, inflection analysis | MVP Thresholds |
+| **ZONE_AGENT** | Zone MVP status, coverage, health scores | Zone Analysis |
+| **DISH_AGENT** | Priority 100, quadrant classifications, scores | Dish Prioritization |
+| **GAP_AGENT** | Cuisine gaps, recruitment priorities | Cuisine Gaps |
+| **DATA_AGENT** | Freshness, validation status, source attribution | Methodology |
+
+### Data Sources for MVP Thresholds
+
+| File | Content |
+|------|---------|
+| `mvp_partners_by_count.csv` | All metrics by partner bucket |
+| `mvp_cuisines_by_count.csv` | All metrics by cuisine bucket |
+| `mvp_dishes_per_partner.csv` | All metrics by dishes/partner bucket |
+| `mvp_summary_min_vs_target.csv` | Threshold recommendations |
+
+### Updating the Dashboard
+
+The dashboard embeds data directly as JSON. To update:
+
+1. Run analysis scripts to generate new CSVs
+2. Update the embedded data in `dinneroo_master_dashboard.html`
 
 ---
 
@@ -222,12 +253,9 @@ Allow data download (CSV).
 
 ## Output Format
 
-Save dashboards to:
-- Working version: `DELIVERABLES/dashboards/[name].html`
-- Published version: `docs/dashboards/[name].html`
+**Single master dashboard:** `DELIVERABLES/dashboards/dinneroo_master_dashboard.html`
 
-### Naming Convention
-`[topic]_[date].html` or `[topic].html` for evergreen dashboards
+All new features and sections should be added to this one dashboard. No separate dashboards.
 
 ---
 

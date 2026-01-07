@@ -179,6 +179,39 @@ b10_rate = df['has_b10_issue'].mean() * 100
 
 ---
 
+## Dinneroo Menu Structure
+
+### What is a "Dish"?
+
+A **dish** is a meal option within a Dinneroo family bundle - NOT individual components or sides.
+
+**Example:** A Pho family bundle (£25) might include:
+- Adult: Pho soup (1 dish)
+- Kid: Rice bowl (1 dish)
+- Sides: Spring rolls, prawn crackers (not counted as dishes)
+
+This bundle contains **2 dishes** - the main meal choices available to family members.
+
+### Dishes per Partner
+
+**Definition:** The total number of distinct meal options a partner offers across all their Dinneroo bundles.
+
+**Example:**
+- Pho offers: Pho, Rice Bowl, Pad Thai, Kids Noodles = 4 dishes
+- Nando's offers: Chicken Platter, Wrap, Kids Chicken, Veggie Option = 4 dishes
+
+### Why This Matters
+
+- Partners with more dishes give families more choice within the £25 bundle
+- A partner with 5+ dishes can satisfy diverse family preferences (fussy kids, dietary needs)
+- "Dishes per partner" is a measure of menu depth, not bundle count
+
+### Source
+
+Dish counts come from Anna's curated data: `anna_family_dishes.csv` (142 total dishes across 40 partners)
+
+---
+
 ## Statistical Thresholds
 
 | Threshold | Value | Use |
