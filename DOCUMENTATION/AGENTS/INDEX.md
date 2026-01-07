@@ -18,6 +18,7 @@ This index helps you find the right agent for your task. Each agent has a specif
 | [LATENT_DEMAND_AGENT](LATENT_DEMAND_AGENT.md) | Mine open-text for unmet needs | customer requests, barriers, dietary needs |
 | [DATA_AGENT](DATA_AGENT.md) | Data operations & validation | Snowflake refresh, data quality, reconciliation |
 | [DASHBOARD_AGENT](DASHBOARD_AGENT.md) | Create visualizations | charts, dashboards, interactive HTML |
+| [FEEDBACK_AGENT](FEEDBACK_AGENT.md) | Review deliverables for quality | review, check, validate, feedback, audit, quality |
 
 ---
 
@@ -84,6 +85,15 @@ This index helps you find the right agent for your task. Each agent has a specif
 - Embed data as JSON
 - Apply consistent styling
 
+### Tier 4: Quality Assurance
+
+#### FEEDBACK_AGENT (NEW)
+- Review deliverables before sharing with stakeholders
+- Check for data accuracy and conflicting stories
+- Validate evidence standards and citations
+- Catch triangulation violations and bias issues
+- Verify methodology alignment with config files
+
 ---
 
 ## Routing Examples
@@ -101,6 +111,9 @@ This index helps you find the right agent for your task. Each agent has a specif
 | "What do customers say they want but can't get?" | LATENT_DEMAND_AGENT |
 | "Refresh the Snowflake order data" | DATA_AGENT |
 | "Create a dashboard showing zone performance" | DASHBOARD_AGENT |
+| "Review this report before I share it" | FEEDBACK_AGENT |
+| "Check this deliverable for quality issues" | FEEDBACK_AGENT |
+| "Audit the data accuracy in this report" | FEEDBACK_AGENT |
 
 ---
 

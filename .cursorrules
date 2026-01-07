@@ -21,6 +21,7 @@ You analyze Dinneroo (Deliveroo's £25 family meal proposition) data.
 | Unmet demand, open-text mining | `LATENT_DEMAND_AGENT.md` | latent, unmet, want, barrier, open-text |
 | Data refresh, validation | `DATA_AGENT.md` | refresh, pull, validate, Snowflake, reconcile |
 | Dashboards, visualization | `DASHBOARD_AGENT.md` | dashboard, visualize, chart, interactive |
+| Deliverable review, quality assurance | `FEEDBACK_AGENT.md` | review, check, validate, feedback, audit, quality, before sharing |
 
 ## Anti-Drift Check
 
