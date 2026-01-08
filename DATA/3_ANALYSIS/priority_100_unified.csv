@@ -1,62 +1,62 @@
 rank,dish_type,cuisine,on_dinneroo,unified_score,performance_score,opportunity_score,tier,quadrant,order_volume,zone_count,orders_per_zone,kids_happy,is_core_driver,perf_opz_score,perf_rating_score,perf_kids_score,opp_latent_score,opp_nondin_score
-1,Noodles,Global,True,3.9,4.83,2.5,Tier 1: Must-Have,Demand Boosters,2092.0,,2092.0,0.8,True,5,5,4,3,2
-2,Pho,Vietnamese,True,3.7,4.83,2.0,Tier 1: Must-Have,Demand Boosters,4530.0,,4530.0,0.8,True,5,5,4,2,2
-3,Curry,Indian,True,3.7,4.83,2.0,Tier 1: Must-Have,Demand Boosters,5897.0,,5897.0,0.81,False,5,5,4,2,2
-4,Biryani,Indian,True,3.6,5.0,1.5,Tier 1: Must-Have,Demand Boosters,458.0,,458.0,1.0,True,5,5,5,1,2
-5,Bowl,Healthy/Fresh,True,3.6,5.0,1.5,Tier 1: Must-Have,Demand Boosters,4517.0,,4517.0,1.0,False,5,5,5,1,2
-6,Salad,Healthy/Fresh,True,3.55,4.58,2.0,Tier 1: Must-Have,Demand Boosters,1090.0,,1090.0,0.8,False,5,4,4,2,2
-7,Fried Rice,Chinese,True,3.5,4.83,1.5,Tier 1: Must-Have,Demand Boosters,4958.0,,4958.0,0.8,True,5,5,4,1,2
-8,Fajitas,Mexican,True,3.45,4.75,1.5,Tier 2: Should-Have,Demand Boosters,221.0,,221.0,1.0,False,5,4,5,1,2
-9,Pasta,Italian,True,3.4,4.33,2.0,Tier 2: Should-Have,Demand Boosters,1342.0,,1342.0,0.79,False,5,3,4,2,2
-10,Katsu,Japanese,True,3.4,4.33,2.0,Tier 2: Should-Have,Demand Boosters,11730.0,,11730.0,0.78,True,5,3,4,2,2
-11,Rice Bowl,Healthy/Fresh,True,3.35,4.58,1.5,Tier 2: Should-Have,Demand Boosters,9545.0,,9545.0,0.85,True,5,4,4,1,2
-12,Ramen,Japanese,True,3.3,4.17,2.0,Tier 2: Should-Have,Demand Boosters,223.0,,223.0,,False,5,3,3,2,2
-13,Sushi,Japanese,True,3.25,4.42,1.5,Tier 2: Should-Have,Demand Boosters,1043.0,,1043.0,0.69,True,5,4,3,1,2
-14,Pad Thai,Thai,True,3.25,4.42,1.5,Tier 2: Should-Have,Demand Boosters,2734.0,,2734.0,0.72,False,5,4,3,1,2
-15,Shawarma,Middle Eastern,True,3.25,4.42,1.5,Tier 2: Should-Have,Demand Boosters,1355.0,,1355.0,0.73,False,5,4,3,1,2
-16,Butter Chicken,Indian,True,3.2,4.33,1.5,Tier 2: Should-Have,Demand Boosters,650.0,,650.0,0.4,False,5,5,1,1,2
-17,Teriyaki,Japanese,True,3.2,4.33,1.5,Tier 2: Should-Have,Demand Boosters,1369.0,,1369.0,0.79,False,5,3,4,1,2
-18,Mac & Cheese,Global,True,3.15,4.25,1.5,Tier 2: Should-Have,Demand Boosters,1322.0,,1322.0,0.93,False,5,2,5,1,2
-19,Lasagne,Italian,True,3.15,3.92,2.0,Tier 2: Should-Have,Demand Boosters,931.0,,931.0,0.7,False,5,2,3,2,2
-20,Pizza,Italian,True,3.15,3.92,2.0,Tier 2: Should-Have,Demand Boosters,548.0,,548.0,0.73,False,5,2,3,2,2
-21,Grilled Chicken with Sides,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,540.0,,540.0,,False,5,3,3,1,2
-22,Korean Fried Chicken,Korean,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,398.0,,398.0,,False,5,3,3,1,2
-23,Halloumi Wrap,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,161.0,,161.0,,False,5,3,3,1,2
-24,Grain Bowl,Healthy/Fresh,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,192.0,,192.0,,False,5,3,3,1,2
-25,Roast Dinner,British,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,287.0,,287.0,,False,5,3,3,1,2
-26,Veggie Fajitas,Mexican,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,333.0,,333.0,,False,5,3,3,1,2
-27,Chicken Pie,British,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,34506.0,,34506.0,,False,5,3,3,1,2
-28,Shepherd's Pie,British,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,333.0,,333.0,,False,5,3,3,1,2
-29,Stir Fry,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,252.0,,252.0,,False,5,3,3,1,2
-30,Sweet & Sour Chicken,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,1081.0,,1081.0,,False,5,3,3,1,2
-31,Burger,American,True,2.95,3.58,2.0,Tier 3: Nice-to-Have,Demand Boosters,61.0,,61.0,,False,4,3,3,2,2
-32,Tacos,Mexican,True,2.95,3.58,2.0,Tier 3: Nice-to-Have,Demand Boosters,62.0,,62.0,,False,4,3,3,2,2
-33,Poke Bowl,Healthy/Fresh,True,2.7,3.5,1.5,Tier 3: Nice-to-Have,Demand Boosters,39.0,,39.0,,False,3,5,3,1,2
-34,Quesadilla,Mexican,True,2.65,3.42,1.5,Tier 3: Nice-to-Have,Demand Boosters,57.0,,57.0,1.0,False,4,1,5,1,2
-35,Fish & Chips,Global,True,2.6,3.0,2.0,Tier 3: Nice-to-Have,Demand Boosters,32.0,,32.0,,False,3,3,3,2,2
-36,Sweet & Sour,,True,2.4,2.67,2.0,Tier 4: Monitor,Deprioritised,,,,1.0,False,1,5,5,2,2
-37,Wrap,Global,True,2.4,3.0,1.5,Tier 4: Monitor,Demand Boosters,44.0,,44.0,,False,3,3,3,1,2
-38,Chinese Family Meal,Chinese,False,2.4,3.0,1.5,Tier 4: Monitor,Demand Boosters,31.0,,31.0,,False,3,3,3,1,2
-39,Gyoza,,True,2.3,2.5,2.0,Tier 4: Monitor,Deprioritised,,,,0.76,False,1,5,4,2,2
-40,Falafel,,True,2.2,2.33,2.0,Tier 4: Monitor,Deprioritised,,,,0.67,False,1,5,3,2,2
-41,Daal,,True,2.2,2.67,1.5,Tier 4: Monitor,Deprioritised,,,,1.0,False,1,5,5,1,2
-42,Thai Curry,,True,2.15,2.25,2.0,Tier 4: Monitor,Deprioritised,,,,0.8,False,1,4,4,2,2
-43,Pie,,True,2.15,1.92,2.5,Tier 4: Monitor,Deprioritised,,,,1.0,False,1,2,5,3,2
-44,Satay,,True,2.15,2.25,2.0,Tier 4: Monitor,Deprioritised,,,,0.8,False,1,4,4,2,2
-45,Grilled Chicken,,True,2.1,2.17,2.0,Tier 4: Monitor,Deprioritised,,,,1.0,False,1,3,5,2,2
-46,Chicken Nuggets,,True,2.1,2.5,1.5,Tier 4: Monitor,Deprioritised,,,,0.8,False,1,5,4,1,2
-47,Greek Mezze,Greek,False,2.05,2.42,1.5,Tier 4: Monitor,Deprioritised,7.0,,7.0,,False,2,3,3,1,2
-48,Tikka Masala,Indian,True,2.05,2.42,1.5,Tier 4: Monitor,Deprioritised,19.0,,19.0,,False,2,3,3,1,2
-49,Chilli,,True,1.9,1.83,2.0,Tier 4: Monitor,Deprioritised,,,,0.7,False,1,3,3,2,2
-50,Spring Rolls,,True,1.85,2.08,1.5,Tier 4: Monitor,Deprioritised,,,,0.7,False,1,4,3,1,2
-51,Samosa,,True,1.8,2.0,1.5,Tier 4: Monitor,Deprioritised,,,,0.46,False,1,5,1,1,2
-52,Wings,,True,1.8,2.0,1.5,Tier 4: Monitor,Deprioritised,,,,0.82,False,1,3,4,1,2
-53,Buddha Bowl,Healthy/Fresh,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
-54,Burrito,Mexican,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,3.0,,3.0,,False,1,3,3,1,2
-55,Souvlaki,Greek,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
-56,Cottage Pie,British,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
-57,Bibimbap,Korean,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
-58,Soup,,True,1.7,1.5,2.0,Tier 4: Monitor,Deprioritised,,,,0.75,False,1,1,4,2,2
+1,Katsu,Japanese,True,3.4,4.33,2.0,Tier 2: Should-Have,Demand Boosters,19534,,19534,0.78,True,5,3,4,2,2
+2,Noodles,Global,True,3.9,4.83,2.5,Tier 1: Must-Have,Demand Boosters,18180,,18180,0.8,True,5,5,4,3,2
+3,Curry,Indian,True,3.7,4.83,2.0,Tier 1: Must-Have,Demand Boosters,13302,,13302,0.81,False,5,5,4,2,2
+4,Fried Rice,Chinese,True,3.5,4.83,1.5,Tier 1: Must-Have,Demand Boosters,12180,,12180,0.8,True,5,5,4,1,2
+5,Pho,Vietnamese,True,3.7,4.83,2.0,Tier 1: Must-Have,Demand Boosters,9392,,9392,0.8,True,5,5,4,2,2
+6,Bowl,Healthy/Fresh,True,3.6,5.0,1.5,Tier 1: Must-Have,Demand Boosters,6866,,6866,1.0,False,5,5,5,1,2
+7,Rice Bowl,Healthy/Fresh,True,3.35,4.58,1.5,Tier 2: Should-Have,Demand Boosters,6866,,6866,0.85,True,5,4,4,1,2
+8,Pad Thai,Thai,True,3.25,4.42,1.5,Tier 2: Should-Have,Demand Boosters,5507,,5507,0.72,False,5,4,3,1,2
+9,Pasta,Italian,True,3.4,4.33,2.0,Tier 2: Should-Have,Demand Boosters,5305,,5305,0.79,False,5,3,4,2,2
+10,Salad,Healthy/Fresh,True,3.55,4.58,2.0,Tier 1: Must-Have,Demand Boosters,5296,,5296,0.8,False,5,4,4,2,2
+11,Teriyaki,Japanese,True,3.2,4.33,1.5,Tier 2: Should-Have,Demand Boosters,5159,,5159,0.79,False,5,3,4,1,2
+12,Lasagne,Italian,True,3.15,3.92,2.0,Tier 2: Should-Have,Demand Boosters,4253,,4253,0.7,False,5,2,3,2,2
+13,Gyoza,,True,2.3,2.5,2.0,Tier 4: Monitor,Deprioritised,3428,,3428,0.76,False,1,5,4,2,2
+14,Shawarma,Middle Eastern,True,3.25,4.42,1.5,Tier 2: Should-Have,Demand Boosters,2674,,2674,0.73,False,5,4,3,1,2
+15,Thai Curry,,True,2.15,2.25,2.0,Tier 4: Monitor,Deprioritised,2660,,2660,0.8,False,1,4,4,2,2
+16,Sushi,Japanese,True,3.25,4.42,1.5,Tier 2: Should-Have,Demand Boosters,2628,,2628,0.69,True,5,4,3,1,2
+17,Pizza,Italian,True,3.15,3.92,2.0,Tier 2: Should-Have,Demand Boosters,2333,,2333,0.73,False,5,2,3,2,2
+18,Wings,,True,1.8,2.0,1.5,Tier 4: Monitor,Deprioritised,1278,,1278,0.82,False,1,3,4,1,2
+19,Fajitas,Mexican,True,3.45,4.75,1.5,Tier 2: Should-Have,Demand Boosters,1259,,1259,1.0,False,5,4,5,1,2
+20,Sweet & Sour Chicken,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,1081.0,,1081.0,,False,5,3,3,1,2
+21,Butter Chicken,Indian,True,3.2,4.33,1.5,Tier 2: Should-Have,Demand Boosters,1046,,1046,0.4,False,5,5,1,1,2
+22,Mac & Cheese,Global,True,3.15,4.25,1.5,Tier 2: Should-Have,Demand Boosters,970,,970,0.93,False,5,2,5,1,2
+23,Ramen,Japanese,True,3.3,4.17,2.0,Tier 2: Should-Have,Demand Boosters,725,,725,,False,5,3,3,2,2
+24,Biryani,Indian,True,3.6,5.0,1.5,Tier 1: Must-Have,Demand Boosters,720,,720,1.0,True,5,5,5,1,2
+25,Shepherd's Pie,British,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,680,,680,,False,5,3,3,1,2
+26,Pie,,True,2.15,1.92,2.5,Tier 4: Monitor,Deprioritised,680,,680,1.0,False,1,2,5,3,2
+27,Grilled Chicken with Sides,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,540.0,,540.0,,False,5,3,3,1,2
+28,Korean Fried Chicken,Korean,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,398.0,,398.0,,False,5,3,3,1,2
+29,Falafel,,True,2.2,2.33,2.0,Tier 4: Monitor,Deprioritised,356,,356,0.67,False,1,5,3,2,2
+30,Veggie Fajitas,Mexican,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,333.0,,333.0,,False,5,3,3,1,2
+31,Burger,American,True,2.95,3.58,2.0,Tier 3: Nice-to-Have,Demand Boosters,289,,289,,False,4,3,3,2,2
+32,Roast Dinner,British,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,287.0,,287.0,,False,5,3,3,1,2
+33,Quesadilla,Mexican,True,2.65,3.42,1.5,Tier 3: Nice-to-Have,Demand Boosters,273,,273,1.0,False,4,1,5,1,2
+34,Tacos,Mexican,True,2.95,3.58,2.0,Tier 3: Nice-to-Have,Demand Boosters,170,,170,,False,4,3,3,2,2
+35,Halloumi Wrap,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,161.0,,161.0,,False,5,3,3,1,2
+36,Stir Fry,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,157,,157,,False,5,3,3,1,2
+37,Wrap,Global,True,2.4,3.0,1.5,Tier 4: Monitor,Demand Boosters,126,,126,,False,3,3,3,1,2
+38,Poke Bowl,Healthy/Fresh,True,2.7,3.5,1.5,Tier 3: Nice-to-Have,Demand Boosters,39.0,,39.0,,False,3,5,3,1,2
+39,Tikka Masala,Indian,True,2.05,2.42,1.5,Tier 4: Monitor,Deprioritised,25,,25,,False,2,3,3,1,2
+40,Grain Bowl,Healthy/Fresh,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,13,,13,,False,5,3,3,1,2
+41,Fish & Chips,Global,True,2.6,3.0,2.0,Tier 3: Nice-to-Have,Demand Boosters,1,,1,,False,3,3,3,2,2
+42,Sweet & Sour,,True,2.4,2.67,2.0,Tier 4: Monitor,Deprioritised,0,,0,1.0,False,1,5,5,2,2
+43,Daal,,True,2.2,2.67,1.5,Tier 4: Monitor,Deprioritised,0,,0,1.0,False,1,5,5,1,2
+44,Satay,,True,2.15,2.25,2.0,Tier 4: Monitor,Deprioritised,0,,0,0.8,False,1,4,4,2,2
+45,Grilled Chicken,,True,2.1,2.17,2.0,Tier 4: Monitor,Deprioritised,0,,0,1.0,False,1,3,5,2,2
+46,Chicken Nuggets,,True,2.1,2.5,1.5,Tier 4: Monitor,Deprioritised,0,,0,0.8,False,1,5,4,1,2
+47,Chilli,,True,1.9,1.83,2.0,Tier 4: Monitor,Deprioritised,0,,0,0.7,False,1,3,3,2,2
+48,Spring Rolls,,True,1.85,2.08,1.5,Tier 4: Monitor,Deprioritised,0,,0,0.7,False,1,4,3,1,2
+49,Samosa,,True,1.8,2.0,1.5,Tier 4: Monitor,Deprioritised,0,,0,0.46,False,1,5,1,1,2
+50,Soup,,True,1.7,1.5,2.0,Tier 4: Monitor,Deprioritised,0,,0,0.75,False,1,1,4,2,2
+51,Chicken Pie,British,False,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,0,,0,,False,5,3,3,1,2
+52,Chinese Family Meal,Chinese,False,2.4,3.0,1.5,Tier 4: Monitor,Demand Boosters,31.0,,31.0,,False,3,3,3,1,2
+53,Greek Mezze,Greek,False,2.05,2.42,1.5,Tier 4: Monitor,Deprioritised,7.0,,7.0,,False,2,3,3,1,2
+54,Buddha Bowl,Healthy/Fresh,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
+55,Burrito,Mexican,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,54,,54,,False,1,3,3,1,2
+56,Souvlaki,Greek,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
+57,Cottage Pie,British,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
+58,Bibimbap,Korean,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
 59,Dim Sum,Chinese,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
 60,Rotisserie Chicken,Global,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
 61,Korma,Indian,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
