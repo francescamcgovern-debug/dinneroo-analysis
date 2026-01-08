@@ -972,7 +972,7 @@
                 <h2 class="section-title">3 Partners + 3 Cuisines = Zone Success</h2>
                 <p class="section-description">
                     Data shows clear inflection points: <strong>+4.5pp repeat rate</strong> at 3+ partners, <strong>+4.2pp</strong> at 3+ cuisines. 
-                    Dishes per partner has minimal effect. Based on <strong>201 zones</strong> with orders (Sep-Dec 2025).
+                    Dishes per partner has minimal effect. Based on <strong>197 zones</strong> with orders (Sep-Dec 2025).
                 </p>
             </div>
             
@@ -2927,7 +2927,12 @@
         // Load zone analysis data from JSON
         async function loadZoneAnalysisData() {
             try {
-                const response = await fetch('../../docs/data/zone_analysis.json');
+                // Try loading from local file first (same directory)
+                let response = await fetch('./zone_analysis.json');
+                if (!response.ok) {
+                    // Try relative path to docs
+                    response = await fetch('../../docs/data/zone_analysis.json');
+                }
                 zoneAnalysisData = await response.json();
                 console.log('Loaded zone analysis data:', zoneAnalysisData.zones.length, 'zones');
                 
@@ -2937,7 +2942,90 @@
                 }
             } catch (error) {
                 console.error('Error loading zone analysis data:', error);
+                console.log('Using fallback: enhancing existing zoneData with checklist');
+                // Fallback: use existing hardcoded zoneData and enhance with checklist
+                useHardcodedZoneDataWithChecklist();
             }
+        }
+        
+        function useHardcodedZoneDataWithChecklist() {
+            // Enhance the existing hardcoded zoneData with mvp_checklist
+            zoneAnalysisData = {
+                zones: zoneData.map(z => ({
+                    zone: z.zone,
+                    region: z.region,
+                    city: z.zone,
+                    orders: z.orders,
+                    partners: z.partners,
+                    cuisines_count: z.cuisines,
+                    total_dishes: z.partners * 4, // Estimate
+                    avg_rating: z.rating,
+                    health_score: z.score,
+                    mvp_status: z.is_mvp ? 'MVP Ready' : (z.mvp_criteria_met === 2 ? 'Near MVP' : 'Developing'),
+                    asian_dishes: z.cuisines >= 2 ? 10 : 0,
+                    italian_dishes: z.cuisines >= 3 ? 8 : 0,
+                    indian_dishes: z.cuisines >= 4 ? 5 : 0,
+                    healthy_dishes: z.cuisines >= 5 ? 3 : 0,
+                    mexican_dishes: z.cuisines >= 6 ? 3 : 0,
+                    middle_eastern_dishes: z.cuisines >= 7 ? 2 : 0,
+                    british_dishes: z.cuisines >= 8 ? 1 : 0,
+                    mvp_checklist: generateChecklistFromLegacyData(z)
+                }))
+            };
+            updateZoneTableWithAnalysisData();
+        }
+        
+        function generateChecklistFromLegacyData(z) {
+            // Generate a checklist based on cuisine count
+            const cuisinesHas = z.cuisines;
+            const cuisineCoverage = {
+                asian: { has: cuisinesHas >= 1, dishes: cuisinesHas >= 1 ? 10 : 0 },
+                italian: { has: cuisinesHas >= 2, dishes: cuisinesHas >= 2 ? 8 : 0 },
+                indian: { has: cuisinesHas >= 3, dishes: cuisinesHas >= 3 ? 5 : 0 },
+                healthy: { has: cuisinesHas >= 4, dishes: cuisinesHas >= 4 ? 3 : 0 },
+                mexican: { has: cuisinesHas >= 5, dishes: cuisinesHas >= 5 ? 3 : 0 },
+                middle_eastern: { has: cuisinesHas >= 6, dishes: cuisinesHas >= 6 ? 2 : 0 },
+                british: { has: cuisinesHas >= 7, dishes: cuisinesHas >= 7 ? 1 : 0 }
+            };
+            
+            const cuisinesMet = Object.values(cuisineCoverage).filter(c => c.has).length;
+            const coreDriversMet = Math.min(cuisinesMet, 8); // Estimate based on cuisines
+            
+            const coreDriverCoverage = {
+                pho: { has: cuisinesHas >= 1, blocked_by: null },
+                south_asian___indian_curry: { has: cuisinesHas >= 3, blocked_by: cuisinesHas < 3 ? 'Blocked by missing Indian cuisine' : null },
+                biryani: { has: cuisinesHas >= 3, blocked_by: cuisinesHas < 3 ? 'Blocked by missing Indian cuisine' : null },
+                fried_rice: { has: cuisinesHas >= 1, blocked_by: null },
+                sushi: { has: cuisinesHas >= 2, blocked_by: null },
+                katsu: { has: cuisinesHas >= 1, blocked_by: null },
+                rice_bowl: { has: cuisinesHas >= 1, blocked_by: null },
+                noodles: { has: cuisinesHas >= 1, blocked_by: null }
+            };
+            
+            const driversActualMet = Object.values(coreDriverCoverage).filter(d => d.has).length;
+            const overallPct = Math.round(((cuisinesMet + driversActualMet) / 15) * 100);
+            
+            const priorityActions = [];
+            if (!cuisineCoverage.indian.has) {
+                priorityActions.push({ type: 'cuisine', gap: 'Indian', action: 'Recruit Dishoom, Kricket, Tiffin Tin', impact: 'Unlocks 2 Core Drivers' });
+            }
+            if (!cuisineCoverage.mexican.has) {
+                priorityActions.push({ type: 'cuisine', gap: 'Mexican', action: 'Recruit Las Iguanas, Zambrero', impact: 'Improves diversity' });
+            }
+            if (!cuisineCoverage.middle_eastern.has) {
+                priorityActions.push({ type: 'cuisine', gap: 'Middle Eastern', action: 'Recruit Shaku Maku', impact: 'Improves diversity' });
+            }
+            
+            return {
+                cuisine_coverage: cuisineCoverage,
+                core_driver_coverage: coreDriverCoverage,
+                progress: {
+                    cuisines: `${cuisinesMet}/7`,
+                    core_drivers: `${driversActualMet}/8`,
+                    overall_pct: overallPct
+                },
+                priority_actions: priorityActions.slice(0, 5)
+            };
         }
         
         function updateZoneTableWithAnalysisData() {

@@ -63,7 +63,9 @@ PHASES = {
         'scripts': [
             'phase3_synthesis/01_generate_priority_list_v2.py',  # Combined priority list
             'phase3_synthesis/02_generate_zone_report.py',
-            'phase3_synthesis/03_export_dashboard_data.py'
+            'phase3_synthesis/03_export_dashboard_data.py',
+            'generate_zone_dashboard_data.py',  # Updates zone_analysis.json
+            'update_master_dashboard.py'  # Updates master dashboard with latest metrics
         ]
     }
 }

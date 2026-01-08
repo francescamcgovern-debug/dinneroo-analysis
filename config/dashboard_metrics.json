@@ -201,11 +201,25 @@
     
     "update_workflow": [
       "1. Run Snowflake refresh: python3 scripts/refresh_snowflake_data.py",
-      "2. Regenerate MVP analysis: python3 scripts/phase2_analysis/analyze_mvp_thresholds.py",
+      "2. Regenerate MVP analysis: python3 scripts/phase2_analysis/discover_mvp_thresholds.py",
       "3. Update zone dashboard data: python3 scripts/generate_zone_dashboard_data.py",
       "4. Prepare dashboard data: python3 scripts/prepare_dashboard_data.py",
-      "5. Regenerate dashboard: python3 scripts/generate_dashboard.py"
+      "5. Update master dashboard: python3 scripts/update_master_dashboard.py",
+      "OR run full pipeline: python3 scripts/run_pipeline.py --phase 3"
     ],
+    
+    "automation_script": {
+      "file": "scripts/update_master_dashboard.py",
+      "purpose": "Updates embedded metrics in master dashboard from source JSON files",
+      "reads_from": [
+        "DATA/3_ANALYSIS/mvp_threshold_discovery.json",
+        "docs/data/zone_mvp_status.json",
+        "config/mvp_thresholds.json",
+        "config/dashboard_metrics.json"
+      ],
+      "updates": "DELIVERABLES/dashboards/dinneroo_master_dashboard.html",
+      "creates_backup": true
+    },
     
     "critical_rules": [
       "DO NOT recalculate MVP status - use established calculations from zone_mvp_status.json",

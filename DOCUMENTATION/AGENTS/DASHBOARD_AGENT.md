@@ -171,14 +171,33 @@ The dashboard embeds data directly as JSON. To update:
 
 1. Run analysis scripts to generate new CSVs
 2. Validate against `config/dashboard_metrics.json` for consistency
-3. Update the embedded data in `dinneroo_master_dashboard.html`
+3. Run the update script to sync embedded data
 
-**Regeneration command:**
+**Automated update (recommended):**
+```bash
+python3 scripts/update_master_dashboard.py  # Updates master dashboard with latest metrics
+```
+
+**Full regeneration (all dashboards):**
 ```bash
 python3 scripts/generate_zone_dashboard_data.py  # Updates zone_analysis.json
 python3 scripts/prepare_dashboard_data.py        # Aggregates all agent outputs
-python3 scripts/generate_dashboard.py            # Embeds into HTML
+python3 scripts/generate_dashboard.py            # Embeds into consumer insight tracker
+python3 scripts/update_master_dashboard.py       # Updates master dashboard
 ```
+
+**Via pipeline:**
+```bash
+python3 scripts/run_pipeline.py --phase 3        # Runs all synthesis including dashboard updates
+```
+
+### Automation Details
+
+The `update_master_dashboard.py` script:
+- Reads from `mvp_threshold_discovery.json`, `zone_mvp_status.json`, and config files
+- Updates zone counts (201 live zones), MVP status counts, order totals
+- Creates a backup before updating
+- Reports what changed
 
 ---
 
