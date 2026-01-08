@@ -1,7 +1,10 @@
 # Dinneroo Master Analysis Report
 
 **Date:** January 2026  
-**Data:** Snowflake pull 2026-01-05 (80,724 orders, 50,744 customers)
+**Data:** Snowflake pull 2026-01-07 (82,350 orders, 50,744 customers)
+
+> **Note:** Order count updated from 80,724 (2026-01-05 pull) to 82,350 (2026-01-07 pull).  
+> See `config/dashboard_metrics.json` for authoritative counts with provenance.
 
 ---
 
@@ -200,11 +203,13 @@ Based on the actual data analysis:
 
 | Source | Sample Size | Use |
 |--------|-------------|-----|
-| Snowflake Orders | 80,724 | Order volume, repeat rate, ratings |
+| Snowflake Orders | 82,350 | Order volume, repeat rate, ratings |
 | Snowflake Customers | 50,744 | Customer-level metrics |
-| Post-Order Survey | 1,564 | Family factors, satisfaction |
-| Dropoff Survey | 1,200+ | Unmet demand signals |
+| Post-Order Survey | 1,599 | Family factors, satisfaction |
+| Dropoff Survey | 838 | Unmet demand signals |
 | Menu Catalog | 63,990 | Dish availability |
+
+> **Data freshness:** Updated 2026-01-07. See `config/dashboard_metrics.json` for authoritative counts.
 
 ### 4.2 Cuisine Performance Summary
 

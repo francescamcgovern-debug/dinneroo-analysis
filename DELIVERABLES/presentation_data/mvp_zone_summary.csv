@@ -1,6 +1,6 @@
 Metric,Value,Notes
 Total FTT Zones Analyzed,100,Zones with 3+ partners
-MVP Ready Zones,42,42% of analyzed zones
+MVP Ready Zones,33,16% of live zones (33/201)
 Zones Needing Work,58,Missing cuisines or partners
 Required Partners per Zone,5+,Minimum for MVP status
 Required Cuisines per Zone,5+,"Italian, Indian, Japanese/Asian, Chicken, Thai/Vietnamese"

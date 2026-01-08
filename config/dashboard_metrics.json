@@ -1,0 +1,170 @@
+{
+  "version": "1.0",
+  "generated": "2026-01-07",
+  "description": "Single source of truth for dashboard metrics with provenance",
+  
+  "order_metrics": {
+    "total_orders": {
+      "value": 82350,
+      "source_file": "DATA/1_SOURCE/snowflake/ALL_DINNEROO_ORDERS.csv",
+      "methodology": "Row count minus header row",
+      "last_verified": "2026-01-07",
+      "notes": "Full dataset including all order statuses"
+    },
+    "historical_order_count": {
+      "value": 80724,
+      "notes": "DEPRECATED - This was from Snowflake pull 2026-01-05. Current data (2026-01-07) shows 82,350 orders. Reports referencing 80,724 need updating."
+    },
+    "unique_customers": {
+      "value": 50744,
+      "source_file": "DATA/1_SOURCE/snowflake/ALL_DINNEROO_ORDERS.csv",
+      "methodology": "COUNT(DISTINCT CUSTOMER_ID)",
+      "last_verified": "2026-01-07"
+    }
+  },
+  
+  "zone_metrics": {
+    "supply_zones_with_partners": {
+      "value": 434,
+      "source_file": "DATA/3_ANALYSIS/anna_zone_dish_counts.csv",
+      "methodology": "COUNT(*) WHERE num_brands > 0",
+      "definition": "Zones where Dinneroo partners are configured/onboarded",
+      "last_verified": "2026-01-07"
+    },
+    "behavioral_zones_with_orders": {
+      "value": 201,
+      "source_file": "DATA/1_SOURCE/snowflake/ALL_DINNEROO_ORDERS.csv",
+      "methodology": "COUNT(DISTINCT ZONE_NAME) WHERE Dinneroo orders exist",
+      "definition": "Zones with actual Dinneroo customer orders during trial period",
+      "last_verified": "2026-01-07",
+      "notes": "Trial period: Sep 2025 - Dec 2025. Note: 197 of these had sufficient data for statistical analysis (mvp_threshold_discovery.json)"
+    },
+    "zones_with_sufficient_data": {
+      "value": 197,
+      "source_file": "DATA/3_ANALYSIS/mvp_threshold_discovery.json",
+      "methodology": "Zones meeting minimum sample size thresholds for analysis",
+      "definition": "Zones with enough orders for reliable statistical analysis",
+      "last_verified": "2026-01-07"
+    },
+    "total_zones_in_system": {
+      "value": 1306,
+      "source_file": "DATA/3_ANALYSIS/anna_zone_dish_counts.csv",
+      "methodology": "Total row count",
+      "definition": "All Deliveroo zones in UK/Ireland",
+      "last_verified": "2026-01-07"
+    },
+    "expansion_opportunity_zones": {
+      "value": 233,
+      "calculation": "supply_zones_with_partners (434) - behavioral_zones_with_orders (201)",
+      "definition": "Zones with partners configured but no orders yet - ready for activation",
+      "notes": "Dashboard shows 234 (using 435-201), should be 233 (using 434-201). Minor discrepancy from rounding."
+    }
+  },
+  
+  "threshold_metrics": {
+    "description": "Two types of thresholds: data-driven inflection points (where metrics improve) and business MVP requirements (minimum for launch)",
+    
+    "inflection_points": {
+      "description": "Data-driven thresholds where key metrics show significant improvement",
+      "source_file": "DATA/3_ANALYSIS/mvp_threshold_discovery.json",
+      
+      "partners": {
+        "inflection_value": 3,
+        "inflection_bucket": "3-4",
+        "evidence": {
+          "repeat_rate_delta": "+4.5pp",
+          "from_value": 0.139,
+          "to_value": 0.184,
+          "sample_n_from": 6035,
+          "sample_n_to": 15611
+        },
+        "confidence": "HIGH",
+        "rationale": "3 of 4 metrics show inflection at 3-4 partners"
+      },
+      
+      "cuisines": {
+        "inflection_value": 3,
+        "inflection_bucket": "3-4",
+        "evidence": {
+          "repeat_rate_delta": "+4.2pp",
+          "from_value": 0.183,
+          "to_value": 0.191,
+          "sample_n_from": 2084,
+          "sample_n_to": 20132
+        },
+        "confidence": "HIGH",
+        "rationale": "Cuisines add independent value beyond partner count"
+      },
+      
+      "dishes_per_partner": {
+        "inflection_value": 4,
+        "inflection_bucket": "4-5",
+        "evidence": {
+          "repeat_rate_delta": "+0.7pp",
+          "avg_rating_delta": "+12.1pp",
+          "sample_n": 8669
+        },
+        "confidence": "MEDIUM",
+        "rationale": "Dishes per partner shows stronger independent effect than total dishes"
+      }
+    },
+    
+    "mvp_requirements": {
+      "description": "Business-defined minimum requirements for zone launch readiness",
+      "source_file": "config/mvp_thresholds.json",
+      
+      "partners_min": {
+        "value": 5,
+        "justification": "Provides cuisine redundancy and availability"
+      },
+      "cuisines_min": {
+        "value": 5,
+        "justification": "Covers diverse family preferences - Italian, Indian, Asian, Chicken, Thai"
+      },
+      "dishes_min": {
+        "value": 21,
+        "justification": "Minimum 3 dishes per core cuisine × 7 cuisines"
+      },
+      "rating_min": {
+        "value": 4.0,
+        "justification": "Families are satisfied - benchmark is 4.2"
+      },
+      "repeat_rate_min": {
+        "value": 0.35,
+        "justification": "Families find value and return - top zones: 40%+"
+      }
+    }
+  },
+  
+  "data_quality": {
+    "trial_period": {
+      "start": "2025-09-01",
+      "end": "2025-12-31",
+      "description": "Dinneroo trial period for behavioral data"
+    },
+    "survey_sample_sizes": {
+      "post_order": 1599,
+      "dropoff": 838,
+      "og_survey": 400
+    },
+    "rating_coverage": {
+      "total_ratings": 10713,
+      "coverage_pct": 13,
+      "notes": "~13% of orders leave ratings"
+    }
+  },
+  
+  "reconciliation_notes": {
+    "order_count_discrepancy": {
+      "issue": "Dashboard shows 82,350 but MASTER_ANALYSIS_REPORT.md shows 80,724",
+      "resolution": "80,724 was from an earlier Snowflake pull (2026-01-05). Current data (2026-01-07) has 82,350 orders. All reports should use 82,350.",
+      "action": "Update MASTER_ANALYSIS_REPORT.md and other reports to use 82,350"
+    },
+    "zone_count_discrepancy": {
+      "issue": "Various documents show 434, 435, 201, 150 zones",
+      "resolution": "434 = supply zones with partners; 201 = behavioral zones with orders; 150 was incorrect query",
+      "action": "Use 434 for supply, 201 for behavioral, always specify which"
+    }
+  }
+}
+

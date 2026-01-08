@@ -237,7 +237,7 @@ def prepare_data_sources_registry() -> Dict[str, Any]:
             "methodology": "All zones from Anna's ground truth supply data",
             "calculation": "COUNT(*) FROM anna_zone_dish_counts",
             "benchmark": None,
-            "caveats": ["201 zones have orders", "1,105 zones have no order activity yet"],
+            "caveats": ["201 zones have Dinneroo orders", "434 zones have partners configured", "233 zones ready for activation"],
             "evidenceLevel": "validated",
             "relatedMetrics": ["mvpZones", "zoneOrders"]
         },

@@ -129,6 +129,22 @@ These config files document the data hierarchy:
 
 ---
 
+## Zone Count Discrepancy (Important!)
+
+See `09_DATA_RECONCILIATION.md` for full details.
+
+**Summary:**
+- Anna's data shows **435 zones** with Dinneroo partners configured
+- Snowflake orders show only **201 zones** with actual orders
+- **Gap of 234 zones** = expansion opportunity (partners onboarded, awaiting customer activation)
+
+**Why?** The Dinneroo trial period (Sep-Dec 2025) was limited to specific zones. The remaining 234 zones have partners ready but weren't activated for customers during the trial.
+
+**For MVP threshold analysis:** Use Snowflake data (201 zones) - this is behavioral data from real orders.
+**For expansion planning:** Use Anna's data (435 zones) - this shows where we can activate.
+
+---
+
 *Last updated: 2026-01-07*
 
 

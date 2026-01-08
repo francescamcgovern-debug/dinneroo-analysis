@@ -91,12 +91,32 @@ A zone is **MVP Ready** when it meets ALL of the following:
 
 ### Step 4: Classify Zone Status
 
-| Status | Criteria |
-|--------|----------|
-| **MVP Ready** | Meets all thresholds |
-| **Near MVP** | Missing 1-2 criteria |
-| **Developing** | Missing 3-4 criteria |
-| **Early Stage** | Missing 5+ criteria |
+**For Live Zones (201 zones with order data):**
+
+| Status | Criteria | Source |
+|--------|----------|--------|
+| **MVP Ready** | Meets all thresholds (rating ≥4.0, repeat ≥35%, cuisine pass) | `zone_mvp_status.json` |
+| **Near MVP** | Missing 1-2 criteria | `zone_mvp_status.json` |
+| **Developing** | Missing 3+ criteria | `zone_mvp_status.json` |
+
+**For Non-Live Zones (1,105 zones without order data):**
+
+| Status | Criteria | Source |
+|--------|----------|--------|
+| **Supply Only** | Has partners onboarded but no orders yet | Anna's ground truth |
+| **Not Started** | No partners onboarded | Anna's ground truth |
+
+**Summary Counts (Jan 2026):**
+
+| Status | Count | Description |
+|--------|-------|-------------|
+| MVP Ready | 33 | Live zones meeting all criteria |
+| Near MVP | 48 | Live zones, 1-2 criteria away |
+| Developing | 120 | Live zones, building up |
+| Supply Only | 235 | Has partners but no orders yet |
+| Not Started | 870 | No partners onboarded |
+| **Live Zones** | **201** | Total with order data |
+| **Total** | **1,306** | All zones from Anna's ground truth |
 
 ### Step 5: Generate Recommendations
 
@@ -112,11 +132,11 @@ For each zone not at MVP:
 | File | Purpose |
 |------|---------|
 | `DATA/3_ANALYSIS/anna_zone_dish_counts.csv` | **Ground truth - 1,306 zones** (ALWAYS use for supply) |
-| `DATA/3_ANALYSIS/zone_gap_report.csv` | Gap analysis for ALL zones |
-| `DATA/3_ANALYSIS/zone_mvp_status.csv` | MVP calculations |
-| `DATA/3_ANALYSIS/zone_stats.csv` | Performance metrics |
-| `DATA/3_ANALYSIS/zone_quality_scores.csv` | Health scores |
+| `DATA/3_ANALYSIS/zone_gap_report.csv` | Gap analysis for ALL 1,306 zones |
+| `docs/data/zone_mvp_status.json` | **Established MVP calculations for 201 live zones** (DO NOT recalculate) |
+| `docs/data/zone_analysis.json` | Combined dashboard data (all 1,306 zones) |
 | `config/mvp_thresholds.json` | Threshold definitions |
+| `scripts/generate_zone_dashboard_data.py` | Script to regenerate zone_analysis.json |
 | `DELIVERABLES/reports/mvp_zone_report_product_director.md` | Example output |
 
 ## Critical: Zone Coverage
@@ -126,12 +146,16 @@ For each zone not at MVP:
 | Source | Zone Count | Use For |
 |--------|------------|---------|
 | Anna's ground truth | **1,306** | Supply metrics (what we have) |
-| Snowflake orders | ~642 | Performance metrics (zones with activity) |
+| zone_mvp_status.json | **201** | MVP calculations for live zones (with orders) |
 | zone_gap_report.csv | **1,306** | Gap analysis (must include all zones) |
 
-To regenerate zone_gap_report.csv with all zones:
+**Key distinction:**
+- **Live zones (201)**: Have order data → use established MVP calculations (`rating_pass`, `repeat_pass`, `cuisine_pass`)
+- **Non-live zones (1,105)**: No order data → classify as "Supply Only" or "Not Started" based on partner presence
+
+To regenerate zone dashboard data:
 ```bash
-python scripts/phase2_analysis/analyze_all_zones.py
+python3 scripts/generate_zone_dashboard_data.py
 ```
 
 ---
@@ -154,21 +178,25 @@ Quick 8-question checklist for Account Managers:
 | 8 | **MVP Ready** | Focus on growth |
 | 6-7 | **Near MVP** | Fill 1-2 specific gaps |
 | 4-5 | **Developing** | Recruit priority cuisines |
-| 0-3 | **Early Stage** | Foundational work needed |
+| 0-3 | **Developing** | Foundational work needed |
+
+*Note: "Developing" only applies to live zones with order data. Zones without orders are "Supply Only" or "Not Started".*
 
 ---
 
 ## Benchmark Zones (Jan 2026)
 
-Top performing zones to use as benchmarks:
+Top performing zones by order volume (from `zone_mvp_status.json`):
 
 | Zone | Orders | Cuisines | Repeat Rate | Rating |
 |------|--------|----------|-------------|--------|
-| Clapham | 2,349 | 9 | 42% | 4.3 |
-| Islington | 2,262 | 8 | 39% | 4.2 |
-| Brighton Central | 1,734 | 8 | 41% | 4.4 |
-| Cambridge | 1,403 | 7 | 40% | 4.3 |
-| Oxford | 1,501 | 5 | 38% | 4.1 |
+| Clapham | 2,645 | 9 | 24% | 4.6 |
+| Islington | 2,500 | 8 | 24% | 4.7 |
+| Brighton Central | 1,934 | 9 | 23% | 4.5 |
+| Finsbury Park / Harringay / Crouch End | 1,792 | 3 | 25% | 4.5 |
+| Brockley / Forest Hill | 1,705 | 3 | 24% | 4.6 |
+
+**Note:** Current repeat rates (~24%) are below the 35% MVP threshold. This is a key area for improvement.
 
 ---
 
@@ -179,11 +207,16 @@ Top performing zones to use as benchmarks:
 ```markdown
 # Zone Analysis: [Zone Name or Scope]
 
-## MVP Status Summary
-- MVP Ready: X zones (Y%)
-- Near MVP: X zones
-- Developing: X zones
-- Early Stage: X zones
+## MVP Status Summary (Live Zones: 201)
+- MVP Ready: 33 zones (16%)
+- Near MVP: 48 zones (24%)
+- Developing: 120 zones (60%)
+
+## Non-Live Zones (1,105)
+- Supply Only: 235 zones (has partners, no orders)
+- Not Started: 870 zones (no partners)
+
+## Total: 1,306 zones
 
 ## Top Zones
 [Table with metrics]
@@ -202,30 +235,29 @@ Top performing zones to use as benchmarks:
 
 ## Dashboard Integration
 
-This agent feeds the **Zones** tab and Overview KPIs in the Consumer Insight Tracker dashboard.
+This agent feeds the **Zone Analysis** dashboard (`docs/dashboards/zone_analysis.html`).
 
 | Output | Dashboard Location | Data File |
 |--------|-------------------|-----------|
-| Zone count (1,306) | Overview KPI | `anna_zone_dish_counts.csv` |
-| MVP status breakdown | Zones tab, MVP Status | `zone_mvp_status.csv` |
-| Zone health scores | Zone Performance | `zone_quality_scores.csv` |
-| Coverage gaps | Zones tab, Gaps | `zone_gap_report.csv` |
-| Benchmark zones | Zone Comparison | `zone_stats.csv` |
+| Total zones (1,306) | Header KPI | `zone_analysis.json` |
+| Live zones (201) | Header KPI | `zone_analysis.json` |
+| MVP status breakdown | KPI cards + chart | `zone_analysis.json` (from `zone_mvp_status.json`) |
+| Zone health scores | Zone table | `zone_analysis.json` |
+| Coverage gaps | Cuisine Gaps tab | `zone_analysis.json` |
+| Recruitment priority | Recruitment tab | `zone_analysis.json` |
 
 **Key dashboard metrics from this agent:**
-- "Zones Analyzed: 1,306" (from Anna's ground truth)
-- MVP Ready / Near MVP / Developing / Early Stage breakdown
+- "Total Zones: 1,306" (from Anna's ground truth)
+- "Live Zones: 201" (with order data)
+- MVP Ready / Near MVP / Developing (for live zones only)
+- Supply Only / Not Started (for non-live zones)
 - Zone-level cuisine coverage
 - Recruitment priority by zone
 
 **To regenerate zone analysis for dashboard:**
 ```bash
-# Regenerate zone_gap_report.csv with all 1,306 zones
-python3 scripts/phase2_analysis/analyze_all_zones.py
-
-# Update dashboard
-python3 scripts/prepare_dashboard_data.py
-python3 scripts/generate_dashboard.py
+# Generate zone_analysis.json combining MVP data with Anna's ground truth
+python3 scripts/generate_zone_dashboard_data.py
 ```
 
 ---
@@ -236,10 +268,14 @@ python3 scripts/generate_dashboard.py
 - ❌ Don't weight volume highest (it's an outcome, not a driver)
 - ❌ Don't assume zone performance without fresh calculation
 - ❌ **Don't analyze only zones with orders - use ALL 1,306 zones from Anna's data**
+- ❌ **Don't apply "Developing/Near MVP/MVP Ready" to zones without order data**
+- ❌ **Don't recalculate MVP status - use established calculations from `zone_mvp_status.json`**
 - ✅ Use repeat rate as primary success signal
 - ✅ Distinguish supply metrics from performance metrics
 - ✅ Compare against benchmark zones
-- ✅ **Always report total zones (1,306) alongside zones with orders (~642)**
+- ✅ **Always report total zones (1,306) alongside live zones (201)**
+- ✅ **Use "Supply Only" for zones with partners but no orders**
+- ✅ **Use "Not Started" for zones with no partners**
 
 ---
 

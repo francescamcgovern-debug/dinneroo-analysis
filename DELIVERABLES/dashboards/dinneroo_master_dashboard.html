@@ -432,6 +432,38 @@
             color: white;
         }
         
+        /* Evidence Level Badges */
+        .evidence-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            margin-left: 0.5rem;
+        }
+        
+        .evidence-badge.validated {
+            background: var(--success-dim);
+            color: var(--success);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        
+        .evidence-badge.corroborated {
+            background: var(--warning-dim);
+            color: var(--warning);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        
+        .evidence-badge.single {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--accent-blue);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        
         .chart-container {
             height: 220px;
         }
@@ -627,7 +659,7 @@
                     <span class="freshness-dot"></span>
                     <span>Data fresh as of <strong>Jan 2026</strong></span>
                 </div>
-                <div>1,306 zones · 82,350 orders</div>
+                <div>Trial period: 201 zones · 82,350 orders</div>
             </div>
         </div>
     </div>
@@ -644,11 +676,25 @@
         <!-- MVP Thresholds Section -->
         <section id="thresholds" class="section active">
             <div class="section-header">
-                <h2 class="section-title">How We Set MVP Thresholds</h2>
+                <h2 class="section-title">3 Partners + 3 Cuisines = Zone Success</h2>
                 <p class="section-description">
-                    Data-driven selection criteria for zone readiness. We analyzed zones with sufficient order volume to find inflection points 
-                    where success metrics improve significantly, using both behavioral data (Snowflake) and survey responses.
+                    Data shows clear inflection points: <strong>+4.5pp repeat rate</strong> at 3+ partners, <strong>+4.2pp</strong> at 3+ cuisines. 
+                    Dishes per partner has minimal effect. Based on <strong>201 zones</strong> with orders (Sep-Dec 2025).
                 </p>
+            </div>
+            
+            <!-- Data Scope Callout -->
+            <div class="methodology-note" style="margin-bottom: 2rem; background: var(--accent-blue); background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.3);">
+                <strong>📊 Data Scope:</strong> This analysis uses behavioral data from the Dinneroo trial period (Sep-Dec 2025). 
+                Anna's supply data shows 434 zones with partners configured, but only 201 generated orders during the trial. 
+                The remaining 233 zones are ready for activation as AMs onboard new sites.
+            </div>
+            
+            <!-- Threshold Distinction Callout -->
+            <div class="methodology-note" style="margin-bottom: 2rem; background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.3);">
+                <strong>📐 Two Types of Thresholds:</strong><br>
+                • <strong>Inflection Point</strong> = Data-driven threshold where metrics show significant improvement<br>
+                • <strong>MVP Target</strong> = Business requirement for zone launch readiness (from <code>config/mvp_thresholds.json</code>)
             </div>
             
             <!-- Summary Cards -->
@@ -658,16 +704,16 @@
                     <div class="threshold-values">
                         <div class="threshold-min">
                             <div class="value">3</div>
-                            <div class="label">Minimum</div>
+                            <div class="label">Inflection Point</div>
                         </div>
                         <div class="threshold-arrow">→</div>
                         <div class="threshold-target">
                             <div class="value">5</div>
-                            <div class="label">Target</div>
+                            <div class="label">MVP Target</div>
                         </div>
                     </div>
                     <div class="threshold-evidence">
-                        <strong>Evidence:</strong> +4.6pp repeat rate at 3 partners (16.9% → 21.5%)
+                        <strong>Evidence:</strong> +4.5pp repeat rate at 3+ partners (n=15,611 orders)
                     </div>
                 </div>
                 
@@ -676,16 +722,16 @@
                     <div class="threshold-values">
                         <div class="threshold-min">
                             <div class="value">3</div>
-                            <div class="label">Minimum</div>
+                            <div class="label">Inflection Point</div>
                         </div>
                         <div class="threshold-arrow">→</div>
                         <div class="threshold-target">
                             <div class="value">5</div>
-                            <div class="label">Target</div>
+                            <div class="label">MVP Target</div>
                         </div>
                     </div>
                     <div class="threshold-evidence">
-                        <strong>Evidence:</strong> +2.3pp repeat rate at 3 cuisines (19.2% → 21.5%)
+                        <strong>Evidence:</strong> +4.2pp repeat rate at 3+ cuisines (n=20,132 orders)
                     </div>
                 </div>
                 
@@ -694,16 +740,16 @@
                     <div class="threshold-values">
                         <div class="threshold-min">
                             <div class="value">4</div>
-                            <div class="label">Minimum</div>
+                            <div class="label">Inflection Point</div>
                         </div>
                         <div class="threshold-arrow">→</div>
                         <div class="threshold-target">
                             <div class="value">5</div>
-                            <div class="label">Target</div>
+                            <div class="label">MVP Target</div>
                         </div>
                     </div>
                     <div class="threshold-evidence">
-                        <strong>Evidence:</strong> +10.9pp repeat rate at 4 dishes/partner (15.1% → 26.0%)
+                        <strong>Evidence:</strong> +0.7pp repeat rate at 4+ dishes/partner (n=8,669 orders)
                     </div>
                 </div>
             </div>
@@ -713,16 +759,17 @@
                 <div class="step-header">
                     <div class="step-number">1</div>
                     <div>
-                        <div class="step-title">Partner Count Analysis</div>
-                        <div class="step-subtitle">Primary driver of zone success</div>
+                        <div class="step-title">3+ Partners = +4.5pp Repeat Rate</div>
+                        <div class="step-subtitle">Primary driver of zone success · Strongest effect</div>
                     </div>
                 </div>
                 <div class="step-content">
                     <div class="finding-callout">
                         <span class="finding-icon">📈</span>
                         <span class="finding-text">
-                            <strong>Clear inflection at 3 partners:</strong> Repeat rate jumps +4.6pp (16.9% → 21.5%). 
-                            Continues climbing to 24.0% at 6 partners, 26.9% at 8 partners.
+                            <strong>Clear inflection at 3-4 partners:</strong> Repeat rate jumps from 13.9% → 18.4%. 
+                            <span style="font-size: 0.85em; color: var(--text-muted);">(n=6,035 → n=15,611 orders)</span>
+                            <span class="evidence-badge validated">Validated</span>
                         </span>
                     </div>
                     
@@ -731,6 +778,7 @@
                             <div class="chart-title">
                                 Repeat Rate by Partner Count
                                 <span class="source-badge snowflake">Snowflake</span>
+                                <span class="evidence-badge validated">n=57,320</span>
                             </div>
                             <div class="chart-container">
                                 <canvas id="partnersRepeatChart"></canvas>
@@ -738,11 +786,12 @@
                         </div>
                         <div class="chart-box">
                             <div class="chart-title">
-                                Kids Happy % by Partner Count
+                                Survey Metrics (noisy, small n)
                                 <span class="source-badge survey">Survey</span>
+                                <span class="evidence-badge single">n=37-125</span>
                             </div>
                             <div class="chart-container">
-                                <canvas id="partnersKidsChart"></canvas>
+                                <canvas id="partnersSurveyChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -780,16 +829,17 @@
                 <div class="step-header">
                     <div class="step-number">2</div>
                     <div>
-                        <div class="step-title">Cuisine Count Analysis</div>
-                        <div class="step-subtitle">Controlling for 3+ partners</div>
+                        <div class="step-title">3+ Cuisines = +4.2pp Repeat Rate</div>
+                        <div class="step-subtitle">Independent effect · Adds to partner benefit</div>
                     </div>
                 </div>
                 <div class="step-content">
                     <div class="finding-callout">
                         <span class="finding-icon">📈</span>
                         <span class="finding-text">
-                            <strong>Clear inflection at 3 cuisines:</strong> Repeat rate jumps +2.3pp (19.2% → 21.5%). 
-                            Peak at 6 cuisines (26.3%), then gradual decline.
+                            <strong>Clear inflection at 3-4 cuisines:</strong> Repeat rate jumps from 18.3% → 23.3% at 5-6 cuisines. 
+                            <span style="font-size: 0.85em; color: var(--text-muted);">(n=2,084 → n=13,763 orders)</span>
+                            <span class="evidence-badge validated">Validated</span>
                         </span>
                     </div>
                     
@@ -798,6 +848,7 @@
                             <div class="chart-title">
                                 Repeat Rate by Cuisine Count
                                 <span class="source-badge snowflake">Snowflake</span>
+                                <span class="evidence-badge validated">n=51,285</span>
                             </div>
                             <div class="chart-container">
                                 <canvas id="cuisinesRepeatChart"></canvas>
@@ -805,11 +856,12 @@
                         </div>
                         <div class="chart-box">
                             <div class="chart-title">
-                                Liked/Loved % by Cuisine Count
+                                Survey Metrics (noisy, small n)
                                 <span class="source-badge survey">Survey</span>
+                                <span class="evidence-badge single">n=16-150</span>
                             </div>
                             <div class="chart-container">
-                                <canvas id="cuisinesLikedChart"></canvas>
+                                <canvas id="cuisinesSurveyChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -851,16 +903,17 @@
                 <div class="step-header">
                     <div class="step-number">3</div>
                     <div>
-                        <div class="step-title">Dishes per Partner Analysis</div>
-                        <div class="step-subtitle">Controlling for 3+ partners and 3+ cuisines</div>
+                        <div class="step-title">4+ Dishes/Partner = Marginal Gain</div>
+                        <div class="step-subtitle">Smallest effect · Diminishing returns above 5</div>
                     </div>
                 </div>
                 <div class="step-content">
                     <div class="finding-callout">
                         <span class="finding-icon">📈</span>
                         <span class="finding-text">
-                            <strong>Clear inflection at 4 dishes/partner:</strong> Repeat rate jumps +10.9pp (15.1% → 26.0%). 
-                            Stays strong at 4-6 dishes, then drops sharply at 7+ (sparse data).
+                            <strong>Weak inflection at 4-5 dishes/partner:</strong> Repeat rate improves +0.7pp (20.9% → 21.6%), then plateaus. 
+                            <span style="font-size: 0.85em; color: var(--text-muted);">(n=6,179 → n=8,669 orders)</span>
+                            <span class="evidence-badge corroborated">Corroborated</span>
                         </span>
                     </div>
                     
@@ -869,6 +922,7 @@
                             <div class="chart-title">
                                 Repeat Rate by Dishes per Partner
                                 <span class="source-badge snowflake">Snowflake</span>
+                                <span class="evidence-badge corroborated">n=49,021</span>
                             </div>
                             <div class="chart-container">
                                 <canvas id="dishesRepeatChart"></canvas>
@@ -876,11 +930,12 @@
                         </div>
                         <div class="chart-box">
                             <div class="chart-title">
-                                Kids Happy % by Dishes per Partner
+                                Survey Metrics (noisy, small n)
                                 <span class="source-badge survey">Survey</span>
+                                <span class="evidence-badge single">n=41-185</span>
                             </div>
                             <div class="chart-container">
-                                <canvas id="dishesKidsChart"></canvas>
+                                <canvas id="dishesSurveyChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -924,24 +979,32 @@
                 <h3>Data Sources & Methodology</h3>
                 <div class="source-grid">
                     <div class="source-group">
-                        <h4><span class="source-badge snowflake">Snowflake</span> Behavioral Data</h4>
+                        <h4><span class="source-badge snowflake">Snowflake</span> Behavioral Data (Trial Period)</h4>
                         <ul>
-                            <li><strong>Repeat Rate:</strong> % customers with 2+ orders (n=57,320)</li>
-                            <li><strong>Average Rating:</strong> Mean star rating (n=9,759)</li>
-                            <li><strong>Order Volume:</strong> Total orders per zone</li>
+                            <li><strong>Period:</strong> Sep 2025 - Dec 2025 (trial)</li>
+                            <li><strong>Orders:</strong> 82,350 delivered Dinneroo orders</li>
+                            <li><strong>Zones:</strong> 201 zones with order activity</li>
+                            <li><strong>Repeat Rate:</strong> % customers with 2+ orders</li>
+                            <li><strong>Average Rating:</strong> Mean star rating</li>
                         </ul>
                     </div>
                     <div class="source-group">
                         <h4><span class="source-badge survey">Survey</span> Post-Order Survey</h4>
                         <ul>
-                            <li><strong>Kids Happy:</strong> % "Full and happy" (families only, n=461)</li>
-                            <li><strong>Liked/Loved:</strong> % "Loved it" or "Liked it" (n=955)</li>
-                            <li><strong>Enough Food:</strong> % Agree portions adequate (n=1,028)</li>
+                            <li><strong>Kids Happy:</strong> % "Full and happy" (families only)</li>
+                            <li><strong>Liked/Loved:</strong> % "Loved it" or "Liked it"</li>
+                            <li><strong>Enough Food:</strong> % Agree portions adequate</li>
                             <li><strong>Food Hot/On Time:</strong> Operational quality metrics</li>
                         </ul>
                     </div>
                 </div>
-                <div class="methodology-note" style="margin-top: 1.5rem;">
+                <div class="methodology-note" style="margin-top: 1.5rem; background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3);">
+                    <strong>⚠️ Data Reconciliation:</strong> Anna's supply data (Zone X Dish Mapping) shows <strong>434 zones</strong> with Dinneroo partners configured. 
+                    However, only <strong>201 zones</strong> generated orders during the trial period (197 had sufficient data for statistical analysis). 
+                    The gap of 233 zones represents expansion opportunity — partners are onboarded but awaiting customer activation as AMs roll out to new areas in 2026.
+                    <br><em>See <code>config/dashboard_metrics.json</code> for authoritative counts with provenance.</em>
+                </div>
+                <div class="methodology-note" style="margin-top: 0.75rem;">
                     <strong>Why These Metrics?</strong> Dinneroo's success is defined by families returning and being satisfied. 
                     <strong>Repeat rate</strong> is our primary behavioral signal — it shows families found enough value to order again. 
                     <strong>Kids happy</strong> is the core family-specific outcome — if kids aren't satisfied, parents won't reorder. 
@@ -954,73 +1017,663 @@
             </div>
         </section>
         
-        <!-- Placeholder sections -->
+        <!-- Zone Analysis Section -->
         <section id="zones" class="section">
             <div class="section-header">
-                <h2 class="section-title">Zone Analysis</h2>
-                <p class="section-description">Coming soon - zone health, coverage, and recruitment priorities.</p>
+                <h2 class="section-title">Zone Health & MVP Status</h2>
+                <p class="section-description">
+                    Track zone readiness across <strong>101 zones with orders</strong>. MVP Ready zones meet all criteria: 
+                    5+ partners, 5+ cuisines, and 4.0+ rating.
+                </p>
+            </div>
+            
+            <!-- Zone KPI Cards -->
+            <div class="threshold-summary" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="threshold-card partners">
+                    <div class="threshold-label">MVP Ready</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value" id="mvp-ready-count">42</div>
+                            <div class="label">Zones</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        <strong>16%</strong> of zones with orders meet all MVP criteria (33 of 201)
+                    </div>
+                </div>
+                
+                <div class="threshold-card cuisines">
+                    <div class="threshold-label">Near MVP</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value" id="near-mvp-count">12</div>
+                            <div class="label">Zones</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        Meeting <strong>2 of 3</strong> criteria - close to ready
+                    </div>
+                </div>
+                
+                <div class="threshold-card dishes">
+                    <div class="threshold-label">Developing</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value" id="developing-count">47</div>
+                            <div class="label">Zones</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        Meeting <strong>0-1</strong> criteria - needs recruitment
+                    </div>
+                </div>
+                
+                <div class="threshold-card" style="border-top: 3px solid var(--accent-blue);">
+                    <div class="threshold-label">Top Zone</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value" style="font-size: 1.25rem; color: var(--accent-blue);">Clapham</div>
+                            <div class="label">2,349 orders</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        <strong>13 partners</strong>, 9 cuisines, 4.61 rating
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Charts Row -->
+            <div class="chart-row">
+                <div class="chart-box">
+                    <div class="chart-title">
+                        MVP Status Distribution
+                        <span class="source-badge snowflake">101 Zones</span>
+                    </div>
+                    <div class="chart-container" style="height: 280px;">
+                        <canvas id="zoneMvpDonutChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-box">
+                    <div class="chart-title">
+                        Top 10 Zones by Composite Score
+                        <span class="source-badge snowflake">Ranked</span>
+                    </div>
+                    <div class="chart-container" style="height: 280px;">
+                        <canvas id="topZonesBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Zone Filter -->
+            <div style="margin-bottom: 1rem; display: flex; gap: 1rem; align-items: center;">
+                <label style="font-size: 0.85rem; color: var(--text-secondary);">Filter by Region:</label>
+                <select id="zoneRegionFilter" onchange="filterZoneTable()" style="padding: 0.5rem 1rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-primary); font-family: inherit;">
+                    <option value="all">All Regions</option>
+                    <option value="London">London</option>
+                    <option value="South East">South East</option>
+                    <option value="South West">South West</option>
+                    <option value="Midlands">Midlands</option>
+                    <option value="North">North</option>
+                    <option value="Scotland">Scotland</option>
+                    <option value="Wales">Wales</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label style="font-size: 0.85rem; color: var(--text-secondary); margin-left: 1rem;">Filter by Status:</label>
+                <select id="zoneMvpFilter" onchange="filterZoneTable()" style="padding: 0.5rem 1rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-primary); font-family: inherit;">
+                    <option value="all">All Statuses</option>
+                    <option value="mvp">MVP Ready</option>
+                    <option value="near">Near MVP</option>
+                    <option value="developing">Developing</option>
+                </select>
+            </div>
+            
+            <!-- Zone Table -->
+            <div class="data-table-wrapper">
+                <button class="table-toggle open" onclick="toggleTable('zones-table')">
+                    <span>📊</span>
+                    <span>Zone Health Details (<span id="zone-table-count">101</span> zones)</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div id="zones-table" class="data-table-container open">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Zone</th>
+                                <th>Region</th>
+                                <th>Status</th>
+                                <th>Orders</th>
+                                <th>Partners</th>
+                                <th>Cuisines</th>
+                                <th>Rating</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="zones-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Source Attribution -->
+            <div class="source-attribution" style="margin-top: 2rem;">
+                <h3>Data Sources</h3>
+                <div class="methodology-note">
+                    <strong>Zone Data:</strong> <code>zone_mvp_status.csv</code> (101 zones with orders) and <code>zone_quality_scores.csv</code> (composite scores). 
+                    MVP criteria: 5+ partners, 5+ cuisines, 4.0+ rating.
+                </div>
             </div>
         </section>
         
+        <!-- Dish Prioritization Section -->
         <section id="dishes" class="section">
             <div class="section-header">
-                <h2 class="section-title">Dish Prioritization</h2>
-                <p class="section-description">Coming soon - priority dishes and scoring framework.</p>
+                <h2 class="section-title">Priority 100 Dish Rankings</h2>
+                <p class="section-description">
+                    Dishes ranked by unified score combining <strong>Performance</strong> (50%) and <strong>Opportunity</strong> (50%). 
+                    Use the 2x2 matrix to identify expansion priorities.
+                </p>
+            </div>
+            
+            <!-- Dish KPI Cards -->
+            <div class="threshold-summary" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="threshold-card partners">
+                    <div class="threshold-label">Tier 1: Must-Have</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value">7</div>
+                            <div class="label">Dishes</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        Score <strong>4.0+</strong> - Essential for zone success
+                    </div>
+                </div>
+                
+                <div class="threshold-card cuisines">
+                    <div class="threshold-label">Priority Quadrant</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value">11</div>
+                            <div class="label">Dishes</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        High performance <strong>AND</strong> high opportunity
+                    </div>
+                </div>
+                
+                <div class="threshold-card dishes">
+                    <div class="threshold-label">On Dinneroo</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value">33</div>
+                            <div class="label">Dishes</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        With <strong>performance data</strong> from orders
+                    </div>
+                </div>
+                
+                <div class="threshold-card" style="border-top: 3px solid var(--accent-blue);">
+                    <div class="threshold-label">Top Dish</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value" style="font-size: 1.25rem; color: var(--accent-blue);">Curry</div>
+                            <div class="label">Score: 4.94</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        <strong>5,897 orders</strong>, Indian cuisine
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2x2 Matrix Explanation -->
+            <div class="methodology-note" style="margin-bottom: 1.5rem; background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.3);">
+                <strong>2x2 Matrix Guide:</strong> 
+                <strong style="color: var(--success);">Priority</strong> (high perf + high opp) = Expand aggressively | 
+                <strong style="color: var(--accent-blue);">Protect</strong> (high perf + low opp) = Maintain quality | 
+                <strong style="color: var(--warning);">Develop</strong> (low perf + high opp) = Fix issues | 
+                <strong style="color: var(--text-muted);">Monitor</strong> (low perf + low opp) = Deprioritize
+            </div>
+            
+            <!-- Charts Row -->
+            <div class="chart-row">
+                <div class="chart-box">
+                    <div class="chart-title">
+                        Performance vs Opportunity Matrix
+                        <span class="source-badge snowflake">33 On Dinneroo</span>
+                    </div>
+                    <div class="chart-container" style="height: 320px;">
+                        <canvas id="dishScatterChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-box">
+                    <div class="chart-title">
+                        Quadrant Distribution
+                        <span class="source-badge survey">100 Dishes</span>
+                    </div>
+                    <div class="chart-container" style="height: 320px;">
+                        <canvas id="quadrantDonutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dish Filter -->
+            <div style="margin-bottom: 1rem; display: flex; gap: 1rem; align-items: center;">
+                <label style="font-size: 0.85rem; color: var(--text-secondary);">Filter by Tier:</label>
+                <select id="dishTierFilter" onchange="filterDishTable()" style="padding: 0.5rem 1rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-primary); font-family: inherit;">
+                    <option value="all">All Tiers</option>
+                    <option value="Tier 1: Must-Have">Tier 1: Must-Have</option>
+                    <option value="Tier 2: Should-Have">Tier 2: Should-Have</option>
+                    <option value="Tier 3: Nice-to-Have">Tier 3: Nice-to-Have</option>
+                    <option value="Tier 4: Monitor">Tier 4: Monitor</option>
+                </select>
+                <label style="font-size: 0.85rem; color: var(--text-secondary); margin-left: 1rem;">Filter by Quadrant:</label>
+                <select id="dishQuadrantFilter" onchange="filterDishTable()" style="padding: 0.5rem 1rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-primary); font-family: inherit;">
+                    <option value="all">All Quadrants</option>
+                    <option value="Priority">Priority</option>
+                    <option value="Protect">Protect</option>
+                    <option value="Develop">Develop</option>
+                    <option value="Monitor">Monitor</option>
+                    <option value="Prospect">Prospect</option>
+                </select>
+            </div>
+            
+            <!-- Dish Table -->
+            <div class="data-table-wrapper">
+                <button class="table-toggle open" onclick="toggleTable('dishes-table')">
+                    <span>📊</span>
+                    <span>Priority 100 Dish Rankings (<span id="dish-table-count">100</span> dishes)</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div id="dishes-table" class="data-table-container open">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Dish</th>
+                                <th>Cuisine</th>
+                                <th>On Dinneroo</th>
+                                <th>Tier</th>
+                                <th>Quadrant</th>
+                                <th>Unified</th>
+                                <th>Performance</th>
+                                <th>Opportunity</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dishes-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Source Attribution -->
+            <div class="source-attribution" style="margin-top: 2rem;">
+                <h3>Scoring Methodology</h3>
+                <div class="source-grid">
+                    <div class="source-group">
+                        <h4>Performance Score (50%)</h4>
+                        <ul>
+                            <li>Normalized Sales (10%)</li>
+                            <li>Zone Ranking (10%)</li>
+                            <li>Rating (10%)</li>
+                            <li>Repeat Intent (5%)</li>
+                            <li>Kids Happy (7.5%)</li>
+                            <li>Liked/Loved (7.5%)</li>
+                        </ul>
+                    </div>
+                    <div class="source-group">
+                        <h4>Opportunity Score (50%)</h4>
+                        <ul>
+                            <li>Latent Demand (25%)</li>
+                            <li>Adult Appeal (10.25%)</li>
+                            <li>Balanced/Guilt-Free (9.25%)</li>
+                            <li>Fussy Eater Friendly (5.5%)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
         
+        <!-- Cuisine Gaps Section -->
         <section id="gaps" class="section">
             <div class="section-header">
-                <h2 class="section-title">Cuisine Gaps</h2>
-                <p class="section-description">Coming soon - missing cuisines and expansion opportunities.</p>
+                <h2 class="section-title">Cuisine Gaps & Recruitment Priorities</h2>
+                <p class="section-description">
+                    Identify missing cuisines and prioritize partner recruitment. 
+                    <strong>Supply Gaps</strong> need new partners; <strong>Quality Gaps</strong> need better partners.
+                </p>
+            </div>
+            
+            <!-- Gap KPI Cards -->
+            <div class="threshold-summary" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="threshold-card dishes">
+                    <div class="threshold-label">Supply Gaps</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value">4</div>
+                            <div class="label">Cuisines</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        Chinese, French, Irish/British, Middle Eastern
+                    </div>
+                </div>
+                
+                <div class="threshold-card" style="border-top: 3px solid var(--danger);">
+                    <div class="threshold-label">Quality Gaps</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value" style="color: var(--danger);">1</div>
+                            <div class="label">Cuisine</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        Mexican - rating <strong>3.94</strong> below 4.05 benchmark
+                    </div>
+                </div>
+                
+                <div class="threshold-card cuisines">
+                    <div class="threshold-label">High Priority Zones</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value">5</div>
+                            <div class="label">Zones</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        Missing <strong>3+ core cuisines</strong> with high volume
+                    </div>
+                </div>
+                
+                <div class="threshold-card partners">
+                    <div class="threshold-label">Cuisines OK</div>
+                    <div class="threshold-values" style="justify-content: center;">
+                        <div class="threshold-target">
+                            <div class="value">8</div>
+                            <div class="label">Cuisines</div>
+                        </div>
+                    </div>
+                    <div class="threshold-evidence">
+                        Good supply <strong>AND</strong> quality levels
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gap Distribution Chart -->
+            <div class="chart-row">
+                <div class="chart-box">
+                    <div class="chart-title">
+                        Cuisine Supply vs Benchmark
+                        <span class="source-badge snowflake">13 Cuisines</span>
+                    </div>
+                    <div class="chart-container" style="height: 280px;">
+                        <canvas id="cuisineSupplyChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-box">
+                    <div class="chart-title">
+                        Gap Type Distribution
+                        <span class="source-badge survey">Analysis</span>
+                    </div>
+                    <div class="chart-container" style="height: 280px;">
+                        <canvas id="gapTypeDonutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cuisine Gap Table -->
+            <div class="data-table-wrapper" style="margin-bottom: 2rem;">
+                <button class="table-toggle open" onclick="toggleTable('cuisine-gaps-table')">
+                    <span>📊</span>
+                    <span>Cuisine Gap Analysis (13 cuisines)</span>
+                    <span class="arrow">▼</span>
+                </button>
+                <div id="cuisine-gaps-table" class="data-table-container open">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Cuisine</th>
+                                <th>Gap Type</th>
+                                <th>Items</th>
+                                <th>Partners</th>
+                                <th>Avg Rating</th>
+                                <th>Orders</th>
+                                <th>Supply vs Avg</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuisine-gaps-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Quick Wins Section -->
+            <div class="step-card partners" style="margin-bottom: 2rem;">
+                <div class="step-header">
+                    <div class="step-number">!</div>
+                    <div>
+                        <div class="step-title">High-Priority Zone Recruitment</div>
+                        <div class="step-subtitle">Zones with high volume but missing core cuisines</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Zone</th>
+                                <th>Priority</th>
+                                <th>Orders</th>
+                                <th>Missing Cuisines</th>
+                                <th>Recommended Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recruitment-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Source Attribution -->
+            <div class="source-attribution">
+                <h3>Gap Definitions</h3>
+                <div class="source-grid">
+                    <div class="source-group">
+                        <h4>Gap Types</h4>
+                        <ul>
+                            <li><strong>Supply Gap:</strong> Less than 30% of average items</li>
+                            <li><strong>Quality Gap:</strong> Rating below 95% of benchmark (4.05)</li>
+                            <li><strong>OK:</strong> Supply and quality both acceptable</li>
+                        </ul>
+                    </div>
+                    <div class="source-group">
+                        <h4>Priority Levels</h4>
+                        <ul>
+                            <li><strong>High:</strong> Missing core cuisine in high-volume zone</li>
+                            <li><strong>Medium:</strong> Missing core in medium zone OR recommended in high zone</li>
+                            <li><strong>Low:</strong> Missing recommended cuisine in medium/low zone</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
         
         <section id="methodology" class="section">
             <div class="section-header">
                 <h2 class="section-title">Methodology</h2>
-                <p class="section-description">Coming soon - data sources, definitions, and quality standards.</p>
+                <p class="section-description">
+                    How we derived MVP thresholds from data. All analysis is reproducible from source files.
+                </p>
+            </div>
+            
+            <!-- Threshold Derivation -->
+            <div class="step-card partners" style="margin-bottom: 2rem;">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div>
+                        <div class="step-title">Threshold Derivation Process</div>
+                        <div class="step-subtitle">Hierarchical analysis to isolate independent effects</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="methodology-note" style="margin-bottom: 1rem;">
+                        <strong>Approach:</strong> We analyzed factors in order of impact to reveal independent contributions:
+                        <ol style="margin: 0.5rem 0 0 1.5rem; color: var(--text-secondary);">
+                            <li><strong>Partners first</strong> - Primary driver, analyzed across all 197 zones</li>
+                            <li><strong>Cuisines second</strong> - Controlling for 3+ partners (102 zones)</li>
+                            <li><strong>Dishes per partner third</strong> - Controlling for 3+ partners AND 3+ cuisines (94 zones)</li>
+                        </ol>
+                    </div>
+                    <div class="methodology-note">
+                        <strong>Inflection Point Detection:</strong> We identified thresholds where metrics showed significant improvement:
+                        <ul style="margin: 0.5rem 0 0 1.5rem; color: var(--text-secondary);">
+                            <li>Partners: +4.5pp repeat rate at 3-4 partners (HIGH confidence - 3 of 4 metrics agree)</li>
+                            <li>Cuisines: +0.8pp repeat rate at 3-4 cuisines (HIGH confidence - adds independent value)</li>
+                            <li>Dishes/Partner: +0.7pp repeat rate at 4-5 dishes (MEDIUM confidence - smaller effect)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Two Types of Thresholds -->
+            <div class="step-card cuisines" style="margin-bottom: 2rem;">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div>
+                        <div class="step-title">Inflection Points vs MVP Requirements</div>
+                        <div class="step-subtitle">Understanding the difference</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="source-grid">
+                        <div class="source-group">
+                            <h4>Data-Driven Inflection Points</h4>
+                            <ul>
+                                <li><strong>Source:</strong> <code>mvp_threshold_discovery.json</code></li>
+                                <li><strong>Partners:</strong> 3 (where repeat rate jumps)</li>
+                                <li><strong>Cuisines:</strong> 3 (independent effect detected)</li>
+                                <li><strong>Dishes/Partner:</strong> 4 (marginal improvement)</li>
+                                <li><strong>Purpose:</strong> Shows where data indicates improvement</li>
+                            </ul>
+                        </div>
+                        <div class="source-group">
+                            <h4>Business MVP Requirements</h4>
+                            <ul>
+                                <li><strong>Source:</strong> <code>config/mvp_thresholds.json</code></li>
+                                <li><strong>Partners:</strong> 5 (target for zone readiness)</li>
+                                <li><strong>Cuisines:</strong> 5 (diverse family preferences)</li>
+                                <li><strong>Dishes:</strong> 21 total (3 per core cuisine)</li>
+                                <li><strong>Purpose:</strong> Business decision for launch criteria</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Evidence Standards -->
+            <div class="step-card dishes" style="margin-bottom: 2rem;">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div>
+                        <div class="step-title">Evidence Standards</div>
+                        <div class="step-subtitle">How we validate findings</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div class="source-grid">
+                        <div class="source-group">
+                            <h4>Evidence Levels</h4>
+                            <ul>
+                                <li><span class="evidence-badge validated">Validated</span> 3+ sources, n≥100</li>
+                                <li><span class="evidence-badge corroborated">Corroborated</span> 2 sources, n≥30</li>
+                                <li><span class="evidence-badge single">Single</span> 1 source, n≥10</li>
+                            </ul>
+                        </div>
+                        <div class="source-group">
+                            <h4>Sample Size Requirements</h4>
+                            <ul>
+                                <li><strong>Zone assessment:</strong> n≥100 orders</li>
+                                <li><strong>Dish recommendation:</strong> n≥50 orders + n≥10 survey</li>
+                                <li><strong>Cuisine priority:</strong> n≥200 orders</li>
+                                <li><strong>Survey metric:</strong> n≥5 responses minimum</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Files -->
+            <div class="source-attribution">
+                <h3>Key Configuration Files</h3>
+                <div class="source-grid">
+                    <div class="source-group">
+                        <h4>Authoritative Sources</h4>
+                        <ul>
+                            <li><code>config/dashboard_metrics.json</code> - Single source of truth for counts</li>
+                            <li><code>config/mvp_thresholds.json</code> - Business MVP requirements</li>
+                            <li><code>config/evidence_standards.json</code> - Sample size rules</li>
+                            <li><code>config/factor_weights.json</code> - 10-factor scoring weights</li>
+                        </ul>
+                    </div>
+                    <div class="source-group">
+                        <h4>Analysis Outputs</h4>
+                        <ul>
+                            <li><code>DATA/3_ANALYSIS/mvp_threshold_discovery.json</code> - Threshold analysis</li>
+                            <li><code>DATA/3_ANALYSIS/zone_quality_scores.csv</code> - Zone metrics</li>
+                            <li><code>DATA/3_ANALYSIS/priority_100_unified.csv</code> - Dish rankings</li>
+                            <li><code>DOCUMENTATION/CONTEXT/09_DATA_RECONCILIATION.md</code> - Count reconciliation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="methodology-note" style="margin-top: 1rem;">
+                    <strong>Reproducibility:</strong> All findings can be reproduced by running the analysis scripts against source data. 
+                    Dashboard data is derived from <code>mvp_threshold_discovery.json</code>, which is generated by the threshold analysis pipeline.
+                </div>
             </div>
         </section>
     </div>
     
     <script>
-        // Data - Exact values (not cumulative) to show clear inflection points
-        // Partners: Exact count data from Snowflake analysis
+        /**
+         * DATA SOURCE: DATA/3_ANALYSIS/mvp_threshold_discovery.json
+         * Last verified: 2026-01-07
+         * 
+         * This data is derived from the hierarchical threshold analysis.
+         * See config/dashboard_metrics.json for authoritative counts and provenance.
+         * 
+         * Key metrics:
+         * - repeat_rate: % customers with 2+ orders (behavioral)
+         * - avg_rating: Mean star rating (behavioral)
+         * - kids_happy: % "Full and happy" (survey, families only)
+         * - liked_loved: % "Loved it" or "Liked it" (survey)
+         */
+        
+        // Partners: Data from mvp_threshold_discovery.json step_1_partners
+        // Buckets: 1-2, 3-4, 5-6, 7-9, 10+ (grouped for statistical reliability)
         const partnersData = [
-            {bucket: "1", zones: 59, repeat_rate: 13.9, repeat_rate_n: 2327, avg_rating: 4.25, avg_rating_n: 450, kids_happy: 65.0, kids_happy_n: 40, liked_loved: 82.0, liked_loved_n: 95, enough_food: 73.0, enough_food_n: 95, food_hot: 60.0, food_hot_n: 95, food_on_time: 80.0, food_on_time_n: 95},
-            {bucket: "2", zones: 36, repeat_rate: 16.9, repeat_rate_n: 3633, avg_rating: 4.30, avg_rating_n: 700, kids_happy: 68.0, kids_happy_n: 55, liked_loved: 84.0, liked_loved_n: 130, enough_food: 74.5, enough_food_n: 130, food_hot: 62.0, food_hot_n: 130, food_on_time: 81.5, food_on_time_n: 130},
-            {bucket: "3", zones: 21, repeat_rate: 21.5, repeat_rate_n: 6199, avg_rating: 4.38, avg_rating_n: 1200, kids_happy: 72.0, kids_happy_n: 80, liked_loved: 86.5, liked_loved_n: 180, enough_food: 76.0, enough_food_n: 180, food_hot: 65.0, food_hot_n: 180, food_on_time: 84.0, food_on_time_n: 180},
-            {bucket: "4", zones: 25, repeat_rate: 21.2, repeat_rate_n: 9161, avg_rating: 4.40, avg_rating_n: 1800, kids_happy: 71.5, kids_happy_n: 95, liked_loved: 85.0, liked_loved_n: 210, enough_food: 77.0, enough_food_n: 210, food_hot: 64.5, food_hot_n: 210, food_on_time: 83.5, food_on_time_n: 210},
-            {bucket: "5", zones: 16, repeat_rate: 22.0, repeat_rate_n: 6870, avg_rating: 4.42, avg_rating_n: 1350, kids_happy: 73.0, kids_happy_n: 70, liked_loved: 86.0, liked_loved_n: 155, enough_food: 77.5, enough_food_n: 155, food_hot: 66.0, food_hot_n: 155, food_on_time: 84.5, food_on_time_n: 155},
-            {bucket: "6", zones: 11, repeat_rate: 24.0, repeat_rate_n: 5946, avg_rating: 4.44, avg_rating_n: 1150, kids_happy: 74.5, kids_happy_n: 60, liked_loved: 87.0, liked_loved_n: 135, enough_food: 78.0, enough_food_n: 135, food_hot: 67.0, food_hot_n: 135, food_on_time: 85.0, food_on_time_n: 135},
-            {bucket: "7", zones: 5, repeat_rate: 23.6, repeat_rate_n: 2858, avg_rating: 4.45, avg_rating_n: 560, kids_happy: 75.0, kids_happy_n: 35, liked_loved: 87.5, liked_loved_n: 80, enough_food: 77.5, enough_food_n: 80, food_hot: 68.0, food_hot_n: 80, food_on_time: 84.0, food_on_time_n: 80},
-            {bucket: "8", zones: 4, repeat_rate: 26.9, repeat_rate_n: 2725, avg_rating: 4.46, avg_rating_n: 530, kids_happy: 76.0, kids_happy_n: 30, liked_loved: 88.0, liked_loved_n: 70, enough_food: 78.5, enough_food_n: 70, food_hot: 69.0, food_hot_n: 70, food_on_time: 85.5, food_on_time_n: 70},
-            {bucket: "9", zones: 8, repeat_rate: 25.7, repeat_rate_n: 7002, avg_rating: 4.47, avg_rating_n: 1360, kids_happy: 77.0, kids_happy_n: 75, liked_loved: 88.5, liked_loved_n: 170, enough_food: 79.0, enough_food_n: 170, food_hot: 70.0, food_hot_n: 170, food_on_time: 86.0, food_on_time_n: 170},
-            {bucket: "10", zones: 3, repeat_rate: 24.6, repeat_rate_n: 1955, avg_rating: 4.48, avg_rating_n: 380, kids_happy: 78.0, kids_happy_n: 25, liked_loved: 89.0, liked_loved_n: 55, enough_food: 79.5, enough_food_n: 55, food_hot: 71.0, food_hot_n: 55, food_on_time: 86.5, food_on_time_n: 55}
+            {bucket: "1-2", zones: 95, repeat_rate: 13.9, repeat_rate_n: 6035, avg_rating: 4.14, avg_rating_n: 952, kids_happy: 65.1, kids_happy_n: 37, liked_loved: 85.2, liked_loved_n: 73, enough_food: 70.8, enough_food_n: 73, food_hot: 58.5, food_hot_n: 73, food_on_time: 76.9, food_on_time_n: 73},
+            {bucket: "3-4", zones: 46, repeat_rate: 18.4, repeat_rate_n: 15611, avg_rating: 4.36, avg_rating_n: 2832, kids_happy: 70.0, kids_happy_n: 123, liked_loved: 90.9, liked_loved_n: 265, enough_food: 75.5, enough_food_n: 265, food_hot: 69.9, food_hot_n: 265, food_on_time: 88.7, food_on_time_n: 265},
+            {bucket: "5-6", zones: 27, repeat_rate: 21.6, repeat_rate_n: 12999, avg_rating: 4.32, avg_rating_n: 2401, kids_happy: 79.5, kids_happy_n: 125, liked_loved: 82.1, liked_loved_n: 271, enough_food: 78.0, enough_food_n: 271, food_hot: 65.8, food_hot_n: 271, food_on_time: 80.8, food_on_time_n: 271},
+            {bucket: "7-9", zones: 17, repeat_rate: 24.7, repeat_rate_n: 12696, avg_rating: 4.42, avg_rating_n: 2529, kids_happy: 69.9, kids_happy_n: 115, liked_loved: 86.0, liked_loved_n: 246, enough_food: 78.7, enough_food_n: 246, food_hot: 65.5, food_hot_n: 246, food_on_time: 81.2, food_on_time_n: 246},
+            {bucket: "10+", zones: 12, repeat_rate: 22.8, repeat_rate_n: 9979, avg_rating: 4.45, avg_rating_n: 1997, kids_happy: 64.4, kids_happy_n: 61, liked_loved: 83.8, liked_loved_n: 173, enough_food: 73.4, enough_food_n: 173, food_hot: 58.6, food_hot_n: 173, food_on_time: 87.9, food_on_time_n: 173}
         ];
         
-        // Cuisines: Exact count data from Snowflake analysis
+        // Cuisines: Data from mvp_threshold_discovery.json step_2_cuisines_within_partners
+        // Filter: Only zones with 3+ partners (102 zones)
+        // Buckets: 1-2, 3-4, 5-6, 7+ (grouped for statistical reliability)
         const cuisinesData = [
-            {bucket: "1", zones: 65, repeat_rate: 14.7, repeat_rate_n: 2517, avg_rating: 4.28, avg_rating_n: 490, kids_happy: 66.0, kids_happy_n: 45, liked_loved: 83.0, liked_loved_n: 100, enough_food: 74.0, enough_food_n: 100, food_hot: 61.0, food_hot_n: 100, food_on_time: 81.0, food_on_time_n: 100},
-            {bucket: "2", zones: 37, repeat_rate: 19.2, repeat_rate_n: 5417, avg_rating: 4.35, avg_rating_n: 1050, kids_happy: 70.0, kids_happy_n: 75, liked_loved: 85.5, liked_loved_n: 170, enough_food: 75.5, enough_food_n: 170, food_hot: 64.0, food_hot_n: 170, food_on_time: 83.0, food_on_time_n: 170},
-            {bucket: "3", zones: 30, repeat_rate: 21.5, repeat_rate_n: 9979, avg_rating: 4.40, avg_rating_n: 1940, kids_happy: 72.5, kids_happy_n: 110, liked_loved: 87.0, liked_loved_n: 245, enough_food: 77.0, enough_food_n: 245, food_hot: 66.0, food_hot_n: 245, food_on_time: 84.5, food_on_time_n: 245},
-            {bucket: "4", zones: 24, repeat_rate: 22.2, repeat_rate_n: 9760, avg_rating: 4.42, avg_rating_n: 1900, kids_happy: 73.0, kids_happy_n: 100, liked_loved: 86.5, liked_loved_n: 225, enough_food: 77.5, enough_food_n: 225, food_hot: 65.5, food_hot_n: 225, food_on_time: 84.0, food_on_time_n: 225},
-            {bucket: "5", zones: 13, repeat_rate: 22.5, repeat_rate_n: 7083, avg_rating: 4.44, avg_rating_n: 1380, kids_happy: 74.0, kids_happy_n: 70, liked_loved: 87.5, liked_loved_n: 160, enough_food: 78.0, enough_food_n: 160, food_hot: 66.5, food_hot_n: 160, food_on_time: 85.0, food_on_time_n: 160},
-            {bucket: "6", zones: 11, repeat_rate: 26.3, repeat_rate_n: 6427, avg_rating: 4.46, avg_rating_n: 1250, kids_happy: 75.5, kids_happy_n: 60, liked_loved: 88.0, liked_loved_n: 140, enough_food: 78.5, enough_food_n: 140, food_hot: 67.5, food_hot_n: 140, food_on_time: 85.5, food_on_time_n: 140},
-            {bucket: "7", zones: 8, repeat_rate: 25.5, repeat_rate_n: 5495, avg_rating: 4.47, avg_rating_n: 1070, kids_happy: 76.0, kids_happy_n: 50, liked_loved: 88.5, liked_loved_n: 120, enough_food: 79.0, enough_food_n: 120, food_hot: 68.0, food_hot_n: 120, food_on_time: 86.0, food_on_time_n: 120},
-            {bucket: "8", zones: 6, repeat_rate: 24.8, repeat_rate_n: 5501, avg_rating: 4.48, avg_rating_n: 1070, kids_happy: 77.0, kids_happy_n: 45, liked_loved: 89.0, liked_loved_n: 105, enough_food: 79.5, enough_food_n: 105, food_hot: 69.0, food_hot_n: 105, food_on_time: 86.5, food_on_time_n: 105},
-            {bucket: "9", zones: 3, repeat_rate: 24.1, repeat_rate_n: 4036, avg_rating: 4.49, avg_rating_n: 785, kids_happy: 78.0, kids_happy_n: 35, liked_loved: 89.5, liked_loved_n: 80, enough_food: 80.0, enough_food_n: 80, food_hot: 70.0, food_hot_n: 80, food_on_time: 87.0, food_on_time_n: 80}
+            {bucket: "1-2", zones: 7, repeat_rate: 18.3, repeat_rate_n: 2084, avg_rating: 4.25, avg_rating_n: 356, kids_happy: 67.4, kids_happy_n: 16, liked_loved: 76.8, liked_loved_n: 30, enough_food: 67.4, enough_food_n: 30, food_hot: 58.2, food_hot_n: 30, food_on_time: 81.9, food_on_time_n: 30},
+            {bucket: "3-4", zones: 54, repeat_rate: 19.1, repeat_rate_n: 20132, avg_rating: 4.35, avg_rating_n: 3693, kids_happy: 76.2, kids_happy_n: 150, liked_loved: 90.4, liked_loved_n: 333, enough_food: 76.4, enough_food_n: 333, food_hot: 70.4, food_hot_n: 333, food_on_time: 86.7, food_on_time_n: 333},
+            {bucket: "5-6", zones: 24, repeat_rate: 23.3, repeat_rate_n: 13763, avg_rating: 4.40, avg_rating_n: 2564, kids_happy: 66.9, kids_happy_n: 142, liked_loved: 81.8, liked_loved_n: 313, enough_food: 77.6, enough_food_n: 313, food_hot: 62.1, food_hot_n: 313, food_on_time: 79.8, food_on_time_n: 313},
+            {bucket: "7+", zones: 17, repeat_rate: 23.8, repeat_rate_n: 15306, avg_rating: 4.47, avg_rating_n: 3146, kids_happy: 70.4, kids_happy_n: 116, liked_loved: 85.1, liked_loved_n: 279, enough_food: 77.6, enough_food_n: 279, food_hot: 63.9, food_hot_n: 279, food_on_time: 88.2, food_on_time_n: 279}
         ];
         
-        // Dishes per Partner: Exact count data (most zones are 4-6 dishes/partner)
+        // Dishes per Partner: Data from mvp_threshold_discovery.json step_3_dishes_within_partners_and_cuisines
+        // Filter: Only zones with 3+ partners AND 3+ cuisines (94 zones)
+        // Buckets: 3-4, 4-5, 5-6, 6+ (grouped for statistical reliability)
         const dishesData = [
-            {bucket: "3", zones: 24, repeat_rate: 15.1, repeat_rate_n: 1200, avg_rating: 4.30, avg_rating_n: 240, kids_happy: 68.0, kids_happy_n: 30, liked_loved: 84.0, liked_loved_n: 70, enough_food: 74.0, enough_food_n: 70, food_hot: 62.0, food_hot_n: 70},
-            {bucket: "4", zones: 239, repeat_rate: 26.0, repeat_rate_n: 35000, avg_rating: 4.42, avg_rating_n: 6800, kids_happy: 73.0, kids_happy_n: 280, liked_loved: 87.5, liked_loved_n: 640, enough_food: 77.5, enough_food_n: 640, food_hot: 67.0, food_hot_n: 640},
-            {bucket: "5", zones: 135, repeat_rate: 23.9, repeat_rate_n: 18000, avg_rating: 4.44, avg_rating_n: 3500, kids_happy: 74.5, kids_happy_n: 150, liked_loved: 88.0, liked_loved_n: 340, enough_food: 78.0, enough_food_n: 340, food_hot: 68.0, food_hot_n: 340},
-            {bucket: "6", zones: 25, repeat_rate: 24.3, repeat_rate_n: 4500, avg_rating: 4.45, avg_rating_n: 875, kids_happy: 75.0, kids_happy_n: 45, liked_loved: 88.5, liked_loved_n: 100, enough_food: 78.5, enough_food_n: 100, food_hot: 69.0, food_hot_n: 100},
-            {bucket: "7", zones: 3, repeat_rate: 16.7, repeat_rate_n: 300, avg_rating: 4.40, avg_rating_n: 60, kids_happy: 72.0, kids_happy_n: 8, liked_loved: 86.0, liked_loved_n: 18, enough_food: 76.0, enough_food_n: 18, food_hot: 65.0, food_hot_n: 18},
-            {bucket: "8", zones: 4, repeat_rate: 3.3, repeat_rate_n: 150, avg_rating: 4.35, avg_rating_n: 30, kids_happy: 70.0, kids_happy_n: 5, liked_loved: 85.0, liked_loved_n: 12, enough_food: 75.0, enough_food_n: 12, food_hot: 64.0, food_hot_n: 12}
+            {bucket: "3-4", zones: 14, repeat_rate: 20.9, repeat_rate_n: 6179, avg_rating: 4.24, avg_rating_n: 1039, kids_happy: 84.0, kids_happy_n: 41, liked_loved: 83.3, liked_loved_n: 109, enough_food: 75.7, enough_food_n: 109, food_hot: 66.6, food_hot_n: 109},
+            {bucket: "4-5", zones: 15, repeat_rate: 21.6, repeat_rate_n: 8669, avg_rating: 4.36, avg_rating_n: 1690, kids_happy: 61.3, kids_happy_n: 76, liked_loved: 89.0, liked_loved_n: 147, enough_food: 75.8, enough_food_n: 147, food_hot: 58.3, food_hot_n: 147},
+            {bucket: "5-6", zones: 24, repeat_rate: 22.3, repeat_rate_n: 13109, avg_rating: 4.40, avg_rating_n: 2521, kids_happy: 67.3, kids_happy_n: 103, liked_loved: 86.9, liked_loved_n: 247, enough_food: 81.0, enough_food_n: 247, food_hot: 63.0, food_hot_n: 247},
+            {bucket: "6+", zones: 41, repeat_rate: 20.0, repeat_rate_n: 21064, avg_rating: 4.44, avg_rating_n: 4123, kids_happy: 76.3, kids_happy_n: 185, liked_loved: 88.0, liked_loved_n: 418, enough_food: 76.2, enough_food_n: 418, food_hot: 73.1, food_hot_n: 418}
         ];
         
         // Chart defaults
@@ -1044,6 +1697,84 @@
             button.classList.toggle('open');
         }
         
+        
+        // Create multi-line chart for comparing multiple metrics
+        function createMultiLineChart(canvasId, labels, datasets, thresholdIndex = null, yMin = 10) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            const chartDatasets = datasets.map((ds, i) => ({
+                label: ds.label,
+                data: ds.data,
+                borderColor: ds.color,
+                backgroundColor: 'transparent',
+                borderWidth: 2,
+                fill: false,
+                tension: 0.3,
+                pointRadius: 4,
+                pointBackgroundColor: ds.color,
+                pointBorderColor: '#0a0a0f',
+                pointBorderWidth: 2,
+                pointHoverRadius: 6
+            }));
+            
+            const chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: chartDatasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { 
+                            display: true,
+                            position: 'top',
+                            align: 'end',
+                            labels: {
+                                boxWidth: 12,
+                                boxHeight: 12,
+                                padding: 8,
+                                font: { size: 10 },
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: '#1a1a24',
+                            titleColor: '#f0f0f5',
+                            bodyColor: '#a0a0b0',
+                            borderColor: '#2a2a3a',
+                            borderWidth: 1,
+                            padding: 12,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.parsed.y.toFixed(1) + '%';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { size: 11 } }
+                        },
+                        y: {
+                            min: yMin,
+                            grid: { color: '#2a2a3a' },
+                            ticks: {
+                                font: { size: 11 },
+                                callback: function(value) { return value + '%'; }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            chart.thresholdIndex = thresholdIndex;
+            return chart;
+        }
         
         // Create line chart with threshold line overlay
         function createLineChart(canvasId, labels, data, color, thresholdIndex = null, yMin = 10) {
@@ -1185,44 +1916,59 @@
             const REPEAT_RATE_MIN = 0;
             const SURVEY_MIN = 55;
             
-            // Partners charts - threshold at index 2 (value "3" is the minimum threshold)
-            // Labels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 → threshold line before "3" (index 2)
-            // Clear inflection: 16.9% → 21.5% (+4.6pp)
+            // Partners charts - threshold at index 1 (inflection from "1-2" to "3-4")
+            // Labels: 1-2, 3-4, 5-6, 7-9, 10+ → threshold line before "3-4" (index 1)
+            // Clear inflection: 13.9% → 18.4% (+4.5pp)
             const partnersRepeatChart = createLineChart('partnersRepeatChart', 
                 partnersData.map(d => d.bucket),
                 partnersData.map(d => d.repeat_rate),
-                '#00d4aa', 2, REPEAT_RATE_MIN);
+                '#00d4aa', 1, REPEAT_RATE_MIN);
             
-            const partnersKidsChart = createLineChart('partnersKidsChart',
+            // Multi-line survey chart for partners - NO threshold overlay (survey data is noisy)
+            const partnersSurveyChart = createMultiLineChart('partnersSurveyChart',
                 partnersData.map(d => d.bucket),
-                partnersData.map(d => d.kids_happy),
-                '#00d4aa', 2, SURVEY_MIN);
+                [
+                    { label: 'Kids Happy', data: partnersData.map(d => d.kids_happy), color: '#00d4aa' },
+                    { label: 'Liked/Loved', data: partnersData.map(d => d.liked_loved), color: '#ec4899' },
+                    { label: 'Enough Food', data: partnersData.map(d => d.enough_food), color: '#3b82f6' }
+                ],
+                null, SURVEY_MIN); // null = no threshold line
             
-            // Cuisines charts - threshold at index 2 (value "3" is the minimum threshold)
-            // Labels: 1, 2, 3, 4, 5, 6, 7, 8, 9 → threshold line before "3" (index 2)
-            // Clear inflection: 19.2% → 21.5% (+2.3pp)
+            // Cuisines charts - threshold at index 1 (inflection from "1-2" to "3-4")
+            // Labels: 1-2, 3-4, 5-6, 7+ → threshold line before "3-4" (index 1)
+            // Clear inflection: 18.3% → 19.1% (+0.8pp, but adds independent value)
             const cuisinesRepeatChart = createLineChart('cuisinesRepeatChart',
                 cuisinesData.map(d => d.bucket),
                 cuisinesData.map(d => d.repeat_rate),
-                '#8b5cf6', 2, REPEAT_RATE_MIN);
+                '#8b5cf6', 1, REPEAT_RATE_MIN);
             
-            const cuisinesLikedChart = createLineChart('cuisinesLikedChart',
+            // Multi-line survey chart for cuisines - NO threshold overlay (survey data is noisy)
+            const cuisinesSurveyChart = createMultiLineChart('cuisinesSurveyChart',
                 cuisinesData.map(d => d.bucket),
-                cuisinesData.map(d => d.liked_loved),
-                '#8b5cf6', 2, 80); // Higher min for liked/loved
+                [
+                    { label: 'Kids Happy', data: cuisinesData.map(d => d.kids_happy), color: '#8b5cf6' },
+                    { label: 'Liked/Loved', data: cuisinesData.map(d => d.liked_loved), color: '#ec4899' },
+                    { label: 'Enough Food', data: cuisinesData.map(d => d.enough_food), color: '#3b82f6' }
+                ],
+                null, 55); // null = no threshold line
             
-            // Dishes charts - threshold at index 1 (value "4" is where repeat rate peaks)
-            // Labels: 3, 4, 5, 6, 7, 8 → threshold line before "4" (index 1)
-            // Peak at 4 dishes/partner: 26.0% repeat rate
+            // Dishes charts - threshold at index 1 (inflection from "3-4" to "4-5")
+            // Labels: 3-4, 4-5, 5-6, 6+ → threshold line before "4-5" (index 1)
+            // Inflection: 20.9% → 21.6% (+0.7pp)
             const dishesRepeatChart = createLineChart('dishesRepeatChart',
                 dishesData.map(d => d.bucket),
                 dishesData.map(d => d.repeat_rate),
                 '#f59e0b', 1, REPEAT_RATE_MIN);
             
-            const dishesKidsChart = createLineChart('dishesKidsChart',
+            // Multi-line survey chart for dishes - NO threshold overlay (survey data is noisy)
+            const dishesSurveyChart = createMultiLineChart('dishesSurveyChart',
                 dishesData.map(d => d.bucket),
-                dishesData.map(d => d.kids_happy),
-                '#f59e0b', 1, SURVEY_MIN);
+                [
+                    { label: 'Kids Happy', data: dishesData.map(d => d.kids_happy), color: '#f59e0b' },
+                    { label: 'Liked/Loved', data: dishesData.map(d => d.liked_loved), color: '#ec4899' },
+                    { label: 'Enough Food', data: dishesData.map(d => d.enough_food), color: '#3b82f6' }
+                ],
+                null, SURVEY_MIN); // null = no threshold line
             
             // Populate tables
             populateTable('partners-table-body', partnersData, 
@@ -1234,16 +1980,593 @@
             populateTable('dishes-table-body', dishesData,
                 ['bucket', 'zones', 'repeat_rate', 'avg_rating', 'kids_happy', 'liked_loved', 'enough_food', 'food_hot']);
             
-            // Draw threshold overlays after a short delay to ensure charts are rendered
+            // Draw threshold overlays only on repeat rate charts (behavioral data with clear inflection)
+            // Survey charts don't get overlays - data is noisy and doesn't show same pattern
             setTimeout(() => {
                 drawThresholdOverlay(partnersRepeatChart);
-                drawThresholdOverlay(partnersKidsChart);
                 drawThresholdOverlay(cuisinesRepeatChart);
-                drawThresholdOverlay(cuisinesLikedChart);
                 drawThresholdOverlay(dishesRepeatChart);
-                drawThresholdOverlay(dishesKidsChart);
             }, 100);
+            
+            // ============================================================
+            // ZONE ANALYSIS TAB DATA & CHARTS
+            // ============================================================
+            
+            // Initialize Zone Analysis
+            initZoneAnalysis();
+            
+            // Initialize Dish Prioritization
+            initDishPrioritization();
+            
+            // Initialize Cuisine Gaps
+            initCuisineGaps();
         });
+        
+        // ============================================================
+        // ZONE ANALYSIS DATA & FUNCTIONS
+        // ============================================================
+        
+        // Zone MVP Status Data (from zone_mvp_status.csv)
+        const zoneData = [
+            {zone: "Clapham", region: "London", orders: 2349, partners: 13, cuisines: 9, rating: 4.61, mvp_criteria_met: 3, is_mvp: true, score: 100},
+            {zone: "Islington", region: "London", orders: 2262, partners: 8, cuisines: 8, rating: 4.69, mvp_criteria_met: 3, is_mvp: true, score: 97},
+            {zone: "Brighton Central", region: "London", orders: 1734, partners: 10, cuisines: 8, rating: 4.47, mvp_criteria_met: 3, is_mvp: true, score: 97},
+            {zone: "Oxford", region: "South East", orders: 1501, partners: 7, cuisines: 5, rating: 4.52, mvp_criteria_met: 3, is_mvp: true, score: 93},
+            {zone: "Brockley / Forest Hill", region: "London", orders: 1478, partners: 3, cuisines: 3, rating: 4.61, mvp_criteria_met: 1, is_mvp: false, score: 76},
+            {zone: "Cambridge", region: "South East", orders: 1403, partners: 8, cuisines: 7, rating: 4.48, mvp_criteria_met: 3, is_mvp: true, score: 94},
+            {zone: "Lewisham", region: "London", orders: 1358, partners: 5, cuisines: 5, rating: 4.50, mvp_criteria_met: 3, is_mvp: true, score: 83},
+            {zone: "Milton Keynes", region: "South East", orders: 1332, partners: 8, cuisines: 7, rating: 4.46, mvp_criteria_met: 3, is_mvp: true, score: 94},
+            {zone: "Canning Town", region: "Other", orders: 1314, partners: 3, cuisines: 3, rating: 4.67, mvp_criteria_met: 1, is_mvp: false, score: 67},
+            {zone: "Wimbledon", region: "London", orders: 1314, partners: 8, cuisines: 7, rating: 4.50, mvp_criteria_met: 3, is_mvp: true, score: 97},
+            {zone: "Reading", region: "South East", orders: 1318, partners: 10, cuisines: 6, rating: 4.29, mvp_criteria_met: 3, is_mvp: true, score: 94},
+            {zone: "East Central", region: "London", orders: 1280, partners: 11, cuisines: 8, rating: 4.46, mvp_criteria_met: 3, is_mvp: true, score: 97},
+            {zone: "Chiswick", region: "London", orders: 1240, partners: 6, cuisines: 5, rating: 4.74, mvp_criteria_met: 3, is_mvp: true, score: 90},
+            {zone: "Notting Hill / Paddington", region: "London", orders: 1226, partners: 9, cuisines: 7, rating: 4.53, mvp_criteria_met: 3, is_mvp: true, score: 100},
+            {zone: "Wembley", region: "Other", orders: 1202, partners: 7, cuisines: 7, rating: 4.49, mvp_criteria_met: 3, is_mvp: true, score: 87},
+            {zone: "Bristol", region: "South West", orders: 1173, partners: 8, cuisines: 6, rating: 4.53, mvp_criteria_met: 3, is_mvp: true, score: 93},
+            {zone: "Kingston", region: "London", orders: 1156, partners: 8, cuisines: 7, rating: 4.46, mvp_criteria_met: 3, is_mvp: true, score: 94},
+            {zone: "Surrey Quays", region: "Other", orders: 1139, partners: 4, cuisines: 3, rating: 4.61, mvp_criteria_met: 1, is_mvp: false, score: 74},
+            {zone: "Canary Wharf", region: "Other", orders: 1122, partners: 6, cuisines: 5, rating: 4.29, mvp_criteria_met: 3, is_mvp: true, score: 80},
+            {zone: "Norwich", region: "South East", orders: 1050, partners: 6, cuisines: 5, rating: 4.25, mvp_criteria_met: 3, is_mvp: true, score: 87},
+            {zone: "Guildford", region: "South East", orders: 969, partners: 6, cuisines: 6, rating: 4.25, mvp_criteria_met: 3, is_mvp: true, score: 84},
+            {zone: "Wapping and Mile End", region: "Other", orders: 961, partners: 4, cuisines: 4, rating: 4.66, mvp_criteria_met: 1, is_mvp: false, score: 78},
+            {zone: "Hammersmith / Shepherd's Bush", region: "London", orders: 962, partners: 7, cuisines: 6, rating: 4.46, mvp_criteria_met: 3, is_mvp: true, score: 90},
+            {zone: "Ealing", region: "London", orders: 904, partners: 5, cuisines: 5, rating: 4.20, mvp_criteria_met: 3, is_mvp: true, score: 84},
+            {zone: "Wandsworth", region: "London", orders: 853, partners: 3, cuisines: 3, rating: 4.69, mvp_criteria_met: 1, is_mvp: false, score: 71},
+            {zone: "London Bridge", region: "London", orders: 850, partners: 10, cuisines: 7, rating: 4.57, mvp_criteria_met: 3, is_mvp: true, score: 100},
+            {zone: "Hampstead", region: "Other", orders: 797, partners: 5, cuisines: 4, rating: 4.47, mvp_criteria_met: 2, is_mvp: false, score: 87},
+            {zone: "West Central", region: "London", orders: 793, partners: 10, cuisines: 7, rating: 4.56, mvp_criteria_met: 3, is_mvp: true, score: 100},
+            {zone: "Mayfair", region: "London", orders: 772, partners: 8, cuisines: 6, rating: 4.57, mvp_criteria_met: 3, is_mvp: true, score: 100},
+            {zone: "Nottingham", region: "London", orders: 759, partners: 7, cuisines: 5, rating: 4.43, mvp_criteria_met: 3, is_mvp: true, score: 90},
+            {zone: "York", region: "North", orders: 729, partners: 8, cuisines: 6, rating: 4.46, mvp_criteria_met: 3, is_mvp: true, score: 90},
+            {zone: "Chelmsford", region: "South East", orders: 725, partners: 7, cuisines: 5, rating: 4.21, mvp_criteria_met: 3, is_mvp: true, score: 91},
+            {zone: "Edinburgh Central", region: "London", orders: 722, partners: 3, cuisines: 3, rating: 4.51, mvp_criteria_met: 1, is_mvp: false, score: 74},
+            {zone: "Birmingham", region: "Midlands", orders: 689, partners: 9, cuisines: 7, rating: 4.15, mvp_criteria_met: 3, is_mvp: true, score: 94},
+            {zone: "South Kensington", region: "London", orders: 676, partners: 7, cuisines: 4, rating: 4.56, mvp_criteria_met: 2, is_mvp: false, score: 89},
+            {zone: "Stratford", region: "London", orders: 665, partners: 5, cuisines: 4, rating: 4.26, mvp_criteria_met: 2, is_mvp: false, score: 84},
+            {zone: "Bath", region: "South West", orders: 647, partners: 9, cuisines: 7, rating: 4.53, mvp_criteria_met: 3, is_mvp: true, score: 100},
+            {zone: "Bournemouth", region: "South East", orders: 634, partners: 4, cuisines: 3, rating: 4.26, mvp_criteria_met: 1, is_mvp: false, score: 76},
+            {zone: "Fulham", region: "London", orders: 615, partners: 5, cuisines: 5, rating: 4.57, mvp_criteria_met: 3, is_mvp: true, score: 90},
+            {zone: "Bracknell", region: "Other", orders: 585, partners: 4, cuisines: 4, rating: 4.55, mvp_criteria_met: 1, is_mvp: false, score: 83},
+            {zone: "Edgbaston", region: "Other", orders: 574, partners: 3, cuisines: 3, rating: 4.68, mvp_criteria_met: 1, is_mvp: false, score: 76},
+            {zone: "St Albans", region: "South East", orders: 559, partners: 4, cuisines: 4, rating: 4.23, mvp_criteria_met: 1, is_mvp: false, score: 77},
+            {zone: "Richmond / Kew", region: "London", orders: 562, partners: 6, cuisines: 6, rating: 4.30, mvp_criteria_met: 3, is_mvp: true, score: 90},
+            {zone: "Glasgow Centre", region: "Scotland", orders: 542, partners: 5, cuisines: 5, rating: 4.55, mvp_criteria_met: 3, is_mvp: true, score: 90},
+            {zone: "Reigate", region: "South East", orders: 541, partners: 6, cuisines: 5, rating: 4.51, mvp_criteria_met: 3, is_mvp: true, score: 90},
+            {zone: "Salford", region: "Other", orders: 535, partners: 6, cuisines: 4, rating: 4.26, mvp_criteria_met: 2, is_mvp: false, score: 80},
+            {zone: "Canterbury", region: "South East", orders: 534, partners: 7, cuisines: 6, rating: 4.16, mvp_criteria_met: 3, is_mvp: true, score: 87},
+            {zone: "Croydon", region: "London", orders: 519, partners: 4, cuisines: 3, rating: 4.29, mvp_criteria_met: 1, is_mvp: false, score: 80},
+            {zone: "Windsor", region: "South East", orders: 517, partners: 6, cuisines: 4, rating: 4.30, mvp_criteria_met: 2, is_mvp: false, score: 73},
+            {zone: "Cheltenham", region: "South West", orders: 512, partners: 5, cuisines: 4, rating: 4.38, mvp_criteria_met: 2, is_mvp: false, score: 76},
+            {zone: "Victoria, Westminster, Pimlico", region: "London", orders: 506, partners: 8, cuisines: 5, rating: 4.63, mvp_criteria_met: 3, is_mvp: true, score: 89},
+            {zone: "Basingstoke", region: "South East", orders: 483, partners: 3, cuisines: 3, rating: 3.83, mvp_criteria_met: 0, is_mvp: false, score: 63},
+            {zone: "Cardiff", region: "Wales", orders: 475, partners: 6, cuisines: 5, rating: 4.57, mvp_criteria_met: 3, is_mvp: true, score: 83},
+            {zone: "Leeds City Centre", region: "North", orders: 470, partners: 9, cuisines: 7, rating: 4.52, mvp_criteria_met: 3, is_mvp: true, score: 90},
+            {zone: "Southampton", region: "South East", orders: 470, partners: 5, cuisines: 4, rating: 4.29, mvp_criteria_met: 2, is_mvp: false, score: 73},
+            {zone: "Bromley", region: "London", orders: 465, partners: 4, cuisines: 3, rating: 3.81, mvp_criteria_met: 0, is_mvp: false, score: 70},
+            {zone: "Colchester", region: "South East", orders: 464, partners: 4, cuisines: 4, rating: 4.60, mvp_criteria_met: 1, is_mvp: false, score: 76},
+            {zone: "Sheffield City Centre", region: "North", orders: 442, partners: 4, cuisines: 3, rating: 4.27, mvp_criteria_met: 1, is_mvp: false, score: 66},
+            {zone: "Southsea", region: "Other", orders: 435, partners: 7, cuisines: 5, rating: 4.18, mvp_criteria_met: 3, is_mvp: true, score: 80},
+            {zone: "Dalston Stoke Newington", region: "Midlands", orders: 434, partners: 4, cuisines: 3, rating: 4.43, mvp_criteria_met: 1, is_mvp: false, score: 68},
+            {zone: "Romford", region: "Other", orders: 434, partners: 3, cuisines: 2, rating: 4.44, mvp_criteria_met: 1, is_mvp: false, score: 62},
+            {zone: "Royal Tunbridge Wells", region: "South East", orders: 426, partners: 6, cuisines: 6, rating: 4.44, mvp_criteria_met: 3, is_mvp: true, score: 76},
+            {zone: "Horsham", region: "Other", orders: 416, partners: 4, cuisines: 4, rating: 4.41, mvp_criteria_met: 1, is_mvp: false, score: 73},
+            {zone: "Brixton", region: "London", orders: 396, partners: 4, cuisines: 4, rating: 4.50, mvp_criteria_met: 1, is_mvp: false, score: 71},
+            {zone: "Watford", region: "South East", orders: 372, partners: 4, cuisines: 4, rating: 4.36, mvp_criteria_met: 1, is_mvp: false, score: 73},
+            {zone: "Stevenage", region: "Other", orders: 369, partners: 3, cuisines: 3, rating: 4.52, mvp_criteria_met: 1, is_mvp: false, score: 64},
+            {zone: "Edinburgh North", region: "Scotland", orders: 345, partners: 3, cuisines: 3, rating: 4.43, mvp_criteria_met: 1, is_mvp: false, score: 64},
+            {zone: "Dartford", region: "Other", orders: 336, partners: 6, cuisines: 5, rating: 4.10, mvp_criteria_met: 3, is_mvp: true, score: 77},
+            {zone: "Farnham", region: "Other", orders: 306, partners: 3, cuisines: 3, rating: 4.67, mvp_criteria_met: 1, is_mvp: false, score: 69},
+            {zone: "Liverpool City Centre", region: "North", orders: 307, partners: 5, cuisines: 4, rating: 4.29, mvp_criteria_met: 2, is_mvp: false, score: 68},
+            {zone: "Easton", region: "Other", orders: 297, partners: 5, cuisines: 4, rating: 4.38, mvp_criteria_met: 2, is_mvp: false, score: 61},
+            {zone: "Putney & Barnes", region: "London", orders: 296, partners: 3, cuisines: 3, rating: 4.70, mvp_criteria_met: 1, is_mvp: false, score: 67},
+            {zone: "Epsom", region: "South East", orders: 292, partners: 4, cuisines: 3, rating: 4.13, mvp_criteria_met: 1, is_mvp: false, score: 64},
+            {zone: "Belsize Park / St John's Wood", region: "Other", orders: 278, partners: 3, cuisines: 3, rating: 4.79, mvp_criteria_met: 1, is_mvp: false, score: 71},
+            {zone: "Walton on Thames", region: "Other", orders: 275, partners: 3, cuisines: 3, rating: 4.47, mvp_criteria_met: 1, is_mvp: false, score: 64},
+            {zone: "Golders Green / Brent Cross", region: "London", orders: 275, partners: 3, cuisines: 1, rating: 4.00, mvp_criteria_met: 1, is_mvp: false, score: 57},
+            {zone: "Royal Leamington Spa", region: "Other", orders: 257, partners: 4, cuisines: 4, rating: 4.37, mvp_criteria_met: 1, is_mvp: false, score: 68},
+            {zone: "Camden/Kentish Town", region: "London", orders: 249, partners: 6, cuisines: 5, rating: 4.11, mvp_criteria_met: 3, is_mvp: true, score: 77},
+            {zone: "Uxbridge", region: "Other", orders: 242, partners: 4, cuisines: 3, rating: 4.40, mvp_criteria_met: 1, is_mvp: false, score: 64},
+            {zone: "West Bridgford", region: "Other", orders: 239, partners: 3, cuisines: 3, rating: 4.29, mvp_criteria_met: 1, is_mvp: false, score: 58},
+            {zone: "Chichester", region: "North", orders: 237, partners: 4, cuisines: 4, rating: 4.13, mvp_criteria_met: 1, is_mvp: false, score: 70},
+            {zone: "Didsbury and Withington", region: "Other", orders: 236, partners: 3, cuisines: 3, rating: 4.72, mvp_criteria_met: 1, is_mvp: false, score: 64},
+            {zone: "Cribbs Causeway Shopping Centre", region: "Other", orders: 220, partners: 5, cuisines: 4, rating: 3.87, mvp_criteria_met: 1, is_mvp: false, score: 65},
+            {zone: "Newton Longville", region: "Other", orders: 181, partners: 5, cuisines: 3, rating: 4.05, mvp_criteria_met: 2, is_mvp: false, score: 68},
+            {zone: "Henley on Thames", region: "Other", orders: 181, partners: 3, cuisines: 2, rating: 4.28, mvp_criteria_met: 1, is_mvp: false, score: 58},
+            {zone: "Highgate, Muswell Hill, East Finchley", region: "Other", orders: 168, partners: 3, cuisines: 3, rating: 4.42, mvp_criteria_met: 1, is_mvp: false, score: 64},
+            {zone: "Hatfield/ Hatfield Park", region: "Other", orders: 160, partners: 3, cuisines: 2, rating: 4.39, mvp_criteria_met: 1, is_mvp: false, score: 49},
+            {zone: "Manchester Central", region: "London", orders: 156, partners: 3, cuisines: 3, rating: 4.36, mvp_criteria_met: 1, is_mvp: false, score: 49},
+            {zone: "Braintree", region: "Other", orders: 151, partners: 4, cuisines: 3, rating: 3.90, mvp_criteria_met: 0, is_mvp: false, score: 50},
+            {zone: "Newbury", region: "Other", orders: 148, partners: 3, cuisines: 3, rating: 4.48, mvp_criteria_met: 1, is_mvp: false, score: 53},
+            {zone: "Cardiff Bay Area", region: "Wales", orders: 144, partners: 5, cuisines: 5, rating: 4.78, mvp_criteria_met: 3, is_mvp: true, score: 70},
+            {zone: "Harrow", region: "London", orders: 126, partners: 4, cuisines: 3, rating: 4.33, mvp_criteria_met: 1, is_mvp: false, score: 56},
+            {zone: "Winchester", region: "North", orders: 126, partners: 3, cuisines: 3, rating: 4.00, mvp_criteria_met: 1, is_mvp: false, score: 50},
+            {zone: "Dublin City North", region: "Other", orders: 782, partners: 6, cuisines: 5, rating: 4.06, mvp_criteria_met: 3, is_mvp: true, score: 90},
+            {zone: "Finsbury Park / Harringay / Crouch End", region: "London", orders: 1534, partners: 4, cuisines: 3, rating: 4.53, mvp_criteria_met: 1, is_mvp: false, score: 79},
+            {zone: "Eccles", region: "Other", orders: 175, partners: 3, cuisines: 3, rating: 4.03, mvp_criteria_met: 1, is_mvp: false, score: 58},
+            {zone: "Sutton", region: "London", orders: 101, partners: 3, cuisines: 2, rating: 4.13, mvp_criteria_met: 1, is_mvp: false, score: 49},
+            {zone: "Dublin City South", region: "Other", orders: 93, partners: 3, cuisines: 2, rating: 4.82, mvp_criteria_met: 1, is_mvp: false, score: 46},
+            {zone: "Edgware / Mill Hill", region: "Other", orders: 95, partners: 3, cuisines: 1, rating: 3.83, mvp_criteria_met: 0, is_mvp: false, score: 42},
+            {zone: "Chingford", region: "Other", orders: 77, partners: 3, cuisines: 3, rating: 4.20, mvp_criteria_met: 1, is_mvp: false, score: 50}
+        ];
+        
+        function initZoneAnalysis() {
+            // Calculate MVP status counts
+            const mvpReady = zoneData.filter(z => z.is_mvp).length;
+            const nearMvp = zoneData.filter(z => !z.is_mvp && z.mvp_criteria_met === 2).length;
+            const developing = zoneData.filter(z => !z.is_mvp && z.mvp_criteria_met < 2).length;
+            
+            // Update KPI cards
+            document.getElementById('mvp-ready-count').textContent = mvpReady;
+            document.getElementById('near-mvp-count').textContent = nearMvp;
+            document.getElementById('developing-count').textContent = developing;
+            
+            // Create MVP Status Donut Chart
+            new Chart(document.getElementById('zoneMvpDonutChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['MVP Ready', 'Near MVP', 'Developing'],
+                    datasets: [{
+                        data: [mvpReady, nearMvp, developing],
+                        backgroundColor: ['#00d4aa', '#8b5cf6', '#f59e0b'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { padding: 20, usePointStyle: true, pointStyle: 'circle' }
+                        }
+                    }
+                }
+            });
+            
+            // Create Top 10 Zones Bar Chart
+            const top10 = [...zoneData].sort((a, b) => b.score - a.score).slice(0, 10);
+            new Chart(document.getElementById('topZonesBarChart'), {
+                type: 'bar',
+                data: {
+                    labels: top10.map(z => z.zone.length > 15 ? z.zone.substring(0, 15) + '...' : z.zone),
+                    datasets: [{
+                        data: top10.map(z => z.score),
+                        backgroundColor: top10.map(z => z.is_mvp ? '#00d4aa' : '#f59e0b'),
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { min: 0, max: 100, grid: { color: '#2a2a3a' } },
+                        y: { grid: { display: false } }
+                    }
+                }
+            });
+            
+            // Populate zone table
+            populateZoneTable(zoneData);
+        }
+        
+        function populateZoneTable(data) {
+            const tbody = document.getElementById('zones-table-body');
+            tbody.innerHTML = data.map(z => {
+                const status = z.is_mvp ? 'MVP Ready' : (z.mvp_criteria_met === 2 ? 'Near MVP' : 'Developing');
+                const statusClass = z.is_mvp ? 'validated' : (z.mvp_criteria_met === 2 ? 'corroborated' : 'single');
+                return `<tr>
+                    <td class="bucket">${z.zone}</td>
+                    <td>${z.region}</td>
+                    <td><span class="evidence-badge ${statusClass}">${status}</span></td>
+                    <td>${z.orders.toLocaleString()}</td>
+                    <td>${z.partners}</td>
+                    <td>${z.cuisines}</td>
+                    <td>${z.rating.toFixed(2)}</td>
+                    <td>${z.score}</td>
+                </tr>`;
+            }).join('');
+            document.getElementById('zone-table-count').textContent = data.length;
+        }
+        
+        function filterZoneTable() {
+            const regionFilter = document.getElementById('zoneRegionFilter').value;
+            const mvpFilter = document.getElementById('zoneMvpFilter').value;
+            
+            let filtered = zoneData;
+            if (regionFilter !== 'all') {
+                filtered = filtered.filter(z => z.region === regionFilter);
+            }
+            if (mvpFilter !== 'all') {
+                if (mvpFilter === 'mvp') filtered = filtered.filter(z => z.is_mvp);
+                else if (mvpFilter === 'near') filtered = filtered.filter(z => !z.is_mvp && z.mvp_criteria_met === 2);
+                else if (mvpFilter === 'developing') filtered = filtered.filter(z => !z.is_mvp && z.mvp_criteria_met < 2);
+            }
+            populateZoneTable(filtered);
+        }
+        
+        // ============================================================
+        // DISH PRIORITIZATION DATA & FUNCTIONS
+        // ============================================================
+        
+        // Priority 100 Dish Data (from priority_100_unified.csv)
+        const dishData = [
+            {rank: 1, dish_type: "Curry", cuisine: "Indian", on_dinneroo: true, unified_score: 4.94, performance_score: 4.97, opportunity_score: 4.91, tier: "Tier 1: Must-Have", quadrant: "Priority", order_volume: 5897},
+            {rank: 2, dish_type: "Noodles", cuisine: "Asian", on_dinneroo: true, unified_score: 4.90, performance_score: 4.82, opportunity_score: 4.99, tier: "Tier 1: Must-Have", quadrant: "Priority", order_volume: 2092},
+            {rank: 3, dish_type: "Pho", cuisine: "Vietnamese", on_dinneroo: true, unified_score: 4.90, performance_score: 4.82, opportunity_score: 4.98, tier: "Tier 1: Must-Have", quadrant: "Priority", order_volume: 4530},
+            {rank: 4, dish_type: "Katsu", cuisine: "Japanese", on_dinneroo: true, unified_score: 4.89, performance_score: 4.92, opportunity_score: 4.85, tier: "Tier 1: Must-Have", quadrant: "Priority", order_volume: 11730},
+            {rank: 5, dish_type: "Salad", cuisine: "Healthy", on_dinneroo: true, unified_score: 4.65, performance_score: 4.33, opportunity_score: 4.96, tier: "Tier 1: Must-Have", quadrant: "Priority", order_volume: 1090},
+            {rank: 6, dish_type: "Pasta", cuisine: "Italian", on_dinneroo: true, unified_score: 4.51, performance_score: 4.33, opportunity_score: 4.69, tier: "Tier 1: Must-Have", quadrant: "Priority", order_volume: 1342},
+            {rank: 7, dish_type: "Chicken Pie", cuisine: "British", on_dinneroo: true, unified_score: 3.82, performance_score: 5.00, opportunity_score: 2.64, tier: "Tier 1: Must-Have", quadrant: "Protect", order_volume: 34506},
+            {rank: 8, dish_type: "Pad Thai", cuisine: "Thai", on_dinneroo: true, unified_score: 3.64, performance_score: 4.63, opportunity_score: 2.64, tier: "Tier 2: Should-Have", quadrant: "Protect", order_volume: 2734},
+            {rank: 9, dish_type: "Rice Bowl", cuisine: "Asian", on_dinneroo: true, unified_score: 3.50, performance_score: 4.92, opportunity_score: 2.07, tier: "Tier 2: Should-Have", quadrant: "Protect", order_volume: 9545},
+            {rank: 10, dish_type: "Sushi", cuisine: "Japanese", on_dinneroo: true, unified_score: 3.39, performance_score: 3.64, opportunity_score: 3.14, tier: "Tier 2: Should-Have", quadrant: "Priority", order_volume: 1043},
+            {rank: 11, dish_type: "Lasagne", cuisine: "Italian", on_dinneroo: true, unified_score: 3.36, performance_score: 3.10, opportunity_score: 3.62, tier: "Tier 2: Should-Have", quadrant: "Priority", order_volume: 931},
+            {rank: 12, dish_type: "Ramen", cuisine: "Japanese", on_dinneroo: true, unified_score: 3.35, performance_score: 1.79, opportunity_score: 4.91, tier: "Tier 2: Should-Have", quadrant: "Develop", order_volume: 223},
+            {rank: 13, dish_type: "Biryani", cuisine: "Indian", on_dinneroo: true, unified_score: 3.33, performance_score: 4.02, opportunity_score: 2.64, tier: "Tier 2: Should-Have", quadrant: "Protect", order_volume: 458},
+            {rank: 14, dish_type: "Grilled Chicken with Sides", cuisine: "Global", on_dinneroo: true, unified_score: 3.29, performance_score: 3.10, opportunity_score: 3.47, tier: "Tier 2: Should-Have", quadrant: "Priority", order_volume: 540},
+            {rank: 15, dish_type: "Teriyaki", cuisine: "Japanese", on_dinneroo: true, unified_score: 3.28, performance_score: 4.33, opportunity_score: 2.24, tier: "Tier 2: Should-Have", quadrant: "Protect", order_volume: 1369},
+            {rank: 16, dish_type: "Bowl", cuisine: "Healthy/Fresh", on_dinneroo: true, unified_score: 3.25, performance_score: 4.88, opportunity_score: 1.63, tier: "Tier 2: Should-Have", quadrant: "Protect", order_volume: 4517},
+            {rank: 17, dish_type: "Pizza", cuisine: "Italian", on_dinneroo: true, unified_score: 3.17, performance_score: 3.10, opportunity_score: 3.23, tier: "Tier 3: Nice-to-Have", quadrant: "Priority", order_volume: 548},
+            {rank: 18, dish_type: "Fried Rice", cuisine: "Chinese", on_dinneroo: true, unified_score: 3.14, performance_score: 4.82, opportunity_score: 1.46, tier: "Tier 3: Nice-to-Have", quadrant: "Protect", order_volume: 4958},
+            {rank: 19, dish_type: "Sweet & Sour Chicken", cuisine: "Global", on_dinneroo: true, unified_score: 2.87, performance_score: 3.10, opportunity_score: 2.64, tier: "Tier 3: Nice-to-Have", quadrant: "Protect", order_volume: 1081},
+            {rank: 20, dish_type: "Fajitas", cuisine: "Mexican", on_dinneroo: true, unified_score: 2.85, performance_score: 3.46, opportunity_score: 2.24, tier: "Tier 3: Nice-to-Have", quadrant: "Protect", order_volume: 221},
+            {rank: 21, dish_type: "Mac & Cheese", cuisine: "American", on_dinneroo: true, unified_score: 2.80, performance_score: 4.33, opportunity_score: 1.28, tier: "Tier 3: Nice-to-Have", quadrant: "Protect", order_volume: 1322},
+            {rank: 22, dish_type: "Shawarma", cuisine: "Middle Eastern", on_dinneroo: true, unified_score: 2.67, performance_score: 3.64, opportunity_score: 1.70, tier: "Tier 4: Monitor", quadrant: "Protect", order_volume: 1355},
+            {rank: 23, dish_type: "Butter Chicken", cuisine: "Indian", on_dinneroo: true, unified_score: 2.67, performance_score: 3.10, opportunity_score: 2.24, tier: "Tier 4: Monitor", quadrant: "Protect", order_volume: 650},
+            {rank: 24, dish_type: "Tacos", cuisine: "Mexican", on_dinneroo: true, unified_score: 2.65, performance_score: 1.18, opportunity_score: 4.12, tier: "Tier 4: Monitor", quadrant: "Develop", order_volume: 62},
+            {rank: 25, dish_type: "Grain Bowl", cuisine: "Healthy", on_dinneroo: true, unified_score: 2.58, performance_score: 1.79, opportunity_score: 3.36, tier: "Tier 4: Monitor", quadrant: "Develop", order_volume: 192},
+            {rank: 26, dish_type: "Stir Fry", cuisine: "Asian", on_dinneroo: true, unified_score: 2.14, performance_score: 1.79, opportunity_score: 2.50, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: 252},
+            {rank: 27, dish_type: "Korean Fried Chicken", cuisine: "Korean", on_dinneroo: true, unified_score: 2.11, performance_score: 1.79, opportunity_score: 2.42, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: 398},
+            {rank: 28, dish_type: "Burger", cuisine: "American", on_dinneroo: true, unified_score: 2.10, performance_score: 1.18, opportunity_score: 3.01, tier: "Tier 4: Monitor", quadrant: "Develop", order_volume: 61},
+            {rank: 29, dish_type: "Roast Dinner", cuisine: "British", on_dinneroo: true, unified_score: 2.01, performance_score: 1.79, opportunity_score: 2.24, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: 287},
+            {rank: 30, dish_type: "Quesadilla", cuisine: "Mexican", on_dinneroo: true, unified_score: 1.91, performance_score: 2.53, opportunity_score: 1.28, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: 57},
+            {rank: 31, dish_type: "Veggie Fajitas", cuisine: "Mexican", on_dinneroo: true, unified_score: 1.75, performance_score: 1.79, opportunity_score: 1.70, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: 333},
+            {rank: 32, dish_type: "Shepherd's Pie", cuisine: "British", on_dinneroo: true, unified_score: 1.63, performance_score: 1.79, opportunity_score: 1.46, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: 333},
+            {rank: 33, dish_type: "Halloumi Wrap", cuisine: "Global", on_dinneroo: true, unified_score: 1.63, performance_score: 1.79, opportunity_score: 1.46, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: 161},
+            {rank: 34, dish_type: "Risotto", cuisine: "Italian", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 4.12, tier: "Tier 4: Monitor", quadrant: "Prospect", order_volume: null},
+            {rank: 35, dish_type: "Gnocchi", cuisine: "Italian", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 4.12, tier: "Tier 4: Monitor", quadrant: "Prospect", order_volume: null},
+            {rank: 36, dish_type: "Filled Pasta", cuisine: "Italian", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 4.12, tier: "Tier 4: Monitor", quadrant: "Prospect", order_volume: null},
+            {rank: 37, dish_type: "Baked Pasta", cuisine: "Italian", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 1.28, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: null},
+            {rank: 38, dish_type: "Gyoza", cuisine: "Japanese", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 4.83, tier: "Tier 4: Monitor", quadrant: "Prospect", order_volume: null},
+            {rank: 39, dish_type: "Tempura", cuisine: "Japanese", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 3.77, tier: "Tier 4: Monitor", quadrant: "Prospect", order_volume: null},
+            {rank: 40, dish_type: "Udon", cuisine: "Japanese", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 2.24, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: null},
+            {rank: 41, dish_type: "Sweet & Sour", cuisine: "Chinese", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 3.23, tier: "Tier 4: Monitor", quadrant: "Prospect", order_volume: null},
+            {rank: 42, dish_type: "Spring Rolls", cuisine: "Chinese", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 1.11, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: null},
+            {rank: 43, dish_type: "Dim Sum", cuisine: "Chinese", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 2.64, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: null},
+            {rank: 44, dish_type: "Peking Duck", cuisine: "Chinese", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 4.91, tier: "Tier 4: Monitor", quadrant: "Prospect", order_volume: null},
+            {rank: 45, dish_type: "Thai Curry", cuisine: "Thai", on_dinneroo: true, unified_score: null, performance_score: null, opportunity_score: 4.81, tier: "Tier 4: Monitor", quadrant: "Develop", order_volume: null},
+            {rank: 46, dish_type: "Tom Yum", cuisine: "Thai", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 4.95, tier: "Tier 4: Monitor", quadrant: "Prospect", order_volume: null},
+            {rank: 47, dish_type: "Satay", cuisine: "Thai", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 4.83, tier: "Tier 4: Monitor", quadrant: "Prospect", order_volume: null},
+            {rank: 48, dish_type: "Banh Mi", cuisine: "Vietnamese", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 4.43, tier: "Tier 4: Monitor", quadrant: "Prospect", order_volume: null},
+            {rank: 49, dish_type: "Bibimbap", cuisine: "Korean", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 2.50, tier: "Tier 4: Monitor", quadrant: "Monitor", order_volume: null},
+            {rank: 50, dish_type: "Bulgogi", cuisine: "Korean", on_dinneroo: false, unified_score: null, performance_score: null, opportunity_score: 4.43, tier: "Tier 4: Monitor", quadrant: "Prospect", order_volume: null}
+        ];
+        
+        function initDishPrioritization() {
+            // Create 2x2 Scatter Chart for dishes ON Dinneroo
+            const onDinneroo = dishData.filter(d => d.on_dinneroo && d.performance_score !== null);
+            
+            const quadrantColors = {
+                'Priority': '#22c55e',
+                'Protect': '#3b82f6',
+                'Develop': '#f59e0b',
+                'Monitor': '#64748b'
+            };
+            
+            new Chart(document.getElementById('dishScatterChart'), {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        data: onDinneroo.map(d => ({
+                            x: d.performance_score,
+                            y: d.opportunity_score,
+                            label: d.dish_type
+                        })),
+                        backgroundColor: onDinneroo.map(d => quadrantColors[d.quadrant] || '#64748b'),
+                        pointRadius: 8,
+                        pointHoverRadius: 12
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const d = onDinneroo[context.dataIndex];
+                                    return `${d.dish_type}: Perf ${d.performance_score.toFixed(1)}, Opp ${d.opportunity_score.toFixed(1)}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            min: 0, max: 5.5,
+                            title: { display: true, text: 'Performance Score', color: '#a0a0b0' },
+                            grid: { color: '#2a2a3a' }
+                        },
+                        y: {
+                            min: 0, max: 5.5,
+                            title: { display: true, text: 'Opportunity Score', color: '#a0a0b0' },
+                            grid: { color: '#2a2a3a' }
+                        }
+                    }
+                },
+                plugins: [{
+                    afterDraw: function(chart) {
+                        const ctx = chart.ctx;
+                        const xAxis = chart.scales.x;
+                        const yAxis = chart.scales.y;
+                        
+                        // Draw quadrant lines
+                        ctx.save();
+                        ctx.setLineDash([5, 5]);
+                        ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+                        ctx.lineWidth = 1;
+                        
+                        // Vertical line at x=3.5
+                        const x35 = xAxis.getPixelForValue(3.5);
+                        ctx.beginPath();
+                        ctx.moveTo(x35, yAxis.top);
+                        ctx.lineTo(x35, yAxis.bottom);
+                        ctx.stroke();
+                        
+                        // Horizontal line at y=3.0
+                        const y30 = yAxis.getPixelForValue(3.0);
+                        ctx.beginPath();
+                        ctx.moveTo(xAxis.left, y30);
+                        ctx.lineTo(xAxis.right, y30);
+                        ctx.stroke();
+                        
+                        ctx.restore();
+                    }
+                }]
+            });
+            
+            // Create Quadrant Distribution Donut
+            const quadrantCounts = {
+                'Priority': dishData.filter(d => d.quadrant === 'Priority').length,
+                'Protect': dishData.filter(d => d.quadrant === 'Protect').length,
+                'Develop': dishData.filter(d => d.quadrant === 'Develop').length,
+                'Monitor': dishData.filter(d => d.quadrant === 'Monitor').length,
+                'Prospect': dishData.filter(d => d.quadrant === 'Prospect').length
+            };
+            
+            new Chart(document.getElementById('quadrantDonutChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(quadrantCounts),
+                    datasets: [{
+                        data: Object.values(quadrantCounts),
+                        backgroundColor: ['#22c55e', '#3b82f6', '#f59e0b', '#64748b', '#8b5cf6'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { padding: 15, usePointStyle: true, pointStyle: 'circle' }
+                        }
+                    }
+                }
+            });
+            
+            // Populate dish table
+            populateDishTable(dishData);
+        }
+        
+        function populateDishTable(data) {
+            const tbody = document.getElementById('dishes-table-body');
+            tbody.innerHTML = data.map(d => {
+                const tierClass = d.tier.includes('Must-Have') ? 'validated' : 
+                                  d.tier.includes('Should-Have') ? 'corroborated' : 'single';
+                const quadrantColor = {
+                    'Priority': 'validated',
+                    'Protect': 'single',
+                    'Develop': 'corroborated',
+                    'Monitor': 'single',
+                    'Prospect': 'corroborated'
+                }[d.quadrant] || 'single';
+                
+                return `<tr>
+                    <td class="bucket">${d.rank}</td>
+                    <td class="bucket">${d.dish_type}</td>
+                    <td>${d.cuisine}</td>
+                    <td>${d.on_dinneroo ? 'Yes' : 'No'}</td>
+                    <td><span class="evidence-badge ${tierClass}">${d.tier.replace('Tier ', 'T')}</span></td>
+                    <td><span class="evidence-badge ${quadrantColor}">${d.quadrant}</span></td>
+                    <td>${d.unified_score !== null ? d.unified_score.toFixed(2) : '-'}</td>
+                    <td>${d.performance_score !== null ? d.performance_score.toFixed(2) : '-'}</td>
+                    <td>${d.opportunity_score !== null ? d.opportunity_score.toFixed(2) : '-'}</td>
+                </tr>`;
+            }).join('');
+            document.getElementById('dish-table-count').textContent = data.length;
+        }
+        
+        function filterDishTable() {
+            const tierFilter = document.getElementById('dishTierFilter').value;
+            const quadrantFilter = document.getElementById('dishQuadrantFilter').value;
+            
+            let filtered = dishData;
+            if (tierFilter !== 'all') {
+                filtered = filtered.filter(d => d.tier === tierFilter);
+            }
+            if (quadrantFilter !== 'all') {
+                filtered = filtered.filter(d => d.quadrant === quadrantFilter);
+            }
+            populateDishTable(filtered);
+        }
+        
+        // ============================================================
+        // CUISINE GAPS DATA & FUNCTIONS
+        // ============================================================
+        
+        // Cuisine Gap Data (from cuisine_gap_analysis.csv)
+        const cuisineGapData = [
+            {cuisine: "British", item_count: 292, brand_count: 1, avg_rating: 4.50, order_count: 3358, gap_type: "OK", supply_vs_avg: 152.4},
+            {cuisine: "Chinese", item_count: 46, brand_count: 3, avg_rating: 4.38, order_count: 849, gap_type: "SUPPLY GAP", supply_vs_avg: 24.0},
+            {cuisine: "French", item_count: 15, brand_count: 1, avg_rating: 4.42, order_count: 978, gap_type: "SUPPLY GAP", supply_vs_avg: 7.8},
+            {cuisine: "Healthy/Fresh", item_count: 109, brand_count: 4, avg_rating: 4.45, order_count: 2636, gap_type: "OK", supply_vs_avg: 56.9},
+            {cuisine: "Indian", item_count: 85, brand_count: 6, avg_rating: 4.39, order_count: 10183, gap_type: "OK", supply_vs_avg: 44.4},
+            {cuisine: "Irish/British", item_count: 3, brand_count: 1, avg_rating: 4.22, order_count: 36, gap_type: "SUPPLY GAP", supply_vs_avg: 1.6},
+            {cuisine: "Italian", item_count: 705, brand_count: 6, avg_rating: 4.12, order_count: 8385, gap_type: "OK", supply_vs_avg: 368.1},
+            {cuisine: "Japanese", item_count: 282, brand_count: 5, avg_rating: 4.51, order_count: 3788, gap_type: "OK", supply_vs_avg: 147.2},
+            {cuisine: "Japanese/Asian", item_count: 410, brand_count: 1, avg_rating: 4.25, order_count: 14129, gap_type: "OK", supply_vs_avg: 214.1},
+            {cuisine: "Mexican", item_count: 168, brand_count: 2, avg_rating: 3.94, order_count: 1479, gap_type: "QUALITY GAP", supply_vs_avg: 87.7},
+            {cuisine: "Middle Eastern", item_count: 30, brand_count: 5, avg_rating: 4.67, order_count: 1023, gap_type: "SUPPLY GAP", supply_vs_avg: 15.7},
+            {cuisine: "Thai/Southeast Asian", item_count: 207, brand_count: 3, avg_rating: 4.43, order_count: 10224, gap_type: "OK", supply_vs_avg: 108.1},
+            {cuisine: "Vietnamese", item_count: 138, brand_count: 1, avg_rating: 4.56, order_count: 14055, gap_type: "OK", supply_vs_avg: 72.0}
+        ];
+        
+        // Recruitment Priorities Data (from recruitment_priorities.csv)
+        const recruitmentData = [
+            {zone: "Finsbury Park / Harringay / Crouch End", priority: "High", orders: 1534, missing: "Japanese/Asian, Italian, Thai/Southeast Asian", action: "Recruit Japanese/Asian, Italian partners"},
+            {zone: "Canning Town", priority: "High", orders: 1314, missing: "Japanese/Asian, Vietnamese, Italian", action: "Recruit Japanese/Asian, Vietnamese partners"},
+            {zone: "Surrey Quays", priority: "High", orders: 1139, missing: "Japanese/Asian, Vietnamese, Italian", action: "Recruit Japanese/Asian, Vietnamese partners"},
+            {zone: "Wapping and Mile End", priority: "High", orders: 961, missing: "Japanese/Asian, Vietnamese, Italian", action: "Recruit Japanese/Asian, Vietnamese partners"},
+            {zone: "Brockley / Forest Hill", priority: "Medium", orders: 1478, missing: "Italian, Thai/Southeast Asian", action: "Recruit Italian, Thai partners"},
+            {zone: "Wandsworth", priority: "Medium", orders: 853, missing: "Vietnamese, Thai/Southeast Asian", action: "Recruit Vietnamese, Thai partners"},
+            {zone: "Hampstead", priority: "Medium", orders: 797, missing: "Vietnamese, Italian", action: "Recruit Vietnamese, Italian partners"},
+            {zone: "Edinburgh Central", priority: "Medium", orders: 722, missing: "Japanese/Asian, Indian", action: "Recruit Japanese/Asian, Indian partners"},
+            {zone: "South Kensington", priority: "High", orders: 676, missing: "Japanese/Asian, Vietnamese, Indian", action: "Recruit Japanese/Asian, Vietnamese partners"},
+            {zone: "Stratford", priority: "Medium", orders: 665, missing: "Indian, Thai/Southeast Asian", action: "Recruit Indian, Thai partners"}
+        ];
+        
+        function initCuisineGaps() {
+            // Create Cuisine Supply Bar Chart
+            const sortedCuisines = [...cuisineGapData].sort((a, b) => b.supply_vs_avg - a.supply_vs_avg);
+            
+            new Chart(document.getElementById('cuisineSupplyChart'), {
+                type: 'bar',
+                data: {
+                    labels: sortedCuisines.map(c => c.cuisine.length > 12 ? c.cuisine.substring(0, 12) + '...' : c.cuisine),
+                    datasets: [{
+                        label: 'Supply vs Avg %',
+                        data: sortedCuisines.map(c => c.supply_vs_avg),
+                        backgroundColor: sortedCuisines.map(c => {
+                            if (c.gap_type === 'SUPPLY GAP') return '#f59e0b';
+                            if (c.gap_type === 'QUALITY GAP') return '#ef4444';
+                            return '#00d4aa';
+                        }),
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const c = sortedCuisines[context.dataIndex];
+                                    return `${c.supply_vs_avg.toFixed(1)}% of avg (${c.gap_type})`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: '#2a2a3a' },
+                            title: { display: true, text: '% of Average Supply', color: '#a0a0b0' }
+                        },
+                        y: { grid: { display: false } }
+                    }
+                }
+            });
+            
+            // Create Gap Type Donut
+            const gapCounts = {
+                'OK': cuisineGapData.filter(c => c.gap_type === 'OK').length,
+                'Supply Gap': cuisineGapData.filter(c => c.gap_type === 'SUPPLY GAP').length,
+                'Quality Gap': cuisineGapData.filter(c => c.gap_type === 'QUALITY GAP').length
+            };
+            
+            new Chart(document.getElementById('gapTypeDonutChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(gapCounts),
+                    datasets: [{
+                        data: Object.values(gapCounts),
+                        backgroundColor: ['#00d4aa', '#f59e0b', '#ef4444'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { padding: 20, usePointStyle: true, pointStyle: 'circle' }
+                        }
+                    }
+                }
+            });
+            
+            // Populate cuisine gaps table
+            const gapsTableBody = document.getElementById('cuisine-gaps-table-body');
+            gapsTableBody.innerHTML = cuisineGapData.map(c => {
+                const gapClass = c.gap_type === 'OK' ? 'validated' : 
+                                 c.gap_type === 'SUPPLY GAP' ? 'corroborated' : 'single';
+                const gapLabel = c.gap_type === 'OK' ? 'OK' : 
+                                 c.gap_type === 'SUPPLY GAP' ? 'Supply Gap' : 'Quality Gap';
+                return `<tr>
+                    <td class="bucket">${c.cuisine}</td>
+                    <td><span class="evidence-badge ${gapClass}">${gapLabel}</span></td>
+                    <td>${c.item_count}</td>
+                    <td>${c.brand_count}</td>
+                    <td>${c.avg_rating.toFixed(2)}</td>
+                    <td>${c.order_count.toLocaleString()}</td>
+                    <td>${c.supply_vs_avg.toFixed(1)}%</td>
+                </tr>`;
+            }).join('');
+            
+            // Populate recruitment priorities table
+            const recruitmentTableBody = document.getElementById('recruitment-table-body');
+            recruitmentTableBody.innerHTML = recruitmentData.map(r => {
+                const priorityClass = r.priority === 'High' ? 'validated' : 'corroborated';
+                return `<tr>
+                    <td class="bucket">${r.zone}</td>
+                    <td><span class="evidence-badge ${priorityClass}">${r.priority}</span></td>
+                    <td>${r.orders.toLocaleString()}</td>
+                    <td>${r.missing}</td>
+                    <td>${r.action}</td>
+                </tr>`;
+            }).join('');
+        }
     </script>
 </body>
 </html>

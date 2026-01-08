@@ -2,8 +2,10 @@
 
 **For: Product Director**  
 **Date: January 2026**  
-**Data: Fresh Snowflake pull 2026-01-05 (80,724 orders)**  
+**Data: Fresh Snowflake pull 2026-01-07 (82,350 orders)**  
 **Purpose: Phase 2 Recruitment Guidance & MVP Status Evaluation**
+
+> See `config/dashboard_metrics.json` for authoritative data counts with provenance.
 
 ---
 
@@ -23,7 +25,7 @@ Order volume is a survivorship bias metric. We prioritize **repeat rate** and **
 |--------|-------|
 | **Total Zones (3+ partners)** | 116 |
 | **Total Orders** | 80,724 |
-| **MVP Ready** | ~42% |
+| **MVP Ready** | ~16% |
 | **Needs Work** | ~58% |
 
 ---
@@ -238,7 +240,7 @@ These high-scoring dish types need partner recruitment:
 
 **Selection is NOT the issue when:**
 
-1. **90%+ zones meet MVP criteria** (currently ~42%)
+1. **90%+ zones meet MVP criteria** (currently ~16%)
 2. **Repeat rate ≥35%** across all zones
 3. **All 5 core cuisines available** in every zone
 4. **3+ Tier 1 dish types** in every zone
@@ -247,7 +249,7 @@ These high-scoring dish types need partner recruitment:
 ### Current Status
 
 ```
-MVP Progress: ████████░░░░░░░░░░░░ 42%
+MVP Progress: ███░░░░░░░░░░░░░░░░░ 16%
 
 Zones meeting repeat rate threshold:  ~60%
 Zones meeting rating threshold:       95%

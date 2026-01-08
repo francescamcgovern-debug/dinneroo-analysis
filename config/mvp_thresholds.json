@@ -1,12 +1,21 @@
 {
+  "_description": "Business-defined MVP requirements for zone launch readiness. These are TARGETS, not data-driven inflection points.",
+  "_note": "Data-driven inflection points (where metrics improve) are in DATA/3_ANALYSIS/mvp_threshold_discovery.json",
+  "_see_also": "config/dashboard_metrics.json for reconciled counts and threshold comparison",
+  "_source_of_truth": "Anna's categorisations from Dish Analysis Dec-25 - Item Categorisation.csv",
+  
   "mvp_criteria": {
     "cuisines_min": {
       "value": 5,
-      "justification": "Covers diverse family preferences - Italian, Indian, Asian, Chicken, Thai"
+      "justification": "Covers diverse family preferences across Anna's 7 cuisine categories",
+      "data_inflection_point": 3,
+      "data_inflection_note": "Data shows improvement at 3+ cuisines, but 5 is business target"
     },
     "partners_min": {
       "value": 5,
-      "justification": "Provides cuisine redundancy and availability"
+      "justification": "Provides cuisine redundancy and availability",
+      "data_inflection_point": 3,
+      "data_inflection_note": "Data shows +4.5pp repeat rate at 3+ partners, but 5 is business target"
     },
     "dishes_min": {
       "value": 21,
@@ -18,26 +27,100 @@
     },
     "repeat_rate_min": {
       "value": 35,
-      "justification": "Families find value and return - top zones: 40%+"
+      "justification": "Families find value and return - top zones: 40%+",
+      "note": "This is a percentage (35%), not decimal (0.35)"
     }
   },
-  "essential_cuisines": [
-    "Italian",
-    "Indian", 
-    "Japanese/Asian",
-    "Chicken (Grilled)",
-    "Thai/Vietnamese"
-  ],
-  "recommended_cuisines": [
-    "Mexican/Latin",
-    "Burgers",
-    "Mediterranean"
-  ],
-  "tier_1_dishes": [
-    "Pizza",
-    "Pasta",
-    "Tikka Masala",
-    "Teriyaki",
-    "Grilled Chicken"
-  ]
+  
+  "cuisines": {
+    "_note": "Anna's 7 cuisine categories (SOURCE OF TRUTH for zone supply)",
+    "categories": [
+      "Asian",
+      "Italian",
+      "Indian",
+      "Healthy",
+      "Mexican",
+      "Middle Eastern",
+      "British"
+    ],
+    "mapping_notes": {
+      "Asian": "Includes Japanese, Vietnamese, Thai, Chinese, Korean - maps to 'Japanese/Asian', 'Thai/Vietnamese' in older docs",
+      "Healthy": "Includes grain bowls, salads, protein & veg - maps to 'Chicken (Grilled)' for protein focus",
+      "British": "Includes shepherd's pie, roasts, fish & chips"
+    }
+  },
+  
+  "dish_types": {
+    "_note": "Anna's 24 dish types from Item Categorisation (SOURCE OF TRUTH)",
+    "core_drivers": {
+      "_description": "8 dish types that drive performance (high demand + high preference)",
+      "dishes": [
+        "Pho",
+        "South Asian / Indian Curry",
+        "Biryani",
+        "Fried Rice",
+        "Sushi",
+        "Katsu",
+        "Rice Bowl",
+        "Noodles"
+      ]
+    },
+    "preference_drivers": {
+      "_description": "5 dish types with strong consumer preference",
+      "dishes": [
+        "Grain Bowl",
+        "East Asian Curry",
+        "Shepherd's Pie",
+        "Shawarma",
+        "Fajitas"
+      ]
+    },
+    "demand_boosters": {
+      "_description": "2 dish types with high demand but lower preference scores",
+      "dishes": [
+        "Protein & Veg",
+        "Pizza"
+      ]
+    },
+    "deprioritised": {
+      "_description": "Dish types to maintain but not expand",
+      "dishes": [
+        "Pasta",
+        "Lasagne",
+        "Tacos",
+        "Burrito / Burrito Bowl",
+        "Quesadilla",
+        "Nachos",
+        "Chilli",
+        "Poke"
+      ]
+    },
+    "all_dish_types": [
+      "Rice Bowl", "Pasta", "Grain Bowl", "Noodles", "South Asian / Indian Curry",
+      "East Asian Curry", "Katsu", "Biryani", "Pizza", "Fried Rice", "Protein & Veg",
+      "Chilli", "Fajitas", "Lasagne", "Shawarma", "Tacos", "Burrito / Burrito Bowl",
+      "Quesadilla", "Nachos", "Pho", "Poke", "Shepherd's Pie", "Sushi", "Other"
+    ]
+  },
+  
+  "quality_checks": {
+    "_description": "Dish type rankings should NOT mimic these sources",
+    "og_survey_suitability": {
+      "note": "OG Survey measures stated preference, not revealed preference",
+      "issue": "Rankings may reflect familiarity bias, not actual performance"
+    },
+    "live_dinneroo_availability": {
+      "note": "Current supply reflects what we have, not what works best",
+      "issue": "Rankings may reflect partner availability, not customer demand"
+    },
+    "validation": "Quadrant classifications in dish_scoring_anna_aligned.csv combine actual sales + satisfaction + coverage-adjusted metrics"
+  },
+  
+  "_deprecated": {
+    "_note": "These fields are kept for backwards compatibility but should not be used",
+    "essential_cuisines": ["Italian", "Indian", "Japanese/Asian", "Chicken (Grilled)", "Thai/Vietnamese"],
+    "recommended_cuisines": ["Mexican/Latin", "Burgers", "Mediterranean"],
+    "tier_1_dishes": ["Pizza", "Pasta", "Tikka Masala", "Teriyaki", "Grilled Chicken"],
+    "deprecation_reason": "Replaced by Anna's categorisations above - use cuisines.categories and dish_types instead"
+  }
 }

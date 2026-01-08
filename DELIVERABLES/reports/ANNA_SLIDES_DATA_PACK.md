@@ -271,7 +271,7 @@ MVP ZONES OUTPERFORM NON-MVP ZONES BY 2.1x
 │ % Uplift        │ -     │ +115%      │ +2%        │ -           │
 └─────────────────┴───────┴────────────┴────────────┴─────────────┘
 
-KEY FINDING: MVP zones are 42% of zones but generate 61% of orders
+KEY FINDING: MVP zones are 16% of zones (33/201) but generate a disproportionate share of orders
 → Achieving MVP status is the #1 lever for zone performance
 
 Source: zone_mvp_status.csv (n=100 zones with Snowflake order data)
@@ -366,7 +366,7 @@ Of these active zones:
 
 WHY THIS MATTERS:
 • MVP zones generate 2.1x more orders than non-MVP zones (939 vs 437)
-• MVP zones are 42% of tracked zones but capture 61% of orders
+• MVP zones are 16% of live zones (33/201) but capture a disproportionate share of orders
 • Rating is also higher in MVP zones (4.43 vs 4.36)
 → Expanding MVP coverage is the biggest growth lever
 

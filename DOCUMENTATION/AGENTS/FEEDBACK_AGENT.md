@@ -73,7 +73,7 @@ For each category, check the deliverable against the rules below.
 ### Red Flags
 
 - ❌ "80,000 orders" when source shows 80,724
-- ❌ "42% MVP Ready" without calculation method
+- ❌ "X% MVP Ready" without calculation method (actual: 16% = 33/201 zones)
 - ❌ Percentages that don't add to 100% when they should
 - ❌ Rankings that don't match `priority_100_unified.csv`
 
