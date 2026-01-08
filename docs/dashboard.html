@@ -1001,17 +1001,45 @@
         <!-- MVP Thresholds Section -->
         <section id="thresholds" class="section active">
             <div class="section-header">
-                <h2 class="section-title">3 Partners + 3 Cuisines = Zone Success</h2>
-                <p class="section-description">
-                    Data shows clear inflection points: <strong>+4.5pp repeat rate</strong> at 3+ partners, <strong>+4.2pp</strong> at 3+ cuisines. 
-                    Dishes per partner has minimal effect. Based on <strong>197 zones</strong> with orders (Sep-Dec 2025).
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h2 class="section-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Dinneroo Zone Analysis</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem;">82,350 orders · 201 zones · Sep-Dec 2025</p>
+                    
+                    <!-- HERO METRICS -->
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 800px; margin: 0 auto;">
+                        <div style="background: linear-gradient(135deg, var(--success), var(--accent-teal)); padding: 1.25rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: white;">70</div>
+                            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.9);">MVP Ready</div>
+                            <div style="font-size: 0.7rem; color: rgba(255,255,255,0.7);">140% of target</div>
+                        </div>
+                        <div style="background: linear-gradient(135deg, var(--warning), var(--accent-amber)); padding: 1.25rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: white;">31</div>
+                            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.9);">Near MVP</div>
+                            <div style="font-size: 0.7rem; color: rgba(255,255,255,0.7);">1 gap away</div>
+                        </div>
+                        <div style="background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue)); padding: 1.25rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: white;">£25</div>
+                            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.9);">Avg Order</div>
+                            <div style="font-size: 0.7rem; color: rgba(255,255,255,0.7);">Family bundle</div>
+                        </div>
+                        <div style="background: linear-gradient(135deg, var(--accent-teal), var(--success)); padding: 1.25rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: white;">19K</div>
+                            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.9);">Top Dish</div>
+                            <div style="font-size: 0.7rem; color: rgba(255,255,255,0.7);">Katsu orders</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="section-description" style="text-align: center; max-width: 700px; margin: 0 auto 1.5rem;">
+                    <strong>Key Finding:</strong> 3+ partners = +4.5pp repeat rate · 3+ cuisines = +4.2pp · Dishes per partner has minimal effect
                 </p>
             </div>
             
 
             <!-- Zone Count Legend - ADDED BY FEEDBACK FIX -->
             <div class="methodology-note" style="margin-bottom: 1.5rem; background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.3);">
-                <strong style="color: var(--accent-blue);">📊 ZONE COUNT GUIDE</strong>
+                <details style="cursor: pointer;">
+                    <summary style="color: var(--accent-blue); font-weight: 600;">📊 ZONE COUNT GUIDE (click to expand)</summary>
                 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 0.75rem; text-align: center;">
                     <div style="background: var(--bg-card); padding: 0.75rem; border-radius: 0.5rem;">
                         <div style="font-size: 1.5rem; font-weight: 700;">1,306</div>
@@ -1034,16 +1062,14 @@
                         <div style="font-size: 0.65rem; color: var(--text-muted);">≥50 orders for stats</div>
                     </div>
                 </div>
+                </details>
             </div>
             
             <!-- Role-Based Quick Start - ADDED BY FEEDBACK FIX -->
-            <div class="step-card" style="margin-bottom: 2rem; border-top: 3px solid var(--accent-purple);">
-                <div class="step-header">
-                    <div class="step-number" style="background: var(--accent-purple);">🎯</div>
-                    <div>
-                        <div class="step-title">Quick Start by Role</div>
-                        <div class="step-subtitle">Jump to what matters most for your team</div>
-                    </div>
+            <div style="margin-bottom: 1.5rem; padding: 1rem; background: var(--bg-secondary); border-radius: 0.75rem; border: 1px solid var(--border);">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                    <span style="font-size: 1rem;">🎯</span>
+                    <span style="font-weight: 600; color: var(--text-secondary);">Quick Start by Role</span>
                 </div>
                 <div class="step-content">
                     <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem;">
@@ -1191,8 +1217,14 @@
             
             
             <!-- Data Scope Callout -->
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 2rem 0;">
+            
+            <h3 style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem; font-weight: 600;">
+                📊 Evidence: How We Know This
+            </h3>
+            
             <div class="methodology-note" style="margin-bottom: 2rem; background: var(--accent-blue); background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.3);">
-                <strong>📊 Data Scope:</strong> This analysis uses behavioral data from the Dinneroo trial period (Sep-Dec 2025). 
+                <strong>Data Scope:</strong> This analysis uses behavioral data from the Dinneroo trial period (Sep-Dec 2025). 
                 Anna's supply data shows 434 zones with partners configured, but only 201 generated orders during the trial. 
                 The remaining 233 zones are ready for activation as AMs onboard new sites.
             </div>
@@ -1289,11 +1321,11 @@
             
             
             <!-- Interactive Threshold Simulator -->
-            <div class="step-card" style="margin-bottom: 2rem; border-top: 3px solid var(--accent-pink);">
-                <div class="step-header">
+            <div class="step-card" style="margin-bottom: 2rem; border-top: 3px solid var(--accent-pink); opacity: 0.9;">
+                <div class="step-header" style="cursor: pointer;" onclick="this.parentElement.querySelector('.step-content').classList.toggle('collapsed')">
                     <div class="step-number" style="background: var(--accent-pink);">🎚️</div>
                     <div>
-                        <div class="step-title">Threshold Simulator</div>
+                        <div class="step-title">Threshold Simulator <span style="font-size: 0.7rem; color: var(--text-muted);">(Interactive)</span></div>
                         <div class="step-subtitle">Explore cuisine threshold impact on MVP zone count</div>
                     </div>
                 </div>
@@ -1586,14 +1618,30 @@
         <!-- Zones Section -->
         <section id="zones" class="section">
             <div class="section-header">
-                <h2 class="section-title">Zone Health & MVP Status</h2>
-                <p class="section-description">
-                    Track zone readiness across <strong>201 zones with orders</strong>. 
-                    <br><br>
-                    <strong>MVP Ready</strong> = 5+ partners, 5+ cuisines, 4.0+ rating
-                    <br>
-                    <strong>Health Score</strong> = Weighted composite (40% orders, 30% rating, 20% repeat rate, 10% cuisine coverage). Higher = better performing.
-                </p>
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 1rem;">Zone Health & MVP Status</h2>
+                    
+                    <!-- Zone Hero Stats -->
+                    <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--success);">70</div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">MVP Ready</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--warning);">31</div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">Near MVP</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--text-muted);">100</div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary);">Developing</div>
+                        </div>
+                    </div>
+                    
+                    <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                        <strong>MVP Ready</strong> = 5+ partners, 5+ cuisines, 4.0+ rating · 
+                        <strong>Health Score</strong> = Orders (40%) + Rating (30%) + Repeat (20%) + Cuisines (10%)
+                    </p>
+                </div>
             </div>
             
             
@@ -1888,11 +1936,15 @@
         <!-- Dishes Section -->
         <section id="dishes" class="section">
             <div class="section-header">
-                <h2 class="section-title">Dish Strategy</h2>
-                <p class="section-description">
-                    <strong style="color: var(--accent-teal); font-size: 1.1rem;">5 dishes drive 70% of orders.</strong> 
-                    Focus on protecting winners and filling gaps.
-                </p>
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 0.5rem;">Dish Strategy</h2>
+                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--accent-teal); margin-bottom: 0.5rem;">
+                        5 dishes = 81% of orders
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                        Katsu · Noodles · Curry · Fried Rice · Pho
+                    </p>
+                </div>
             </div>
             
             <!-- THE STORY: Three Key Insights -->
@@ -2291,7 +2343,12 @@
         <!-- Cuisines Section -->
         <section id="gaps" class="section">
             <div class="section-header">
-                <h2 class="section-title">Cuisines & Recruitment Priorities</h2>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 0.5rem;">Cuisines & Gaps</h2>
+                    <p style="font-size: 1.25rem; color: var(--accent-purple);">
+                        <strong>Core 7:</strong> Asian · Italian · Indian · Healthy · Mexican · Middle Eastern · British
+                    </p>
+                </div>
                 <p class="section-description">
                     Identify missing cuisines and prioritize partner recruitment. 
                     <strong>Supply Gaps</strong> need new partners; <strong>Quality Gaps</strong> need better partners.
@@ -2587,7 +2644,12 @@
         <!-- Partners Section -->
         <section id="partners" class="section">
             <div class="section-header">
-                <h2 class="section-title">Partner Analysis</h2>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 0.5rem;">Partner Analysis</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                        <strong>40 partners</strong> across <strong>756 sites</strong> · Top 3 drive majority of volume
+                    </p>
+                </div>
                 <p class="section-description">
                     Which partners fill which gaps? Track partner coverage, identify recruitment opportunities, and prioritize expansion.
                 </p>
@@ -2742,7 +2804,12 @@
         
         <section id="methodology" class="section">
             <div class="section-header">
-                <h2 class="section-title">Methodology</h2>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-secondary);">📚 Reference: Methodology</h2>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        Data sources, sample sizes, and definitions for transparency
+                    </p>
+                </div>
                 <p class="section-description">
                     How we derived MVP thresholds from data. All analysis is reproducible from source files.
                 </p>
