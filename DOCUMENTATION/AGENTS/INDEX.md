@@ -184,6 +184,15 @@ All agents should read these when needed:
 | Repeat Rate | ≥35% | Outcome |
 | Rating | ≥4.0 | Outcome |
 
+### MVP Threshold Documentation
+
+| Resource | Purpose |
+|----------|---------|
+| `config/mvp_thresholds.json` | Business MVP requirements (targets) |
+| `DATA/3_ANALYSIS/mvp_threshold_discovery.json` | Data-driven inflection points |
+| `config/dashboard_metrics.json` | Reconciled metrics + data flow documentation |
+| `docs/data/zone_mvp_status.json` | Established MVP calculations (201 live zones) |
+
 ### Evidence Levels
 
 | Level | Symbol | Use For |

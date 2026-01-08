@@ -42,6 +42,10 @@ Before reporting ANY finding, verify:
 | Data sources | `DOCUMENTATION/SHARED/05_DATA_SOURCES_INVENTORY.md` |
 | Quality standards | `DOCUMENTATION/SHARED/04_QUALITY_STANDARDS.md` |
 | Definitions | `DOCUMENTATION/SHARED/03_DEFINITIONS.md` |
+| MVP thresholds (business) | `config/mvp_thresholds.json` |
+| MVP inflection analysis | `DATA/3_ANALYSIS/mvp_threshold_discovery.json` |
+| Dashboard metrics | `config/dashboard_metrics.json` |
+| Zone MVP status | `docs/data/zone_mvp_status.json` |
 
 ## Critical Rules
 
@@ -50,6 +54,8 @@ Before reporting ANY finding, verify:
 3. **Preference metrics** (what customers want): Use surveys WITH triangulation
 4. **Never weight any single source > 50%**
 5. **Never use OG Survey alone** for dish recommendations
+6. **Zone counts must specify type**: 1,306 = total zones, 434 = supply zones, 201 = live zones with orders
+7. **MVP status**: Use established calculations from `docs/data/zone_mvp_status.json` - DO NOT recalculate
 
 ---
 

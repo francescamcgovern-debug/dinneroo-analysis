@@ -158,6 +158,17 @@ b10_rate = df['has_b10_issue'].mean() * 100
 
 ## Zone Metrics
 
+### Zone Counts (Critical Distinction)
+
+| Count | Value | Source | Definition |
+|-------|-------|--------|------------|
+| **Total Zones** | 1,306 | Anna's ground truth | All Deliveroo zones in UK/Ireland |
+| **Supply Zones** | 434 | Anna's ground truth | Zones with Dinneroo partners configured |
+| **Live Zones** | 201 | Snowflake orders | Zones with actual Dinneroo orders during trial |
+| **Analysis Zones** | 197 | MVP threshold analysis | Live zones with sufficient data for statistical analysis |
+
+⚠️ **Always specify which zone count you're using.** "201 zones" = behavioral data. "1,306 zones" = supply data.
+
 ### Zone Health Score Components
 
 | Component | Weight | Source |
@@ -168,14 +179,24 @@ b10_rate = df['has_b10_issue'].mean() * 100
 | Dish Variety | 15% | Anna's zone data |
 | Volume | 10% | Snowflake orders |
 
-### MVP Thresholds
+### MVP Thresholds (Business Targets)
 
-| Criterion | Threshold |
-|-----------|-----------|
-| Repeat Rate | ≥35% |
-| Rating | ≥4.0 |
-| Core Cuisines | 5 of 5 |
-| Partners | ≥5 |
+| Criterion | Threshold | Source |
+|-----------|-----------|--------|
+| Repeat Rate | ≥35% | `config/mvp_thresholds.json` |
+| Rating | ≥4.0 | `config/mvp_thresholds.json` |
+| Core Cuisines | 5 of 7 | `config/mvp_thresholds.json` |
+| Partners | ≥5 | `config/mvp_thresholds.json` |
+
+### MVP Inflection Points (Data-Driven)
+
+| Dimension | Inflection | Evidence | Source |
+|-----------|------------|----------|--------|
+| Partners | 3-4 | +4.5pp repeat rate | `mvp_threshold_discovery.json` |
+| Cuisines | 3-4 | +4.2pp repeat rate | `mvp_threshold_discovery.json` |
+| Dishes/Partner | 4-5 | +12.1pp rating | `mvp_threshold_discovery.json` |
+
+**Note:** Inflection points show where metrics improve; business targets are higher to ensure redundancy.
 
 ---
 

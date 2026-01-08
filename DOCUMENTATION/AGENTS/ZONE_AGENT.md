@@ -133,11 +133,22 @@ For each zone not at MVP:
 |------|---------|
 | `DATA/3_ANALYSIS/anna_zone_dish_counts.csv` | **Ground truth - 1,306 zones** (ALWAYS use for supply) |
 | `DATA/3_ANALYSIS/zone_gap_report.csv` | Gap analysis for ALL 1,306 zones |
+| `DATA/3_ANALYSIS/mvp_threshold_discovery.json` | **MVP inflection point analysis** (data-driven thresholds) |
 | `docs/data/zone_mvp_status.json` | **Established MVP calculations for 201 live zones** (DO NOT recalculate) |
 | `docs/data/zone_analysis.json` | Combined dashboard data (all 1,306 zones) |
-| `config/mvp_thresholds.json` | Threshold definitions |
+| `config/mvp_thresholds.json` | **Business MVP requirements** (targets, not inflection points) |
+| `config/dashboard_metrics.json` | Reconciled metrics with provenance and data flow documentation |
 | `scripts/generate_zone_dashboard_data.py` | Script to regenerate zone_analysis.json |
 | `DELIVERABLES/reports/mvp_zone_report_product_director.md` | Example output |
+
+### MVP Threshold Types (Critical Distinction)
+
+| Type | File | Purpose |
+|------|------|---------|
+| **Inflection Points** | `mvp_threshold_discovery.json` | Data-driven: where metrics actually improve |
+| **Business Targets** | `mvp_thresholds.json` | Business-defined: minimum for zone launch |
+
+**Example:** Data shows repeat rate improves at 3+ partners (inflection), but business target is 5+ partners (redundancy goal).
 
 ## Critical: Zone Coverage
 

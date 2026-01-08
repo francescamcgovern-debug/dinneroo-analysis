@@ -165,6 +165,54 @@
       "resolution": "434 = supply zones with partners; 201 = behavioral zones with orders; 150 was incorrect query",
       "action": "Use 434 for supply, 201 for behavioral, always specify which"
     }
+  },
+  
+  "mvp_dashboard_data_flow": {
+    "description": "How MVP data flows from analysis to dashboard display",
+    
+    "source_files": {
+      "inflection_analysis": {
+        "file": "DATA/3_ANALYSIS/mvp_threshold_discovery.json",
+        "purpose": "Hierarchical analysis showing where metrics improve",
+        "generated_by": "scripts/phase2_analysis/analyze_mvp_thresholds.py"
+      },
+      "business_thresholds": {
+        "file": "config/mvp_thresholds.json",
+        "purpose": "Business-defined MVP requirements for zone launch",
+        "maintained_by": "Manual - product team decisions"
+      },
+      "zone_mvp_status": {
+        "file": "docs/data/zone_mvp_status.json",
+        "purpose": "Established MVP calculations for 201 live zones",
+        "generated_by": "scripts/generate_zone_dashboard_data.py"
+      }
+    },
+    
+    "dashboard_sections": {
+      "mvp_thresholds_tab": {
+        "displays": ["Inflection point charts", "Business vs data thresholds", "Metric deltas by bucket"],
+        "data_source": "mvp_threshold_discovery.json embedded as JSON"
+      },
+      "zone_analysis_tab": {
+        "displays": ["MVP Ready/Near MVP/Developing counts", "Zone health scores", "Cuisine coverage"],
+        "data_source": "zone_mvp_status.json + zone_analysis.json"
+      }
+    },
+    
+    "update_workflow": [
+      "1. Run Snowflake refresh: python3 scripts/refresh_snowflake_data.py",
+      "2. Regenerate MVP analysis: python3 scripts/phase2_analysis/analyze_mvp_thresholds.py",
+      "3. Update zone dashboard data: python3 scripts/generate_zone_dashboard_data.py",
+      "4. Prepare dashboard data: python3 scripts/prepare_dashboard_data.py",
+      "5. Regenerate dashboard: python3 scripts/generate_dashboard.py"
+    ],
+    
+    "critical_rules": [
+      "DO NOT recalculate MVP status - use established calculations from zone_mvp_status.json",
+      "Inflection points (data-driven) are different from business thresholds (targets)",
+      "Always show sample sizes (n=) for all metrics",
+      "Dashboard must work offline except for CDN dependencies"
+    ]
   }
 }
 

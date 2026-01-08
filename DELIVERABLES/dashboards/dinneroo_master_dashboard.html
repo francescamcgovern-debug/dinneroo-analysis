@@ -640,6 +640,299 @@
                 text-align: center;
             }
         }
+        
+        /* Zone Detail Panel */
+        .zone-detail-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 200;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .zone-detail-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .zone-detail-panel {
+            position: fixed;
+            top: 0;
+            right: -520px;
+            width: 520px;
+            height: 100vh;
+            background: var(--bg-secondary);
+            border-left: 1px solid var(--border);
+            z-index: 250;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+        
+        .zone-detail-panel.open {
+            right: 0;
+        }
+        
+        .zone-detail-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: sticky;
+            top: 0;
+            background: var(--bg-secondary);
+            z-index: 10;
+        }
+        
+        .zone-detail-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.75rem;
+            cursor: pointer;
+            padding: 0.25rem;
+            line-height: 1;
+        }
+        
+        .zone-detail-close:hover {
+            color: var(--text-primary);
+        }
+        
+        .zone-detail-content {
+            padding: 1.5rem;
+        }
+        
+        .zone-detail-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .zone-detail-section h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Route to MVP Progress */
+        .mvp-progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .mvp-progress-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .mvp-progress-pct {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-teal);
+        }
+        
+        .mvp-progress-bar {
+            width: 100%;
+            height: 12px;
+            background: var(--bg-primary);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+        
+        .mvp-progress-fill {
+            height: 100%;
+            border-radius: 6px;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+            transition: width 0.5s ease;
+        }
+        
+        /* Zone Metrics Grid */
+        .zone-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+        }
+        
+        .zone-metric {
+            background: var(--bg-card);
+            padding: 0.75rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .zone-metric-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-teal);
+        }
+        
+        .zone-metric-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+        
+        /* Coverage Section */
+        .coverage-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .coverage-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .coverage-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        
+        .coverage-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent-teal);
+        }
+        
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+        
+        .coverage-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background: var(--bg-card);
+            border-radius: 6px;
+            font-size: 0.8rem;
+        }
+        
+        .coverage-item.has {
+            border-left: 3px solid var(--accent-teal);
+        }
+        
+        .coverage-item.missing {
+            border-left: 3px solid var(--accent-rose);
+            background: rgba(244, 63, 94, 0.1);
+        }
+        
+        .coverage-item-icon {
+            font-size: 0.75rem;
+        }
+        
+        .coverage-item-name {
+            flex: 1;
+        }
+        
+        .coverage-item-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+        
+        /* Priority Actions */
+        .priority-actions {
+            margin-top: 1.5rem;
+        }
+        
+        .priority-action {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: var(--bg-card);
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            border-left: 3px solid var(--accent-amber);
+        }
+        
+        .priority-action-number {
+            width: 24px;
+            height: 24px;
+            background: var(--accent-amber);
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .priority-action-content {
+            flex: 1;
+        }
+        
+        .priority-action-gap {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .priority-action-text {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .priority-action-impact {
+            font-size: 0.7rem;
+            color: var(--accent-teal);
+            margin-top: 0.25rem;
+        }
+        
+        /* Clickable table rows */
+        .data-table tr.clickable {
+            cursor: pointer;
+        }
+        
+        .data-table tr.clickable:hover {
+            background: var(--bg-card-hover);
+        }
+        
+        /* Progress bar in table */
+        .progress-mini {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .progress-mini-bar {
+            width: 60px;
+            height: 6px;
+            background: var(--bg-primary);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-mini-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: var(--accent-teal);
+        }
+        
+        .progress-mini-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
     </style>
 </head>
 <body>
@@ -1131,7 +1424,7 @@
             <div class="data-table-wrapper">
                 <button class="table-toggle open" onclick="toggleTable('zones-table')">
                     <span>📊</span>
-                    <span>Zone Health Details (<span id="zone-table-count">101</span> zones)</span>
+                    <span>Zone Health Details (<span id="zone-table-count">101</span> zones) - Click a zone for Route to MVP</span>
                     <span class="arrow">▼</span>
                 </button>
                 <div id="zones-table" class="data-table-container open">
@@ -1145,7 +1438,7 @@
                                 <th>Partners</th>
                                 <th>Cuisines</th>
                                 <th>Rating</th>
-                                <th>Score</th>
+                                <th>Progress</th>
                             </tr>
                         </thead>
                         <tbody id="zones-table-body"></tbody>
@@ -1157,8 +1450,9 @@
             <div class="source-attribution" style="margin-top: 2rem;">
                 <h3>Data Sources</h3>
                 <div class="methodology-note">
-                    <strong>Zone Data:</strong> <code>zone_mvp_status.csv</code> (101 zones with orders) and <code>zone_quality_scores.csv</code> (composite scores). 
-                    MVP criteria: 5+ partners, 5+ cuisines, 4.0+ rating.
+                    <strong>Zone Data:</strong> <code>zone_analysis.json</code> (1,306 zones from Anna's ground truth). 
+                    <strong>Cuisines:</strong> Anna's 7 categories (Asian, Italian, Indian, Healthy, Mexican, Middle Eastern, British).
+                    <strong>Core Drivers:</strong> 8 dish types (Pho, Indian Curry, Biryani, Fried Rice, Sushi, Katsu, Rice Bowl, Noodles).
                 </div>
             </div>
         </section>
@@ -2567,6 +2861,258 @@
                 </tr>`;
             }).join('');
         }
+    </script>
+    
+    <!-- Zone Detail Panel -->
+    <div class="zone-detail-overlay" id="zone-detail-overlay" onclick="closeZoneDetail()"></div>
+    <div class="zone-detail-panel" id="zone-detail-panel">
+        <div class="zone-detail-header">
+            <div>
+                <h2 id="detail-zone-name">Zone Name</h2>
+                <span id="detail-zone-region" style="color: var(--text-muted); font-size: 0.85rem;"></span>
+            </div>
+            <button class="zone-detail-close" onclick="closeZoneDetail()">×</button>
+        </div>
+        <div class="zone-detail-content">
+            <!-- Route to MVP Progress -->
+            <div class="zone-detail-section">
+                <div class="mvp-progress-header">
+                    <span class="mvp-progress-title">Route to MVP</span>
+                    <span class="mvp-progress-pct" id="detail-progress-pct">0%</span>
+                </div>
+                <div class="mvp-progress-bar">
+                    <div class="mvp-progress-fill" id="detail-progress-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+            
+            <!-- Key Metrics -->
+            <div class="zone-detail-section">
+                <h4>Key Metrics</h4>
+                <div class="zone-metrics-grid" id="detail-metrics"></div>
+            </div>
+            
+            <!-- Cuisine Coverage (Anna's 7) -->
+            <div class="zone-detail-section coverage-section">
+                <div class="coverage-header">
+                    <span class="coverage-title">Cuisine Coverage</span>
+                    <span class="coverage-count" id="detail-cuisine-count">0/7</span>
+                </div>
+                <div class="coverage-grid" id="detail-cuisine-coverage"></div>
+            </div>
+            
+            <!-- Core Drivers Coverage (8) -->
+            <div class="zone-detail-section coverage-section">
+                <div class="coverage-header">
+                    <span class="coverage-title">Core Drivers</span>
+                    <span class="coverage-count" id="detail-driver-count">0/8</span>
+                </div>
+                <div class="coverage-grid" id="detail-driver-coverage"></div>
+            </div>
+            
+            <!-- Priority Actions -->
+            <div class="zone-detail-section priority-actions">
+                <h4>Priority Actions</h4>
+                <div id="detail-priority-actions"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // ============================================================
+        // ZONE DETAIL PANEL - Load from zone_analysis.json
+        // ============================================================
+        
+        let zoneAnalysisData = null;
+        
+        // Load zone analysis data from JSON
+        async function loadZoneAnalysisData() {
+            try {
+                const response = await fetch('../../docs/data/zone_analysis.json');
+                zoneAnalysisData = await response.json();
+                console.log('Loaded zone analysis data:', zoneAnalysisData.zones.length, 'zones');
+                
+                // Re-render zone table with new data
+                if (zoneAnalysisData && zoneAnalysisData.zones) {
+                    updateZoneTableWithAnalysisData();
+                }
+            } catch (error) {
+                console.error('Error loading zone analysis data:', error);
+            }
+        }
+        
+        function updateZoneTableWithAnalysisData() {
+            // Filter to zones with orders (like the original data)
+            const zonesWithOrders = zoneAnalysisData.zones.filter(z => z.orders && z.orders > 0);
+            
+            // Update KPI counts
+            const mvpReady = zonesWithOrders.filter(z => z.mvp_status === 'MVP Ready').length;
+            const nearMvp = zonesWithOrders.filter(z => z.mvp_status === 'Near MVP').length;
+            const developing = zonesWithOrders.filter(z => z.mvp_status === 'Developing').length;
+            
+            document.getElementById('mvp-ready-count').textContent = mvpReady;
+            document.getElementById('near-mvp-count').textContent = nearMvp;
+            document.getElementById('developing-count').textContent = developing;
+            
+            // Update table
+            populateZoneTableWithChecklist(zonesWithOrders);
+        }
+        
+        function populateZoneTableWithChecklist(data) {
+            const tbody = document.getElementById('zones-table-body');
+            tbody.innerHTML = data.map(z => {
+                const status = z.mvp_status || 'Developing';
+                const statusClass = status === 'MVP Ready' ? 'validated' : 
+                                   (status === 'Near MVP' ? 'corroborated' : 'single');
+                const progress = z.mvp_checklist?.progress?.overall_pct || 0;
+                const progressColor = progress >= 80 ? '#00d4aa' : progress >= 50 ? '#f59e0b' : '#f43f5e';
+                
+                return `<tr class="clickable" onclick="openZoneDetail('${z.zone.replace(/'/g, "\\'")}')">
+                    <td class="bucket">${z.zone}</td>
+                    <td>${z.region}</td>
+                    <td><span class="evidence-badge ${statusClass}">${status}</span></td>
+                    <td>${(z.orders || 0).toLocaleString()}</td>
+                    <td>${z.partners}</td>
+                    <td>${z.cuisines_count}</td>
+                    <td>${z.avg_rating ? z.avg_rating.toFixed(2) : '-'}</td>
+                    <td>
+                        <div class="progress-mini">
+                            <div class="progress-mini-bar">
+                                <div class="progress-mini-fill" style="width: ${progress}%; background: ${progressColor};"></div>
+                            </div>
+                            <span class="progress-mini-text">${progress}%</span>
+                        </div>
+                    </td>
+                </tr>`;
+            }).join('');
+            document.getElementById('zone-table-count').textContent = data.length;
+        }
+        
+        function openZoneDetail(zoneName) {
+            if (!zoneAnalysisData) return;
+            
+            const zone = zoneAnalysisData.zones.find(z => z.zone === zoneName);
+            if (!zone) return;
+            
+            document.getElementById('detail-zone-name').textContent = zone.zone;
+            document.getElementById('detail-zone-region').textContent = `${zone.city || ''} · ${zone.region}`;
+            
+            // Route to MVP Progress
+            const checklist = zone.mvp_checklist || {};
+            const progress = checklist.progress || { cuisines: '0/7', core_drivers: '0/8', overall_pct: 0 };
+            
+            document.getElementById('detail-progress-pct').textContent = `${progress.overall_pct}%`;
+            document.getElementById('detail-progress-bar').style.width = `${progress.overall_pct}%`;
+            document.getElementById('detail-cuisine-count').textContent = progress.cuisines;
+            document.getElementById('detail-driver-count').textContent = progress.core_drivers;
+            
+            // Metrics
+            document.getElementById('detail-metrics').innerHTML = `
+                <div class="zone-metric">
+                    <div class="zone-metric-value">${(zone.orders || 0).toLocaleString()}</div>
+                    <div class="zone-metric-label">Orders</div>
+                </div>
+                <div class="zone-metric">
+                    <div class="zone-metric-value">${zone.partners}</div>
+                    <div class="zone-metric-label">Partners</div>
+                </div>
+                <div class="zone-metric">
+                    <div class="zone-metric-value">${zone.cuisines_count}</div>
+                    <div class="zone-metric-label">Cuisines</div>
+                </div>
+                <div class="zone-metric">
+                    <div class="zone-metric-value">${zone.total_dishes}</div>
+                    <div class="zone-metric-label">Dishes</div>
+                </div>
+                <div class="zone-metric">
+                    <div class="zone-metric-value">${zone.avg_rating ? zone.avg_rating.toFixed(1) : 'N/A'}</div>
+                    <div class="zone-metric-label">Rating</div>
+                </div>
+                <div class="zone-metric">
+                    <div class="zone-metric-value">${zone.health_score}</div>
+                    <div class="zone-metric-label">Health</div>
+                </div>
+            `;
+            
+            // Cuisine Coverage (Anna's 7)
+            const cuisineCoverage = checklist.cuisine_coverage || {};
+            const cuisineNames = {
+                'asian': 'Asian',
+                'italian': 'Italian',
+                'indian': 'Indian',
+                'healthy': 'Healthy',
+                'mexican': 'Mexican',
+                'middle_eastern': 'Middle Eastern',
+                'british': 'British'
+            };
+            
+            document.getElementById('detail-cuisine-coverage').innerHTML = Object.entries(cuisineNames).map(([key, name]) => {
+                const data = cuisineCoverage[key] || { has: false, dishes: 0 };
+                return `
+                    <div class="coverage-item ${data.has ? 'has' : 'missing'}">
+                        <span class="coverage-item-icon">${data.has ? '✓' : '✗'}</span>
+                        <span class="coverage-item-name">${name}</span>
+                        <span class="coverage-item-count">${data.dishes} dishes</span>
+                    </div>
+                `;
+            }).join('');
+            
+            // Core Driver Coverage (8)
+            const driverCoverage = checklist.core_driver_coverage || {};
+            const driverNames = {
+                'pho': 'Pho',
+                'south_asian___indian_curry': 'Indian Curry',
+                'biryani': 'Biryani',
+                'fried_rice': 'Fried Rice',
+                'sushi': 'Sushi',
+                'katsu': 'Katsu',
+                'rice_bowl': 'Rice Bowl',
+                'noodles': 'Noodles'
+            };
+            
+            document.getElementById('detail-driver-coverage').innerHTML = Object.entries(driverNames).map(([key, name]) => {
+                const data = driverCoverage[key] || { has: false, blocked_by: null };
+                return `
+                    <div class="coverage-item ${data.has ? 'has' : 'missing'}" title="${data.blocked_by || ''}">
+                        <span class="coverage-item-icon">${data.has ? '✓' : '✗'}</span>
+                        <span class="coverage-item-name">${name}</span>
+                    </div>
+                `;
+            }).join('');
+            
+            // Priority Actions
+            const actions = checklist.priority_actions || [];
+            if (actions.length > 0) {
+                document.getElementById('detail-priority-actions').innerHTML = actions.map((action, i) => `
+                    <div class="priority-action">
+                        <span class="priority-action-number">${i + 1}</span>
+                        <div class="priority-action-content">
+                            <div class="priority-action-gap">${action.gap}</div>
+                            <div class="priority-action-text">${action.action}</div>
+                            <div class="priority-action-impact">→ ${action.impact}</div>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                document.getElementById('detail-priority-actions').innerHTML = `
+                    <div style="padding: 1rem; background: rgba(0, 212, 170, 0.1); border-radius: 8px; text-align: center;">
+                        <span style="color: var(--accent-teal);">✓ All cuisines and Core Drivers covered!</span>
+                    </div>
+                `;
+            }
+            
+            document.getElementById('zone-detail-panel').classList.add('open');
+            document.getElementById('zone-detail-overlay').classList.add('visible');
+        }
+        
+        function closeZoneDetail() {
+            document.getElementById('zone-detail-panel').classList.remove('open');
+            document.getElementById('zone-detail-overlay').classList.remove('visible');
+        }
+        
+        // Load zone analysis data on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadZoneAnalysisData();
+        });
     </script>
 </body>
 </html>

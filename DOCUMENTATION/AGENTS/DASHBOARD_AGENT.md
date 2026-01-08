@@ -94,7 +94,12 @@ Create self-contained HTML dashboards with interactive visualizations. Make data
 | File | Purpose |
 |------|---------|
 | `DELIVERABLES/dashboards/dinneroo_master_dashboard.html` | **The single master dashboard** |
-| `DATA/3_ANALYSIS/*.csv` | Data sources |
+| `DATA/3_ANALYSIS/*.csv` | Analysis data sources |
+| `DATA/3_ANALYSIS/mvp_threshold_discovery.json` | **MVP inflection point analysis** |
+| `docs/data/zone_mvp_status.json` | **Established MVP calculations (201 live zones)** |
+| `docs/data/zone_analysis.json` | Combined zone dashboard data (all 1,306 zones) |
+| `config/mvp_thresholds.json` | Business MVP requirements |
+| `config/dashboard_metrics.json` | Reconciled metrics with provenance |
 | `DELIVERABLES/presentation_data/*.csv` | Pre-processed data for charts |
 
 ---
@@ -129,17 +134,51 @@ The **Master Dashboard** aggregates data from all agents:
 
 | File | Content |
 |------|---------|
-| `mvp_partners_by_count.csv` | All metrics by partner bucket |
-| `mvp_cuisines_by_count.csv` | All metrics by cuisine bucket |
-| `mvp_dishes_per_partner.csv` | All metrics by dishes/partner bucket |
-| `mvp_summary_min_vs_target.csv` | Threshold recommendations |
+| `DATA/3_ANALYSIS/mvp_threshold_discovery.json` | **Primary source** - hierarchical analysis with inflection points |
+| `config/mvp_thresholds.json` | Business MVP requirements (targets, not inflection points) |
+| `config/dashboard_metrics.json` | Reconciled metrics with provenance |
+| `DELIVERABLES/presentation_data/mvp_*.csv` | Pre-processed data for charts |
+
+### MVP Threshold Discovery Methodology
+
+The dashboard's MVP Thresholds section displays **data-driven inflection points** (where metrics improve) vs **business MVP requirements** (minimum for launch):
+
+| Type | Source | Purpose |
+|------|--------|---------|
+| **Inflection Points** | `mvp_threshold_discovery.json` | Where repeat rate, rating, etc. show significant improvement |
+| **Business Targets** | `mvp_thresholds.json` | Minimum requirements for zone launch readiness |
+
+**Key Inflection Points (from data):**
+
+| Dimension | Inflection | Evidence |
+|-----------|------------|----------|
+| Partners | 3-4 | +4.5pp repeat rate (n=15,611) |
+| Cuisines | 3-4 | +4.2pp repeat rate (n=20,132) |
+| Dishes/Partner | 4-5 | +0.7pp repeat, +12.1pp rating |
+
+**Business MVP Thresholds (targets):**
+
+| Criterion | Threshold | Justification |
+|-----------|-----------|---------------|
+| Partners | ≥5 | Cuisine redundancy and availability |
+| Cuisines | 5 of 7 | Covers diverse family preferences |
+| Rating | ≥4.0 | Families are satisfied (benchmark: 4.2) |
+| Repeat Rate | ≥35% | Families find value and return |
 
 ### Updating the Dashboard
 
 The dashboard embeds data directly as JSON. To update:
 
 1. Run analysis scripts to generate new CSVs
-2. Update the embedded data in `dinneroo_master_dashboard.html`
+2. Validate against `config/dashboard_metrics.json` for consistency
+3. Update the embedded data in `dinneroo_master_dashboard.html`
+
+**Regeneration command:**
+```bash
+python3 scripts/generate_zone_dashboard_data.py  # Updates zone_analysis.json
+python3 scripts/prepare_dashboard_data.py        # Aggregates all agent outputs
+python3 scripts/generate_dashboard.py            # Embeds into HTML
+```
 
 ---
 
