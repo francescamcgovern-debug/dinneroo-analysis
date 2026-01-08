@@ -933,6 +933,36 @@
             font-size: 0.75rem;
             color: var(--text-secondary);
         }
+        
+        /* Sortable table headers */
+        .data-table th.sortable {
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+        }
+        
+        .data-table th.sortable:hover {
+            background: var(--bg-card-hover);
+        }
+        
+        .data-table th.sortable .sort-indicator {
+            margin-left: 0.25rem;
+            opacity: 0.4;
+            font-size: 0.7rem;
+        }
+        
+        .data-table th.sortable.active .sort-indicator {
+            opacity: 1;
+            color: var(--accent-teal);
+        }
+        
+        .data-table th.sortable.asc .sort-indicator::after {
+            content: '▲';
+        }
+        
+        .data-table th.sortable.desc .sort-indicator::after {
+            content: '▼';
+        }
     </style>
 </head>
 <body>
@@ -1397,48 +1427,87 @@
                 </div>
             </div>
             
-            <!-- Zone Filter -->
-            <div style="margin-bottom: 1rem; display: flex; gap: 1rem; align-items: center;">
-                <label style="font-size: 0.85rem; color: var(--text-secondary);">Filter by Region:</label>
-                <select id="zoneRegionFilter" onchange="filterZoneTable()" style="padding: 0.5rem 1rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-primary); font-family: inherit;">
-                    <option value="all">All Regions</option>
-                    <option value="London">London</option>
-                    <option value="South East">South East</option>
-                    <option value="South West">South West</option>
-                    <option value="Midlands">Midlands</option>
-                    <option value="North">North</option>
-                    <option value="Scotland">Scotland</option>
-                    <option value="Wales">Wales</option>
-                    <option value="Other">Other</option>
-                </select>
-                <label style="font-size: 0.85rem; color: var(--text-secondary); margin-left: 1rem;">Filter by Status:</label>
-                <select id="zoneMvpFilter" onchange="filterZoneTable()" style="padding: 0.5rem 1rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-primary); font-family: inherit;">
-                    <option value="all">All Statuses</option>
-                    <option value="mvp">MVP Ready</option>
-                    <option value="near">Near MVP</option>
-                    <option value="developing">Developing</option>
-                </select>
+            <!-- Zone Filters -->
+            <div style="margin-bottom: 1rem; padding: 1rem; background: var(--bg-secondary); border-radius: 0.75rem; border: 1px solid var(--border);">
+                <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                    <!-- Search -->
+                    <div style="flex: 1; min-width: 200px;">
+                        <input type="text" id="zoneSearchFilter" onkeyup="filterZoneTable()" placeholder="Search zones..." 
+                            style="width: 100%; padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-primary); font-family: inherit;">
+                    </div>
+                    
+                    <!-- Region Filter -->
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <label style="font-size: 0.8rem; color: var(--text-secondary);">Region:</label>
+                        <select id="zoneRegionFilter" onchange="filterZoneTable()" style="padding: 0.5rem 0.75rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-primary); font-family: inherit; font-size: 0.85rem;">
+                            <option value="all">All Regions</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Status Filter -->
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <label style="font-size: 0.8rem; color: var(--text-secondary);">Status:</label>
+                        <select id="zoneMvpFilter" onchange="filterZoneTable()" style="padding: 0.5rem 0.75rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-primary); font-family: inherit; font-size: 0.85rem;">
+                            <option value="all">All Statuses</option>
+                            <option value="mvp">MVP Ready</option>
+                            <option value="near">Near MVP</option>
+                            <option value="developing">Developing</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Progress Filter -->
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <label style="font-size: 0.8rem; color: var(--text-secondary);">Progress:</label>
+                        <select id="zoneProgressFilter" onchange="filterZoneTable()" style="padding: 0.5rem 0.75rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-primary); font-family: inherit; font-size: 0.85rem;">
+                            <option value="all">All</option>
+                            <option value="high">≥80%</option>
+                            <option value="medium">50-79%</option>
+                            <option value="low">&lt;50%</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Partners Filter -->
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <label style="font-size: 0.8rem; color: var(--text-secondary);">Partners:</label>
+                        <select id="zonePartnersFilter" onchange="filterZoneTable()" style="padding: 0.5rem 0.75rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-primary); font-family: inherit; font-size: 0.85rem;">
+                            <option value="all">All</option>
+                            <option value="5+">5+ Partners</option>
+                            <option value="3-4">3-4 Partners</option>
+                            <option value="1-2">1-2 Partners</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Results count and clear -->
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">
+                        Showing <strong id="zone-filtered-count">0</strong> of <strong id="zone-total-count">201</strong> zones with orders
+                    </span>
+                    <button onclick="clearZoneFilters()" style="padding: 0.35rem 0.75rem; background: transparent; border: 1px solid var(--border); border-radius: 0.5rem; color: var(--text-secondary); font-family: inherit; font-size: 0.8rem; cursor: pointer;">
+                        Clear Filters
+                    </button>
+                </div>
             </div>
             
             <!-- Zone Table -->
             <div class="data-table-wrapper">
                 <button class="table-toggle open" onclick="toggleTable('zones-table')">
                     <span>📊</span>
-                    <span>Zone Health Details (<span id="zone-table-count">101</span> zones) - Click a zone for Route to MVP</span>
+                    <span>Zone Health Details (<span id="zone-table-count">201</span> zones) - Click headers to sort, click row for Route to MVP</span>
                     <span class="arrow">▼</span>
                 </button>
                 <div id="zones-table" class="data-table-container open">
-                    <table class="data-table">
+                    <table class="data-table" id="zone-data-table">
                         <thead>
                             <tr>
-                                <th>Zone</th>
-                                <th>Region</th>
-                                <th>Status</th>
-                                <th>Orders</th>
-                                <th>Partners</th>
-                                <th>Cuisines</th>
-                                <th>Rating</th>
-                                <th>Progress</th>
+                                <th class="sortable" data-sort="zone" onclick="sortZoneTable('zone')">Zone <span class="sort-indicator"></span></th>
+                                <th class="sortable" data-sort="region" onclick="sortZoneTable('region')">Region <span class="sort-indicator"></span></th>
+                                <th class="sortable" data-sort="status" onclick="sortZoneTable('status')">Status <span class="sort-indicator"></span></th>
+                                <th class="sortable" data-sort="orders" onclick="sortZoneTable('orders')">Orders <span class="sort-indicator">▼</span></th>
+                                <th class="sortable" data-sort="partners" onclick="sortZoneTable('partners')">Partners <span class="sort-indicator"></span></th>
+                                <th class="sortable" data-sort="cuisines" onclick="sortZoneTable('cuisines')">Cuisines <span class="sort-indicator"></span></th>
+                                <th class="sortable" data-sort="rating" onclick="sortZoneTable('rating')">Rating <span class="sort-indicator"></span></th>
+                                <th class="sortable" data-sort="progress" onclick="sortZoneTable('progress')">Progress <span class="sort-indicator"></span></th>
                             </tr>
                         </thead>
                         <tbody id="zones-table-body"></tbody>
@@ -2486,29 +2555,189 @@
             document.getElementById('zone-table-count').textContent = data.length;
         }
         
+        // Zone table state
+        let currentZoneSort = { column: 'orders', direction: 'desc' };
+        let filteredZoneData = [];
+        
         function filterZoneTable() {
+            const searchFilter = document.getElementById('zoneSearchFilter')?.value?.toLowerCase() || '';
             const regionFilter = document.getElementById('zoneRegionFilter').value;
             const mvpFilter = document.getElementById('zoneMvpFilter').value;
+            const progressFilter = document.getElementById('zoneProgressFilter')?.value || 'all';
+            const partnersFilter = document.getElementById('zonePartnersFilter')?.value || 'all';
             
-            // Use zoneAnalysisData if available, otherwise fall back to legacy zoneData
-            let sourceData = zoneAnalysisData?.zones || zoneData;
+            // Use zoneAnalysisData - filter to zones with orders only
+            let sourceData = zoneAnalysisData?.zones?.filter(z => z.orders && z.orders > 0) || [];
             let filtered = [...sourceData];
             
+            // Search filter
+            if (searchFilter) {
+                filtered = filtered.filter(z => 
+                    z.zone.toLowerCase().includes(searchFilter) ||
+                    z.city?.toLowerCase().includes(searchFilter) ||
+                    z.region?.toLowerCase().includes(searchFilter)
+                );
+            }
+            
+            // Region filter
             if (regionFilter !== 'all') {
                 filtered = filtered.filter(z => z.region === regionFilter);
             }
+            
+            // MVP Status filter
             if (mvpFilter !== 'all') {
                 if (mvpFilter === 'mvp') {
-                    filtered = filtered.filter(z => z.mvp_status === 'MVP Ready' || z.is_mvp);
+                    filtered = filtered.filter(z => z.mvp_status === 'MVP Ready');
                 } else if (mvpFilter === 'near') {
-                    filtered = filtered.filter(z => z.mvp_status === 'Near MVP' || (!z.is_mvp && z.mvp_criteria_met === 2));
+                    filtered = filtered.filter(z => z.mvp_status === 'Near MVP');
                 } else if (mvpFilter === 'developing') {
-                    filtered = filtered.filter(z => z.mvp_status === 'Developing' || (!z.is_mvp && z.mvp_criteria_met < 2));
+                    filtered = filtered.filter(z => z.mvp_status === 'Developing');
                 }
             }
             
-            // Use the clickable table renderer
+            // Progress filter
+            if (progressFilter !== 'all') {
+                const getProgress = z => z.mvp_checklist?.progress?.overall_pct || 0;
+                if (progressFilter === 'high') {
+                    filtered = filtered.filter(z => getProgress(z) >= 80);
+                } else if (progressFilter === 'medium') {
+                    filtered = filtered.filter(z => getProgress(z) >= 50 && getProgress(z) < 80);
+                } else if (progressFilter === 'low') {
+                    filtered = filtered.filter(z => getProgress(z) < 50);
+                }
+            }
+            
+            // Partners filter
+            if (partnersFilter !== 'all') {
+                if (partnersFilter === '5+') {
+                    filtered = filtered.filter(z => z.partners >= 5);
+                } else if (partnersFilter === '3-4') {
+                    filtered = filtered.filter(z => z.partners >= 3 && z.partners <= 4);
+                } else if (partnersFilter === '1-2') {
+                    filtered = filtered.filter(z => z.partners >= 1 && z.partners <= 2);
+                }
+            }
+            
+            // Sort
+            filtered = sortZoneData(filtered);
+            
+            // Store filtered data
+            filteredZoneData = filtered;
+            
+            // Update counts
+            const totalWithOrders = zoneAnalysisData?.zones?.filter(z => z.orders && z.orders > 0).length || 0;
+            document.getElementById('zone-filtered-count').textContent = filtered.length;
+            document.getElementById('zone-total-count').textContent = totalWithOrders;
+            
+            // Render table
             populateZoneTableWithChecklist(filtered);
+        }
+        
+        function sortZoneData(data) {
+            const col = currentZoneSort.column;
+            const dir = currentZoneSort.direction;
+            
+            return [...data].sort((a, b) => {
+                let aVal, bVal;
+                
+                switch(col) {
+                    case 'zone':
+                        aVal = a.zone?.toLowerCase() || '';
+                        bVal = b.zone?.toLowerCase() || '';
+                        break;
+                    case 'region':
+                        aVal = a.region?.toLowerCase() || '';
+                        bVal = b.region?.toLowerCase() || '';
+                        break;
+                    case 'status':
+                        const statusOrder = {'MVP Ready': 0, 'Near MVP': 1, 'Developing': 2};
+                        aVal = statusOrder[a.mvp_status] ?? 3;
+                        bVal = statusOrder[b.mvp_status] ?? 3;
+                        break;
+                    case 'orders':
+                        aVal = a.orders || 0;
+                        bVal = b.orders || 0;
+                        break;
+                    case 'partners':
+                        aVal = a.partners || 0;
+                        bVal = b.partners || 0;
+                        break;
+                    case 'cuisines':
+                        aVal = a.cuisines_count || 0;
+                        bVal = b.cuisines_count || 0;
+                        break;
+                    case 'rating':
+                        aVal = a.avg_rating || 0;
+                        bVal = b.avg_rating || 0;
+                        break;
+                    case 'progress':
+                        aVal = a.mvp_checklist?.progress?.overall_pct || 0;
+                        bVal = b.mvp_checklist?.progress?.overall_pct || 0;
+                        break;
+                    default:
+                        aVal = a[col] || 0;
+                        bVal = b[col] || 0;
+                }
+                
+                if (dir === 'asc') {
+                    return aVal > bVal ? 1 : aVal < bVal ? -1 : 0;
+                } else {
+                    return aVal < bVal ? 1 : aVal > bVal ? -1 : 0;
+                }
+            });
+        }
+        
+        function sortZoneTable(column) {
+            // Toggle direction if same column, otherwise default to desc
+            if (currentZoneSort.column === column) {
+                currentZoneSort.direction = currentZoneSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentZoneSort.column = column;
+                currentZoneSort.direction = 'desc';
+            }
+            
+            // Update header indicators
+            document.querySelectorAll('#zone-data-table th.sortable').forEach(th => {
+                th.classList.remove('active', 'asc', 'desc');
+                th.querySelector('.sort-indicator').textContent = '';
+            });
+            
+            const activeHeader = document.querySelector(`#zone-data-table th[data-sort="${column}"]`);
+            if (activeHeader) {
+                activeHeader.classList.add('active', currentZoneSort.direction);
+                activeHeader.querySelector('.sort-indicator').textContent = currentZoneSort.direction === 'asc' ? '▲' : '▼';
+            }
+            
+            // Re-filter (which also sorts)
+            filterZoneTable();
+        }
+        
+        function clearZoneFilters() {
+            document.getElementById('zoneSearchFilter').value = '';
+            document.getElementById('zoneRegionFilter').value = 'all';
+            document.getElementById('zoneMvpFilter').value = 'all';
+            document.getElementById('zoneProgressFilter').value = 'all';
+            document.getElementById('zonePartnersFilter').value = 'all';
+            filterZoneTable();
+        }
+        
+        function populateRegionFilter() {
+            if (!zoneAnalysisData?.zones) return;
+            
+            const regions = [...new Set(zoneAnalysisData.zones
+                .filter(z => z.orders && z.orders > 0)
+                .map(z => z.region)
+                .filter(r => r)
+            )].sort();
+            
+            const select = document.getElementById('zoneRegionFilter');
+            select.innerHTML = '<option value="all">All Regions</option>';
+            regions.forEach(region => {
+                const option = document.createElement('option');
+                option.value = region;
+                option.textContent = region;
+                select.appendChild(option);
+            });
         }
         
         // ============================================================
@@ -2942,103 +3171,29 @@
                     // Try relative path to docs
                     response = await fetch('../../docs/data/zone_analysis.json');
                 }
-                zoneAnalysisData = await response.json();
-                console.log('Loaded zone analysis data:', zoneAnalysisData.zones.length, 'zones');
-                
-                // Re-render zone table with new data
-                if (zoneAnalysisData && zoneAnalysisData.zones) {
-                    updateZoneTableWithAnalysisData();
+                if (!response.ok) {
+                    throw new Error('Failed to load zone_analysis.json');
                 }
+                zoneAnalysisData = await response.json();
+                const zonesWithOrders = zoneAnalysisData.zones.filter(z => z.orders && z.orders > 0);
+                console.log('Loaded zone analysis data:', zonesWithOrders.length, 'zones with orders');
+                
+                // Render zone table with data
+                updateZoneTableWithAnalysisData();
             } catch (error) {
                 console.error('Error loading zone analysis data:', error);
-                console.log('Using fallback: enhancing existing zoneData with checklist');
-                // Fallback: use existing hardcoded zoneData and enhance with checklist
-                useHardcodedZoneDataWithChecklist();
+                document.getElementById('zones-table-body').innerHTML = `
+                    <tr>
+                        <td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                            Error loading zone data. Please ensure zone_analysis.json is in the same directory.
+                        </td>
+                    </tr>
+                `;
             }
-        }
-        
-        function useHardcodedZoneDataWithChecklist() {
-            // Enhance the existing hardcoded zoneData with mvp_checklist
-            zoneAnalysisData = {
-                zones: zoneData.map(z => ({
-                    zone: z.zone,
-                    region: z.region,
-                    city: z.zone,
-                    orders: z.orders,
-                    partners: z.partners,
-                    cuisines_count: z.cuisines,
-                    total_dishes: z.partners * 4, // Estimate
-                    avg_rating: z.rating,
-                    health_score: z.score,
-                    mvp_status: z.is_mvp ? 'MVP Ready' : (z.mvp_criteria_met === 2 ? 'Near MVP' : 'Developing'),
-                    asian_dishes: z.cuisines >= 2 ? 10 : 0,
-                    italian_dishes: z.cuisines >= 3 ? 8 : 0,
-                    indian_dishes: z.cuisines >= 4 ? 5 : 0,
-                    healthy_dishes: z.cuisines >= 5 ? 3 : 0,
-                    mexican_dishes: z.cuisines >= 6 ? 3 : 0,
-                    middle_eastern_dishes: z.cuisines >= 7 ? 2 : 0,
-                    british_dishes: z.cuisines >= 8 ? 1 : 0,
-                    mvp_checklist: generateChecklistFromLegacyData(z)
-                }))
-            };
-            updateZoneTableWithAnalysisData();
-        }
-        
-        function generateChecklistFromLegacyData(z) {
-            // Generate a checklist based on cuisine count
-            const cuisinesHas = z.cuisines;
-            const cuisineCoverage = {
-                asian: { has: cuisinesHas >= 1, dishes: cuisinesHas >= 1 ? 10 : 0 },
-                italian: { has: cuisinesHas >= 2, dishes: cuisinesHas >= 2 ? 8 : 0 },
-                indian: { has: cuisinesHas >= 3, dishes: cuisinesHas >= 3 ? 5 : 0 },
-                healthy: { has: cuisinesHas >= 4, dishes: cuisinesHas >= 4 ? 3 : 0 },
-                mexican: { has: cuisinesHas >= 5, dishes: cuisinesHas >= 5 ? 3 : 0 },
-                middle_eastern: { has: cuisinesHas >= 6, dishes: cuisinesHas >= 6 ? 2 : 0 },
-                british: { has: cuisinesHas >= 7, dishes: cuisinesHas >= 7 ? 1 : 0 }
-            };
-            
-            const cuisinesMet = Object.values(cuisineCoverage).filter(c => c.has).length;
-            const coreDriversMet = Math.min(cuisinesMet, 8); // Estimate based on cuisines
-            
-            const coreDriverCoverage = {
-                pho: { has: cuisinesHas >= 1, blocked_by: null },
-                south_asian___indian_curry: { has: cuisinesHas >= 3, blocked_by: cuisinesHas < 3 ? 'Blocked by missing Indian cuisine' : null },
-                biryani: { has: cuisinesHas >= 3, blocked_by: cuisinesHas < 3 ? 'Blocked by missing Indian cuisine' : null },
-                fried_rice: { has: cuisinesHas >= 1, blocked_by: null },
-                sushi: { has: cuisinesHas >= 2, blocked_by: null },
-                katsu: { has: cuisinesHas >= 1, blocked_by: null },
-                rice_bowl: { has: cuisinesHas >= 1, blocked_by: null },
-                noodles: { has: cuisinesHas >= 1, blocked_by: null }
-            };
-            
-            const driversActualMet = Object.values(coreDriverCoverage).filter(d => d.has).length;
-            const overallPct = Math.round(((cuisinesMet + driversActualMet) / 15) * 100);
-            
-            const priorityActions = [];
-            if (!cuisineCoverage.indian.has) {
-                priorityActions.push({ type: 'cuisine', gap: 'Indian', action: 'Recruit Dishoom, Kricket, Tiffin Tin', impact: 'Unlocks 2 Core Drivers' });
-            }
-            if (!cuisineCoverage.mexican.has) {
-                priorityActions.push({ type: 'cuisine', gap: 'Mexican', action: 'Recruit Las Iguanas, Zambrero', impact: 'Improves diversity' });
-            }
-            if (!cuisineCoverage.middle_eastern.has) {
-                priorityActions.push({ type: 'cuisine', gap: 'Middle Eastern', action: 'Recruit Shaku Maku', impact: 'Improves diversity' });
-            }
-            
-            return {
-                cuisine_coverage: cuisineCoverage,
-                core_driver_coverage: coreDriverCoverage,
-                progress: {
-                    cuisines: `${cuisinesMet}/7`,
-                    core_drivers: `${driversActualMet}/8`,
-                    overall_pct: overallPct
-                },
-                priority_actions: priorityActions.slice(0, 5)
-            };
         }
         
         function updateZoneTableWithAnalysisData() {
-            // Filter to zones with orders (like the original data)
+            // Filter to zones with orders
             const zonesWithOrders = zoneAnalysisData.zones.filter(z => z.orders && z.orders > 0);
             
             // Update KPI counts
@@ -3050,32 +3205,40 @@
             document.getElementById('near-mvp-count').textContent = nearMvp;
             document.getElementById('developing-count').textContent = developing;
             
-            // Update table
-            populateZoneTableWithChecklist(zonesWithOrders);
+            // Populate region filter from data
+            populateRegionFilter();
+            
+            // Set initial sort indicator
+            const ordersHeader = document.querySelector('#zone-data-table th[data-sort="orders"]');
+            if (ordersHeader) {
+                ordersHeader.classList.add('active', 'desc');
+                ordersHeader.querySelector('.sort-indicator').textContent = '▼';
+            }
+            
+            // Update total count
+            document.getElementById('zone-total-count').textContent = zonesWithOrders.length;
+            
+            // Filter and render table (applies default sort)
+            filterZoneTable();
         }
         
         function populateZoneTableWithChecklist(data) {
             const tbody = document.getElementById('zones-table-body');
             tbody.innerHTML = data.map(z => {
-                // Handle both new format (mvp_status) and legacy format (is_mvp)
-                const status = z.mvp_status || (z.is_mvp ? 'MVP Ready' : (z.mvp_criteria_met === 2 ? 'Near MVP' : 'Developing'));
+                const status = z.mvp_status || 'Developing';
                 const statusClass = status === 'MVP Ready' ? 'validated' : 
                                    (status === 'Near MVP' ? 'corroborated' : 'single');
                 const progress = z.mvp_checklist?.progress?.overall_pct || 0;
                 const progressColor = progress >= 80 ? '#00d4aa' : progress >= 50 ? '#f59e0b' : '#f43f5e';
                 
-                // Handle both formats for cuisines and rating
-                const cuisines = z.cuisines_count !== undefined ? z.cuisines_count : z.cuisines;
-                const rating = z.avg_rating !== undefined ? z.avg_rating : z.rating;
-                
                 return `<tr class="clickable" onclick="openZoneDetail('${z.zone.replace(/'/g, "\\'")}')">
                     <td class="bucket">${z.zone}</td>
-                    <td>${z.region}</td>
+                    <td>${z.region || '-'}</td>
                     <td><span class="evidence-badge ${statusClass}">${status}</span></td>
                     <td>${(z.orders || 0).toLocaleString()}</td>
-                    <td>${z.partners}</td>
-                    <td>${cuisines}</td>
-                    <td>${rating ? rating.toFixed(2) : '-'}</td>
+                    <td>${z.partners || 0}</td>
+                    <td>${z.cuisines_count || 0}</td>
+                    <td>${z.avg_rating ? z.avg_rating.toFixed(2) : '-'}</td>
                     <td>
                         <div class="progress-mini">
                             <div class="progress-mini-bar">
@@ -3090,26 +3253,16 @@
         }
         
         function openZoneDetail(zoneName) {
-            // Find zone in zoneAnalysisData or fall back to legacy zoneData
-            let zone = zoneAnalysisData?.zones?.find(z => z.zone === zoneName);
-            if (!zone) {
-                // Try legacy zoneData
-                const legacyZone = zoneData.find(z => z.zone === zoneName);
-                if (legacyZone) {
-                    // Enhance legacy zone with checklist
-                    zone = {
-                        ...legacyZone,
-                        city: legacyZone.zone,
-                        cuisines_count: legacyZone.cuisines,
-                        total_dishes: legacyZone.partners * 4,
-                        avg_rating: legacyZone.rating,
-                        health_score: legacyZone.score,
-                        mvp_status: legacyZone.is_mvp ? 'MVP Ready' : (legacyZone.mvp_criteria_met === 2 ? 'Near MVP' : 'Developing'),
-                        mvp_checklist: generateChecklistFromLegacyData(legacyZone)
-                    };
-                }
+            if (!zoneAnalysisData?.zones) {
+                console.error('Zone analysis data not loaded');
+                return;
             }
-            if (!zone) return;
+            
+            const zone = zoneAnalysisData.zones.find(z => z.zone === zoneName);
+            if (!zone) {
+                console.error('Zone not found:', zoneName);
+                return;
+            }
             
             document.getElementById('detail-zone-name').textContent = zone.zone;
             document.getElementById('detail-zone-region').textContent = `${zone.city || ''} · ${zone.region}`;
