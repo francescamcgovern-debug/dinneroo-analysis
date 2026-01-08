@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinneroo Master Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./zone_data.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -3162,30 +3163,34 @@
         
         let zoneAnalysisData = null;
         
-        // Load zone analysis data from JSON
+        // Load zone analysis data from JSON or embedded data
         async function loadZoneAnalysisData() {
+            // First check if embedded data is available (from zone_data.js)
+            if (typeof zoneAnalysisDataEmbedded !== 'undefined') {
+                console.log('Using embedded zone data');
+                zoneAnalysisData = zoneAnalysisDataEmbedded;
+                updateZoneTableWithAnalysisData();
+                return;
+            }
+            
+            // Try loading from JSON files
             try {
-                // Try loading from local file first (same directory)
                 let response = await fetch('./zone_analysis.json');
                 if (!response.ok) {
-                    // Try relative path to docs
                     response = await fetch('../../docs/data/zone_analysis.json');
                 }
                 if (!response.ok) {
                     throw new Error('Failed to load zone_analysis.json');
                 }
                 zoneAnalysisData = await response.json();
-                const zonesWithOrders = zoneAnalysisData.zones.filter(z => z.orders && z.orders > 0);
-                console.log('Loaded zone analysis data:', zonesWithOrders.length, 'zones with orders');
-                
-                // Render zone table with data
+                console.log('Loaded zone analysis data from JSON');
                 updateZoneTableWithAnalysisData();
             } catch (error) {
                 console.error('Error loading zone analysis data:', error);
                 document.getElementById('zones-table-body').innerHTML = `
                     <tr>
                         <td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-muted);">
-                            Error loading zone data. Please ensure zone_analysis.json is in the same directory.
+                            Error loading zone data. Please ensure zone_data.js is in the same directory.
                         </td>
                     </tr>
                 `;
