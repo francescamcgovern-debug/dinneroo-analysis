@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-01-08T18:15:00",
+  "source": "scripts/phase2_analysis/generate_three_lists.py",
+  "config_source": "config/scoring_framework_v3.json",
+  "taxonomy": "anna_24_with_expansion",
+  "family": [
+    {"rank": 1, "dish": "Rice Bowl", "score": 4.8, "kids_happy": 0.82, "orders": 10914, "partners": ["Banana Tree", "Giggling Squid", "Itsu", "Kokoro", "Pho"], "granular_types": ["Teriyaki Rice Bowl", "Sweet & Sour Rice Bowl", "Thai Rice Bowl"], "item_count": 21},
+    {"rank": 2, "dish": "South Asian / Indian Curry", "score": 4.6, "kids_happy": 0.81, "orders": 5897, "partners": ["Chaska", "Dishoom", "Kricket", "Saravana Bhavan", "Tiffin Tin"], "granular_types": ["Butter Chicken", "Tikka Masala", "Korma", "Aloo Mutter"], "item_count": 13},
+    {"rank": 2, "dish": "Fried Rice", "score": 4.6, "kids_happy": 0.80, "orders": 4958, "partners": ["Pho", "Asia Villa", "Xian Street Food"], "granular_types": ["Special Fried Rice", "Egg Fried Rice", "Sweet & Sour"], "item_count": 5},
+    {"rank": 4, "dish": "Biryani", "score": 4.1, "kids_happy": 1.0, "orders": 458, "partners": ["Chaska", "Dishoom", "Tadka House"], "granular_types": ["Chicken Biryani", "Vegetarian Biryani"], "item_count": 6},
+    {"rank": 5, "dish": "Pasta", "score": 4.05, "kids_happy": 0.79, "orders": 1342, "partners": ["Bella Italia", "PizzaExpress", "Prezzo", "Milano"], "granular_types": ["Bolognese", "Alfredo", "Mac & Cheese", "Pasta Bake"], "item_count": 23},
+    {"rank": 6, "dish": "Pho", "score": 4.0, "kids_happy": 0.80, "orders": 4530, "partners": ["Pho"], "granular_types": ["Pho"], "item_count": 1},
+    {"rank": 7, "dish": "Fajitas", "score": 3.95, "kids_happy": 1.0, "orders": 221, "partners": ["Las Iguanas"], "granular_types": ["Chicken Fajitas", "Veggie Fajitas"], "item_count": 3},
+    {"rank": 8, "dish": "Katsu", "score": 3.8, "kids_happy": 0.78, "orders": 11730, "partners": ["Wagamama", "Itsu", "Kokoro", "Banana Tree"], "granular_types": ["Chicken Katsu", "Tofu Katsu", "Sweet Potato Katsu"], "item_count": 9},
+    {"rank": 9, "dish": "Noodles", "score": 3.75, "kids_happy": 0.76, "orders": 5049, "partners": ["Pho", "Banana Tree", "Itsu", "Wagamama"], "granular_types": ["Pad Thai", "Chow Mein", "Teriyaki Noodles", "Yakisoba"], "item_count": 13},
+    {"rank": 10, "dish": "Pizza", "score": 3.5, "kids_happy": 0.73, "orders": 548, "partners": ["PizzaExpress", "Milano", "Prezzo"], "granular_types": ["Margherita", "Pepperoni", "Hawaiian"], "item_count": 5}
+  ],
+  "couple": [
+    {"rank": 1, "dish": "South Asian / Indian Curry", "score": 5.0, "adult_sat": 0.95, "orders": 5897, "partners": ["Dishoom", "Chaska", "Tiffin Tin"], "adult_appeal": 5, "item_count": 13},
+    {"rank": 1, "dish": "Noodles", "score": 5.0, "adult_sat": 0.91, "orders": 5049, "partners": ["Pho", "Banana Tree", "Itsu"], "adult_appeal": 4.3, "item_count": 13},
+    {"rank": 3, "dish": "Pho", "score": 4.8, "adult_sat": 0.91, "orders": 4530, "partners": ["Pho"], "adult_appeal": 5, "item_count": 1},
+    {"rank": 4, "dish": "Fried Rice", "score": 4.55, "adult_sat": 0.91, "orders": 4958, "partners": ["Pho", "Asia Villa"], "adult_appeal": 3, "item_count": 5},
+    {"rank": 5, "dish": "Sushi", "score": 4.15, "adult_sat": 0.87, "orders": 1043, "partners": ["Itsu"], "adult_appeal": 5, "item_count": 1},
+    {"rank": 5, "dish": "Biryani", "score": 4.15, "adult_sat": 1.0, "orders": 458, "partners": ["Dishoom", "Chaska"], "adult_appeal": 3, "item_count": 6},
+    {"rank": 7, "dish": "Shawarma", "score": 4.0, "adult_sat": 0.87, "orders": 1355, "partners": ["Bill's"], "adult_appeal": 4, "item_count": 3},
+    {"rank": 8, "dish": "Rice Bowl", "score": 3.9, "adult_sat": 0.85, "orders": 10914, "partners": ["Pho", "Banana Tree", "Itsu"], "adult_appeal": 3, "item_count": 21},
+    {"rank": 9, "dish": "Fajitas", "score": 3.8, "adult_sat": 0.89, "orders": 221, "partners": ["Las Iguanas"], "adult_appeal": 4, "item_count": 3},
+    {"rank": 10, "dish": "Katsu", "score": 3.55, "adult_sat": 0.84, "orders": 11730, "partners": ["Wagamama", "Itsu"], "adult_appeal": 4, "item_count": 9}
+  ],
+  "recruitment": [
+    {"rank": 1, "dish": "Fried Rice", "score": 4.5, "latent_mentions": 2, "gap_type": "Supply Gap", "cuisine": "Chinese", "maps_to_anna24": "Fried Rice", "potential_partners": ["Pho", "Wagamama", "Itsu"]},
+    {"rank": 2, "dish": "Shawarma", "score": 3.65, "latent_mentions": 2, "gap_type": "Supply Gap", "cuisine": "Middle Eastern", "maps_to_anna24": "Shawarma", "potential_partners": ["New recruitment needed"]},
+    {"rank": 2, "dish": "Dim Sum", "score": 3.65, "latent_mentions": 2, "gap_type": "Supply Gap", "cuisine": "Chinese", "maps_to_anna24": "Other", "potential_partners": ["New recruitment needed"]},
+    {"rank": 4, "dish": "Veggie Fajitas", "score": 3.6, "latent_mentions": 0, "gap_type": "Quality Gap", "cuisine": "Mexican", "maps_to_anna24": "Fajitas", "potential_partners": ["Tortilla"]},
+    {"rank": 4, "dish": "Rotisserie Chicken", "score": 3.6, "latent_mentions": 0, "gap_type": "No Gap", "cuisine": "Global", "maps_to_anna24": "Protein & Veg", "potential_partners": ["Farmer J"]},
+    {"rank": 6, "dish": "Chinese Family Meal", "score": 3.55, "latent_mentions": 0, "gap_type": "Supply Gap", "cuisine": "Chinese", "maps_to_anna24": "Other", "potential_partners": ["New recruitment needed"]},
+    {"rank": 7, "dish": "Tacos", "score": 3.45, "latent_mentions": 1, "gap_type": "Quality Gap", "cuisine": "Mexican", "maps_to_anna24": "Tacos", "potential_partners": ["Tortilla"]},
+    {"rank": 8, "dish": "Fajitas", "score": 3.35, "latent_mentions": 0, "gap_type": "Quality Gap", "cuisine": "Mexican", "maps_to_anna24": "Fajitas", "potential_partners": ["Tortilla"]},
+    {"rank": 9, "dish": "Buddha Bowl", "score": 3.3, "latent_mentions": 0, "gap_type": "No Gap", "cuisine": "Healthy/Fresh", "maps_to_anna24": "Grain Bowl", "potential_partners": ["Farmer J"]},
+    {"rank": 10, "dish": "Burrito", "score": 3.1, "latent_mentions": 0, "gap_type": "Quality Gap", "cuisine": "Mexican", "maps_to_anna24": "Burrito / Burrito Bowl", "potential_partners": ["Tortilla"]}
+  ],
+  "key_differences": [
+    {"dish": "Noodles", "family_rank": 9, "couple_rank": 1, "insight": "Adults rate much higher - kids less enthusiastic about unfamiliar textures"},
+    {"dish": "Pho", "family_rank": 6, "couple_rank": 3, "insight": "Strong adult appeal; families prefer more familiar options"},
+    {"dish": "Rice Bowl", "family_rank": 1, "couple_rank": 8, "insight": "Kids love it; couples find it less exciting"},
+    {"dish": "Pasta", "family_rank": 5, "couple_rank": 12, "insight": "Classic kid-pleaser; couples prefer more adventurous"},
+    {"dish": "Sushi", "family_rank": 15, "couple_rank": 5, "insight": "Adults love it but kids_happy rate is low (69%)"},
+    {"dish": "Pizza", "family_rank": 10, "couple_rank": 13, "insight": "Kid-friendly but limited adult appeal on £25 meal"}
+  ],
+  "weights_used": {
+    "family": {"kids_happy": 0.40, "fussy_eater_friendly": 0.20, "orders_per_zone": 0.20, "adult_satisfaction": 0.15, "portions_adequate": 0.05},
+    "couple": {"adult_satisfaction": 0.40, "rating": 0.25, "orders_per_zone": 0.20, "adult_appeal": 0.15},
+    "recruitment": {"latent_demand_mentions": 0.30, "framework_score": 0.25, "fussy_eater_friendly": 0.15, "gap_score": 0.15, "partner_capability": 0.10, "non_dinneroo_demand_proxy": 0.05}
+  }
+}
+
+

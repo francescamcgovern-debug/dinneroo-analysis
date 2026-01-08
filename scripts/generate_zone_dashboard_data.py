@@ -1,148 +1,53 @@
 #!/usr/bin/env python3
 """
-Generate zone analysis dashboard data combining:
-1. Existing zone_mvp_status.json (established MVP calculations with repeat_rate, rating_pass, etc.)
-2. Anna's ground truth zone_gap_report.csv (all 1,306 zones with cuisine data)
-3. MVP checklist with cuisine + dish type coverage for Route to MVP feature
+Generate zone analysis dashboard data with unified definitions.
 
-This script preserves the existing MVP work and extends it with Anna's ground truth data.
+This script uses:
+1. Anna's ground truth (anna_zone_dish_counts.csv) for Core 7 cuisine counts
+2. Zone gap report for additional zone metadata
+3. Existing zone_mvp_status.json for performance data where available
+4. Canonical definitions from scripts/utils/definitions.py
 
-SOURCE OF TRUTH: Anna's categorisations
+OUTPUT: Two-level cuisine structure (Core 7 + sub-cuisines)
+- MVP status calculated from Core 7 counts using tiered approach
+- Sub-cuisines for drill-down analysis
+
+SOURCE OF TRUTH: Anna's categorisations via definitions.py
 - 7 Cuisines: Asian, Italian, Indian, Healthy, Mexican, Middle Eastern, British
-- 24 Dish Types: From Anna's Item Categorisation CSV
+- MVP Ready = 5+ cuisines, Near MVP = 4, Progressing = 3
 """
 
 import pandas as pd
 import json
 from pathlib import Path
+import sys
+
+# Add scripts directory to path for imports
+SCRIPT_DIR = Path(__file__).parent
+sys.path.insert(0, str(SCRIPT_DIR))
+
+# Import canonical definitions
+from utils.definitions import (
+    CORE_7,
+    REQUIRED_FOR_MVP,
+    get_core_7,
+    get_mvp_status,
+    get_cuisine_pass,
+    MVP_STATUS_TIERS,
+)
 
 # Paths
-PROJECT_ROOT = Path(__file__).parent.parent
+PROJECT_ROOT = SCRIPT_DIR.parent
 DATA_DIR = PROJECT_ROOT / "DATA" / "3_ANALYSIS"
-SOURCE_DIR = PROJECT_ROOT / "DATA" / "1_SOURCE" / "anna_slides"
+SOURCE_DIR = PROJECT_ROOT / "DATA" / "1_SOURCE"
 DOCS_DATA_DIR = PROJECT_ROOT / "docs" / "data"
 OUTPUT_DIR = PROJECT_ROOT / "docs" / "data"
 
-# Anna's 7 Cuisines (Source of Truth)
-ANNA_CUISINES = ["Asian", "Italian", "Indian", "Healthy", "Mexican", "Middle Eastern", "British"]
-
-# Core Drivers from dish_scoring_anna_aligned.csv (8 dish types that drive performance)
+# Core Drivers from Anna's Dish Scoring (for reference)
 CORE_DRIVERS = [
-    "Pho",
-    "South Asian / Indian Curry", 
-    "Biryani",
-    "Fried Rice",
-    "Sushi",
-    "Katsu",
-    "Rice Bowl",
-    "Noodles"
+    "Pho", "South Asian / Indian Curry", "Biryani", "Fried Rice",
+    "Sushi", "Katsu", "Rice Bowl", "Noodles"
 ]
-
-# Preference Drivers (5)
-PREFERENCE_DRIVERS = [
-    "Grain Bowl",
-    "East Asian Curry",
-    "Shepherd's Pie",
-    "Shawarma",
-    "Fajitas"
-]
-
-# Demand Boosters (2)
-DEMAND_BOOSTERS = [
-    "Protein & Veg",
-    "Pizza"
-]
-
-# Partner to dish type mapping (from Anna's Item Categorisation)
-# This maps which dish types each partner can provide
-PARTNER_DISH_TYPES = {
-    "Chaska": ["Biryani", "South Asian / Indian Curry"],
-    "Dishoom": ["Biryani", "South Asian / Indian Curry"],
-    "Tadka House": ["Biryani", "South Asian / Indian Curry"],
-    "Kricket": ["South Asian / Indian Curry"],
-    "Saravana Bhavan": ["South Asian / Indian Curry"],
-    "Tiffin Tin": ["South Asian / Indian Curry"],
-    "Pho": ["Pho", "Rice Bowl", "Noodles", "Fried Rice", "East Asian Curry"],
-    "Wagamama": ["Katsu", "East Asian Curry"],
-    "Itsu": ["Katsu", "Rice Bowl", "Noodles", "Poke", "Sushi"],
-    "Banana Tree": ["Katsu", "Rice Bowl", "Noodles", "Pad Thai"],
-    "Giggling Squid": ["Rice Bowl", "East Asian Curry"],
-    "Ting Thai": ["Noodles", "East Asian Curry"],
-    "Asia Villa": ["Noodles", "Fried Rice", "East Asian Curry"],
-    "Zumuku": ["Katsu", "Rice Bowl", "Noodles", "East Asian Curry"],
-    "Zumuku Sushi": ["Katsu"],
-    "Kokoro": ["Katsu", "Rice Bowl", "Noodles"],
-    "Iro Sushi": ["Katsu", "Noodles"],
-    "TUK TUK-SGroup": ["Rice Bowl", "Fried Rice"],
-    "Xian Street Food": ["Rice Bowl", "Fried Rice"],
-    "Taste Of Hong Kong-DCN": ["Rice Bowl"],
-    "Bill's": ["Pasta", "East Asian Curry", "Shawarma", "Shepherd's Pie"],
-    "Bella Italia": ["Pasta", "Lasagne", "Pizza"],
-    "Cacciari's": ["Pasta", "Lasagne"],
-    "Milano": ["Pasta", "Pizza"],
-    "PizzaExpress": ["Pasta", "Pizza"],
-    "Prezzo": ["Pasta", "Pizza"],
-    "PIZAZA-SGroup": ["Pasta"],
-    "SOYO-SGroup": ["Pasta", "Lasagne", "Noodles"],
-    "atis": ["Grain Bowl"],
-    "Farmer J": ["Grain Bowl"],
-    "Remedy Kitchen": ["Grain Bowl"],
-    "The Salad Project": ["Grain Bowl"],
-    "LEON": ["Grain Bowl"],
-    "Cocotte": ["Protein & Veg"],
-    "Yacob's Kitchen": ["Grain Bowl"],
-    "Shaku Maku": ["Protein & Veg"],
-    "Umi Falafel": [],
-    "Zaatar Rathmines": [],
-    "Las Iguanas": ["Chilli", "Fajitas"],
-    "Tula Ireland": ["Burrito / Burrito Bowl", "Tacos", "Quesadilla"],
-    "Zambrero UK": ["Tacos", "Burrito / Burrito Bowl", "Nachos"],
-}
-
-# Partner to cuisine mapping (from Anna's Item Categorisation)
-PARTNER_CUISINES = {
-    "Chaska": ["Indian"],
-    "Dishoom": ["Indian"],
-    "Tadka House": ["Indian"],
-    "Kricket": ["Indian"],
-    "Saravana Bhavan": ["Indian"],
-    "Tiffin Tin": ["Indian"],
-    "Pho": ["Asian"],
-    "Wagamama": ["Asian"],
-    "Itsu": ["Asian"],
-    "Banana Tree": ["Asian"],
-    "Giggling Squid": ["Asian"],
-    "Ting Thai": ["Asian"],
-    "Asia Villa": ["Asian"],
-    "Zumuku": ["Asian"],
-    "Zumuku Sushi": ["Asian"],
-    "Kokoro": ["Asian"],
-    "Iro Sushi": ["Asian"],
-    "TUK TUK-SGroup": ["Asian"],
-    "Xian Street Food": ["Asian"],
-    "Taste Of Hong Kong-DCN": ["Asian"],
-    "Bill's": ["Italian", "Middle Eastern", "British"],
-    "Bella Italia": ["Italian"],
-    "Cacciari's": ["Italian"],
-    "Milano": ["Italian"],
-    "PizzaExpress": ["Italian"],
-    "Prezzo": ["Italian"],
-    "PIZAZA-SGroup": ["Italian"],
-    "SOYO-SGroup": ["Italian"],
-    "atis": ["Healthy"],
-    "Farmer J": ["Healthy"],
-    "Remedy Kitchen": ["Healthy"],
-    "The Salad Project": ["Healthy"],
-    "LEON": ["Healthy"],
-    "Cocotte": ["Healthy"],
-    "Yacob's Kitchen": ["Middle Eastern"],
-    "Shaku Maku": ["Middle Eastern"],
-    "Umi Falafel": ["Middle Eastern"],
-    "Zaatar Rathmines": ["Middle Eastern"],
-    "Las Iguanas": ["Mexican"],
-    "Tula Ireland": ["Mexican"],
-    "Zambrero UK": ["Mexican"],
-}
 
 # Recruitment suggestions by cuisine gap
 RECRUITMENT_SUGGESTIONS = {
@@ -155,21 +60,30 @@ RECRUITMENT_SUGGESTIONS = {
     "British": ["Bill's"],
 }
 
-# Recruitment suggestions by Core Driver gap
-CORE_DRIVER_RECRUITMENT = {
-    "Pho": ["Pho"],
-    "South Asian / Indian Curry": ["Dishoom", "Kricket", "Tiffin Tin"],
-    "Biryani": ["Dishoom", "Chaska", "Tadka House"],
-    "Fried Rice": ["Pho", "Asia Villa", "Xian Street Food"],
-    "Sushi": ["Itsu", "Iro Sushi", "Zumuku Sushi"],
-    "Katsu": ["Wagamama", "Itsu", "Kokoro"],
-    "Rice Bowl": ["Itsu", "Pho", "Banana Tree", "Kokoro"],
-    "Noodles": ["Pho", "Wagamama", "Banana Tree", "Ting Thai"],
-}
+
+def load_anna_ground_truth():
+    """
+    Load Anna's ground truth Core 7 cuisine counts per zone.
+    This is the SOURCE OF TRUTH for cuisine coverage.
+    """
+    file_path = DATA_DIR / "anna_zone_dish_counts.csv"
+    df = pd.read_csv(file_path)
+    print(f"Loaded Anna's ground truth: {len(df)} zones")
+    return df
+
+
+def load_zone_gap_report():
+    """Load additional zone metadata from gap report."""
+    file_path = DATA_DIR / "zone_gap_report.csv"
+    if file_path.exists():
+        df = pd.read_csv(file_path)
+        print(f"Loaded zone gap report: {len(df)} zones")
+        return df
+    return None
 
 
 def load_existing_mvp_data():
-    """Load existing MVP status data (established calculations)."""
+    """Load existing MVP status data for performance metrics."""
     mvp_file = DOCS_DATA_DIR / "zone_mvp_status.json"
     if mvp_file.exists():
         with open(mvp_file) as f:
@@ -179,63 +93,54 @@ def load_existing_mvp_data():
     return {}
 
 
-def load_anna_zone_data():
-    """Load Anna's ground truth zone data (all 1,306 zones)."""
-    zone_file = DATA_DIR / "zone_gap_report.csv"
-    df = pd.read_csv(zone_file)
-    print(f"Loaded Anna's zone data: {len(df)} zones")
-    return df
-
-
-def load_dish_scoring():
-    """Load dish scoring data to get quadrant classifications."""
-    scoring_file = DATA_DIR / "dish_scoring_anna_aligned.csv"
-    if scoring_file.exists():
-        df = pd.read_csv(scoring_file)
-        return {row['dish_type']: row['quadrant'] for _, row in df.iterrows()}
-    return {}
-
-
-def parse_list_field(val):
-    """Parse string representation of list."""
-    if pd.isna(val) or val == '[]' or val == '':
-        return []
-    try:
-        if isinstance(val, str):
-            val = val.replace("'", '"')
-            return json.loads(val)
-        return val
-    except:
-        return []
+def load_snowflake_sub_cuisines():
+    """
+    Load sub-cuisine data from Snowflake for granular drill-down.
+    Filters to valid cuisine tags only.
+    """
+    orders_file = SOURCE_DIR / "snowflake" / "ALL_DINNEROO_ORDERS.csv"
+    if not orders_file.exists():
+        print("Snowflake orders file not found, skipping sub-cuisine data")
+        return {}
+    
+    # Valid sub-cuisine tags (filter out junk like "Burgers", "Meal Deals")
+    VALID_SUB_CUISINES = [
+        'japanese', 'thai', 'vietnamese', 'chinese', 'korean', 'asian',
+        'italian', 'indian', 'mexican', 'lebanese', 'mediterranean',
+        'latin american', 'turkish', 'greek', 'british'
+    ]
+    
+    df = pd.read_csv(orders_file, usecols=['ZONE_NAME', 'CUISINE'])
+    
+    # Filter to valid cuisines and aggregate by zone
+    df['cuisine_lower'] = df['CUISINE'].str.lower().str.strip()
+    df = df[df['cuisine_lower'].isin(VALID_SUB_CUISINES)]
+    
+    # Count orders per sub-cuisine per zone
+    zone_sub_cuisines = {}
+    for zone, group in df.groupby('ZONE_NAME'):
+        sub_counts = group['cuisine_lower'].value_counts().to_dict()
+        zone_sub_cuisines[zone] = sub_counts
+    
+    print(f"Loaded sub-cuisine data for {len(zone_sub_cuisines)} zones")
+    return zone_sub_cuisines
 
 
 def calculate_health_score(zone_data):
     """
     Calculate zone health score (0-100) using ZONE_AGENT weights.
-    Uses existing MVP data where available.
     """
-    # Get values
     repeat_rate = zone_data.get('repeat_rate', 0) or 0
     rating = zone_data.get('avg_rating', 0) or 0
-    cuisines = zone_data.get('cuisine_count', 0) or zone_data.get('cuisines_count', 0) or 0
+    core_7_count = zone_data.get('core_7_count', 0) or 0
     dishes = zone_data.get('total_dishes', 0) or 0
-    orders = zone_data.get('order_count', 0) or zone_data.get('orders', 0) or 0
-    partners = zone_data.get('partners', 0) or 0
+    orders = zone_data.get('orders', 0) or 0
     
     # Component scores (normalized to 0-1)
-    # Repeat rate is primary (30%) - from ZONE_AGENT
-    repeat_score = min(repeat_rate / 0.40, 1.0) if repeat_rate else 0  # 40% = max
-    
-    # Rating/satisfaction (25%)
+    repeat_score = min(repeat_rate / 0.40, 1.0) if repeat_rate else 0
     rating_score = max(0, (rating - 3) / 2) if rating >= 3 else 0
-    
-    # Cuisine coverage (20%)
-    cuisine_score = min(cuisines / 7, 1.0)  # 7 cuisines = max (Anna's categories)
-    
-    # Dish variety (15%)
-    dish_score = min(dishes / 50, 1.0)  # 50 dishes = max
-    
-    # Volume (10%) - LOWEST weight per ZONE_AGENT
+    cuisine_score = min(core_7_count / 7, 1.0)
+    dish_score = min(dishes / 50, 1.0)
     volume_score = min(orders / 1000, 1.0) if orders > 0 else 0
     
     # Weighted composite per ZONE_AGENT
@@ -250,227 +155,137 @@ def calculate_health_score(zone_data):
     return round(health, 1)
 
 
-def build_mvp_checklist(zone_data):
-    """
-    Build the MVP checklist for a zone with cuisine and dish type coverage.
-    Uses Anna's 7 cuisines as source of truth.
-    """
-    # Cuisine coverage (Anna's 7)
-    cuisine_coverage = {}
-    cuisine_columns = {
-        "Asian": "asian_dishes",
-        "Italian": "italian_dishes", 
-        "Indian": "indian_dishes",
-        "Healthy": "healthy_dishes",
-        "Mexican": "mexican_dishes",
-        "Middle Eastern": "middle_eastern_dishes",
-        "British": "british_dishes"
-    }
+def build_priority_actions(zone_data):
+    """Build priority recruitment actions based on cuisine gaps."""
+    actions = []
+    core_7 = zone_data.get('core_7', {})
     
-    cuisines_met = 0
-    for cuisine, col in cuisine_columns.items():
-        dish_count = zone_data.get(col, 0)
-        has_cuisine = dish_count > 0
-        if has_cuisine:
-            cuisines_met += 1
-        cuisine_coverage[cuisine.lower().replace(" ", "_")] = {
-            "has": has_cuisine,
-            "dishes": dish_count
-        }
-    
-    # Core Driver coverage (8 dish types that drive performance)
-    # We infer from cuisine presence since we don't have dish-level zone data
-    core_driver_coverage = {}
-    core_drivers_met = 0
-    
-    # Map core drivers to cuisines they require
-    core_driver_cuisine_map = {
-        "Pho": "Asian",
-        "South Asian / Indian Curry": "Indian",
-        "Biryani": "Indian", 
-        "Fried Rice": "Asian",
-        "Sushi": "Asian",
-        "Katsu": "Asian",
-        "Rice Bowl": "Asian",
-        "Noodles": "Asian"
-    }
-    
-    for driver in CORE_DRIVERS:
-        required_cuisine = core_driver_cuisine_map.get(driver, "Asian")
-        cuisine_col = cuisine_columns.get(required_cuisine, "asian_dishes")
-        cuisine_dishes = zone_data.get(cuisine_col, 0)
-        
-        # A zone likely has the dish type if it has dishes in that cuisine
-        # This is an approximation - we'd need dish-level data for exact coverage
-        has_driver = cuisine_dishes > 0
-        
-        # Determine blocking reason if missing
-        blocking_reason = None
-        if not has_driver:
-            blocking_reason = f"Blocked by missing {required_cuisine} cuisine"
-        
-        driver_key = driver.lower().replace(" ", "_").replace("/", "_")
-        core_driver_coverage[driver_key] = {
-            "has": has_driver,
-            "blocked_by": blocking_reason
-        }
-        if has_driver:
-            core_drivers_met += 1
-    
-    # Calculate progress
-    total_checks = 7 + 8  # 7 cuisines + 8 core drivers
-    checks_passed = cuisines_met + core_drivers_met
-    overall_pct = round((checks_passed / total_checks) * 100)
-    
-    # Build priority actions
-    priority_actions = []
-    
-    # Cuisine gaps
-    for cuisine, data in cuisine_coverage.items():
-        if not data["has"]:
-            cuisine_name = cuisine.replace("_", " ").title()
-            suggestions = RECRUITMENT_SUGGESTIONS.get(cuisine_name, [])[:3]
-            action = {
+    for cuisine in CORE_7:
+        cuisine_key = cuisine.lower().replace(' ', '_')
+        dish_count = core_7.get(cuisine_key, 0)
+        if dish_count == 0:
+            suggestions = RECRUITMENT_SUGGESTIONS.get(cuisine, [])[:3]
+            actions.append({
                 "type": "cuisine",
-                "gap": cuisine_name,
-                "action": f"Recruit {', '.join(suggestions)}" if suggestions else f"Recruit {cuisine_name} partner",
-                "impact": "Unlocks cuisine coverage"
-            }
-            priority_actions.append(action)
+                "gap": cuisine,
+                "action": f"Recruit {', '.join(suggestions)}" if suggestions else f"Recruit {cuisine} partner",
+                "impact": f"Adds {cuisine} coverage"
+            })
     
-    # Core driver gaps (only if cuisine is available)
-    for driver, data in core_driver_coverage.items():
-        if not data["has"] and not data.get("blocked_by"):
-            driver_name = driver.replace("_", " ").title()
-            suggestions = CORE_DRIVER_RECRUITMENT.get(driver_name, [])[:2]
-            action = {
-                "type": "core_driver",
-                "gap": driver_name,
-                "action": f"Add via {', '.join(suggestions)}" if suggestions else f"Add {driver_name}",
-                "impact": "Unlocks Core Driver"
-            }
-            priority_actions.append(action)
-    
-    # Sort actions by impact (cuisine gaps first, then core drivers)
-    priority_actions.sort(key=lambda x: 0 if x["type"] == "cuisine" else 1)
-    
-    return {
-        "cuisine_coverage": cuisine_coverage,
-        "core_driver_coverage": core_driver_coverage,
-        "progress": {
-            "cuisines": f"{cuisines_met}/7",
-            "core_drivers": f"{core_drivers_met}/8",
-            "overall_pct": overall_pct
-        },
-        "priority_actions": priority_actions[:5]  # Top 5 actions
-    }
+    return actions[:5]  # Top 5 actions
 
 
 def main():
     print("=" * 60)
-    print("ZONE DASHBOARD DATA GENERATOR")
+    print("ZONE DASHBOARD DATA GENERATOR (Unified Definitions)")
     print("=" * 60)
     print()
+    print(f"Using canonical Core 7: {CORE_7}")
+    print()
     
-    # Load existing MVP data (preserves established work)
+    # Load data sources
+    anna_df = load_anna_ground_truth()
+    gap_df = load_zone_gap_report()
     existing_mvp = load_existing_mvp_data()
+    sub_cuisines = load_snowflake_sub_cuisines()
     
-    # Load Anna's ground truth
-    anna_df = load_anna_zone_data()
+    # Create lookup from gap report by zone name
+    gap_lookup = {}
+    if gap_df is not None:
+        for _, row in gap_df.iterrows():
+            gap_lookup[row['zone']] = row
     
-    # Load dish scoring for quadrant info
-    dish_quadrants = load_dish_scoring()
-    
-    # Build combined zone list
+    # Build zone data with two-level cuisine structure
     zones = []
-    zones_with_mvp_data = 0
     
     for _, row in anna_df.iterrows():
-        zone_name = row['zone']
+        zone_name = row['zone_name']
+        zone_code = row['zone_code']
         
-        # Check if we have existing MVP data for this zone
+        # Get existing MVP data if available
         mvp_data = existing_mvp.get(zone_name, {})
+        gap_data = gap_lookup.get(zone_name, {})
         
-        # Combine Anna's ground truth with existing MVP data
+        # Core 7 cuisine counts from Anna's ground truth (SOURCE OF TRUTH)
+        core_7 = {
+            'asian': int(row.get('asian', 0) or 0),
+            'italian': int(row.get('italian', 0) or 0),
+            'indian': int(row.get('indian', 0) or 0),
+            'healthy': int(row.get('healthy', 0) or 0),
+            'mexican': int(row.get('mexican', 0) or 0),
+            'middle_eastern': int(row.get('middle_eastern', 0) or 0),
+            'british': int(row.get('british', 0) or 0),
+        }
+        
+        # Calculate core_7_count (number of cuisines with dishes > 0)
+        core_7_count = sum(1 for v in core_7.values() if v > 0)
+        
+        # Build cuisines list (Core 7 cuisines present)
+        cuisines_present = [
+            cuisine for cuisine in CORE_7 
+            if core_7.get(cuisine.lower().replace(' ', '_'), 0) > 0
+        ]
+        
+        # Get sub-cuisines from Snowflake (for granular drill-down)
+        zone_sub_cuisines = sub_cuisines.get(zone_name, {})
+        
+        # Determine if zone has orders
+        orders = mvp_data.get('order_count', 0) or 0
+        if isinstance(gap_data, pd.Series):
+            orders = orders or int(gap_data.get('orders', 0) or 0)
+        has_orders = orders > 0
+        
+        # Calculate MVP status using canonical function
+        mvp_status = get_mvp_status(core_7_count, has_orders)
+        cuisine_pass = get_cuisine_pass(core_7_count)
+        
+        # Build zone data structure
         zone_data = {
-            # Identity (from Anna)
+            # Identity
             "zone": zone_name,
-            "zone_code": row.get('zone_code', ''),
+            "zone_code": zone_code,
             "region": row.get('region', 'Unknown'),
             "city": row.get('city', ''),
             "large_city": row.get('large_city', ''),
             
-            # Supply metrics (from Anna's ground truth)
-            "partners": int(row.get('partners', 0)),
-            "cuisines_count": int(row.get('cuisines_count', 0)),
-            "total_dishes": int(row.get('total_dishes', 0)),
+            # TWO-LEVEL CUISINE STRUCTURE
+            "core_7": core_7,
+            "sub_cuisines": zone_sub_cuisines,
             
-            # Cuisine breakdown (from Anna - SOURCE OF TRUTH)
-            "asian_dishes": int(row.get('asian_dishes', 0)),
-            "italian_dishes": int(row.get('italian_dishes', 0)),
-            "indian_dishes": int(row.get('indian_dishes', 0)),
-            "healthy_dishes": int(row.get('healthy_dishes', 0)),
-            "mexican_dishes": int(row.get('mexican_dishes', 0)),
-            "middle_eastern_dishes": int(row.get('middle_eastern_dishes', 0)),
-            "british_dishes": int(row.get('british_dishes', 0)),
+            # Cuisine summary
+            "core_7_count": core_7_count,
+            "cuisines": cuisines_present,
+            "cuisine_pass": cuisine_pass,
             
-            # Gap analysis (from Anna)
-            "cuisines_available": parse_list_field(row.get('cuisines_available', '[]')),
-            "missing_essential": parse_list_field(row.get('missing_essential_cuisines', '[]')),
-            "missing_recommended": parse_list_field(row.get('missing_recommended_cuisines', '[]')),
-            "essential_coverage": row.get('essential_cuisine_coverage', '0%'),
-            "dish_coverage": row.get('dish_coverage', '0%'),
+            # MVP status (using canonical tiered approach)
+            "mvp_status": mvp_status,
             
-            # Performance metrics - prefer existing MVP data, fall back to Anna's
-            "orders": mvp_data.get('order_count') or int(row.get('orders', 0)),
+            # Supply metrics
+            "partners": int(row.get('num_brands', 0) or 0),
+            "total_dishes": int(row.get('total_dishes', 0) or 0),
+            
+            # Performance metrics (from existing MVP data)
+            "orders": orders,
             "customer_count": mvp_data.get('customer_count', 0),
             "repeat_rate": mvp_data.get('repeat_rate', 0),
-            "avg_rating": mvp_data.get('avg_rating') or (row.get('avg_rating') if pd.notna(row.get('avg_rating')) else None),
-            
-            # MVP status - USE EXISTING if available (preserves established work)
-            "mvp_status": mvp_data.get('mvp_status', 'Not Started'),
+            "avg_rating": mvp_data.get('avg_rating'),
             "rating_pass": mvp_data.get('rating_pass', False),
             "repeat_pass": mvp_data.get('repeat_pass', False),
-            "cuisine_pass": mvp_data.get('cuisine_pass', False),
             
-            # Recruitment priority (from Anna's analysis)
-            "recruitment_priority": row.get('recruitment_priority', 'Low'),
+            # Flags
+            "has_order_data": has_orders,
         }
         
-        # If we have existing MVP data, mark it
-        if mvp_data:
-            zones_with_mvp_data += 1
-            zone_data['has_order_data'] = True
-        else:
-            zone_data['has_order_data'] = False
-            # For zones without order data, use supply-based status (NOT "Developing" - that's for live zones)
-            if zone_data['partners'] == 0:
-                zone_data['mvp_status'] = 'Not Started'
-            else:
-                # Has partners but no orders yet - "Supply Only" status
-                zone_data['mvp_status'] = 'Supply Only'
-        
-        # Calculate health score using combined data
+        # Calculate health score
         zone_data['health_score'] = calculate_health_score(zone_data)
         
-        # Calculate average dishes per partner
-        if zone_data['partners'] > 0:
-            zone_data['avg_dishes_per_partner'] = round(zone_data['total_dishes'] / zone_data['partners'], 1)
-        else:
-            zone_data['avg_dishes_per_partner'] = 0
-        
-        # Build MVP checklist for this zone
-        zone_data['mvp_checklist'] = build_mvp_checklist(zone_data)
+        # Build priority actions
+        zone_data['priority_actions'] = build_priority_actions(zone_data)
         
         zones.append(zone_data)
     
     # Sort by orders (descending), then by health score
     zones.sort(key=lambda x: (-(x['orders'] or 0), -x['health_score']))
-    
-    print(f"\nCombined data:")
-    print(f"  Total zones (Anna's ground truth): {len(zones)}")
-    print(f"  Zones with order/MVP data: {zones_with_mvp_data}")
-    print(f"  Zones without order data: {len(zones) - zones_with_mvp_data}")
     
     # Calculate summary statistics
     mvp_counts = {}
@@ -478,57 +293,29 @@ def main():
         status = z['mvp_status']
         mvp_counts[status] = mvp_counts.get(status, 0) + 1
     
-    priority_counts = {}
-    for z in zones:
-        priority = z['recruitment_priority']
-        priority_counts[priority] = priority_counts.get(priority, 0) + 1
-    
-    # Region breakdown
-    region_stats = {}
-    for z in zones:
-        region = z['region']
-        if region not in region_stats:
-            region_stats[region] = {'zone': 0, 'partners': 0, 'orders': 0, 'health_scores': []}
-        region_stats[region]['zone'] += 1
-        region_stats[region]['partners'] += z['partners']
-        region_stats[region]['orders'] += z['orders'] or 0
-        region_stats[region]['health_scores'].append(z['health_score'])
-    
-    # Calculate average health score and dishes per partner per region
-    for region in region_stats:
-        scores = region_stats[region]['health_scores']
-        region_stats[region]['health_score'] = round(sum(scores) / len(scores), 1) if scores else 0
-        del region_stats[region]['health_scores']
-        # Avg dishes per partner for region
-        if region_stats[region]['partners'] > 0:
-            total_dishes = sum(z['total_dishes'] for z in zones if z['region'] == region)
-            region_stats[region]['avg_dishes_per_partner'] = round(total_dishes / region_stats[region]['partners'], 1)
-        else:
-            region_stats[region]['avg_dishes_per_partner'] = 0
-    
     # Zones with orders vs without
     zones_with_orders = len([z for z in zones if z['orders'] and z['orders'] > 0])
     zones_without_orders = len(zones) - zones_with_orders
     
-    # Top zones
+    # Top zones by orders
     top_by_orders = [
-        {'zone': z['zone'], 'orders': z['orders'], 'partners': z['partners'], 
-         'cuisines_count': z['cuisines_count'], 'repeat_rate': z.get('repeat_rate', 0)}
+        {'zone': z['zone'], 'orders': z['orders'], 'core_7_count': z['core_7_count'],
+         'mvp_status': z['mvp_status'], 'repeat_rate': z.get('repeat_rate', 0)}
         for z in zones if z['orders'] and z['orders'] > 0
     ][:15]
     
+    # Top zones by health
     top_by_health = sorted(zones, key=lambda x: -x['health_score'])[:15]
     top_by_health = [
-        {'zone': z['zone'], 'health_score': z['health_score'], 'partners': z['partners'],
-         'cuisines_count': z['cuisines_count'], 'orders': z['orders']}
+        {'zone': z['zone'], 'health_score': z['health_score'], 'core_7_count': z['core_7_count'],
+         'mvp_status': z['mvp_status'], 'orders': z['orders']}
         for z in top_by_health
     ]
     
-    # Zones needing attention (have orders but not MVP Ready)
+    # Zones needing attention (high orders but not MVP Ready)
     attention_zones = [
-        {'zone': z['zone'], 'orders': z['orders'], 'partners': z['partners'],
-         'cuisines_count': z['cuisines_count'], 'mvp_status': z['mvp_status'],
-         'missing_essential': z['missing_essential'][:3] if z['missing_essential'] else []}
+        {'zone': z['zone'], 'orders': z['orders'], 'core_7_count': z['core_7_count'],
+         'mvp_status': z['mvp_status'], 'missing_cuisines': [c for c in CORE_7 if z['core_7'].get(c.lower().replace(' ', '_'), 0) == 0][:3]}
         for z in zones 
         if z['orders'] and z['orders'] > 100 and z['mvp_status'] != 'MVP Ready'
     ][:20]
@@ -537,47 +324,49 @@ def main():
     output = {
         "generated_at": pd.Timestamp.now().isoformat(),
         "data_sources": {
-            "mvp_data": "zone_mvp_status.json (established MVP calculations)",
-            "ground_truth": "zone_gap_report.csv (Anna's 1,306 zones)",
-            "dish_scoring": "dish_scoring_anna_aligned.csv (quadrant classifications)"
+            "core_7_counts": "anna_zone_dish_counts.csv (Anna's ground truth)",
+            "sub_cuisines": "ALL_DINNEROO_ORDERS.csv (Snowflake)",
+            "performance": "zone_mvp_status.json (existing calculations)",
         },
         "methodology": {
-            "note": "MVP status preserved from existing calculations where available",
-            "source_of_truth": "Anna's categorisations",
-            "cuisines": ANNA_CUISINES,
-            "core_drivers": CORE_DRIVERS,
-            "preference_drivers": PREFERENCE_DRIVERS,
-            "demand_boosters": DEMAND_BOOSTERS,
+            "definitions_module": "scripts/utils/definitions.py",
+            "core_7_cuisines": CORE_7,
+            "mvp_tiers": {
+                "MVP Ready": "5+ Core 7 cuisines (North star)",
+                "Near MVP": "4 cuisines (Almost there)",
+                "Progressing": "3 cuisines (Data inflection point)",
+                "Developing": "1-2 cuisines (Early stage)",
+                "Supply Only": "Has partners, no orders",
+                "Not Started": "No partners",
+            },
             "health_score_weights": {
-                "repeat_rate": "30% (PRIMARY - families returning)",
-                "satisfaction": "25% (rating proxy)",
+                "repeat_rate": "30%",
+                "satisfaction": "25%",
                 "cuisine_coverage": "20%",
                 "dish_variety": "15%",
-                "volume": "10% (LOWEST - outcome not driver)"
+                "volume": "10%",
             }
         },
         "summary": {
             "total_zones": len(zones),
             "zones_with_orders": zones_with_orders,
             "zones_without_orders": zones_without_orders,
-            "zones_with_mvp_data": zones_with_mvp_data,
-            "zones_with_partners": len([z for z in zones if z['partners'] > 0]),
-            "mvp_status": mvp_counts,
-            "recruitment_priority": priority_counts,
+            "mvp_status_breakdown": mvp_counts,
             "total_partners": sum(z['partners'] for z in zones),
             "total_dishes": sum(z['total_dishes'] for z in zones),
-            "total_orders": sum(z['orders'] or 0 for z in zones),
             "avg_health_score": round(sum(z['health_score'] for z in zones) / len(zones), 1),
-            "avg_dishes_per_partner": round(sum(z['total_dishes'] for z in zones) / max(sum(z['partners'] for z in zones), 1), 1),
         },
-        "region_breakdown": region_stats,
+        "cuisine_coverage": {
+            cuisine: len([z for z in zones if z['core_7'].get(cuisine.lower().replace(' ', '_'), 0) > 0])
+            for cuisine in CORE_7
+        },
         "top_zones_by_orders": top_by_orders,
         "top_zones_by_health": top_by_health,
         "zones_needing_attention": attention_zones,
         "zones": zones
     }
     
-    # Write output
+    # Write zone_analysis.json
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output_file = OUTPUT_DIR / "zone_analysis.json"
     
@@ -585,14 +374,57 @@ def main():
         json.dump(output, f, indent=2, default=str)
     
     print(f"\nOutput written to {output_file}")
-    print(f"\nMVP Status breakdown:")
-    for status, count in sorted(mvp_counts.items(), key=lambda x: -x[1]):
-        print(f"    {status}: {count}")
     
-    print(f"\nMVP Checklist added to all {len(zones)} zones")
-    print(f"  - Cuisine coverage (Anna's 7 categories)")
-    print(f"  - Core Driver coverage (8 dish types)")
-    print(f"  - Priority actions for each zone")
+    # Also update zone_mvp_status.json with new structure
+    mvp_status_file = OUTPUT_DIR / "zone_mvp_status.json"
+    mvp_status_data = [
+        {
+            "zone": z['zone'],
+            "zone_code": z['zone_code'],
+            "core_7": z['core_7'],
+            "sub_cuisines": z['sub_cuisines'],
+            "core_7_count": z['core_7_count'],
+            "cuisine_count": z['core_7_count'],  # Alias for backwards compatibility
+            "cuisines": z['cuisines'],
+            "cuisine_pass": z['cuisine_pass'],
+            "mvp_status": z['mvp_status'],
+            "orders": z['orders'],
+            "order_count": z['orders'],  # Alias for backwards compatibility
+            "repeat_rate": z['repeat_rate'],
+            "avg_rating": z['avg_rating'],
+            "rating_pass": z['rating_pass'],
+            "repeat_pass": z['repeat_pass'],
+            "partners": z['partners'],
+            "total_dishes": z['total_dishes'],
+            "health_score": z['health_score'],
+        }
+        for z in zones
+    ]
+    
+    with open(mvp_status_file, 'w') as f:
+        json.dump(mvp_status_data, f, indent=2, default=str)
+    
+    print(f"Updated {mvp_status_file}")
+    
+    # Print summary
+    print(f"\n{'='*60}")
+    print("SUMMARY")
+    print('='*60)
+    print(f"\nMVP Status Breakdown:")
+    for status in ['MVP Ready', 'Near MVP', 'Progressing', 'Developing', 'Supply Only', 'Not Started']:
+        count = mvp_counts.get(status, 0)
+        print(f"  {status:<15} {count:>5} zones")
+    
+    print(f"\nCuisine Coverage (of {len(zones)} zones):")
+    for cuisine in CORE_7:
+        count = output['cuisine_coverage'][cuisine]
+        pct = count / len(zones) * 100
+        print(f"  {cuisine:<18} {count:>4} zones ({pct:>5.1f}%)")
+    
+    print(f"\nTwo-level structure enabled:")
+    print(f"  - Core 7 for MVP calculations")
+    print(f"  - Sub-cuisines for drill-down analysis")
+
 
 if __name__ == "__main__":
     main()

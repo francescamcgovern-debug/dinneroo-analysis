@@ -1,0 +1,84 @@
+dish_type,dropoff_requests,post_order_requests,ratings_requests,open_text_requests,og_wishlist_pct,barrier_signals,latent_demand_raw,latent_demand_score
+Pie,5,1,0,6,17.33,0,1.57,3
+Noodles,12,2,1,15,12.87,0,1.64,3
+Vegetarian,44,4,1,49,0.0,0,2.21,3
+Kids Menu,61,8,5,74,0.0,0,2.25,3
+Gnocchi,0,0,0,0,6.93,0,0.52,2
+Fish & Chips,5,0,0,5,8.91,0,0.89,2
+Burger,18,0,0,18,8.17,0,1.42,2
+Pasta,27,1,1,29,1.24,0,1.4,2
+Healthy,21,3,0,24,0.0,0,1.08,2
+Pizza,23,2,0,25,3.71,0,1.4,2
+Katsu,6,2,1,9,11.14,0,1.24,2
+Jerk Chicken,0,0,0,0,9.41,0,0.71,2
+Ramen,3,0,0,3,8.91,0,0.8,2
+Thai Curry,0,1,0,1,19.06,0,1.47,2
+Salad,13,3,4,20,0.0,0,0.9,2
+Lasagne,6,0,0,6,15.59,0,1.44,2
+Filled Pasta,0,0,0,0,8.66,0,0.65,2
+Soup,3,1,4,8,9.16,0,1.05,2
+Risotto,0,0,0,0,15.1,0,1.13,2
+Casserole,1,0,0,1,12.34,0,0.97,2
+Cous Cous,0,0,0,0,6.93,0,0.52,2
+Pho,9,5,4,18,0.0,0,0.81,2
+Tagine,0,0,0,0,9.9,0,0.74,2
+Paella,0,0,0,0,14.85,0,1.11,2
+Chilli,3,0,0,3,5.2,0,0.53,2
+Stroganoff,0,0,0,0,10.15,0,0.76,2
+Jacket Potato,0,0,0,0,9.9,0,0.74,2
+Chinese,26,0,0,26,0.0,0,1.17,2
+Curry,9,5,1,15,5.94,0,1.12,2
+Tacos,1,0,0,1,10.64,0,0.84,2
+Grilled Chicken,4,1,0,5,7.92,0,0.82,2
+Indian,30,1,0,31,0.0,0,1.4,2
+Chinese Family Meal,0,0,0,0,0.0,0,0.0,1
+Roast Dinner,1,0,0,1,4.7,0,0.4,1
+Udon,1,0,0,1,0.0,0,0.05,1
+Thai,8,1,0,9,0.0,0,0.4,1
+Pad Thai,1,0,0,1,0.0,0,0.05,1
+Baked Pasta,0,0,0,0,5.2,0,0.39,1
+Poke Bowl,1,0,0,1,0.0,0,0.05,1
+Nachos,0,0,1,1,0.0,0,0.05,1
+Rotisserie Chicken,0,0,0,0,0.0,0,0.0,1
+Hummus Plate,0,0,1,1,0.0,0,0.05,1
+Shawarma,2,0,0,2,0.0,0,0.09,1
+Grilled Chicken with Sides,0,0,0,0,0.0,0,0.0,1
+Sweet & Sour Chicken,0,0,0,0,0.0,0,0.0,1
+Teriyaki,0,0,0,0,0.0,0,0.0,1
+Buddha Bowl,0,0,0,0,0.0,0,0.0,1
+Sushi,6,0,0,6,0.0,0,0.27,1
+Japanese,8,0,0,8,0.0,0,0.36,1
+Halloumi Wrap,0,0,0,0,0.0,0,0.0,1
+Sandwich,1,0,0,1,2.97,0,0.27,1
+Mac & Cheese,0,0,0,0,0.0,0,0.0,1
+Stir Fry,0,0,0,0,0.0,0,0.0,1
+Butter Chicken,0,0,0,0,0.0,0,0.0,1
+Burrito,0,0,0,0,0.0,0,0.0,1
+Mediterranean,3,0,0,3,0.0,0,0.14,1
+Mexican,9,0,0,9,0.0,0,0.4,1
+Dim Sum,2,0,0,2,0.0,0,0.09,1
+Wrap,1,0,1,2,0.0,0,0.09,1
+Cottage Pie,0,0,0,0,0.0,0,0.0,1
+Shepherd's Pie,3,0,0,3,0.0,0,0.14,1
+Greek Mezze,0,0,0,0,0.0,0,0.0,1
+Bangers & Mash,0,0,0,0,6.19,0,0.46,1
+Korean Fried Chicken,0,0,0,0,0.0,0,0.0,1
+Wings,2,0,0,2,0.0,0,0.09,1
+Souvlaki,0,0,0,0,0.0,0,0.0,1
+Bowl,0,0,0,0,0.0,0,0.0,1
+Rice Bowl,0,0,0,0,4.21,0,0.32,1
+Laksa,1,0,0,1,0.0,0,0.05,1
+Tikka Masala,0,0,0,0,0.0,0,0.0,1
+Veggie Fajitas,0,0,0,0,0.0,0,0.0,1
+Fajitas,0,0,0,0,5.2,0,0.39,1
+Korma,0,0,0,0,0.0,0,0.0,1
+Grain Bowl,0,0,0,0,0.0,0,0.0,1
+Bibimbap,0,0,0,0,0.0,0,0.0,1
+Daal,4,0,0,4,0.0,0,0.18,1
+Fried Rice,1,0,1,2,0.0,0,0.09,1
+Biryani,1,0,1,2,0.0,0,0.09,1
+Chicken Pie,0,0,0,0,0.0,0,0.0,1
+Chicken Nuggets,2,0,0,2,0.0,0,0.09,1
+Samosa,1,0,0,1,0.0,0,0.05,1
+Quesadilla,0,0,0,0,0.0,0,0.0,1
+Spring Rolls,1,0,0,1,0.0,0,0.05,1

@@ -1,0 +1,49 @@
+dish_type,cuisine,on_dinneroo,latent_demand_score,non_dinneroo_score,demand_track_score,latent_mentions_raw,wishlist_pct_raw,non_dinneroo_orders_raw,gap_type,gap_score
+Pasta,Italian,True,5.0,5.0,5.0,29,1.24,11440.0,No Gap,2
+Lasagne,Italian,True,5.0,5.0,5.0,6,15.59,11440.0,No Gap,2
+Pizza,Italian,True,5.0,5.0,5.0,25,3.71,11440.0,No Gap,2
+Curry,Indian,True,5.0,5.0,5.0,15,5.94,8699.0,No Gap,2
+Ramen,Japanese,True,5.0,4.0,4.5,3,8.91,8361.0,No Gap,2
+Burger,American,True,5.0,4.0,4.5,18,8.17,8140.0,No Gap,2
+Katsu,Japanese,True,5.0,4.0,4.5,9,11.14,8361.0,No Gap,2
+Biryani,Indian,True,3.0,5.0,4.0,2,0.0,8699.0,No Gap,2
+Sushi,Japanese,True,4.0,4.0,4.0,6,0.0,8361.0,No Gap,2
+Pho,Vietnamese,True,4.0,4.0,4.0,18,0.0,4702.0,No Gap,2
+Fried Rice,Chinese,True,3.0,5.0,4.0,2,0.0,8412.0,Supply Gap,5
+Dim Sum,Chinese,False,3.0,5.0,4.0,2,0.0,8412.0,Supply Gap,5
+Bangers & Mash,British,False,4.0,3.0,3.5,0,6.19,3087.0,No Gap,2
+Shepherd's Pie,British,True,4.0,3.0,3.5,3,0.0,3087.0,No Gap,2
+Tacos,Mexican,True,5.0,2.0,3.5,1,10.64,972.0,Quality Gap,4
+Korma,Indian,False,2.0,5.0,3.5,0,0.0,8699.0,No Gap,2
+Tikka Masala,Indian,True,2.0,5.0,3.5,0,0.0,8699.0,No Gap,2
+Roast Dinner,British,True,4.0,3.0,3.5,1,4.7,3087.0,No Gap,2
+Chinese Family Meal,Chinese,False,2.0,5.0,3.5,0,0.0,8412.0,Supply Gap,5
+Pad Thai,Thai,True,3.0,4.0,3.5,1,0.0,4144.0,No Gap,2
+Butter Chicken,Indian,True,2.0,5.0,3.5,0,0.0,8699.0,No Gap,2
+Teriyaki,Japanese,True,2.0,4.0,3.0,0,0.0,8361.0,No Gap,2
+Salad,Healthy/Fresh,True,4.0,2.0,3.0,20,0.0,1594.0,No Gap,2
+Fajitas,Mexican,True,4.0,2.0,3.0,0,5.2,972.0,Quality Gap,4
+Noodles,Global,True,5.0,1.0,3.0,15,12.87,25.0,No Gap,2
+Rice Bowl,Healthy/Fresh,True,4.0,2.0,3.0,0,4.21,1594.0,No Gap,2
+Fish & Chips,Global,True,5.0,1.0,3.0,5,8.91,25.0,No Gap,2
+Souvlaki,Greek,False,2.0,3.0,2.5,0,0.0,1890.0,No Gap,2
+Chicken Pie,British,True,2.0,3.0,2.5,0,0.0,3087.0,No Gap,2
+Greek Mezze,Greek,False,2.0,3.0,2.5,0,0.0,1890.0,No Gap,2
+Cottage Pie,British,False,2.0,3.0,2.5,0,0.0,3087.0,No Gap,2
+Bibimbap,Korean,False,2.0,3.0,2.5,0,0.0,1807.0,No Gap,2
+Poke Bowl,Healthy/Fresh,True,3.0,2.0,2.5,1,0.0,1594.0,No Gap,2
+Korean Fried Chicken,Korean,True,2.0,3.0,2.5,0,0.0,1807.0,No Gap,2
+Shawarma,Middle Eastern,True,3.0,2.0,2.5,2,0.0,971.0,Supply Gap,5
+Buddha Bowl,Healthy/Fresh,False,2.0,2.0,2.0,0,0.0,1594.0,No Gap,2
+Veggie Fajitas,Mexican,True,2.0,2.0,2.0,0,0.0,972.0,Quality Gap,4
+Burrito,Mexican,False,2.0,2.0,2.0,0,0.0,972.0,Quality Gap,4
+Quesadilla,Mexican,True,2.0,2.0,2.0,0,0.0,972.0,Quality Gap,4
+Wrap,Global,True,3.0,1.0,2.0,2,0.0,25.0,No Gap,2
+Bowl,Healthy/Fresh,True,2.0,2.0,2.0,0,0.0,1594.0,No Gap,2
+Grain Bowl,Healthy/Fresh,True,2.0,2.0,2.0,0,0.0,1594.0,No Gap,2
+Stir Fry,Global,True,2.0,1.0,1.5,0,0.0,25.0,No Gap,2
+Mac & Cheese,Global,True,2.0,1.0,1.5,0,0.0,25.0,No Gap,2
+Sweet & Sour Chicken,Global,True,2.0,1.0,1.5,0,0.0,25.0,No Gap,2
+Grilled Chicken with Sides,Global,True,2.0,1.0,1.5,0,0.0,25.0,No Gap,2
+Halloumi Wrap,Global,True,2.0,1.0,1.5,0,0.0,25.0,No Gap,2
+Rotisserie Chicken,Global,False,2.0,1.0,1.5,0,0.0,25.0,No Gap,2

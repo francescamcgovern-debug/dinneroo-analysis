@@ -1,0 +1,25 @@
+high_level_dish,family_rank,family_score,kids_happy,fussy_eater_friendly,total_orders,adult_satisfaction,portions_adequate,item_count,partners,granular_types
+Rice Bowl,1,4.8,0.8170163170163169,3.5,10914.0,0.8472371967654987,0.8306603773584906,21,"Banana Tree, Giggling Squid, Itsu, Kokoro, Pho, TUK TUK-SGroup, Taste Of Hong Kong-DCN, Xian Street Food, Zumuku","Other Rice Bowl, Sweet & Sour Rice Bowl, Teriyaki Rice Bowl, Teriyaki Rice Bowl Sweet Chilli Rice Bowl Sweet & Sour Rice Bowl Korean Chilli Rice Bowl, Thai Rice Bowl Teriyaki Rice Bowl"
+South Asian / Indian Curry,2,4.6,0.8148148148148148,3.0,5897.0,0.9452054794520548,0.8442906574394463,13,"Chaska, Dishoom, Kricket, Saravana Bhavan, Tadka House, Tiffin Tin","Aloo Mutter Curry, Butter Chicken Curry, Mattar Paneer Curry, Other Curry, Tikka Masala Curry"
+Fried Rice,2,4.6,0.8,4.0,4958.0,0.9054878048780488,0.8929663608562691,5,"Asia Villa, Pho, TUK TUK-SGroup, Xian Street Food","Special Fried Rice, Stir-Fried Rice, Sweet & Sour Fried Rice, Wok-Fried Rice"
+Biryani,4,4.1000000000000005,1.0,3.0,458.0,1.0,0.7142857142857143,6,"Chaska, Dishoom, Tadka House",Biryani
+Pasta,5,4.050000000000001,0.7936507936507936,5.0,1342.0,0.8333333333333334,0.7777777777777778,23,"Bella Italia, Bill's, Cacciari's, Milano, PIZAZA-SGroup, PizzaExpress, Prezzo, SOYO-SGroup","Alfredo, Bolognese, Lasagne Mac & Cheese Rigatoni Alfredo, Lasagne Penne, Mac & Cheese, Pasta Bake, Penne, Rigatoni, Rigatoni Carbonara, Rose Pasta"
+Pho,6,4.0,0.8032786885245902,3.0,4530.0,0.9066937119675456,0.8782961460446247,1,Pho,Pho
+Fajitas,7,3.95,1.0,3.0,221.0,0.8947368421052632,0.631578947368421,3,Las Iguanas,Fajitas
+Katsu,8,3.8000000000000003,0.7806004618937644,4.0,11730.0,0.8405797101449275,0.7034883720930233,9,"Banana Tree, Iro Sushi, Itsu, Kokoro, Wagamama, Zumuku, Zumuku Sushi",Katsu
+Noodles,9,3.7500000000000004,0.7644607843137254,3.0,5049.0,0.9089799240368963,0.792334388077983,13,"Asia Villa, Banana Tree, Iro Sushi, Itsu, Kokoro, Pho, SOYO-SGroup, Ting Thai, Zumuku","Chow Mein, Egg Fried Noodles, Korean Noodles Teriyaki Noodles Noodle Soup, Pad Thai, Rice Noodles, Teriyaki Noodles Sweet Chilli Noodles Sweet Sour Noodles Korean Chilli Noodles, Wok-Fried Noodles, Yakisoba"
+Pizza,10,3.5,0.7288135593220338,5.0,548.0,0.7659574468085106,0.9787234042553192,5,"Milano, PizzaExpress, Prezzo",Pizza
+Shawarma,11,3.3500000000000005,0.7333333333333333,3.0,1355.0,0.8695652173913043,0.7391304347826086,3,Bill's,Shawarma
+Quesadilla,12,3.3499999999999996,1.0,3.0,57.0,0.6666666666666666,0.0,1,Tula Ireland,Quesadilla
+East Asian Curry,13,3.1500000000000004,0.8,,,0.8596491228070176,0.7280701754385965,11,"Asia Villa, Bill's, Giggling Squid, Pho, Ting Thai, Wagamama, Zumuku","Massaman Curry, Other Curry, Raisukare Curry, Thai Green Curry, Thai Green Curry Thai Red Curry, Yellow Curry"
+Other,14,3.0500000000000007,0.8110516934046346,,,0.8375,0.7520833333333333,4,"Shaku Maku, TUK TUK-SGroup, Umi Falafel, Zaatar Rathmines","Chicken Wings, Maqluba, Mezze, Other"
+Sushi,15,3.0500000000000003,0.6923076923076923,3.0,1043.0,0.8650793650793651,0.9603174603174603,1,Itsu,Sushi
+Lasagne,16,2.7,0.7,3.0,931.0,0.7567567567567568,0.7567567567567568,3,"Bella Italia, Cacciari's, SOYO-SGroup",Lasagne
+Chilli,17,2.15,0.7,,,0.826530612244898,0.6145833333333334,3,Las Iguanas,Chilli
+Grain Bowl,18,1.8,,3.0,192.0,,,17,"Farmer J, LEON, Remedy Kitchen, The Salad Project, Yacob's Kitchen, atis","Grain Bowl, Shawarma"
+Shepherd's Pie,18,1.8,,3.0,333.0,,,1,Bill's,Shepherd's Pie
+Burrito / Burrito Bowl,20,1.5999999999999999,,3.0,3.0,,,3,"Tula Ireland, Zambrero UK",Burrito / Burrito Bowl
+Tacos,20,1.5999999999999999,,3.0,62.0,,,3,"Tula Ireland, Zambrero UK",Tacos
+Nachos,22,1.4,,,,,,1,Zambrero UK,Nachos
+Protein & Veg,22,1.4,,,,,,4,"Cocotte, Shaku Maku",Protein & Veg
+Poke,22,1.4,,,,,,1,Itsu,Poke

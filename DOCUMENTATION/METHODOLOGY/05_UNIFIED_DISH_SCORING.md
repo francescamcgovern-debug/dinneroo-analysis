@@ -1,10 +1,10 @@
-# Unified Dish Scoring Framework v2.0
+# Unified Dish Scoring Framework v3.1
 
 ## Overview
 
 This framework scores dishes using a **two-track approach** that works for both existing Dinneroo dishes (with data) and potential new dishes (without data). 
 
-**Key Innovation:** Factor weights are **validated through correlation analysis** - only factors that demonstrably impact dish success are included.
+**Key Innovation:** Simplified to 5 core factors with **Performance weighted higher (60%)** because we have more reliable behavioral data from the trial period.
 
 ---
 
@@ -13,29 +13,31 @@ This framework scores dishes using a **two-track approach** that works for both 
 ```
 UNIFIED DISH SCORE (1-5 scale)
 │
-├── PERFORMANCE TRACK (50%) ─────────────────────────────────
+├── PERFORMANCE TRACK (60%) ─────────────────────────────────
 │   │   "How well does this dish perform?"
 │   │   Source: Snowflake orders + Survey data
 │   │
-│   ├── Normalized Sales (10%)
-│   ├── Zone Ranking Strength (10%)
-│   ├── Deliveroo Rating (10%)
-│   ├── Repeat Intent (5%)
-│   ├── Kids Full & Happy (7.5%)
-│   └── Liked/Loved It (7.5%)
+│   ├── Orders per Zone (20%)    - Volume normalized by availability
+│   ├── Rating (20%)              - Customer satisfaction
+│   └── Kids Happy (20%)          - Core Dinneroo target metric
 │
-└── OPPORTUNITY TRACK (50%) ─────────────────────────────────
+└── OPPORTUNITY TRACK (40%) ─────────────────────────────────
     │   "How much potential does this dish have?"
-    │   Source: Latent demand signals + Validated fit factors
+    │   Source: Latent demand signals
     │
-    ├── Latent Demand Score (25%)
-    │   └── Combined from: open-text mentions, OG wishlist, barriers
-    │
-    └── Validated Fit Factors (25%)
-        ├── Adult Appeal (10.25%)
-        ├── Balanced/Guilt-Free (9.25%)
-        └── Fussy Eater Friendly (5.5%)
+    ├── Latent Demand (20%)       - What families want but can't get
+    └── Non-Dinneroo Demand (20%) - Items customers order elsewhere
 ```
+
+### Changes from v2.0
+
+| Aspect | v2.0 | v3.1 |
+|--------|------|------|
+| Factors | 10 | 5 |
+| Track split | 50/50 | 60/40 |
+| Kids Happy | 7.5% | 20% (elevated) |
+| Latent demand | 25% | 20% |
+| Fit factors | Adult appeal, balanced, fussy eater | Removed (captured in latent demand) |
 
 ---
 
@@ -305,38 +307,38 @@ Unified Score = Opportunity Score (normalized to 1-5 scale)
 | Tier | Score | Label | Action |
 |------|-------|-------|--------|
 | **Tier 1** | 4.0+ | Must-Have | Essential for every MVP zone |
-| **Tier 2** | 3.5-3.99 | Should-Have | Important for zone strength |
-| **Tier 3** | 3.0-3.49 | Nice-to-Have | Good for variety |
-| **Tier 4** | <3.0 | Monitor | Investigate or deprioritize |
+| **Tier 2** | 3.0-3.49 | Should-Have | Strong contributor, high priority |
+| **Tier 3** | 2.5-2.99 | Nice-to-Have | Add if resources allow |
+| **Tier 4** | <2.5 | Monitor | Watch for changes, don't prioritize |
 
 ---
 
-## 2x2 Quadrant Analysis (Action-Oriented)
+## 2x2 Quadrant Analysis (Anna's Official Names)
 
 ### For Dishes ON Dinneroo (with performance data)
 
 Plot dishes on **Performance vs Opportunity** axes:
 
 ```
-                    HIGH OPPORTUNITY
+                    HIGH OPPORTUNITY (≥3.0)
                           │
-         DEVELOP          │        PRIORITY
-    (Good fit, not        │    (Proven winner)
-     selling - why?)      │    
-                          │    ACTION: Expand aggressively
-    ACTION: Fix issues,   │
-    improve quality       │
+    PREFERENCE DRIVERS    │      CORE DRIVERS
+    (High want, low       │    (Proven winner)
+     volume - build it)   │    
+                          │    ACTION: Protect & expand
+    ACTION: Build volume  │
+                          │
                           │
     ──────────────────────┼──────────────────────
                           │
-         MONITOR          │        PROTECT
-    (Not fit, not         │    (Selling well but 
-     selling)             │     limited opportunity)
+      DEPRIORITISED       │    DEMAND BOOSTERS
+    (Low want, low        │    (Volume exists but 
+     volume)              │     limited demand)
                           │    
-    ACTION: Watch,        │    ACTION: Maintain quality,
-    deprioritize          │    don't over-invest
+    ACTION: Don't invest  │    ACTION: Improve demand
+                          │    signals
                           │
-                    LOW OPPORTUNITY
+                    LOW OPPORTUNITY (<3.0)
 ```
 
 ### For Dishes NOT on Dinneroo (no performance data)
@@ -345,38 +347,51 @@ Since these dishes have no performance data, we use **opportunity score only**:
 
 | Quadrant | Opportunity | What To Do |
 |----------|-------------|------------|
-| **Prospect** | High (≥3.0) | Expansion opportunity - recruit partners for these dishes |
-| **Monitor** | Low (<3.0) | Low priority for expansion |
+| **Preference Drivers** | High (≥3.0) | Expansion opportunity - recruit partners for these dishes |
+| **Deprioritised** | Low (<3.0) | Low priority for expansion |
 
-### Quadrant Actions Summary
+### Quadrant Actions Summary (v3.1)
 
 | Quadrant | Performance | Opportunity | What To Do |
 |----------|-------------|-------------|------------|
-| **Priority** | High (≥3.5) | High (≥3.0) | Expand aggressively - these are your winners |
-| **Protect** | High (≥3.5) | Low (<3.0) | Maintain quality, don't over-invest in expansion |
-| **Develop** | Low (<3.5) | High (≥3.0) | Investigate issues, improve quality, fix problems |
-| **Prospect** | N/A (not on platform) | High (≥3.0) | Recruit partners - high expansion potential |
-| **Monitor** | Low (<3.5) or N/A | Low (<3.0) | Watch for changes, deprioritize for now |
+| **Core Drivers** | High (≥3.0) | High (≥3.0) | Protect and expand - these are your winners |
+| **Demand Boosters** | High (≥3.0) | Low (<3.0) | Volume exists, improve demand signals |
+| **Preference Drivers** | Low (<3.0) | High (≥3.0) | High customer want, build volume |
+| **Deprioritised** | Low (<3.0) | Low (<3.0) | Don't invest resources here |
 
 ---
 
 ## Implementation
 
 ### Config File
-`config/dish_scoring_unified.json`
+`config/scoring_framework_v3.json`
 
 ### Scoring Script
-`scripts/phase2_analysis/01_score_dishes.py`
+`scripts/phase2_analysis/regenerate_dish_scores_v3_1.py`
 
 ### Outputs
-- `DATA/3_ANALYSIS/priority_100_unified.csv` - Master list (100 dishes)
+- `DATA/3_ANALYSIS/priority_100_unified.csv` - Master list
 - `DATA/3_ANALYSIS/dish_2x2_unified.csv` - Quadrant assignments
-- `docs/data/priority_100_unified.json` - Dashboard data
-- `config/dish_types_master.json` - Master dish type definitions
+- `docs/data/priority_100_unified.json` - Dashboard data (auto-generated)
+- `docs/dish_data.js` - Dashboard embedded data (auto-synced)
+
+### Auto-Sync
+The regenerate script automatically syncs to the dashboard:
+```bash
+python3 scripts/phase2_analysis/regenerate_dish_scores_v3_1.py
+# Outputs CSV + JSON, then auto-runs sync_dish_data.py
+```
 
 ---
 
 ## Changelog
+
+### v3.1 (2026-01-08)
+- **Simplified to 5 factors:** From 10 factors to 5 core metrics
+- **Rebalanced to 60/40 split:** Performance weighted higher due to reliable trial data
+- **Anna's quadrant names:** Core Drivers, Demand Boosters, Preference Drivers, Deprioritised
+- **Auto-sync to dashboard:** Script generates JSON and syncs to dish_data.js
+- **Updated tier thresholds:** 3.5/3.0/2.5 instead of 4.0/3.5/3.0
 
 ### v2.1 (2026-01-07)
 - **Expanded dish list:** 48 → 100 dish types

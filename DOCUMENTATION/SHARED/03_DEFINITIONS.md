@@ -188,6 +188,26 @@ b10_rate = df['has_b10_issue'].mean() * 100
 | Core Cuisines | 5 of 7 | `config/mvp_thresholds.json` |
 | Partners | ≥5 | `config/mvp_thresholds.json` |
 
+### MVP Status Tiers
+
+**Definition:** Zone readiness based on Core 7 cuisine count
+
+| Status | Cuisine Count | Description |
+|--------|---------------|-------------|
+| **MVP Ready** | 5+ of 7 | North star - full family offering |
+| **Near MVP** | 4 of 7 | Almost there - 1 cuisine gap |
+| **Progressing** | 3 of 7 | Data inflection point - meaningful variety |
+| **Developing** | 1-2 of 7 | Early stage - limited options |
+| **Supply Only** | Any | Has partners but no orders yet |
+| **Not Started** | 0 | No Dinneroo partners |
+
+**Implementation:** Use `scripts/utils/definitions.py`:
+```python
+from utils.definitions import get_mvp_status
+
+mvp_status = get_mvp_status(core_7_count=4, has_orders=True)  # Returns "Near MVP"
+```
+
 ### MVP Inflection Points (Data-Driven)
 
 | Dimension | Inflection | Evidence | Source |
@@ -197,6 +217,168 @@ b10_rate = df['has_b10_issue'].mean() * 100
 | Dishes/Partner | 4-5 | +12.1pp rating | `mvp_threshold_discovery.json` |
 
 **Note:** Inflection points show where metrics improve; business targets are higher to ensure redundancy.
+
+---
+
+## Dish Taxonomy (Anna's 24 Types) - v3.3
+
+### The Three-Level Structure
+
+All dish analysis uses Anna's authoritative taxonomy:
+
+```
+155 Menu Items → 58 Granular Dishes → 24 High-Level Dish Types
+```
+
+| Level | Count | Example | Use |
+|-------|-------|---------|-----|
+| **Menu Item** | 155 | "Chicken Berry Britannia" (Dishoom) | Full traceability |
+| **Granular Dish** | 58 | "Biryani" | Detailed analysis |
+| **High-Level Dish** | 24 | "Biryani" | Rankings, scoring |
+
+### The 24 High-Level Dish Types
+
+| # | Dish Type | Items | Partners |
+|---|-----------|-------|----------|
+| 1 | Pasta | 23 | Bella Italia, Bill's, Prezzo, etc. |
+| 2 | Rice Bowl | 21 | Banana Tree, Itsu, Kokoro, etc. |
+| 3 | Grain Bowl | 17 | Farmer J, LEON, Remedy Kitchen |
+| 4 | South Asian / Indian Curry | 13 | Dishoom, Chaska, Kricket |
+| 5 | Noodles | 13 | Wagamama, Pho, Banana Tree |
+| 6 | East Asian Curry | 11 | Giggling Squid, Ting Thai |
+| 7 | Katsu | 9 | Wagamama, Itsu, Kokoro |
+| 8 | Biryani | 6 | Dishoom, Chaska, Tadka House |
+| 9 | Fried Rice | 5 | Asia Villa, Pho |
+| 10 | Pizza | 5 | Milano, PizzaExpress, Prezzo |
+| 11-24 | Other, Protein & Veg, Lasagne, Burrito, Fajitas, Shawarma, Chilli, Tacos, Nachos, Pho, Poke, Quesadilla, Shepherd's Pie, Sushi | 1-4 each | Various |
+
+### Reference Files
+
+| File | Description |
+|------|-------------|
+| `config/dish_taxonomy.csv` | Full 155-item reference with all mappings |
+| `DATA/3_ANALYSIS/dish_type_rollup.csv` | Aggregated to 24 high-level types |
+| `config/dish_type_performance_mapping.csv` | Maps our performance data to Anna's types |
+
+---
+
+## Multi-List Scoring Framework (v3.3)
+
+### Key Insight: Segment-Specific Rankings
+
+**We now produce THREE separate rankings** because families and couples have different needs:
+
+1. **Family Performers** - Best dishes for families with children
+2. **Couple Performers** - Best dishes for adults without children
+3. **Recruitment Priorities** - Dishes NOT on Dinneroo with highest potential
+
+### Family Performers Weights (40/20/20/15/5)
+
+| Factor | Weight | Source | Rationale |
+|--------|--------|--------|-----------|
+| kids_happy | 40% | Post-order survey (families) | Kids' reaction determines repeat |
+| fussy_eater_friendly | 20% | dish_opportunity_scores | Must work for picky kids |
+| orders_per_zone | 20% | Snowflake | Proven demand |
+| adult_satisfaction | 15% | Post-order survey (families) | Parents must enjoy it too |
+| portions_adequate | 5% | Post-order survey | Needs to feed the family |
+
+### Couple Performers Weights (40/25/20/15)
+
+| Factor | Weight | Source | Rationale |
+|--------|--------|--------|-----------|
+| adult_satisfaction | 40% | Post-order survey | Primary driver for couples |
+| rating | 25% | Snowflake | Quality matters to adults |
+| orders_per_zone | 20% | Snowflake | Proven demand |
+| adult_appeal | 15% | dish_opportunity_scores | Sophisticated options |
+
+### Recruitment Priorities Weights (30/25/15/15/10/5)
+
+| Factor | Weight | Source | Rationale |
+|--------|--------|--------|-----------|
+| latent_demand_mentions | 30% | Open-text surveys | Explicit customer requests |
+| framework_score | 25% | dish_opportunity_scores | Overall family meal fit |
+| fussy_eater_friendly | 15% | dish_opportunity_scores | Family appeal |
+| gap_score | 15% | dish_opportunity_scores | Supply gap = opportunity |
+| partner_capability | 10% | dish_opportunity_scores | Can we get it? |
+| non_dinneroo_demand | 5% | Cuisine-level orders | Proven external demand |
+
+### Scoring Method
+
+All factors use **percentile-based 1-5 scoring**:
+
+| Percentile | Score |
+|------------|-------|
+| Top 20% | 5 |
+| 60-80% | 4 |
+| 40-60% | 3 |
+| 20-40% | 2 |
+| Bottom 20% | 1 |
+
+### Output Files
+
+| File | Description |
+|------|-------------|
+| `dish_family_performers.csv` | Family rankings |
+| `dish_couple_performers.csv` | Couple rankings |
+| `dish_recruitment_priorities.csv` | Off-platform targets |
+| `DISH_RANKINGS_WITH_ROLLUP.csv` | Combined view with item rollup |
+
+---
+
+## Cuisine Definitions (Unified)
+
+**CANONICAL SOURCE:** `scripts/utils/definitions.py`
+
+All agents MUST import from this module to ensure consistency.
+
+### Core 7 Cuisines
+
+| Cuisine | Required for MVP | Description |
+|---------|-----------------|-------------|
+| Asian | Yes | Japanese, Thai, Vietnamese, Chinese, Korean |
+| Italian | Yes | Pizza, pasta, Italian classics |
+| Indian | Yes | Curries, biryanis, Indian classics |
+| Healthy | Yes | Grain bowls, salads, protein-focused |
+| Mexican | Yes | Burritos, tacos, Latin flavours |
+| Middle Eastern | No | Lebanese, Turkish, shawarma |
+| British | No | Fish & chips, pies, roasts |
+
+### Two-Level Cuisine Structure
+
+| Level | Purpose | Example |
+|-------|---------|---------|
+| **Core 7** | MVP calculations, zone status | "Asian" |
+| **Sub-Cuisine** | Granular analysis, drill-down | "Japanese", "Vietnamese" |
+
+**Implementation:**
+```python
+from utils.definitions import get_core_7, get_sub_cuisine
+
+get_core_7("Japanese")     # Returns "Asian"
+get_core_7("Italian")      # Returns "Italian"
+get_sub_cuisine("Katsu")   # Returns "Japanese"
+```
+
+### Sub-Cuisine to Core 7 Mapping
+
+| Sub-Cuisine | Core 7 |
+|-------------|--------|
+| Japanese, Thai, Vietnamese, Chinese, Korean | Asian |
+| Lebanese, Turkish, Mediterranean, Greek | Middle Eastern |
+| Tex-Mex, Latin American | Mexican |
+| Salads, Grain Bowls | Healthy |
+| Pizza, Pasta | Italian |
+| Roasts, Pies | British |
+
+### Cuisine Pass
+
+**Definition:** Zone has 5+ of 7 Core cuisines
+
+```python
+from utils.definitions import get_cuisine_pass
+
+cuisine_pass = get_cuisine_pass(core_7_count=5)  # Returns True
+```
 
 ---
 

@@ -1,87 +1,63 @@
-Rank,Dish,Tier,Priority Score,Category,Evidence Type,Cuisine,Gap Type,Rationale,Potential Partners
-1,Salmon Teriyaki Family Platter,Must Have,5.2,Discover,Discovery,Various,No Gap,High priority score (5.20),TBD - based on cuisine
-2,Halloumi Wrap Family Box,Must Have,5.1,Discover,Discovery,Greek/Mediterranean,No Gap,High priority score (5.10),New recruitment needed
-3,Souvlaki Family Platter,Must Have,5.1,Discover,Discovery,Greek/Mediterranean,No Gap,High priority score (5.10),New recruitment needed
-4,Chicken,Must Have,5.0,Expand,Measured,Global,No Gap,High priority score (5.00),TBD
-5,Rotisserie Chicken Family Feast,Must Have,4.95,Discover,Discovery,Healthy/Fresh,No Gap,High priority score (4.95),Farmer J
-6,Grilled Chicken Family Platter with Sides,Must Have,4.95,Discover,Discovery,Healthy/Fresh,No Gap,High priority score (4.95),Farmer J
-7,Fajita Family Kit,Must Have,4.95,Discover,Discovery,Mexican,No Gap,High priority score (4.95),Tortilla
-8,Kids Ramen & Adult Ramen Combo,Must Have,4.95,Discover,Discovery,Japanese/Asian,No Gap,High priority score (4.95),Wagamama
-9,Plain Pasta with Sides Family Bundle,Must Have,4.87,Discover,Discovery,Various,No Gap,High priority score (4.87),TBD - based on cuisine
-10,Paneer Tikka Family Feast,Must Have,4.87,Discover,Discovery,Various,No Gap,High priority score (4.87),TBD - based on cuisine
-11,Veggie Fajita Family Kit,Must Have,4.87,Discover,Discovery,Various,No Gap,High priority score (4.87),TBD - based on cuisine
-12,Halloumi Wrap Family Bundle,Must Have,4.87,Discover,Discovery,Various,No Gap,High priority score (4.87),TBD - based on cuisine
-13,Grilled Chicken with Customizable Sides,Must Have,4.87,Discover,Discovery,Various,No Gap,High priority score (4.87),TBD - based on cuisine
-14,Dim Sum Family Selection,Must Have,4.85,Discover,Discovery,Chinese,No Gap,High priority score (4.85),New recruitment needed
-15,Shawarma Family Platter,Must Have,4.85,Discover,Discovery,Middle Eastern,No Gap,High priority score (4.85),New recruitment needed
-16,Greek Mezze Family Feast,Must Have,4.85,Discover,Discovery,Greek/Mediterranean,No Gap,High priority score (4.85),New recruitment needed
-17,Build Your Own Grain Bowl Family Pack,Must Have,4.7,Discover,Discovery,Healthy/Fresh,No Gap,High priority score (4.70),Farmer J
-18,Vietnamese Rice Paper Rolls Family Pack,Must Have,4.7,Discover,Discovery,Vietnamese,No Gap,High priority score (4.70),Pho
-19,Teriyaki Salmon Family Platter,Must Have,4.7,Discover,Discovery,Japanese/Asian,No Gap,High priority score (4.70),Wagamama
-20,Quesadilla Family Pack,Must Have,4.7,Discover,Discovery,Mexican,No Gap,High priority score (4.70),Tortilla
-21,Butter Chicken Family Feast,Must Have,4.7,Discover,Discovery,Indian,No Gap,High priority score (4.70),Dishoom
-22,Falafel & Hummus Family Box,Must Have,4.6,Discover,Discovery,Middle Eastern,No Gap,High priority score (4.60),New recruitment needed
-23,Chicken & Rice Plain Family Meal,Must Have,4.53,Discover,Discovery,Various,No Gap,High priority score (4.53),TBD - based on cuisine
-24,Biryani Family Pot,Must Have,4.45,Discover,Discovery,Indian,No Gap,High priority score (4.45),Dishoom
-25,Roast Dinner Family Platter,Must Have,4.45,Discover,Discovery,British,No Gap,High priority score (4.45),Bill's
-26,Veggie Burrito Bowl Family Bundle,Must Have,4.45,Discover,Discovery,Mexican,No Gap,High priority score (4.45),Tortilla
-27,Teriyaki Rice Bowl Family Bundle,Must Have,4.45,Discover,Discovery,Japanese/Healthy,No Gap,High priority score (4.45),Itsu
-28,Sushi Family Platter,Must Have,4.45,Discover,Discovery,Japanese/Healthy,No Gap,High priority score (4.45),Itsu
-29,Katsu Curry Family Bundle,Must Have,4.45,Discover,Discovery,Japanese/Asian,No Gap,High priority score (4.45),Wagamama
-30,Pho Family Sharing Bowl,Must Have,4.45,Discover,Discovery,Vietnamese,No Gap,High priority score (4.45),Pho
-31,Chicken Chow Mein Family Bundle,Must Have,4.35,Discover,Discovery,Chinese,No Gap,High priority score (4.35),New recruitment needed
-32,Sweet & Sour Chicken Family Meal,Must Have,4.35,Discover,Discovery,Chinese,No Gap,High priority score (4.35),New recruitment needed
-33,Chicken Pie with Mash & Veg,Must Have,4.2,Discover,Discovery,British,No Gap,High priority score (4.20),Bill's
-34,Banh Mi Family Box,Must Have,4.2,Discover,Discovery,Vietnamese,No Gap,High priority score (4.20),Pho
-35,Chicken Tikka Wrap Box,Must Have,4.2,Discover,Discovery,Indian,No Gap,High priority score (4.20),Dishoom
-36,Pad Thai,Must Have,4.14,Expand,Measured,Thai,No Gap,High priority score (4.14),Banana Tree
-37,Biryani,Must Have,4.12,Expand,Measured,Indian,No Gap,High priority score (4.12),Dishoom
-38,Fried Rice,Must Have,4.06,Expand,Measured,Chinese,Supply Gap,High priority score (4.06),"Pho, Wagamama, Itsu"
-39,Chinese Family Meal,Must Have,3.96,Recruit,Opportunity,Chinese,Supply Gap,Fills Supply Gap,New recruitment needed
-40,Thai Green Curry Family Pot (Mild),Nice to Have,3.95,Discover,Discovery,Thai/Southeast Asian,No Gap,"Medium priority (3.95), no critical gap",Banana Tree
-41,Pad Thai Family Bundle,Nice to Have,3.95,Discover,Discovery,Thai/Southeast Asian,No Gap,"Medium priority (3.95), no critical gap",Banana Tree
-42,Fish & Chips Family Bucket,Nice to Have,3.95,Discover,Discovery,British,No Gap,"Medium priority (3.95), no critical gap",Bill's
-43,Sushi,Must Have,3.87,Expand,Measured,Japanese,No Gap,Fills No Gap,"Itsu, Iro Sushi"
-44,Rice Bowl,Must Have,3.76,Expand,Measured,Healthy/Fresh,No Gap,Fills No Gap,"Pho, Wagamama, Itsu, Farmer J"
-45,Noodles,Must Have,3.74,Expand,Measured,Global,No Gap,Fills No Gap,"Pho, Wagamama, Itsu, Banana Tree"
-46,Shawarma,Must Have,3.71,Expand,Measured,Middle Eastern,Supply Gap,Fills Supply Gap,New recruitment needed
-47,Pho,Must Have,3.7,Expand,Measured,Vietnamese,No Gap,Fills No Gap,Pho
-48,Fajitas,Must Have,3.69,Expand,Measured,Mexican,Quality Gap,Fills Quality Gap,Tortilla
-49,Lasagne,Must Have,3.56,Expand,Measured,Italian,No Gap,Fills No Gap,New recruitment needed
-50,Mac & Cheese,Nice to Have,3.45,Expand,Measured,Global,No Gap,"Medium priority (3.45), no critical gap",New recruitment needed
-51,Roast Dinner,Nice to Have,3.45,Monitor,Opportunity,British,No Gap,"Medium priority (3.45), no critical gap",Bill's
-52,Butter Chicken,Nice to Have,3.42,Expand,Measured,Indian,No Gap,"Medium priority (3.42), no critical gap","Dishoom, Farmer J"
-53,Curry,Nice to Have,3.39,Expand,Measured,Indian,No Gap,"Medium priority (3.39), no critical gap","Dishoom, Banana Tree"
-54,Fish & Chips,Nice to Have,3.33,Monitor,Opportunity,Global,No Gap,"Medium priority (3.33), no critical gap",New recruitment needed
-55,Salad,Nice to Have,3.32,Expand,Measured,Healthy/Fresh,No Gap,"Medium priority (3.32), no critical gap",Farmer J
-56,Grilled Chicken with Sides,Nice to Have,3.3,Monitor,Opportunity,Global,No Gap,"Medium priority (3.30), no critical gap",Farmer J
-57,Teriyaki,Nice to Have,3.28,Expand,Measured,Japanese,No Gap,"Medium priority (3.28), no critical gap",Wagamama
-58,Katsu,Nice to Have,3.24,Fix,Measured,Japanese,No Gap,"Medium priority (3.24), no critical gap",Wagamama
-59,Pasta,Nice to Have,3.15,Fix,Measured,Italian,No Gap,"Medium priority (3.15), no critical gap",New recruitment needed
-60,Shepherd's Pie,Nice to Have,3.1,Monitor,Opportunity,British,No Gap,"Medium priority (3.10), no critical gap",Bill's
-61,Stir Fry,Nice to Have,3.03,Monitor,Measured,Global,No Gap,"Medium priority (3.03), no critical gap",New recruitment needed
-62,Korean Fried Chicken,Nice to Have,3.02,Monitor,Opportunity,Korean,No Gap,"Medium priority (3.02), no critical gap",Farmer J
-63,Pizza,Monitor,2.98,Fix,Measured,Italian,No Gap,"Lower priority (2.98), monitor for changes",Franco Manca
-64,Tacos,Monitor,2.84,Monitor,Measured,Mexican,Quality Gap,"Lower priority (2.84), monitor for changes",Tortilla
-65,Veggie Fajitas,Monitor,2.72,Monitor,Opportunity,Mexican,Quality Gap,"Lower priority (2.72), monitor for changes",Tortilla
-66,Ramen,Monitor,2.7,Monitor,Measured,Japanese,No Gap,"Lower priority (2.70), monitor for changes",Wagamama
-67,Greek Mezze,Monitor,2.66,Monitor,Opportunity,Greek,No Gap,"Lower priority (2.66), monitor for changes",New recruitment needed
-68,Dim Sum,Monitor,2.63,Monitor,Opportunity,Chinese,Supply Gap,"Lower priority (2.63), monitor for changes",New recruitment needed
-69,Burrito,Monitor,2.63,Monitor,Opportunity,Mexican,Quality Gap,"Lower priority (2.63), monitor for changes",Tortilla
-70,Quesadilla,Monitor,2.6,Monitor,Opportunity,Mexican,Quality Gap,"Lower priority (2.60), monitor for changes",Tortilla
-71,Chicken Pie,Monitor,2.56,Monitor,Opportunity,British,No Gap,"Lower priority (2.56), monitor for changes","Farmer J, Bill's"
-72,Halloumi Wrap,Monitor,2.49,Monitor,Opportunity,Global,No Gap,"Lower priority (2.49), monitor for changes",New recruitment needed
-73,Grain Bowl,Monitor,2.4,Monitor,Opportunity,Healthy/Fresh,No Gap,"Lower priority (2.40), monitor for changes",Farmer J
-74,Buddha Bowl,Monitor,2.4,Monitor,Opportunity,Healthy/Fresh,No Gap,"Lower priority (2.40), monitor for changes",Farmer J
-75,Poke Bowl,Monitor,2.4,Monitor,Opportunity,Healthy/Fresh,No Gap,"Lower priority (2.40), monitor for changes",Farmer J
-76,Bowl,Monitor,2.37,Monitor,Opportunity,Healthy/Fresh,No Gap,"Lower priority (2.37), monitor for changes",Farmer J
-77,Sweet & Sour Chicken,Monitor,2.37,Monitor,Opportunity,Global,No Gap,"Lower priority (2.37), monitor for changes",Farmer J
-78,Rotisserie Chicken,Monitor,2.37,Monitor,Opportunity,Global,No Gap,"Lower priority (2.37), monitor for changes",Farmer J
-79,Tikka Masala,Monitor,2.2,Monitor,Opportunity,Indian,No Gap,"Lower priority (2.20), monitor for changes",Dishoom
-80,Cottage Pie,Monitor,2.2,Monitor,Opportunity,British,No Gap,"Lower priority (2.20), monitor for changes",Bill's
-81,Korma,Monitor,2.2,Monitor,Opportunity,Indian,No Gap,"Lower priority (2.20), monitor for changes",Dishoom
-82,Wrap,Monitor,2.16,Monitor,Opportunity,Global,No Gap,"Lower priority (2.16), monitor for changes",New recruitment needed
-83,Burger,Monitor,2.16,Monitor,Opportunity,American,No Gap,"Lower priority (2.16), monitor for changes",Bill's
-84,Bibimbap,Monitor,2.0,Monitor,Opportunity,Korean,No Gap,"Lower priority (2.00), monitor for changes",New recruitment needed
-85,Bangers & Mash,Monitor,2.0,Monitor,Opportunity,British,No Gap,"Lower priority (2.00), monitor for changes",New recruitment needed
-86,Souvlaki,Monitor,2.0,Monitor,Opportunity,Greek,No Gap,"Lower priority (2.00), monitor for changes",New recruitment needed
+Rank,Dish,Tier,Unified Score,Performance Score,Opportunity Score,Quadrant,Cuisine,On Dinneroo,Order Volume,Orders per Zone
+1,Noodles,Must-Have,3.9,4.83,2.5,Demand Boosters,Global,True,2092.0,2092.0
+2,Pho,Must-Have,3.7,4.83,2.0,Demand Boosters,Vietnamese,True,4530.0,4530.0
+3,Curry,Must-Have,3.7,4.83,2.0,Demand Boosters,Indian,True,5897.0,5897.0
+4,Biryani,Must-Have,3.6,5.0,1.5,Demand Boosters,Indian,True,458.0,458.0
+5,Bowl,Must-Have,3.6,5.0,1.5,Demand Boosters,Healthy/Fresh,True,4517.0,4517.0
+6,Salad,Must-Have,3.55,4.58,2.0,Demand Boosters,Healthy/Fresh,True,1090.0,1090.0
+7,Fried Rice,Must-Have,3.5,4.83,1.5,Demand Boosters,Chinese,True,4958.0,4958.0
+8,Fajitas,Should-Have,3.45,4.75,1.5,Demand Boosters,Mexican,True,221.0,221.0
+9,Pasta,Should-Have,3.4,4.33,2.0,Demand Boosters,Italian,True,1342.0,1342.0
+10,Katsu,Should-Have,3.4,4.33,2.0,Demand Boosters,Japanese,True,11730.0,11730.0
+11,Rice Bowl,Should-Have,3.35,4.58,1.5,Demand Boosters,Healthy/Fresh,True,9545.0,9545.0
+12,Ramen,Should-Have,3.3,4.17,2.0,Demand Boosters,Japanese,True,223.0,223.0
+13,Sushi,Should-Have,3.25,4.42,1.5,Demand Boosters,Japanese,True,1043.0,1043.0
+14,Pad Thai,Should-Have,3.25,4.42,1.5,Demand Boosters,Thai,True,2734.0,2734.0
+15,Shawarma,Should-Have,3.25,4.42,1.5,Demand Boosters,Middle Eastern,True,1355.0,1355.0
+16,Butter Chicken,Should-Have,3.2,4.33,1.5,Demand Boosters,Indian,True,650.0,650.0
+17,Teriyaki,Should-Have,3.2,4.33,1.5,Demand Boosters,Japanese,True,1369.0,1369.0
+18,Mac & Cheese,Should-Have,3.15,4.25,1.5,Demand Boosters,Global,True,1322.0,1322.0
+19,Lasagne,Should-Have,3.15,3.92,2.0,Demand Boosters,Italian,True,931.0,931.0
+20,Pizza,Should-Have,3.15,3.92,2.0,Demand Boosters,Italian,True,548.0,548.0
+21,Grilled Chicken with Sides,Should-Have,3.1,4.17,1.5,Demand Boosters,Global,True,540.0,540.0
+22,Korean Fried Chicken,Should-Have,3.1,4.17,1.5,Demand Boosters,Korean,True,398.0,398.0
+23,Halloumi Wrap,Should-Have,3.1,4.17,1.5,Demand Boosters,Global,True,161.0,161.0
+24,Grain Bowl,Should-Have,3.1,4.17,1.5,Demand Boosters,Healthy/Fresh,True,192.0,192.0
+25,Roast Dinner,Should-Have,3.1,4.17,1.5,Demand Boosters,British,True,287.0,287.0
+26,Veggie Fajitas,Should-Have,3.1,4.17,1.5,Demand Boosters,Mexican,True,333.0,333.0
+27,Chicken Pie,Should-Have,3.1,4.17,1.5,Demand Boosters,British,True,34506.0,34506.0
+28,Shepherd's Pie,Should-Have,3.1,4.17,1.5,Demand Boosters,British,True,333.0,333.0
+29,Stir Fry,Should-Have,3.1,4.17,1.5,Demand Boosters,Global,True,252.0,252.0
+30,Sweet & Sour Chicken,Should-Have,3.1,4.17,1.5,Demand Boosters,Global,True,1081.0,1081.0
+31,Burger,Nice-to-Have,2.95,3.58,2.0,Demand Boosters,American,True,61.0,61.0
+32,Tacos,Nice-to-Have,2.95,3.58,2.0,Demand Boosters,Mexican,True,62.0,62.0
+33,Poke Bowl,Nice-to-Have,2.7,3.5,1.5,Demand Boosters,Healthy/Fresh,True,39.0,39.0
+34,Quesadilla,Nice-to-Have,2.65,3.42,1.5,Demand Boosters,Mexican,True,57.0,57.0
+35,Fish & Chips,Nice-to-Have,2.6,3.0,2.0,Demand Boosters,Global,True,32.0,32.0
+36,Sweet & Sour,Monitor,2.4,2.67,2.0,Deprioritised,,True,,
+37,Wrap,Monitor,2.4,3.0,1.5,Demand Boosters,Global,True,44.0,44.0
+38,Chinese Family Meal,Monitor,2.4,3.0,1.5,Demand Boosters,Chinese,False,31.0,31.0
+39,Gyoza,Monitor,2.3,2.5,2.0,Deprioritised,,True,,
+40,Falafel,Monitor,2.2,2.33,2.0,Deprioritised,,True,,
+41,Daal,Monitor,2.2,2.67,1.5,Deprioritised,,True,,
+42,Thai Curry,Monitor,2.15,2.25,2.0,Deprioritised,,True,,
+43,Pie,Monitor,2.15,1.92,2.5,Deprioritised,,True,,
+44,Satay,Monitor,2.15,2.25,2.0,Deprioritised,,True,,
+45,Grilled Chicken,Monitor,2.1,2.17,2.0,Deprioritised,,True,,
+46,Chicken Nuggets,Monitor,2.1,2.5,1.5,Deprioritised,,True,,
+47,Greek Mezze,Monitor,2.05,2.42,1.5,Deprioritised,Greek,False,7.0,7.0
+48,Tikka Masala,Monitor,2.05,2.42,1.5,Deprioritised,Indian,True,19.0,19.0
+49,Chilli,Monitor,1.9,1.83,2.0,Deprioritised,,True,,
+50,Spring Rolls,Monitor,1.85,2.08,1.5,Deprioritised,,True,,
+51,Samosa,Monitor,1.8,2.0,1.5,Deprioritised,,True,,
+52,Wings,Monitor,1.8,2.0,1.5,Deprioritised,,True,,
+53,Buddha Bowl,Monitor,1.7,1.83,1.5,Deprioritised,Healthy/Fresh,False,0.0,
+54,Burrito,Monitor,1.7,1.83,1.5,Deprioritised,Mexican,False,3.0,3.0
+55,Souvlaki,Monitor,1.7,1.83,1.5,Deprioritised,Greek,False,0.0,
+56,Cottage Pie,Monitor,1.7,1.83,1.5,Deprioritised,British,False,0.0,
+57,Bibimbap,Monitor,1.7,1.83,1.5,Deprioritised,Korean,False,0.0,
+58,Soup,Monitor,1.7,1.5,2.0,Deprioritised,,True,,
+59,Dim Sum,Monitor,1.7,1.83,1.5,Deprioritised,Chinese,False,0.0,
+60,Rotisserie Chicken,Monitor,1.7,1.83,1.5,Deprioritised,Global,False,0.0,
+61,Korma,Monitor,1.7,1.83,1.5,Deprioritised,Indian,False,0.0,
+62,Bangers & Mash,Monitor,1.7,1.83,1.5,Deprioritised,British,False,0.0,

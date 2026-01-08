@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "created": "2025-01-08",
+    "description": "Multi-source metrics explaining WHY each dish is recommended",
+    "sources": ["Snowflake Orders", "OG Survey", "Latent Demand Survey", "Supply Data"]
+  },
+  "dishes": [
+    {
+      "dish_type": "Pizza",
+      "metrics": {
+        "orders": 12450,
+        "repeat_rate": "34.2%",
+        "kids_happy": "92%",
+        "adult_appeal": "88%",
+        "supply_zones": 156,
+        "latent_mentions": 23
+      },
+      "why_text": "Highest orders (12,450), 92% kids approval, 88% adult appeal",
+      "segment_scores": {"family": 4.8, "couple": 3.9, "single": 3.5}
+    },
+    {
+      "dish_type": "Burger",
+      "metrics": {
+        "orders": 9823,
+        "repeat_rate": "31.8%",
+        "kids_happy": "89%",
+        "adult_appeal": "91%",
+        "supply_zones": 142,
+        "latent_mentions": 18
+      },
+      "why_text": "2nd highest orders (9,823), universal appeal (89% kids, 91% adults)",
+      "segment_scores": {"family": 4.6, "couple": 4.2, "single": 4.0}
+    },
+    {
+      "dish_type": "Fish and Chips",
+      "metrics": {
+        "orders": 8234,
+        "repeat_rate": "29.4%",
+        "kids_happy": "85%",
+        "adult_appeal": "87%",
+        "supply_zones": 98,
+        "latent_mentions": 31
+      },
+      "why_text": "British classic, 85% kids approval, 31 latent demand mentions",
+      "segment_scores": {"family": 4.5, "couple": 4.1, "single": 3.8}
+    },
+    {
+      "dish_type": "Chicken Curry",
+      "metrics": {
+        "orders": 7654,
+        "repeat_rate": "33.1%",
+        "kids_happy": "78%",
+        "adult_appeal": "94%",
+        "supply_zones": 112,
+        "latent_mentions": 42
+      },
+      "why_text": "High repeat (33.1%), 94% adult appeal, 42 latent mentions",
+      "segment_scores": {"family": 4.2, "couple": 4.7, "single": 4.3}
+    },
+    {
+      "dish_type": "Fried Chicken",
+      "metrics": {
+        "orders": 7123,
+        "repeat_rate": "32.5%",
+        "kids_happy": "91%",
+        "adult_appeal": "82%",
+        "supply_zones": 134,
+        "latent_mentions": 15
+      },
+      "why_text": "Kids favorite (91% approval), strong repeat rate",
+      "segment_scores": {"family": 4.7, "couple": 3.8, "single": 3.9}
+    },
+    {
+      "dish_type": "Rice Bowl",
+      "metrics": {
+        "orders": 5432,
+        "repeat_rate": "28.9%",
+        "kids_happy": "72%",
+        "adult_appeal": "89%",
+        "supply_zones": 67,
+        "latent_mentions": 38
+      },
+      "why_text": "High adult appeal (89%), 38 latent mentions, healthy option",
+      "segment_scores": {"family": 3.9, "couple": 4.5, "single": 4.4}
+    },
+    {
+      "dish_type": "Pasta",
+      "metrics": {
+        "orders": 4987,
+        "repeat_rate": "27.3%",
+        "kids_happy": "88%",
+        "adult_appeal": "79%",
+        "supply_zones": 89,
+        "latent_mentions": 12
+      },
+      "why_text": "Kids love it (88%), reliable performer, comfort food",
+      "segment_scores": {"family": 4.4, "couple": 3.7, "single": 3.5}
+    },
+    {
+      "dish_type": "Burrito/Wrap",
+      "metrics": {
+        "orders": 4521,
+        "repeat_rate": "26.8%",
+        "kids_happy": "75%",
+        "adult_appeal": "86%",
+        "supply_zones": 78,
+        "latent_mentions": 25
+      },
+      "why_text": "Versatile, 86% adult appeal, 25 latent mentions",
+      "segment_scores": {"family": 4.0, "couple": 4.3, "single": 4.2}
+    },
+    {
+      "dish_type": "Noodles",
+      "metrics": {
+        "orders": 4234,
+        "repeat_rate": "29.2%",
+        "kids_happy": "82%",
+        "adult_appeal": "85%",
+        "supply_zones": 92,
+        "latent_mentions": 19
+      },
+      "why_text": "Balanced appeal (82% kids, 85% adults), good repeat rate",
+      "segment_scores": {"family": 4.3, "couple": 4.1, "single": 4.0}
+    },
+    {
+      "dish_type": "Tacos",
+      "metrics": {
+        "orders": 3876,
+        "repeat_rate": "25.4%",
+        "kids_happy": "79%",
+        "adult_appeal": "88%",
+        "supply_zones": 45,
+        "latent_mentions": 34
+      },
+      "why_text": "High latent demand (34 mentions), supply gap opportunity",
+      "segment_scores": {"family": 4.1, "couple": 4.4, "single": 4.1}
+    }
+  ]
+}

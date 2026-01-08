@@ -1,0 +1,329 @@
+cuisine,core_category,level,performance_score,opportunity_score,unified_score,quadrant,zones_available,orders_per_zone,repeat_rate,performance_status
+Burgers,Other,other,,3.8,3.8,Expansion,0,0.0,18.2,Insufficient zones
+Grocery,Other,other,,3.8,3.8,Expansion,0,0.0,0.0,No data
+Vietnamese,Asian,sub,4.38,2.8,3.59,Protect,44,300.1,21.0,Calculated
+Indian,Indian,core,,3.3,3.3,Expansion,11,763.6,23.1,Insufficient zones
+Japanese,Asian,sub,,3.3,3.3,Expansion,93,159.0,16.3,Insufficient zones
+Chicken,Other,other,,3.3,3.3,Expansion,0,0.0,17.1,Insufficient zones
+Chinese,Asian,sub,,3.3,3.3,Expansion,5,56.8,8.6,Insufficient zones
+American,Other,other,,3.3,3.3,Expansion,0,0.0,0.0,No data
+Italian,Italian,core,,3.3,3.3,Expansion,137,66.9,16.5,Insufficient zones
+Asian,Asian,core,,2.8,2.8,Watch,0,0.0,20.3,Insufficient zones
+Thai,Asian,sub,,2.8,2.8,Watch,37,140.6,15.8,Insufficient zones
+Salads,Healthy,sub,,2.8,2.8,Watch,0,0.0,19.7,Insufficient zones
+Portuguese,NEW,new,,2.8,2.8,Watch,0,0.0,0.0,No data
+Alcohol,Other,other,,2.8,2.8,Watch,0,0.0,,Insufficient zones
+Sushi,Other,other,,2.8,2.8,Watch,0,0.0,8.4,Insufficient zones
+Pasta-Focused,Italian,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Roasts,British,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Pan-Indian,Indian,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Comfort,British,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Pan-Asian,Asian,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Grain Bowls,Healthy,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Tex-Mex,Mexican,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Pizza-Focused,Italian,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Protein-Focused,Healthy,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Fish & Chips,British,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Premium Mexican,Mexican,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Premium Italian,Italian,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Pies,British,sub,,2.6,2.6,Watch,0,0.0,0.0,No data
+Turkish,Middle Eastern,sub,,2.3,2.3,Watch,0,0.0,0.0,No data
+Curry,Other,other,,2.3,2.3,Watch,0,0.0,21.0,Insufficient zones
+Pizza,Other,other,,2.3,2.3,Watch,0,0.0,12.7,Insufficient zones
+Halal,Other,other,,2.3,2.3,Watch,0,0.0,11.2,Insufficient zones
+British,British,core,,2.3,2.3,Watch,0,0.0,0.0,No data
+Wings,Other,other,,2.3,2.3,Watch,0,0.0,0.0,No data
+Healthy,Healthy,core,2.31,1.8,2.06,Monitor,22,14.2,16.1,Calculated
+On Demand Convenience (Uae),Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Organic Stores,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Only On Deliveroo 2024,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Our Picks,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Organic,Other,other,,1.8,1.8,Watch,0,0.0,15.0,Insufficient zones
+Only On Deliveroo,Other,other,,1.8,1.8,Watch,0,0.0,14.3,Insufficient zones
+14 Days Free Delivery,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Pakistani,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Pancakes,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Pasta,Other,other,,1.8,1.8,Watch,0,0.0,7.7,Insufficient zones
+Pasta Evangelists 20% Discount,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Perfect For Sharing,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Persian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Personal Care,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Peruvian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Pet Food,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Pharmacy,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Pho,Other,other,,1.8,1.8,Watch,0,0.0,23.4,Insufficient zones
+Piadina,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Pickup Deals,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Pie,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+On Demand Convenience,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Noodles,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Odg Cross Partner Offer Carousel Uk,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Meat,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Milkshakes,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Middle Eastern,Middle Eastern,core,,1.8,1.8,Watch,7,40.6,15.9,Insufficient zones
+Midautumn2025,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Mezze,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Mexican,Mexican,core,,1.8,1.8,Watch,0,0.0,22.2,Insufficient zones
+Mediterranean,Middle Eastern,sub,,1.8,1.8,Watch,0,0.0,19.6,Insufficient zones
+Medicine,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Meal Deals,Other,other,,1.8,1.8,Watch,0,0.0,18.3,Insufficient zones
+Nurofen And Nuromol,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Meal Deal,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Meal Card (Fr),Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Maplin Deliveroo Hop,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Manaqeesh,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Malaysian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Magnum Ice Cream Delivery,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Lunch For Less,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Moon Festival,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Moroccan,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Morrisons,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Movie Night Restaurants,Other,other,,1.8,1.8,Watch,0,0.0,16.7,Insufficient zones
+North Indian,Indian,sub,,1.8,1.8,Watch,0,0.0,0.0,No data
+North England Exclusives,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+North African,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Plus Member Offers,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Nigerian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Nfl Big Game Night,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+New To Roo,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+New To Deliveroo,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+New On Roo,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+New Flavours,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+New Customer 20% Off Watford,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Nepalese,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Neapolitan,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Nachos,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Movie Night Snacks,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Plus April,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Project Love - August,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Plus Offers July,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Tibetan,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Tea,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Tapas,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Takeaways,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Taiwanese,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Tacos,Mexican,sub,,1.8,1.8,Watch,0,0.0,5.1,Insufficient zones
+Syrian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Sweet Treats,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Supermarket,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Street Food,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Stir Fry,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Steak,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+"Stationary, Cards & Books",Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Sri Lankan,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Spring Summer Free Delivery,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Spicy Nuggets,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+The Feed,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Tip Match,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Spanish,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Tunisian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+£10 Off Groceries And Shopping,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Yoghurt,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Wraps,Other,other,,1.8,1.8,Watch,0,0.0,10.4,Insufficient zones
+Wing Fest 2025,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Wine,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Win With Coca-Cola,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Western,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Waitrose,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Waffles,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Vegetarian,Other,other,,1.8,1.8,Watch,0,0.0,,Insufficient zones
+Veganuary,Other,other,,1.8,1.8,Watch,0,0.0,9.5,Insufficient zones
+Vegan Friendly,Other,other,,1.8,1.8,Watch,0,0.0,20.2,Insufficient zones
+Vegan,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Up To 50% Off Holiday Essentials,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Unilever Esports,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Specialist Stores,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+South Indian,Indian,sub,,1.8,1.8,Watch,0,0.0,0.0,No data
+Plus Offers Oct 2024,Other,other,,1.8,1.8,Watch,0,0.0,7.8,Insufficient zones
+Roasteries,Other,other,,1.8,1.8,Watch,0,0.0,10.5,Insufficient zones
+Rice,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Restaurants Only On Deliveroo,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Restaurants In Your Area,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Restaurant Award Winners 2024,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Ramen,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Ramadan 2025,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Quick Service Restaurants,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Protein Shops,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Project Love - December,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Local Offers (Uk),Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Popular Restaurants,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Polish,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Poké,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Poke,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Plus Offers September,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Roast,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Romanian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+South African,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Royally Good Offers,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Soup,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Snacks,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Smoothie,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Smash Burger,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Singaporean,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Sichuan Spicy,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Sichuan,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Shopping-Popular-Brands,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Shopping,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Sheffield Free Delivery,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Shawarma,Middle Eastern,sub,,1.8,1.8,Watch,0,0.0,19.4,Insufficient zones
+Service Guarantee,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Seafood,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Sandwiches,Other,other,,1.8,1.8,Watch,0,0.0,11.4,Insufficient zones
+Russian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Love Local Takeaway,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Kebab,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Local Gems,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Chocolate,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Cold & Flu,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Coffee,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Coca-Cola Christmas Ni,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Coca Cola Zero Sugar Competition,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Churros,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Christmas Specials,Other,other,,1.8,1.8,Watch,0,0.0,12.1,Insufficient zones
+Chopstix Lny,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Chips,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Breakfast & Brunch,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Caribbean,NEW,new,,1.8,1.8,Watch,0,0.0,0.0,No data
+Cantonese,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Canadian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Cakes,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Café,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Burritos,Mexican,sub,,1.8,1.8,Watch,0,0.0,11.8,Insufficient zones
+Bubble Tea,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Comfort Food,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Convenience,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Convenience Stores,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Cook From Home,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Doughnuts,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Donuts,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Doner Kebab,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Diy Stores,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Discovery Wines & Spirits,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Dim Sum,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Desserts And Sweet Dishes,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Dessert,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Deliveroo Students Offers,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Deliveroo Hop,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Deliveroo Editions,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Deliveroo Dinner Party,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Curated Plus Diamond Carousel,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Crêpe,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Cookies,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Brunch,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Breakfast,Other,other,,1.8,1.8,Watch,0,0.0,25.5,Insufficient zones
+Dumplings,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Americain,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Australian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Aug Bh Uk,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Asian Fusion,Other,other,,1.8,1.8,Watch,0,0.0,14.3,Insufficient zones
+Argentinian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Arabic,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+April Free Delivery Weekend,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Ann Summers Deliveroo Hop,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+All Day Breakfast,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Brazilian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Algerian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Alcohol Stores,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+African,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Afghan,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Accessorize,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Acai,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+7Mar Off,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Austrian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Autumn Meal Deals,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Bag Great Savings On Your Groceries,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Bagels,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Boba,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Bo Bun,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Black Friday,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Biryani,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+"Big Flavours, Small Prices",Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Big Brand Stores,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Bento,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Belgian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Beer,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Bbq,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Battlefield 6,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Bao,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Bangladeshi,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Bakery Shop,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Bakery,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Drinks,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Easter Groceries,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Like Rosa'S Thai? Why Not Try...,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Here To Deliver,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Ice Cream Stores,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Ice Cream And Dessert,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Ice Cream,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Household Goods,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Hot Dogs,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Hong Kongese,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Holiday Season,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Healthy Options,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Grocery Value Offers,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Healthy Eating Groceries,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Healthy Eating 2025,Other,other,,1.8,1.8,Watch,0,0.0,8.1,Insufficient zones
+Health Conscious,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Healf Deliveroo Hop,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Hawaiian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Hardware & Maintenance,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Halloween Rx 2022,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+In-Store Prices – Selected Items,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Indonesian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+International,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Iranian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Lebanese,Middle Eastern,sub,,1.8,1.8,Watch,0,0.0,16.4,Insufficient zones
+Latin American,Other,other,,1.8,1.8,Watch,0,0.0,14.7,Insufficient zones
+Late Night Delivery,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Kosher,Other,other,,1.8,1.8,Watch,0,0.0,10.3,Insufficient zones
+Korean,Asian,sub,,1.8,1.8,Watch,0,0.0,0.0,No data
+Kids Menu,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+50% Off,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Katsu,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Just A Bite Away,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+June Free Delivery Weekend,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Juices,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Joe & The Juice,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Jamaican,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Jacket Potato,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Irish,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Gyros,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Grill,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Editions Bristol,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Fast Food,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Fish And Chips,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Fish,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Fine Dining,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Filipino,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Festive Grocery And Shopping Offers,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Festive Gifting,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Featured Restaurants,Other,other,,1.8,1.8,Watch,0,0.0,8.8,Insufficient zones
+Family Meal Deals,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Greek,NEW,new,,1.8,1.8,Watch,0,0.0,0.0,No data
+Family Favourites,Other,other,,1.8,1.8,Watch,0,0.0,10.9,Insufficient zones
+Falafel,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+"Exclusive Offers, From Our Exclusive Restaurants",Other,other,,1.8,1.8,Watch,0,0.0,8.5,Insufficient zones
+Ethiopian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Electricals,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Egyptian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Egg-Cellent Easter Deals,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Fish Shop,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Florists,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Flowers,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Free Delivery (Uk),Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Great For Lunch,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Great For Gifting,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Great British Bake Off,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Gluten Free,Other,other,,1.8,1.8,Watch,0,0.0,17.9,Insufficient zones
+Gifting,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+German Doner Kebab,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+German,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Georgian,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Gelato,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Gcp-Refresh-Fastest-Delivery,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Fries,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Fried Chicken,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+Fresh Food,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+French Tacos,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+French,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data
+£7 Off Promotion,Other,other,,1.8,1.8,Watch,0,0.0,0.0,No data

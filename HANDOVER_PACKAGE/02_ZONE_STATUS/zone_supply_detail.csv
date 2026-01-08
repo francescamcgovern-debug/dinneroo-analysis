@@ -1,0 +1,435 @@
+zone_code,zone_name,city,region,partner_count,asian_dishes,italian_dishes,indian_dishes,healthy_dishes,mexican_dishes,middle_eastern_dishes,british_dishes,total_dishes,cuisine_count,has_asian,has_italian,has_indian,has_healthy,has_mexican,has_middle_eastern,has_british
+SRH,Shoreham,Brighton,South England and Wales,8,19,9,0,2,6,0,0,36,4,True,True,False,True,True,False,False
+HVNT,Havant,Portsmouth,South England and Wales,1,0,5,0,0,0,0,0,5,1,False,True,False,False,False,False,False
+BOHV,Bournebridge/ Havering,London,Greater London,3,10,4,0,0,0,0,0,14,2,True,True,False,False,False,False,False
+SOUE,Southampton East,Southampton,South England and Wales,7,9,18,0,0,6,3,1,37,5,True,True,False,False,True,True,True
+BRX,Brixton,London,Core London,12,23,8,7,8,3,3,1,53,7,True,True,True,True,True,True,True
+GRE,Greenwich,London,Greater London,11,31,8,4,5,0,3,1,52,6,True,True,True,True,False,True,True
+CAM,Cambridge,Cambridge,South England and Wales,8,21,13,0,0,6,3,1,44,5,True,True,False,False,True,True,True
+DID,Didsbury and Withington,Manchester,North England,3,5,4,0,0,0,0,0,9,2,True,True,False,False,False,False,False
+MOS,Moseley,Birmingham,North England,8,17,4,0,2,9,0,0,32,4,True,True,False,True,True,False,False
+WAN,Wandsworth,London,Core London,16,31,8,4,11,3,6,1,64,7,True,True,True,True,True,True,True
+SUA,Stratford upon Avon,Coventry,North England,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+CAN,Canterbury,Canterbury,South England and Wales,7,13,13,0,0,6,3,1,36,5,True,True,False,False,True,True,True
+BAL,Balham,London,Core London,14,26,4,7,8,3,3,0,51,6,True,True,True,True,True,True,False
+KSHY,Kingsbury Green/ The Hyde,London,Greater London,4,9,4,4,0,0,0,0,17,3,True,True,True,False,False,False,False
+HOR,Horsham,Crawley,Greater London,4,9,8,0,0,0,3,1,21,4,True,True,False,False,False,True,True
+FCH,Finsbury Park / Harringay / Crouch End,London,Core London,16,32,4,10,8,3,3,0,60,6,True,True,True,True,True,True,False
+WEY,Weybridge,London,Greater London,5,12,4,0,0,0,0,0,16,2,True,True,False,False,False,False,False
+FAR,Fareham,Portsmouth,South England and Wales,1,0,5,0,0,0,0,0,5,1,False,True,False,False,False,False,False
+MVK,Maida Vale / Kilburn,London,Core London,15,25,13,7,11,0,6,1,63,6,True,True,True,True,False,True,True
+WAT,Watford,London,Greater London,4,7,4,0,0,6,0,0,17,3,True,True,False,False,True,False,False
+WGR,Wood Green,London,Greater London,9,20,4,7,0,3,0,0,34,4,True,True,True,False,True,False,False
+WAL,Walthamstow,London,Greater London,6,11,4,7,0,0,0,0,22,3,True,True,True,False,False,False,False
+CHU,Cheshunt,London,Greater London,4,4,9,0,0,3,0,0,16,3,True,True,False,False,True,False,False
+HAM,Hampstead,London,Core London,17,29,19,7,5,3,6,1,70,7,True,True,True,True,True,True,True
+LET,Letchworth Garden City,London,Greater London,4,9,9,0,0,0,0,0,18,2,True,True,False,False,False,False,False
+STA,St Albans,London,Greater London,6,16,13,0,0,0,3,1,33,4,True,True,False,False,False,True,True
+WOT,Walton on Thames,London,Greater London,8,26,8,0,0,0,3,1,38,4,True,True,False,False,False,True,True
+BAS,Basingstoke,Reading,South England and Wales,3,4,4,0,0,6,0,0,14,3,True,True,False,False,True,False,False
+COOL,Coolock,Dublin,Ireland and Scotland,2,11,4,0,0,0,0,0,15,2,True,True,False,False,False,False,False
+HOS,Horsforth,Leeds,North England,2,3,4,0,0,0,0,0,7,2,True,True,False,False,False,False,False
+CHM,Chesham,London,Greater London,2,3,4,0,0,0,0,0,7,2,True,True,False,False,False,False,False
+RONT,Ronanstown,Dublin,Ireland and Scotland,3,15,4,0,0,0,0,0,19,2,True,True,False,False,False,False,False
+OLEE,Greater Leeds,Leeds,North England,3,7,4,0,0,0,0,0,11,2,True,True,False,False,False,False,False
+SKEA,South Kearsley,Manchester,North England,9,23,18,0,0,6,3,1,51,5,True,True,False,False,True,True,True
+HUY,Huyton,Liverpool,North England,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+WLOO,Waterloo & Southbank,London,Core London,8,21,14,0,2,0,0,0,37,3,True,True,False,True,False,False,False
+SG03,SG03,London,Greater London,2,0,9,0,0,0,0,0,9,1,False,True,False,False,False,False,False
+LLZ,Lockleaze,Bristol,South England and Wales,7,16,14,0,0,6,0,0,36,3,True,True,False,False,True,False,False
+NLB,Northfield/Longbridge,Birmingham,North England,2,5,4,0,0,0,0,0,9,2,True,True,False,False,False,False,False
+CPP,Crystal Palace / Penge,London,Greater London,5,11,4,4,0,0,0,0,19,3,True,True,True,False,False,False,False
+BAR,Barnet,London,Greater London,4,4,9,3,0,0,0,0,16,3,True,True,True,False,False,False,False
+REI,Reigate,Crawley,Greater London,6,17,8,0,0,0,3,1,29,4,True,True,False,False,False,True,True
+LEY,Leyton,London,Greater London,8,18,4,3,3,0,3,0,31,5,True,True,True,True,False,True,False
+WOK,Woking,London,Greater London,5,19,4,0,0,0,0,0,23,2,True,True,False,False,False,False,False
+CHE,Cheltenham,Cheltenham,South England and Wales,5,12,9,0,0,0,0,0,21,2,True,True,False,False,False,False,False
+GBL,Greenbank / Liberton,Edinburgh,Ireland and Scotland,4,13,4,0,0,0,0,0,17,2,True,True,False,False,False,False,False
+CW,Canary Wharf,London,Core London,13,29,8,4,11,0,6,1,59,6,True,True,True,True,False,True,True
+EPS,Epsom,London,Greater London,4,7,9,0,0,0,0,0,16,2,True,True,False,False,False,False,False
+HCN,Hounslow Central,London,Greater London,4,4,4,1,0,3,0,0,12,4,True,True,True,False,True,False,False
+RTW,Royal Tunbridge Wells,Royal Tunbridge Wells,Greater London,7,19,8,0,0,0,3,1,31,4,True,True,False,False,False,True,True
+HME,"Highgate, Muswell Hill, East Finchley",London,Greater London,12,21,4,7,5,3,3,0,43,6,True,True,True,True,True,True,False
+FIN,Finchley,London,Greater London,9,15,10,7,0,0,0,0,32,3,True,True,True,False,False,False,False
+PTC,Patchway,Bristol,South England and Wales,5,11,9,0,0,6,0,0,26,3,True,True,False,False,True,False,False
+BEC,Beckenham,London,Greater London,4,6,4,4,0,0,0,0,14,3,True,True,True,False,False,False,False
+BRK,Brockley / Forest Hill,London,Greater London,11,25,8,7,3,0,6,1,50,6,True,True,True,True,False,True,True
+PRL,Purley,London,Greater London,4,6,10,0,0,0,0,0,16,2,True,True,False,False,False,False,False
+BFSW,Belfast Southwest,Belfast,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+SWN,Streatham / West Norwood,London,Greater London,9,21,4,7,2,0,0,0,34,4,True,True,True,True,False,False,False
+CCS,Cardiff City Stadium,Cardiff,South England and Wales,7,14,13,0,0,6,3,1,37,5,True,True,False,False,True,True,True
+BRT,Braintree,Chelmsford,South England and Wales,4,6,13,0,0,0,3,1,23,4,True,True,False,False,False,True,True
+ELME,Elmers End/ Kelsey Park,London,Greater London,4,13,4,0,0,0,0,0,17,2,True,True,False,False,False,False,False
+DOWN,Downham/ Hither Green,London,Greater London,4,13,4,0,0,0,0,0,17,2,True,True,False,False,False,False,False
+HCR,Hunts Cross,Liverpool,North England,2,4,4,0,0,0,0,0,8,2,True,True,False,False,False,False,False
+GRY,Grays,London,Greater London,3,5,0,0,0,6,0,0,11,2,True,False,False,False,True,False,False
+HML,Hamilton,Glasgow,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+NORN,Norwich North,Norwich,South England and Wales,6,14,13,0,0,0,3,1,31,4,True,True,False,False,False,True,True
+STAS,St Ann's,Nottingham,North England,8,14,18,0,0,6,3,1,42,5,True,True,False,False,True,True,True
+CHEA,Cheadle,Manchester,North England,2,4,4,0,0,0,0,0,8,2,True,True,False,False,False,False,False
+MK02,MK02,Milton Keynes,South England and Wales,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+WCH,Winchester,Southampton,South England and Wales,3,7,4,0,0,0,0,0,11,2,True,True,False,False,False,False,False
+TAL,Tallaght,Dublin,Ireland and Scotland,2,11,4,0,0,0,0,0,15,2,True,True,False,False,False,False,False
+WTV,Waterlooville,Portsmouth,South England and Wales,1,0,5,0,0,0,0,0,5,1,False,True,False,False,False,False,False
+GRV,Gravesend,London,Greater London,5,6,13,0,2,0,3,1,25,5,True,True,False,True,False,True,True
+FLT,Feltham,London,Greater London,4,7,4,0,0,3,0,0,14,3,True,True,False,False,True,False,False
+ROM,Romford,London,Greater London,6,13,9,1,0,0,0,0,23,3,True,True,True,False,False,False,False
+GGW,Glasgow West,Glasgow,Ireland and Scotland,8,16,14,0,0,6,0,0,36,3,True,True,False,False,True,False,False
+KEA,Kearsley,Manchester,North England,4,6,8,0,0,6,3,1,24,5,True,True,False,False,True,True,True
+ILB,Inch and Liberton,Edinburgh,Ireland and Scotland,2,4,4,0,0,0,0,0,8,2,True,True,False,False,False,False,False
+WBCH,West Bromwich,Birmingham,North England,7,17,9,0,0,6,0,0,32,3,True,True,False,False,True,False,False
+GFK,Giffnock,Glasgow,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+BRO,Bromley,London,Greater London,5,16,4,0,0,0,0,0,20,2,True,True,False,False,False,False,False
+LBR,London Bridge,London,Core London,16,31,13,7,8,3,6,1,69,7,True,True,True,True,True,True,True
+PECN,Peckham North,London,Core London,4,7,0,3,3,0,3,0,16,4,True,False,True,True,False,True,False
+SVB,Severn Beach,Bristol,South England and Wales,4,11,4,0,0,6,0,0,21,3,True,True,False,False,True,False,False
+NPS,Neepsend,Sheffield,North England,2,0,9,0,0,0,0,0,9,1,False,True,False,False,False,False,False
+YO01,YO01,York,North England,1,0,5,0,0,0,0,0,5,1,False,True,False,False,False,False,False
+WVR,Waverley,Camberley,Greater London,3,5,8,0,0,0,3,1,17,4,True,True,False,False,False,True,True
+EDC,Edinburgh Central,Edinburgh,Ireland and Scotland,5,20,4,0,0,0,0,0,24,2,True,True,False,False,False,False,False
+LEA,Leatherhead,London,Greater London,5,10,9,0,0,0,0,0,19,2,True,True,False,False,False,False,False
+EPP,Epping,London,Greater London,2,0,4,0,0,3,0,0,7,2,False,True,False,False,True,False,False
+SLE,Sale,Manchester,North England,4,6,8,0,0,6,3,1,24,5,True,True,False,False,True,True,True
+PNTH,Penarth,Cardiff,South England and Wales,5,9,8,0,0,6,3,1,27,5,True,True,False,False,True,True,True
+NORW,Norwich West,Norwich,South England and Wales,6,14,13,0,0,0,3,1,31,4,True,True,False,False,False,True,True
+RH01,RH01,Crawley,Greater London,3,5,8,0,0,0,3,1,17,4,True,True,False,False,False,True,True
+LSEA,Leeds Southeast,Leeds,North England,8,21,14,0,0,6,3,1,45,5,True,True,False,False,True,True,True
+LUL,Lullingstone,London,Greater London,1,2,0,0,0,0,0,0,2,1,True,False,False,False,False,False,False
+LUT,Luton,London,Greater London,2,3,4,0,0,0,0,0,7,2,True,True,False,False,False,False,False
+PTF,Pontefract,Leeds,North England,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+OTT,Ottershaw,London,Greater London,3,14,0,0,0,0,0,0,14,1,True,False,False,False,False,False,False
+BRM,Birmingham,Birmingham,North England,10,19,13,0,2,9,3,1,47,6,True,True,False,True,True,True,True
+POT,Potters Bar,London,Greater London,4,4,9,3,0,0,0,0,16,3,True,True,True,False,False,False,False
+DDY,Dudley,Birmingham,North England,2,4,5,0,0,0,0,0,9,2,True,True,False,False,False,False,False
+PO04,PO04,Portsmouth,South England and Wales,4,9,8,0,0,0,3,1,21,4,True,True,False,False,False,True,True
+PEM,Pembury,Royal Tunbridge Wells,Greater London,6,17,8,0,0,0,3,1,29,4,True,True,False,False,False,True,True
+SPRK,Sparkbrook,Birmingham,North England,7,16,8,0,2,3,3,1,33,6,True,True,False,True,True,True,True
+HBAM,Holbeck and Armley,Leeds,North England,4,13,4,0,0,6,3,1,27,5,True,True,False,False,True,True,True
+WTH,Witham,Chelmsford,South England and Wales,4,6,13,0,0,0,3,1,23,4,True,True,False,False,False,True,True
+STK,Stockport/Heaton Moor,Manchester,North England,3,5,4,0,0,0,0,0,9,2,True,True,False,False,False,False,False
+YOR,York,York,North England,8,14,18,0,0,6,3,1,42,5,True,True,False,False,True,True,True
+BRCK,Bracknell,Camberley,Greater London,4,7,4,0,0,6,0,0,17,3,True,True,False,False,True,False,False
+WME,Wapping and Mile End,London,Core London,13,29,4,4,11,0,3,0,51,5,True,True,True,True,False,True,False
+COS,Cosham,Portsmouth,South England and Wales,1,0,5,0,0,0,0,0,5,1,False,True,False,False,False,False,False
+STL,Southall,London,Greater London,6,16,4,1,0,6,0,0,27,4,True,True,True,False,True,False,False
+ELTP,Eltham Palace,London,Greater London,3,7,4,0,0,0,0,0,11,2,True,True,False,False,False,False,False
+HLT,Heslington,York,North England,7,14,14,0,0,6,3,1,38,5,True,True,False,False,True,True,True
+NTG,Nottingham,Nottingham,North England,8,14,18,0,0,6,3,1,42,5,True,True,False,False,True,True,True
+CGT,Craigentinny,Edinburgh,Ireland and Scotland,4,20,0,0,0,0,0,0,20,1,True,False,False,False,False,False,False
+CHRL,Charlcombe,Bath,South England and Wales,2,3,0,0,0,6,0,0,9,2,True,False,False,False,True,False,False
+ABT,Arbourthorne,Sheffield,North England,4,9,9,0,0,0,0,0,18,2,True,True,False,False,False,False,False
+WDC,Woolwich Dockyard and Charlton Park,London,Greater London,2,6,0,0,0,0,0,0,6,1,True,False,False,False,False,False,False
+WLWT,Walworth,London,Core London,14,31,8,7,11,0,3,1,61,6,True,True,True,True,False,True,True
+GCE,Glasgow Centre East,Glasgow,Ireland and Scotland,3,4,5,0,0,6,0,0,15,3,True,True,False,False,True,False,False
+ME,Manchester East,Manchester,North England,2,4,0,0,0,3,0,0,7,2,True,False,False,False,True,False,False
+OTF,Otford,Royal Tunbridge Wells,Greater London,2,6,0,0,0,0,0,0,6,1,True,False,False,False,False,False,False
+RYA,Royal Arsenal,London,Greater London,2,2,4,0,0,0,0,0,6,2,True,True,False,False,False,False,False
+CHIN,Chinbrook Meadows,London,Greater London,2,2,4,0,0,0,0,0,6,2,True,True,False,False,False,False,False
+GLC,Glasgow Centre,Glasgow,Ireland and Scotland,7,16,9,0,0,6,0,0,31,3,True,True,False,False,True,False,False
+KNWL,Knowle,Bristol,South England and Wales,8,19,14,0,0,6,0,0,39,3,True,True,False,False,True,False,False
+WAR,Warwick,Coventry,North England,4,7,4,0,0,6,0,0,17,3,True,True,False,False,True,False,False
+EGEN,Egham and Englefield Green,London,Greater London,6,14,13,0,0,0,3,1,31,4,True,True,False,False,False,True,True
+CSTL,Castleknock,Dublin,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+DUND,Dundonald,Belfast,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+STR,Stratford,London,Greater London,12,24,4,10,5,0,3,0,46,5,True,True,True,True,False,True,False
+HSF,Horsham St Faith,Norwich,South England and Wales,1,0,5,0,0,0,0,0,5,1,False,True,False,False,False,False,False
+CV01,CV01,Coventry,North England,2,3,4,0,0,0,0,0,7,2,True,True,False,False,False,False,False
+DRU,Drumcondra,Dublin,Ireland and Scotland,5,12,4,5,0,0,1,0,22,4,True,True,True,False,False,True,False
+HULM,Hulme,Manchester,North England,6,26,0,0,0,3,0,0,29,2,True,False,False,False,True,False,False
+OGCE,Outer Glasgow East,Glasgow,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+NWTL,Newton Longville,Milton Keynes,South England and Wales,10,23,18,0,2,6,3,1,53,6,True,True,False,True,True,True,True
+WEM,Wembley,London,Greater London,12,19,9,7,3,6,3,0,47,6,True,True,True,True,True,True,False
+HDT,Hadlow and Tudeley,Royal Tunbridge Wells,Greater London,2,2,4,0,0,0,0,0,6,2,True,True,False,False,False,False,False
+LTH,Leith,Edinburgh,Ireland and Scotland,4,20,0,0,0,0,0,0,20,1,True,False,False,False,False,False,False
+UPT,Upton Park,London,Greater London,9,18,4,7,3,0,3,0,35,5,True,True,True,True,False,True,False
+DOR,Dorking,Crawley,Greater London,4,14,4,0,0,0,3,1,22,4,True,True,False,False,False,True,True
+TN1,TN1,Royal Tunbridge Wells,Greater London,5,12,8,0,0,0,3,1,24,4,True,True,False,False,False,True,True
+WFD,Wilford,Nottingham,North England,4,7,4,0,0,6,0,0,17,3,True,True,False,False,True,False,False
+ESL,Eastleigh,Southampton,South England and Wales,2,3,5,0,0,0,0,0,8,2,True,True,False,False,False,False,False
+BTHN,Bath North,Bath,South England and Wales,9,21,13,0,2,6,3,1,46,6,True,True,False,True,True,True,True
+BCLV,Bishop's Cleeve,Cheltenham,South England and Wales,4,9,9,0,0,0,0,0,18,2,True,True,False,False,False,False,False
+ESHE,East Sheffield,Sheffield,North England,3,5,9,0,0,0,0,0,14,2,True,True,False,False,False,False,False
+RTHM,Rotherham,Sheffield,North England,1,0,0,0,0,6,0,0,6,1,False,False,False,False,True,False,False
+RG05,RG05,Reading,Greater London,3,8,4,0,0,0,0,0,12,2,True,True,False,False,False,False,False
+STAV,Staverton,Cheltenham,South England and Wales,5,12,9,0,0,0,0,0,21,2,True,True,False,False,False,False,False
+NPL,North Paisley,Glasgow,Ireland and Scotland,2,0,9,0,0,0,0,0,9,1,False,True,False,False,False,False,False
+AST,Aston,Birmingham,North England,9,16,13,0,2,9,3,1,44,6,True,True,False,True,True,True,True
+STDN,Saltdean,Brighton,South England and Wales,6,9,13,0,0,6,3,1,32,5,True,True,False,False,True,True,True
+RTH,Rutherglen,Glasgow,Ireland and Scotland,2,4,0,0,0,6,0,0,10,2,True,False,False,False,True,False,False
+WAK,Wakefield,Leeds,North England,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+SLO,Slough,London,Greater London,8,16,18,0,0,0,3,1,38,4,True,True,False,False,False,True,True
+LIV,Liverpool City Centre,Liverpool,North England,4,9,5,0,0,6,0,0,20,3,True,True,False,False,True,False,False
+DRGH,Drighlington and Adwalton,Leeds,North England,2,4,0,0,0,6,0,0,10,2,True,False,False,False,True,False,False
+RG04,RG04,Reading,Greater London,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+LDE,Leeds East,Leeds,North England,4,2,18,0,0,0,3,1,24,4,True,True,False,False,False,True,True
+BARK,Barking,London,Greater London,5,13,4,1,0,0,0,0,18,3,True,True,True,False,False,False,False
+STAI,Staines,London,Greater London,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+SVLE,Southville,Bristol,South England and Wales,7,19,9,0,0,6,0,0,34,3,True,True,False,False,True,False,False
+SO3,SO3,Southampton,South England and Wales,2,3,4,0,0,0,0,0,7,2,True,True,False,False,False,False,False
+FET,Fettes,Edinburgh,Ireland and Scotland,4,20,0,0,0,0,0,0,20,1,True,False,False,False,False,False,False
+NORE,Norwich East,Norwich,South England and Wales,6,14,13,0,0,0,3,1,31,4,True,True,False,False,False,True,True
+HEN,Henley on Thames,Reading,Greater London,3,8,4,0,0,0,0,0,12,2,True,True,False,False,False,False,False
+DWT,Derwenthorpe,York,North England,7,14,14,0,0,6,3,1,38,5,True,True,False,False,True,True,True
+BTH,Bath,Bath,South England and Wales,9,21,13,0,2,6,3,1,46,6,True,True,False,True,True,True,True
+EDN,Edinburgh North,Edinburgh,Ireland and Scotland,5,20,4,0,0,0,0,0,24,2,True,True,False,False,False,False,False
+BEE,Beeston,Leeds,North England,5,7,10,0,0,6,0,0,23,3,True,True,False,False,True,False,False
+KSF,Kingswinford,Birmingham,North England,2,4,5,0,0,0,0,0,9,2,True,True,False,False,False,False,False
+BA04,BA04,Bath,South England and Wales,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+KENM,Kenilworth,Coventry,North England,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+WOXF,West Oxford,Oxford,South England and Wales,2,3,4,0,0,0,0,0,7,2,True,True,False,False,False,False,False
+WPNG,Wapping,London,Core London,8,16,4,4,5,0,3,0,32,5,True,True,True,True,False,True,False
+OBOU,Outer Bournemouth,Bournemouth,South England and Wales,2,3,4,0,0,0,0,0,7,2,True,True,False,False,False,False,False
+FARN,Farnham,Camberley,Greater London,3,5,8,0,0,0,3,1,17,4,True,True,False,False,False,True,True
+EDSW,Edinburgh Southwest,Edinburgh,Ireland and Scotland,4,13,4,0,0,0,0,0,17,2,True,True,False,False,False,False,False
+BIG,Biggin Hill,London,Greater London,2,2,4,0,0,0,0,0,6,2,True,True,False,False,False,False,False
+CTBR,Coatbridge & Airdrie,Glasgow,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+HRB,Harbury,Coventry,North England,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+FRW,Fairwater,Cardiff,South England and Wales,2,0,4,0,0,6,0,0,10,2,False,True,False,False,True,False,False
+HND,Hedge End,Southampton,South England and Wales,2,3,5,0,0,0,0,0,8,2,True,True,False,False,False,False,False
+MC,Manchester Central,Manchester,North England,8,26,10,0,0,3,0,0,39,3,True,True,False,False,True,False,False
+WOLL,Wollaton,Nottingham,North England,8,14,18,0,0,6,3,1,42,5,True,True,False,False,True,True,True
+SAL,Salford,Manchester,North England,9,26,14,0,0,3,0,0,43,3,True,True,False,False,True,False,False
+DRAY,Drayton & Farlington,Portsmouth,South England and Wales,3,3,9,0,0,0,0,0,12,2,True,True,False,False,False,False,False
+CLBM,Clydebank,Glasgow,Ireland and Scotland,2,0,9,0,0,0,0,0,9,1,False,True,False,False,False,False,False
+SSEA,Southsea,Portsmouth,South England and Wales,9,20,14,0,0,6,0,0,40,3,True,True,False,False,True,False,False
+ASHC,Ashford Common,London,Greater London,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+SCLM,South Chelmsford,Chelmsford,South England and Wales,7,14,8,0,0,9,3,1,35,5,True,True,False,False,True,True,True
+LANG,Langley and Middle Green,London,Greater London,7,16,13,0,0,0,3,1,33,4,True,True,False,False,False,True,True
+SKC,South Kensington,London,Core London,17,20,21,4,14,3,6,1,69,7,True,True,True,True,True,True,True
+HIT,Hitchin,London,Greater London,4,9,9,0,0,0,0,0,18,2,True,True,False,False,False,False,False
+BRS,Bristol,Bristol,South England and Wales,7,19,9,0,0,6,0,0,34,3,True,True,False,False,True,False,False
+EST,Eastbourne,Brighton,South England and Wales,2,2,8,0,0,0,3,1,14,4,True,True,False,False,False,True,True
+ALH,Altrincham and Hale,Manchester,North England,2,2,8,0,0,0,3,1,14,4,True,True,False,False,False,True,True
+EC,East Central,London,Core London,19,31,18,7,14,3,6,1,80,7,True,True,True,True,True,True,True
+CKT,Camden/Kentish Town,London,Core London,16,25,13,7,11,3,6,1,66,7,True,True,True,True,True,True,True
+LS,Liverpool South,Liverpool,North England,5,9,9,0,0,6,0,0,24,3,True,True,False,False,True,False,False
+ERD,East Reading,Reading,Greater London,12,28,18,0,0,9,3,1,59,5,True,True,False,False,True,True,True
+EUST,Euston,London,Core London,7,13,4,0,8,0,0,0,25,3,True,True,False,True,False,False,False
+BSY,Bermondsey,London,Core London,15,26,8,7,11,3,6,1,62,7,True,True,True,True,True,True,True
+BOU,Bournemouth,Bournemouth,South England and Wales,4,9,9,0,0,0,0,0,18,2,True,True,False,False,False,False,False
+BRAD,Bradville,Milton Keynes,South England and Wales,10,23,18,0,2,6,3,1,53,6,True,True,False,True,True,True,True
+LEIX,Leixlip,Dublin,Ireland and Scotland,3,15,4,0,0,0,0,0,19,2,True,True,False,False,False,False,False
+SEV,Sevenoaks,Royal Tunbridge Wells,Greater London,2,6,0,0,0,0,0,0,6,1,True,False,False,False,False,False,False
+OXF,Oxford,Oxford,South England and Wales,7,24,9,0,0,0,0,0,33,2,True,True,False,False,False,False,False
+BTC,Belfast,Belfast,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+BTE,Belfast East,Belfast,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+WBR,West Bridgford,Nottingham,North England,8,14,18,0,0,6,3,1,42,5,True,True,False,False,True,True,True
+DAL,Dalston Stoke Newington,London,Core London,18,32,4,10,14,3,3,0,66,6,True,True,True,True,True,True,False
+EMH,Edgware / Mill Hill,London,Greater London,8,13,10,7,0,0,0,0,30,3,True,True,True,False,False,False,False
+HRO,Harrow,London,Greater London,7,7,9,5,0,6,0,0,27,4,True,True,True,False,True,False,False
+WLW,Woolwich,London,Greater London,2,2,4,0,0,0,0,0,6,2,True,True,False,False,False,False,False
+MAID,Maidenhead,London,Greater London,2,0,9,0,0,0,0,0,9,1,False,True,False,False,False,False,False
+UXB,Uxbridge,London,Greater London,7,12,9,1,0,0,0,0,22,3,True,True,True,False,False,False,False
+WLY,Welwyn Garden City,London,Greater London,5,12,9,0,0,0,0,0,21,2,True,True,False,False,False,False,False
+SWF,South Woodford,London,Greater London,4,0,4,4,0,3,0,0,11,3,False,True,True,False,True,False,False
+FSF,Filton / Fishponds / Stoke Bishop,Bristol,South England and Wales,5,14,4,0,0,6,0,0,24,3,True,True,False,False,True,False,False
+RNP,Raynes Park,London,Greater London,9,24,13,0,2,0,3,1,43,5,True,True,False,True,False,True,True
+VKO,"Vauxhall, Kennington and Oval",London,Core London,16,31,18,7,11,0,3,1,71,6,True,True,True,True,False,True,True
+TOO,Tooting,London,Greater London,13,29,8,4,8,3,3,1,56,7,True,True,True,True,True,True,True
+TWI,Twickenham / Teddington,London,Greater London,10,24,8,0,5,3,3,1,44,6,True,True,False,True,True,True,True
+GUI,Guildford,London,Greater London,7,21,13,0,0,0,3,1,38,4,True,True,False,False,False,True,True
+BNC,Brighton Central,Brighton,South England and Wales,11,23,18,0,2,6,3,1,53,6,True,True,False,True,True,True,True
+CVS,Caversham,Reading,Greater London,12,28,18,0,0,9,3,1,59,5,True,True,False,False,True,True,True
+STS,Southside,Glasgow,Ireland and Scotland,7,16,9,0,0,6,0,0,31,3,True,True,False,False,True,False,False
+BFC,Belfast Central,Belfast,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+BOR,Bognor Regis,Portsmouth,South England and Wales,4,9,8,0,0,0,3,1,21,4,True,True,False,False,False,True,True
+CLH,Chislehurst,London,Greater London,5,16,4,0,0,0,0,0,20,2,True,True,False,False,False,False,False
+CGF,Chingford,London,Greater London,6,6,9,3,0,3,0,0,21,4,True,True,True,False,True,False,False
+FUL,Fulham,London,Core London,17,25,16,4,14,3,6,1,69,7,True,True,True,True,True,True,True
+BEL,Belsize Park / St John's Wood,London,Core London,17,25,18,7,11,3,6,1,71,7,True,True,True,True,True,True,True
+KIN,Kingston,London,Greater London,10,24,8,0,5,3,3,1,44,6,True,True,False,True,True,True,True
+LEW,Lewisham,London,Greater London,10,18,8,7,3,0,6,1,43,6,True,True,True,True,False,True,True
+PUT,Putney & Barnes,London,Core London,13,21,8,4,14,0,6,1,54,6,True,True,True,True,False,True,True
+FRH,Farnborough,Camberley,Greater London,3,4,9,0,0,0,0,0,13,2,True,True,False,False,False,False,False
+WKN,Wokingham,Camberley,Greater London,4,7,4,0,0,6,0,0,17,3,True,True,False,False,True,False,False
+MK,Milton Keynes,Milton Keynes,South England and Wales,10,23,18,0,2,6,3,1,53,6,True,True,False,True,True,True,True
+BEX,Bexleyheath,London,Greater London,5,11,8,0,0,0,3,1,23,4,True,True,False,False,False,True,True
+PDB,Ponders End and Brimsdown,London,Greater London,3,6,5,0,0,0,0,0,11,2,True,True,False,False,False,False,False
+NTT,Netherthorpe,Sheffield,North England,4,9,9,0,0,0,0,0,18,2,True,True,False,False,False,False,False
+CDN,Coldean,Brighton,South England and Wales,10,23,18,0,0,6,3,1,51,5,True,True,False,False,True,True,True
+OBTE,Outer Belfast East,Belfast,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+SHN,Shankill,Dublin,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+OSHE,Outer Sheffield,Sheffield,North England,2,0,5,0,0,6,0,0,11,2,False,True,False,False,True,False,False
+BOO,Bootle/ Anfield,Liverpool,North England,3,9,5,0,0,0,0,0,14,2,True,True,False,False,False,False,False
+LGRN,Littlefield Green,London,Greater London,2,0,9,0,0,0,0,0,9,1,False,True,False,False,False,False,False
+ELT,Eltham,London,Greater London,2,2,4,0,0,0,0,0,6,2,True,True,False,False,False,False,False
+BVS,Bournville / Stirchley,Birmingham,North England,3,8,4,0,0,0,0,0,12,2,True,True,False,False,False,False,False
+G03,G03,Glasgow,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+TOTN,Tottenham,London,Greater London,5,16,0,3,0,0,0,0,19,2,True,False,True,False,False,False,False
+BRME,Bournemouth East,Bournemouth,South England and Wales,4,9,9,0,0,0,0,0,18,2,True,True,False,False,False,False,False
+SHE,Sheffield,Sheffield,North England,4,9,9,0,0,0,0,0,18,2,True,True,False,False,False,False,False
+DCS,Dublin City South,Dublin,Ireland and Scotland,10,16,4,8,0,5,4,0,37,5,True,True,True,False,True,True,False
+SBU,Hammersmith / Shepherd's Bush,London,Core London,14,20,13,4,14,0,6,1,58,6,True,True,True,True,False,True,True
+ORP,Orpington,London,Greater London,5,16,4,0,0,0,0,0,20,2,True,True,False,False,False,False,False
+MLH,Mulhuddart,Dublin,Ireland and Scotland,3,15,4,0,0,0,0,0,19,2,True,True,False,False,False,False,False
+PCH,Pilton / Corstorphine Hill,Edinburgh,Ireland and Scotland,4,13,4,0,0,0,0,0,17,2,True,True,False,False,False,False,False
+FAS,Farsley and Swinnow,Leeds,North England,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+VWP,"Victoria, Westminster, Pimlico",London,Core London,13,18,16,4,14,0,3,1,56,6,True,True,True,True,False,True,True
+GVN,Govan,Glasgow,Ireland and Scotland,2,4,4,0,0,0,0,0,8,2,True,True,False,False,False,False,False
+CAR,Cardiff,Cardiff,South England and Wales,7,14,13,0,0,6,3,1,37,5,True,True,False,False,True,True,True
+NWM,New Milton,Bournemouth,South England and Wales,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+NEH,New Earswick and Huntington,York,North England,8,14,18,0,0,6,3,1,42,5,True,True,False,False,True,True,True
+WKEA,West Kearsley,Manchester,North England,1,2,4,0,0,0,3,1,10,4,True,True,False,False,False,True,True
+SOU,Southampton,Southampton,South England and Wales,7,9,18,0,0,6,3,1,37,5,True,True,False,False,True,True,True
+CBW,Camberwell,London,Core London,7,11,9,3,5,0,0,0,28,4,True,True,True,True,False,False,False
+BTHS,Bath South,Bath,South England and Wales,9,21,13,0,2,6,3,1,46,6,True,True,False,True,True,True,True
+ESTN,Easton,Bristol,South England and Wales,7,19,9,0,0,6,0,0,34,3,True,True,False,False,True,False,False
+TLR,Tollerton,Nottingham,North England,3,7,4,0,0,0,0,0,11,2,True,True,False,False,False,False,False
+CBH,Cobham,London,Greater London,6,12,9,0,0,0,0,0,21,2,True,True,False,False,False,False,False
+LS02,LS02,Leeds,North England,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+WWD,Wisewood,Sheffield,North England,3,9,4,0,0,0,0,0,13,2,True,True,False,False,False,False,False
+SPL,South Pollok,Glasgow,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+LLAN,Llanrumney,Cardiff,South England and Wales,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+HOB,Horbury,Leeds,North England,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+CHES,Cheltenham South,Cheltenham,South England and Wales,5,12,9,0,0,0,0,0,21,2,True,True,False,False,False,False,False
+EOXF,East Oxford,Oxford,South England and Wales,6,21,9,0,0,0,0,0,30,2,True,True,False,False,False,False,False
+CRH,Crownhill,Milton Keynes,South England and Wales,10,23,18,0,2,6,3,1,53,6,True,True,False,True,True,True,True
+SAYS,South Aylesford,Maidstone,South England and Wales,1,2,0,0,0,0,0,0,2,1,True,False,False,False,False,False,False
+NAD,New Addington,London,Greater London,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+BTHW,Bath West,Bath,South England and Wales,9,21,13,0,2,6,3,1,46,6,True,True,False,True,True,True,True
+NHP,Notting Hill / Paddington,London,Core London,16,23,21,4,14,0,6,1,69,6,True,True,True,True,False,True,True
+HEM,Hemel Hempstead,London,Greater London,6,16,13,0,0,0,3,1,33,4,True,True,False,False,False,True,True
+SUR,Surrey Quays,London,Core London,9,14,8,7,3,0,6,1,39,6,True,True,True,True,False,True,True
+HWC,High Wycombe,London,Greater London,1,3,0,0,0,0,0,0,3,1,True,False,False,False,False,False,False
+BWD,Borehamwood,London,Greater London,5,5,10,0,0,6,0,0,21,3,True,True,False,False,True,False,False
+REA,Reading,Reading,Greater London,11,23,18,0,0,9,3,1,54,5,True,True,False,False,True,True,True
+WRD,West Reading,Reading,Greater London,10,20,18,0,0,9,3,1,51,5,True,True,False,False,True,True,True
+LEAB,Leavesden and Abbots Langley,London,Greater London,5,9,8,0,0,6,3,1,27,5,True,True,False,False,True,True,True
+ASHD,Ashtead,London,Greater London,4,7,9,0,0,0,0,0,16,2,True,True,False,False,False,False,False
+BOW,Bow,London,Core London,10,18,4,7,5,0,3,0,37,5,True,True,True,True,False,True,False
+WOB,Woburn,Milton Keynes,South England and Wales,10,23,18,0,2,6,3,1,53,6,True,True,False,True,True,True,True
+OKNH,Keynsham,Bristol,South England and Wales,2,4,5,0,0,0,0,0,9,2,True,True,False,False,False,False,False
+RKCO,Rickmansworth and Croxley Green,London,Greater London,4,7,4,0,0,6,0,0,17,3,True,True,False,False,True,False,False
+POO,Poole,Bournemouth,South England and Wales,5,12,9,0,0,0,0,0,21,2,True,True,False,False,False,False,False
+BRA,Bramhall,Manchester,North England,2,4,4,0,0,0,0,0,8,2,True,True,False,False,False,False,False
+RIC,Richmond / Kew,London,Core London,9,18,8,4,5,3,3,1,42,7,True,True,True,True,True,True,True
+SUT,Sutton,London,Greater London,7,14,14,0,0,0,0,0,28,2,True,True,False,False,False,False,False
+BKS,Berkhamsted,London,Greater London,3,3,9,0,0,0,0,0,12,2,True,True,False,False,False,False,False
+SHW,Shirley / Wickham,London,Greater London,5,13,9,0,0,0,0,0,22,2,True,True,False,False,False,False,False
+HAY,Hayes,London,Greater London,5,7,9,1,0,0,0,0,17,3,True,True,True,False,False,False,False
+WTY,Whitley,Reading,Greater London,10,20,18,0,0,9,3,1,51,5,True,True,False,False,True,True,True
+MDS,Maidstone,Maidstone,South England and Wales,1,2,0,0,0,0,0,0,2,1,True,False,False,False,False,False,False
+OAW,Oakwood and Chapeltown,Leeds,North England,9,21,18,0,0,6,3,1,49,5,True,True,False,False,True,True,True
+DDK,"Dun laoghaire, Dalkey, Killiney",Dublin,Ireland and Scotland,4,4,4,5,0,5,0,0,18,4,True,True,True,False,True,False,False
+EAB,East Barnet,London,Greater London,4,6,4,3,0,0,0,0,13,3,True,True,True,False,False,False,False
+HRF,Hertford,London,Greater London,2,7,0,0,0,0,0,0,7,1,True,False,False,False,False,False,False
+GWE,Glasgow West End,Glasgow,Ireland and Scotland,8,16,14,0,0,6,0,0,36,3,True,True,False,False,True,False,False
+ENF,Enfield,London,Greater London,4,6,9,0,0,0,0,0,15,2,True,True,False,False,False,False,False
+WIM,Wimbledon,London,Core London,10,24,8,4,5,0,3,1,45,6,True,True,True,True,False,True,True
+DUL,Dulwich,London,Greater London,10,18,4,7,5,0,3,0,37,5,True,True,True,True,False,True,False
+EDMT,Edmonton,London,Greater London,5,12,9,0,0,0,0,0,21,2,True,True,False,False,False,False,False
+SPBR,Spring Grove/ Brentford,London,Greater London,8,18,8,0,5,3,3,1,38,6,True,True,False,True,True,True,True
+NWB,Newbury,Reading,South England and Wales,3,4,8,0,0,0,3,1,16,4,True,True,False,False,False,True,True
+DUN,Dundrum,Dublin,Ireland and Scotland,10,16,4,8,0,5,4,0,37,5,True,True,True,False,True,True,False
+GAL,Galway,Galway,Ireland and Scotland,2,11,4,0,0,0,0,0,15,2,True,True,False,False,False,False,False
+ILF,Ilford,London,Greater London,7,10,9,4,0,3,0,0,26,4,True,True,True,False,True,False,False
+STEV,Stevenage,London,Greater London,5,12,9,0,0,0,0,0,21,2,True,True,False,False,False,False,False
+RLS,Royal Leamington Spa,Coventry,North England,4,7,4,0,0,6,0,0,17,3,True,True,False,False,True,False,False
+CLM,Chelmsford,Chelmsford,South England and Wales,7,14,8,0,0,9,3,1,35,5,True,True,False,False,True,True,True
+ISL,Islington,London,Core London,20,31,18,10,14,3,6,1,83,7,True,True,True,True,True,True,True
+CLA,Clapham,London,Core London,18,25,18,7,14,3,6,1,74,7,True,True,True,True,True,True,True
+SID,Sidcup,London,Greater London,3,5,4,0,0,0,0,0,9,2,True,True,False,False,False,False,False
+PGS,Palmers Green / Southgate,London,Greater London,9,20,9,7,0,0,0,0,36,3,True,True,True,False,False,False,False
+CRW,Crawley,Crawley,Greater London,4,9,8,0,0,0,3,1,21,4,True,True,False,False,False,True,True
+FING,Finglas,Dublin,Ireland and Scotland,4,11,4,5,0,0,1,0,21,4,True,True,True,False,False,True,False
+CHS,Chichester,Portsmouth,South England and Wales,4,9,8,0,0,0,3,1,21,4,True,True,False,False,False,True,True
+CHI,Chiswick,London,Core London,12,18,13,4,8,6,6,1,56,7,True,True,True,True,True,True,True
+DRT,Dartford,London,Greater London,7,8,13,0,2,6,3,1,33,6,True,True,False,True,True,True,True
+ESLE,Eastleigh Central,Southampton,South England and Wales,3,7,5,0,0,0,0,0,12,2,True,True,False,False,False,False,False
+ABH,Acomb and Holgate,York,North England,8,14,18,0,0,6,3,1,42,5,True,True,False,False,True,True,True
+DCN,Dublin City North,Dublin,Ireland and Scotland,10,16,4,8,0,5,4,0,37,5,True,True,True,False,True,True,False
+UPM,Upminster,London,Greater London,4,13,5,0,0,0,0,0,18,2,True,True,False,False,False,False,False
+STAN,Stanmore,London,Greater London,7,8,15,0,0,6,0,0,29,3,True,True,False,False,True,False,False
+GBC,Golders Green / Brent Cross,London,Greater London,10,25,10,7,0,0,0,0,42,3,True,True,True,False,False,False,False
+WIN,Windsor,London,Greater London,8,16,18,0,0,0,3,1,38,4,True,True,False,False,False,True,True
+BLA,Blanchardstown,Dublin,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+RNH,Rainham,London,Greater London,6,13,9,0,0,6,0,0,28,3,True,True,False,False,True,False,False
+FLE,Fleet,Camberley,Greater London,5,9,13,0,0,0,3,1,26,4,True,True,False,False,False,True,True
+EAL,Ealing,London,Core London,9,16,4,5,3,6,3,0,37,6,True,True,True,True,True,True,False
+CRO,Croydon,London,Greater London,4,6,9,0,0,0,0,0,15,2,True,True,False,False,False,False,False
+SLEE,South Leeds,Leeds,North England,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+ORTHM,Outer Rotherham,Sheffield,North England,2,0,4,0,0,6,0,0,10,2,False,True,False,False,True,False,False
+AUL,Ashton-under-Lyne,Manchester,North England,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+NWPA,Newport Pagnell,Milton Keynes,South England and Wales,3,4,9,0,0,0,0,0,13,2,True,True,False,False,False,False,False
+TON,Tonbridge,Royal Tunbridge Wells,Greater London,6,14,8,0,0,0,3,1,26,4,True,True,False,False,False,True,True
+NOR,Norwich,Norwich,South England and Wales,6,14,13,0,0,0,3,1,31,4,True,True,False,False,False,True,True
+PHN,Peacehaven,Brighton,South England and Wales,2,0,9,0,0,0,0,0,9,1,False,True,False,False,False,False,False
+ALD,Aldershot,Camberley,Greater London,5,9,13,0,0,0,3,1,26,4,True,True,False,False,False,True,True
+RSL,Ruislip,London,Greater London,5,7,9,1,0,0,0,0,17,3,True,True,True,False,False,False,False
+MNG,Morningside,Edinburgh,Ireland and Scotland,4,13,4,0,0,0,0,0,17,2,True,True,False,False,False,False,False
+PIN,Pinner,London,Greater London,6,7,9,1,0,6,0,0,23,4,True,True,True,False,True,False,False
+HRP,Harpenden,London,Greater London,5,16,8,0,0,0,3,1,28,4,True,True,False,False,False,True,True
+BROA,Broadstone,Bournemouth,South England and Wales,2,3,4,0,0,0,0,0,7,2,True,True,False,False,False,False,False
+ARND,Arnold,Nottingham,North England,8,14,18,0,0,6,3,1,42,5,True,True,False,False,True,True,True
+CRHT,Cardiff Heath,Cardiff,South England and Wales,7,14,13,0,0,6,3,1,37,5,True,True,False,False,True,True,True
+CLC,Colchester,Colchester,South England and Wales,4,9,8,0,0,0,3,1,21,4,True,True,False,False,False,True,True
+OGLC,Outer Glasgow,Glasgow,Ireland and Scotland,3,7,5,0,0,0,0,0,12,2,True,True,False,False,False,False,False
+BFW,Belfast West,Belfast,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+CNN,Canning Town,London,Greater London,14,31,8,4,11,0,6,1,61,6,True,True,True,True,False,True,True
+STB,Stourbridge,Birmingham,North England,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+DCSW,Dublin Central South West,Dublin,Ireland and Scotland,4,11,4,3,0,0,1,0,19,4,True,True,True,False,False,True,False
+FXR,Foxrock,Dublin,Ireland and Scotland,3,4,4,5,0,0,0,0,13,3,True,True,True,False,False,False,False
+ORNF,Outer Renfrew,Glasgow,Ireland and Scotland,1,0,5,0,0,0,0,0,5,1,False,True,False,False,False,False,False
+PEC,Peckham,London,Core London,7,9,4,7,3,0,3,0,26,5,True,True,True,True,False,True,False
+NUT,Nunthorpe and South Bank,York,North England,8,14,18,0,0,6,3,1,42,5,True,True,False,False,True,True,True
+WCT,White City,London,Core London,7,18,13,0,2,0,3,1,37,5,True,True,False,True,False,True,True
+CRDB,Cardiff Bay Area,Cardiff,South England and Wales,7,14,13,0,0,6,3,1,37,5,True,True,False,False,True,True,True
+NUNS,Nuns Island,Galway,Ireland and Scotland,2,11,4,0,0,0,0,0,15,2,True,True,False,False,False,False,False
+ASSU,Ascot and Sunninghill,Camberley,Greater London,4,7,4,0,0,6,0,0,17,3,True,True,False,False,True,False,False
+CANF,Canford,Bournemouth,South England and Wales,2,3,4,0,0,0,0,0,7,2,True,True,False,False,False,False,False
+SCC,Sheffield City Centre,Sheffield,North England,4,9,9,0,0,0,0,0,18,2,True,True,False,False,False,False,False
+CLON,Clontarf,Dublin,Ireland and Scotland,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+CHSS,Chessington,London,Greater London,3,7,4,0,0,0,0,0,11,2,True,True,False,False,False,False,False
+HEA,Headingley,Leeds,North England,9,21,18,0,0,6,3,1,49,5,True,True,False,False,True,True,True
+HATF,Hatfield/ Hatfield Park,London,Greater London,4,7,9,0,0,0,0,0,16,2,True,True,False,False,False,False,False
+LC,Leeds City Centre,Leeds,North England,9,21,18,0,0,6,3,1,49,5,True,True,False,False,True,True,True
+WC,West Central,London,Core London,17,29,18,4,14,3,6,1,75,7,True,True,True,True,True,True,True
+SDW,Sandwell,Birmingham,North England,1,0,5,0,0,0,0,0,5,1,False,True,False,False,False,False,False
+CB03,CB03,Cambridge,South England and Wales,3,3,4,0,0,6,0,0,13,3,True,True,False,False,True,False,False
+STP,Stoke Poges,London,Greater London,3,5,4,0,0,0,0,0,9,2,True,True,False,False,False,False,False
+ASHT,Ash and Tongham,Camberley,Greater London,4,5,13,0,0,0,3,1,22,4,True,True,False,False,False,True,True
+OXLS,Oxleas,London,Greater London,2,2,4,0,0,0,0,0,6,2,True,True,False,False,False,False,False
+ABF,Arborfield and Finchampstead,Camberley,Greater London,2,3,4,0,0,0,0,0,7,2,True,True,False,False,False,False,False
+OGGW,Outer Glasgow West,Glasgow,Ireland and Scotland,3,4,9,0,0,0,0,0,13,2,True,True,False,False,False,False,False
+FRL,Frimley and Frimley Green,Camberley,Greater London,3,4,9,0,0,0,0,0,13,2,True,True,False,False,False,False,False
+CMB,Camberley,Camberley,Greater London,5,7,9,0,0,6,0,0,22,3,True,True,False,False,True,False,False
+KYLE,Kylemore,Dublin,Ireland and Scotland,3,15,4,0,0,0,0,0,19,2,True,True,False,False,False,False,False
+PLAW,Plumstead and Abbey Wood,London,Greater London,2,2,4,0,0,0,0,0,6,2,True,True,False,False,False,False,False
+HLO,Halesowen,Birmingham,North England,6,12,9,0,0,6,0,0,27,3,True,True,False,False,True,False,False
+RNF,Renfrew,Glasgow,Ireland and Scotland,3,4,9,0,0,0,0,0,13,2,True,True,False,False,False,False,False
+CM2,CM2,London,Greater London,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+CHRC,Cheltenham Racecourse,Cheltenham,South England and Wales,5,12,9,0,0,0,0,0,21,2,True,True,False,False,False,False,False
+TBU,Taplow and Burnham,London,Greater London,3,4,9,0,0,0,0,0,13,2,True,True,False,False,False,False,False
+RUS,Rusholme,Manchester,North England,5,10,4,0,0,3,0,0,17,3,True,True,False,False,True,False,False
+HLYT,Bellshill & Holytown,Glasgow,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+RG02,RG02,Reading,Greater London,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+GOD,Godalming,London,Greater London,7,21,13,0,0,0,3,1,38,4,True,True,False,False,False,True,True
+CBRA,Cabra,Dublin,Ireland and Scotland,5,12,4,5,0,0,1,0,22,4,True,True,True,False,False,True,False
+WRSW,Whitley Row/ Sevenoaks Weald,Royal Tunbridge Wells,Greater London,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+CHO,Chorlton,Manchester,North England,12,29,18,0,0,9,3,1,60,5,True,True,False,False,True,True,True
+BSW,Bishopsworth,Bristol,South England and Wales,3,0,9,0,0,6,0,0,15,2,False,True,False,False,True,False,False
+PSL,Paisley,Glasgow,Ireland and Scotland,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+HUR,Hurn,Bournemouth,South England and Wales,1,0,5,0,0,0,0,0,5,1,False,True,False,False,False,False,False
+HAX,Haxby,York,North England,1,0,5,0,0,0,0,0,5,1,False,True,False,False,False,False,False
+RTHT,Rotherhithe,London,Core London,7,16,4,4,2,0,3,0,29,5,True,True,True,True,False,True,False
+MMS,Mayfair,London,Core London,18,26,21,4,14,3,6,1,75,7,True,True,True,True,True,True,True
+MLY,Morley and New Brighton,Leeds,North England,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+CRA,Cranfield,Milton Keynes,South England and Wales,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+POR,Portsmouth,Portsmouth,South England and Wales,9,20,14,0,0,6,0,0,40,3,True,True,False,False,True,False,False
+SOUW,Southampton West,Southampton,South England and Wales,5,6,13,0,0,6,3,1,29,5,True,True,False,False,True,True,True
+SO1,SO1,Southampton,South England and Wales,1,4,0,0,0,0,0,0,4,1,True,False,False,False,False,False,False
+TOY,Totley,Sheffield,North England,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+CT02,CT02,Canterbury,South England and Wales,1,0,5,0,0,0,0,0,5,1,False,True,False,False,False,False,False
+HORM,Horley,Crawley,Greater London,6,17,8,0,0,0,3,1,29,4,True,True,False,False,False,True,True
+MK01,MK01,Milton Keynes,South England and Wales,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+SOXF,South Oxford,Oxford,South England and Wales,7,24,9,0,0,0,0,0,33,2,True,True,False,False,False,False,False
+BSTW,Bestwood,Nottingham,North England,7,11,18,0,0,6,3,1,39,5,True,True,False,False,True,True,True
+KNH,Hillfields,Bristol,South England and Wales,6,19,9,0,0,0,0,0,28,2,True,True,False,False,False,False,False
+GRC,Gerrards Cross,London,Greater London,3,7,4,0,0,0,0,0,11,2,True,True,False,False,False,False,False
+CTP,Cotgrave Park,Nottingham,North England,3,7,4,0,0,0,0,0,11,2,True,True,False,False,False,False,False
+CSTR,Caistor St Edmund,Norwich,South England and Wales,2,0,9,0,0,0,0,0,9,1,False,True,False,False,False,False,False
+BSTH,Bishopthorpe,York,North England,1,0,4,0,0,0,0,0,4,1,False,True,False,False,False,False,False
+DNB,Danbury,Chelmsford,South England and Wales,4,9,8,0,0,0,3,1,21,4,True,True,False,False,False,True,True
+ESH,Esher,London,Greater London,7,24,8,0,0,0,3,1,36,4,True,True,False,False,False,True,True
+EDG,Edgbaston,Birmingham,North England,10,19,13,0,2,9,3,1,47,6,True,True,False,True,True,True,True
+ECC,Eccles,Manchester,North England,8,18,18,0,0,6,3,1,46,5,True,True,False,False,True,True,True

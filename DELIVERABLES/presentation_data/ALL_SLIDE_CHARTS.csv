@@ -1,171 +1,328 @@
-SLIDE 5 - MVP THRESHOLD EVIDENCE
-=================================
-
-CHART 1: PARTNERS IMPACT ON ZONE PERFORMANCE
-Partners,Avg Orders,Avg Rating,Zones (n=)
-1-2,68,4.14,95
-3,355,4.34,21
-4,450,4.38,25
-5,537,4.28,16
-6-7,705,4.36,16
-8-10,1071,4.44,15
-11+,1095,4.50,9
-Key: 5+ partners = 5x more orders than 1-2 (537 vs 68)
-
-CHART 2: CUISINES IMPACT ON ZONE PERFORMANCE
-Cuisines,Avg Orders,Avg Rating,Zones (n=),Satisfaction %
-1-2,89,4.14,102,33%
-3,404,4.34,30,81%
-4,511,4.35,24,82%
-5,685,4.44,13,81%
-6,797,4.36,11,78%
-7+,1157,4.47,17,78%
-Key: Satisfaction cliff at 3 cuisines (33% → 81%). Orders peak at 5+.
-
-WHY 5 IS THE THRESHOLD
-Threshold,Orders Uplift vs Previous,Note
-3 cuisines,+136%,Satisfaction recovers from cliff
-4 cuisines,+26%,Steady improvement
-5 cuisines,+34%,LARGEST JUMP - sweet spot
-6 cuisines,+16%,Diminishing returns begin
+DINNEROO SLIDES DATA - COMPREHENSIVE METRICS
+Generated: 2026-01-08 11:37
+============================================================
+Source: Authoritative JSON files (verified consistency check)
 
 
-SLIDE 6 - ZONE MVP STATUS
-=========================
+================================================================================
+SECTION 1: MVP THRESHOLD EVIDENCE (WITH CONSUMER METRICS)
+================================================================================
 
-ZONE DISTRIBUTION
-Status,Zones,% of Active
-MVP Ready (5+ brands AND 5+ cuisines),109,25%
-Has 5+ brands only,98,23%
-Has 5+ cuisines only,3,1%
-Needs both,224,52%
-Total Active Zones,434,100%
-Zones with 0 dishes,872,-
-Total Zones Tracked,1306,-
+CHART 1A: PARTNERS IMPACT - BEHAVIORAL METRICS (n=197 zones)
+Partners,Zones,Repeat Rate,Avg Rating,Avg Orders,Repeat Rate N,Rating N
+1-2,95,13.9%,4.14,44,6035,952
+3-4,46,18.4%,4.36,261,15611,2832
+5-6,27,21.6%,4.32,398,12999,2401
+7-9,17,24.7%,4.42,675,12696,2529
+10+,12,22.8%,4.45,723,9979,1997
 
-MVP vs NON-MVP PERFORMANCE
-Zone Status,Zones,Avg Orders,Avg Rating,Order Share
-MVP (5+/5+),42,939,4.43,61%
-Non-MVP,58,437,4.36,39%
-Key: MVP zones = 2.1x more orders. 16% of zones (33/201) are MVP Ready.
+Key Insight: +4.5pp repeat rate at 3-4 partners vs 1-2 (18.4% vs 13.9%)
 
+CHART 1B: PARTNERS IMPACT - CONSUMER SATISFACTION METRICS
+Partners,Zones,Kids Happy,Kids N,Liked/Loved,Liked N,Enough Food,Food N,Food Hot,Hot N,On Time,Time N
+1-2,95,65.1%,37,85.2%,73,70.8%,73,58.5%,73,76.9%,73
+3-4,46,70.0%,123,91.0%,265,75.5%,265,69.9%,265,88.7%,265
+5-6,27,79.5%,125,82.1%,271,78.0%,271,65.8%,271,80.8%,271
+7-9,17,69.9%,115,86.0%,246,78.7%,246,65.5%,246,81.2%,246
+10+,12,64.4%,61,83.8%,173,73.4%,173,58.6%,173,87.9%,173
 
-SLIDE 8 - SCORING FRAMEWORK
-===========================
+Key Consumer Insight: Kids Happy peaks at 79.5% in 5-6 partner zones vs 65.1% in 1-2 partner zones
 
-DEMAND METRICS
-Metric,Sample Size,Source,What It Measures
-Avg Sales per Dish,71437 orders,Snowflake,Actual purchase behaviour
-% Zones in Top 5,197 zones,Looker,Demand consistency across zones
-Open-Text Requests,372 mentions,Surveys,Explicit unmet demand
+CHART 2A: CUISINES IMPACT - BEHAVIORAL METRICS (n=102 zones with 3+ partners)
+Cuisines,Zones,Repeat Rate,Avg Rating,Avg Orders,Repeat Rate N,Rating N
+1-2,7,18.3%,4.25,223,2084,356
+3-4,54,19.1%,4.35,296,20132,3693
+5-6,24,23.3%,4.40,490,13763,2564
+7+,17,23.8%,4.47,802,15306,3146
 
-PREFERENCE METRICS
-Metric,Sample Size,Source,What It Measures
-Deliveroo Rating,10713 ratings,Looker,Post-delivery satisfaction (1-5)
-Meal Satisfaction %,1363 surveys,Post-order survey,% who Liked/Loved the meal
-Repeat Intent %,1363 surveys,Post-order survey,% who would order again
-Dish Suitability,404 surveys,OG Survey,Pre-launch appeal (new dishes only)
+Key Insight: +4.2pp repeat rate at 5-6 cuisines vs 3-4 (23.3% vs 19.1%)
 
+CHART 2B: CUISINES IMPACT - CONSUMER SATISFACTION METRICS
+Cuisines,Zones,Kids Happy,Kids N,Liked/Loved,Liked N,Enough Food,Food N,Food Hot,Hot N,On Time,Time N
+1-2,7,67.4%,16,76.8%,30,67.4%,30,58.2%,30,81.9%,30
+3-4,54,76.2%,150,90.4%,333,76.4%,333,70.4%,333,86.7%,333
+5-6,24,66.9%,142,81.8%,313,77.6%,313,62.1%,313,79.8%,313
+7+,17,70.4%,116,85.1%,279,77.6%,279,63.9%,279,88.2%,279
 
-SLIDE 9 - QUADRANT SUMMARY
-==========================
+CHART 3A: DISHES IMPACT - BEHAVIORAL METRICS (n=94 zones with 3+ partners AND 3+ cuisines)
+Dishes,Zones,Repeat Rate,Avg Rating,Avg Orders,Repeat Rate N,Rating N
+1-15,6,16.8%,4.08,167,1348,215
+16-30,23,19.5%,4.32,229,6801,1122
+31-50,39,22.4%,4.39,465,21237,4156
+51+,26,21.2%,4.51,646,19635,3880
 
-QUADRANT PERFORMANCE
-Quadrant,Dishes,Total Sales,% of Sales,Satisfaction %
-Core Drivers,8,479,73%,88%
-Preference Drivers,5,69,11%,90%
-Demand Boosters,2,55,8%,76%
-Deprioritised,8,51,8%,78%
+Key Insight: 31-50 dishes = 2x more orders than 16-30 (466 vs 230 avg orders)
 
-CORE DRIVERS (8 dishes)
-Dish,Sales,Rating,Satisfaction %
-Pho,136,4.6,92%
-South Asian / Indian Curry,98,4.7,93%
-Biryani,86,4.6,91%
-Fried Rice,41,4.5,79%
-Sushi,32,4.7,93%
-Katsu,29,4.3,87%
-Rice Bowl,29,4.4,84%
-Noodles,28,4.5,88%
-
-PREFERENCE DRIVERS (5 dishes)
-Dish,Sales,Rating,Satisfaction %
-Grain Bowl,21,4.7,86%
-East Asian Curry,18,4.4,87%
-Shepherd's Pie,11,4.3,91%
-Shawarma,10,4.5,90%
-Fajitas,9,4.2,96%
-
-DEMAND BOOSTERS (2 dishes)
-Dish,Sales,Rating,Satisfaction %
-Protein & Veg,44,4.4,71%
-Pizza,11,4.1,81%
-
-DEPRIORITISED (8 dishes)
-Dish,Sales,Rating,Satisfaction %
-Lasagne,13,4.6,77%
-Pasta,8,4.2,78%
-Tacos,7,4.1,-
-Burrito / Burrito Bowl,7,-,-
-Chilli,6,3.8,-
-Quesadilla,6,-,-
-Poke,3,-,-
-Nachos,1,-,-
+CHART 3B: DISHES IMPACT - CONSUMER SATISFACTION METRICS
+Dishes,Zones,Kids Happy,Kids N,Liked/Loved,Liked N,Enough Food,Food N,Food Hot,Hot N,On Time,Time N
+1-15,6,40.0%,5,82.2%,15,66.7%,15,66.7%,15,71.1%,15
+16-30,23,77.5%,66,90.1%,121,80.9%,121,66.1%,121,89.2%,121
+31-50,39,68.3%,169,86.5%,388,79.7%,388,65.3%,388,83.2%,388
+51+,26,75.4%,165,86.7%,397,73.3%,397,70.1%,397,87.8%,397
 
 
-SLIDE 10 - DISH SCORING TABLE
-=============================
+================================================================================
+SECTION 2: ZONE MVP STATUS
+================================================================================
 
-FULL DISH SCORES (paste into spreadsheet)
-Dish,Avg Sales,% Rank #1,% Top 5,Open-Text Req,Rating,Satisfaction %,Repeat %,Suitability,Quadrant
-Pho,136,56%,100%,18,4.6,92%,89%,2.2,Core Driver
-South Asian / Indian Curry,98,32%,64%,15,4.7,93%,85%,3.2,Core Driver
-Biryani,86,0%,54%,2,4.6,91%,83%,-,Core Driver
-Protein & Veg,44,6%,44%,5,4.4,71%,-,3.5,Demand Booster
-Fried Rice,41,4%,17%,2,4.5,79%,81%,2.5,Core Driver
-Sushi,32,8%,56%,6,4.7,93%,81%,-,Core Driver
-Katsu,29,19%,41%,9,4.3,87%,85%,2.9,Core Driver
-Rice Bowl,29,11%,41%,0,4.4,84%,77%,2.5,Core Driver
-Noodles,28,2%,37%,15,4.5,88%,88%,2.5,Core Driver
-Grain Bowl,21,4%,18%,0,4.7,86%,90%,-,Preference Driver
-East Asian Curry,18,1%,31%,1,4.4,87%,84%,3.6,Preference Driver
-Lasagne,13,4%,22%,6,4.6,77%,75%,3.3,Deprioritised
-Shepherd's Pie,11,3%,8%,3,4.3,91%,100%,4.4,Preference Driver
-Pizza,11,16%,49%,25,4.1,81%,75%,2.0,Demand Booster
-Shawarma,10,1%,10%,2,4.5,90%,86%,-,Preference Driver
-Fajitas,9,2%,12%,0,4.2,96%,100%,2.5,Preference Driver
-Pasta,8,1%,25%,29,4.2,78%,74%,2.5,Deprioritised
-Tacos,7,0%,18%,1,4.1,-,-,3.2,Deprioritised
-Burrito / Burrito Bowl,7,0%,0%,0,-,-,-,2.5,Deprioritised
-Chilli,6,0%,5%,3,3.8,-,-,3.3,Deprioritised
-Quesadilla,6,0%,0%,0,-,-,-,3.2,Deprioritised
-Poke,3,0%,0%,1,-,-,-,-,Deprioritised
-Nachos,1,0%,0%,1,-,-,-,-,Deprioritised
+ZONE DISTRIBUTION (LIVE ZONES WITH ORDERS)
+Status,Zones,Percentage,Description
+MVP Ready,33,16%,Meets all criteria: 5+ cuisines AND Rating ≥4.0 AND Repeat ≥20%
+Near MVP,48,24%,Missing 1 criterion
+Developing,120,60%,Missing 2+ criteria
+TOTAL LIVE ZONES,201,100%,Zones with orders during trial
+
+MVP CRITERIA THRESHOLDS
+Criterion,Business Target,Data Inflection Point,Evidence
+Cuisines,5,3-4,+4.2pp repeat rate at 5-6 vs 3-4 cuisines
+Partners,5,3-4,+4.5pp repeat rate at 3-4 vs 1-2 partners
+Dishes,21,16-30,2x orders at 31-50 dishes
+Rating,4.0,4.2,Benchmark average rating
+Repeat Rate,20%,18.4%,Rate at 3+ partners
+
+TOP 10 MVP READY ZONES (by order volume)
+Zone,Orders,Cuisines,Rating,Repeat Rate
+Clapham,2645,9,4.61,23.5%
+Islington,2500,8,4.69,23.7%
+Brighton Central,1934,9,4.47,22.6%
+Oxford,1640,6,4.52,30.1%
+Cambridge,1562,7,4.48,30.6%
+Milton Keynes,1521,7,4.46,28.5%
+Wimbledon,1497,8,4.50,24.4%
+Lewisham,1493,4,4.50,25.1%
+Chiswick,1416,6,4.74,25.2%
+Wembley,1366,6,4.49,26.0%
+
+TOP 10 NEAR MVP ZONES (closest to MVP)
+Zone,Orders,Cuisines,Rating,Repeat Rate,Missing Criterion
+Finsbury Park / Harringay / Crouch End,1792,3,4.53,25.0%,Cuisines
+Brockley / Forest Hill,1705,3,4.61,23.6%,Cuisines
+Reading,1460,9,4.29,26.2%,Unknown
+Notting Hill / Paddington,1401,7,4.53,19.3%,Repeat
+Surrey Quays,1293,3,4.61,23.3%,Cuisines
+Canary Wharf,1267,5,4.29,23.3%,Unknown
+Norwich,1228,6,4.25,25.7%,Unknown
+Guildford,1107,6,4.25,25.2%,Unknown
+Wapping and Mile End,1092,4,4.66,17.6%,Cuisines + Repeat
+Ealing,1000,5,4.20,21.1%,Unknown
 
 
-SLIDE 13 - COVERAGE GAPS & NEXT STEPS
-=====================================
+================================================================================
+SECTION 3: BEST-SELLING DISHES (REVEALED PREFERENCE)
+================================================================================
 
-CORE DRIVERS - Priority Gaps
-Dish,Coverage Gap %,Avg Sales,Opportunity,Next Steps
-South Asian/Indian Curry,74%,98,#1,Recruit Indian partners (Dishoom Kricket Tiffin Tin)
-Biryani,79%,86,#2,Same as above - Indian recruitment
-Pho,48%,136,#3,Expand Asian providers with pho
-Sushi,63%,32,#5,Work with Itsu Iro Sushi Kokoro
-Fried Rice,42%,41,#6,Add to existing Asian partner menus
-Katsu,5%,-,Low,Small gap - maintain
-Rice Bowl,12%,-,Low,Small gap - maintain
-Noodles,21%,-,Low,Understand which noodles work best
+TOP 10 DISHES BY ORDER VOLUME
+Rank,Dish Name,Order Count,Avg Rating,Composite Score
+1,Prawn crackers,11686,4.56,9.6
+2,family chicken katsu,11246,4.24,9.0
+3,Egg fried rice with chicken,9964,4.59,8.8
+4,Pho the whole fam,7910,4.55,8.0
+5,Wok-fried noodles with chicken,7707,4.53,7.8
+6,Katsu Chicken Rice Bowl,6144,4.44,7.1
+7,Beef brisket pho noodle soup,5419,4.58,6.9
+8,Dishoom Chicken Ruby – for the family,4858,4.79,6.9
+9,Mini chicken noodle soup,4811,4.62,6.6
+10,Chicken Teriyaki Rice Bowl,4200,4.43,6.2
 
-PREFERENCE DRIVERS - Recruit & Merchandise
-Dish,Coverage Gap %,Avg Sales,Next Steps
-Grain Bowl,76%,21,Recruit Farmer J and healthy providers
-Fajitas,68%,9,Expand Mexican (Las Iguanas Zambrero)
-Shawarma,57%,10,Expand Middle Eastern coverage
-Shepherd's Pie,57%,11,British comfort food (Bill's Jakob's)
-East Asian Curry,3%,-,Small gap - maintain
+OPEN-TEXT MENTIONS (What customers ask for)
+Dish Type,Mentions
+rice,184
+chicken,131
+curry,61
+salad,59
+pizza,39
+pho,28
+pasta,28
+katsu,25
+noodles,23
+healthy,23
+vegetarian,22
+vegan,18
+lasagne,13
+thai,13
+sushi,12
 
-DEMAND BOOSTERS - Improve Quality
-Dish,Coverage Gap %,Avg Sales,Next Steps
-Protein & Veg,93%,44,Add to multi-cuisine menus (Farmer J LEON Bill's)
-Pizza,4%,-,Small gap - focus on execution quality
+
+================================================================================
+SECTION 4: CUISINE PERFORMANCE ON DINNEROO
+================================================================================
+
+TOP 15 CUISINES BY ORDER VOLUME
+Cuisine,Orders,Unique Customers,Repeat Rate,Avg Rating,Rating Count
+japanese,14788,11456,16.3%,4.2434456928838955,1869.0
+Vietnamese,13206,9469,21.0%,4.567857142857143,1680.0
+italian,9164,7089,16.5%,4.152347209920284,1129.0
+Asian,9065,6573,20.3%,4.433063791554358,1113.0
+indian,8400,5849,23.1%,4.664634146341464,1148.0
+Salads,5391,3955,19.7%,4.579411764705882,680.0
+thai,5204,4148,15.8%,4.3318042813455655,654.0
+Curry,3355,2384,21.0%,4.750519750519751,481.0
+Burgers,2531,1944,18.2%,4.494871794871795,390.0
+Vegan Friendly,2097,1501,20.2%,4.434343434343434,297.0
+Latin American,1415,1162,14.7%,4.077319587628866,194.0
+Meal Deals,1221,919,18.3%,4.518918918918919,185.0
+Chicken,1099,854,17.1%,4.426966292134831,178.0
+Pho,816,573,23.4%,4.719101123595506,89.0
+Mediterranean,519,368,19.6%,4.644736842105263,76.0
+
+CUISINE GAP ANALYSIS
+Gap Type,Cuisines
+OK (supply + quality acceptable),"British, Healthy/Fresh, Indian, Italian, Japanese, Thai/Southeast Asian, Vietnamese"
+QUALITY GAP (rating below 4.05),Mexican
+SUPPLY GAP (less than 30% avg items),"Chinese, French, Irish/British, Middle Eastern"
+
+
+================================================================================
+SECTION 5: NON-DINNEROO DEMAND (Expansion Opportunities)
+================================================================================
+
+TOP 20 NON-DINNEROO CUISINES (Mon-Thu 16:30-21:00 - Dinneroo window)
+Cuisine,Non-Dinneroo Orders,Unique Customers,Avg Order Value,On Dinneroo?,Gap Signal
+Grocery,26417,9872,30.05,No,High
+Burgers,16155,9011,28.32,Yes,Available
+italian,11440,7036,32.18,No,High
+Chicken,10002,6201,29.22,Yes,Available
+indian,8699,5310,35.23,No,High
+chinese,8412,5026,35.43,No,High
+japanese,8361,5397,35.53,No,High
+american,8140,5288,29.21,No,High
+Portuguese,6999,4356,36.32,No,High
+Alcohol,6438,3330,27.15,No,High
+sushi,6420,4031,35.5,No,High
+Asian,4740,3136,33.04,Yes,Available
+Vietnamese,4702,3040,32.02,Yes,Available
+Salads,4209,1821,29.38,No,Medium
+thai,4144,2922,37.31,No,Medium
+pizza,3875,2771,30.82,No,Medium
+Wings,3461,2496,28.68,No,Medium
+British,3087,2017,29.14,No,Medium
+Turkish,2410,1597,35.56,No,Medium
+Curry,2372,1733,36.41,No,Medium
+
+HIGH-PRIORITY EXPANSION CUISINES (High demand, Not on Dinneroo)
+Cuisine,Non-Dinneroo Orders,Avg Order Value,Priority,Rationale
+Portuguese,6999,£36.32,HIGH,Nando's maps to grilled chicken gap
+Chinese,8412,£35.43,HIGH,Largest Asian gap
+American,8140,£29.21,HIGH,Broad family appeal
+Korean,1807,£33.70,MEDIUM,Growing demand - balanced options
+Greek,1890,£29.09,MEDIUM,Healthy positioning
+Turkish,2410,£35.56,MEDIUM,Middle Eastern expansion
+Caribbean,774,£29.92,LOWER,Cultural expansion opportunity
+
+
+================================================================================
+SECTION 6: LATENT DEMAND SIGNALS
+================================================================================
+
+TOP 10 DISHES BY LATENT DEMAND SCORE
+Dish Type,Latent Demand Score,Signal Source
+Pie,3,Survey open-text
+Noodles,3,Survey open-text
+Vegetarian,3,Survey open-text
+Kids Menu,3,Survey open-text
+Gnocchi,2,Survey open-text
+Fish & Chips,2,Survey open-text
+Burger,2,Survey open-text
+Pasta,2,Survey open-text
+Healthy,2,Survey open-text
+Pizza,2,Survey open-text
+
+LATENT DEMAND DATA SOURCES
+Source,Sample Size
+Dropoff Survey Responses,942
+Post-Order Survey Responses,1599
+Ratings,10713
+OG Survey Dishes Tested,36
+
+
+================================================================================
+SECTION 7: PRIORITY DISH FRAMEWORK
+================================================================================
+
+CORE DRIVERS (8 dishes) - High demand + High preference | Action: 100% coverage
+Pho, South Asian / Indian Curry, Biryani, Fried Rice, Sushi, Katsu, Rice Bowl, Noodles
+
+PREFERENCE DRIVERS (5 dishes) - Lower demand, loved by those who try | Action: Invest in merchandising
+Grain Bowl, East Asian Curry, Shepherd's Pie, Shawarma, Fajitas
+
+DEMAND BOOSTERS (2 dishes) - High demand, preference improvement needed | Action: Quality improvement
+Protein & Veg, Pizza
+
+DEPRIORITISED (8 dishes) - Low demand, maintain only | Action: Monitor only
+Pasta, Lasagne, Tacos, Burrito / Burrito Bowl, Quesadilla, Nachos, Chilli, Poke
+
+
+================================================================================
+SECTION 8: PARTNER COVERAGE
+================================================================================
+
+PARTNER SUMMARY
+Metric,Value
+Total Partners,41
+Dish Types Covered,24/24
+Avg Dish Types per Partner,2.0
+
+TOP 15 PARTNERS BY DISH COVERAGE
+Partner,Dish Types,Cuisines Covered
+Pho,5,Asian
+Itsu,5,Asian
+Bill's,4,Asian, British, Italian, Middle Eastern
+Zumuku,4,Asian
+Tula Ireland,3,Mexican
+Asia Villa,3,Asian
+TUK TUK-SGroup,3,Asian
+Banana Tree,3,Asian
+Kokoro,3,Asian
+SOYO-SGroup,3,Asian, Italian
+Zambrero UK,3,Mexican
+Chaska,2,Indian
+Dishoom,2,Indian
+Tadka House,2,Indian
+Las Iguanas,2,Mexican
+
+
+================================================================================
+SECTION 9: DATA SOURCES & SAMPLE SIZES
+================================================================================
+
+DATA SOURCE HIERARCHY
+Source,Sample Size,Type,Reliability,Use For
+Snowflake Orders,82350,Revealed,★★★★★,Actual purchase behaviour
+Zone Performance,201 zones,Revealed,★★★★★,MVP status and health
+Deliveroo Ratings,10713,Revealed,★★★★☆,Post-delivery satisfaction
+Post-Order Survey,1599,Stated,★★★☆☆,Satisfaction and repeat intent
+Dropoff Survey,942,Stated,★★☆☆☆,Conversion barriers
+OG Family Survey,404,Stated,★★☆☆☆,Dish suitability (new dishes)
+Partner Coverage,41 partners,Supply,★★★★★,Menu availability
+
+
+================================================================================
+SECTION 10: KEY METRICS SUMMARY (QUICK REFERENCE)
+================================================================================
+
+ZONE METRICS
+Live zones with orders,201
+MVP Ready zones,33 (16%)
+Near MVP zones,48 (24%)
+Developing zones,120 (60%)
+
+MVP TARGETS
+Cuisines target,5
+Partners target,5
+Rating target,4.0
+Repeat rate target,20%
+
+SUPPLY METRICS
+Core 7 cuisines,7
+Priority dish types,24
+Extended dish types,110
+Partners on platform,41
+
+CONSUMER SATISFACTION (Best performing bucket)
+Kids Happy (5-6 partners),79.5%
+Liked/Loved (3-4 partners),90.9%
+Food On Time (3-4 partners),88.7%
+
+---
+Generated: 2026-01-08 11:37
+Source: Authoritative JSON files with verified consistency

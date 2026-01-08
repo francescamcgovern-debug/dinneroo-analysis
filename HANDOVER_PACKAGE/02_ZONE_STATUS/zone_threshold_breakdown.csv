@@ -1,0 +1,101 @@
+zone_name,region,mvp_tier,partner_count,cuisine_count,avg_rating,passes_partners_5plus,passes_cuisines_5of7,passes_rating_4plus,is_mvp
+Basingstoke,South East,Progressing,3,3,3.83,False,False,False,False
+Bath,South West,MVP Ready,9,7,4.53,True,True,True,True
+Belsize Park / St John's Wood,Other,Progressing,3,3,4.79,False,False,True,False
+Birmingham,Midlands,MVP Ready,9,7,4.15,True,True,True,True
+Bournemouth,South East,Progressing,4,3,4.26,False,False,True,False
+Bracknell,Other,Near MVP,4,4,4.55,False,False,True,False
+Braintree,Other,Progressing,4,3,3.9,False,False,False,False
+Brighton Central,London,MVP Ready,10,8,4.47,True,True,True,True
+Bristol,South West,MVP Ready,8,6,4.53,True,True,True,True
+Brixton,London,Near MVP,4,4,4.5,False,False,True,False
+Brockley / Forest Hill,London,Progressing,3,3,4.61,False,False,True,False
+Bromley,London,Progressing,4,3,3.81,False,False,False,False
+Cambridge,South East,MVP Ready,8,7,4.48,True,True,True,True
+Camden/Kentish Town,London,MVP Ready,6,5,4.11,True,True,True,True
+Canary Wharf,Other,MVP Ready,6,5,4.29,True,True,True,True
+Canning Town,Other,Progressing,3,3,4.67,False,False,True,False
+Canterbury,South East,MVP Ready,7,6,4.16,True,True,True,True
+Cardiff,Wales,MVP Ready,6,5,4.57,True,True,True,True
+Cardiff Bay Area,Wales,MVP Ready,5,5,4.78,True,True,True,True
+Chelmsford,South East,MVP Ready,7,5,4.21,True,True,True,True
+Cheltenham,South West,Near MVP,5,4,4.38,True,False,True,False
+Chichester,North,Near MVP,4,4,4.13,False,False,True,False
+Chingford,Other,Progressing,3,3,4.2,False,False,True,False
+Chiswick,London,MVP Ready,6,5,4.74,True,True,True,True
+Clapham,London,MVP Ready,13,9,4.61,True,True,True,True
+Colchester,South East,Near MVP,4,4,4.6,False,False,True,False
+Cribbs Causeway Shopping Centre,Other,Near MVP,5,4,3.87,True,False,False,False
+Croydon,London,Progressing,4,3,4.29,False,False,True,False
+Dalston Stoke Newington,Midlands,Progressing,4,3,4.43,False,False,True,False
+Dartford,Other,MVP Ready,6,5,4.1,True,True,True,True
+Didsbury and Withington,Other,Progressing,3,3,4.72,False,False,True,False
+Dublin City North,Other,MVP Ready,6,5,4.06,True,True,True,True
+Dublin City South,Other,Developing,3,2,4.82,False,False,True,False
+Ealing,London,MVP Ready,5,5,4.2,True,True,True,True
+East Central,London,MVP Ready,11,8,4.46,True,True,True,True
+Easton,Other,Near MVP,5,4,4.38,True,False,True,False
+Eccles,Other,Progressing,3,3,4.03,False,False,True,False
+Edgbaston,Other,Progressing,3,3,4.68,False,False,True,False
+Edgware / Mill Hill,Other,Developing,3,1,3.83,False,False,False,False
+Edinburgh Central,London,Progressing,3,3,4.51,False,False,True,False
+Edinburgh North,Scotland,Progressing,3,3,4.43,False,False,True,False
+Epsom,South East,Progressing,4,3,4.12,False,False,True,False
+Farnham,Other,Progressing,3,3,4.67,False,False,True,False
+Finsbury Park / Harringay / Crouch End,London,Progressing,4,3,4.53,False,False,True,False
+Fulham,London,MVP Ready,5,5,4.57,True,True,True,True
+Glasgow Centre,Scotland,MVP Ready,5,5,4.55,True,True,True,True
+Golders Green / Brent Cross,London,Developing,3,1,4.0,False,False,True,False
+Guildford,South East,MVP Ready,6,6,4.25,True,True,True,True
+Hammersmith / Shepherd's Bush,London,MVP Ready,7,6,4.46,True,True,True,True
+Hampstead,Other,Near MVP,5,4,4.47,True,False,True,False
+Harrow,London,Progressing,4,3,4.33,False,False,True,False
+Hatfield/ Hatfield Park,Other,Developing,3,2,4.39,False,False,True,False
+Henley on Thames,Other,Developing,3,2,4.28,False,False,True,False
+"Highgate, Muswell Hill, East Finchley",Other,Progressing,3,3,4.42,False,False,True,False
+Horsham,Other,Near MVP,4,4,4.41,False,False,True,False
+Islington,London,MVP Ready,8,8,4.69,True,True,True,True
+Kingston,London,MVP Ready,8,7,4.46,True,True,True,True
+Leeds City Centre,North,MVP Ready,9,7,4.52,True,True,True,True
+Lewisham,London,MVP Ready,5,5,4.5,True,True,True,True
+Liverpool City Centre,North,Near MVP,5,4,4.29,True,False,True,False
+London Bridge,London,MVP Ready,10,7,4.57,True,True,True,True
+Manchester Central,London,Progressing,3,3,4.36,False,False,True,False
+Mayfair,London,MVP Ready,8,6,4.57,True,True,True,True
+Milton Keynes,South East,MVP Ready,8,7,4.46,True,True,True,True
+Newbury,Other,Progressing,3,3,4.48,False,False,True,False
+Newton Longville,Other,Progressing,5,3,4.05,True,False,True,False
+Norwich,South East,MVP Ready,6,5,4.25,True,True,True,True
+Notting Hill / Paddington,London,MVP Ready,9,7,4.53,True,True,True,True
+Nottingham,London,MVP Ready,7,5,4.43,True,True,True,True
+Oxford,South East,MVP Ready,7,5,4.52,True,True,True,True
+Putney & Barnes,London,Progressing,3,3,4.7,False,False,True,False
+Reading,South East,MVP Ready,10,6,4.29,True,True,True,True
+Reigate,South East,MVP Ready,6,5,4.51,True,True,True,True
+Richmond / Kew,London,MVP Ready,6,6,4.3,True,True,True,True
+Romford,Other,Progressing,3,3,4.44,False,False,True,False
+Royal Leamington Spa,Other,Near MVP,4,4,4.37,False,False,True,False
+Royal Tunbridge Wells,South East,MVP Ready,6,6,4.44,True,True,True,True
+Salford,Other,Near MVP,6,4,4.26,True,False,True,False
+Sheffield City Centre,North,Progressing,4,3,4.27,False,False,True,False
+South Kensington,London,Near MVP,7,4,4.56,True,False,True,False
+Southampton,South East,Near MVP,5,4,4.29,True,False,True,False
+Southsea,Other,MVP Ready,7,5,4.18,True,True,True,True
+St Albans,South East,Near MVP,4,4,4.23,False,False,True,False
+Stevenage,Other,Progressing,3,3,4.52,False,False,True,False
+Stratford,London,Near MVP,5,4,4.26,True,False,True,False
+Surrey Quays,Other,Progressing,4,3,4.61,False,False,True,False
+Sutton,London,Developing,3,2,4.12,False,False,True,False
+Uxbridge,Other,Progressing,4,3,4.4,False,False,True,False
+"Victoria, Westminster, Pimlico",London,MVP Ready,8,5,4.63,True,True,True,True
+Walton on Thames,Other,Progressing,3,3,4.47,False,False,True,False
+Wandsworth,London,Progressing,3,3,4.69,False,False,True,False
+Wapping and Mile End,Other,Near MVP,4,4,4.66,False,False,True,False
+Watford,South East,Near MVP,4,4,4.36,False,False,True,False
+Wembley,Other,MVP Ready,7,7,4.49,True,True,True,True
+West Bridgford,Other,Progressing,3,3,4.29,False,False,True,False
+West Central,London,MVP Ready,10,7,4.56,True,True,True,True
+Wimbledon,London,MVP Ready,8,7,4.5,True,True,True,True
+Winchester,North,Progressing,3,3,4.0,False,False,True,False
+Windsor,South East,Near MVP,6,4,4.3,True,False,True,False
+York,North,MVP Ready,8,6,4.46,True,True,True,True

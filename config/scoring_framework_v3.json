@@ -1,0 +1,144 @@
+{
+  "version": "3.3",
+  "last_updated": "2026-01-08",
+  "description": "Multi-List Scoring Framework - Segment-specific rankings using Anna's 24 dish taxonomy",
+  
+  "framework_philosophy": {
+    "principle": "Different customer segments need different dish recommendations",
+    "key_insight_v3.3": "Aligned to Anna's 24-dish taxonomy. Three-list approach for Family/Couple/Recruitment priorities.",
+    "taxonomy": "155 menu items → 58 granular dishes → 24 high-level dish types",
+    "consistency": "All lists use percentile-based 1-5 scoring within their segment"
+  },
+  
+  "dish_taxonomy": {
+    "source": "config/dish_taxonomy.csv",
+    "total_items": 155,
+    "high_level_types": 24,
+    "granular_types": 58,
+    "rollup_file": "DATA/3_ANALYSIS/dish_type_rollup.csv"
+  },
+  
+  "lists": {
+    "family_performers": {
+      "description": "Best dishes for families with children (on Dinneroo)",
+      "output_file": "DATA/3_ANALYSIS/dish_family_performers.csv",
+      "factors": {
+        "kids_happy": {
+          "weight": 0.40,
+          "source": "Post-order survey (families)",
+          "rationale": "Kids satisfaction is the primary driver for family repeat"
+        },
+        "fussy_eater_friendly": {
+          "weight": 0.20,
+          "source": "dish_opportunity_scores",
+          "rationale": "Families need dishes that work for picky kids"
+        },
+        "orders_per_zone": {
+          "weight": 0.20,
+          "source": "Snowflake orders",
+          "rationale": "Proven family demand"
+        },
+        "adult_satisfaction": {
+          "weight": 0.15,
+          "source": "Post-order survey (families)",
+          "rationale": "Parents need to enjoy it too"
+        },
+        "portions_adequate": {
+          "weight": 0.05,
+          "source": "Post-order survey",
+          "rationale": "Family meals need to feed everyone"
+        }
+      }
+    },
+    
+    "couple_performers": {
+      "description": "Best dishes for couples/adults without children (on Dinneroo)",
+      "output_file": "DATA/3_ANALYSIS/dish_couple_performers.csv",
+      "factors": {
+        "adult_satisfaction": {
+          "weight": 0.40,
+          "source": "Post-order survey (non-families)",
+          "rationale": "Adult satisfaction is the primary driver"
+        },
+        "rating": {
+          "weight": 0.25,
+          "source": "Snowflake ratings / adult satisfaction proxy",
+          "rationale": "Quality matters more to adults"
+        },
+        "orders_per_zone": {
+          "weight": 0.20,
+          "source": "Snowflake orders",
+          "rationale": "Proven adult demand"
+        },
+        "adult_appeal": {
+          "weight": 0.15,
+          "source": "dish_opportunity_scores",
+          "rationale": "Sophisticated, interesting options"
+        }
+      }
+    },
+    
+    "recruitment_priorities": {
+      "description": "Dishes NOT on Dinneroo with highest potential",
+      "output_file": "DATA/3_ANALYSIS/dish_recruitment_priorities.csv",
+      "factors": {
+        "latent_demand_mentions": {
+          "weight": 0.30,
+          "source": "Open-text survey mentions",
+          "rationale": "What customers explicitly ask for"
+        },
+        "framework_score": {
+          "weight": 0.25,
+          "source": "dish_opportunity_scores",
+          "rationale": "Overall family meal suitability"
+        },
+        "fussy_eater_friendly": {
+          "weight": 0.15,
+          "source": "dish_opportunity_scores",
+          "rationale": "Family appeal potential"
+        },
+        "gap_score": {
+          "weight": 0.15,
+          "source": "dish_opportunity_scores",
+          "rationale": "Supply gap indicates unmet demand"
+        },
+        "partner_capability": {
+          "weight": 0.10,
+          "source": "dish_opportunity_scores",
+          "rationale": "Feasibility of adding to platform"
+        },
+        "non_dinneroo_demand_proxy": {
+          "weight": 0.05,
+          "source": "Cuisine-level non-dinneroo orders",
+          "rationale": "Proven demand outside platform"
+        }
+      }
+    }
+  },
+  
+  "deliverables": {
+    "main_rollup": "DELIVERABLES/reports/DISH_RANKINGS_WITH_ROLLUP.csv",
+    "family_list": "DELIVERABLES/reports/DISH_FAMILY_RANKINGS.csv",
+    "couple_list": "DELIVERABLES/reports/DISH_COUPLE_RANKINGS.csv",
+    "recruitment_list": "DELIVERABLES/reports/DISH_RECRUITMENT_PRIORITIES.csv"
+  },
+  
+  "scoring_method": {
+    "type": "percentile_based",
+    "scale": "1-5",
+    "distribution": {
+      "5": "Top 20%",
+      "4": "60-80%",
+      "3": "40-60%",
+      "2": "20-40%",
+      "1": "Bottom 20%"
+    }
+  },
+  
+  "changelog": {
+    "v3.3": "Three-list approach: Family Performers, Couple Performers, Recruitment Priorities. Aligned to Anna's 24 dish taxonomy.",
+    "v3.2": "Renamed 'Opportunity' track to 'Demand'. Added percentile-based scoring.",
+    "v3.1": "Removed zone_ranking_strength. Redistributed weight to orders_per_zone.",
+    "v3.0": "Unified framework - same 5 factors for cuisine and dish analysis."
+  }
+}

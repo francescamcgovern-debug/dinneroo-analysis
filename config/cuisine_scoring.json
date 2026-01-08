@@ -1,0 +1,322 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-01-08",
+  "description": "Cuisine Scoring Framework - Two-track approach with supply-normalized performance metrics",
+  
+  "framework_philosophy": {
+    "principle": "Score cuisines on BOTH performance (normalized for supply) AND opportunity (latent demand signals)",
+    "key_insight": "Raw volume favors cuisines with more partners/zones - normalization reveals true performance",
+    "critical_rule": "Non-Dinneroo benchmarks MUST be filtered to Mon-Thu dinner only"
+  },
+  
+  "total_weight": 1.0,
+  
+  "tracks": {
+    "performance": {
+      "weight": 0.50,
+      "description": "How well does this cuisine perform, normalized for supply availability?",
+      "note": "Only applies to cuisines with 15+ zones. Others get N/A for performance.",
+      "supply_threshold": {
+        "min_zones": 15,
+        "rationale": "Need sufficient sample size to score performance accurately"
+      },
+      "components": {
+        "orders_per_zone": {
+          "weight_within_track": 0.25,
+          "effective_weight": 0.125,
+          "source": "Snowflake orders + Anna zone counts",
+          "calculation": "total_orders ÷ zones_with_cuisine",
+          "normalization_rationale": "Removes supply bias - high-coverage cuisines don't auto-win",
+          "scoring": {
+            "5": "300+ orders/zone",
+            "4": "200-299 orders/zone",
+            "3": "100-199 orders/zone",
+            "2": "50-99 orders/zone",
+            "1": "Below 50 orders/zone"
+          }
+        },
+        "repeat_rate": {
+          "weight_within_track": 0.25,
+          "effective_weight": 0.125,
+          "source": "Snowflake orders (repeat customers)",
+          "calculation": "repeat_customers ÷ unique_customers",
+          "rationale": "Already a percentage - best retention signal",
+          "scoring": {
+            "5": "23%+ repeat rate",
+            "4": "20-22.9%",
+            "3": "17-19.9%",
+            "2": "14-16.9%",
+            "1": "Below 14%"
+          }
+        },
+        "avg_rating": {
+          "weight_within_track": 0.15,
+          "effective_weight": 0.075,
+          "source": "Snowflake ratings",
+          "calculation": "Weighted average star rating",
+          "scoring": {
+            "5": "4.6+ stars",
+            "4": "4.4-4.59 stars",
+            "3": "4.2-4.39 stars",
+            "2": "4.0-4.19 stars",
+            "1": "Below 4.0 stars"
+          }
+        },
+        "kids_full_happy": {
+          "weight_within_track": 0.20,
+          "effective_weight": 0.10,
+          "source": "Post-order survey",
+          "survey_question": "How did your child(ren) react to the meal?",
+          "calculation": "% Full and happy for orders with this cuisine",
+          "rationale": "Critical family signal - aligns with dish scoring framework",
+          "scoring": {
+            "5": "85%+ kids happy",
+            "4": "75-84%",
+            "3": "65-74%",
+            "2": "55-64%",
+            "1": "Below 55%"
+          }
+        },
+        "satisfaction": {
+          "weight_within_track": 0.15,
+          "effective_weight": 0.075,
+          "source": "Post-order survey",
+          "calculation": "% Liked it or Loved it for orders with this cuisine",
+          "fallback": "If insufficient survey data, weight redistributed to other components",
+          "scoring": {
+            "5": "90%+ satisfied",
+            "4": "80-89%",
+            "3": "70-79%",
+            "2": "60-69%",
+            "1": "Below 60%"
+          }
+        }
+      }
+    },
+    
+    "opportunity": {
+      "weight": 0.50,
+      "description": "How much unmet demand exists for this cuisine? Pure demand signals only.",
+      "note": "Can be scored for ANY cuisine, including those not on Dinneroo.",
+      "components": {
+        "non_dinneroo_demand": {
+          "weight_within_track": 0.50,
+          "effective_weight": 0.25,
+          "source": "DATA/3_ANALYSIS/non_dinneroo_cuisine_demand_midweek.csv",
+          "source_critical": "MUST use filtered file (Mon-Thu dinner only), NOT raw file",
+          "calculation": "Midweek dinner orders for this cuisine outside Dinneroo",
+          "rationale": "Revealed preference - what families actually order elsewhere. Largest n (196k+ filtered orders).",
+          "filtering": {
+            "day_of_week": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+            "time_window": "16:30 - 21:00",
+            "rationale": "Dinneroo is 98% midweek - unfiltered data creates apples-to-oranges comparison"
+          },
+          "scoring": {
+            "5": "15,000+ filtered orders",
+            "4": "8,000-14,999 filtered orders",
+            "3": "4,000-7,999 filtered orders",
+            "2": "2,000-3,999 filtered orders",
+            "1": "Below 2,000 filtered orders"
+          }
+        },
+        "og_wishlist": {
+          "weight_within_track": 0.30,
+          "effective_weight": 0.15,
+          "source": "OG Survey historical data",
+          "calculation": "% of respondents who wishlisted dishes in this cuisine",
+          "rationale": "Stated preference from pre-launch research. Moderate n (~400 respondents).",
+          "caveat": "May not have data for all cuisines - triangulate with other signals",
+          "scoring": {
+            "5": "15%+ wishlist rate",
+            "4": "10-14.9%",
+            "3": "5-9.9%",
+            "2": "2-4.9%",
+            "1": "Below 2%"
+          }
+        },
+        "open_text_requests": {
+          "weight_within_track": 0.20,
+          "effective_weight": 0.10,
+          "source": "Combined survey open-text",
+          "sources_combined": ["dropoff survey", "post-order survey", "ratings comments"],
+          "calculation": "Count of cuisine mentions in open-text responses",
+          "rationale": "Explicit customer requests. Low n but valuable signal for unmet demand.",
+          "caveat": "Low sample size - use as directional signal, not primary driver",
+          "scoring": {
+            "5": "50+ mentions",
+            "4": "25-49 mentions",
+            "3": "10-24 mentions",
+            "2": "5-9 mentions",
+            "1": "0-4 mentions"
+          }
+        }
+      },
+      "_removed": {
+        "supply_gap_severity": {
+          "reason": "Removed - conflates supply with demand. Opportunity track should be pure demand signals.",
+          "alternative": "Supply information tracked separately for context, not as a scoring component"
+        }
+      }
+    }
+  },
+  
+  "composite_score_calculation": {
+    "formula": "Performance (50%) + Opportunity (50%)",
+    "performance_formula": "(orders_per_zone × 0.125) + (repeat_rate × 0.125) + (avg_rating × 0.075) + (kids_full_happy × 0.10) + (satisfaction × 0.075)",
+    "opportunity_formula": "(non_dinneroo_demand × 0.25) + (og_wishlist × 0.15) + (open_text_requests × 0.10)",
+    "max_score": 5.0,
+    "min_score": 1.0,
+    "special_cases": {
+      "no_performance_data": {
+        "condition": "Cuisine has < 15 zones",
+        "handling": "Performance = N/A, use Opportunity score only for ranking",
+        "quadrant": "Assign to Expansion/Watch based on opportunity alone"
+      },
+      "new_cuisine": {
+        "condition": "Cuisine not in Core 7 and not on Dinneroo",
+        "handling": "Performance = N/A, flag as expansion opportunity if opportunity >= 3.0"
+      }
+    }
+  },
+  
+  "quadrant_classification": {
+    "description": "Plot cuisines on Performance vs Opportunity axes",
+    "performance_midpoint": 3.5,
+    "opportunity_midpoint": 3.0,
+    "quadrants": {
+      "priority": {
+        "criteria": "High Performance (≥3.5) + High Opportunity (≥3.0)",
+        "action": "EXPAND aggressively - recruit more partners, increase zone coverage",
+        "color": "#22c55e"
+      },
+      "protect": {
+        "criteria": "High Performance (≥3.5) + Low Opportunity (<3.0)",
+        "action": "MAINTAIN quality and coverage - don't over-invest in expansion",
+        "color": "#3b82f6"
+      },
+      "recruit": {
+        "criteria": "Low Performance (<3.5) + High Opportunity (≥3.0)",
+        "action": "RECRUIT partners - supply gap causing underperformance",
+        "color": "#f59e0b"
+      },
+      "monitor": {
+        "criteria": "Low Performance (<3.5) + Low Opportunity (<3.0)",
+        "action": "DEPRIORITIZE expansion, monitor for changes",
+        "color": "#6b7280"
+      },
+      "expansion": {
+        "criteria": "No Performance data + High Opportunity (≥3.0)",
+        "action": "TEST & RECRUIT - new cuisine opportunity",
+        "color": "#8b5cf6"
+      },
+      "watch": {
+        "criteria": "No Performance data + Low Opportunity (<3.0)",
+        "action": "LOW PRIORITY for expansion",
+        "color": "#d1d5db"
+      }
+    }
+  },
+  
+  "tier_classification": {
+    "description": "Tier based on unified score (for cuisines with performance data)",
+    "tier_1_priority": {
+      "threshold": 3.75,
+      "label": "Priority Cuisine",
+      "action": "Highest priority for recruitment and expansion"
+    },
+    "tier_2_strong": {
+      "threshold": 3.25,
+      "label": "Strong Cuisine",
+      "action": "Important for zone MVP"
+    },
+    "tier_3_moderate": {
+      "threshold": 2.75,
+      "label": "Moderate Cuisine",
+      "action": "Good for variety, not essential"
+    },
+    "tier_4_watch": {
+      "threshold": 0,
+      "label": "Watch Cuisine",
+      "action": "Monitor or deprioritize"
+    }
+  },
+  
+  "new_cuisine_detection": {
+    "description": "Automatically flag cuisines outside Core 7 for expansion consideration",
+    "thresholds": {
+      "midweek_non_dinneroo_orders_min": 2000,
+      "unique_customers_min": 1000
+    },
+    "data_source": "non_dinneroo_cuisine_demand_midweek.csv (FILTERED)",
+    "output_file": "DATA/3_ANALYSIS/expansion_opportunities.json"
+  },
+  
+  "data_sources": {
+    "performance": {
+      "orders": {
+        "file": "DATA/1_SOURCE/snowflake/ALL_DINNEROO_ORDERS.csv",
+        "fields": ["order_id", "cuisine", "zone"]
+      },
+      "ratings": {
+        "file": "DATA/1_SOURCE/snowflake/DINNEROO_RATINGS.csv",
+        "fields": ["rating_stars", "cuisine"]
+      },
+      "zones": {
+        "file": "DATA/3_ANALYSIS/anna_zone_dish_counts.csv",
+        "source_of_truth": "Anna's ground truth"
+      },
+      "survey": {
+        "file": "DATA/2_ENRICHED/post_order_enriched_COMPLETE.csv",
+        "fields": ["liked_loved_it", "cuisine"]
+      }
+    },
+    "opportunity": {
+      "open_text": {
+        "files": [
+          "DATA/1_SOURCE/surveys/dropoff_LATEST.csv",
+          "DATA/1_SOURCE/surveys/POST_ORDER_SURVEY-CONSOLIDATED.csv",
+          "DATA/1_SOURCE/snowflake/DINNEROO_RATINGS.csv"
+        ],
+        "extraction": "LLM-based cuisine mention extraction"
+      },
+      "non_dinneroo": {
+        "raw_file": "DATA/3_ANALYSIS/non_dinneroo_cuisine_demand.csv",
+        "filtered_file": "DATA/3_ANALYSIS/non_dinneroo_cuisine_demand_midweek.csv",
+        "use": "ALWAYS use filtered_file for benchmarks"
+      },
+      "og_wishlist": {
+        "file": "DATA/1_SOURCE/historical_surveys/og_survey/Families - Master Survey Data - Dishes Ranking.csv"
+      },
+      "supply_gap": {
+        "source": "Anna's zone counts vs demand signals",
+        "calculation": "Derived metric"
+      }
+    }
+  },
+  
+  "output_files": {
+    "cuisine_scores": "DATA/3_ANALYSIS/cuisine_scores.csv",
+    "cuisine_quadrants": "DATA/3_ANALYSIS/cuisine_quadrants.json",
+    "expansion_opportunities": "DATA/3_ANALYSIS/expansion_opportunities.json"
+  },
+  
+  "anti_drift_rules": {
+    "normalization": {
+      "rule": "ALWAYS normalize performance metrics by zone count",
+      "rationale": "Raw volume favors high-coverage cuisines regardless of actual performance"
+    },
+    "non_dinneroo_filtering": {
+      "rule": "ALWAYS use non_dinneroo_cuisine_demand_midweek.csv for benchmarks",
+      "rationale": "Dinneroo is 98% midweek - unfiltered data overstates weekend-heavy cuisines"
+    },
+    "supply_threshold": {
+      "rule": "Cuisines with < 15 zones get N/A for performance",
+      "rationale": "Insufficient sample size for reliable performance measurement"
+    },
+    "source_citation": {
+      "rule": "Always cite sample sizes for all demand signals",
+      "rationale": "Transparency and reproducibility"
+    }
+  }
+}
+

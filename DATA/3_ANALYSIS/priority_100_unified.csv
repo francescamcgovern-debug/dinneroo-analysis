@@ -1,101 +1,63 @@
-rank,dish_type,cuisine,on_dinneroo,unified_score,performance_score,opportunity_score,tier,quadrant,evidence_level,order_volume,avg_rating,adult_satisfaction,kids_happy,latent_demand_score,adult_appeal,balanced_guilt_free,fussy_eater_friendly,performance_score_raw,opportunity_score_raw
-1,Curry,Indian,True,4.94,4.96969696969697,4.912037037037037,Tier 1: Must-Have,Priority,Validated,5897.0,,0.9452054794520548,0.8148148148148148,2,5,3,3,4.79,2.91
-2,Noodles,Asian,True,4.9,4.818181818181818,4.9907407407407405,Tier 1: Must-Have,Priority,Validated,2092.0,,0.9210526315789472,0.803921568627451,3,3,3,4,4.21,3.11
-3,Pho,Vietnamese,True,4.9,4.818181818181818,4.981481481481481,Tier 1: Must-Have,Priority,Validated,4530.0,,0.9066937119675456,0.8032786885245902,2,5,4,3,4.21,3.1
-4,Katsu,Japanese,True,4.89,4.924242424242424,4.847222222222222,Tier 1: Must-Have,Priority,Validated,11730.0,,0.8405797101449275,0.7806004618937644,2,4,3,4,4.57,2.82
-5,Salad,Healthy,True,4.65,4.327272727272727,4.962962962962963,Tier 1: Must-Have,Priority,Validated,1090.0,,0.8979591836734694,0.8,2,4,5,3,3.43,3.08
-6,Pasta,Italian,True,4.51,4.327272727272727,4.692592592592592,Tier 1: Must-Have,Priority,Validated,1342.0,,0.8333333333333334,0.7936507936507936,2,3,3,5,3.43,2.72
-7,Chicken Pie,British,True,3.82,5.0,2.6444444444444444,Tier 1: Must-Have,Protect,Validated,34506.0,,,,1,3,4,5,5.0,2.41
-8,Pad Thai,Thai,True,3.64,4.63030303030303,2.6444444444444444,Tier 2: Should-Have,Protect,Validated,2734.0,,0.8969072164948454,0.725,1,5,3,3,3.79,2.41
-9,Rice Bowl,Asian,True,3.5,4.924242424242424,2.0703703703703704,Tier 2: Should-Have,Protect,Validated,9545.0,,0.8642857142857143,0.8461538461538461,1,3,4,4,4.57,2.3
-10,Sushi,Japanese,True,3.39,3.642424242424242,3.140740740740741,Tier 2: Should-Have,Priority,Validated,1043.0,,0.8650793650793651,0.6923076923076923,1,5,4,2,3.21,2.48
-11,Lasagne,Italian,True,3.36,3.0969696969696967,3.6222222222222222,Tier 2: Should-Have,Priority,Validated,931.0,,0.7567567567567568,0.7,2,3,3,4,3.0,2.61
-12,Ramen,Japanese,True,3.35,1.7878787878787878,4.912037037037037,Tier 2: Should-Have,Develop,Validated,223.0,,,,2,5,3,3,2.0,2.91
-13,Biryani,Indian,True,3.33,4.024242424242424,2.6444444444444444,Tier 2: Should-Have,Protect,Validated,458.0,,1.0,1.0,1,5,3,3,3.29,2.41
-14,Grilled Chicken with Sides,Global,True,3.29,3.0969696969696967,3.474074074074074,Tier 2: Should-Have,Priority,Validated,540.0,,,,1,3,5,5,3.0,2.59
-15,Teriyaki,Japanese,True,3.28,4.327272727272727,2.237037037037037,Tier 2: Should-Have,Protect,Validated,1369.0,,0.8301886792452831,0.7878787878787878,1,4,3,4,3.43,2.32
-16,Bowl,Healthy/Fresh,True,3.25,4.878787878787879,1.6296296296296298,Tier 2: Should-Have,Protect,Validated,4517.0,,1.0,1.0,1,3,4,3,4.43,2.18
-17,Pizza,Italian,True,3.17,3.0969696969696967,3.233333333333333,Tier 3: Nice-to-Have,Priority,Validated,548.0,,0.7659574468085106,0.7288135593220338,2,3,2,5,3.0,2.54
-18,Fried Rice,Chinese,True,3.14,4.818181818181818,1.462962962962963,Tier 3: Nice-to-Have,Protect,Validated,4958.0,,0.9054878048780488,0.8,1,3,3,4,4.21,2.11
-19,Sweet & Sour Chicken,Global,True,2.87,3.0969696969696967,2.6444444444444444,Tier 3: Nice-to-Have,Protect,Validated,1081.0,,,,1,3,4,5,3.0,2.41
-20,Fajitas,Mexican,True,2.85,3.460606060606061,2.237037037037037,Tier 3: Nice-to-Have,Protect,Validated,221.0,,0.8947368421052632,1.0,1,4,3,4,3.07,2.32
-21,Mac & Cheese,American,True,2.8,4.327272727272727,1.2777777777777777,Tier 3: Nice-to-Have,Protect,Validated,1322.0,,0.7083333333333334,0.9333333333333332,1,3,2,5,3.43,2.04
-22,Shawarma,Middle Eastern,True,2.67,3.642424242424242,1.7037037037037037,Tier 4: Monitor,Protect,Validated,1355.0,,0.8695652173913043,0.7333333333333333,1,4,3,3,3.21,2.2
-23,Butter Chicken,Indian,True,2.67,3.0969696969696967,2.237037037037037,Tier 4: Monitor,Protect,Validated,650.0,,0.9230769230769232,0.4,1,4,3,4,3.0,2.32
-24,Tacos,Mexican,True,2.65,1.1818181818181819,4.118518518518519,Tier 4: Monitor,Develop,Validated,62.0,,,,2,4,3,3,1.0,2.7
-25,Grain Bowl,Healthy,True,2.58,1.7878787878787878,3.362962962962963,Tier 4: Monitor,Develop,Validated,192.0,,,,1,4,5,3,2.0,2.58
-26,Stir Fry,Asian,True,2.14,1.7878787878787878,2.496296296296296,Tier 4: Monitor,Monitor,Validated,252.0,,,,1,4,4,3,2.0,2.39
-27,Korean Fried Chicken,Korean,True,2.11,1.7878787878787878,2.4222222222222225,Tier 4: Monitor,Monitor,Validated,398.0,,,,1,5,2,4,2.0,2.34
-28,Burger,American,True,2.1,1.1818181818181819,3.011111111111111,Tier 4: Monitor,Develop,Validated,61.0,,,,2,3,2,4,1.0,2.42
-29,Roast Dinner,British,True,2.01,1.7878787878787878,2.237037037037037,Tier 4: Monitor,Monitor,Validated,287.0,,,,1,4,3,4,2.0,2.32
-30,Quesadilla,Mexican,True,1.91,2.533333333333333,1.2777777777777777,Tier 4: Monitor,Monitor,Validated,57.0,,0.6666666666666666,1.0,1,3,2,5,2.07,2.04
-31,Veggie Fajitas,Mexican,True,1.75,1.7878787878787878,1.7037037037037037,Tier 4: Monitor,Monitor,Validated,333.0,,,,1,4,3,3,2.0,2.2
-32,Shepherd's Pie,British,True,1.63,1.7878787878787878,1.462962962962963,Tier 4: Monitor,Monitor,Validated,333.0,,,,1,3,3,4,2.0,2.11
-33,Halloumi Wrap,Global,True,1.63,1.7878787878787878,1.462962962962963,Tier 4: Monitor,Monitor,Validated,161.0,,,,1,3,3,4,2.0,2.11
-34,Risotto,Italian,False,,,4.118518518518519,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.7
-35,Gnocchi,Italian,False,,,4.118518518518519,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.7
-36,Filled Pasta,Italian,False,,,4.118518518518519,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.7
-37,Baked Pasta,Italian,False,,,1.2777777777777777,Tier 4: Monitor,Monitor,Validated,,,,,1,3,2,5,,2.04
-38,Gyoza,Japanese,False,,,4.828703703703703,Tier 4: Monitor,Prospect,Validated,,,0.9428571428571428,0.7647058823529411,2,4,3,4,,2.81
-39,Tempura,Japanese,False,,,3.77037037037037,Tier 4: Monitor,Prospect,Validated,,,,,2,4,2,4,,2.63
-40,Udon,Japanese,False,,,2.237037037037037,Tier 4: Monitor,Monitor,Validated,,,,,1,4,3,4,,2.32
-41,Sweet & Sour,Chinese,False,,,3.233333333333333,Tier 4: Monitor,Prospect,Validated,,,1.0,1.0,2,3,2,5,,2.54
-42,Spring Rolls,Chinese,False,,,1.1111111111111112,Tier 4: Monitor,Monitor,Validated,,,0.8823529411764706,0.7037037037037037,1,3,2,4,,1.92
-43,Dim Sum,Chinese,False,,,2.6444444444444444,Tier 4: Monitor,Monitor,Validated,0.0,,,,1,5,3,3,,2.41
-44,Peking Duck,Chinese,False,,,4.912037037037037,Tier 4: Monitor,Prospect,Validated,,,,,2,5,3,3,,2.91
-45,Thai Curry,Thai,True,,,4.805555555555555,Tier 4: Monitor,Develop,Validated,,,0.8596491228070176,0.8,2,5,3,2,,2.8
-46,Tom Yum,Thai,False,,,4.9490740740740735,Tier 4: Monitor,Prospect,Validated,,,,,2,5,4,2,,2.98
-47,Satay,Thai,False,,,4.828703703703703,Tier 4: Monitor,Prospect,Validated,,,0.875,0.803921568627451,2,4,3,4,,2.81
-48,Banh Mi,Vietnamese,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-49,Bibimbap,Korean,False,,,2.496296296296296,Tier 4: Monitor,Monitor,Validated,0.0,,,,1,4,4,3,,2.39
-50,Bulgogi,Korean,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-51,Japchae,Korean,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-52,Laksa,Malaysian,False,,,2.0703703703703704,Tier 4: Monitor,Monitor,Validated,,,,,1,5,3,2,,2.3
-53,Nasi Goreng,Indonesian,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-54,Rendang,Indonesian,False,,,4.805555555555555,Tier 4: Monitor,Prospect,Validated,,,,,2,5,3,2,,2.8
-55,Tikka Masala,Indian,True,,,2.237037037037037,Tier 4: Monitor,Monitor,Validated,19.0,,,,1,4,3,4,,2.32
-56,Korma,Indian,False,,,1.7962962962962963,Tier 4: Monitor,Monitor,Validated,0.0,,,,1,3,3,5,,2.22
-57,Tandoori,Indian,True,,,4.972222222222222,Tier 4: Monitor,Develop,Validated,,,,,2,5,4,3,,3.09
-58,Daal,Indian,True,,,3.362962962962963,Tier 4: Monitor,Develop,Validated,,,1.0,1.0,1,4,5,3,,2.58
-59,Samosa,Indian,False,,,1.1111111111111112,Tier 4: Monitor,Monitor,Validated,,,0.925925925925926,0.4615384615384615,1,3,2,4,,1.92
-60,Burrito,Mexican,False,,,1.462962962962963,Tier 4: Monitor,Monitor,Validated,3.0,,,,1,3,3,4,,2.11
-61,Nachos,Mexican,False,,,1.1111111111111112,Tier 4: Monitor,Monitor,Validated,,,,,1,3,2,4,,1.92
-62,Enchiladas,Mexican,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-63,Fish Tacos,Mexican,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-64,Chilli,Mexican,True,,,3.6222222222222222,Tier 4: Monitor,Develop,Validated,,,0.826530612244898,0.7,2,3,3,4,,2.61
-65,Falafel,Middle Eastern,False,,,4.87962962962963,Tier 4: Monitor,Prospect,Validated,,,1.0,0.6666666666666666,2,4,4,3,,2.89
-66,Hummus Plate,Middle Eastern,False,,,2.496296296296296,Tier 4: Monitor,Monitor,Validated,,,,,1,4,4,3,,2.39
-67,Shakshuka,Middle Eastern,False,,,4.87962962962963,Tier 4: Monitor,Prospect,Validated,,,,,2,4,4,3,,2.89
-68,Lamb Kofta,Middle Eastern,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-69,Gyros,Greek,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-70,Souvlaki,Greek,False,,,2.237037037037037,Tier 4: Monitor,Monitor,Validated,0.0,,,,1,4,3,4,,2.32
-71,Moussaka,Greek,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-72,Spanakopita,Greek,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-73,Dolma,Greek,False,,,4.7481481481481485,Tier 4: Monitor,Prospect,Validated,,,,,2,4,4,2,,2.78
-74,Greek Mezze,Greek,False,,,1.7037037037037037,Tier 4: Monitor,Monitor,Validated,7.0,,,,1,4,3,3,,2.2
-75,Fish & Chips,British,True,,,3.233333333333333,Tier 4: Monitor,Develop,Validated,32.0,,,,2,3,2,5,,2.54
-76,Pie,British,True,,,4.935185185185185,Tier 4: Monitor,Develop,Validated,,,0.75,1.0,3,3,2,4,,2.92
-77,Bangers & Mash,British,False,,,1.2777777777777777,Tier 4: Monitor,Monitor,Validated,0.0,,,,1,3,2,5,,2.04
-78,Cottage Pie,British,False,,,1.462962962962963,Tier 4: Monitor,Monitor,Validated,0.0,,,,1,3,3,4,,2.11
-79,Jacket Potato,British,False,,,4.692592592592592,Tier 4: Monitor,Prospect,Validated,,,,,2,3,3,5,,2.72
-80,Casserole,British,False,,,3.6222222222222222,Tier 4: Monitor,Prospect,Validated,,,,,2,3,3,4,,2.61
-81,Pasty,British,False,,,3.011111111111111,Tier 4: Monitor,Prospect,Validated,,,,,2,3,2,4,,2.42
-82,Wings,American,False,,,1.5925925925925926,Tier 4: Monitor,Monitor,Validated,,,0.8,0.8181818181818182,1,4,2,4,,2.13
-83,Chicken Nuggets,American,False,,,1.037037037037037,Tier 4: Monitor,Monitor,Validated,,,1.0,0.8,1,2,2,5,,1.83
-84,Hot Dog,American,False,,,2.3851851851851853,Tier 4: Monitor,Monitor,Validated,,,,,2,2,2,5,,2.33
-85,BBQ Ribs,American,False,,,3.77037037037037,Tier 4: Monitor,Prospect,Validated,,,,,2,4,2,4,,2.63
-86,Pulled Pork,American,False,,,3.77037037037037,Tier 4: Monitor,Prospect,Validated,,,,,2,4,2,4,,2.63
-87,Jerk Chicken,Caribbean,False,,,4.118518518518519,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.7
-88,Jollof Rice,African,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-89,Curry Goat,Caribbean,False,,,3.474074074074074,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,2,,2.59
-90,Plantain,Caribbean,False,,,3.6222222222222222,Tier 4: Monitor,Prospect,Validated,,,,,2,3,3,4,,2.61
-91,Suya,African,False,,,4.433333333333334,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,3,,2.71
-92,Oxtail,Caribbean,False,,,3.474074074074074,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,2,,2.59
-93,Schnitzel,German,False,,,3.233333333333333,Tier 4: Monitor,Prospect,Validated,,,,,2,3,2,5,,2.54
-94,Bratwurst,German,False,,,3.011111111111111,Tier 4: Monitor,Prospect,Validated,,,,,2,3,2,4,,2.42
-95,Pierogi,Polish,False,,,3.011111111111111,Tier 4: Monitor,Prospect,Validated,,,,,2,3,2,4,,2.42
-96,Stroganoff,Russian,False,,,4.847222222222222,Tier 4: Monitor,Prospect,Validated,,,,,2,4,3,4,,2.82
-97,Tagine,Moroccan,False,,,4.9490740740740735,Tier 4: Monitor,Prospect,Validated,,,,,2,5,4,2,,2.98
-98,Paella,Spanish,False,,,4.912037037037037,Tier 4: Monitor,Prospect,Validated,,,,,2,5,3,3,,2.91
-99,Cous Cous,Moroccan,False,,,4.87962962962963,Tier 4: Monitor,Prospect,Validated,,,,,2,4,4,3,,2.89
-100,Poke Bowl,Hawaiian,True,,,3.1037037037037036,Tier 4: Monitor,Develop,Validated,39.0,,1.0,,1,4,5,2,,2.47
+rank,dish_type,cuisine,on_dinneroo,unified_score,performance_score,opportunity_score,tier,quadrant,order_volume,zone_count,orders_per_zone,kids_happy,is_core_driver,perf_opz_score,perf_rating_score,perf_kids_score,opp_latent_score,opp_nondin_score
+1,Noodles,Global,True,3.9,4.83,2.5,Tier 1: Must-Have,Demand Boosters,2092.0,,2092.0,0.8,True,5,5,4,3,2
+2,Pho,Vietnamese,True,3.7,4.83,2.0,Tier 1: Must-Have,Demand Boosters,4530.0,,4530.0,0.8,True,5,5,4,2,2
+3,Curry,Indian,True,3.7,4.83,2.0,Tier 1: Must-Have,Demand Boosters,5897.0,,5897.0,0.81,False,5,5,4,2,2
+4,Biryani,Indian,True,3.6,5.0,1.5,Tier 1: Must-Have,Demand Boosters,458.0,,458.0,1.0,True,5,5,5,1,2
+5,Bowl,Healthy/Fresh,True,3.6,5.0,1.5,Tier 1: Must-Have,Demand Boosters,4517.0,,4517.0,1.0,False,5,5,5,1,2
+6,Salad,Healthy/Fresh,True,3.55,4.58,2.0,Tier 1: Must-Have,Demand Boosters,1090.0,,1090.0,0.8,False,5,4,4,2,2
+7,Fried Rice,Chinese,True,3.5,4.83,1.5,Tier 1: Must-Have,Demand Boosters,4958.0,,4958.0,0.8,True,5,5,4,1,2
+8,Fajitas,Mexican,True,3.45,4.75,1.5,Tier 2: Should-Have,Demand Boosters,221.0,,221.0,1.0,False,5,4,5,1,2
+9,Pasta,Italian,True,3.4,4.33,2.0,Tier 2: Should-Have,Demand Boosters,1342.0,,1342.0,0.79,False,5,3,4,2,2
+10,Katsu,Japanese,True,3.4,4.33,2.0,Tier 2: Should-Have,Demand Boosters,11730.0,,11730.0,0.78,True,5,3,4,2,2
+11,Rice Bowl,Healthy/Fresh,True,3.35,4.58,1.5,Tier 2: Should-Have,Demand Boosters,9545.0,,9545.0,0.85,True,5,4,4,1,2
+12,Ramen,Japanese,True,3.3,4.17,2.0,Tier 2: Should-Have,Demand Boosters,223.0,,223.0,,False,5,3,3,2,2
+13,Sushi,Japanese,True,3.25,4.42,1.5,Tier 2: Should-Have,Demand Boosters,1043.0,,1043.0,0.69,True,5,4,3,1,2
+14,Pad Thai,Thai,True,3.25,4.42,1.5,Tier 2: Should-Have,Demand Boosters,2734.0,,2734.0,0.72,False,5,4,3,1,2
+15,Shawarma,Middle Eastern,True,3.25,4.42,1.5,Tier 2: Should-Have,Demand Boosters,1355.0,,1355.0,0.73,False,5,4,3,1,2
+16,Butter Chicken,Indian,True,3.2,4.33,1.5,Tier 2: Should-Have,Demand Boosters,650.0,,650.0,0.4,False,5,5,1,1,2
+17,Teriyaki,Japanese,True,3.2,4.33,1.5,Tier 2: Should-Have,Demand Boosters,1369.0,,1369.0,0.79,False,5,3,4,1,2
+18,Mac & Cheese,Global,True,3.15,4.25,1.5,Tier 2: Should-Have,Demand Boosters,1322.0,,1322.0,0.93,False,5,2,5,1,2
+19,Lasagne,Italian,True,3.15,3.92,2.0,Tier 2: Should-Have,Demand Boosters,931.0,,931.0,0.7,False,5,2,3,2,2
+20,Pizza,Italian,True,3.15,3.92,2.0,Tier 2: Should-Have,Demand Boosters,548.0,,548.0,0.73,False,5,2,3,2,2
+21,Grilled Chicken with Sides,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,540.0,,540.0,,False,5,3,3,1,2
+22,Korean Fried Chicken,Korean,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,398.0,,398.0,,False,5,3,3,1,2
+23,Halloumi Wrap,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,161.0,,161.0,,False,5,3,3,1,2
+24,Grain Bowl,Healthy/Fresh,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,192.0,,192.0,,False,5,3,3,1,2
+25,Roast Dinner,British,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,287.0,,287.0,,False,5,3,3,1,2
+26,Veggie Fajitas,Mexican,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,333.0,,333.0,,False,5,3,3,1,2
+27,Chicken Pie,British,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,34506.0,,34506.0,,False,5,3,3,1,2
+28,Shepherd's Pie,British,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,333.0,,333.0,,False,5,3,3,1,2
+29,Stir Fry,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,252.0,,252.0,,False,5,3,3,1,2
+30,Sweet & Sour Chicken,Global,True,3.1,4.17,1.5,Tier 2: Should-Have,Demand Boosters,1081.0,,1081.0,,False,5,3,3,1,2
+31,Burger,American,True,2.95,3.58,2.0,Tier 3: Nice-to-Have,Demand Boosters,61.0,,61.0,,False,4,3,3,2,2
+32,Tacos,Mexican,True,2.95,3.58,2.0,Tier 3: Nice-to-Have,Demand Boosters,62.0,,62.0,,False,4,3,3,2,2
+33,Poke Bowl,Healthy/Fresh,True,2.7,3.5,1.5,Tier 3: Nice-to-Have,Demand Boosters,39.0,,39.0,,False,3,5,3,1,2
+34,Quesadilla,Mexican,True,2.65,3.42,1.5,Tier 3: Nice-to-Have,Demand Boosters,57.0,,57.0,1.0,False,4,1,5,1,2
+35,Fish & Chips,Global,True,2.6,3.0,2.0,Tier 3: Nice-to-Have,Demand Boosters,32.0,,32.0,,False,3,3,3,2,2
+36,Sweet & Sour,,True,2.4,2.67,2.0,Tier 4: Monitor,Deprioritised,,,,1.0,False,1,5,5,2,2
+37,Wrap,Global,True,2.4,3.0,1.5,Tier 4: Monitor,Demand Boosters,44.0,,44.0,,False,3,3,3,1,2
+38,Chinese Family Meal,Chinese,False,2.4,3.0,1.5,Tier 4: Monitor,Demand Boosters,31.0,,31.0,,False,3,3,3,1,2
+39,Gyoza,,True,2.3,2.5,2.0,Tier 4: Monitor,Deprioritised,,,,0.76,False,1,5,4,2,2
+40,Falafel,,True,2.2,2.33,2.0,Tier 4: Monitor,Deprioritised,,,,0.67,False,1,5,3,2,2
+41,Daal,,True,2.2,2.67,1.5,Tier 4: Monitor,Deprioritised,,,,1.0,False,1,5,5,1,2
+42,Thai Curry,,True,2.15,2.25,2.0,Tier 4: Monitor,Deprioritised,,,,0.8,False,1,4,4,2,2
+43,Pie,,True,2.15,1.92,2.5,Tier 4: Monitor,Deprioritised,,,,1.0,False,1,2,5,3,2
+44,Satay,,True,2.15,2.25,2.0,Tier 4: Monitor,Deprioritised,,,,0.8,False,1,4,4,2,2
+45,Grilled Chicken,,True,2.1,2.17,2.0,Tier 4: Monitor,Deprioritised,,,,1.0,False,1,3,5,2,2
+46,Chicken Nuggets,,True,2.1,2.5,1.5,Tier 4: Monitor,Deprioritised,,,,0.8,False,1,5,4,1,2
+47,Greek Mezze,Greek,False,2.05,2.42,1.5,Tier 4: Monitor,Deprioritised,7.0,,7.0,,False,2,3,3,1,2
+48,Tikka Masala,Indian,True,2.05,2.42,1.5,Tier 4: Monitor,Deprioritised,19.0,,19.0,,False,2,3,3,1,2
+49,Chilli,,True,1.9,1.83,2.0,Tier 4: Monitor,Deprioritised,,,,0.7,False,1,3,3,2,2
+50,Spring Rolls,,True,1.85,2.08,1.5,Tier 4: Monitor,Deprioritised,,,,0.7,False,1,4,3,1,2
+51,Samosa,,True,1.8,2.0,1.5,Tier 4: Monitor,Deprioritised,,,,0.46,False,1,5,1,1,2
+52,Wings,,True,1.8,2.0,1.5,Tier 4: Monitor,Deprioritised,,,,0.82,False,1,3,4,1,2
+53,Buddha Bowl,Healthy/Fresh,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
+54,Burrito,Mexican,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,3.0,,3.0,,False,1,3,3,1,2
+55,Souvlaki,Greek,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
+56,Cottage Pie,British,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
+57,Bibimbap,Korean,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
+58,Soup,,True,1.7,1.5,2.0,Tier 4: Monitor,Deprioritised,,,,0.75,False,1,1,4,2,2
+59,Dim Sum,Chinese,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
+60,Rotisserie Chicken,Global,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
+61,Korma,Indian,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2
+62,Bangers & Mash,British,False,1.7,1.83,1.5,Tier 4: Monitor,Deprioritised,0.0,,,,False,1,3,3,1,2

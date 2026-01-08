@@ -1,0 +1,672 @@
+{
+  "generated_at": "2026-01-08T18:20:00",
+  "source": "docs/data/zone_mvp_status.json",
+  "summary": {
+    "total_zones": 1306,
+    "mvp_ready": 70,
+    "near_mvp": 31,
+    "needs_work": 0,
+    "target": "50 MVP Ready by Q2",
+    "progress_pct": 140
+  },
+  "near_mvp_breakdown": {
+    "Healthy": 31,
+    "Indian": 25,
+    "Mexican": 25,
+    "Middle Eastern": 6,
+    "British": 6
+  },
+  "queue": [
+    {
+      "zone": "Norwich",
+      "zone_code": "NOR",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.257,
+      "orders": 1228,
+      "partners_have": 6
+    },
+    {
+      "zone": "Guildford",
+      "zone_code": "GUI",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.252,
+      "orders": 1107,
+      "partners_have": 7
+    },
+    {
+      "zone": "St Albans",
+      "zone_code": "STA",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.214,
+      "orders": 631,
+      "partners_have": 6
+    },
+    {
+      "zone": "Reigate",
+      "zone_code": "REI",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.269,
+      "orders": 626,
+      "partners_have": 6
+    },
+    {
+      "zone": "Windsor",
+      "zone_code": "WIN",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.238,
+      "orders": 595,
+      "partners_have": 8
+    },
+    {
+      "zone": "Colchester",
+      "zone_code": "CLC",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.285,
+      "orders": 537,
+      "partners_have": 4
+    },
+    {
+      "zone": "Royal Tunbridge Wells",
+      "zone_code": "RTW",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.229,
+      "orders": 531,
+      "partners_have": 7
+    },
+    {
+      "zone": "Horsham",
+      "zone_code": "HOR",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.231,
+      "orders": 480,
+      "partners_have": 4
+    },
+    {
+      "zone": "Farnham",
+      "zone_code": "FARN",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.213,
+      "orders": 359,
+      "partners_have": 3
+    },
+    {
+      "zone": "Walton on Thames",
+      "zone_code": "WOT",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.192,
+      "orders": 316,
+      "partners_have": 8
+    },
+    {
+      "zone": "Chichester",
+      "zone_code": "CHS",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.229,
+      "orders": 277,
+      "partners_have": 4
+    },
+    {
+      "zone": "Harpenden",
+      "zone_code": "HRP",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.14,
+      "orders": 196,
+      "partners_have": 5
+    },
+    {
+      "zone": "Braintree",
+      "zone_code": "BRT",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.136,
+      "orders": 180,
+      "partners_have": 4
+    },
+    {
+      "zone": "Esher",
+      "zone_code": "ESH",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.117,
+      "orders": 174,
+      "partners_have": 7
+    },
+    {
+      "zone": "Newbury",
+      "zone_code": "NWB",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.2,
+      "orders": 168,
+      "partners_have": 3
+    },
+    {
+      "zone": "Harrow",
+      "zone_code": "HRO",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Healthy",
+        "Middle Eastern",
+        "British"
+      ],
+      "primary_gap": "Healthy",
+      "suggested_fix": {
+        "in_zone": "Local healthy partner",
+        "on_platform": "Farmer J, LEON"
+      },
+      "repeat_rate": 0.078,
+      "orders": 143,
+      "partners_have": 7
+    },
+    {
+      "zone": "Wood Green",
+      "zone_code": "WGR",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Healthy",
+        "Middle Eastern",
+        "British"
+      ],
+      "primary_gap": "Healthy",
+      "suggested_fix": {
+        "in_zone": "Local healthy partner",
+        "on_platform": "Farmer J, LEON"
+      },
+      "repeat_rate": 0.116,
+      "orders": 138,
+      "partners_have": 9
+    },
+    {
+      "zone": "Chingford",
+      "zone_code": "CGF",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Healthy",
+        "Middle Eastern",
+        "British"
+      ],
+      "primary_gap": "Healthy",
+      "suggested_fix": {
+        "in_zone": "Local healthy partner",
+        "on_platform": "Farmer J, LEON"
+      },
+      "repeat_rate": 0.145,
+      "orders": 87,
+      "partners_have": 6
+    },
+    {
+      "zone": "Ilford",
+      "zone_code": "ILF",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Healthy",
+        "Middle Eastern",
+        "British"
+      ],
+      "primary_gap": "Healthy",
+      "suggested_fix": {
+        "in_zone": "Local healthy partner",
+        "on_platform": "Farmer J, LEON"
+      },
+      "repeat_rate": 0.075,
+      "orders": 80,
+      "partners_have": 7
+    },
+    {
+      "zone": "Godalming",
+      "zone_code": "GOD",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.217,
+      "orders": 73,
+      "partners_have": 7
+    },
+    {
+      "zone": "Tonbridge",
+      "zone_code": "TON",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.17,
+      "orders": 61,
+      "partners_have": 6
+    },
+    {
+      "zone": "Aldershot",
+      "zone_code": "ALD",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.096,
+      "orders": 57,
+      "partners_have": 5
+    },
+    {
+      "zone": "Bexleyheath",
+      "zone_code": "BEX",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.167,
+      "orders": 54,
+      "partners_have": 5
+    },
+    {
+      "zone": "Eastbourne",
+      "zone_code": "EST",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.229,
+      "orders": 49,
+      "partners_have": 2
+    },
+    {
+      "zone": "Crawley",
+      "zone_code": "CRW",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.073,
+      "orders": 45,
+      "partners_have": 4
+    },
+    {
+      "zone": "Fleet",
+      "zone_code": "FLE",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.219,
+      "orders": 44,
+      "partners_have": 5
+    },
+    {
+      "zone": "Hemel Hempstead",
+      "zone_code": "HEM",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.147,
+      "orders": 43,
+      "partners_have": 6
+    },
+    {
+      "zone": "Southall",
+      "zone_code": "STL",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Healthy",
+        "Middle Eastern",
+        "British"
+      ],
+      "primary_gap": "Healthy",
+      "suggested_fix": {
+        "in_zone": "Local healthy partner",
+        "on_platform": "Farmer J, LEON"
+      },
+      "repeat_rate": 0.033,
+      "orders": 31,
+      "partners_have": 6
+    },
+    {
+      "zone": "Altrincham and Hale",
+      "zone_code": "ALH",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.087,
+      "orders": 26,
+      "partners_have": 2
+    },
+    {
+      "zone": "Dun laoghaire, Dalkey, Killiney",
+      "zone_code": "DDK",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Healthy",
+        "Middle Eastern",
+        "British"
+      ],
+      "primary_gap": "Healthy",
+      "suggested_fix": {
+        "in_zone": "Local healthy partner",
+        "on_platform": "Farmer J, LEON"
+      },
+      "repeat_rate": 0.091,
+      "orders": 24,
+      "partners_have": 4
+    },
+    {
+      "zone": "Slough",
+      "zone_code": "SLO",
+      "mvp_status": "Near MVP",
+      "effort_score": 1,
+      "cuisines_have": 4,
+      "cuisines_needed": 1,
+      "missing_cuisines": [
+        "Indian",
+        "Healthy",
+        "Mexican"
+      ],
+      "primary_gap": "Indian",
+      "suggested_fix": {
+        "in_zone": "Tiffin Tin or Dishoom",
+        "on_platform": "Dishoom, Tadka House"
+      },
+      "repeat_rate": 0.222,
+      "orders": 12,
+      "partners_have": 8
+    }
+  ]
+}

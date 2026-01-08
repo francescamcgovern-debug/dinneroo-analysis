@@ -1,0 +1,316 @@
+cuisine,non_dinneroo_orders,unique_customers,avg_order_value,dinneroo_available,gap_signal,filter_applied,filter_rationale
+Grocery,26417,9872,30.05,No,High,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Burgers,16155,9011,28.32,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+italian,11440,7036,32.18,No,High,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Chicken,10002,6201,29.22,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+indian,8699,5310,35.23,No,High,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+chinese,8412,5026,35.43,No,High,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+japanese,8361,5397,35.53,No,High,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+american,8140,5288,29.21,No,High,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Portuguese,6999,4356,36.32,No,High,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Alcohol,6438,3330,27.15,No,High,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+sushi,6420,4031,35.5,No,High,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Asian,4740,3136,33.04,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Vietnamese,4702,3040,32.02,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Salads,4209,1821,29.38,No,Medium,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+thai,4144,2922,37.31,No,Medium,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+pizza,3875,2771,30.82,No,Medium,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Wings,3461,2496,28.68,No,Medium,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+British,3087,2017,29.14,No,Medium,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Turkish,2410,1597,35.56,No,Medium,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Curry,2372,1733,36.41,No,Medium,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+halal,2204,1592,27.54,No,Medium,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+greek,1890,1431,29.09,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Korean,1807,1279,33.7,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+lebanese,1677,1087,34.07,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Healthy,1594,817,27.51,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Fish and chips,1568,1065,27.63,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+German,1502,1123,25.35,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+dessert,1401,1059,25.47,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Tacos,996,673,32.44,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+mexican,972,688,32.77,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Middle Eastern,971,658,31.8,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Vegan Friendly,950,688,31.73,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Kebab,780,549,29.35,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Caribbean,774,563,29.92,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Burritos,761,562,29.52,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+vegetarian,757,558,37.23,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Mediterranean,724,495,29.64,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Ramen,718,565,32.34,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Sandwiches,701,541,26.27,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Bubble tea,673,456,19.8,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+On Demand Convenience,645,504,30.98,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Nachos,638,511,26.34,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Noodles,611,446,33.68,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Deliveroo Hop,600,320,26.91,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Juices,568,316,26.63,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Fried chicken,542,418,27.77,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Family favourites,533,384,32.21,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Meal Deals,493,365,31.74,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Gluten Free,488,271,30.77,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+breakfast,456,288,28.82,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Mezze,444,307,35.1,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Drinks,431,272,31.29,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Featured Restaurants,417,329,25.83,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Milkshakes,411,297,33.13,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+New to Deliveroo,398,298,26.87,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Waffles,365,304,24.72,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Big brand stores,360,265,29.04,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Pasta,356,253,31.44,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Kosher,340,134,29.49,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+grill,324,238,28.38,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Restaurants Only on Deliveroo,312,173,29.83,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Stir Fry,302,223,26.3,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Poke,298,233,26.96,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Only on Deliveroo,287,221,40.09,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Desserts and sweet dishes,287,223,23.72,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Cantonese,276,186,37.87,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Gyros,264,205,30.04,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Shopping,247,180,30.28,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Bakery,237,178,23.25,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Vegan,231,158,35.05,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Café,225,165,25.39,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Bagels,204,120,29.77,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Supermarket,198,126,25.94,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Latin American,198,152,35.64,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Popular restaurants,194,134,29.23,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+African,188,128,33.3,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Asian Fusion,186,144,31.91,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Irish,185,102,31.71,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Pho,184,112,32.69,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Steak,169,126,41.0,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Ice cream,169,120,22.22,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Dim Sum,165,126,36.36,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+The Feed,153,102,28.75,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Movie Night Restaurants,151,94,31.79,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Wraps,144,104,24.47,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Seafood,143,106,36.86,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Malaysian,140,105,34.16,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Meal Deal,137,105,28.99,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+BBQ,133,106,32.13,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Taiwanese,129,92,28.52,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Shawarma,128,99,29.07,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Nepalese,124,84,33.61,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Sichuan,122,79,32.46,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Hot Dogs,118,93,27.38,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Meat,113,90,24.37,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Hawaiian,112,76,28.06,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Cakes,112,101,24.69,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Dumplings,108,65,34.22,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+street food,100,70,32.89,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+In-store prices – Selected items,97,77,26.03,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Beer,97,47,32.21,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Wine,96,57,28.49,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Iranian,92,64,45.76,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Argentinian,92,64,28.79,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Pakistani,90,68,29.15,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Persian,88,69,40.35,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Acai,86,57,25.58,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Spicy Nuggets,84,57,25.72,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+International,81,64,31.01,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+midautumn2025,79,43,35.65,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Singaporean,78,56,40.9,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+coca cola zero sugar competition,76,60,27.84,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+NFL Big Game Night,76,61,29.83,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+South Indian,76,57,33.14,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Kids Menu,74,57,41.35,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Specialist stores,74,58,33.85,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Nigerian,72,42,33.01,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Russian,71,45,43.25,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Neapolitan,71,54,30.34,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Easter Groceries,71,40,30.47,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Brazilian,70,49,30.4,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Coffee,70,51,19.32,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+7MAR off,67,60,24.03,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Royally Good Offers,66,51,30.43,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Healthy eating groceries,63,33,28.7,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Plus Member Offers,62,34,24.37,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Convenience stores,59,40,21.15,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Quick Service Restaurants,58,42,27.67,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Wing Fest 2025,58,39,27.1,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Roasteries,57,42,33.89,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Restaurants in your area,57,43,30.49,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Jamaican,50,37,29.6,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Breakfast & Brunch,49,30,35.72,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Family Meal Deals,49,32,29.47,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Brunch,47,41,30.55,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Comfort food,46,35,37.08,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Sri Lankan,46,40,31.77,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Afghan,45,27,26.94,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Fast Food,43,26,26.47,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Bao,42,33,25.99,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Bo bun,41,35,33.61,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Pasta Evangelists 20% discount,41,30,30.31,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Healthy Eating 2025,40,32,41.86,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Gelato,39,26,21.76,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Pancakes,35,20,23.77,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Just a bite away,35,29,27.47,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Spanish,34,32,42.62,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Veganuary,34,27,26.79,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+"Exclusive offers, from our exclusive restaurants",33,29,35.01,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Pie,31,27,26.56,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Spring Summer Free Delivery,30,22,24.2,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Pickup Deals,30,24,32.73,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Donuts,30,29,22.68,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Sweet Treats,29,26,21.7,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Deliveroo Students Offers,29,22,27.68,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+win with coca-cola,28,19,31.93,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Soup,28,20,29.56,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Cookies,25,23,18.86,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Waitrose,25,13,26.26,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Plus April,25,17,25.03,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Organic,24,11,30.59,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Great for lunch,24,20,27.51,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Project Love - August,24,15,48.12,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Great British Bake Off,23,10,20.3,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Unilever Esports,22,18,26.37,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Falafel,22,16,27.72,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Biryani,22,19,30.38,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Romanian,22,15,29.09,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Tapas,21,17,35.73,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+New Customer 20% off Watford,21,15,38.16,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Ethiopian,21,13,30.48,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Project Love - December,19,13,30.83,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Convenience,19,17,23.24,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Tip Match,19,14,38.11,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+All Day Breakfast,18,14,39.91,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+June Free Delivery Weekend,18,7,18.53,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Plus Offers September,18,18,27.36,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Takeaways,18,15,29.71,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+French,18,18,34.98,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Western,18,15,25.45,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Bangladeshi,17,15,35.83,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Deliveroo Editions,16,13,56.27,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+"Stationary, Cards & Books",15,15,33.11,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+April Free Delivery weekend,15,12,27.78,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Free Delivery (UK),15,10,20.92,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Hardware & Maintenance,14,14,29.54,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Peruvian,14,11,32.23,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Sichuan Spicy,14,9,33.96,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Alcohol stores,13,9,23.47,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Flowers,13,13,63.88,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Filipino,12,11,32.48,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Polish,12,8,30.2,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Health Conscious,12,11,19.0,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Protein Shops,12,6,26.64,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+South African,12,1,28.73,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Up to 50% off holiday essentials,11,4,31.32,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Plus offers Oct 2024,10,9,29.74,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Fish,10,10,35.18,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Bento,10,9,28.92,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Roast,10,7,42.41,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Chopstix LNY,10,10,19.1,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Christmas Specials,10,10,38.93,Yes,Available,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Accessorize,10,10,27.1,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Healthy options,9,5,28.62,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Gifting,9,9,76.1,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Moroccan,9,8,60.0,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Our picks,8,7,31.64,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Georgian,8,8,44.28,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Great for Gifting,8,6,50.73,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Doughnuts,8,8,15.47,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Egyptian,8,7,26.15,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Arabic,7,7,52.13,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Plus Offers July,7,6,34.69,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Indonesian,7,6,38.21,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Doner Kebab,7,7,21.82,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Crêpe,7,7,23.45,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Like Rosa's Thai? Why not try...,7,7,26.12,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Fries,6,3,27.18,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+North African,6,6,33.23,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Morrisons,6,5,26.38,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Editions Bristol,6,4,29.16,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Halloween rx 2022,6,6,29.28,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Coca-Cola Christmas NI,6,3,25.66,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Canadian,6,6,36.1,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Ramadan 2025,6,3,21.71,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+14 Days Free Delivery,6,6,16.42,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Fine Dining,6,4,33.38,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+"Big flavours, small prices",6,5,29.53,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Snacks,5,5,24.79,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Piadina,5,4,33.95,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+German Doner Kebab,5,3,22.75,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Poké,5,5,22.68,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Black Friday,5,5,23.52,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Festive grocery and shopping offers,5,4,26.19,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Belgian,5,4,25.15,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+North Indian,5,3,24.41,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Smoothie,4,4,16.52,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Syrian,4,4,31.46,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+magnum ice cream delivery,4,1,13.83,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+£7 off Promotion,4,4,29.05,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Household Goods,4,3,41.47,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Aug BH UK,4,4,28.14,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+On Demand Convenience (UAE),4,4,67.12,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Deliveroo Dinner Party,4,3,21.38,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Curated Plus Diamond Carousel,3,3,38.1,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Restaurant Award Winners 2024,3,2,33.31,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Hong Kongese,3,3,28.31,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Here to Deliver,3,2,26.34,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+GCP-REFRESH-Fastest-delivery,3,2,39.91,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Fresh Food,3,3,43.41,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Yoghurt,3,2,18.3,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Discovery Wines & Spirits,3,3,33.56,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+New Flavours,3,2,15.18,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Tea,3,2,16.5,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Chocolate,3,3,109.82,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Chips,3,2,19.98,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Austrian,3,3,48.12,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Australian,3,1,27.79,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Pharmacy,3,3,180.97,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Joe & The Juice,2,1,58.28,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Cold & Flu,2,2,25.44,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Egg-cellent Easter Deals,2,2,14.74,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+shopping-popular-brands,2,2,45.32,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Florists,2,2,100.6,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Ann Summers Deliveroo HOP,2,2,50.74,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Americain,2,2,27.77,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+£10 off groceries and shopping,2,2,31.07,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Jacket Potato,2,2,15.3,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Cook From Home,2,2,26.52,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Local gems,2,2,23.34,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Katsu,2,2,15.48,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+New to Roo,2,2,26.96,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+North England Exclusives,2,2,31.65,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Nurofen and Nuromol,2,2,16.6,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Perfect for sharing,2,2,42.26,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Smash Burger,2,2,28.96,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Lunch for Less,2,2,14.18,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Bakery Shop,1,1,23.98,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Churros,1,1,23.92,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+ODG Cross Partner Offer Carousel UK,1,1,42.07,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Boba,1,1,13.34,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Battlefield 6,1,1,10.37,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Autumn Meal Deals,1,1,34.49,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Bag great savings on your groceries,1,1,35.53,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+New on Roo,1,1,67.19,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Only on Deliveroo 2024,1,1,63.59,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Organic stores,1,1,3.54,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Personal care,1,1,10.17,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Sheffield Free Delivery,1,1,39.99,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Pet Food,1,1,67.74,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Algerian,1,1,18.02,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Service Guarantee,1,1,213.45,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+DIY Stores,1,1,24.1,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Movie Night Snacks,1,1,17.29,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Late Night Delivery,1,1,59.87,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Healf Deliveroo HOP,1,1,31.39,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+50% off,1,1,4.55,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Tibetan,1,1,61.74,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Ice cream stores,1,1,20.96,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Tunisian,1,1,19.08,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Ice cream and dessert,1,1,16.69,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Local offers (UK),1,1,15.94,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Love Local Takeaway,1,1,109.3,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Holiday Season,1,1,38.13,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Grocery Value Offers,1,1,55.59,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Moon Festival,1,1,60.99,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Manaqeesh,1,1,64.05,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Maplin Deliveroo HOP,1,1,28.78,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+French Tacos,1,1,17.54,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Meal Card (FR),1,1,94.98,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Fish Shop,1,1,34.4,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Festive Gifting,1,1,26.5,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Electricals,1,1,15.28,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Medicine,1,1,2.6,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders
+Rice,1,1,41.24,No,Low,Mon-Thu 16:30-21:00,Dinneroo is 98% midweek dinner orders

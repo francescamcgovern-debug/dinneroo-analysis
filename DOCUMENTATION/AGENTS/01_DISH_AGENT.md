@@ -63,51 +63,52 @@ When analyzing dishes:
 
 ### Step 3: Apply Scoring Framework
 
-**Config file:** `config/dish_scoring_unified.json`
+**Config file:** `config/scoring_framework_v3.json`
 
-Current framework (v2.0):
+Current framework (v3.1):
 
 | Track | Weight | Components |
 |-------|--------|------------|
-| **Performance** | 50% | Normalized Sales (10%), Zone Ranking (10%), Rating (10%), Repeat Intent (5%), Kids Happy (7.5%), Liked/Loved (7.5%) |
-| **Opportunity** | 50% | Latent Demand (25%), Adult Appeal (10.25%), Balanced/Guilt-Free (9.25%), Fussy Eater Friendly (5.5%) |
+| **Performance** | 60% | Orders per Zone (20%), Rating (20%), Kids Happy (20%) |
+| **Opportunity** | 40% | Latent Demand (20%), Non-Dinneroo Demand (20%) |
 
-**Latent Demand Sources (triangulated):**
-- Open-text mentions (45%): Dropoff, Post-order, Ratings comments
-- OG Survey wishlist (30%): "Which dishes do you WANT but don't currently eat?"
-- Barrier signals (25%): Dropoff barriers implying unmet demand
+**Key Changes from v2.0:**
+- Simplified to 5 factors (from 10)
+- Performance weighted higher (60/40 vs 50/50) because we have more reliable data
+- Kids Happy elevated to core metric (families are the target)
+- Non-Dinneroo Demand captures items customers want but can't get yet
 
 ### Step 4: Classify into Quadrants
 
 **2x2 Matrix: Performance vs Opportunity**
 
 ```
-                    OPPORTUNITY
-                 Low (<3.0)    High (≥3.0)
-              ┌─────────────┬─────────────┐
-    High      │   PROTECT   │  PRIORITY   │
-   (≥3.5)     │  Maintain   │   Expand    │
-PERFORMANCE   ├─────────────┼─────────────┤
-    Low       │   MONITOR   │   DEVELOP   │
-   (<3.5)     │ Deprioritize│  Fix issues │
-              └─────────────┴─────────────┘
+                        OPPORTUNITY
+                   Low (<3.0)       High (≥3.0)
+                ┌───────────────┬───────────────┐
+    High        │DEMAND BOOSTERS│ CORE DRIVERS  │
+   (≥3.0)       │ Build demand  │Protect & expand│
+PERFORMANCE     ├───────────────┼───────────────┤
+    Low         │ DEPRIORITISED │PREFERENCE     │
+   (<3.0)       │ Don't invest  │  DRIVERS      │
+                └───────────────┴───────────────┘
 ```
 
-**For dishes ON Dinneroo (with performance data):**
+**Anna's Official Quadrant Names (v3.1):**
 
 | Quadrant | Performance | Opportunity | Action |
 |----------|-------------|-------------|--------|
-| **Priority** | High (≥3.5) | High (≥3.0) | Expand aggressively - these are your winners |
-| **Protect** | High (≥3.5) | Low (<3.0) | Maintain quality, don't over-invest in expansion |
-| **Develop** | Low (<3.5) | High (≥3.0) | Investigate issues, improve quality, fix problems |
-| **Monitor** | Low (<3.5) | Low (<3.0) | Watch for changes, deprioritize for now |
+| **Core Drivers** | High (≥3.0) | High (≥3.0) | Protect and expand - these are winners |
+| **Demand Boosters** | High (≥3.0) | Low (<3.0) | Volume exists, improve demand signals |
+| **Preference Drivers** | Low (<3.0) | High (≥3.0) | High customer want, build volume |
+| **Deprioritised** | Low (<3.0) | Low (<3.0) | Don't invest resources here |
 
 **For dishes NOT on Dinneroo (no performance data):**
 
 | Quadrant | Opportunity | Action |
 |----------|-------------|--------|
-| **Prospect** | High (≥3.0) | Expansion opportunity - recruit partners |
-| **Monitor** | Low (<3.0) | Low priority for expansion |
+| **Preference Drivers** | High (≥3.0) | Expansion opportunity - recruit partners |
+| **Deprioritised** | Low (<3.0) | Low priority for expansion |
 
 ### Step 5: Generate Output
 
@@ -138,14 +139,14 @@ Include for each dish:
 
 ---
 
-## Tier Definitions
+## Tier Definitions (v3.1)
 
 | Tier | Score Range | Meaning |
 |------|-------------|---------|
-| **Tier 1: Must-Have** | 4.0+ | Essential for zone success |
-| **Tier 2: Should-Have** | 3.5 - 3.99 | Strong contributor |
-| **Tier 3: Nice-to-Have** | 3.0 - 3.49 | Useful but not critical |
-| **Tier 4: Monitor** | < 3.0 | Low priority |
+| **Tier 1: Must-Have** | ≥3.5 | Essential for zone success |
+| **Tier 2: Should-Have** | 3.0 - 3.49 | Strong contributor, high priority |
+| **Tier 3: Nice-to-Have** | 2.5 - 2.99 | Add if resources allow |
+| **Tier 4: Monitor** | < 2.5 | Watch for changes, don't prioritize |
 
 ---
 

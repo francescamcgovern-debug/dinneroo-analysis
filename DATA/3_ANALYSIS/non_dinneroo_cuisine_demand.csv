@@ -1,366 +1,406 @@
 cuisine,non_dinneroo_orders,unique_customers,avg_order_value,dinneroo_available,gap_signal
-Grocery,122839,19338,32.04,No,High
-Burgers,68224,19729,26.78,Yes,Available
-Italian,49460,18754,31.98,Yes,Available
-Japanese,45681,17749,35.06,Yes,Available
-Chicken,37141,14631,28.15,Yes,Available
-American,35204,13735,27.61,Yes,Available
-Indian,34158,13256,35.22,Yes,Available
-Alcohol,28430,8019,27.35,No,High
-Chinese,24190,9852,35.79,Yes,Available
-Portuguese,19837,9118,36.1,No,High
-British,18228,7755,27.25,No,High
-Healthy,16540,5783,29.08,Yes,Available
-Asian,15084,7274,32.98,Yes,Available
-Vietnamese,14500,6868,32.46,Yes,Available
-Wings,12914,6363,27.42,No,High
-Thai,11481,6331,37.44,Yes,Available
-Bakery,8786,2893,22.92,No,Medium
-Halal,8624,4451,26.16,Yes,Available
-Café,7748,2638,23.01,No,Medium
-Turkish,7037,3517,35.47,No,Medium
-Sandwiches,6842,3174,25.07,Yes,Available
-Dessert,6623,3690,26.02,No,Medium
-Middle Eastern,6622,3339,31.08,Yes,Available
-Breakfast,6030,2669,25.71,Yes,Available
-Greek,5881,3505,27.98,No,Medium
-German,5566,3091,24.23,No,Medium
-Juices,5527,2158,25.7,No,Medium
-Korean,5218,2741,32.78,No,Medium
-Lebanese,5079,2515,34.34,Yes,Available
-Convenience,3508,1784,34.29,No,Low
-Unknown,3470,1876,27.53,Yes,Available
-Mexican,3148,1751,31.51,Yes,Available
-Vegan Friendly,2913,1632,32.44,Yes,Available
-Coffee,2852,1094,20.04,No,Low
-Nachos,2842,1635,25.38,No,Low
-Bubble Tea,2754,1271,19.89,No,Low
-Burritos,2705,1564,28.53,Yes,Available
-Tacos,2510,1322,32.07,Yes,Available
-Caribbean,2490,1270,30.39,No,Low
-Deliveroo Hop,2324,754,29.44,No,Low
-Bagels,2315,1019,24.81,No,Low
-Mediterranean,2283,1222,28.4,Yes,Available
-Vegetarian,2248,1297,36.45,Yes,Available
-Meal Deals,1832,1012,30.69,Yes,Available
-Drinks,1816,819,32.24,No,Low
-Noodles,1759,981,34.53,No,Low
-Big Brand Stores,1667,811,32.91,No,Low
-New To Deliveroo,1518,873,25.83,No,Low
-Shopping,1513,816,33.38,No,Low
-Family Favourites,1472,843,33.7,Yes,Available
-Brunch,1455,746,25.85,No,Low
-Featured Restaurants,1376,894,25.25,Yes,Available
-Waffles,1297,812,24.44,No,Low
-Gluten Free,1282,642,30.64,Yes,Available
-Milkshakes,1226,706,32.19,No,Low
-Stir Fry,1153,678,24.99,No,Low
-Kosher,1148,221,29.18,Yes,Available
-Grill,1008,537,28.36,No,Low
-Only On Deliveroo,941,573,37.97,Yes,Available
-Popular Restaurants,940,391,27.47,No,Low
-Poke,911,634,26.4,No,Low
-Gyros,874,542,28.77,No,Low
-Wraps,863,440,22.69,Yes,Available
-Cantonese,763,421,38.46,No,Low
-Vegan,722,384,33.08,No,Low
-African,688,315,35.33,No,Low
-Supermarket,687,342,28.93,No,Low
-Irish,670,255,31.09,No,Low
-Meat,647,410,27.32,No,Low
-Ice Cream,607,343,24.43,No,Low
-Cakes,603,451,25.91,No,Low
-Hot Dogs,583,351,26.73,No,Low
-Asian Fusion,576,330,31.94,Yes,Available
-Restaurants Only On Deliveroo,575,322,30.58,No,Low
-Movie Night Restaurants,490,232,29.83,Yes,Available
-Acai,482,218,22.62,No,Low
-International,477,213,39.64,No,Low
-In-Store Prices – Selected Items,476,242,26.25,No,Low
-Meal Deal,455,288,29.3,No,Low
-Steak,454,285,42.43,No,Low
-Seafood,427,256,37.55,No,Low
-Beer,425,123,30.33,No,Low
-Spicy Nuggets,422,173,24.96,No,Low
-Sichuan,422,182,33.4,No,Low
-Specialist Stores,417,223,34.56,No,Low
-Dim Sum,413,280,38.57,No,Low
-Health Conscious,411,198,21.05,No,Low
-French,408,196,31.93,No,Low
-Bbq,407,268,34.16,No,Low
-Easter Groceries,387,160,34.21,No,Low
-Malaysian,372,232,38.11,No,Low
-Taiwanese,367,216,29.6,No,Low
-Nepalese,350,208,33.41,No,Low
-Brazilian,333,148,29.66,No,Low
-Christmas Specials,331,131,23.23,Yes,Available
-Great For Lunch,330,176,30.57,No,Low
-Argentinian,324,200,28.22,No,Low
-Restaurants In Your Area,313,150,27.25,No,Low
-Shawarma,312,193,30.11,Yes,Available
-Nfl Big Game Night,311,215,28.26,No,Low
+Grocery,124341,19573,32.03,No,High
+Burgers,68803,19913,26.8,Yes,Available
+italian,36181,15189,32.28,No,High
+Chicken,35557,14176,28.13,Yes,Available
+american,34369,13523,27.45,No,High
+Alcohol,28736,8082,27.37,No,High
+indian,26844,10941,34.9,No,High
+japanese,24837,11554,35.46,No,High
+chinese,24309,9942,35.76,No,High
+Portuguese,19888,9156,36.1,No,High
+sushi,18853,8544,34.89,No,High
+Asian,15121,7313,32.97,Yes,Available
+Vietnamese,14106,6701,32.36,Yes,Available
+British,14051,6263,27.17,No,High
+Wings,13028,6428,27.43,No,High
+pizza,12493,6712,31.11,No,High
+Salads,11599,4390,28.92,No,High
+thai,11560,6371,37.49,No,High
+Bakery,8825,2910,22.94,No,High
+halal,8680,4493,26.19,No,High
+Café,7846,2651,23.03,No,High
+Curry,7221,3989,36.47,No,High
+Turkish,7069,3528,35.49,No,High
+Sandwiches,6866,3184,25.07,Yes,Available
+greek,5907,3522,28.04,No,High
+German,5611,3121,24.26,No,High
+Juices,5534,2166,25.66,No,High
+breakfast,5456,2458,25.14,No,High
+dessert,5283,2984,26.44,No,High
+Korean,5264,2769,32.71,No,High
+lebanese,5111,2540,34.35,No,High
+Healthy,4702,2120,28.91,Yes,Available
+Fish and chips,4016,2145,27.98,No,Medium
+On Demand Convenience,3167,1640,32.97,No,Medium
+mexican,3157,1760,31.58,No,Medium
+Vegan Friendly,2936,1638,32.44,Yes,Available
+Nachos,2896,1658,25.28,No,Medium
+Coffee,2874,1101,20.01,No,Medium
+Middle Eastern,2864,1522,30.72,Yes,Available
+Bubble tea,2762,1276,19.91,No,Medium
+Burritos,2714,1582,28.52,Yes,Available
+Tacos,2532,1335,32.09,Yes,Available
+Caribbean,2507,1278,30.42,No,Medium
+Kebab,2376,1314,28.43,No,Medium
+Bagels,2347,1032,24.75,No,Medium
+Deliveroo Hop,2323,761,29.36,No,Medium
+Mediterranean,2301,1233,28.27,Yes,Available
+Ramen,2265,1388,32.29,No,Medium
+vegetarian,2261,1305,36.41,No,Medium
+Fried chicken,1944,1186,28.43,No,Low
+Drinks,1856,826,32.28,No,Low
+Meal Deals,1835,1015,30.67,Yes,Available
+Noodles,1762,990,34.35,No,Low
+Big brand stores,1707,819,32.86,No,Low
+Shopping,1526,823,33.4,No,Low
+New to Deliveroo,1519,873,25.87,No,Low
+Family favourites,1482,852,33.73,Yes,Available
+Brunch,1463,748,25.84,No,Low
+Desserts and sweet dishes,1412,922,24.46,No,Low
+Featured Restaurants,1393,907,25.22,Yes,Available
+Mezze,1392,695,36.54,No,Low
+Waffles,1305,818,24.4,No,Low
+Gluten Free,1304,651,30.57,Yes,Available
+Milkshakes,1232,712,32.13,No,Low
+Stir Fry,1174,687,25.02,No,Low
+Kosher,1154,225,29.17,Yes,Available
+Latin American,1036,612,33.23,No,Low
+grill,1018,544,28.53,No,Low
+Pasta,989,577,31.42,No,Low
+Popular restaurants,960,397,27.42,No,Low
+Only on Deliveroo,937,572,37.89,Yes,Available
+Poke,899,625,26.17,No,Low
+Gyros,886,546,28.71,No,Low
+Wraps,869,441,22.64,Yes,Available
+Cantonese,771,421,38.42,No,Low
+Vegan,722,384,33.11,No,Low
+Supermarket,697,346,28.88,No,Low
+Irish,686,262,31.1,No,Low
+African,666,305,35.32,No,Low
+Meat,650,409,27.29,No,Low
+Cakes,610,459,25.92,No,Low
+Ice cream,609,345,24.55,No,Low
+Hot Dogs,586,354,26.76,No,Low
+Asian Fusion,581,334,31.88,Yes,Available
+Restaurants Only on Deliveroo,568,321,30.43,No,Low
+Pho,521,249,34.15,No,Low
+Movie Night Restaurants,489,230,29.98,Yes,Available
+In-store prices – Selected items,488,245,26.0,No,Low
+Acai,486,223,22.65,No,Low
+International,469,212,39.73,No,Low
+Meal Deal,465,289,29.13,No,Low
+Steak,452,285,42.24,No,Low
+Beer,430,126,30.3,No,Low
+Spicy Nuggets,427,174,24.89,No,Low
+Seafood,427,257,37.64,No,Low
+Sichuan,424,183,33.36,No,Low
+Dim Sum,423,289,38.39,No,Low
+Specialist stores,419,225,34.49,No,Low
+Health Conscious,410,199,21.0,No,Low
+French,409,197,32.01,No,Low
+BBQ,402,267,34.0,No,Low
+Easter Groceries,393,165,34.11,No,Low
+Malaysian,376,235,37.86,No,Low
+Taiwanese,363,214,29.42,No,Low
+All Day Breakfast,358,206,26.85,No,Low
+Nepalese,351,209,33.45,No,Low
+Great for lunch,335,178,30.5,No,Low
+Christmas Specials,335,134,23.24,Yes,Available
+Brazilian,329,147,29.66,No,Low
+Argentinian,326,204,28.0,No,Low
+Shawarma,322,196,30.36,Yes,Available
+Restaurants in your area,318,152,27.39,No,Low
+NFL Big Game Night,317,218,28.26,No,Low
 The Feed,307,187,29.05,No,Low
-Pakistani,301,186,28.53,No,Low
-Dumplings,291,118,35.1,No,Low
-7Mar Off,286,169,24.24,No,Low
-Street Food,283,173,33.44,No,Low
-Iranian,269,146,46.47,No,Low
-Hawaiian,269,160,26.02,No,Low
-Coca Cola Zero Sugar Competition,255,152,27.41,No,Low
-Russian,254,118,51.44,No,Low
-Persian,251,137,40.66,No,Low
-Royally Good Offers,251,149,28.81,No,Low
-Donuts,227,155,23.32,No,Low
-June Free Delivery Weekend,219,84,20.33,No,Low
-Wing Fest 2025,208,124,26.61,No,Low
-Quick Service Restaurants,207,118,26.78,No,Low
-Bao,205,132,26.37,No,Low
-Kids Menu,199,121,40.52,No,Low
-Nigerian,196,81,33.92,No,Low
-Midautumn2025,193,91,37.28,No,Low
-Pancakes,191,116,26.69,No,Low
-Comfort Food,184,102,34.55,No,Low
-Neapolitan,184,133,33.49,No,Low
-Jamaican,178,99,28.27,No,Low
-Plus Member Offers,177,89,24.93,No,Low
-Wine,174,95,29.45,No,Low
-Singaporean,174,107,44.35,No,Low
-Sweet Treats,167,107,26.25,No,Low
-Roasteries,152,73,34.02,Yes,Available
-Spring Summer Free Delivery,148,80,22.52,No,Low
-Western,146,81,24.2,No,Low
-Afghan,144,80,31.23,No,Low
-Family Meal Deals,134,83,29.37,No,Low
-Fast Food,132,69,31.88,No,Low
-Hardware & Maintenance,127,106,27.62,No,Low
-Just A Bite Away,127,73,25.88,No,Low
-Sri Lankan,124,85,30.69,No,Low
-Deliveroo Students Offers,120,59,28.34,No,Low
-Falafel,112,68,28.73,No,Low
-Pie,108,69,24.74,No,Low
-Gelato,107,57,21.68,No,Low
-Spanish,106,71,44.47,No,Low
-Cookies,104,78,21.8,No,Low
-New Customer 20% Off Watford,104,57,40.39,No,Low
-Bo Bun,103,76,33.73,No,Low
+Pakistani,302,189,28.6,No,Low
+Dumplings,292,119,35.12,No,Low
+7MAR off,289,172,24.06,No,Low
+street food,284,176,33.54,No,Low
+Convenience stores,274,134,25.65,No,Low
+Great British Bake Off,269,117,20.44,No,Low
+Hawaiian,268,160,26.15,No,Low
+Iranian,266,145,46.71,No,Low
+Breakfast & Brunch,261,98,35.65,No,Low
+coca cola zero sugar competition,257,154,27.53,No,Low
+Russian,256,119,51.61,No,Low
+Persian,254,139,40.82,No,Low
+Royally Good Offers,251,150,28.7,No,Low
+Donuts,230,154,23.3,No,Low
+South Indian,228,128,29.97,No,Low
+June Free Delivery Weekend,219,84,20.29,No,Low
+Wing Fest 2025,210,125,26.47,No,Low
+Bao,208,133,26.36,No,Low
+Quick Service Restaurants,205,117,26.75,No,Low
+Kids Menu,198,122,40.23,No,Low
+Nigerian,197,81,33.83,No,Low
+Healthy eating groceries,193,66,35.36,No,Low
+Pancakes,191,116,26.81,No,Low
+midautumn2025,189,89,37.38,No,Low
+Neapolitan,184,133,33.58,No,Low
+Comfort food,184,103,34.44,No,Low
+Plus Member Offers,180,90,25.19,No,Low
+Jamaican,176,98,28.29,No,Low
+Wine,175,95,29.5,No,Low
+Singaporean,173,106,43.91,No,Low
+Sweet Treats,170,109,26.27,No,Low
+Roasteries,153,75,34.26,Yes,Available
+Spring Summer Free Delivery,152,82,22.55,No,Low
+Western,149,82,24.06,No,Low
+Afghan,145,80,31.36,No,Low
+Just a bite away,134,76,25.64,No,Low
+Family Meal Deals,133,82,29.3,No,Low
+Fast Food,131,68,31.84,No,Low
+Hardware & Maintenance,129,108,27.56,No,Low
+Sri Lankan,128,85,30.05,No,Low
+Deliveroo Students Offers,123,61,28.56,No,Low
+Falafel,112,67,28.79,No,Low
+Pie,108,70,24.86,No,Low
+Gelato,108,58,21.62,No,Low
+Spanish,107,72,44.4,No,Low
+Cookies,104,78,21.85,No,Low
+Bo bun,102,77,33.47,No,Low
+New Customer 20% off Watford,101,56,40.54,No,Low
 Organic,101,45,33.19,Yes,Available
-Free Delivery (Uk),92,44,19.64,No,Low
-Win With Coca-Cola,92,48,31.16,No,Low
-Veganuary,90,50,25.82,Yes,Available
-Soup,87,55,32.37,No,Low
-"Exclusive Offers, From Our Exclusive Restaurants",87,68,36.67,Yes,Available
-Waitrose,79,22,28.26,No,Low
-Accessorize,77,71,27.15,No,Low
-Great For Gifting,75,62,38.15,No,Low
-Flowers,74,68,62.4,No,Low
-Unilever Esports,74,51,28.99,No,Low
-Filipino,72,43,28.92,No,Low
-Plus April,70,40,30.7,No,Low
+Pasta Evangelists 20% discount,98,67,29.27,No,Low
+Healthy Eating 2025,97,62,39.15,No,Low
+Free Delivery (UK),94,45,19.83,No,Low
+Veganuary,92,52,25.61,Yes,Available
+"Exclusive offers, from our exclusive restaurants",92,71,36.5,Yes,Available
+win with coca-cola,90,46,30.33,No,Low
+Soup,89,57,32.24,No,Low
+Accessorize,79,72,27.21,No,Low
+Waitrose,78,22,28.43,No,Low
+Great for Gifting,76,63,38.36,No,Low
+Flowers,74,68,62.39,No,Low
+Unilever Esports,74,52,28.8,No,Low
+Filipino,71,43,27.85,No,Low
+Plus April,71,40,30.55,No,Low
 Biryani,70,42,31.95,No,Low
-Polish,68,33,33.53,No,Low
-Plus Offers September,64,45,27.42,No,Low
-Project Love - August,62,21,48.6,No,Low
-Romanian,60,35,28.95,No,Low
-Tip Match,59,39,36.83,No,Low
-Tapas,58,36,32.24,No,Low
+Polish,69,34,33.39,No,Low
+Plus Offers September,65,46,27.56,No,Low
+Project Love - August,63,21,48.53,No,Low
+Romanian,60,35,29.2,No,Low
+Tip Match,60,39,36.7,No,Low
+Tapas,59,37,32.62,No,Low
 Restaurant Award Winners 2024,58,30,30.26,No,Low
-Bangladeshi,57,35,32.55,No,Low
 Ethiopian,57,30,30.04,No,Low
-Deliveroo Editions,54,40,57.91,No,Low
+Bangladeshi,57,35,32.55,No,Low
+Convenience,56,40,21.15,No,Low
+On Demand Convenience (UAE),55,20,177.12,No,Low
 Project Love - December,53,26,32.08,No,Low
+Deliveroo Editions,53,38,62.36,No,Low
+Gifting,52,47,70.74,No,Low
 Arabic,51,35,48.12,No,Low
-April Free Delivery Weekend,50,27,26.46,No,Low
-Local Gems,49,29,27.38,No,Low
-Takeaways,48,36,29.61,No,Low
-Pickup Deals,48,36,40.54,No,Low
-Gifting,48,44,71.87,No,Low
-Lunch For Less,45,17,22.24,No,Low
-"Stationary, Cards & Books",44,42,29.73,No,Low
-Black Friday,43,30,20.69,No,Low
+Takeaways,51,36,29.2,No,Low
+April Free Delivery weekend,50,27,26.46,No,Low
+Local gems,49,29,27.38,No,Low
+Pickup Deals,47,35,37.65,No,Low
+Lunch for Less,47,18,21.9,No,Low
+"Stationary, Cards & Books",45,43,29.73,No,Low
 Smoothie,42,20,21.67,No,Low
-Egyptian,41,32,28.99,No,Low
-Up To 50% Off Holiday Essentials,39,12,32.73,No,Low
+Black Friday,42,29,20.73,No,Low
+Alcohol stores,42,26,23.61,No,Low
+Egyptian,40,31,29.16,No,Low
 Morrisons,38,22,21.24,No,Low
-Peruvian,38,23,31.21,No,Low
-Plus Offers Oct 2024,37,24,28.85,Yes,Available
-Georgian,37,29,43.92,No,Low
+Up to 50% off holiday essentials,38,12,32.66,No,Low
+Plus offers Oct 2024,37,24,28.85,Yes,Available
+Georgian,36,28,44.25,No,Low
+Peruvian,36,22,31.79,No,Low
 Ramadan Vibes,36,4,65.61,No,Low
-Perfect For Sharing,35,22,27.02,No,Low
+Perfect for sharing,35,22,27.02,No,Low
 Restaurant Award Winners 2025,35,21,32.88,No,Low
-Pharmacy,34,26,100.41,No,Low
+Pharmacy,33,25,101.64,No,Low
 Crêpe,33,27,23.86,No,Low
 Roast,33,17,48.76,No,Low
-Jacket Potato,32,20,18.81,No,Low
 Veganuary 2024,32,9,19.94,No,Low
+Jacket Potato,32,20,18.81,No,Low
 Household Goods,32,29,32.93,No,Low
-Egg-Cellent Easter Deals,31,18,26.6,No,Low
-Chopstix Lny,30,27,25.62,No,Low
-Afternoon Tea,30,16,20.55,No,Low
-Fish,29,16,33.28,No,Low
-Hong Kongese,29,16,23.57,No,Low
-Indonesian,28,22,31.63,No,Low
-Doughnuts,28,24,24.07,No,Low
+Egg-cellent Easter Deals,31,18,26.6,No,Low
+Afternoon Tea,31,16,20.26,No,Low
+Chopstix LNY,31,28,25.22,No,Low
+Fish,30,16,33.49,No,Low
+Hong Kongese,29,15,24.27,No,Low
+shopping-popular-brands,28,16,59.99,No,Low
 Sichuan Spicy,28,18,36.49,No,Low
-Shopping-Popular-Brands,27,16,60.33,No,Low
+Doner Kebab,28,21,22.14,No,Low
+Indonesian,28,22,31.63,No,Low
 Snacks,27,20,23.94,No,Low
+Doughnuts,27,23,23.03,No,Low
 Bento,25,24,30.09,No,Low
-Tea,25,19,19.44,No,Low
+Plus Offers July,25,18,33.8,No,Low
+Halloween rx 2022,24,16,25.87,No,Low
+Tea,24,19,19.72,No,Low
 Fresh Food,24,15,34.74,No,Low
-Halloween Rx 2022,24,16,25.87,No,Low
-Plus Offers July,24,17,33.64,No,Low
-Canadian,23,18,40.18,No,Low
 Poké,23,18,23.8,No,Low
-Fries,22,12,29.63,No,Low
 French Tacos,22,17,19.83,No,Low
-Our Picks,20,15,65.93,No,Low
-Pet Food,20,17,40.14,No,Low
-Moroccan,20,16,52.44,No,Low
-Ramadan 2025,20,9,20.54,No,Low
+Canadian,22,18,40.71,No,Low
+Moroccan,22,17,48.52,No,Low
+Fries,22,12,29.63,No,Low
+Pet Food,21,17,40.75,No,Low
+Editions Bristol,21,12,29.12,No,Low
+German Doner Kebab,21,11,20.62,No,Low
+Our picks,20,15,65.93,No,Low
+Like Rosa's Thai? Why not try...,20,18,22.82,No,Low
 Pastries,19,7,26.4,No,Low
-14 Days Free Delivery,19,14,27.58,No,Low
-£7 Off Promotion,19,14,29.22,No,Low
-Here To Deliver,19,18,22.93,No,Low
+Ramadan 2025,19,9,21.1,No,Low
+14 Days Free Delivery,19,15,28.42,No,Low
 Chips,19,9,26.94,No,Low
-Editions Bristol,18,11,26.76,No,Low
+Here to Deliver,19,18,22.93,No,Low
+£7 off Promotion,18,13,29.0,No,Low
+North Indian,18,7,54.93,No,Low
+South African,18,1,30.38,No,Low
 Flash Sale,17,1,79.46,No,Low
 Syrian,17,14,23.95,No,Low
-Protein Shops,17,12,23.97,No,Low
-New Flavours,17,8,16.06,No,Low
-Pastry Shop,16,11,34.42,No,Low
-Fine Dining,16,9,35.1,No,Low
+Protein Shops,17,11,25.03,No,Low
 Belgian,16,13,18.89,No,Low
-Bakery Shop,16,7,29.38,No,Low
+Cook From Home,16,14,29.02,No,Low
+Pastry Shop,16,11,34.42,No,Low
+Bakery Shop,16,7,29.72,No,Low
+Fine Dining,16,9,35.1,No,Low
+Florists,16,16,61.59,No,Low
 Piadina,15,9,30.64,No,Low
-Cook From Home,15,13,28.81,No,Low
 Cuban,15,7,25.23,No,Low
-Florists,15,15,62.88,No,Low
-Personal Care,15,15,29.81,No,Low
-Festive Gifting,14,13,27.55,No,Low
-Bakery And Patisserie,14,7,18.24,No,Low
-£10 Off Groceries And Shopping,14,11,22.09,No,Low
+Bakery and patisserie,15,8,17.88,No,Low
+Personal care,15,15,29.81,No,Low
+New Flavours,15,6,16.26,No,Low
+Coca-Cola Christmas NI,14,3,22.96,No,Low
+Smash Burger,14,10,21.2,No,Low
 Austrian,14,11,43.32,No,Low
-Deliveroo Dinner Party,13,5,19.19,No,Low
-Curated Plus Diamond Carousel,13,8,32.55,No,Low
+£10 off groceries and shopping,14,11,22.09,No,Low
+Festive Gifting,14,13,27.55,No,Low
+North African,13,9,41.87,No,Low
+Healthy options,13,7,29.71,No,Low
+Aug BH UK,13,12,22.72,No,Low
 August Free Delivery Weekend,13,6,18.79,No,Low
-Coca-Cola Christmas Ni,13,3,21.89,No,Low
-Aug Bh Uk,13,12,22.72,No,Low
-Ann Summers Deliveroo Hop,12,11,40.28,No,Low
+Curated Plus Diamond Carousel,13,8,32.55,No,Low
+Deliveroo Dinner Party,13,5,19.19,No,Low
 Electronics,12,7,25.22,No,Low
-Smash Burger,12,9,21.61,No,Low
-Beauty & Personal Care,11,10,22.84,No,Low
+Festive grocery and shopping offers,11,8,31.35,No,Low
 Joe & The Juice,11,4,138.83,No,Low
-Odg Cross Partner Offer Carousel Uk,11,6,41.74,No,Low
-Magnum Ice Cream Delivery,10,7,20.75,No,Low
-"Big Flavours, Small Prices",10,8,32.87,No,Low
-Gcp-Refresh-Fastest-Delivery,10,2,65.32,No,Low
+GCP-REFRESH-Fastest-delivery,11,3,62.18,No,Low
+Pets,11,6,29.49,No,Low
+Ann Summers Deliveroo HOP,11,10,41.23,No,Low
+magnum ice cream delivery,11,7,20.0,No,Low
+ODG Cross Partner Offer Carousel UK,11,6,41.74,No,Low
+Beauty & Personal Care,11,10,22.84,No,Low
+"Big flavours, small prices",10,8,32.87,No,Low
 Rice,10,7,37.01,No,Low
-Pets,10,6,30.77,No,Low
 Naan,9,5,17.34,No,Low
-Local Offers (Uk),8,6,22.33,No,Low
+Local offers (UK),8,6,22.33,No,Low
 Autumn Meal Deals,8,4,21.74,No,Low
 Iconic Taste Iconic Prizes Ireland,8,2,55.7,No,Low
-Chocolate,7,6,96.25,No,Low
-Nurofen And Nuromol,7,7,18.12,No,Low
 Service Guarantee,7,7,198.87,No,Low
-Maplin Deliveroo Hop,7,6,22.76,No,Low
-Meal Card (Fr),6,6,40.96,No,Low
-Americain,6,6,25.79,No,Low
-Only On Deliveroo 2024,6,6,31.83,No,Low
+Nurofen and Nuromol,7,7,18.12,No,Low
+Katsu,7,7,16.47,No,Low
+Maplin Deliveroo HOP,7,6,22.76,No,Low
+Chocolate,7,6,96.25,No,Low
+Only on Deliveroo 2024,6,6,31.83,No,Low
+Meal Card (FR),6,6,40.96,No,Low
 Emirati,6,2,130.92,No,Low
+Bowls,6,4,20.94,No,Low
+Plus March 2025,6,4,16.1,No,Low
+Americain,6,6,25.79,No,Low
 Electricals,6,6,23.79,No,Low
 Venezuelan,6,6,33.8,No,Low
-Plus March 2025,6,4,16.1,No,Low
-Bowls,6,4,20.94,No,Low
-Katsu,6,6,16.99,No,Low
-Coffee Week,5,4,26.69,No,Low
-Discovery Wines & Spirits,5,4,33.31,No,Low
-Bag Great Savings On Your Groceries,5,4,20.54,No,Low
 Consumer Electronics,5,5,32.46,No,Low
+VOX (UAE),5,3,52.42,No,Low
 Cold & Flu,5,5,22.03,No,Low
-New To Roo,5,5,24.5,No,Low
-Burger King,5,4,44.75,No,Low
-Battlefield 6,5,2,22.09,No,Low
 Coffee Week 2024,5,1,16.64,No,Low
-Vox (Uae),5,3,52.42,No,Low
-Plus Offers Nov 2024,5,3,27.19,No,Low
+Coffee Week,5,4,26.69,No,Low
+Burger King,5,4,44.75,No,Low
+New to Roo,5,5,24.5,No,Low
+Battlefield 6,5,2,22.09,No,Low
+Plus offers Nov 2024,5,3,27.19,No,Low
+Bag great savings on your groceries,5,4,20.54,No,Low
 Noodle Bar,5,3,147.23,No,Low
-Australian,5,3,28.77,No,Low
-Autumn Free Delivery,4,4,24.89,No,Low
-School Essentials,4,2,105.6,No,Low
-Movie Night Snacks,4,4,26.57,No,Low
-Yoghurt,4,3,16.51,No,Low
+Discovery Wines & Spirits,5,4,33.31,No,Low
 Sunny Weather,4,2,12.33,No,Low
-50% Off,4,3,11.91,No,Low
+50% off,4,3,11.91,No,Low
+Ice cream and dessert,4,4,25.75,No,Low
 Fish Shop,4,3,31.32,No,Low
+Movie Night Snacks,4,4,26.57,No,Low
+School essentials,4,2,105.6,No,Low
+Yoghurt,4,3,16.51,No,Low
+Australian,4,2,31.75,No,Low
 North England Exclusives,4,3,34.68,No,Low
 Late Night Delivery,4,4,34.57,No,Low
-Catering,3,1,398.98,No,Low
-Bakeries,3,3,25.39,No,Low
 Travel Ready,3,3,86.86,No,Low
+Catering,3,1,398.98,No,Low
+DIY Stores,3,3,20.39,No,Low
+Autumn Free Delivery,3,3,24.17,No,Low
 Butcher,3,3,50.33,No,Low
-Diy Stores,3,3,20.39,No,Low
-Healf Deliveroo Hop,3,3,27.18,No,Low
-Incredible Black Friday Deals,3,3,20.5,No,Low
-Deliveroo Students April Offers,3,3,35.18,No,Low
-Israeli,3,3,16.85,No,Low
 Diwali 2024,3,3,28.47,No,Low
+Bakeries,3,3,25.39,No,Low
+Deliveroo Students April Offers,3,3,35.18,No,Low
 Lunar New Year Deals,3,3,17.94,No,Low
-Regional Restaurant Award Winner 2025,3,2,27.86,No,Low
-40% Off Restaurants,3,2,17.8,No,Low
+40% off Restaurants,3,2,17.8,No,Low
+Israeli,3,3,16.85,No,Low
+Healf Deliveroo HOP,3,3,27.18,No,Low
+Regional restaurant award winner 2025,3,2,27.86,No,Low
 Pork,3,3,30.96,No,Low
+Grocery Freshness Promise,3,3,21.31,No,Low
+Incredible Black Friday Deals,3,3,20.5,No,Low
 Quality Street,2,2,36.2,No,Low
-Capitaland Malls,2,1,30.24,No,Low
-Tibetan,2,2,50.49,No,Low
+Home of Chicken,2,2,18.84,No,Low
+Football Deals,2,1,133.5,No,Low
+benjerrys,2,2,21.63,No,Low
 Boba,2,2,13.56,No,Low
-Matcha,2,1,71.1,No,Low
+Grocery Value Offers,2,1,39.72,No,Low
+West African,2,2,26.15,No,Low
+Healthy Essentials,2,2,110.4,No,Low
 Toy & Games,2,2,220.68,No,Low
+CapitaLand Malls,2,1,30.24,No,Low
+Medicine,2,1,5.62,No,Low
+Matcha,2,1,71.1,No,Low
 Fatayer,2,2,6.45,No,Low
 Algerian,2,2,20.94,No,Low
-Medicine,2,1,5.62,No,Low
-Football Deals,2,1,133.5,No,Low
-Benjerrys,2,2,21.63,No,Low
-Sheffield Free Delivery,1,1,39.99,No,Low
-Vegetables,1,1,21.58,No,Low
-Pick Up (Sg),1,1,63.14,No,Low
-Ice Cream Stores,1,1,20.96,No,Low
-Hot Pot,1,1,33.26,No,Low
-Valentine'S Day Deals,1,1,21.99,No,Low
-Pinsa,1,1,31.97,No,Low
-Voucher (Be),1,1,28.65,No,Low
-Vitamins,1,1,120.94,No,Low
-Holiday Season,1,1,38.13,No,Low
-Love Local Takeaway,1,1,109.3,No,Low
-Organic Stores,1,1,3.54,No,Low
-Manaqeesh,1,1,64.05,No,Low
-Nurofen And Lemsip,1,1,12.59,No,Low
-Wing Fest 2024,1,1,42.93,No,Low
-Meal For 2,1,1,51.25,No,Low
-New On Roo,1,1,67.19,No,Low
-Moon Festival,1,1,60.99,No,Low
-Balkan,1,1,169.4,No,Low
-Gyg Sg,1,1,20.91,No,Low
-Plus Offers Dec 2024,1,1,47.8,No,Low
-Cheese,1,1,17.98,No,Low
-Savoury Snacks,1,1,23.32,No,Low
-National Day,1,1,17.77,No,Low
-Drone Delivery,1,1,33.87,No,Low
-Dutch,1,1,62.05,No,Low
-Coca-Cola Christmas Roi,1,1,17.7,No,Low
-Reckitt Benckiser,1,1,31.8,No,Low
-Churros,1,1,23.92,No,Low
-Christmas Gifting,1,1,22.93,No,Low
-Festive Groceries,1,1,82.56,No,Low
-Ramadan,1,1,62.15,No,Low
-Cheap Eats,1,1,11.69,No,Low
-Beef,1,1,68.75,No,Low
+Tibetan,2,2,50.49,No,Low
 Pâtisserie,1,1,27.18,No,Low
+Love Local Takeaway,1,1,109.3,No,Low
+Nurofen and Lemsip,1,1,12.59,No,Low
+Pinsa,1,1,31.97,No,Low
+Meal for 2,1,1,51.25,No,Low
+Holiday Season,1,1,38.13,No,Low
+Manaqeesh,1,1,64.05,No,Low
+Reckitt Benckiser,1,1,31.8,No,Low
+Plus offers Dec 2024,1,1,47.8,No,Low
+Organic stores,1,1,3.54,No,Low
+Beef,1,1,68.75,No,Low
+Kuwaiti,1,1,19.5,No,Low
+Hot pot,1,1,33.26,No,Low
+Balkan,1,1,169.4,No,Low
+Ramadan,1,1,62.15,No,Low
+Ice cream stores,1,1,20.96,No,Low
+Wing Fest 2024,1,1,42.93,No,Low
+Drone Delivery,1,1,33.87,No,Low
+Voucher (BE),1,1,28.65,No,Low
 Cash Payment,1,1,31.43,No,Low
-Five Guys (Be),1,1,61.74,No,Low
-Fruit,1,1,50.0,No,Low
-Gastronomie,1,1,108.98,No,Low
+Today's Best Deals,1,1,35.19,No,Low
+FIVE GUYS (BE),1,1,61.74,No,Low
+Sushi Day,1,1,133.4,No,Low
+Sweets and Dessert,1,1,15.99,No,Low
+Nasi Lemak,1,1,20.29,No,Low
+Danone Olympics,1,1,23.5,No,Low
+Festive Groceries,1,1,82.56,No,Low
+Moon Festival,1,1,60.99,No,Low
+National Day,1,1,17.77,No,Low
+New on Roo,1,1,67.19,No,Low
 The Comeback Sale,1,1,87.15,No,Low
 The Perfume Shop,1,1,65.99,No,Low
-Danone Olympics,1,1,23.5,No,Low
-Today'S Best Deals,1,1,35.19,No,Low
+Sheffield Free Delivery,1,1,39.99,No,Low
 Tunisian,1,1,19.08,No,Low
-Nasi Lemak,1,1,20.29,No,Low
+Cheap eats,1,1,11.69,No,Low
+Fruit,1,1,50.0,No,Low
+Savoury Snacks,1,1,23.32,No,Low
+Coca-Cola Christmas ROI,1,1,17.7,No,Low
+GYG SG,1,1,20.91,No,Low
+Valentine's Day Deals,1,1,21.99,No,Low
+Gastronomie,1,1,108.98,No,Low
+Churros,1,1,23.92,No,Low
+Christmas Gifting,1,1,22.93,No,Low
+Grocery Favourites,1,1,49.22,No,Low
+Vegetables,1,1,21.58,No,Low
+Vitamins,1,1,120.94,No,Low
+Dutch,1,1,62.05,No,Low
+Pick Up (SG),1,1,63.14,No,Low

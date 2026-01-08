@@ -1,0 +1,18 @@
+dish_type,recruitment_rank,recruitment_score,latent_demand_mentions,fussy_eater_friendly,gap_score,cuisine,potential_partners,gap_type
+Fried Rice,1,4.5,2,4,5,Chinese,"Pho, Wagamama, Itsu",Supply Gap
+Shawarma,2,3.6500000000000004,2,3,5,Middle Eastern,New recruitment needed,Supply Gap
+Dim Sum,2,3.6500000000000004,2,3,5,Chinese,New recruitment needed,Supply Gap
+Veggie Fajitas,4,3.5999999999999996,0,3,4,Mexican,Tortilla,Quality Gap
+Rotisserie Chicken,4,3.5999999999999996,0,5,2,Global,Farmer J,No Gap
+Chinese Family Meal,6,3.55,0,3,5,Chinese,New recruitment needed,Supply Gap
+Tacos,7,3.45,1,3,4,Mexican,Tortilla,Quality Gap
+Fajitas,8,3.3499999999999996,0,3,4,Mexican,Tortilla,Quality Gap
+Buddha Bowl,9,3.2999999999999994,0,3,2,Healthy/Fresh,Farmer J,No Gap
+Burrito,10,3.0999999999999996,0,3,4,Mexican,Tortilla,Quality Gap
+Greek Mezze,11,2.8499999999999996,0,3,2,Greek,New recruitment needed,No Gap
+Quesadilla,11,2.8499999999999996,0,3,4,Mexican,Tortilla,Quality Gap
+Korma,13,2.55,0,3,2,Indian,Dishoom,No Gap
+Cottage Pie,13,2.55,0,3,2,British,Bill's,No Gap
+Bibimbap,15,2.35,0,3,2,Korean,New recruitment needed,No Gap
+Souvlaki,15,2.35,0,3,2,Greek,New recruitment needed,No Gap
+Bangers & Mash,15,2.35,0,3,2,British,New recruitment needed,No Gap

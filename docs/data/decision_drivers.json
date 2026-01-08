@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "created": "2025-01-08",
+    "description": "Decision drivers by segment from consumer research",
+    "sources": ["Consumer Validation Survey (n=892)", "Depth Interviews (n=24)"]
+  },
+  "segments": {
+    "family": {
+      "segment_size": "46%",
+      "confidence": "HIGH",
+      "sample_size": 410,
+      "top_drivers": [
+        {"driver": "Kids will eat it", "importance": "95%", "rank": 1},
+        {"driver": "Value for money", "importance": "89%", "rank": 2},
+        {"driver": "Variety of options", "importance": "84%", "rank": 3},
+        {"driver": "Quick delivery", "importance": "78%", "rank": 4},
+        {"driver": "Healthy options available", "importance": "71%", "rank": 5}
+      ],
+      "key_insight": "Kids veto power is real - 95% say kids eating is #1 priority"
+    },
+    "couple": {
+      "segment_size": "23%",
+      "confidence": "HIGH",
+      "sample_size": 205,
+      "top_drivers": [
+        {"driver": "Quality of food", "importance": "92%", "rank": 1},
+        {"driver": "Cuisine variety", "importance": "88%", "rank": 2},
+        {"driver": "Value for money", "importance": "85%", "rank": 3},
+        {"driver": "Convenience", "importance": "82%", "rank": 4},
+        {"driver": "Restaurant reputation", "importance": "76%", "rank": 5}
+      ],
+      "key_insight": "Couples prioritize quality over speed - willing to wait for good food"
+    },
+    "single": {
+      "segment_size": "12%",
+      "confidence": "MEDIUM",
+      "sample_size": 107,
+      "top_drivers": [
+        {"driver": "Value for money", "importance": "91%", "rank": 1},
+        {"driver": "Portion flexibility", "importance": "84%", "rank": 2},
+        {"driver": "Speed of delivery", "importance": "79%", "rank": 3},
+        {"driver": "Healthy options", "importance": "75%", "rank": 4},
+        {"driver": "Late night availability", "importance": "68%", "rank": 5}
+      ],
+      "key_insight": "Singles question £25 value - 'it's a lot for one person'"
+    },
+    "friends": {
+      "segment_size": "4%",
+      "confidence": "LOW",
+      "sample_size": 36,
+      "top_drivers": [
+        {"driver": "Shareable portions", "importance": "89%", "rank": 1},
+        {"driver": "Variety to please everyone", "importance": "86%", "rank": 2},
+        {"driver": "Social occasion fit", "importance": "82%", "rank": 3},
+        {"driver": "Value vs eating out", "importance": "79%", "rank": 4},
+        {"driver": "Alcohol pairing options", "importance": "54%", "rank": 5}
+      ],
+      "key_insight": "Small but growing segment - treating Dinneroo as 'night in' alternative"
+    },
+    "mixed": {
+      "segment_size": "16%",
+      "confidence": "MEDIUM",
+      "sample_size": 134,
+      "top_drivers": [
+        {"driver": "Pleases multiple people", "importance": "93%", "rank": 1},
+        {"driver": "Flexible ordering", "importance": "87%", "rank": 2},
+        {"driver": "Value perception", "importance": "84%", "rank": 3},
+        {"driver": "Reliable quality", "importance": "81%", "rank": 4},
+        {"driver": "Easy reordering", "importance": "72%", "rank": 5}
+      ],
+      "key_insight": "Multi-select users face complex household dynamics"
+    }
+  }
+}

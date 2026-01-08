@@ -76,9 +76,15 @@ Test: What happens if weights change by ±10%?
 
 ---
 
-## Current Framework (v2.0)
+## Current Framework (v3.2)
 
-**Config file:** `config/dish_scoring_unified.json`
+**Config file:** `config/scoring_framework_v3.json`
+
+### Key Change: "Demand" Not "Opportunity"
+
+We renamed "Opportunity" to "Demand" because that's what we're measuring:
+- **Latent Demand** = What customers explicitly ask for (stated)
+- **Non-Dinneroo Demand** = Where customers already order (proven)
 
 ### Two-Track Structure
 
@@ -87,38 +93,40 @@ Test: What happens if weights change by ±10%?
 │                    UNIFIED DISH SCORE (1-5)                     │
 ├─────────────────────────────────────────────────────────────────┤
 │  ┌──────────────────────┐    ┌──────────────────────┐          │
-│  │  PERFORMANCE TRACK   │    │  OPPORTUNITY TRACK   │          │
-│  │       (50%)          │    │       (50%)          │          │
+│  │  PERFORMANCE TRACK   │    │    DEMAND TRACK      │          │
+│  │       (60%)          │    │       (40%)          │          │
 │  ├──────────────────────┤    ├──────────────────────┤          │
-│  │ • Normalized Sales   │    │ • Latent Demand      │          │
-│  │ • Zone Ranking       │    │ • Adult Appeal       │          │
-│  │ • Deliveroo Rating   │    │ • Balanced/Guilt-Free│          │
-│  │ • Repeat Intent      │    │ • Fussy Eater Friendly│         │
-│  │ • Kids Full & Happy  │    │                      │          │
-│  │ • Liked/Loved It     │    │                      │          │
+│  │ • Orders per Zone    │    │ • Latent Demand      │          │
+│  │   (35%)              │    │   (20%)              │          │
+│  │ • Rating (15%)       │    │ • Non-Dinneroo       │          │
+│  │ • Kids Happy (10%)   │    │   Demand (20%)       │          │
 │  └──────────────────────┘    └──────────────────────┘          │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### Performance Track Components (50%)
+### Performance Track Components (60%)
 
-| Component | Weight | Source |
-|-----------|--------|--------|
-| Normalized Sales | 10% | Snowflake orders |
-| Zone Ranking Strength | 10% | Snowflake orders |
-| Deliveroo Rating | 10% | Snowflake ratings |
-| Repeat Intent | 5% | Post-order survey |
-| Kids Full & Happy | 7.5% | Post-order survey |
-| Liked/Loved It | 7.5% | Post-order survey |
+| Component | Weight | Source | Scoring |
+|-----------|--------|--------|---------|
+| Orders per Zone | 35% | Snowflake orders | Percentile-based |
+| Rating | 15% | Snowflake ratings | Percentile-based |
+| Kids Happy | 10% | Post-order survey | Percentile-based |
 
-### Opportunity Track Components (50%)
+### Demand Track Components (40%)
 
-| Component | Weight | Source |
-|-----------|--------|--------|
-| Latent Demand | 25% | 5 sources triangulated |
-| Adult Appeal | 10.25% | Survey + LLM estimation |
-| Balanced/Guilt-Free | 9.25% | Survey + LLM estimation |
-| Fussy Eater Friendly | 5.5% | Survey + LLM estimation |
+| Component | Weight | Source | Scoring |
+|-----------|--------|--------|---------|
+| Latent Demand | 20% | Survey open-text + wishlist | Percentile-based |
+| Non-Dinneroo Demand | 20% | Snowflake (Mon-Thu 16:30-21:00) | Percentile-based, mapped from cuisine |
+
+### Quadrant Definitions
+
+| Quadrant | Criteria | Meaning | Action |
+|----------|----------|---------|--------|
+| **Core Driver** | Performance ≥3 AND Demand ≥3 | WIN - Capturing proven demand | Protect and expand |
+| **Preference Driver** | Performance <3 AND Demand ≥3 | GAP - Demand exists, not captured | Investigate why |
+| **Demand Booster** | Performance ≥3 AND Demand <3 | NICHE - Good but limited market | Maintain efficiency |
+| **Deprioritised** | Performance <3 AND Demand <3 | AVOID - Neither working nor wanted | Don't invest |
 
 ### Validated Factors (Impact > 0.1)
 

@@ -4,6 +4,17 @@
   "_see_also": "config/dashboard_metrics.json for reconciled counts, threshold comparison, and MVP dashboard data flow",
   "_dashboard_integration": "These thresholds are displayed in the MVP Thresholds tab of DELIVERABLES/dashboards/dinneroo_master_dashboard.html",
   "_source_of_truth": "Anna's categorisations from Dish Analysis Dec-25 - Item Categorisation.csv",
+  "_canonical_definitions": "scripts/utils/definitions.py - all agents must import from this module",
+  
+  "mvp_status_tiers": {
+    "_description": "Tiered MVP status based on Core 7 cuisine count. 5 is north star, 3 is data inflection point.",
+    "MVP Ready": {"min_cuisines": 5, "description": "North star - full family offering"},
+    "Near MVP": {"min_cuisines": 4, "description": "Almost there - 1 cuisine gap"},
+    "Progressing": {"min_cuisines": 3, "description": "Data inflection point - meaningful variety"},
+    "Developing": {"min_cuisines": 1, "description": "Early stage - limited options"},
+    "Supply Only": {"min_cuisines": 0, "description": "Has partners but no orders yet"},
+    "Not Started": {"min_cuisines": 0, "description": "No Dinneroo partners"}
+  },
   
   "mvp_criteria": {
     "cuisines_min": {

@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "created": "2025-01-08",
+    "description": "Verbatim customer quotes from depth interviews and surveys",
+    "sources": ["Depth Interviews (n=24)", "Open Text Survey (n=412)", "Dropout Survey (n=156)"]
+  },
+  "quotes_by_topic": {
+    "value_perception": [
+      {
+        "quote": "£25 for a family meal delivered? That's cheaper than cooking sometimes, especially when you factor in the time.",
+        "segment": "Family",
+        "source": "Depth Interview",
+        "sentiment": "positive"
+      },
+      {
+        "quote": "I love that I don't have to think about what to cook. It's decision fatigue relief.",
+        "segment": "Couple",
+        "source": "Depth Interview",
+        "sentiment": "positive"
+      },
+      {
+        "quote": "The value is there but I wish there was more variety in healthy options.",
+        "segment": "Single",
+        "source": "Open Text",
+        "sentiment": "mixed"
+      }
+    ],
+    "variety_importance": [
+      {
+        "quote": "My kids want pizza, I want something spicier - we need options that work for everyone.",
+        "segment": "Family",
+        "source": "Depth Interview",
+        "sentiment": "positive"
+      },
+      {
+        "quote": "We rotate cuisines throughout the week. Monday Chinese, Wednesday Indian, Friday fish and chips.",
+        "segment": "Family",
+        "source": "Open Text",
+        "sentiment": "positive"
+      },
+      {
+        "quote": "Would love more Mexican options in my area. We always struggle to find good tacos.",
+        "segment": "Couple",
+        "source": "Open Text",
+        "sentiment": "negative"
+      }
+    ],
+    "kids_needs": [
+      {
+        "quote": "If my 7-year-old won't eat it, we're not ordering. She's super fussy.",
+        "segment": "Family",
+        "source": "Depth Interview",
+        "sentiment": "neutral"
+      },
+      {
+        "quote": "The kids menu options are great. Finally something that's not just nuggets.",
+        "segment": "Family",
+        "source": "Open Text",
+        "sentiment": "positive"
+      },
+      {
+        "quote": "Need milder curry options for the kids. They can't handle the spice.",
+        "segment": "Family",
+        "source": "Dropout Survey",
+        "sentiment": "negative"
+      }
+    ],
+    "barriers": [
+      {
+        "quote": "Sometimes the restaurant I want isn't available in my area. That's frustrating.",
+        "segment": "Couple",
+        "source": "Dropout Survey",
+        "sentiment": "negative"
+      },
+      {
+        "quote": "The £25 limit means I sometimes can't add dessert. Would pay a bit more for flexibility.",
+        "segment": "Family",
+        "source": "Open Text",
+        "sentiment": "mixed"
+      },
+      {
+        "quote": "Delivery times are long during peak hours. Friday night is painful.",
+        "segment": "Single",
+        "source": "Dropout Survey",
+        "sentiment": "negative"
+      }
+    ],
+    "satisfaction_drivers": [
+      {
+        "quote": "When it works, it's brilliant. Hot food, good portions, everyone's happy.",
+        "segment": "Family",
+        "source": "Open Text",
+        "sentiment": "positive"
+      },
+      {
+        "quote": "The app makes it so easy. Pick a cuisine, pick a restaurant, done in 30 seconds.",
+        "segment": "Couple",
+        "source": "Depth Interview",
+        "sentiment": "positive"
+      },
+      {
+        "quote": "I've recommended it to three friends already. They all signed up.",
+        "segment": "Couple",
+        "source": "Open Text",
+        "sentiment": "positive"
+      }
+    ]
+  }
+}

@@ -4,6 +4,64 @@ All notable changes to the Dinneroo Zone Analysis project.
 
 ---
 
+## [3.2.0] - 2026-01-08
+
+### Added - Unified Definitions System
+
+**Created single source of truth for all cuisine, dish, and zone definitions.**
+
+This release eliminates inconsistencies across agents by establishing `scripts/utils/definitions.py` as the canonical source for all mappings.
+
+#### New Files
+- `scripts/utils/definitions.py` - Canonical definitions module (all agents must import from here)
+- `scripts/utils/__init__.py` - Package initialization
+- `scripts/validate_consistency.py` - Validates outputs use consistent definitions
+- `scripts/update_dish_cuisines.py` - Updates priority_100 with Core 7 mappings
+
+#### Key Changes
+
+**Two-Level Cuisine Architecture:**
+- Level 1: Core 7 (Asian, Italian, Indian, Healthy, Mexican, Middle Eastern, British) - for MVP
+- Level 2: Sub-cuisines (Japanese, Thai, Vietnamese, etc.) - for drill-down analysis
+
+**Tiered MVP Status:**
+| Status | Cuisines | Description |
+|--------|----------|-------------|
+| MVP Ready | 5+ of 7 | North star target |
+| Near MVP | 4 of 7 | Almost there |
+| Progressing | 3 of 7 | Data inflection point |
+| Developing | 1-2 of 7 | Early stage |
+| Supply Only | Any | Partners but no orders |
+| Not Started | 0 | No partners |
+
+**Data Corrections:**
+- British cuisine now correctly shows 137 zones (10.5%) - Bill's included
+- Zone cuisine counting uses Anna's Core 7 columns, not messy Deliveroo tags
+- MVP Ready zones: 70 (up from incorrect count due to sub-cuisine overcounting)
+
+#### Updated Files
+- `DATA/3_ANALYSIS/priority_100_unified.csv` - Added `core_7_cuisine`, `sub_cuisine` columns
+- `docs/data/zone_mvp_status.json` - New two-level structure with Core 7 + sub-cuisines
+- `docs/data/zone_analysis.json` - Updated methodology and MVP status breakdown
+- `scripts/generate_zone_dashboard_data.py` - Uses canonical definitions
+- `scripts/sync_zone_data.py` - Updated summary output
+- `config/mvp_thresholds.json` - Added MVP status tiers
+- `config/cuisine_hierarchy.json` - Added canonical definitions reference
+
+#### Documentation Updates
+- `DOCUMENTATION/SHARED/03_DEFINITIONS.md` - Added unified cuisine tables, MVP tiers
+- `DOCUMENTATION/AGENTS/ZONE_AGENT.md` - Updated MVP definition with tiers
+- `DOCUMENTATION/AGENTS/CUISINE_GAP_AGENT.md` - Added canonical import reference
+
+#### Impact
+All agents now produce consistent outputs:
+- Zone says "MVP Ready with 7 cuisines" ✓
+- Cuisine agent says "Japanese performs best within Asian" ✓
+- Dish agent says "Katsu (Asian/Japanese) is Tier 2" ✓
+- No more conflicting evidence between zone and proposition levels
+
+---
+
 ## [3.1.0] - 2026-01-07
 
 ### Added - Ground Truth Data Reconciliation

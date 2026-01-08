@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "created": "2025-01-08",
+    "description": "Barriers to purchase and dropout reasons",
+    "sources": ["Dropout Survey (n=156)", "Cart Abandonment Analysis", "CS Tickets"]
+  },
+  "barriers": [
+    {
+      "barrier": "Limited restaurant choice",
+      "mentions": 87,
+      "pct_of_dropouts": "56%",
+      "segment_impact": {"family": "HIGH", "couple": "HIGH", "single": "MEDIUM"},
+      "action": "Expand partner coverage in underserved zones",
+      "priority": 1,
+      "quote": "The restaurant I wanted wasn't available in my postcode"
+    },
+    {
+      "barrier": "Price ceiling too restrictive",
+      "mentions": 54,
+      "pct_of_dropouts": "35%",
+      "segment_impact": {"family": "MEDIUM", "couple": "LOW", "single": "HIGH"},
+      "action": "Consider flex pricing tiers or addon options",
+      "priority": 2,
+      "quote": "£25 doesn't quite cover what we want to order"
+    },
+    {
+      "barrier": "Long delivery times",
+      "mentions": 42,
+      "pct_of_dropouts": "27%",
+      "segment_impact": {"family": "HIGH", "couple": "MEDIUM", "single": "MEDIUM"},
+      "action": "Partner with restaurants with faster prep times",
+      "priority": 3,
+      "quote": "Kids can't wait 45+ minutes when they're hungry"
+    },
+    {
+      "barrier": "Missing dietary options",
+      "mentions": 38,
+      "pct_of_dropouts": "24%",
+      "segment_impact": {"family": "MEDIUM", "couple": "MEDIUM", "single": "HIGH"},
+      "action": "Add dietary filters and expand veggie/vegan options",
+      "priority": 4,
+      "quote": "No vegetarian options from the restaurants available"
+    },
+    {
+      "barrier": "Missing cuisine type",
+      "mentions": 31,
+      "pct_of_dropouts": "20%",
+      "segment_impact": {"family": "MEDIUM", "couple": "HIGH", "single": "LOW"},
+      "action": "Fill Core 7 cuisine gaps in near-MVP zones",
+      "priority": 5,
+      "quote": "Really wanted Mexican but there wasn't any in my area"
+    },
+    {
+      "barrier": "Previous bad experience",
+      "mentions": 23,
+      "pct_of_dropouts": "15%",
+      "segment_impact": {"family": "HIGH", "couple": "MEDIUM", "single": "MEDIUM"},
+      "action": "Improve partner quality control and recovery process",
+      "priority": 6,
+      "quote": "Last order arrived cold, haven't tried again"
+    },
+    {
+      "barrier": "Technical issues",
+      "mentions": 18,
+      "pct_of_dropouts": "12%",
+      "segment_impact": {"family": "LOW", "couple": "LOW", "single": "LOW"},
+      "action": "App stability improvements",
+      "priority": 7,
+      "quote": "App crashed when I was checking out"
+    }
+  ],
+  "summary": {
+    "top_3_barriers": ["Limited restaurant choice", "Price ceiling", "Delivery times"],
+    "quick_wins": ["Fill cuisine gaps in near-MVP zones", "Add dietary filters"],
+    "total_dropout_sample": 156
+  }
+}

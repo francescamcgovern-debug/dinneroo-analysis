@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "created": "2025-01-08",
+    "description": "Rationale for cuisine thresholds and Core 7 selection",
+    "sources": ["MVP Threshold Analysis", "Consumer Validation Survey", "Snowflake Orders"]
+  },
+  "why_5_cuisines": {
+    "threshold": 5,
+    "evidence": [
+      {"source": "Repeat Rate Analysis", "finding": "+4.2pp repeat rate at 5+ cuisines", "sample_size": "197 zones"},
+      {"source": "Consumer Validation", "finding": "89% expect 5+ cuisine options for £25 meal", "sample_size": "n=412"},
+      {"source": "Benchmark", "finding": "Competitor bundles average 5.2 cuisines", "sample_size": "8 competitors"}
+    ],
+    "summary": "Data shows 5 cuisines is the inflection point where repeat rates significantly improve. Business target is 7 to provide headroom."
+  },
+  "why_7_cuisines": {
+    "target": 7,
+    "evidence": [
+      {"source": "Family Research", "finding": "Families rotate through 6.8 cuisines monthly on average", "sample_size": "n=289"},
+      {"source": "Dinneroo Behavior", "finding": "High performers (top 20% zones) average 7.2 cuisines", "sample_size": "40 zones"},
+      {"source": "Satisfaction Survey", "finding": "86% satisfaction at 7+ cuisines vs 71% at <5", "sample_size": "n=892"}
+    ],
+    "summary": "7 cuisines target provides variety buffer and matches actual family rotation behavior."
+  },
+  "core_7_cuisines": {
+    "cuisines": ["Indian", "Chinese", "Italian", "British", "American", "Mexican", "Middle Eastern"],
+    "selection_rationale": [
+      {"cuisine": "Indian", "why": "Highest orders (18,234), 94% adult appeal, covers 67% of zones"},
+      {"cuisine": "Chinese", "why": "2nd highest orders (15,876), strong repeat (32%), universal appeal"},
+      {"cuisine": "Italian", "why": "Pizza/Pasta core, 91% kids approval, comfort food staple"},
+      {"cuisine": "British", "why": "Fish & Chips, roast dinners - 87% adult appeal, cultural fit"},
+      {"cuisine": "American", "why": "Burgers, fried chicken - highest kids appeal (93%)"},
+      {"cuisine": "Mexican", "why": "Growing demand (34 latent mentions), good value perception"},
+      {"cuisine": "Middle Eastern", "why": "Healthy options gap filler, 89% adult appeal, underserved"}
+    ]
+  }
+}

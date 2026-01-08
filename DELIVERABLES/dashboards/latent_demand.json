@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-01-08T18:15:00",
+  "source": "DATA/3_ANALYSIS/latent_demand_scores.csv",
+  "methodology": "Open-text analysis from post-order, dropoff, bounce, and ratings surveys",
+  "major_gaps": [
+    {
+      "need": "Kids Menu / Mild Options",
+      "mentions": 74,
+      "severity": "high",
+      "evidence": "Open-text requests across surveys",
+      "action": "Add explicit kids portions or mild versions to existing dishes"
+    },
+    {
+      "need": "Chinese / Dim Sum",
+      "mentions": 58,
+      "severity": "high",
+      "evidence": "Frequently requested cuisine with supply gap",
+      "action": "Recruit Chinese partner (P.F. Chang's, Ping Pong, or local)"
+    },
+    {
+      "need": "Vegetarian Options",
+      "mentions": 49,
+      "severity": "high",
+      "evidence": "Cross-survey theme",
+      "action": "Ensure each cuisine has visible vegetarian option"
+    },
+    {
+      "need": "Fish & Chips",
+      "mentions": 39,
+      "severity": "medium",
+      "evidence": "British comfort food gap",
+      "action": "Already available at limited partners - increase visibility"
+    },
+    {
+      "need": "Pad Thai / Thai",
+      "mentions": 37,
+      "severity": "medium",
+      "evidence": "Strong latent demand despite existing supply",
+      "action": "Quality gap - customers want more authentic options"
+    },
+    {
+      "need": "Roast Dinner",
+      "mentions": 34,
+      "severity": "medium",
+      "evidence": "Weekend family favourite",
+      "action": "Bill's offers but limited availability"
+    },
+    {
+      "need": "Pasta",
+      "mentions": 29,
+      "severity": "low",
+      "evidence": "Already well-supplied",
+      "action": "No action needed - demand is met"
+    },
+    {
+      "need": "Pizza",
+      "mentions": 25,
+      "severity": "low",
+      "evidence": "Already well-supplied",
+      "action": "No action needed - demand is met"
+    },
+    {
+      "need": "Lasagne",
+      "mentions": 25,
+      "severity": "low",
+      "evidence": "Specific pasta type request",
+      "action": "Part of existing Italian supply"
+    },
+    {
+      "need": "Healthy Options",
+      "mentions": 24,
+      "severity": "medium",
+      "evidence": "Balanced meal requests",
+      "action": "Highlight Grain Bowls and Healthy partners"
+    }
+  ],
+  "cuisine_gaps": [
+    {"cuisine": "Chinese", "mentions": 58, "supply_status": "Supply Gap", "priority": 1},
+    {"cuisine": "Thai", "mentions": 37, "supply_status": "Quality Gap", "priority": 2},
+    {"cuisine": "British", "mentions": 73, "supply_status": "Partial Gap", "priority": 3},
+    {"cuisine": "Mexican", "mentions": 16, "supply_status": "Quality Gap", "priority": 4},
+    {"cuisine": "Middle Eastern", "mentions": 12, "supply_status": "Supply Gap", "priority": 5}
+  ],
+  "barrier_signals": {
+    "price_concerns": {
+      "mentioned": true,
+      "frequency": "moderate",
+      "detail": "Some customers want price under £25 or clearer pricing"
+    },
+    "portion_concerns": {
+      "mentioned": true,
+      "frequency": "moderate",
+      "detail": "Uncertainty about whether £25 feeds family adequately"
+    },
+    "delivery_concerns": {
+      "mentioned": true,
+      "frequency": "low",
+      "detail": "Confidence food will arrive hot and on time"
+    }
+  },
+  "insight_summary": "Top unmet needs are: explicit kids options (74 mentions), Chinese cuisine (58), and vegetarian options (49). These represent the highest-impact recruitment targets."
+}
+

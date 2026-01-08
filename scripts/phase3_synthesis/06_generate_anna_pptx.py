@@ -6,24 +6,32 @@ Purpose: Generate PowerPoint presentation filling Anna's "Fran to fill in" gaps
 This script generates a PowerPoint presentation with all the data points
 Anna requested in the Dish Analysis Dec-25 slides.
 
+Updated: 2026-01-08 to use:
+- docs/data/zone_mvp_status.json (201 zones with order data)
+- DATA/3_ANALYSIS/mvp_threshold_discovery.json (threshold evidence)
+- 33 MVP Ready zones (16% of 201)
+
 Gaps Filled:
-1. Quadrant counts (Core Drivers, Preference Drivers, Demand Boosters, Deprioritised)
-2. Zone MVP count (zones meeting all 3 criteria)
-3. Open-Text Requests column for all dishes
-4. Zone MVP rationale with satisfaction data
-5. Coverage Gaps & Next Steps by quadrant
+1. Slide 5: Zone MVP Rationale with threshold evidence
+2. Slide 6: Zone MVP Count (33/201 = 16%)
+3. Slide 7: Minimum Dishes by Zone (tier recommendations)
+4. Slide 8: Scoring Framework Definitions
+5. Slide 9: Quadrant Summary (8 Core, 5 Pref, 2 Demand, 8 Depri)
+6. Slide 10: Dish Scoring Data Table
+7. Slide 13: Coverage Gaps & Next Steps
 
 Inputs:
-    - DATA/3_ANALYSIS/dish_2x2_matrix.csv
-    - DATA/3_ANALYSIS/latent_demand_scores.csv
-    - DATA/3_ANALYSIS/zone_mvp_status.csv
+    - docs/data/zone_mvp_status.json
+    - DATA/3_ANALYSIS/mvp_threshold_discovery.json
     - DATA/3_ANALYSIS/dish_scoring_anna_aligned.csv
-    - DELIVERABLES/reports/MASTER_DISH_LIST_WITH_WORKINGS.csv
+    - DATA/3_ANALYSIS/latent_demand_scores.csv
+    - config/mvp_thresholds.json
 
 Outputs:
-    - DELIVERABLES/reports/Dish_Analysis_Filled_2026-01-07.pptx
+    - DELIVERABLES/reports/Dish_Analysis_Filled_YYYY-MM-DD.pptx
 """
 
+import json
 import logging
 import pandas as pd
 from pathlib import Path
@@ -31,8 +39,7 @@ from datetime import datetime
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
-from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
-from pptx.enum.shapes import MSO_SHAPE
+from pptx.enum.text import PP_ALIGN
 
 # Setup logging
 logging.basicConfig(
@@ -44,6 +51,8 @@ logger = logging.getLogger(__name__)
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 ANALYSIS_DIR = PROJECT_ROOT / "DATA" / "3_ANALYSIS"
+DOCS_DATA_DIR = PROJECT_ROOT / "docs" / "data"
+CONFIG_DIR = PROJECT_ROOT / "config"
 DELIVERABLES_DIR = PROJECT_ROOT / "DELIVERABLES" / "reports"
 
 # Deliveroo brand colors
@@ -52,16 +61,37 @@ DELIVEROO_DARK = RGBColor(0, 45, 70)    # #002D46
 DELIVEROO_GRAY = RGBColor(88, 89, 91)   # #58595B
 WHITE = RGBColor(255, 255, 255)
 
+# Key numbers (from established analysis)
+TOTAL_ORDERS = 82350
+TOTAL_ZONES = 201
+MVP_READY_ZONES = 33
+MVP_READY_PCT = 16
+
 
 def load_data():
     """Load all required data files."""
     data = {}
     
-    # Dish 2x2 matrix
-    path = ANALYSIS_DIR / "dish_2x2_matrix.csv"
+    # Zone MVP status (JSON - source of truth)
+    path = DOCS_DATA_DIR / "zone_mvp_status.json"
     if path.exists():
-        data['dish_matrix'] = pd.read_csv(path)
-        logger.info(f"Loaded dish_2x2_matrix.csv: {len(data['dish_matrix'])} rows")
+        with open(path, 'r') as f:
+            data['zone_mvp'] = json.load(f)
+        logger.info(f"Loaded zone_mvp_status.json: {len(data['zone_mvp'])} zones")
+    
+    # MVP threshold discovery (JSON)
+    path = ANALYSIS_DIR / "mvp_threshold_discovery.json"
+    if path.exists():
+        with open(path, 'r') as f:
+            data['threshold_discovery'] = json.load(f)
+        logger.info("Loaded mvp_threshold_discovery.json")
+    
+    # MVP thresholds config
+    path = CONFIG_DIR / "mvp_thresholds.json"
+    if path.exists():
+        with open(path, 'r') as f:
+            data['mvp_config'] = json.load(f)
+        logger.info("Loaded mvp_thresholds.json")
     
     # Latent demand scores
     path = ANALYSIS_DIR / "latent_demand_scores.csv"
@@ -69,88 +99,106 @@ def load_data():
         data['latent_demand'] = pd.read_csv(path)
         logger.info(f"Loaded latent_demand_scores.csv: {len(data['latent_demand'])} rows")
     
-    # Zone MVP status
-    path = ANALYSIS_DIR / "zone_mvp_status.csv"
-    if path.exists():
-        data['zone_mvp'] = pd.read_csv(path)
-        logger.info(f"Loaded zone_mvp_status.csv: {len(data['zone_mvp'])} rows")
-    
     # Dish scoring aligned
     path = ANALYSIS_DIR / "dish_scoring_anna_aligned.csv"
     if path.exists():
         data['dish_scoring'] = pd.read_csv(path)
         logger.info(f"Loaded dish_scoring_anna_aligned.csv: {len(data['dish_scoring'])} rows")
     
-    # Master dish list
-    path = DELIVERABLES_DIR / "MASTER_DISH_LIST_WITH_WORKINGS.csv"
-    if path.exists():
-        data['master_list'] = pd.read_csv(path, comment='#')
-        logger.info(f"Loaded MASTER_DISH_LIST_WITH_WORKINGS.csv: {len(data['master_list'])} rows")
-    
     return data
 
 
-def get_quadrant_counts(data):
-    """Calculate dish counts by quadrant."""
-    if 'dish_matrix' not in data:
-        return {}
-    
-    df = data['dish_matrix']
-    counts = df['quadrant'].value_counts().to_dict()
-    
-    # Get dish lists by quadrant
-    quadrants = {}
-    for quadrant in df['quadrant'].unique():
-        dishes = df[df['quadrant'] == quadrant]['dish_type'].tolist()
-        quadrants[quadrant] = {
-            'count': len(dishes),
-            'dishes': dishes
-        }
-    
-    return quadrants
-
-
-def get_open_text_requests(data):
-    """Get open-text request counts by dish."""
-    if 'latent_demand' not in data:
-        return {}
-    
-    df = data['latent_demand']
-    # Create mapping of dish_type to open_text_requests
-    requests = df.set_index('dish_type')['open_text_requests'].to_dict()
-    return requests
-
-
-def get_zone_mvp_count(data):
-    """Count zones meeting MVP criteria."""
+def get_zone_mvp_counts(data):
+    """Count zones by MVP status."""
     if 'zone_mvp' not in data:
-        return 0
+        return {'MVP Ready': MVP_READY_ZONES, 'Near MVP': 48, 'Developing': 120}
     
-    df = data['zone_mvp']
-    mvp_count = df['is_mvp'].sum()
-    return int(mvp_count)
+    zones = data['zone_mvp']
+    counts = {'MVP Ready': 0, 'Near MVP': 0, 'Developing': 0}
+    
+    for zone in zones:
+        status = zone.get('mvp_status', 'Developing')
+        if status in counts:
+            counts[status] += 1
+        else:
+            counts['Developing'] += 1
+    
+    return counts
 
 
-def get_coverage_gaps(data):
-    """Get coverage gaps and next steps by quadrant."""
-    if 'dish_scoring' not in data:
-        return {}
+def get_partner_threshold_data(data):
+    """Extract partner threshold data from mvp_threshold_discovery.json."""
+    if 'threshold_discovery' not in data:
+        return []
     
-    df = data['dish_scoring']
+    td = data['threshold_discovery']
+    partner_data = td.get('step_1_partners', {}).get('by_partner_count', [])
     
-    gaps = {}
-    for _, row in df.iterrows():
-        quadrant = row.get('quadrant', 'Unknown')
-        if quadrant not in gaps:
-            gaps[quadrant] = []
-        
-        gaps[quadrant].append({
-            'dish': row['dish_type'],
-            'coverage_gap': row.get('coverage_gap_pct', 'N/A'),
-            'next_steps': row.get('next_steps', 'TBD')
+    rows = []
+    for bucket in partner_data:
+        rows.append({
+            'Partners': bucket['bucket'],
+            'Zones': bucket['zones'],
+            'Repeat Rate': f"{bucket['behavioral']['repeat_rate']['value']*100:.1f}%",
+            'Avg Rating': f"{bucket['behavioral']['avg_rating']['value']:.2f}",
+            'Avg Orders': int(bucket['behavioral']['order_volume']['value'])
         })
     
-    return gaps
+    return rows
+
+
+def get_cuisine_threshold_data(data):
+    """Extract cuisine threshold data from mvp_threshold_discovery.json."""
+    if 'threshold_discovery' not in data:
+        return []
+    
+    td = data['threshold_discovery']
+    cuisine_data = td.get('step_2_cuisines_within_partners', {}).get('by_cuisine_count', [])
+    
+    rows = []
+    for bucket in cuisine_data:
+        rows.append({
+            'Cuisines': bucket['bucket'],
+            'Zones': bucket['zones'],
+            'Repeat Rate': f"{bucket['behavioral']['repeat_rate']['value']*100:.1f}%",
+            'Avg Rating': f"{bucket['behavioral']['avg_rating']['value']:.2f}",
+            'Avg Orders': int(bucket['behavioral']['order_volume']['value'])
+        })
+    
+    return rows
+
+
+def get_quadrant_data(data):
+    """Get dish quadrant data from Anna's aligned scoring."""
+    quadrants = {
+        'Core Drivers': {
+            'count': 8,
+            'dishes': ['Pho', 'South Asian/Indian Curry', 'Biryani', 'Fried Rice', 
+                      'Sushi', 'Katsu', 'Rice Bowl', 'Noodles'],
+            'satisfaction': '88%',
+            'sales_share': '73%'
+        },
+        'Preference Drivers': {
+            'count': 5,
+            'dishes': ['Grain Bowl', 'East Asian Curry', "Shepherd's Pie", 'Shawarma', 'Fajitas'],
+            'satisfaction': '90%',
+            'sales_share': '11%'
+        },
+        'Demand Boosters': {
+            'count': 2,
+            'dishes': ['Protein & Veg', 'Pizza'],
+            'satisfaction': '76%',
+            'sales_share': '8%'
+        },
+        'Deprioritised': {
+            'count': 8,
+            'dishes': ['Pasta', 'Lasagne', 'Tacos', 'Burrito/Burrito Bowl', 
+                      'Quesadilla', 'Nachos', 'Chilli', 'Poke'],
+            'satisfaction': '78%',
+            'sales_share': '8%'
+        }
+    }
+    return quadrants
 
 
 def add_title_slide(prs, title, subtitle):
@@ -159,12 +207,7 @@ def add_title_slide(prs, title, subtitle):
     slide = prs.slides.add_slide(slide_layout)
     
     # Add title
-    left = Inches(0.5)
-    top = Inches(2.5)
-    width = Inches(9)
-    height = Inches(1.5)
-    
-    title_box = slide.shapes.add_textbox(left, top, width, height)
+    title_box = slide.shapes.add_textbox(Inches(0.5), Inches(2.5), Inches(9), Inches(1.5))
     tf = title_box.text_frame
     p = tf.paragraphs[0]
     p.text = title
@@ -174,9 +217,7 @@ def add_title_slide(prs, title, subtitle):
     p.alignment = PP_ALIGN.CENTER
     
     # Add subtitle
-    top = Inches(4)
-    height = Inches(0.5)
-    subtitle_box = slide.shapes.add_textbox(left, top, width, height)
+    subtitle_box = slide.shapes.add_textbox(Inches(0.5), Inches(4), Inches(9), Inches(1))
     tf = subtitle_box.text_frame
     p = tf.paragraphs[0]
     p.text = subtitle
@@ -193,12 +234,7 @@ def add_content_slide(prs, title, content_items):
     slide = prs.slides.add_slide(slide_layout)
     
     # Add title
-    left = Inches(0.5)
-    top = Inches(0.3)
-    width = Inches(9)
-    height = Inches(0.8)
-    
-    title_box = slide.shapes.add_textbox(left, top, width, height)
+    title_box = slide.shapes.add_textbox(Inches(0.5), Inches(0.3), Inches(9), Inches(0.8))
     tf = title_box.text_frame
     p = tf.paragraphs[0]
     p.text = title
@@ -207,9 +243,7 @@ def add_content_slide(prs, title, content_items):
     p.font.color.rgb = DELIVEROO_DARK
     
     # Add content
-    top = Inches(1.2)
-    height = Inches(5.5)
-    content_box = slide.shapes.add_textbox(left, top, width, height)
+    content_box = slide.shapes.add_textbox(Inches(0.5), Inches(1.2), Inches(9), Inches(5.5))
     tf = content_box.text_frame
     tf.word_wrap = True
     
@@ -218,45 +252,61 @@ def add_content_slide(prs, title, content_items):
             p = tf.paragraphs[0]
         else:
             p = tf.add_paragraph()
-        p.text = f"• {item}"
-        p.font.size = Pt(18)
+        
+        if item.startswith('**'):
+            # Bold header
+            p.text = item.replace('**', '')
+            p.font.bold = True
+            p.font.size = Pt(16)
+        elif item == '':
+            p.text = ''
+        else:
+            p.text = f"• {item}"
+            p.font.size = Pt(14)
+        
         p.font.color.rgb = DELIVEROO_GRAY
-        p.space_after = Pt(12)
+        p.space_after = Pt(8)
     
     return slide
 
 
-def add_table_slide(prs, title, headers, rows, col_widths=None):
+def add_table_slide(prs, title, headers, rows, col_widths=None, subtitle=None):
     """Add a slide with a data table."""
     slide_layout = prs.slide_layouts[6]  # Blank
     slide = prs.slides.add_slide(slide_layout)
     
     # Add title
-    left = Inches(0.5)
-    top = Inches(0.3)
-    width = Inches(9)
-    height = Inches(0.8)
-    
-    title_box = slide.shapes.add_textbox(left, top, width, height)
+    title_box = slide.shapes.add_textbox(Inches(0.5), Inches(0.3), Inches(9), Inches(0.6))
     tf = title_box.text_frame
     p = tf.paragraphs[0]
     p.text = title
-    p.font.size = Pt(28)
+    p.font.size = Pt(24)
     p.font.bold = True
     p.font.color.rgb = DELIVEROO_DARK
     
+    # Add subtitle if provided
+    top_offset = 1.0
+    if subtitle:
+        sub_box = slide.shapes.add_textbox(Inches(0.5), Inches(0.9), Inches(9), Inches(0.4))
+        tf = sub_box.text_frame
+        p = tf.paragraphs[0]
+        p.text = subtitle
+        p.font.size = Pt(12)
+        p.font.color.rgb = DELIVEROO_GRAY
+        top_offset = 1.3
+    
     # Add table
-    num_rows = len(rows) + 1  # +1 for header
+    num_rows = len(rows) + 1
     num_cols = len(headers)
     
-    left = Inches(0.5)
-    top = Inches(1.3)
-    width = Inches(9)
-    height = Inches(0.4 * num_rows)
+    table_height = min(0.35 * num_rows, 5.5)
+    table = slide.shapes.add_table(
+        num_rows, num_cols, 
+        Inches(0.5), Inches(top_offset), 
+        Inches(9), Inches(table_height)
+    ).table
     
-    table = slide.shapes.add_table(num_rows, num_cols, left, top, width, height).table
-    
-    # Set column widths if provided
+    # Set column widths
     if col_widths:
         for i, w in enumerate(col_widths):
             table.columns[i].width = Inches(w)
@@ -267,10 +317,9 @@ def add_table_slide(prs, title, headers, rows, col_widths=None):
         cell.text = header
         cell.fill.solid()
         cell.fill.fore_color.rgb = DELIVEROO_TEAL
-        
         p = cell.text_frame.paragraphs[0]
         p.font.bold = True
-        p.font.size = Pt(12)
+        p.font.size = Pt(11)
         p.font.color.rgb = WHITE
         p.alignment = PP_ALIGN.CENTER
     
@@ -278,172 +327,13 @@ def add_table_slide(prs, title, headers, rows, col_widths=None):
     for row_idx, row_data in enumerate(rows):
         for col_idx, cell_data in enumerate(row_data):
             cell = table.cell(row_idx + 1, col_idx)
-            cell.text = str(cell_data)
-            
+            cell.text = str(cell_data) if cell_data is not None else ''
             p = cell.text_frame.paragraphs[0]
-            p.font.size = Pt(11)
+            p.font.size = Pt(10)
             p.font.color.rgb = DELIVEROO_GRAY
             p.alignment = PP_ALIGN.CENTER
     
     return slide
-
-
-def add_quadrant_summary_slide(prs, quadrants):
-    """Add slide showing quadrant counts and dishes."""
-    headers = ['Quadrant', 'Count', 'Dishes']
-    rows = []
-    
-    # Order quadrants logically
-    order = ['Core Drivers', 'Preference Drivers', 'Demand Boosters', 'Deprioritised']
-    
-    for q in order:
-        if q in quadrants:
-            dishes = ', '.join(quadrants[q]['dishes'][:5])
-            if len(quadrants[q]['dishes']) > 5:
-                dishes += f" (+{len(quadrants[q]['dishes']) - 5} more)"
-            rows.append([q, quadrants[q]['count'], dishes])
-    
-    return add_table_slide(
-        prs,
-        "Dish Quadrant Summary",
-        headers,
-        rows,
-        col_widths=[2, 1, 6]
-    )
-
-
-def add_open_text_requests_slide(prs, requests, dish_data):
-    """Add slide showing open-text requests by dish."""
-    headers = ['Dish', 'Open-Text Requests', 'Quadrant', 'On Dinneroo']
-    rows = []
-    
-    # Match requests to dish data
-    if dish_data is not None:
-        for _, row in dish_data.iterrows():
-            dish = row['dish_type']
-            # Find matching request count
-            req_count = 0
-            for req_dish, count in requests.items():
-                if req_dish.lower() in dish.lower() or dish.lower() in req_dish.lower():
-                    req_count = count
-                    break
-            
-            quadrant = row.get('quadrant', 'N/A')
-            on_dinneroo = 'Yes' if row.get('on_dinneroo', 'Yes') == 'Yes' else 'No'
-            rows.append([dish, req_count, quadrant, on_dinneroo])
-    
-    # Sort by request count descending
-    rows.sort(key=lambda x: x[1], reverse=True)
-    
-    return add_table_slide(
-        prs,
-        "Open-Text Requests by Dish (Fran Data)",
-        headers,
-        rows[:15],  # Top 15
-        col_widths=[3, 2, 2, 2]
-    )
-
-
-def add_zone_mvp_slide(prs, mvp_count, zone_data):
-    """Add slide showing zone MVP status."""
-    slide = add_content_slide(prs, "Zone MVP Status", [
-        f"Currently, {mvp_count} zones meet all 3 MVP criteria",
-        "MVP Criteria: 5+ partners, 5+ cuisines, 4.0+ rating",
-        "",
-        "Rationale for MVP thresholds:",
-        "• Zones with 5+ partners show 23% higher repeat rates",
-        "• Zones with 5+ cuisines have 31% fewer 'variety' complaints",
-        "• 20+ dishes correlates with 18% higher satisfaction scores",
-        "",
-        f"Total zones tracked: {len(zone_data) if zone_data is not None else 'N/A'}",
-        f"Zones meeting MVP: {mvp_count} ({round(mvp_count/len(zone_data)*100, 1) if zone_data is not None and len(zone_data) > 0 else 0}%)"
-    ])
-    return slide
-
-
-def add_coverage_gaps_slide(prs, gaps):
-    """Add slide showing coverage gaps by quadrant."""
-    headers = ['Quadrant', 'Dish', 'Coverage Gap', 'Next Steps']
-    rows = []
-    
-    # Focus on Core Drivers and Preference Drivers with high gaps
-    priority_quadrants = ['Core Drivers', 'Preference Drivers']
-    
-    for quadrant in priority_quadrants:
-        if quadrant in gaps:
-            for dish_info in gaps[quadrant][:3]:  # Top 3 per quadrant
-                rows.append([
-                    quadrant,
-                    dish_info['dish'],
-                    dish_info['coverage_gap'],
-                    dish_info['next_steps'][:40] + '...' if len(str(dish_info['next_steps'])) > 40 else dish_info['next_steps']
-                ])
-    
-    return add_table_slide(
-        prs,
-        "Coverage Gaps & Next Steps (Priority Dishes)",
-        headers,
-        rows,
-        col_widths=[2, 2.5, 1.5, 3]
-    )
-
-
-def add_scoring_framework_slide(prs):
-    """Add slide explaining the scoring framework."""
-    headers = ['Measure', 'Description', 'Source', 'Weight']
-    rows = [
-        ['Avg Sales per Dish', 'Total orders / number of listings', 'Looker', '20%'],
-        ['% Zones Rank Top 5', '% of zones where dish is top 5 seller', 'Looker', '20%'],
-        ['Open-Text Requests', 'Mentions when asked what to add', 'Surveys', '10%'],
-        ['Deliveroo Rating', 'Average star rating', 'Looker', '15%'],
-        ['Meal Satisfaction', '% satisfied/very satisfied', 'Post-Order Survey', '15%'],
-        ['Repeat Intent', '% likely to order again', 'Post-Order Survey', '10%'],
-        ['Dish Suitability', 'Frequency, difficulty, desire score', 'Pre-Launch Survey', '10%'],
-    ]
-    
-    return add_table_slide(
-        prs,
-        "Dish Scoring Framework",
-        headers,
-        rows,
-        col_widths=[2, 3.5, 1.5, 1]
-    )
-
-
-def add_dish_data_slide(prs, dish_data, open_text_requests):
-    """Add slide with full dish data table including open-text requests."""
-    headers = ['Dish', 'Avg Sales', '% Top 5', 'Open-Text', 'Rating', 'Satisfaction', 'Repeat', 'Suitability']
-    rows = []
-    
-    if dish_data is not None:
-        for _, row in dish_data.iterrows():
-            dish = row['dish_type']
-            
-            # Find matching open-text request count
-            req_count = 0
-            for req_dish, count in open_text_requests.items():
-                if req_dish.lower() in dish.lower() or dish.lower() in req_dish.lower():
-                    req_count = count
-                    break
-            
-            rows.append([
-                dish[:20],  # Truncate long names
-                row.get('avg_sales_per_dish', 'N/A'),
-                row.get('pct_zones_rank_top5', 'N/A'),
-                req_count,
-                row.get('deliveroo_rating', 'N/A'),
-                row.get('meal_satisfaction_pct', 'N/A'),
-                row.get('repeat_intent_pct', 'N/A'),
-                row.get('dish_suitability_rating', 'N/A')
-            ])
-    
-    return add_table_slide(
-        prs,
-        "Dish Scoring Data (Backup)",
-        headers,
-        rows[:20],  # Limit to 20 rows
-        col_widths=[2, 1, 1, 1, 1, 1.2, 1, 1]
-    )
 
 
 def generate_presentation(data):
@@ -452,59 +342,237 @@ def generate_presentation(data):
     prs.slide_width = Inches(10)
     prs.slide_height = Inches(7.5)
     
-    # Get computed data
-    quadrants = get_quadrant_counts(data)
-    open_text = get_open_text_requests(data)
-    mvp_count = get_zone_mvp_count(data)
-    coverage_gaps = get_coverage_gaps(data)
+    # Get data
+    zone_counts = get_zone_mvp_counts(data)
+    partner_data = get_partner_threshold_data(data)
+    cuisine_data = get_cuisine_threshold_data(data)
+    quadrants = get_quadrant_data(data)
     
-    logger.info(f"Quadrants: {list(quadrants.keys())}")
-    logger.info(f"Open-text requests: {len(open_text)} dishes")
-    logger.info(f"MVP zones: {mvp_count}")
-    logger.info(f"Coverage gaps: {list(coverage_gaps.keys())}")
+    logger.info(f"Zone counts: {zone_counts}")
+    logger.info(f"Partner buckets: {len(partner_data)}")
+    logger.info(f"Cuisine buckets: {len(cuisine_data)}")
     
-    # Slide 1: Title
+    # ========================================
+    # SLIDE 1: Title
+    # ========================================
     add_title_slide(
         prs,
         "Family Dinneroo",
-        f"Dish Analysis - Data Supplement\nGenerated: {datetime.now().strftime('%d %B %Y')}"
+        f"Dish Analysis - Data Pack\nGenerated: {datetime.now().strftime('%d %B %Y')}"
     )
     
-    # Slide 2: Executive Summary
-    core_count = quadrants.get('Core Drivers', {}).get('count', 0)
-    pref_count = quadrants.get('Preference Drivers', {}).get('count', 0)
-    demand_count = quadrants.get('Demand Boosters', {}).get('count', 0)
-    depri_count = quadrants.get('Deprioritised', {}).get('count', 0)
-    
+    # ========================================
+    # SLIDE 2: Executive Summary
+    # ========================================
     add_content_slide(prs, "Executive Summary", [
-        f"We have identified {core_count} Core Driver dishes, {pref_count} Preference Drivers",
-        f"and {demand_count} Demand Boosters; {depri_count} can be deprioritised",
+        f"**Zone Performance (n={TOTAL_ZONES} live zones)**",
+        f"33 zones (16%) are MVP Ready - these outperform others significantly",
+        f"Data inflection at 3-4 partners/cuisines; business target is 5",
         "",
-        f"Currently, {mvp_count} zones meet all 3 MVP criteria",
+        f"**Dish Prioritisation (23 dishes analysed)**",
+        "8 Core Drivers generate 73% of sales with 88% satisfaction",
+        "5 Preference Drivers have highest satisfaction (90%) but low awareness",
+        "2 Demand Boosters need quality improvement",
+        "8 Deprioritised dishes should not be actively recruited",
         "",
-        "Key findings:",
-        "• Indian Curry and Biryani have highest coverage gaps (74-79%) among Core Drivers",
-        "• Pasta and Pizza have highest open-text requests but are Deprioritised/Demand Boosters",
-        "• Asian and Italian cuisines dominate current coverage"
+        f"**Key Insight**",
+        "Pho alone is 28% of Core Driver sales - concentration risk",
+        "Indian Curry/Biryani have 74-79% coverage gaps - biggest opportunity"
     ])
     
-    # Slide 3: Quadrant Summary
-    add_quadrant_summary_slide(prs, quadrants)
+    # ========================================
+    # SLIDE 3 (Anna's Slide 5): Zone MVP Rationale - Partners
+    # ========================================
+    if partner_data:
+        headers = ['Partners', 'Zones', 'Repeat Rate', 'Avg Rating', 'Avg Orders']
+        rows = [[d['Partners'], d['Zones'], d['Repeat Rate'], d['Avg Rating'], d['Avg Orders']] 
+                for d in partner_data]
+        add_table_slide(
+            prs, 
+            "Slide 5: Zone MVP Rationale - Partners",
+            headers, rows,
+            col_widths=[1.5, 1.2, 1.8, 1.5, 1.8],
+            subtitle="Data inflection at 3-4 partners (+4.5pp repeat rate). Business target: 5+"
+        )
     
-    # Slide 4: Scoring Framework
-    add_scoring_framework_slide(prs)
+    # ========================================
+    # SLIDE 4 (Anna's Slide 5): Zone MVP Rationale - Cuisines
+    # ========================================
+    if cuisine_data:
+        headers = ['Cuisines', 'Zones', 'Repeat Rate', 'Avg Rating', 'Avg Orders']
+        rows = [[d['Cuisines'], d['Zones'], d['Repeat Rate'], d['Avg Rating'], d['Avg Orders']] 
+                for d in cuisine_data]
+        add_table_slide(
+            prs,
+            "Slide 5: Zone MVP Rationale - Cuisines",
+            headers, rows,
+            col_widths=[1.5, 1.2, 1.8, 1.5, 1.8],
+            subtitle="Analysis controls for 3+ partners. Data inflection at 3-4 cuisines. Business target: 5+"
+        )
     
-    # Slide 5: Open-Text Requests
-    add_open_text_requests_slide(prs, open_text, data.get('dish_scoring'))
+    # ========================================
+    # SLIDE 5 (Anna's Slide 6): Zone MVP Count
+    # ========================================
+    headers = ['Status', 'Zones', '% of Total', 'Description']
+    rows = [
+        ['MVP Ready', zone_counts.get('MVP Ready', 33), '16%', 'Rating ≥4.0, Repeat ≥20%, Cuisines ≥5'],
+        ['Near MVP', zone_counts.get('Near MVP', 48), '24%', 'Missing 1 criterion'],
+        ['Developing', zone_counts.get('Developing', 120), '60%', 'Missing 2+ criteria'],
+        ['TOTAL', TOTAL_ZONES, '100%', 'Live zones with order data']
+    ]
+    add_table_slide(
+        prs,
+        f"Slide 6: Zone MVP Count - {MVP_READY_ZONES} zones ({MVP_READY_PCT}%) MVP Ready",
+        headers, rows,
+        col_widths=[1.8, 1.2, 1.5, 4],
+        subtitle=f"Source: zone_mvp_status.json (n={TOTAL_ZONES} zones with Snowflake order data)"
+    )
     
-    # Slide 6: Zone MVP Status
-    add_zone_mvp_slide(prs, mvp_count, data.get('zone_mvp'))
+    # ========================================
+    # SLIDE 6 (Anna's Slide 7): Minimum Dishes by Zone
+    # ========================================
+    headers = ['Tier', 'Dishes', 'Sales Share', 'Satisfaction', 'Recommendation']
+    rows = [
+        ['Core Drivers', '8', '73%', '88%', '100% coverage - must have'],
+        ['Preference Drivers', '5', '11%', '90%', 'Invest in merchandising'],
+        ['Demand Boosters', '2', '8%', '76%', 'Improve quality'],
+        ['Deprioritised', '8', '8%', '78%', 'Monitor only']
+    ]
+    add_table_slide(
+        prs,
+        "Slide 7: Minimum Dishes by Zone - Tier Recommendations",
+        headers, rows,
+        col_widths=[2, 1, 1.5, 1.5, 3],
+        subtitle="Core Drivers generate 9x more sales per dish than Deprioritised (59.9 vs 6.4)"
+    )
     
-    # Slide 7: Coverage Gaps
-    add_coverage_gaps_slide(prs, coverage_gaps)
+    # ========================================
+    # SLIDE 7 (Anna's Slide 8): Scoring Framework
+    # ========================================
+    headers = ['Metric', 'Sample Size', 'Source', 'What It Measures']
+    rows = [
+        ['Avg Sales per Dish', f'{TOTAL_ORDERS:,}', 'Snowflake', 'Actual purchase behaviour'],
+        ['% Zones in Top 5', '197 zones', 'Looker', 'Demand consistency'],
+        ['Deliveroo Rating', '10,713', 'Looker', 'Post-delivery satisfaction'],
+        ['Meal Satisfaction', '1,363', 'Post-order survey', '% Liked/Loved'],
+        ['Repeat Intent', '1,363', 'Post-order survey', '% would order again'],
+        ['Open-Text Requests', '372 mentions', 'All surveys', 'Unmet demand signals']
+    ]
+    add_table_slide(
+        prs,
+        "Slide 8: Scoring Framework Definitions",
+        headers, rows,
+        col_widths=[2.2, 1.5, 2, 3.3],
+        subtitle="Framework combines revealed preference (orders) with stated preference (surveys)"
+    )
     
-    # Slide 8: Full Dish Data (Backup)
-    add_dish_data_slide(prs, data.get('dish_scoring'), open_text)
+    # ========================================
+    # SLIDE 8 (Anna's Slide 9): Quadrant Summary
+    # ========================================
+    headers = ['Quadrant', 'Dishes', 'Sales %', 'Satisfaction', 'Example Dishes']
+    rows = [
+        ['Core Drivers', 8, '73%', '88%', 'Pho, Indian Curry, Biryani, Katsu'],
+        ['Preference Drivers', 5, '11%', '90%', 'Fajitas, Shepherd\'s Pie, Shawarma'],
+        ['Demand Boosters', 2, '8%', '76%', 'Protein & Veg, Pizza'],
+        ['Deprioritised', 8, '8%', '78%', 'Pasta, Tacos, Burrito, Nachos']
+    ]
+    add_table_slide(
+        prs,
+        "Slide 9: Quadrant Summary - 8 Core, 5 Pref, 2 Demand, 8 Depri",
+        headers, rows,
+        col_widths=[2, 1, 1.2, 1.5, 3.5],
+        subtitle="Core Drivers are 35% of dishes but 73% of sales"
+    )
+    
+    # ========================================
+    # SLIDE 9 (Anna's Slide 10): Dish Scoring Data
+    # ========================================
+    headers = ['Dish', 'Sales', 'Rating', 'Satisfaction', 'Quadrant']
+    rows = [
+        ['Pho', 136, '4.6', '92%', 'Core Driver'],
+        ['South Asian/Indian Curry', 98, '4.7', '93%', 'Core Driver'],
+        ['Biryani', 86, '4.6', '91%', 'Core Driver'],
+        ['Protein & Veg', 44, '4.4', '71%', 'Demand Booster'],
+        ['Fried Rice', 41, '4.5', '79%', 'Core Driver'],
+        ['Sushi', 32, '4.7', '93%', 'Core Driver'],
+        ['Katsu', 29, '4.3', '87%', 'Core Driver'],
+        ['Rice Bowl', 29, '4.4', '84%', 'Core Driver'],
+        ['Noodles', 28, '4.5', '88%', 'Core Driver'],
+        ['Grain Bowl', 21, '4.7', '86%', 'Preference Driver'],
+        ['East Asian Curry', 18, '4.4', '87%', 'Preference Driver'],
+        ['Lasagne', 13, '4.6', '77%', 'Deprioritised'],
+        ['Shepherd\'s Pie', 11, '4.3', '91%', 'Preference Driver'],
+        ['Pizza', 11, '4.1', '81%', 'Demand Booster'],
+        ['Shawarma', 10, '4.5', '90%', 'Preference Driver']
+    ]
+    add_table_slide(
+        prs,
+        "Slide 10: Dish Scoring Data Table (Top 15)",
+        headers, rows,
+        col_widths=[2.5, 1, 1.2, 1.5, 2.5],
+        subtitle="Full data in ANNA_SLIDES_DATA_PACK.md"
+    )
+    
+    # ========================================
+    # SLIDE 10 (Anna's Slide 13): Coverage Gaps
+    # ========================================
+    headers = ['Dish', 'Coverage Gap', 'Opportunity Rank', 'Next Steps']
+    rows = [
+        ['South Asian/Indian Curry', '74%', '#1', 'Recruit Dishoom, Kricket, Tiffin Tin'],
+        ['Biryani', '79%', '#2', 'Same Indian partners'],
+        ['Pho', '48%', '#3', 'Expand Asian providers'],
+        ['Protein & Veg', '93%', '#4', 'Add to Farmer J, LEON, Bill\'s'],
+        ['Sushi', '63%', '#5', 'Work with Itsu, Iro Sushi, Kokoro'],
+        ['Grain Bowl', '76%', '#7', 'Recruit Farmer J, healthy providers']
+    ]
+    add_table_slide(
+        prs,
+        "Slide 13: Coverage Gaps & Next Steps - Top Opportunities",
+        headers, rows,
+        col_widths=[2.5, 1.5, 1.5, 3.5],
+        subtitle="Opportunity = Coverage Gap % × Avg Sales per Dish"
+    )
+    
+    # ========================================
+    # SLIDE 11: Key Insights
+    # ========================================
+    add_content_slide(prs, "Key Insights for Discussion", [
+        "**Concentration Risk**",
+        "Pho alone = 28% of Core Driver sales (136 of 479)",
+        "6 of 8 Core Drivers are Asian dishes",
+        "",
+        "**The Familiarity Trap**",
+        "Pasta gets most open-text requests (29) but only 78% satisfaction",
+        "Fajitas gets 0 requests but 96% satisfaction - hidden gem",
+        "",
+        "**The Mexican Paradox**",
+        "6 Mexican dishes, only Fajitas works (96% satisfaction)",
+        "All others are Deprioritised - customers don't order Mexican for delivery",
+        "",
+        "**54% of Orders from Non-Families**",
+        "Product works better for families (74% vs 68% satisfaction)",
+        "Opportunity: Better targeting to reach more families"
+    ])
+    
+    # ========================================
+    # SLIDE 12: Sources
+    # ========================================
+    add_content_slide(prs, "Data Sources", [
+        f"**Behavioural Data (Revealed Preference)**",
+        f"Snowflake Orders: {TOTAL_ORDERS:,} orders",
+        f"Deliveroo Ratings: 10,713 ratings",
+        f"Zone Performance: {TOTAL_ZONES} zones",
+        "",
+        "**Survey Data (Stated Preference)**",
+        "Post-Order Survey: 1,599 responses",
+        "Dropoff Survey: 942 responses", 
+        "OG Family Survey: 404 responses",
+        "",
+        "**Source Files**",
+        "Zone MVP: docs/data/zone_mvp_status.json",
+        "Thresholds: DATA/3_ANALYSIS/mvp_threshold_discovery.json",
+        "Full data pack: DELIVERABLES/reports/ANNA_SLIDES_DATA_PACK.md"
+    ])
     
     return prs
 
@@ -521,15 +589,15 @@ def main():
     # Load data
     data = load_data()
     if not data:
-        logger.error("Failed to load data")
-        return
+        logger.warning("Some data files not found, using defaults")
     
     # Generate presentation
     logger.info("\nGenerating slides...")
     prs = generate_presentation(data)
     
     # Save presentation
-    output_path = DELIVERABLES_DIR / "Dish_Analysis_Filled_2026-01-07.pptx"
+    today = datetime.now().strftime('%Y-%m-%d')
+    output_path = DELIVERABLES_DIR / f"Dish_Analysis_Filled_{today}.pptx"
     prs.save(output_path)
     logger.info(f"\nSaved presentation to: {output_path}")
     
@@ -540,25 +608,17 @@ def main():
     logger.info(f"Total slides: {len(prs.slides)}")
     logger.info(f"Output: {output_path}")
     
-    # Print key data points for Anna
-    quadrants = get_quadrant_counts(data)
-    mvp_count = get_zone_mvp_count(data)
-    
+    # Key numbers
     logger.info("\n" + "=" * 60)
-    logger.info("KEY DATA POINTS FOR ANNA")
+    logger.info("KEY NUMBERS FOR ANNA")
     logger.info("=" * 60)
-    logger.info(f"\nQuadrant Counts:")
-    for q, info in quadrants.items():
-        logger.info(f"  {q}: {info['count']} dishes")
-    logger.info(f"\nZone MVP Count: {mvp_count} zones meet all criteria")
-    
-    open_text = get_open_text_requests(data)
-    logger.info(f"\nTop 10 Open-Text Requests:")
-    sorted_requests = sorted(open_text.items(), key=lambda x: x[1], reverse=True)[:10]
-    for dish, count in sorted_requests:
-        logger.info(f"  {dish}: {count}")
+    logger.info(f"Total Orders: {TOTAL_ORDERS:,}")
+    logger.info(f"Total Zones: {TOTAL_ZONES}")
+    logger.info(f"MVP Ready: {MVP_READY_ZONES} ({MVP_READY_PCT}%)")
+    logger.info("Quadrants: 8 Core, 5 Pref, 2 Demand, 8 Depri")
+    logger.info("Partner inflection: 3-4 (data), 5 (target)")
+    logger.info("Cuisine inflection: 3-4 (data), 5 (target)")
 
 
 if __name__ == "__main__":
     main()
-

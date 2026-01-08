@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "created": "2025-01-08",
+    "description": "Cuisine performance metrics including repeat rates and habit formation",
+    "sources": ["Snowflake Orders", "Consumer Behavior Analysis"]
+  },
+  "cuisines": [
+    {
+      "cuisine": "Indian",
+      "habit_role": "Retention",
+      "metrics": {
+        "orders": 18234,
+        "repeat_rate": "34.8%",
+        "first_order_pct": "12%",
+        "reorder_pct": "23%",
+        "avg_order_value": "£26.40"
+      },
+      "insight": "Strong retention driver - customers who try Indian are 23% more likely to reorder"
+    },
+    {
+      "cuisine": "Chinese",
+      "habit_role": "Retention",
+      "metrics": {
+        "orders": 15876,
+        "repeat_rate": "32.1%",
+        "first_order_pct": "14%",
+        "reorder_pct": "19%",
+        "avg_order_value": "£24.80"
+      },
+      "insight": "Reliable retention, consistent performer across all segments"
+    },
+    {
+      "cuisine": "Italian",
+      "habit_role": "Acquisition",
+      "metrics": {
+        "orders": 14523,
+        "repeat_rate": "28.9%",
+        "first_order_pct": "24%",
+        "reorder_pct": "15%",
+        "avg_order_value": "£25.20"
+      },
+      "insight": "Gateway cuisine - 24% of first orders, strong acquisition driver"
+    },
+    {
+      "cuisine": "British",
+      "habit_role": "Balanced",
+      "metrics": {
+        "orders": 12890,
+        "repeat_rate": "29.4%",
+        "first_order_pct": "18%",
+        "reorder_pct": "16%",
+        "avg_order_value": "£25.60"
+      },
+      "insight": "Balanced acquisition/retention, comfort food appeal"
+    },
+    {
+      "cuisine": "American",
+      "habit_role": "Acquisition",
+      "metrics": {
+        "orders": 11234,
+        "repeat_rate": "26.7%",
+        "first_order_pct": "22%",
+        "reorder_pct": "12%",
+        "avg_order_value": "£24.40"
+      },
+      "insight": "Strong acquisition through kids appeal (burgers, chicken)"
+    },
+    {
+      "cuisine": "Mexican",
+      "habit_role": "Retention",
+      "metrics": {
+        "orders": 6543,
+        "repeat_rate": "31.2%",
+        "first_order_pct": "8%",
+        "reorder_pct": "17%",
+        "avg_order_value": "£25.10"
+      },
+      "insight": "Lower awareness but high retention when tried"
+    },
+    {
+      "cuisine": "Middle Eastern",
+      "habit_role": "Retention",
+      "metrics": {
+        "orders": 4321,
+        "repeat_rate": "30.5%",
+        "first_order_pct": "6%",
+        "reorder_pct": "15%",
+        "avg_order_value": "£24.90"
+      },
+      "insight": "Underexposed but strong retention metrics"
+    }
+  ]
+}

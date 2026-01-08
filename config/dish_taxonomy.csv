@@ -1,0 +1,156 @@
+item_id,high_level_dish,granular_dish,brand,item,cuisine,protein
+1,Biryani,Biryani,Chaska,Chicken Biryani For The Table ( 2portions Chicken Biryani served with Dal Raita and Papads ),Indian,Chicken
+2,Biryani,Biryani,Chaska,Chicken Biryani For The Table,Indian,Chicken
+3,Biryani,Biryani,Chaska,Veg Biryani For The Table ( 2portions Biryani served with Dal Raita and Papads ),Indian,Vegetarian
+4,Biryani,Biryani,Dishoom,Chicken Berry Britannia - for the family,Indian,Chicken
+5,Biryani,Biryani,Dishoom,Awadhi Jackfruit Biryani - for the family,Indian,Jackfuit
+6,Biryani,Biryani,Tadka House,1000g Biryani 4 Onion Bhaji & 1 Pesawari Naan & Poppadoms,Indian,Vegetarian
+7,Burrito / Burrito Bowl,Burrito / Burrito Bowl,Tula Ireland,Tula Main Quesadilla Kids Quesadilla Bag of Corn Tortilla Chips & Dip,Mexican,Beef Pork Chicken
+8,Burrito / Burrito Bowl,Burrito / Burrito Bowl,Tula Ireland,Tula Main Tula Nachos & Kids Quesadilla Family Dinneroo Feast,Mexican,Beef Pork Chicken
+9,Chilli,Chilli,Las Iguanas,Mixed Bundle For Four,Mexican,Beef Sweet Potato & Squash
+10,Chilli,Chilli,Las Iguanas,Chilli Bundle for Three,Mexican,Beef Sweet Potato & Squash
+11,Chilli,Chilli,Las Iguanas,Chilli Bundle for Four,Mexican,Beef Sweet Potato & Squash
+12,East Asian Curry,Massaman Curry,Asia Villa,4x Massaman Curry with Rice and Tofu,Asian,Tofu
+13,East Asian Curry,Thai Green Curry,Bill's,Family Chicken Thai Green Curry,Asian,Chicken
+14,East Asian Curry,Thai Green Curry,Bill's,Family Cauliflower Thai Green Curry,Asian,Cauliflower
+15,East Asian Curry,Thai Green Curry Thai Red Curry,Giggling Squid,Family Thai Curry Bundle,Asian,Chicken
+16,East Asian Curry,Other Curry,Giggling Squid,Family Spicy Bundle,Asian,Chicken
+17,East Asian Curry,Other Curry,Pho,It's a curry night,Asian,Chicken Beef Tofu. Mushroom
+18,East Asian Curry,Massaman Curry,Ting Thai,Massaman Curry Family Meal,Asian,Chicken Beef Prawn
+19,East Asian Curry,Yellow Curry,Ting Thai,Yellow Curry Family Meal,Asian,Chicken Beef Prawn
+20,East Asian Curry,Other Curry,Wagamama,family chicken coconut + lemongrass curry,Asian,Chicken
+21,East Asian Curry,Other Curry,Wagamama,family tofu coconut + lemongrass curry,Asian,Tofu
+22,East Asian Curry,Raisukare Curry,Zumuku,Chicken Raisukare,Asian,Chicken Tofu
+23,Fajitas,Fajitas,Las Iguanas,Fajitas Family of Three Bundle,Mexican,Mushroom Chicken Prawn
+24,Fajitas,Fajitas,Las Iguanas,Fajitas Family of Four Bundle,Mexican,Mushroom Chicken Prawn
+25,Katsu,Katsu,Itsu,little rice'bowls family bundle,Asian,Chicken
+26,Fried Rice,Special Fried Rice,Asia Villa,4x Asia Villa Special Fried Rice with Salt and Pepper Chicken,Asian,Chicken
+27,Katsu,Katsu,Itsu,hot faves family bundle,Asian,Chicken
+28,Fried Rice,Sweet & Sour Fried Rice,TUK TUK-SGroup,Sweet and Sour Chicken & Egg Fried Rice,Asian,Chicken
+29,Fried Rice,Stir-Fried Rice,Xian Street Food,Chicken Fried Rice Family Meal (Chicken Stir-Fried Rice + Chilli Garlic Broccoli + Small Crispy Chilli Chicken),Asian,Chicken
+30,Fried Rice,Stir-Fried Rice,Xian Street Food,Chicken Fried Rice Family Meal ( Chicken Stir-Fried Rice + Chilli Garlic Broccoli + Small Crispy Chilli Chicken),Asian,Chicken
+31,Grain Bowl,Grain Bowl,atis,Build Your Own Family Feast,Healthy,Chicken Tofu
+32,Grain Bowl,Grain Bowl,atis,Chicken Family Feast,Healthy,Chicken
+33,Grain Bowl,Grain Bowl,atis,Tofu Family Feast,Healthy,Tofu
+34,Grain Bowl,Grain Bowl,Farmer J,Family Chicken Dinner,Healthy,Chicken
+35,Grain Bowl,Grain Bowl,Farmer J,Mix & Match Family Dinner,Healthy,Vegetarian
+36,Grain Bowl,Grain Bowl,Farmer J,Family Veggie Dinner,Healthy,Vegetarian
+37,Grain Bowl,Grain Bowl,Remedy Kitchen,Salmon Dinneroo Platter,Healthy,Salmon
+38,Grain Bowl,Grain Bowl,Remedy Kitchen,The Remedy Dinneroo Platter,Healthy,Chicken
+39,Grain Bowl,Grain Bowl,Remedy Kitchen,The Filler Dinneroo Platter,Healthy,Sweet Potato
+40,Grain Bowl,Shawarma,Yacob's Kitchen,Chicken Shawarma Dinneroo Platter,Middle Eastern,Chicken
+41,Grain Bowl,Grain Bowl,Yacob's Kitchen,Falafel Dinneroo Platter,Middle Eastern,Falafel
+42,Grain Bowl,Grain Bowl,Yacob's Kitchen,Vegan Dinneroo Platter,Middle Eastern,Vegetarian
+43,Katsu,Katsu,Banana Tree,Katsu Rice Bowl Bundle For Four,Asian,Chicken
+44,Katsu,Katsu,Iro Sushi,Katsu Family Feast,Asian,Chicken
+45,Noodles,Korean Noodles Teriyaki Noodles Noodle Soup,Itsu,hot faves family bundle,Asian,Chicken
+46,Katsu,Katsu,Kokoro,Kokoro Family Bundle,Asian,Chicken
+47,Noodles,Teriyaki Noodles Sweet Chilli Noodles Sweet Sour Noodles Korean Chilli Noodles,Kokoro,Kokoro Family Bundle,Asian,Chicken
+48,Katsu,Katsu,Wagamama,family chicken katsu,Asian,Chicken
+49,Katsu,Katsu,Wagamama,family yasai katsu,Asian,Sweet Potato Aubergine & Squash
+50,Katsu,Katsu,Zumuku,Chicken or Tofu Katsu Curry,Asian,Chicken Tofu
+51,Katsu,Katsu,Zumuku Sushi,Chicken Katsu Curry,Asian,Chicken
+52,Lasagne,Lasagne,Bella Italia,Lasagne Family Bundle,Italian,Beef
+53,Lasagne,Lasagne,Cacciari's,Lasagna Suitable for a Family of 4,Italian,Beef
+54,Lasagne,Lasagne,SOYO-SGroup,Family Roasted Vegetable lasagne,Italian,Vegetarian
+55,Quesadilla,Quesadilla,Tula Ireland,Family Quesadilla Dinneroo Feast,Mexican,Vegetarian
+56,Nachos,Nachos,Zambrero UK,Family Nachos Kit,Mexican,Beef Chicken
+57,Noodles,Chow Mein,Asia Villa,4x Traditional Chow Mein with Sweet Chili Chicken,Asian,Chicken
+58,Noodles,Pad Thai,Asia Villa,4x Family Style Phad Thai with Korean Chicken,Asian,Chicken
+59,Noodles,Egg Fried Noodles,Asia Villa,4x Family Style Egg Fried Noodle with Korean Chicken,Asian,Chicken
+60,Noodles,Pad Thai,Asia Villa,4x  Family Style Phad Thai with Sweet Chilli Chicken,Asian,Chicken
+61,Noodles,Pad Thai,Banana Tree,Pad Thai Bundle For Four,Asian,Chicken Tofu Prawn
+62,Noodles,Yakisoba,Iro Sushi,Veggie Wok Party,Asian,Vegetarian
+63,Fajitas,Fajitas,Las Iguanas,Mixed Bundle For Four,Mexican,Mushroom Chicken Prawn
+64,Pasta,Lasagne Penne,Milano,Family Favourites Feast,Italian,Beef Chicken Tomato
+65,Fried Rice,Wok-Fried Rice,Pho,Fresh from the wok,Asian,Chicken
+66,Noodles,Rice Noodles,SOYO-SGroup,Family Rice noodles stir fried,Asian,Vegetarian
+67,Noodles,Pad Thai,Ting Thai,Pad Thai Family Meal,Asian,Chicken Beef Prawn
+68,Noodles,Wok-Fried Noodles,Ting Thai,Mee Gratiam Family Meal,Asian,Chicken Beef Prawn Duck
+69,Noodles,Yakisoba,Zumuku,Chicken Yakisoba,Asian,Chicken
+70,Other,Maqluba,Shaku Maku,Shaku Maku Family Platter (Maqluba + chicken rolls + fatoush salad + hummus + baba ghanoush with bread),Middle Eastern,Chicken
+71,Other,Chicken Wings,TUK TUK-SGroup,Wings Fries & Beansprout Salad,Asian,Chicken
+72,Other,Mezze,Umi Falafel,Family Mezze Feast ( Lentil soup + hummus + baba ghanoush + 20pc falafel +Haloumi sticks + bread and tahini sauce ),Middle Eastern,Falafel Halloumi
+73,Pasta,Lasagne Mac & Cheese Rigatoni Alfredo,Bella Italia,Mix & Match Family Bundle,Italian,Chicken Beef
+74,Pasta,Alfredo,Bella Italia,Chicken Alfredo Family Bundle,Italian,Chicken
+75,Pasta,Mac & Cheese,Bella Italia,Mac & Cheese Family Bundle,Italian,Vegetarian
+76,Pasta,Rigatoni,Bella Italia,Tomato & Red Pepper Rigatoni Family Bundle,Italian,Tomato Red Pepper
+77,Pasta,Mac & Cheese,Bill's,Family Mac N Cheese with Brisket,Italian,Beef
+78,Pasta,Mac & Cheese,Bill's,Family Mac N Cheese,Italian,Vegetarian
+79,Pasta,Mac & Cheese,Bill's,Family Mac N Cheese with Bacon,Italian,Pork
+80,Pasta,Mac & Cheese,Bill's,Family Mac N Cheese with Chicken,Italian,Chicken
+81,Pasta,Penne,Cacciari's,Penne Porcini and Wild Mushrooms Suitable for a Family of 4,Italian,Mushroom
+82,Pasta,Penne,Cacciari's,Penne with Traditional basil pesto Suitable for a Family of 4,Italian,Vegetarian
+83,Pasta,Lasagne Penne,Milano,Family Pasta Feast,Italian,Beef Chicken Tomato
+84,Noodles,Wok-Fried Noodles,Pho,Fresh from the wok,Asian,Chicken Tofu Mushroom
+85,Pasta,Rose Pasta,PIZAZA-SGroup,Family Rose Pasta,Italian,Tomato
+86,Pasta,Alfredo,PIZAZA-SGroup,Family Alfredo Pasta,Italian,Mushroom
+87,Pasta,Penne,PIZAZA-SGroup,Family Tomato Sauce Pasta,Italian,Tomato
+88,Pasta,Lasagne Penne,PizzaExpress,Family Pasta Feast,Italian,Beef Chicken Tomato
+89,Pasta,Lasagne Penne,PizzaExpress,Family Favourites Feast,Italian,Beef Chicken Tomato
+90,Pasta,Bolognese,Prezzo,Super Veg Bolognese Rigatoni,Italian,Beef
+91,Pasta,Rigatoni,Prezzo,Super Green Pesto Rigatoni,Italian,Vegetarian
+92,Pasta,Rigatoni,Prezzo,Marinara & Hidden Veg Rigatoni,Italian,Tomato
+93,Pasta,Rigatoni Carbonara,Prezzo,Family Dinneroo,Italian,Tomato Chicken Pork
+94,Pasta,Pasta Bake,SOYO-SGroup,Family Rose Pasta Bake,Italian,Tomato
+95,Pasta,Pasta Bake,SOYO-SGroup,Family Pasta Bake,Italian,Vegetarian
+96,Pho,Pho,Pho,Pho the whole fam,Asian,Chicken Beef Tofu Mushroom
+97,Pizza,Pizza,Milano,Family Favourites Feast,Italian,Pork
+98,Pizza,Pizza,Milano,Family Pizza Feast,Italian,Pork
+99,Pizza,Pizza,PizzaExpress,Family Favourites Feast,Italian,Pork
+100,Pizza,Pizza,PizzaExpress,Family Pizza Feast,Italian,Pork
+101,Pizza,Pizza,Prezzo,Family Dinneroo,Italian,Pork
+102,Other,Other,Zaatar Rathmines,Pizza Feast ( Cheese & Zaatar manaeesh + Margharita pizza + hummus + tabouleh),Middle Eastern,Vegetarian
+103,Poke,Poke,Itsu,poke'bowl family selection,Asian,Salmon Chicken Prawn
+104,Protein & Veg,Protein & Veg,Cocotte,Family Feast One,Healthy,Chicken
+105,Protein & Veg,Protein & Veg,Cocotte,Family Feast Two,Healthy,Chicken
+106,Protein & Veg,Protein & Veg,Cocotte,Family Veggie Feast,Healthy,PB Chicken
+107,Protein & Veg,Protein & Veg,Shaku Maku,Grill & Mezze Family Feast (Grilled Chicken + chicken rolls + fatoush salad + hummus + baba ghanoush with bread and rice),Middle Eastern,Chicken
+108,Rice Bowl,Teriyaki Rice Bowl,Banana Tree,Mix n Match Rice Bowl Bundle For Four,Asian,Chicken Tofu
+109,Rice Bowl,Teriyaki Rice Bowl,Banana Tree,Teriyaki Rice Bowl Bundle For Four,Asian,Chicken Tofu
+110,Rice Bowl,Other Rice Bowl,Banana Tree,Firecracker Chicken Rice Bowl Bundle For Four,Asian,Chicken
+111,Rice Bowl,Other Rice Bowl,Giggling Squid,Family Sticky Chicken/NO Chicken Bundle,Asian,Chicken
+112,Rice Bowl,Thai Rice Bowl Teriyaki Rice Bowl,Itsu,hot faves family bundle,Asian,Chicken
+113,Rice Bowl,Thai Rice Bowl Teriyaki Rice Bowl,Itsu,little rice'bowls family bundle,Asian,Chicken
+114,Rice Bowl,Teriyaki Rice Bowl Sweet Chilli Rice Bowl Sweet & Sour Rice Bowl Korean Chilli Rice Bowl,Kokoro,Kokoro Family Bundle,Asian,Chicken
+115,Grain Bowl,Grain Bowl,LEON,Big Bundle for 4,Healthy,Falafal Black Bean Chicken
+116,Grain Bowl,Grain Bowl,LEON,Family Favourites Feast,Healthy,Falafal Black Bean Chicken
+117,Rice Bowl,Other Rice Bowl,Pho,Fresh from the wok,Asian,Tofu & Grilled Veg Chicken
+118,Rice Bowl,Other Rice Bowl,Taste Of Hong Kong-DCN,Family Meal,Asian,Duck Pork Chicken
+119,Rice Bowl,Other Rice Bowl,TUK TUK-SGroup,Korean Bulgogi and Steamed Rice,Asian,Beef
+120,Rice Bowl,Other Rice Bowl,Xian Street Food,Honey Chicken Family Meal (Honey Chicken (main) + Curry Chicken + Fried Rice + boiled rice ),Asian,Chicken
+121,Rice Bowl,Sweet & Sour Rice Bowl,Xian Street Food,Sweet and Sour Chicken Family Meal,Asian,Chicken
+122,Rice Bowl,Other Rice Bowl,Xian Street Food,Honey Chicken and Stir Fry Veggie Family Meal ( Honey Chicken (main) + Fried Rice + Stir-Fry Mixed Vegetables + 2 Veg Spring Rolls),Asian,Chicken
+123,Rice Bowl,Other Rice Bowl,Xian Street Food,Honey Chicken and Stir Fry Veggie Family Meal  ( Honey Chicken (main) + Fried Rice + Stir-Fry Mixed Vegetables + 2 Veg Spring Rolls),Asian,Chicken
+124,Rice Bowl,Sweet & Sour Rice Bowl,Xian Street Food,Sweet and Sour Chicken Family Meal (Sweet and Sour Chicken +  Boiled rice + Dumpling + 4 in 1),Asian,Chicken
+125,Rice Bowl,Other Rice Bowl,Xian Street Food,Ultimate Tofu Platter (Crispy Tofu + Curry Tofu (main) + Boiled Rice + Tofu 4 in 1),Asian,Tofu
+126,Rice Bowl,Other Rice Bowl,Xian Street Food,Honey Chicken and Stir Fry Veggie Family Meal (Honey Chicken (main) + Fried Rice + Stir-Fry Mixed Vegetables + 2 Veg Spring Rolls),Asian,Chicken
+127,Rice Bowl,Other Rice Bowl,Xian Street Food,Honey Chicken Family Meal (Honey Chicken (main) + Curry Chicken + Fried Rice + Boiled Rice),Asian,Chicken
+128,Rice Bowl,Other Rice Bowl,Xian Street Food,Honey Chicken Family Meal ( Honey Chicken (main) + Curry Chicken + Fried Rice + Boiled Rice ),Asian,Chicken
+129,Burrito / Burrito Bowl,Burrito / Burrito Bowl,Zambrero UK,Family Rice Bowl Kit,Mexican,Beef Chicken
+130,Rice Bowl,Teriyaki Rice Bowl,Zumuku,Rice Bowl - Salmon Teriyaki,Asian,Salmon
+131,Rice Bowl,Teriyaki Rice Bowl,Zumuku,Rice Bowl - Chicken Teriyaki,Asian,Chicken
+132,Grain Bowl,Grain Bowl,The Salad Project,The Caesar Family Style,Healthy,Chicken
+133,Grain Bowl,Grain Bowl,The Salad Project,The GOAT Family Style,Healthy,Chicken
+134,Grain Bowl,Grain Bowl,The Salad Project,The Satay Family Style,Healthy,Chicken
+135,Shawarma,Shawarma,Bill's,Family Chicken Shawarma,Middle Eastern,Chicken
+136,Shawarma,Shawarma,Bill's,Family Halloumi Shawarma,Middle Eastern,Halloumi
+137,Shawarma,Shawarma,Bill's,Family Shiitake Mushroom Shawarma,Middle Eastern,Mushroom
+138,Shepherd's Pie,Shepherd's Pie,Bill's,Family Shepherd's Pie,British,Beef
+139,South Asian / Indian Curry,Butter Chicken Curry,Chaska,Home-Style Butter Chicken Meal ( 16oz Butter Chicken 12oz Tadka Dal 1 Jeera Aloo and 2 Portion Fluffy Rice),Indian,Chicken
+140,South Asian / Indian Curry,Other Curry,Chaska,Veg Family Feast ( 16oz paneer labaabdaar 12oz dal tadka 1 jeera aloo and 2 portion rice),Indian,Paneer
+141,South Asian / Indian Curry,Other Curry,Dishoom,Dishoom Chicken Ruby - for the family,Indian,Chicken
+142,South Asian / Indian Curry,Mattar Paneer Curry,Dishoom,Dishoom Mattar Paneer - for the family,Indian,Paneer
+143,South Asian / Indian Curry,Butter Chicken Curry,Kricket,Butter Chicken,Indian,Chicken
+144,South Asian / Indian Curry,Other Curry,Kricket,Keralan Prawn,Indian,Prawn
+145,South Asian / Indian Curry,Mattar Paneer Curry,Kricket,Matar Paneer,Indian,Paneer
+146,South Asian / Indian Curry,Other Curry,Saravana Bhavan,Saravana Bhavan Family Bundle,Indian,Paneer
+147,South Asian / Indian Curry,Tikka Masala Curry,Tadka House,1000g Chicken Tikka Masala 2 Boiled Rice 1 Chips 1  Plain Naan & Poppadoms,Indian,Chicken
+148,South Asian / Indian Curry,Butter Chicken Curry,Tadka House,1000g Butter Chicken 2 Rice 1 Chips 1 Naan & Poopadoms,Indian,Chicken
+149,South Asian / Indian Curry,Other Curry,Tiffin Tin,Family Royal Forest Curry,Indian,Chicken Mushroom
+150,South Asian / Indian Curry,Aloo Mutter Curry,Tiffin Tin,Family Chicken Aloo Mutter,Indian,Chicken
+151,South Asian / Indian Curry,Other Curry,Tiffin Tin,Family Mixed Vegetable Curry,Indian,Vegetarian
+152,Sushi,Sushi,Itsu,sushi family feast,Asian,Salmon
+153,Tacos,Tacos,Tula Ireland,Tula Main Quesadilla Kids Quesadilla Bag of Corn Tortilla Chips & Dip,Mexican,Beef Pork Chicken
+154,Tacos,Tacos,Tula Ireland,Tula Main Tula Nachos & Kids Quesadilla Family Dinneroo Feast,Mexican,Beef Pork Chicken
+155,Tacos,Tacos,Zambrero UK,Family Tacos Kit,Mexican,Beef Chicken

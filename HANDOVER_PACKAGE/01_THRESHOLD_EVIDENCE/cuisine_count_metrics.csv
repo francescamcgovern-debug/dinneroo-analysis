@@ -1,0 +1,6 @@
+bucket,zones,repeat_rate,repeat_rate_n,avg_rating,avg_rating_n,order_volume,kids_happy,kids_happy_n,liked_loved,liked_loved_n,enough_food,enough_food_n,food_hot,food_on_time,filter_applied,data_source_behavioral,data_source_survey
+1-2,7,18.3%,2084,4.25,356,223.6,67.4%,16,76.8%,30,67.4%,30,58.2%,81.9%,Only zones with 3+ partners,Snowflake,Post-order survey
+3-4,54,19.1%,20132,4.35,3693,296.1,76.2%,150,90.4%,333,76.4%,333,70.4%,86.7%,Only zones with 3+ partners,Snowflake,Post-order survey
+5-6,24,23.3%,13763,4.40,2564,490.8,66.9%,142,81.8%,313,77.6%,313,62.1%,79.8%,Only zones with 3+ partners,Snowflake,Post-order survey
+7+,17,23.8%,15306,4.47,3146,802.1,70.4%,116,85.1%,279,77.6%,279,63.9%,88.2%,Only zones with 3+ partners,Snowflake,Post-order survey
+

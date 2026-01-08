@@ -1,0 +1,323 @@
+{
+  "_description": "Two-level cuisine hierarchy: Core 7 business categories mapped to granular sub-cuisines for analysis",
+  "_note": "Core 7 are Anna's established categories used for zone MVP criteria. Sub-cuisines allow granular performance analysis.",
+  "_source_of_truth": "Anna's categorisations from Dish Analysis Dec-25, extended with granular sub-cuisines",
+  "_canonical_definitions": "scripts/utils/definitions.py - all agents MUST import from this module for consistency",
+  "_see_also": "config/cuisine_scoring.json for scoring weights, DOCUMENTATION/AGENTS/CUISINE_GAP_AGENT.md for methodology",
+  
+  "core_cuisines": {
+    "_description": "Anna's 7 core cuisine categories - the business framework for zone MVP",
+    "required_for_mvp": ["Asian", "Italian", "Indian", "Healthy", "Mexican"],
+    "optional": ["Middle Eastern", "British"],
+    "all": ["Asian", "Italian", "Indian", "Healthy", "Mexican", "Middle Eastern", "British"]
+  },
+  
+  "hierarchy": {
+    "Asian": {
+      "display_name": "Asian",
+      "mvp_relevance": "required",
+      "description": "East and Southeast Asian cuisines - high volume, strong family appeal",
+      "sub_cuisines": [
+        {
+          "id": "japanese",
+          "display_name": "Japanese",
+          "example_dishes": ["Katsu", "Sushi", "Teriyaki", "Ramen", "Gyoza"],
+          "key_partners": ["Wagamama", "Itsu", "Kokoro", "Iro Sushi"],
+          "notes": "Highest volume sub-cuisine, strong kid appeal with katsu"
+        },
+        {
+          "id": "thai",
+          "display_name": "Thai",
+          "example_dishes": ["Pad Thai", "Green Curry", "Spring Rolls", "Satay"],
+          "key_partners": ["Giggling Squid", "Ting Thai"],
+          "notes": "Strong adult appeal, fresh/healthy perception"
+        },
+        {
+          "id": "vietnamese",
+          "display_name": "Vietnamese",
+          "example_dishes": ["Pho", "Banh Mi", "Summer Rolls", "Vermicelli Bowls"],
+          "key_partners": ["Pho"],
+          "notes": "Highest orders/zone ratio, excellent repeat rate"
+        },
+        {
+          "id": "chinese",
+          "display_name": "Chinese",
+          "example_dishes": ["Sweet & Sour", "Fried Rice", "Chow Mein", "Dim Sum"],
+          "key_partners": ["Asia Villa", "Xian Street Food"],
+          "notes": "Supply gap - high demand but limited Dinneroo availability"
+        },
+        {
+          "id": "korean",
+          "display_name": "Korean",
+          "example_dishes": ["Bibimbap", "Korean BBQ", "Bulgogi", "Kimchi"],
+          "key_partners": [],
+          "notes": "Not currently on Dinneroo - expansion opportunity"
+        },
+        {
+          "id": "pan_asian",
+          "display_name": "Pan-Asian",
+          "example_dishes": ["Asian Fusion", "Rice Bowls", "Noodle Bowls"],
+          "key_partners": ["Banana Tree"],
+          "notes": "Flexible category covering cross-Asian fusion"
+        }
+      ]
+    },
+    
+    "Italian": {
+      "display_name": "Italian",
+      "mvp_relevance": "required",
+      "description": "Pizza, pasta, and Italian classics - universal kid appeal",
+      "sub_cuisines": [
+        {
+          "id": "pizza_focused",
+          "display_name": "Pizza-focused",
+          "example_dishes": ["Margherita", "Pepperoni", "Garlic Bread", "Dough Balls"],
+          "key_partners": ["PizzaExpress", "Prezzo"],
+          "notes": "Highest zone coverage, universal family favourite"
+        },
+        {
+          "id": "pasta_focused",
+          "display_name": "Pasta-focused",
+          "example_dishes": ["Spaghetti Bolognese", "Carbonara", "Lasagne", "Mac & Cheese"],
+          "key_partners": ["Bella Italia", "Milano"],
+          "notes": "Strong kid-friendly option, comfort food positioning"
+        },
+        {
+          "id": "premium_italian",
+          "display_name": "Premium Italian",
+          "example_dishes": ["Fresh Pasta", "Risotto", "Italian Sharing Plates"],
+          "key_partners": [],
+          "notes": "Higher price point, more adult-focused"
+        }
+      ]
+    },
+    
+    "Indian": {
+      "display_name": "Indian",
+      "mvp_relevance": "required",
+      "description": "Curries, biryanis, and Indian classics - great portions, mild options",
+      "sub_cuisines": [
+        {
+          "id": "north_indian",
+          "display_name": "North Indian",
+          "example_dishes": ["Tikka Masala", "Korma", "Butter Chicken", "Naan", "Biryani"],
+          "key_partners": ["Dishoom", "Tiffin Tin"],
+          "notes": "Most common sub-cuisine, mild options for kids"
+        },
+        {
+          "id": "south_indian",
+          "display_name": "South Indian",
+          "example_dishes": ["Dosa", "Idli", "Sambar", "Uttapam"],
+          "key_partners": ["Saravana Bhavan"],
+          "notes": "More vegetarian options, different flavour profile"
+        },
+        {
+          "id": "pan_indian",
+          "display_name": "Pan-Indian",
+          "example_dishes": ["Mixed Curry Selection", "Thali", "Tandoori"],
+          "key_partners": ["Kricket"],
+          "notes": "Modern Indian, broader menu appeal"
+        }
+      ]
+    },
+    
+    "Healthy": {
+      "display_name": "Healthy",
+      "mvp_relevance": "required",
+      "description": "Balanced, nutritious options - grain bowls, salads, protein-focused",
+      "sub_cuisines": [
+        {
+          "id": "grain_bowls",
+          "display_name": "Grain Bowls",
+          "example_dishes": ["Quinoa Bowl", "Farro Bowl", "Buddha Bowl", "Poke Bowl"],
+          "key_partners": ["LEON", "Farmer J", "atis"],
+          "notes": "Strong balanced meal perception, popular with parents"
+        },
+        {
+          "id": "salads",
+          "display_name": "Salads",
+          "example_dishes": ["Caesar Salad", "Super Salad", "Protein Salad"],
+          "key_partners": ["Remedy Kitchen", "LEON"],
+          "notes": "Lower kid appeal but strong adult/health focus"
+        },
+        {
+          "id": "protein_focused",
+          "display_name": "Protein-focused",
+          "example_dishes": ["Grilled Chicken + Sides", "Protein Box", "Rotisserie Chicken"],
+          "key_partners": ["Cocotte", "Yacob's Kitchen"],
+          "notes": "Maps to 'Chicken (Grilled)' - balanced midweek fit"
+        }
+      ]
+    },
+    
+    "Mexican": {
+      "display_name": "Mexican",
+      "mvp_relevance": "required",
+      "description": "Burritos, tacos, and Latin flavours - high customisation for fussy eaters",
+      "sub_cuisines": [
+        {
+          "id": "tex_mex",
+          "display_name": "Tex-Mex",
+          "example_dishes": ["Nachos", "Quesadilla", "Chilli Con Carne", "Fajitas"],
+          "key_partners": ["Las Iguanas"],
+          "notes": "Family-friendly portions, customisable"
+        },
+        {
+          "id": "burritos",
+          "display_name": "Burritos",
+          "example_dishes": ["Burrito", "Burrito Bowl", "Naked Burrito"],
+          "key_partners": ["Zambrero UK"],
+          "notes": "Portable, customisable, good value"
+        },
+        {
+          "id": "tacos",
+          "display_name": "Tacos",
+          "example_dishes": ["Soft Tacos", "Hard Shell Tacos", "Taco Platter"],
+          "key_partners": [],
+          "notes": "Shareable, fun family option"
+        },
+        {
+          "id": "premium_mexican",
+          "display_name": "Premium Mexican",
+          "example_dishes": ["Authentic Mexican", "Street Food Style", "Guacamole"],
+          "key_partners": [],
+          "notes": "Higher authenticity, adult-focused"
+        }
+      ]
+    },
+    
+    "Middle Eastern": {
+      "display_name": "Middle Eastern",
+      "mvp_relevance": "optional",
+      "description": "Lebanese, Turkish, shawarma - healthy perception, shareable",
+      "sub_cuisines": [
+        {
+          "id": "lebanese",
+          "display_name": "Lebanese",
+          "example_dishes": ["Hummus", "Falafel", "Tabbouleh", "Mezze"],
+          "key_partners": ["Biblos"],
+          "notes": "Strong vegetarian options, healthy perception"
+        },
+        {
+          "id": "turkish",
+          "display_name": "Turkish",
+          "example_dishes": ["Kebab", "Lahmacun", "Pide", "Kofte"],
+          "key_partners": [],
+          "notes": "Not currently on Dinneroo - expansion opportunity"
+        },
+        {
+          "id": "shawarma",
+          "display_name": "Shawarma",
+          "example_dishes": ["Chicken Shawarma", "Lamb Shawarma", "Shawarma Wrap"],
+          "key_partners": ["Remedy Kitchen"],
+          "notes": "Popular street food style"
+        },
+        {
+          "id": "mediterranean",
+          "display_name": "Mediterranean",
+          "example_dishes": ["Halloumi", "Greek Salad", "Grilled Meats", "Flatbreads"],
+          "key_partners": [],
+          "notes": "Broader category including Greek influences"
+        }
+      ]
+    },
+    
+    "British": {
+      "display_name": "British",
+      "mvp_relevance": "optional",
+      "description": "Fish & chips, pies, roasts - cultural staples, comfort food",
+      "sub_cuisines": [
+        {
+          "id": "fish_and_chips",
+          "display_name": "Fish & Chips",
+          "example_dishes": ["Battered Fish", "Chips", "Mushy Peas", "Fish Fingers"],
+          "key_partners": [],
+          "notes": "Not currently on Dinneroo - strong latent demand"
+        },
+        {
+          "id": "pies",
+          "display_name": "Pies",
+          "example_dishes": ["Shepherd's Pie", "Chicken Pie", "Steak Pie"],
+          "key_partners": [],
+          "notes": "Classic comfort food, strong family appeal"
+        },
+        {
+          "id": "roasts",
+          "display_name": "Roasts",
+          "example_dishes": ["Sunday Roast", "Roast Chicken", "Roast Beef"],
+          "key_partners": [],
+          "notes": "Weekend occasion, less midweek fit"
+        },
+        {
+          "id": "comfort",
+          "display_name": "Comfort",
+          "example_dishes": ["Bangers & Mash", "Full English", "Jacket Potato"],
+          "key_partners": ["Bill's"],
+          "notes": "General British comfort food category"
+        }
+      ]
+    }
+  },
+  
+  "expansion_opportunities": {
+    "_description": "Cuisines NOT in Core 7 but with demand signals - flagged for potential addition",
+    "_filter_applied": "Mon-Thu dinner time only for non-Dinneroo benchmarks",
+    "detection_threshold": {
+      "midweek_non_dinneroo_orders_min": 2000,
+      "unique_customers_min": 1000
+    },
+    "candidates": [
+      {
+        "id": "caribbean",
+        "display_name": "Caribbean",
+        "example_dishes": ["Jerk Chicken", "Rice & Peas", "Plantain", "Curry Goat"],
+        "demand_signal": "2,490 non-Dinneroo orders (unfiltered)",
+        "demand_source": "behavioral",
+        "potential_partners": ["Turtle Bay"],
+        "notes": "Cultural gap, 5 explicit mentions in open-text"
+      },
+      {
+        "id": "korean",
+        "display_name": "Korean",
+        "example_dishes": ["Bibimbap", "Korean BBQ", "Bulgogi", "Fried Chicken"],
+        "demand_signal": "5,218 non-Dinneroo orders (unfiltered)",
+        "demand_source": "behavioral",
+        "potential_partners": [],
+        "notes": "Growing demand, balanced options available"
+      },
+      {
+        "id": "greek",
+        "display_name": "Greek",
+        "example_dishes": ["Souvlaki", "Gyros", "Greek Salad", "Moussaka"],
+        "demand_signal": "5,881 non-Dinneroo orders (unfiltered)",
+        "demand_source": "behavioral",
+        "potential_partners": ["The Athenian"],
+        "notes": "3 mentions in open-text, family-friendly portions"
+      },
+      {
+        "id": "portuguese",
+        "display_name": "Portuguese",
+        "example_dishes": ["Peri-Peri Chicken", "Nando's-style"],
+        "demand_signal": "19,837 non-Dinneroo orders (unfiltered)",
+        "demand_source": "behavioral",
+        "potential_partners": ["Nando's"],
+        "notes": "Very high demand, maps to grilled chicken gap"
+      },
+      {
+        "id": "turkish",
+        "display_name": "Turkish",
+        "example_dishes": ["Kebab", "Lahmacun", "Pide"],
+        "demand_signal": "7,037 non-Dinneroo orders (unfiltered)",
+        "demand_source": "behavioral",
+        "potential_partners": [],
+        "notes": "Could be absorbed into Middle Eastern or separate"
+      }
+    ]
+  },
+  
+  "partner_cuisine_mapping": {
+    "_description": "Reference for which partners serve which cuisines - see DATA/3_ANALYSIS/partner_cuisine_matrix.csv for full data",
+    "_note": "Multi-cuisine partners are tagged with ALL cuisines they serve"
+  }
+}
+

@@ -1,0 +1,25 @@
+high_level_dish,couple_rank,couple_score,adult_satisfaction,adult_appeal,total_orders,item_count,partners
+South Asian / Indian Curry,1,5.0,0.9452054794520548,5.0,5897.0,13,"Chaska, Dishoom, Kricket, Saravana Bhavan, Tadka House, Tiffin Tin"
+Noodles,1,5.0,0.9089799240368963,4.333333333333333,5049.0,13,"Asia Villa, Banana Tree, Iro Sushi, Itsu, Kokoro, Pho, SOYO-SGroup, Ting Thai, Zumuku"
+Pho,3,4.8,0.9066937119675456,5.0,4530.0,1,Pho
+Fried Rice,4,4.55,0.9054878048780488,3.0,4958.0,5,"Asia Villa, Pho, TUK TUK-SGroup, Xian Street Food"
+Sushi,5,4.15,0.8650793650793651,5.0,1043.0,1,Itsu
+Biryani,5,4.15,1.0,3.0,458.0,6,"Chaska, Dishoom, Tadka House"
+Shawarma,7,4.0,0.8695652173913043,4.0,1355.0,3,Bill's
+Rice Bowl,8,3.9,0.8472371967654987,3.0,10914.0,21,"Banana Tree, Giggling Squid, Itsu, Kokoro, Pho, TUK TUK-SGroup, Taste Of Hong Kong-DCN, Xian Street Food, Zumuku"
+Fajitas,9,3.8000000000000003,0.8947368421052632,4.0,221.0,3,Las Iguanas
+Katsu,10,3.5500000000000003,0.8405797101449275,4.0,11730.0,9,"Banana Tree, Iro Sushi, Itsu, Kokoro, Wagamama, Zumuku, Zumuku Sushi"
+East Asian Curry,11,3.1,0.8596491228070176,,,11,"Asia Villa, Bill's, Giggling Squid, Pho, Ting Thai, Wagamama, Zumuku"
+Pasta,12,3.05,0.8333333333333334,3.0,1342.0,23,"Bella Italia, Bill's, Cacciari's, Milano, PIZAZA-SGroup, PizzaExpress, Prezzo, SOYO-SGroup"
+Pizza,13,2.85,0.7659574468085106,3.0,548.0,5,"Milano, PizzaExpress, Prezzo"
+Other,14,2.45,0.8375,,,4,"Shaku Maku, TUK TUK-SGroup, Umi Falafel, Zaatar Rathmines"
+Chilli,14,2.45,0.826530612244898,,,3,Las Iguanas
+Lasagne,16,2.4,0.7567567567567568,3.0,931.0,3,"Bella Italia, Cacciari's, SOYO-SGroup"
+Quesadilla,17,2.0,0.6666666666666666,3.0,57.0,1,Tula Ireland
+Grain Bowl,18,1.55,,3.0,192.0,17,"Farmer J, LEON, Remedy Kitchen, The Salad Project, Yacob's Kitchen, atis"
+Shepherd's Pie,18,1.55,,3.0,333.0,1,Bill's
+Burrito / Burrito Bowl,20,1.35,,3.0,3.0,3,"Tula Ireland, Zambrero UK"
+Tacos,20,1.35,,3.0,62.0,3,"Tula Ireland, Zambrero UK"
+Protein & Veg,22,1.1500000000000001,,,,4,"Cocotte, Shaku Maku"
+Nachos,22,1.1500000000000001,,,,1,Zambrero UK
+Poke,22,1.1500000000000001,,,,1,Itsu

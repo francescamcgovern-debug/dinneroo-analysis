@@ -623,29 +623,85 @@ def prepare_zones(project_root: Path) -> List[Dict[str, Any]]:
 
 
 def prepare_cuisine_gaps(project_root: Path) -> List[Dict[str, Any]]:
-    """Prepare cuisine gap analysis data."""
-    path = project_root / "DATA" / "3_ANALYSIS" / "cuisine_gap_analysis.csv"
-    df = load_csv_safe(path)
+    """Prepare cuisine gap analysis data - now includes scoring from CUISINE_GAP_AGENT."""
     
-    if df is None:
-        return []
+    # Try new cuisine_scores.csv first (from CUISINE_GAP_AGENT)
+    scores_path = project_root / "DATA" / "3_ANALYSIS" / "cuisine_scores.csv"
+    scores_df = load_csv_safe(scores_path)
+    
+    # Load quadrant summary
+    quadrants_path = project_root / "DATA" / "3_ANALYSIS" / "cuisine_quadrants.json"
+    quadrants = load_json_safe(quadrants_path)
+    
+    # Fall back to legacy cuisine_gap_analysis.csv if needed
+    legacy_path = project_root / "DATA" / "3_ANALYSIS" / "cuisine_gap_analysis.csv"
+    legacy_df = load_csv_safe(legacy_path)
     
     gaps = []
-    for _, row in df.iterrows():
-        gap = {
-            "cuisine": row.get("cuisine", ""),
-            "itemCount": int(row.get("item_count", 0)) if pd.notna(row.get("item_count")) else 0,
-            "brandCount": int(row.get("brand_count", 0)) if pd.notna(row.get("brand_count")) else 0,
-            "avgRating": float(row.get("avg_rating", 0)) if pd.notna(row.get("avg_rating")) else None,
-            "ratingCount": int(row.get("rating_count", 0)) if pd.notna(row.get("rating_count")) else 0,
-            "orderCount": int(row.get("order_count", 0)) if pd.notna(row.get("order_count")) else 0,
-            "gapType": row.get("gap_type", ""),
-            "supplyVsAvg": float(row.get("supply_vs_avg", 0)) if pd.notna(row.get("supply_vs_avg")) else None,
-            "ratingVsBenchmark": float(row.get("rating_vs_benchmark", 0)) if pd.notna(row.get("rating_vs_benchmark")) else None
-        }
-        gaps.append(gap)
+    
+    # Use new scoring data if available
+    if scores_df is not None:
+        for _, row in scores_df.iterrows():
+            gap = {
+                "cuisine": row.get("cuisine", ""),
+                "coreCategory": row.get("core_category", "Other"),
+                "level": row.get("level", "other"),
+                "performanceScore": float(row.get("performance_score")) if pd.notna(row.get("performance_score")) else None,
+                "opportunityScore": float(row.get("opportunity_score")) if pd.notna(row.get("opportunity_score")) else None,
+                "unifiedScore": float(row.get("unified_score", 0)) if pd.notna(row.get("unified_score")) else 0,
+                "quadrant": row.get("quadrant", ""),
+                "zonesAvailable": int(row.get("zones_available", 0)) if pd.notna(row.get("zones_available")) else 0,
+                "ordersPerZone": float(row.get("orders_per_zone", 0)) if pd.notna(row.get("orders_per_zone")) else 0,
+                "repeatRate": float(row.get("repeat_rate", 0)) if pd.notna(row.get("repeat_rate")) else 0,
+                "performanceStatus": row.get("performance_status", "")
+            }
+            gaps.append(gap)
+    
+    # Add legacy data if available
+    elif legacy_df is not None:
+        for _, row in legacy_df.iterrows():
+            gap = {
+                "cuisine": row.get("cuisine", ""),
+                "coreCategory": "Other",
+                "level": "other",
+                "performanceScore": None,
+                "opportunityScore": None,
+                "unifiedScore": 0,
+                "quadrant": "",
+                "itemCount": int(row.get("item_count", 0)) if pd.notna(row.get("item_count")) else 0,
+                "brandCount": int(row.get("brand_count", 0)) if pd.notna(row.get("brand_count")) else 0,
+                "avgRating": float(row.get("avg_rating", 0)) if pd.notna(row.get("avg_rating")) else None,
+                "ratingCount": int(row.get("rating_count", 0)) if pd.notna(row.get("rating_count")) else 0,
+                "orderCount": int(row.get("order_count", 0)) if pd.notna(row.get("order_count")) else 0,
+                "gapType": row.get("gap_type", ""),
+                "supplyVsAvg": float(row.get("supply_vs_avg", 0)) if pd.notna(row.get("supply_vs_avg")) else None,
+                "ratingVsBenchmark": float(row.get("rating_vs_benchmark", 0)) if pd.notna(row.get("rating_vs_benchmark")) else None
+            }
+            gaps.append(gap)
     
     return gaps
+
+
+def prepare_cuisine_quadrants(project_root: Path) -> Dict[str, Any]:
+    """Prepare cuisine quadrant summary from CUISINE_GAP_AGENT."""
+    path = project_root / "DATA" / "3_ANALYSIS" / "cuisine_quadrants.json"
+    data = load_json_safe(path)
+    
+    if data is None:
+        return {"quadrants": {}}
+    
+    return data
+
+
+def prepare_expansion_opportunities(project_root: Path) -> List[Dict[str, Any]]:
+    """Prepare expansion opportunities (new cuisines to consider)."""
+    path = project_root / "DATA" / "3_ANALYSIS" / "expansion_opportunities.json"
+    data = load_json_safe(path)
+    
+    if data is None:
+        return []
+    
+    return data.get("candidates", [])
 
 
 def prepare_latent_demand(project_root: Path) -> Dict[str, Any]:
@@ -1059,6 +1115,8 @@ def main():
     
     print("3. Preparing cuisine gap data...")
     dashboard_data["cuisineGaps"] = prepare_cuisine_gaps(PROJECT_ROOT)
+    dashboard_data["cuisineQuadrants"] = prepare_cuisine_quadrants(PROJECT_ROOT)
+    dashboard_data["expansionOpportunities"] = prepare_expansion_opportunities(PROJECT_ROOT)
     print()
     
     print("4. Preparing latent demand data...")

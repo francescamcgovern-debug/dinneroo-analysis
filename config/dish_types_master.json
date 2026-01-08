@@ -2,7 +2,7 @@
   "version": "2.0",
   "description": "Master list of 100 dish types with metadata and LLM-estimated factor scores",
   "generated": "2026-01-07",
-  "total_dishes": 108,
+  "total_dishes": 110,
   "factor_definitions": {
     "adult_appeal": "How appealing is this dish to adults? (1=kid food, 5=restaurant quality)",
     "balanced_guilt_free": "How balanced/healthy is this dish? (1=very indulgent, 5=very healthy)",
@@ -872,6 +872,24 @@
       "adult_appeal": 3,
       "balanced_guilt_free": 4,
       "fussy_eater_friendly": 3
+    },
+    {
+      "dish_type": "Piri-piri / Peri Peri",
+      "cuisine": "Portuguese",
+      "on_dinneroo": false,
+      "adult_appeal": 4,
+      "balanced_guilt_free": 4,
+      "fussy_eater_friendly": 4,
+      "_note": "High demand signal (Nando's), maps to grilled chicken gap"
+    },
+    {
+      "dish_type": "Sausage and Mash",
+      "cuisine": "British",
+      "on_dinneroo": false,
+      "adult_appeal": 3,
+      "balanced_guilt_free": 3,
+      "fussy_eater_friendly": 5,
+      "_note": "Classic British comfort food, high fussy eater appeal"
     }
   ]
 }

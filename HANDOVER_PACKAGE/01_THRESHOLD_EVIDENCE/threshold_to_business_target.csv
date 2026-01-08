@@ -1,0 +1,7 @@
+criterion,data_inflection_point,business_target,gap,rationale_for_business_target,evidence_confidence
+Partners,3-4,5,+1-2 partners,Business wants redundancy - if one partner has issues zone still works,HIGH - 3 of 4 metrics show inflection at 3-4
+Cuisines,3-4 (5+ for repeat),5 of 7,+1-2 cuisines,Business wants diverse family preferences covered,HIGH - Cuisines add value beyond partners
+Dishes per Partner,4-5,5+,~0,Data and business target align,MEDIUM - Shows independent effect
+Rating,4.0 benchmark,4.0,0,Floor not ceiling - 4.2 is average performance,HIGH - Direct quality signal
+Repeat Rate,~18% at 3+ partners,35%,+17pp,Business wants strong retention signal,HIGH - Top zones achieve 40%+
+

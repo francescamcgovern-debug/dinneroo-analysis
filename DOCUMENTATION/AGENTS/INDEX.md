@@ -12,7 +12,8 @@ This index helps you find the right agent for your task. Each agent has a specif
 | [SCORING_AGENT](SCORING_AGENT.md) | Design & validate scoring frameworks | weights, factors, correlations, framework design |
 | [DISH_AGENT](01_DISH_AGENT.md) | Prioritize dishes, analyze performance | dish rankings, partner performance, Priority 100 |
 | [ZONE_AGENT](ZONE_AGENT.md) | Zone health & MVP status | zone coverage, MVP criteria, zone performance |
-| [GAP_AGENT](GAP_AGENT.md) | Identify expansion opportunities | missing cuisines, recruitment priorities, supply gaps |
+| [CUISINE_GAP_AGENT](CUISINE_GAP_AGENT.md) | Cuisine-level scoring & prioritization | which cuisines to prioritize, Core 7, new cuisine opportunities |
+| [DISH_GAP_AGENT](DISH_GAP_AGENT.md) | Dish-level gaps within cuisines | missing dishes, zone dish gaps, recruitment priorities |
 | [PARTNER_AGENT](PARTNER_AGENT.md) | Partner recruitment & expansion | which partners to recruit, Nando's, partner fit |
 | [FAMILY_BEHAVIOR_AGENT](FAMILY_BEHAVIOR_AGENT.md) | What families actually eat | home cooking, regional patterns, price sensitivity |
 | [LATENT_DEMAND_AGENT](LATENT_DEMAND_AGENT.md) | Mine open-text for unmet needs | customer requests, barriers, dietary needs |
@@ -44,11 +45,18 @@ This index helps you find the right agent for your task. Each agent has a specif
 - Identify top/bottom performing zones
 - Compare zone characteristics
 
-#### GAP_AGENT
-- Identify missing cuisines by zone
-- Prioritize partner recruitment
-- Find supply gaps vs demand
-- Generate expansion recommendations
+#### CUISINE_GAP_AGENT (NEW)
+- Score and rank cuisines using two-track approach
+- Manage Core 7 cuisine categories + sub-cuisines
+- Identify new cuisine expansion opportunities
+- Normalize performance metrics for supply bias
+- **CRITICAL:** Uses Mon-Thu dinner filtered non-Dinneroo benchmarks
+
+#### DISH_GAP_AGENT (Formerly GAP_AGENT)
+- Identify missing dishes within priority cuisines
+- Find dish-level supply gaps by zone
+- Generate dish-specific recruitment priorities
+- Works downstream of CUISINE_GAP_AGENT
 
 #### PARTNER_AGENT (NEW)
 - Map dish/cuisine gaps to specific partners
@@ -103,7 +111,10 @@ This index helps you find the right agent for your task. Each agent has a specif
 | "How should we weight the family fit factors?" | SCORING_AGENT |
 | "What are the top 10 dishes we should prioritize?" | DISH_AGENT |
 | "Does Clapham meet MVP criteria?" | ZONE_AGENT |
-| "What cuisines are missing in Brighton?" | GAP_AGENT |
+| "Which cuisines should we prioritize overall?" | CUISINE_GAP_AGENT |
+| "Should we add Korean as a new cuisine?" | CUISINE_GAP_AGENT |
+| "Within Asian, should we focus on Thai or Vietnamese?" | CUISINE_GAP_AGENT |
+| "What dishes are missing in Brighton for Indian cuisine?" | DISH_GAP_AGENT |
 | "Which partners should we recruit for grilled chicken?" | PARTNER_AGENT |
 | "What do families order outside Dinneroo?" | FAMILY_BEHAVIOR_AGENT |
 | "How do eating patterns vary by region?" | FAMILY_BEHAVIOR_AGENT |
@@ -125,7 +136,8 @@ All agents feed into the **Consumer Insight Tracker** dashboard (`docs/dashboard
 |-------|-------------------|----------------|
 | DISH_AGENT | Dishes tab, 2x2 Matrix | `priority_100_unified.csv`, `dish_composite_scores.csv` |
 | ZONE_AGENT | Zones tab, Overview KPIs | `zone_gap_report.csv`, `anna_zone_dish_counts.csv` |
-| GAP_AGENT | Cuisine Gaps tab | `cuisine_gap_analysis.csv` |
+| CUISINE_GAP_AGENT | Cuisine Gaps tab | `cuisine_scores.csv`, `cuisine_quadrants.json`, `expansion_opportunities.json` |
+| DISH_GAP_AGENT | Dish Gaps within Cuisines | `zone_gap_report.csv` |
 | PARTNER_AGENT | Partner section | `partner_composite_scores.csv` |
 | FAMILY_BEHAVIOR_AGENT | Family Insights | `segment_comparison.csv` |
 | LATENT_DEMAND_AGENT | Latent Demand tab | `latent_demand_scores.csv` |

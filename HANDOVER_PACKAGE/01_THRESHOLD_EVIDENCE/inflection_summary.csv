@@ -1,0 +1,12 @@
+criterion,metric,from_bucket,to_bucket,delta,delta_pp,reliable,interpretation
+Partners,repeat_rate,1-2,3-4,0.0452,+4.5pp,TRUE,Repeat rate jumps 4.5 percentage points when zones have 3+ partners
+Partners,avg_rating,1-2,3-4,0.2284,+0.23 stars,TRUE,Average rating improves by 0.23 stars at 3+ partners
+Partners,kids_happy,3-4,5-6,0.0941,+9.4pp,TRUE,Kids happiness improves significantly at 5+ partners
+Partners,liked_loved,1-2,3-4,0.0574,+5.7pp,TRUE,Adult satisfaction improves at 3+ partners
+Cuisines,repeat_rate,3-4,5-6,0.0420,+4.2pp,TRUE,Repeat rate jumps at 5+ cuisines (controlling for partners)
+Cuisines,avg_rating,1-2,3-4,0.0939,+0.09 stars,TRUE,Rating improves at 3+ cuisines
+Cuisines,liked_loved,1-2,3-4,0.1362,+13.6pp,TRUE,Large jump in adult satisfaction at 3+ cuisines
+Dishes per Partner,avg_rating,3-4,4-5,0.1213,+0.12 stars,TRUE,Rating improves at 4-5 dishes per partner
+Dishes per Partner,liked_loved,3-4,4-5,0.0567,+5.7pp,TRUE,Adult satisfaction improves at 4-5 dishes per partner
+Dishes per Partner,kids_happy,5-6,6+,0.0897,+9.0pp,TRUE,Kids happiness improves at 6+ dishes per partner
+

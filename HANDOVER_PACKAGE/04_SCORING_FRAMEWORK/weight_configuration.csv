@@ -1,0 +1,16 @@
+list_type,factor,current_weight,rationale,data_source
+family_performers,kids_happy,0.40,"Primary driver for family satisfaction - kids' reaction determines repeat",Post-order survey (families only)
+family_performers,fussy_eater_friendly,0.20,"Families need dishes that work for picky eaters",dish_opportunity_scores
+family_performers,orders_per_zone,0.20,"Proven family demand signal",Snowflake orders
+family_performers,adult_satisfaction,0.15,"Parents need to enjoy the meal too",Post-order survey (families)
+family_performers,portions_adequate,0.05,"Family meals need to feed everyone",Post-order survey
+couple_performers,adult_satisfaction,0.40,"Primary driver for adult/couple satisfaction",Post-order survey (non-families)
+couple_performers,rating,0.25,"Quality matters more to adults",Snowflake ratings
+couple_performers,orders_per_zone,0.20,"Proven adult demand signal",Snowflake orders
+couple_performers,adult_appeal,0.15,"Sophisticated and interesting options appeal to adults",dish_opportunity_scores
+recruitment_priorities,latent_demand_mentions,0.30,"What customers explicitly ask for",Open-text survey mentions
+recruitment_priorities,framework_score,0.25,"Overall family meal suitability assessment",dish_opportunity_scores
+recruitment_priorities,fussy_eater_friendly,0.15,"Family appeal potential for new dishes",dish_opportunity_scores
+recruitment_priorities,gap_score,0.15,"Supply gap indicates unmet demand",dish_opportunity_scores
+recruitment_priorities,partner_capability,0.10,"Feasibility of adding to platform",dish_opportunity_scores
+recruitment_priorities,non_dinneroo_demand_proxy,0.05,"Proven demand outside platform at cuisine level",Snowflake non-dinneroo orders

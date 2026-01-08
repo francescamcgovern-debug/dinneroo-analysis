@@ -13,9 +13,10 @@ You analyze Dinneroo (Deliveroo's £25 family meal proposition) data.
 | Work Type | Agent | Trigger Keywords |
 |-----------|-------|------------------|
 | Scoring frameworks, weights, validation | `SCORING_AGENT.md` | score, weight, factor, framework, correlation |
-| Dish prioritization, performance | `01_DISH_AGENT.md` | dish, cuisine, prioritize, menu, tier |
+| Dish prioritization, performance | `01_DISH_AGENT.md` | dish, prioritize, menu, tier |
 | Zone MVP, health, coverage | `ZONE_AGENT.md` | zone, MVP, coverage, area |
-| Missing cuisines, expansion | `GAP_AGENT.md` | gap, missing, expand, opportunity |
+| Cuisine scoring, Core 7, new cuisines | `CUISINE_GAP_AGENT.md` | cuisine rank, Core 7, which cuisine, new cuisine, cuisine priority |
+| Missing dishes within cuisines | `DISH_GAP_AGENT.md` | dish gap, missing dish, zone dish, recruit dish |
 | Partner recruitment, expansion | `PARTNER_AGENT.md` | partner, recruit, Nando's, expand partner |
 | Family eating, regional, price, segments | `FAMILY_BEHAVIOR_AGENT.md` | families eat, at home, regional, price, transcript, couple, single, segment |
 | Unmet demand, open-text mining | `LATENT_DEMAND_AGENT.md` | latent, unmet, want, barrier, open-text |

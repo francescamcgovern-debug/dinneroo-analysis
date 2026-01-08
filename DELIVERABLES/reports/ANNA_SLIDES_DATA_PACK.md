@@ -94,41 +94,41 @@ Source: Post-order survey (n=1,599)
 
 ### Chart Data (Pastable CSVs)
 
+**Data Source:** `DATA/3_ANALYSIS/mvp_threshold_discovery.json` (n=197 zones with sufficient data for analysis)
+
 **Partners Performance** (`DELIVERABLES/presentation_data/chart_partners_performance.csv`)
 ```csv
-Partners,Avg Orders,Avg Rating,Zones (n=),Satisfaction %
-1-2,68,4.14,95,N/A
-3,355,4.34,21,79.5%
-4,450,4.38,25,78.2%
-5,537,4.28,16,80.7%
-6-7,705,4.36,16,81.7%
-8-10,1071,4.44,15,78.0%
-11+,1095,4.50,9,N/A
+Partners,Zones,Repeat Rate,Avg Rating,Avg Orders
+1-2,95,13.9%,4.14,44
+3-4,46,18.4%,4.36,262
+5-6,27,21.6%,4.32,399
+7-9,17,24.7%,4.42,676
+10+,12,22.8%,4.45,724
 ```
 
 **Cuisines Performance** (`DELIVERABLES/presentation_data/chart_cuisines_performance.csv`)
+*Note: Cuisines analysis controls for 3+ partners (102 zones)*
 ```csv
-Cuisines,Avg Orders,Avg Rating,Zones (n=),Satisfaction %
-1-2,89,4.14,102,33.3%
-3,404,4.34,30,80.7%
-4,511,4.35,24,82.0%
-5,685,4.44,13,80.7%
-6,797,4.36,11,78.0%
-7+,1157,4.47,17,78.0%
+Cuisines,Zones,Repeat Rate,Avg Rating,Avg Orders
+1-2,7,18.3%,4.25,224
+3-4,54,19.1%,4.35,296
+5-6,24,23.3%,4.40,491
+7+,17,23.8%,4.47,802
 ```
 
 ### Chart Annotations (Key Callouts)
 
 **Partners Chart:**
-- Vertical line at "5 partners" threshold
-- Callout: "5+ partners = 5x more orders than 1-2" (537 vs 68)
-- Callout: "Rating improves from 4.14 → 4.28+"
+- Vertical line at "3-4 partners" (DATA INFLECTION) and "5 partners" (BUSINESS TARGET)
+- Callout: "3-4 partners = +4.5pp repeat rate vs 1-2" (18.4% vs 13.9%)
+- Callout: "5-6 partners = 6x more orders than 1-2" (399 vs 44)
+- Callout: "Rating improves from 4.14 → 4.36+"
 
 **Cuisines Chart:**
-- Vertical line at "5 cuisines" threshold
-- Callout: "34% more orders than 4 cuisines" (685 vs 511)
-- Callout: "Satisfaction jumps from 33% → 80%+ at 3+ cuisines"
-- Callout: "Rating peaks at 4.44 for 5 cuisines"
+- Vertical line at "3-4 cuisines" (DATA INFLECTION) and "5 cuisines" (BUSINESS TARGET)
+- Callout: "3-4 cuisines = +4.2pp repeat rate vs 1-2" (19.1% vs 18.3%)
+- Callout: "5-6 cuisines = 66% more orders than 3-4" (491 vs 296)
+- Callout: "Rating peaks at 4.47 for 7+ cuisines"
 
 ### ⚠️ PROVOCATION: The Variety Cliff
 
@@ -159,21 +159,26 @@ underperforming - they're actively disappointing customers.
 Source: Post-order survey (n=1,020 with zone data)
 ```
 
-### Why 5? (Narrative Text)
+### Why 5? (Data Inflection vs Business Target)
 
 ```
-WHY 5 IS THE THRESHOLD (NOT 3 OR 4)
+DATA INFLECTION AT 3-4, BUSINESS TARGET AT 5
 
-The data shows the largest performance jump at 5:
-• 3→4 cuisines: +26% orders
-• 4→5 cuisines: +34% orders  ← LARGEST JUMP
-• 5→6 cuisines: +16% orders  ← Diminishing returns begin
+DATA SHOWS INFLECTION AT 3-4:
+• Partners: +4.5pp repeat rate at 3-4 vs 1-2 (18.4% vs 13.9%)
+• Cuisines: +4.2pp repeat rate at 5-6 vs 3-4 (23.3% vs 19.1%)
+• Both: Rating improves significantly above 3 partners/cuisines
 
-5 is the "sweet spot" balancing:
-1. Performance: 34% more orders than 4 cuisines
-2. Achievability: 26% of active zones already have 5+ cuisines
-3. Satisfaction: Rating peaks at 4.44 for 5 cuisines
-4. Survey evidence: 80%+ satisfied at 3+ cuisines (vs 33% at 1-2)
+BUSINESS TARGET REMAINS 5 BECAUSE:
+1. Buffer zone: 5 provides cushion if a partner/cuisine drops
+2. Customer choice: More options = higher perceived value
+3. Competitive positioning: Match or exceed competitor variety
+4. Growth headroom: 5+ enables expansion without plateau
+
+KEY INSIGHT: The data inflection point (3-4) tells us the MINIMUM 
+viable threshold. The business target (5) is aspirational.
+
+Source: mvp_threshold_discovery.json (n=197 zones)
 ```
 
 ### Supporting Survey Evidence
@@ -196,58 +201,53 @@ Top requested: Indian (30), Chinese (23), Burger (11), Vegetarian (11), Pizza (1
 ### Pastable Text (Right-Hand Side)
 
 ```
-MVP Threshold: 5+ Partners, 5+ Cuisines, 20+ Dishes
+MVP Threshold: 5+ Partners, 5+ Cuisines, 21+ Dishes
+(Business targets; data inflection at 3-4)
 
-EVIDENCE FOR 5+ PARTNERS
-┌─────────────┬───────┬────────────┬────────────┐
-│ Partners    │ Zones │ Avg Orders │ Avg Rating │
-├─────────────┼───────┼────────────┼────────────┤
-│ 1-2         │ 95    │ 68         │ 4.14       │
-│ 3           │ 21    │ 355        │ 4.34       │
-│ 4           │ 25    │ 450        │ 4.38       │
-│ 5           │ 16    │ 537        │ 4.28       │
-│ 6-7         │ 16    │ 705        │ 4.36       │
-│ 8+          │ 24    │ 1,083      │ 4.47       │
-└─────────────┴───────┴────────────┴────────────┘
+EVIDENCE FOR PARTNERS (n=197 zones)
+┌─────────────┬───────┬─────────────┬────────────┬────────────┐
+│ Partners    │ Zones │ Repeat Rate │ Avg Rating │ Avg Orders │
+├─────────────┼───────┼─────────────┼────────────┼────────────┤
+│ 1-2         │ 95    │ 13.9%       │ 4.14       │ 44         │
+│ 3-4         │ 46    │ 18.4%       │ 4.36       │ 262        │  ← INFLECTION
+│ 5-6         │ 27    │ 21.6%       │ 4.32       │ 399        │  ← TARGET
+│ 7-9         │ 17    │ 24.7%       │ 4.42       │ 676        │
+│ 10+         │ 12    │ 22.8%       │ 4.45       │ 724        │
+└─────────────┴───────┴─────────────┴────────────┴────────────┘
 
-Key finding: 5+ partners delivers 5x more orders than 1-2 partners
-(537 vs 68 avg orders per zone)
+Key finding: 3-4 partners = +4.5pp repeat rate vs 1-2 (18.4% vs 13.9%)
+5-6 partners = 9x more orders than 1-2 (399 vs 44)
 
-EVIDENCE FOR 5+ CUISINES
-┌──────────┬───────┬────────────┬────────────┬──────────────┐
-│ Cuisines │ Zones │ Avg Orders │ Avg Rating │ Satisfied %  │
-├──────────┼───────┼────────────┼────────────┼──────────────┤
-│ 1-2      │ 102   │ 89         │ 4.14       │ 33%          │
-│ 3        │ 30    │ 404        │ 4.34       │ 81%          │
-│ 4        │ 24    │ 511        │ 4.35       │ 82%          │
-│ 5        │ 13    │ 685        │ 4.44       │ 81%          │
-│ 6        │ 11    │ 797        │ 4.36       │ 78%          │
-│ 7+       │ 17    │ 1,157      │ 4.47       │ 78%          │
-└──────────┴───────┴────────────┴────────────┴──────────────┘
+EVIDENCE FOR CUISINES (n=102 zones with 3+ partners)
+┌──────────┬───────┬─────────────┬────────────┬────────────┐
+│ Cuisines │ Zones │ Repeat Rate │ Avg Rating │ Avg Orders │
+├──────────┼───────┼─────────────┼────────────┼────────────┤
+│ 1-2      │ 7     │ 18.3%       │ 4.25       │ 224        │
+│ 3-4      │ 54    │ 19.1%       │ 4.35       │ 296        │  ← INFLECTION
+│ 5-6      │ 24    │ 23.3%       │ 4.40       │ 491        │  ← TARGET
+│ 7+       │ 17    │ 23.8%       │ 4.47       │ 802        │
+└──────────┴───────┴─────────────┴────────────┴────────────┘
 
-Key finding: 5 cuisines delivers 34% more orders than 4 cuisines
-AND satisfaction jumps from 33% → 80%+ at 3+ cuisines
+Key finding: 5-6 cuisines = +4.2pp repeat rate vs 3-4 (23.3% vs 19.1%)
+5-6 cuisines = 66% more orders than 3-4 (491 vs 296)
 
-EVIDENCE FOR 20+ DISHES
-┌────────────┬───────┬────────────┬────────────┐
-│ Dishes     │ Zones │ Avg Orders │ Avg Rating │
-├────────────┼───────┼────────────┼────────────┤
-│ 1-10       │ 4     │ 5          │ 3.00       │
-│ 11-15      │ 5     │ 11         │ 2.92       │
-│ 16-20      │ 3     │ 16         │ 3.67       │
-│ 21-25      │ 7     │ 20         │ 4.37       │
-│ 26-30      │ 9     │ 32         │ 4.34       │
-│ 31-40      │ 15    │ 25         │ 4.34       │
-│ 41+        │ 147   │ 395        │ 4.29       │
-└────────────┴───────┴────────────┴────────────┘
+EVIDENCE FOR DISHES (n=94 zones with 3+ partners AND 3+ cuisines)
+┌────────────┬───────┬─────────────┬────────────┬────────────┐
+│ Dishes     │ Zones │ Repeat Rate │ Avg Rating │ Avg Orders │
+├────────────┼───────┼─────────────┼────────────┼────────────┤
+│ 1-15       │ 6     │ 16.8%       │ 4.08       │ 167        │
+│ 16-30      │ 23    │ 19.5%       │ 4.32       │ 230        │  ← INFLECTION
+│ 31-50      │ 39    │ 22.4%       │ 4.39       │ 466        │  ← TARGET
+│ 51+        │ 26    │ 21.2%       │ 4.51       │ 646        │
+└────────────┴───────┴─────────────┴────────────┴────────────┘
 
-Key finding: 21+ dishes shows clear rating improvement
-(4.37 avg rating vs 3.67 for 16-20 dishes)
+Key finding: 16-30 dishes = +2.7pp repeat rate vs 1-15 (19.5% vs 16.8%)
+31-50 dishes = 2x more orders than 16-30 (466 vs 230)
 
 Sources:
-• Order data: Snowflake (n=197 zones)
-• Satisfaction: Post-order survey (n=1,020)
-• Barriers: Dropoff survey (n=942)
+• All metrics: mvp_threshold_discovery.json (behavioural data from 201 zones)
+• Hierarchical analysis: Partners → Cuisines → Dishes
+• Controlling for prior variables at each step
 ```
 
 ---
@@ -259,22 +259,27 @@ Sources:
 ### Why MVP Status Matters (KEY INSIGHT)
 
 ```
-MVP ZONES OUTPERFORM NON-MVP ZONES BY 2.1x
+33 ZONES (16%) ARE MVP READY OUT OF 201 LIVE ZONES
 
-┌─────────────────┬───────┬────────────┬────────────┬─────────────┐
-│ Zone Status     │ Zones │ Avg Orders │ Avg Rating │ Order Share │
-├─────────────────┼───────┼────────────┼────────────┼─────────────┤
-│ MVP (5+/5+)     │ 42    │ 939        │ 4.43       │ 61%         │
-│ Non-MVP         │ 58    │ 437        │ 4.36       │ 39%         │
-├─────────────────┼───────┼────────────┼────────────┼─────────────┤
-│ Difference      │ -     │ +502       │ +0.07      │ -           │
-│ % Uplift        │ -     │ +115%      │ +2%        │ -           │
-└─────────────────┴───────┴────────────┴────────────┴─────────────┘
+MVP Definition: Rating ≥4.0 AND Repeat Rate ≥20% AND Cuisine Count ≥5
 
-KEY FINDING: MVP zones are 16% of zones (33/201) but generate a disproportionate share of orders
+┌─────────────────┬───────┬─────────┬────────────────────────────────┐
+│ Zone Status     │ Zones │ % Total │ Examples                       │
+├─────────────────┼───────┼─────────┼────────────────────────────────┤
+│ MVP Ready       │ 33    │ 16%     │ Bath, Brighton, Cambridge,     │
+│                 │       │         │ Bristol, Oxford, Clapham       │
+├─────────────────┼───────┼─────────┼────────────────────────────────┤
+│ Near MVP        │ 48    │ 24%     │ Missing 1 criterion            │
+├─────────────────┼───────┼─────────┼────────────────────────────────┤
+│ Developing      │ 120   │ 60%     │ Missing 2+ criteria            │
+├─────────────────┼───────┼─────────┼────────────────────────────────┤
+│ TOTAL           │ 201   │ 100%    │ Live zones with orders         │
+└─────────────────┴───────┴─────────┴────────────────────────────────┘
+
+KEY FINDING: MVP zones are 16% of zones (33/201)
 → Achieving MVP status is the #1 lever for zone performance
 
-Source: zone_mvp_status.csv (n=100 zones with Snowflake order data)
+Source: docs/data/zone_mvp_status.json (n=201 zones with Snowflake order data)
 ```
 
 ### Survey Evidence: Satisfaction by Zone Type
@@ -356,68 +361,59 @@ c) Accept regional variation as natural?
 ### Pastable Text
 
 ```
-Currently, 434 zones have Family Dinneroo dishes available
+Currently, 201 zones have Family Dinneroo orders (behavioural data)
 
-Of these active zones:
-• 109 zones (25%) meet MVP criteria (5+ brands, 5+ cuisines)
-• 207 zones (48%) have 5+ brands
-• 112 zones (26%) have 5+ cuisines
-• Primary shortfall: Cuisine breadth - 322 zones have <5 cuisines
+Zone MVP Status (based on 201 live zones):
+┌─────────────────────┬───────┬─────────┬────────────────────────────┐
+│ Status              │ Zones │ % Total │ Criteria                   │
+├─────────────────────┼───────┼─────────┼────────────────────────────┤
+│ MVP Ready           │ 33    │ 16%     │ Rating ≥4.0, Repeat ≥20%,  │
+│                     │       │         │ Cuisines ≥5                │
+├─────────────────────┼───────┼─────────┼────────────────────────────┤
+│ Near MVP            │ 48    │ 24%     │ Missing 1 criterion        │
+├─────────────────────┼───────┼─────────┼────────────────────────────┤
+│ Developing          │ 120   │ 60%     │ Missing 2+ criteria        │
+├─────────────────────┼───────┼─────────┼────────────────────────────┤
+│ TOTAL LIVE ZONES    │ 201   │ 100%    │ With Snowflake order data  │
+└─────────────────────┴───────┴─────────┴────────────────────────────┘
 
 WHY THIS MATTERS:
-• MVP zones generate 2.1x more orders than non-MVP zones (939 vs 437)
-• MVP zones are 16% of live zones (33/201) but capture a disproportionate share of orders
-• Rating is also higher in MVP zones (4.43 vs 4.36)
-→ Expanding MVP coverage is the biggest growth lever
+• 33 MVP Ready zones (16%) are the gold standard
+• 48 Near MVP zones (24%) need focused improvement on 1 metric
+• 120 Developing zones (60%) need broader investment
+→ Path to growth: Convert Near MVP zones first (highest ROI)
 
-Zone Distribution:
-┌─────────────────────┬───────┬─────────┐
-│ Status              │ Zones │ % Total │
-├─────────────────────┼───────┼─────────┤
-│ MVP Ready (5+ & 5+) │ 109   │ 25%     │
-│ Has 5+ brands only  │ 98    │ 23%     │
-│ Has 5+ cuisines only│ 3     │ 1%      │
-│ Needs both          │ 224   │ 52%     │
-├─────────────────────┼───────┼─────────┤
-│ Active zones        │ 434   │ 100%    │
-│ Zones with 0 dishes │ 872   │ -       │
-├─────────────────────┼───────┼─────────┤
-│ Total zones tracked │ 1,306 │ -       │
-└─────────────────────┴───────┴─────────┘
+Top MVP Ready Zones (examples):
+• Bath, Brighton Central, Bristol, Cambridge
+• Clapham, Chiswick, Glasgow Centre, Hampstead
+• Islington, Kingston, Milton Keynes, Oxford
+• Wimbledon, York
 
-Top 10 Zones by Dish Variety:
-1. Islington (20 brands, 7 cuisines, 83 dishes)
-2. East Central (19 brands, 7 cuisines, 80 dishes)
-3. West Central (17 brands, 7 cuisines, 75 dishes)
-4. Mayfair (18 brands, 7 cuisines, 75 dishes)
-5. Clapham (18 brands, 7 cuisines, 74 dishes)
-6. Vauxhall/Kennington/Oval (16 brands, 6 cuisines, 71 dishes)
-7. Belsize Park/St John's Wood (17 brands, 7 cuisines, 71 dishes)
-8. Hampstead (17 brands, 7 cuisines, 70 dishes)
-9. London Bridge (16 brands, 7 cuisines, 69 dishes)
-10. South Kensington (17 brands, 7 cuisines, 69 dishes)
+Partner Distribution (n=197 zones with sufficient data):
+┌─────────────┬───────┬─────────────┬────────────┐
+│ Partners    │ Zones │ Repeat Rate │ Avg Orders │
+├─────────────┼───────┼─────────────┼────────────┤
+│ 1-2         │ 95    │ 13.9%       │ 44         │
+│ 3-4         │ 46    │ 18.4%       │ 262        │
+│ 5-6         │ 27    │ 21.6%       │ 399        │
+│ 7-9         │ 17    │ 24.7%       │ 676        │
+│ 10+         │ 12    │ 22.8%       │ 724        │
+└─────────────┴───────┴─────────────┴────────────┘
 
-Brand Distribution (434 active zones):
-• 1-2 brands: 120 zones (28%)
-• 3-4 brands: 107 zones (25%)
-• 5-6 brands: 63 zones (15%)
-• 7-8 brands: 64 zones (15%)
-• 9-10 brands: 41 zones (9%)
-• 11+ brands: 39 zones (9%)
-
-Cuisine Distribution (434 active zones):
-• 1 cuisine: 80 zones (18%)
-• 2 cuisines: 123 zones (28%)
-• 3 cuisines: 59 zones (14%)
-• 4 cuisines: 60 zones (14%)
-• 5 cuisines: 57 zones (13%)
-• 6 cuisines: 38 zones (9%)
-• 7 cuisines: 17 zones (4%)
+Cuisine Distribution (n=102 zones with 3+ partners):
+┌──────────┬───────┬─────────────┬────────────┐
+│ Cuisines │ Zones │ Repeat Rate │ Avg Orders │
+├──────────┼───────┼─────────────┼────────────┤
+│ 1-2      │ 7     │ 18.3%       │ 224        │
+│ 3-4      │ 54    │ 19.1%       │ 296        │
+│ 5-6      │ 24    │ 23.3%       │ 491        │
+│ 7+       │ 17    │ 23.8%       │ 802        │
+└──────────┴───────┴─────────────┴────────────┘
 
 Sources:
-• Zone supply: anna_zone_dish_counts.csv (n=1,306 zones)
-• Zone performance: zone_mvp_status.csv (n=100 zones with Snowflake data)
-• Satisfaction: Post-order survey (n=1,020 with zone match)
+• Zone MVP status: docs/data/zone_mvp_status.json (n=201 zones)
+• Threshold analysis: DATA/3_ANALYSIS/mvp_threshold_discovery.json (n=197 zones)
+• Total orders: 82,350 (Snowflake, Sep-Dec 2025)
 ```
 
 ---
@@ -508,7 +504,7 @@ MINIMUM DISHES BY ZONE
 └───────────────────┴─────────────────────────────────────────┴────────────────────────────┴─────────────────┘
 
 Sources:
-• Sales data: Snowflake orders (n=71,437)
+• Sales data: Snowflake orders (n=82,350)
 • Satisfaction: Post-order survey (n=1,363 with dish match)
 • Repeat intent: Post-order survey (n=1,363)
 ```
@@ -554,7 +550,7 @@ METRIC RELIABILITY BY SAMPLE SIZE AND SOURCE TYPE
 ┌─────────────────────────┬─────────────┬─────────────┬─────────────────┐
 │ Metric                  │ Sample Size │ Source Type │ Reliability     │
 ├─────────────────────────┼─────────────┼─────────────┼─────────────────┤
-│ Avg Sales per Dish      │ 71,437      │ Revealed    │ ★★★★★ Highest   │
+│ Avg Sales per Dish      │ 82,350      │ Revealed    │ ★★★★★ Highest   │
 │ Deliveroo Rating        │ 10,713      │ Revealed    │ ★★★★☆ High      │
 │ Meal Satisfaction       │ 1,363       │ Stated      │ ★★★☆☆ Moderate  │
 │ Repeat Intent           │ 1,363       │ Stated      │ ★★☆☆☆ Lower     │
@@ -578,7 +574,7 @@ DEMAND INDICATORS
 Average Sales per Dish (Existing Dishes Only)
 Definition: Total orders for the dish divided by the number of times it is 
 listed, accounting for variations in dish availability and zone coverage.
-Source: Looker order data (n=71,437 orders)
+Source: Looker order data (n=82,350 orders)
 Rationale: Indicates revealed demand, normalised for availability
 Reliability: ★★★★★ (highest - actual behaviour)
 
@@ -858,7 +854,7 @@ We recommend a "Prospect Scoring" methodology combining:
 This avoids over-reliance on estimated scores or LLM-based assumptions.
 
 Sources:
-• Sales data: Snowflake (n=71,437 orders)
+• Sales data: Snowflake (n=82,350 orders)
 • Satisfaction: Post-order survey (n=1,363 with dish match)
 • Quadrant classification: dish_scoring_anna_aligned.csv
 ```
@@ -1180,7 +1176,7 @@ REVEALED PREFERENCE (What customers actually do)
 ┌─────────────────────────┬─────────────┬─────────────────────────────────────┐
 │ Source                  │ Sample Size │ What It Measures                    │
 ├─────────────────────────┼─────────────┼─────────────────────────────────────┤
-│ Snowflake Order Data    │ 71,437      │ Actual orders placed                │
+│ Snowflake Order Data    │ 82,350      │ Actual orders placed                │
 │ Deliveroo Ratings       │ 10,713      │ Star ratings (1-5) post-delivery    │
 │ Zone-level Performance  │ 197 zones   │ Orders, partners, cuisines by zone  │
 └─────────────────────────┴─────────────┴─────────────────────────────────────┘
@@ -1226,15 +1222,15 @@ COMBINED OPEN-TEXT ANALYSIS
 CAVEATS & LIMITATIONS
 
 1. ZONE DATA RECONCILIATION
-   Our zone_mvp_status.csv contains 100 zones with order data.
+   Our zone_mvp_status.json contains 201 zones with order data.
    Anna's anna_zone_dish_counts.csv contains 1,306 zones (supply data).
-   The 100-zone file is a subset with performance metrics from Snowflake.
-   MVP counts in this pack use the 1,306-zone supply view.
+   This pack uses 201 zones (behavioural data) as the baseline.
+   MVP counts: 33 MVP Ready out of 201 live zones (16%).
 
 2. OPEN-TEXT SAMPLE SIZES
    Individual dish mentions are small (e.g., Pasta n=29).
    We triangulate with:
-   • Order volume (n=71,437) - what people actually buy
+   • Order volume (n=82,350) - what people actually buy
    • Satisfaction scores (n=1,363) - how happy they are
    • Repeat intent (n=1,363) - will they order again
    Open-text is ONE signal, not the primary driver of recommendations.
@@ -1292,7 +1288,7 @@ CAVEATS & LIMITATIONS
 | File | Path | Purpose |
 |------|------|---------|
 | This document | `DELIVERABLES/reports/ANNA_SLIDES_DATA_PACK.md` | Pastable text for slides |
-| Zone MVP data | `DATA/3_ANALYSIS/zone_mvp_status.csv` | 100 zones with performance |
+| Zone MVP data | `docs/data/zone_mvp_status.json` | 201 zones with performance |
 | Anna's zones | `DATA/3_ANALYSIS/anna_zone_dish_counts.csv` | 1,306 zones supply view |
 | Dish scoring | `DATA/3_ANALYSIS/dish_scoring_anna_aligned.csv` | Full dish metrics |
 | Latent demand | `DATA/3_ANALYSIS/latent_demand_scores.csv` | Open-text analysis |

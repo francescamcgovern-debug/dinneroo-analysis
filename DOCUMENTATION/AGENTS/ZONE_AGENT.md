@@ -18,7 +18,23 @@ Evaluate zone health, MVP status, and performance. Help Account Managers underst
 
 ## MVP Definition
 
-A zone is **MVP Ready** when it meets ALL of the following:
+**CANONICAL SOURCE:** `scripts/utils/definitions.py` - all functions imported from here.
+
+### MVP Status Tiers
+
+| Status | Cuisine Count | Description |
+|--------|---------------|-------------|
+| **MVP Ready** | 5+ of 7 Core | North star - full family offering |
+| **Near MVP** | 4 of 7 Core | Almost there - 1 cuisine gap |
+| **Progressing** | 3 of 7 Core | Data inflection point - meaningful variety |
+| **Developing** | 1-2 of 7 Core | Early stage - limited options |
+| **Supply Only** | Any | Has partners but no orders yet |
+| **Not Started** | 0 | No Dinneroo partners |
+
+```python
+from utils.definitions import get_mvp_status
+status = get_mvp_status(core_7_count=4, has_orders=True)  # "Near MVP"
+```
 
 ### Success Metrics (CRITICAL - Primary Indicators)
 
@@ -31,27 +47,27 @@ A zone is **MVP Ready** when it meets ALL of the following:
 
 | Criterion | Threshold | Why |
 |-----------|-----------|-----|
-| **Core Cuisines** | 5 of 5 | Covers diverse family preferences |
-| **Tier 1 Dishes** | 3 of 5 | Balanced midweek meal options |
+| **Core Cuisines** | 5 of 7 | Covers diverse family preferences |
 | **Partners** | ≥5 | Cuisine redundancy and availability |
 
-### Core Cuisines (Required for MVP)
+### Core 7 Cuisines
 
-| Cuisine | Priority Dishes | Why Essential |
-|---------|-----------------|---------------|
+**Required for MVP (5 of these):**
+
+| Cuisine | Key Dishes | Why Essential |
+|---------|------------|---------------|
+| **Asian** | Katsu, Pho, Pad Thai, Sushi, Noodles | Top volume, strong family appeal |
 | **Italian** | Pizza, Pasta, Garlic Bread | Universal kid appeal, familiar |
-| **Indian** | Tikka Masala, Korma (mild), Naan | Great portions, mild options |
-| **Japanese/Asian** | Teriyaki, Gyoza, Rice Bowls | Top volume, balanced perception |
-| **Chicken (Grilled)** | Grilled Chicken + Sides, Wraps | Balanced midweek positioning |
-| **Thai/Vietnamese** | Pad Thai, Spring Rolls, Pho | Fresh/healthy, adult appeal |
+| **Indian** | Curry, Biryani, Tikka Masala | Great portions, mild options |
+| **Healthy** | Grain Bowls, Salads, Protein + Veg | Balanced midweek positioning |
+| **Mexican** | Fajitas, Burritos, Tacos | High customisation for fussy eaters |
 
-### Recommended Cuisines (Nice-to-Have)
+**Optional (Nice-to-Have):**
 
-| Cuisine | Priority Dishes | Rationale |
-|---------|-----------------|-----------|
-| Mexican/Latin | Burrito Bowl, Tacos, Quesadilla | High customisation for fussy eaters |
-| Burgers | Classic, Chicken, Veggie | Kid-friendly but less balanced |
-| Mediterranean | Halloumi, Falafel, Salads | Strong balanced meal perception |
+| Cuisine | Key Dishes | Rationale |
+|---------|------------|-----------|
+| **Middle Eastern** | Shawarma, Falafel, Halloumi | Strong balanced meal perception |
+| **British** | Shepherd's Pie, Fish & Chips, Roast | Cultural staples, comfort food |
 
 ---
 
@@ -91,13 +107,24 @@ A zone is **MVP Ready** when it meets ALL of the following:
 
 ### Step 4: Classify Zone Status
 
-**For Live Zones (201 zones with order data):**
+**Use tiered MVP status from `scripts/utils/definitions.py`:**
 
-| Status | Criteria | Source |
-|--------|----------|--------|
-| **MVP Ready** | Meets all thresholds (rating ≥4.0, repeat ≥35%, cuisine pass) | `zone_mvp_status.json` |
-| **Near MVP** | Missing 1-2 criteria | `zone_mvp_status.json` |
-| **Developing** | Missing 3+ criteria | `zone_mvp_status.json` |
+| Status | Core 7 Count | Has Orders | Description |
+|--------|--------------|------------|-------------|
+| **MVP Ready** | 5+ | Yes | North star target |
+| **Near MVP** | 4 | Yes | Almost there |
+| **Progressing** | 3 | Yes | Data inflection point |
+| **Developing** | 1-2 | Yes | Early stage |
+| **Supply Only** | Any | No | Has partners, no orders |
+| **Not Started** | 0 | No | No Dinneroo partners |
+
+**Implementation:**
+```python
+from utils.definitions import get_mvp_status, get_cuisine_pass
+
+status = get_mvp_status(core_7_count, has_orders)
+cuisine_pass = get_cuisine_pass(core_7_count)  # True if 5+
+```
 
 **For Non-Live Zones (1,105 zones without order data):**
 

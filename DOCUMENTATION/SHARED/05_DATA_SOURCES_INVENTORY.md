@@ -216,6 +216,69 @@ These can be pulled fresh from Snowflake.
 
 ---
 
+## ⚠️ CRITICAL: Non-Dinneroo Benchmark Rules
+
+When using non-Dinneroo orders as a benchmark for demand, you **MUST** filter to comparable occasions.
+
+### The Problem
+
+Dinneroo is **98% midweek orders** (Mon-Thu, 5-7pm dinner). Unfiltered non-Dinneroo orders include:
+- Weekend "treat" orders (61% of non-Dinneroo volume)
+- Late-night takeaways (different psychology)
+- Lunch orders (different occasion)
+- Grocery/alcohol (non-restaurant)
+
+Using unfiltered non-Dinneroo data creates **apples-to-oranges comparisons** that systematically overstate weekend-heavy cuisines.
+
+### Required Filters
+
+When using non-Dinneroo orders as a demand benchmark, **ALWAYS** filter to:
+
+```sql
+WHERE ORDER_DAY IN ('Monday', 'Tuesday', 'Wednesday', 'Thursday')
+  AND ORDER_TIME BETWEEN '16:30' AND '21:00'
+  AND IS_DINNEROO = False
+```
+
+### Files
+
+| File | Use |
+|------|-----|
+| `DATA/3_ANALYSIS/non_dinneroo_cuisine_demand.csv` | Raw - **DO NOT USE for benchmarks** |
+| `DATA/3_ANALYSIS/non_dinneroo_cuisine_demand_midweek.csv` | Filtered - **USE THIS for benchmarks** |
+
+### Filter Impact (Validated Jan 2026)
+
+Only **26.5%** of non-Dinneroo orders are retained after filtering. Impact by cuisine:
+
+| Cuisine | Raw Orders | Filtered Orders | Retention |
+|---------|------------|-----------------|-----------|
+| Burgers | 68,803 | 16,155 | 24% |
+| Chinese | 24,309 | 8,412 | 35% |
+| Indian | 26,844 | 8,699 | 32% |
+| Thai | 11,481 | 4,144 | 36% |
+| British | 14,051 | 3,087 | 22% |
+
+**Key insight:** Chinese, Indian, and Thai have higher retention (more midweek-oriented). Burgers and British have lower retention (more weekend-oriented). Using unfiltered data would overstate Burgers and British demand relative to Asian cuisines.
+
+### Script
+
+```bash
+python3 scripts/filter_non_dinneroo_midweek.py
+```
+
+Regenerates both raw and filtered aggregations from `FULL_ORDER_HISTORY.csv`.
+
+### When This Rule Applies
+
+- ✅ Cuisine gap analysis (use filtered)
+- ✅ New cuisine opportunity detection (use filtered)
+- ✅ Demand benchmarking for recruitment (use filtered)
+- ❌ General market analysis (can use raw with caveat)
+- ❌ Weekend occasion analysis (should use raw)
+
+---
+
 ## Data Source Selection Guidelines
 
 ### For MVP Zone Definition

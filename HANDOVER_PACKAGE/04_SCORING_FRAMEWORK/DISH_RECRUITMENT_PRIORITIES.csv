@@ -1,0 +1,12 @@
+dish_type,recruitment_rank,recruitment_score,latent_demand_mentions,fussy_eater_friendly,gap_score,cuisine,potential_partners,gap_type,recruitment_rationale
+Chinese Family Meal,1,3.65,58,3,5,Chinese,New recruitment needed,Supply Gap,"Gap: Supply Gap, Latent mentions: 58, Partners: New recruitment needed"
+Rotisserie Chicken,2,3.0999999999999996,0,5,2,Global,Farmer J,No Gap,"Gap: No Gap, Latent mentions: 0, Partners: Farmer J"
+Greek Mezze,3,3.05,6,3,2,Greek,New recruitment needed,No Gap,"Gap: No Gap, Latent mentions: 6, Partners: New recruitment needed"
+Buddha Bowl,4,2.4999999999999996,0,3,2,Healthy/Fresh,Farmer J,No Gap,"Gap: No Gap, Latent mentions: 0, Partners: Farmer J"
+Burrito,5,2.4499999999999997,0,3,4,Mexican,Tortilla,Quality Gap,"Gap: Quality Gap, Latent mentions: 0, Partners: Tortilla"
+Dim Sum,6,2.1999999999999997,0,3,5,Chinese,New recruitment needed,Supply Gap,"Gap: Supply Gap, Latent mentions: 0, Partners: New recruitment needed"
+Korma,7,1.5,0,3,2,Indian,Dishoom,No Gap,"Gap: No Gap, Latent mentions: 0, Partners: Dishoom"
+Cottage Pie,7,1.5,0,3,2,British,Bill's,No Gap,"Gap: No Gap, Latent mentions: 0, Partners: Bill's"
+Bibimbap,9,1.1,0,3,2,Korean,New recruitment needed,No Gap,"Gap: No Gap, Latent mentions: 0, Partners: New recruitment needed"
+Souvlaki,9,1.1,0,3,2,Greek,New recruitment needed,No Gap,"Gap: No Gap, Latent mentions: 0, Partners: New recruitment needed"
+Bangers & Mash,9,1.1,0,3,2,British,New recruitment needed,No Gap,"Gap: No Gap, Latent mentions: 0, Partners: New recruitment needed"

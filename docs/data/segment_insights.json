@@ -1,0 +1,116 @@
+{
+  "generated_at": "2026-01-08T18:15:00",
+  "source": "DATA/3_ANALYSIS/segment_comparison_detailed.json",
+  "total_n": 1599,
+  "segments": [
+    {
+      "name": "Family",
+      "n": 729,
+      "pct": 46,
+      "satisfaction": 85.6,
+      "repeat_intent": 75.2,
+      "overall_satisfied": 81.4,
+      "food_adequacy": 77.3,
+      "confidence": "high",
+      "definition": "Ordered for household with children",
+      "top_restaurant": "Wagamama",
+      "key_driver": "Sounded appealing to my children (31%)"
+    },
+    {
+      "name": "Couple",
+      "n": 369,
+      "pct": 23,
+      "satisfaction": 87.1,
+      "repeat_intent": 75.3,
+      "overall_satisfied": 87.5,
+      "food_adequacy": 81.1,
+      "confidence": "high",
+      "definition": "Two adults, no children",
+      "top_restaurant": "Pho",
+      "key_driver": "Good value for money (57%)"
+    },
+    {
+      "name": "Single",
+      "n": 190,
+      "pct": 12,
+      "satisfaction": 84.6,
+      "repeat_intent": 71.9,
+      "overall_satisfied": 84.0,
+      "food_adequacy": 80.6,
+      "confidence": "medium",
+      "definition": "Single adult dining alone",
+      "top_restaurant": "Pho",
+      "key_driver": "Good value for money (47%)"
+    },
+    {
+      "name": "Friends/Sharers",
+      "n": 56,
+      "pct": 4,
+      "satisfaction": 88.9,
+      "repeat_intent": 77.4,
+      "overall_satisfied": 86.8,
+      "food_adequacy": 86.8,
+      "confidence": "low",
+      "note": "Small sample - treat with caution",
+      "definition": "Group of friends or flatmates sharing",
+      "top_restaurant": "Pho",
+      "key_driver": "Good value for money (46%)"
+    },
+    {
+      "name": "Mixed/Unspecified",
+      "n": 255,
+      "pct": 16,
+      "satisfaction": 87.1,
+      "repeat_intent": 75.0,
+      "overall_satisfied": 81.7,
+      "food_adequacy": 74.2,
+      "confidence": "medium",
+      "definition": "Customers who selected multiple household types (e.g., 'Family' AND 'Couple') or left the field blank. This often indicates multi-generational households, visiting relatives, or survey fatigue.",
+      "top_restaurant": "Pho",
+      "key_driver": "Good value for money (27%)",
+      "note": "Consider splitting into 'Multi-select' vs 'Unspecified' in future surveys"
+    }
+  ],
+  "non_family_summary": {
+    "total_n": 870,
+    "pct_of_orders": 54,
+    "avg_satisfaction": 86.9,
+    "avg_repeat_intent": 75.0,
+    "insight": "Non-families are 54% of orders with equal or higher satisfaction than families"
+  },
+  "segment_differences": [
+    {
+      "metric": "Satisfaction",
+      "insight": "Friends/Sharers highest (88.9%), Single lowest (84.6%) - all within 4.3pp",
+      "significant": false
+    },
+    {
+      "metric": "Value Perception",
+      "insight": "Couples cite value 11pp more than families (57% vs 46%)",
+      "significant": true
+    },
+    {
+      "metric": "Child Appeal Driver",
+      "insight": "Only families cite child appeal as key driver (31% vs <1% for others)",
+      "significant": true
+    },
+    {
+      "metric": "Portion Satisfaction",
+      "insight": "Friends/Sharers most satisfied with portions (87% vs 77% for families)",
+      "significant": false
+    }
+  ],
+  "vp_consumer_insight": {
+    "question": "Can we remove the families focus and expand to couples/solo/groups?",
+    "answer": "Data supports expansion - non-families already 54% of orders with equal/higher satisfaction",
+    "evidence": [
+      "Couples: 87.1% satisfaction (vs 85.6% families)",
+      "Single: 84.6% satisfaction (comparable)",
+      "Friends: 88.9% satisfaction (highest, but n=56)",
+      "No segment shows dissatisfaction with current offering"
+    ],
+    "caution": "Friends/Sharers sample (n=56) needs larger study before major pivot"
+  },
+  "limitation": "Dish-level orders by segment requires Snowflake join - current data shows segment satisfaction but not what each segment orders"
+}
+

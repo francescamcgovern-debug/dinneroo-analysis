@@ -1,0 +1,47 @@
+{
+  "captured_at": "2026-01-08T18:24:45.021969",
+  "week": "2026-W01",
+  "date": "2026-01-08",
+  "metrics": {
+    "zones": {
+      "total": 1306,
+      "mvp_ready": 70,
+      "near_mvp": 31,
+      "needs_work": 0
+    },
+    "near_mvp_breakdown": {
+      "Healthy": 31,
+      "Indian": 25,
+      "Mexican": 25,
+      "Middle Eastern": 6,
+      "British": 6
+    },
+    "segments": {
+      "Family": {
+        "n": 729,
+        "pct": 46,
+        "satisfaction": 85.6
+      },
+      "Couple": {
+        "n": 369,
+        "pct": 23,
+        "satisfaction": 87.1
+      },
+      "Single": {
+        "n": 190,
+        "pct": 12,
+        "satisfaction": 84.6
+      },
+      "Friends/Sharers": {
+        "n": 56,
+        "pct": 4,
+        "satisfaction": 88.9
+      },
+      "Mixed/Unspecified": {
+        "n": 255,
+        "pct": 16,
+        "satisfaction": 87.1
+      }
+    }
+  }
+}

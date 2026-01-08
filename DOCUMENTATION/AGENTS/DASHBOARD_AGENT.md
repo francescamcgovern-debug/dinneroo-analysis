@@ -165,39 +165,47 @@ The dashboard's MVP Thresholds section displays **data-driven inflection points*
 | Rating | ≥4.0 | Families are satisfied (benchmark: 4.2) |
 | Repeat Rate | ≥35% | Families find value and return |
 
-### Updating the Dashboard
+### SINGLE SOURCE OF TRUTH
 
-The dashboard embeds data directly as JSON. To update:
+**CRITICAL: Only edit the master dashboard in DELIVERABLES. Never edit docs/ directly.**
 
-1. Run analysis scripts to generate new CSVs
-2. Validate against `config/dashboard_metrics.json` for consistency
-3. Run the update script to sync embedded data
-
-**Automated update (recommended):**
-```bash
-python3 scripts/update_master_dashboard.py  # Updates master dashboard with latest metrics
+```
+DELIVERABLES/dashboards/dinneroo_master_dashboard.html  ← EDIT THIS FILE
+         │
+         └─── sync_zone_data.py ───► docs/dashboard.html (auto-generated for GitHub Pages)
 ```
 
-**Full regeneration (all dashboards):**
+| File | Purpose | Editable? |
+|------|---------|-----------|
+| `DELIVERABLES/dashboards/dinneroo_master_dashboard.html` | **Master dashboard** | ✅ YES |
+| `docs/dashboard.html` | GitHub Pages deployment | ❌ NO (auto-synced) |
+| `docs/index.html` | Landing page | ✅ YES |
+
+### How to Update the Dashboard
+
+**After editing the master dashboard HTML:**
 ```bash
-python3 scripts/generate_zone_dashboard_data.py  # Updates zone_analysis.json
-python3 scripts/prepare_dashboard_data.py        # Aggregates all agent outputs
-python3 scripts/generate_dashboard.py            # Embeds into consumer insight tracker
-python3 scripts/update_master_dashboard.py       # Updates master dashboard
+python3 scripts/sync_zone_data.py    # Copies to docs/ for GitHub Pages
 ```
 
-**Via pipeline:**
+**After updating zone/dish data:**
 ```bash
-python3 scripts/run_pipeline.py --phase 3        # Runs all synthesis including dashboard updates
+python3 scripts/generate_zone_dashboard_data.py  # Regenerates zone_analysis.json
+python3 scripts/sync_zone_data.py                # Syncs data AND copies dashboard to docs/
 ```
 
-### Automation Details
+**Full refresh (rare):**
+```bash
+python3 scripts/run_pipeline.py --phase 3        # Regenerates everything
+```
 
-The `update_master_dashboard.py` script:
-- Reads from `mvp_threshold_discovery.json`, `zone_mvp_status.json`, and config files
-- Updates zone counts (201 live zones), MVP status counts, order totals
-- Creates a backup before updating
-- Reports what changed
+### What sync_zone_data.py Does
+
+1. Loads `docs/data/zone_analysis.json`
+2. Generates `zone_data.js` (DELIVERABLES + docs)
+3. **Copies master dashboard to `docs/dashboard.html`**
+
+Always run sync after editing the dashboard!
 
 ---
 

@@ -1,0 +1,58 @@
+rank,cuisine,on_dinneroo,unified_score,performance_score,opportunity_score,quadrant,gap_type,order_volume,zone_count,orders_per_zone,zone_ranking_pct,avg_rating,kids_happy,latent_demand_score,non_dinneroo_score
+1,Vietnamese,True,3.8,5.0,2.0,Demand Boosters,OK,13206.0,200.0,66.0,0,4.567857142857143,,2,2
+2,indian,True,3.46,4.43,2.0,Demand Boosters,Unknown,8400.0,200.0,42.0,0,4.664634146341464,,2,2
+3,japanese,True,3.29,4.14,2.0,Demand Boosters,Unknown,14788.0,200.0,73.9,0,4.2434456928838955,,2,2
+4,Asian,True,3.2,4.0,2.0,Demand Boosters,Unknown,9065.0,200.0,45.3,0,4.433063791554358,,2,2
+5,Salads,True,3.11,3.86,2.0,Demand Boosters,Unknown,5391.0,200.0,27.0,0,4.579411764705882,,2,2
+6,Curry,True,3.11,3.86,2.0,Demand Boosters,Unknown,3355.0,200.0,16.8,0,4.750519750519751,,2,2
+7,italian,True,2.94,3.57,2.0,Demand Boosters,Unknown,9164.0,200.0,45.8,0,4.152347209920284,,2,2
+8,thai,True,2.86,3.43,2.0,Demand Boosters,Unknown,5204.0,200.0,26.0,0,4.3318042813455655,,2,2
+9,Meal Deals,True,2.77,3.29,2.0,Demand Boosters,Unknown,1221.0,200.0,6.1,0,4.518918918918919,,2,2
+10,Vegan Friendly,True,2.51,2.86,2.0,Deprioritised,Unknown,2097.0,200.0,10.5,0,4.434343434343434,,2,2
+11,Chicken,True,2.51,2.86,2.0,Deprioritised,Unknown,1099.0,200.0,5.5,0,4.426966292134831,,2,2
+12,Burgers,True,2.51,2.86,2.0,Deprioritised,Unknown,2531.0,200.0,12.7,0,4.494871794871795,,2,2
+13,Plus offers Oct 2024,True,2.43,2.71,2.0,Deprioritised,Unknown,84.0,200.0,0.4,0,4.714285714285714,,2,2
+14,Roasteries,True,2.43,2.71,2.0,Deprioritised,Unknown,123.0,200.0,0.6,0,4.555555555555555,,2,2
+15,lebanese,True,2.43,2.71,2.0,Deprioritised,Unknown,139.0,200.0,0.7,0,4.833333333333333,,2,2
+16,breakfast,True,2.43,2.71,2.0,Deprioritised,Unknown,137.0,200.0,0.7,0,4.7272727272727275,,2,2
+17,Healthy Eating 2025,True,2.43,2.71,2.0,Deprioritised,Unknown,40.0,200.0,0.2,0,5.0,,2,2
+18,Burritos,True,2.43,2.71,2.0,Deprioritised,Unknown,26.0,200.0,0.1,0,4.75,,2,2
+19,Middle Eastern,True,2.43,2.71,2.0,Deprioritised,SUPPLY GAP,284.0,200.0,1.4,0,4.630434782608695,,2,2
+20,"Exclusive offers, from our exclusive restaurants",True,2.43,2.71,2.0,Deprioritised,Unknown,66.0,200.0,0.3,0,5.0,,2,2
+21,halal,True,2.43,2.71,2.0,Deprioritised,Unknown,136.0,200.0,0.7,0,4.555555555555555,,2,2
+22,Gluten Free,True,2.43,2.71,2.0,Deprioritised,Unknown,147.0,200.0,0.7,0,4.842105263157895,,2,2
+23,Family favourites,True,2.43,2.71,2.0,Deprioritised,Unknown,54.0,200.0,0.3,0,4.625,,2,2
+24,Healthy,True,2.43,2.71,2.0,Deprioritised,Unknown,312.0,200.0,1.6,0,4.844827586206897,,2,2
+25,Mediterranean,True,2.43,2.71,2.0,Deprioritised,Unknown,519.0,200.0,2.6,0,4.644736842105263,,2,2
+26,Veganuary,True,2.43,2.71,2.0,Deprioritised,Unknown,84.0,200.0,0.4,0,4.583333333333333,,2,2
+27,Pho,True,2.43,2.71,2.0,Deprioritised,Unknown,816.0,200.0,4.1,0,4.719101123595506,,2,2
+28,Christmas Specials,True,2.43,2.71,2.0,Deprioritised,Unknown,67.0,200.0,0.3,0,4.6,,2,2
+29,Latin American,True,2.26,2.43,2.0,Deprioritised,Unknown,1415.0,200.0,7.1,0,4.077319587628866,,2,2
+30,sushi,True,2.17,2.29,2.0,Deprioritised,Unknown,405.0,200.0,2.0,0,4.32258064516129,,2,2
+31,chinese,True,2.17,2.29,2.0,Deprioritised,Unknown,284.0,200.0,1.4,0,4.434782608695652,,2,2
+32,Irish/British,True,2.0,,2.0,Deprioritised,SUPPLY GAP,,,,0,,,2,2
+33,Indian,True,2.0,,2.0,Deprioritised,OK,,,,0,,,2,2
+34,Japanese/Asian,True,2.0,,2.0,Deprioritised,OK,,,,0,,,2,2
+35,Japanese,True,2.0,,2.0,Deprioritised,OK,,,,0,,,2,2
+36,Mexican,True,2.0,,2.0,Deprioritised,QUALITY GAP,,,,0,,,2,2
+37,British,True,2.0,,2.0,Deprioritised,OK,,,,0,,,2,2
+38,Chinese,True,2.0,,2.0,Deprioritised,SUPPLY GAP,,,,0,,,2,2
+39,Healthy/Fresh,True,2.0,,2.0,Deprioritised,OK,,,,0,,,2,2
+40,Italian,True,2.0,,2.0,Deprioritised,OK,,,,0,,,2,2
+41,Thai/Southeast Asian,True,2.0,,2.0,Deprioritised,OK,,,,0,,,2,2
+42,French,True,2.0,,2.0,Deprioritised,SUPPLY GAP,,,,0,,,2,2
+43,Pasta,True,1.91,1.86,2.0,Deprioritised,Unknown,88.0,200.0,0.4,0,4.083333333333333,,2,2
+44,Featured Restaurants,True,1.91,1.86,2.0,Deprioritised,Unknown,77.0,200.0,0.4,0,4.214285714285714,,2,2
+45,Movie Night Restaurants,True,1.91,1.86,2.0,Deprioritised,Unknown,112.0,200.0,0.6,0,4.090909090909091,,2,2
+46,Kosher,True,1.91,1.86,2.0,Deprioritised,Unknown,112.0,200.0,0.6,0,4.235294117647059,,2,2
+47,mexican,True,1.91,1.86,2.0,Deprioritised,Unknown,46.0,200.0,0.2,0,4.222222222222222,,2,2
+48,vegetarian,True,1.91,1.86,2.0,Deprioritised,Unknown,2.0,200.0,0.0,0,4.0,,2,2
+49,Sandwiches,True,1.91,1.86,2.0,Deprioritised,Unknown,485.0,200.0,2.4,0,4.1506849315068495,,2,2
+50,Wraps,True,1.66,1.43,2.0,Deprioritised,Unknown,56.0,200.0,0.3,0,3.9,,2,2
+51,Asian Fusion,True,1.66,1.43,2.0,Deprioritised,Unknown,189.0,200.0,0.9,0,3.852941176470588,,2,2
+52,Organic,True,1.66,1.43,2.0,Deprioritised,Unknown,51.0,200.0,0.3,0,3.8333333333333335,,2,2
+53,Tacos,True,1.66,1.43,2.0,Deprioritised,Unknown,210.0,200.0,1.1,0,3.75,,2,2
+54,Shawarma,True,1.66,1.43,2.0,Deprioritised,Unknown,85.0,200.0,0.4,0,3.857142857142857,,2,2
+55,pizza,True,1.4,1.0,2.0,Deprioritised,Unknown,64.0,200.0,0.3,0,3.4,,2,2
+56,Only on Deliveroo,True,1.4,1.0,2.0,Deprioritised,Unknown,18.0,200.0,0.1,0,,,2,2
+57,Alcohol,True,1.4,1.0,2.0,Deprioritised,Unknown,1.0,200.0,0.0,0,,,2,2

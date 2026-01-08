@@ -55,7 +55,8 @@ PHASES = {
             'phase2_analysis/01_score_dishes_v3.py',  # Two-Track scoring (Track A + Track B)
             'phase2_analysis/02_analyze_zones.py',
             'phase2_analysis/03_segment_customers.py',
-            'phase2_analysis/04_smart_discovery.py'   # Smart Discovery dishes
+            'phase2_analysis/04_smart_discovery.py',   # Smart Discovery dishes
+            'phase2_analysis/generate_three_lists.py'  # Segment-specific rankings (Family/Couple/Recruitment)
         ]
     },
     3: {
@@ -65,6 +66,7 @@ PHASES = {
             'phase3_synthesis/02_generate_zone_report.py',
             'phase3_synthesis/03_export_dashboard_data.py',
             'generate_zone_dashboard_data.py',  # Updates zone_analysis.json
+            'sync_zone_data.py',  # Syncs zone_analysis.json → zone_data.js (for dashboard)
             'update_master_dashboard.py'  # Updates master dashboard with latest metrics
         ]
     }

@@ -1,0 +1,25 @@
+high_level_dish,item_count,granular_types,partners,cuisines,proteins
+Pasta,23,"Alfredo, Bolognese, Lasagne Mac & Cheese Rigatoni Alfredo, Lasagne Penne, Mac & Cheese, Pasta Bake, Penne, Rigatoni, Rigatoni Carbonara, Rose Pasta","Bella Italia, Bill's, Cacciari's, Milano, PIZAZA-SGroup, PizzaExpress, Prezzo, SOYO-SGroup",Italian,"Beef, Beef Chicken Tomato, Chicken, Chicken Beef, Mushroom, Pork, Tomato, Tomato Chicken Pork, Tomato Red Pepper, Vegetarian"
+Rice Bowl,21,"Other Rice Bowl, Sweet & Sour Rice Bowl, Teriyaki Rice Bowl, Teriyaki Rice Bowl Sweet Chilli Rice Bowl Sweet & Sour Rice Bowl Korean Chilli Rice Bowl, Thai Rice Bowl Teriyaki Rice Bowl","Banana Tree, Giggling Squid, Itsu, Kokoro, Pho, TUK TUK-SGroup, Taste Of Hong Kong-DCN, Xian Street Food, Zumuku",Asian,"Beef, Chicken, Chicken Tofu, Duck Pork Chicken, Salmon, Tofu, Tofu & Grilled Veg Chicken"
+Grain Bowl,17,"Grain Bowl, Shawarma","Farmer J, LEON, Remedy Kitchen, The Salad Project, Yacob's Kitchen, atis","Healthy, Middle Eastern","Chicken, Chicken Tofu, Falafal Black Bean Chicken, Falafel, Salmon, Sweet Potato, Tofu, Vegetarian"
+South Asian / Indian Curry,13,"Aloo Mutter Curry, Butter Chicken Curry, Mattar Paneer Curry, Other Curry, Tikka Masala Curry","Chaska, Dishoom, Kricket, Saravana Bhavan, Tadka House, Tiffin Tin",Indian,"Chicken, Chicken Mushroom, Paneer, Prawn, Vegetarian"
+Noodles,13,"Chow Mein, Egg Fried Noodles, Korean Noodles Teriyaki Noodles Noodle Soup, Pad Thai, Rice Noodles, Teriyaki Noodles Sweet Chilli Noodles Sweet Sour Noodles Korean Chilli Noodles, Wok-Fried Noodles, Yakisoba","Asia Villa, Banana Tree, Iro Sushi, Itsu, Kokoro, Pho, SOYO-SGroup, Ting Thai, Zumuku",Asian,"Chicken, Chicken Beef Prawn, Chicken Beef Prawn Duck, Chicken Tofu Mushroom, Chicken Tofu Prawn, Vegetarian"
+East Asian Curry,11,"Massaman Curry, Other Curry, Raisukare Curry, Thai Green Curry, Thai Green Curry Thai Red Curry, Yellow Curry","Asia Villa, Bill's, Giggling Squid, Pho, Ting Thai, Wagamama, Zumuku",Asian,"Cauliflower, Chicken, Chicken Beef Prawn, Chicken Beef Tofu. Mushroom, Chicken Tofu, Tofu"
+Katsu,9,Katsu,"Banana Tree, Iro Sushi, Itsu, Kokoro, Wagamama, Zumuku, Zumuku Sushi",Asian,"Chicken, Chicken Tofu, Sweet Potato Aubergine & Squash"
+Biryani,6,Biryani,"Chaska, Dishoom, Tadka House",Indian,"Chicken, Jackfuit, Vegetarian"
+Fried Rice,5,"Special Fried Rice, Stir-Fried Rice, Sweet & Sour Fried Rice, Wok-Fried Rice","Asia Villa, Pho, TUK TUK-SGroup, Xian Street Food",Asian,Chicken
+Pizza,5,Pizza,"Milano, PizzaExpress, Prezzo",Italian,Pork
+Other,4,"Chicken Wings, Maqluba, Mezze, Other","Shaku Maku, TUK TUK-SGroup, Umi Falafel, Zaatar Rathmines","Asian, Middle Eastern","Chicken, Falafel Halloumi, Vegetarian"
+Protein & Veg,4,Protein & Veg,"Cocotte, Shaku Maku","Healthy, Middle Eastern","Chicken, PB Chicken"
+Lasagne,3,Lasagne,"Bella Italia, Cacciari's, SOYO-SGroup",Italian,"Beef, Vegetarian"
+Burrito / Burrito Bowl,3,Burrito / Burrito Bowl,"Tula Ireland, Zambrero UK",Mexican,"Beef Chicken, Beef Pork Chicken"
+Fajitas,3,Fajitas,Las Iguanas,Mexican,Mushroom Chicken Prawn
+Shawarma,3,Shawarma,Bill's,Middle Eastern,"Chicken, Halloumi, Mushroom"
+Chilli,3,Chilli,Las Iguanas,Mexican,Beef Sweet Potato & Squash
+Tacos,3,Tacos,"Tula Ireland, Zambrero UK",Mexican,"Beef Chicken, Beef Pork Chicken"
+Nachos,1,Nachos,Zambrero UK,Mexican,Beef Chicken
+Pho,1,Pho,Pho,Asian,Chicken Beef Tofu Mushroom
+Poke,1,Poke,Itsu,Asian,Salmon Chicken Prawn
+Quesadilla,1,Quesadilla,Tula Ireland,Mexican,Vegetarian
+Shepherd's Pie,1,Shepherd's Pie,Bill's,British,Beef
+Sushi,1,Sushi,Itsu,Asian,Salmon
