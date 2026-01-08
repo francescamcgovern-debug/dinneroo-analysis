@@ -1031,7 +1031,7 @@
                     <div style="background: var(--bg-card); padding: 0.75rem; border-radius: 0.5rem;">
                         <div style="font-size: 1.5rem; font-weight: 700;">197</div>
                         <div style="font-size: 0.75rem; color: var(--text-secondary);">Analyzed</div>
-                        <div style="font-size: 0.65rem; color: var(--text-muted);">Statistical threshold</div>
+                        <div style="font-size: 0.65rem; color: var(--text-muted);">≥50 orders for stats</div>
                     </div>
                 </div>
             </div>
@@ -1082,7 +1082,7 @@
                     <div class="step-number" style="background: var(--accent-teal);">📊</div>
                     <div>
                         <div class="step-title">Executive Summary</div>
-                        <div class="step-subtitle">Leadership view: Progress, segments, and key actions</div>
+                        <div class="step-subtitle">70 MVP zones | £25 AOV | 82,350 orders (Sep-Dec 2025)</div>
                     </div>
                 </div>
                 <div class="step-content">
@@ -1144,6 +1144,9 @@
                         </div>
                         <div style="margin-top: 0.75rem; padding: 0.5rem; background: rgba(0, 212, 170, 0.1); border-radius: 0.5rem; font-size: 0.85rem;">
                             💡 <strong>INSIGHT:</strong> Non-families are 54% of orders and equally/more satisfied (Couples: 87.1% <span style="color: var(--text-muted);">[n=205]</span> vs Families: 85.6% <span style="color: var(--text-muted);">[n=410]</span>)
+                        </div>
+                        <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem;">
+                            * Totals exceed 100% because customers can select multiple household types
                         </div>
                     </div>
                 </div>
@@ -1312,7 +1315,7 @@
                         </div>
                     </div>
                     <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(236, 72, 153, 0.1); border-radius: 0.5rem; font-size: 0.8rem;">
-                        💡 <strong>Current target:</strong> 5 cuisines (inflection) → 7 cuisines (business MVP)
+                        💡 <strong>Targets:</strong> <span style="color: var(--success);">5 cuisines = MVP Ready</span> (launch threshold) → <span style="color: var(--accent-purple);">7 cuisines = Full Core 7</span> (aspirational)
                     </div>
                 </div>
             </div>
@@ -1585,8 +1588,11 @@
             <div class="section-header">
                 <h2 class="section-title">Zone Health & MVP Status</h2>
                 <p class="section-description">
-                    Track zone readiness across <strong>201 zones with orders</strong>. MVP Ready zones meet all criteria: 
-                    5+ partners, 5+ cuisines, and 4.0+ rating.
+                    Track zone readiness across <strong>201 zones with orders</strong>. 
+                    <br><br>
+                    <strong>MVP Ready</strong> = 5+ partners, 5+ cuisines, 4.0+ rating
+                    <br>
+                    <strong>Health Score</strong> = Weighted composite (40% orders, 30% rating, 20% repeat rate, 10% cuisine coverage). Higher = better performing.
                 </p>
             </div>
             
@@ -1636,6 +1642,69 @@
                     </div>
                     <div style="margin-top: 1rem; padding: 0.75rem; background: var(--bg-secondary); border-radius: 0.5rem; font-size: 0.85rem;">
                         <strong>💡 Opportunity:</strong> Converting 31 Near MVP zones would boost MVP-ready from 70 to 101 zones
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PARTNER OPS: Quick Wins Priority Queue -->
+            <div class="step-card" style="margin-bottom: 2rem; border-top: 3px solid var(--warning);">
+                <div class="step-header">
+                    <div class="step-number" style="background: var(--warning);">🎯</div>
+                    <div>
+                        <div class="step-title">Quick Wins: Near MVP Zones</div>
+                        <div class="step-subtitle">31 zones need just 1 cuisine to reach MVP - sorted by effort</div>
+                    </div>
+                </div>
+                <div class="step-content">
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                            <thead>
+                                <tr style="background: var(--bg-secondary); text-align: left;">
+                                    <th style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Zone</th>
+                                    <th style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Missing</th>
+                                    <th style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Orders</th>
+                                    <th style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Fix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Norwich</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><span style="background: var(--warning-dim); color: var(--warning); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.75rem;">Indian</span></td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">1,228</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.75rem;">Dishoom, Tiffin Tin</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Guildford</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><span style="background: var(--warning-dim); color: var(--warning); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.75rem;">Indian</span></td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">969</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.75rem;">Dishoom, Tadka House</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Chelmsford</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><span style="background: var(--accent-purple-dim); color: var(--accent-purple); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.75rem;">Mexican</span></td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">725</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.75rem;">Tortilla, Wahaca</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">York</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><span style="background: var(--accent-teal-dim); color: var(--accent-teal); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.75rem;">Healthy</span></td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">729</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.75rem;">Leon, Farmer J</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Nottingham</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><span style="background: var(--accent-teal-dim); color: var(--accent-teal); padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.75rem;">Healthy</span></td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">759</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border); font-size: 0.75rem;">Leon, Itsu</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 0.75rem; text-align: center;">
+                        <button onclick="showSection('zones'); setTimeout(() => document.getElementById('zones-table')?.scrollIntoView({behavior:'smooth'}), 100);" 
+                                style="background: var(--warning); color: var(--bg-primary); border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer; font-weight: 600;">
+                            View All 31 Near MVP Zones →
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1879,23 +1948,38 @@
                     <div class="step-content" style="padding-top: 0;">
                         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
                             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: var(--bg-secondary); border-radius: 0.5rem;">
-                                <span style="font-weight: 600;">Veggie Options</span>
+                                <div>
+                                    <span style="font-weight: 600;">Veggie Options</span>
+                                    <div style="font-size: 0.65rem; color: var(--text-muted);">→ Leon, Itsu, Farmer J</div>
+                                </div>
                                 <span style="background: var(--warning-dim); color: var(--warning); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.7rem;">87 mentions</span>
                             </div>
                             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: var(--bg-secondary); border-radius: 0.5rem;">
-                                <span style="font-weight: 600;">Grilled Chicken</span>
+                                <div>
+                                    <span style="font-weight: 600;">Grilled Chicken</span>
+                                    <div style="font-size: 0.65rem; color: var(--text-muted);">→ Nando's, Farmer J, Cocotte</div>
+                                </div>
                                 <span style="background: var(--warning-dim); color: var(--warning); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.7rem;">45 mentions</span>
                             </div>
                             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: var(--bg-secondary); border-radius: 0.5rem;">
-                                <span style="font-weight: 600;">Fish &amp; Chips</span>
+                                <div>
+                                    <span style="font-weight: 600;">Fish &amp; Chips</span>
+                                    <div style="font-size: 0.65rem; color: var(--text-muted);">→ New recruitment needed</div>
+                                </div>
                                 <span style="background: var(--warning-dim); color: var(--warning); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.7rem;">38 mentions</span>
                             </div>
                             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: var(--bg-secondary); border-radius: 0.5rem;">
-                                <span style="font-weight: 600;">Dim Sum</span>
+                                <div>
+                                    <span style="font-weight: 600;">Dim Sum</span>
+                                    <div style="font-size: 0.65rem; color: var(--text-muted);">→ Ping Pong, new recruitment</div>
+                                </div>
                                 <span style="background: var(--warning-dim); color: var(--warning); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.7rem;">Supply gap</span>
                             </div>
                             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: var(--bg-secondary); border-radius: 0.5rem;">
-                                <span style="font-weight: 600;">Shawarma</span>
+                                <div>
+                                    <span style="font-weight: 600;">Shawarma</span>
+                                    <div style="font-size: 0.65rem; color: var(--text-muted);">→ German Doner, new recruitment</div>
+                                </div>
                                 <span style="background: var(--warning-dim); color: var(--warning); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.7rem;">Supply gap</span>
                             </div>
                         </div>
