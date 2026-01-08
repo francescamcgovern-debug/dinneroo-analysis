@@ -2490,16 +2490,25 @@
             const regionFilter = document.getElementById('zoneRegionFilter').value;
             const mvpFilter = document.getElementById('zoneMvpFilter').value;
             
-            let filtered = zoneData;
+            // Use zoneAnalysisData if available, otherwise fall back to legacy zoneData
+            let sourceData = zoneAnalysisData?.zones || zoneData;
+            let filtered = [...sourceData];
+            
             if (regionFilter !== 'all') {
                 filtered = filtered.filter(z => z.region === regionFilter);
             }
             if (mvpFilter !== 'all') {
-                if (mvpFilter === 'mvp') filtered = filtered.filter(z => z.is_mvp);
-                else if (mvpFilter === 'near') filtered = filtered.filter(z => !z.is_mvp && z.mvp_criteria_met === 2);
-                else if (mvpFilter === 'developing') filtered = filtered.filter(z => !z.is_mvp && z.mvp_criteria_met < 2);
+                if (mvpFilter === 'mvp') {
+                    filtered = filtered.filter(z => z.mvp_status === 'MVP Ready' || z.is_mvp);
+                } else if (mvpFilter === 'near') {
+                    filtered = filtered.filter(z => z.mvp_status === 'Near MVP' || (!z.is_mvp && z.mvp_criteria_met === 2));
+                } else if (mvpFilter === 'developing') {
+                    filtered = filtered.filter(z => z.mvp_status === 'Developing' || (!z.is_mvp && z.mvp_criteria_met < 2));
+                }
             }
-            populateZoneTable(filtered);
+            
+            // Use the clickable table renderer
+            populateZoneTableWithChecklist(filtered);
         }
         
         // ============================================================
@@ -3048,11 +3057,16 @@
         function populateZoneTableWithChecklist(data) {
             const tbody = document.getElementById('zones-table-body');
             tbody.innerHTML = data.map(z => {
-                const status = z.mvp_status || 'Developing';
+                // Handle both new format (mvp_status) and legacy format (is_mvp)
+                const status = z.mvp_status || (z.is_mvp ? 'MVP Ready' : (z.mvp_criteria_met === 2 ? 'Near MVP' : 'Developing'));
                 const statusClass = status === 'MVP Ready' ? 'validated' : 
                                    (status === 'Near MVP' ? 'corroborated' : 'single');
                 const progress = z.mvp_checklist?.progress?.overall_pct || 0;
                 const progressColor = progress >= 80 ? '#00d4aa' : progress >= 50 ? '#f59e0b' : '#f43f5e';
+                
+                // Handle both formats for cuisines and rating
+                const cuisines = z.cuisines_count !== undefined ? z.cuisines_count : z.cuisines;
+                const rating = z.avg_rating !== undefined ? z.avg_rating : z.rating;
                 
                 return `<tr class="clickable" onclick="openZoneDetail('${z.zone.replace(/'/g, "\\'")}')">
                     <td class="bucket">${z.zone}</td>
@@ -3060,8 +3074,8 @@
                     <td><span class="evidence-badge ${statusClass}">${status}</span></td>
                     <td>${(z.orders || 0).toLocaleString()}</td>
                     <td>${z.partners}</td>
-                    <td>${z.cuisines_count}</td>
-                    <td>${z.avg_rating ? z.avg_rating.toFixed(2) : '-'}</td>
+                    <td>${cuisines}</td>
+                    <td>${rating ? rating.toFixed(2) : '-'}</td>
                     <td>
                         <div class="progress-mini">
                             <div class="progress-mini-bar">
@@ -3076,9 +3090,25 @@
         }
         
         function openZoneDetail(zoneName) {
-            if (!zoneAnalysisData) return;
-            
-            const zone = zoneAnalysisData.zones.find(z => z.zone === zoneName);
+            // Find zone in zoneAnalysisData or fall back to legacy zoneData
+            let zone = zoneAnalysisData?.zones?.find(z => z.zone === zoneName);
+            if (!zone) {
+                // Try legacy zoneData
+                const legacyZone = zoneData.find(z => z.zone === zoneName);
+                if (legacyZone) {
+                    // Enhance legacy zone with checklist
+                    zone = {
+                        ...legacyZone,
+                        city: legacyZone.zone,
+                        cuisines_count: legacyZone.cuisines,
+                        total_dishes: legacyZone.partners * 4,
+                        avg_rating: legacyZone.rating,
+                        health_score: legacyZone.score,
+                        mvp_status: legacyZone.is_mvp ? 'MVP Ready' : (legacyZone.mvp_criteria_met === 2 ? 'Near MVP' : 'Developing'),
+                        mvp_checklist: generateChecklistFromLegacyData(legacyZone)
+                    };
+                }
+            }
             if (!zone) return;
             
             document.getElementById('detail-zone-name').textContent = zone.zone;
