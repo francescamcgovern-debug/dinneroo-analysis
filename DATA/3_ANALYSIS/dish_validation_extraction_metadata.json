@@ -1,0 +1,29 @@
+{
+  "extraction_timestamp": "2026-01-13T09:44:42.917317",
+  "source_files": [
+    "Dish Analysis Dec-25 - Dish Scoring.csv",
+    "Dish Analysis Dec-25 - Dish Suitability Ratings.csv",
+    "Dish Analysis Dec-25 - Item Categorisation.csv"
+  ],
+  "dish_count": 34,
+  "dinneroo_count": 23,
+  "not_dinneroo_count": 11,
+  "tiers_found": [
+    "Deprioritised",
+    "Core Drivers",
+    "Preference Drivers",
+    "Demand Boosters",
+    "Unknown",
+    "Test & Learn"
+  ],
+  "cuisines_found": [
+    "Italian",
+    "Asian",
+    "Healthy",
+    "Indian",
+    "Mexican",
+    "Middle Eastern",
+    "British",
+    "Unknown"
+  ]
+}

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinneroo Data Types Map | Visual Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #08080f;
+            --bg-primary: #0c0c14;
+            --bg-secondary: #14141f;
+            --bg-card: #1c1c2a;
+            --bg-hover: #252538;
+            
+            --accent-teal: #00d4aa;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f59e0b;
+            --accent-pink: #ec4899;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #22d3ee;
+            
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --quant: #00d4aa;
+            --qual: #f59e0b;
+            --mixed: #8b5cf6;
+            --derived: #ec4899;
+            --ref: #64748b;
+            
+            --internal: #3b82f6;
+            --research: #f59e0b;
+            --llm: #ec4899;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Animated background */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(0, 212, 170, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Legend */
+        .legend-section {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+        
+        .legend-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .legend-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        
+        .legend-items {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .legend-dot.quant { background: var(--quant); }
+        .legend-dot.qual { background: var(--qual); }
+        .legend-dot.mixed { background: var(--mixed); }
+        .legend-dot.derived { background: var(--derived); }
+        .legend-dot.ref { background: var(--ref); }
+        .legend-dot.internal { background: var(--internal); box-shadow: 0 0 8px var(--internal); }
+        .legend-dot.research { background: var(--research); box-shadow: 0 0 8px var(--research); }
+        .legend-dot.llm { background: var(--llm); box-shadow: 0 0 8px var(--llm); }
+        
+        /* Filter buttons */
+        .filter-section {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            border: 1px solid var(--bg-hover);
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        
+        .filter-btn:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+        
+        .filter-btn.active {
+            background: var(--accent-teal);
+            color: var(--bg-deep);
+            border-color: var(--accent-teal);
+            font-weight: 600;
+        }
+        
+        /* Main visualization grid */
+        .viz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+        
+        /* Data type cards */
+        .data-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .data-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            border-radius: 16px 16px 0 0;
+        }
+        
+        .data-card.quant::before { background: linear-gradient(90deg, var(--quant), var(--accent-cyan)); }
+        .data-card.qual::before { background: linear-gradient(90deg, var(--qual), #fbbf24); }
+        .data-card.mixed::before { background: linear-gradient(90deg, var(--mixed), var(--accent-blue)); }
+        .data-card.derived::before { background: linear-gradient(90deg, var(--derived), #f472b6); }
+        .data-card.ref::before { background: linear-gradient(90deg, var(--ref), #94a3b8); }
+        
+        .data-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
+            border-color: var(--bg-hover);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+        
+        .card-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .badge.quant { background: rgba(0, 212, 170, 0.15); color: var(--quant); }
+        .badge.qual { background: rgba(245, 158, 11, 0.15); color: var(--qual); }
+        .badge.mixed { background: rgba(139, 92, 246, 0.15); color: var(--mixed); }
+        .badge.derived { background: rgba(236, 72, 153, 0.15); color: var(--derived); }
+        .badge.ref { background: rgba(100, 116, 139, 0.15); color: var(--ref); }
+        
+        .badge.internal { background: rgba(59, 130, 246, 0.15); color: var(--internal); }
+        .badge.research { background: rgba(245, 158, 11, 0.15); color: var(--qual); }
+        .badge.llm { background: rgba(236, 72, 153, 0.15); color: var(--llm); }
+        
+        .card-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .card-path {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: var(--bg-secondary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            word-break: break-all;
+        }
+        
+        .card-stats {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .card-uses {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--bg-hover);
+        }
+        
+        .uses-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        
+        .uses-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .use-tag {
+            padding: 4px 10px;
+            background: var(--bg-secondary);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Flow diagram section */
+        .flow-section {
+            margin-top: 60px;
+            padding: 40px;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            border: 1px solid var(--bg-hover);
+        }
+        
+        .flow-title {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: var(--text-primary);
+        }
+        
+        .flow-diagram {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 24px;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+        
+        .flow-stage {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .stage-header {
+            text-align: center;
+            padding: 16px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            font-weight: 600;
+            color: var(--text-primary);
+            position: relative;
+        }
+        
+        .stage-header::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+        
+        .flow-stage:last-child .stage-header::after {
+            display: none;
+        }
+        
+        .stage-items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .stage-item {
+            padding: 12px 16px;
+            background: var(--bg-card);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border-left: 3px solid;
+            transition: all 0.2s ease;
+        }
+        
+        .stage-item:hover {
+            background: var(--bg-hover);
+            transform: translateX(4px);
+        }
+        
+        .stage-item.internal { border-color: var(--internal); }
+        .stage-item.research { border-color: var(--qual); }
+        .stage-item.llm { border-color: var(--llm); }
+        .stage-item.output { border-color: var(--accent-teal); }
+        
+        /* Summary stats */
+        .summary-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 48px;
+        }
+        
+        .summary-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid var(--bg-hover);
+        }
+        
+        .summary-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .summary-value.quant { color: var(--quant); }
+        .summary-value.qual { color: var(--qual); }
+        .summary-value.mixed { color: var(--mixed); }
+        .summary-value.internal { color: var(--internal); }
+        .summary-value.research { color: var(--research); }
+        .summary-value.llm { color: var(--llm); }
+        
+        .summary-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding-bottom: 40px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .legend-section { gap: 24px; }
+            .flow-diagram { flex-direction: column; }
+            .stage-header::after { display: none; }
+        }
+        
+        /* Animation */
+        .data-card {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .data-card:nth-child(1) { animation-delay: 0.05s; }
+        .data-card:nth-child(2) { animation-delay: 0.1s; }
+        .data-card:nth-child(3) { animation-delay: 0.15s; }
+        .data-card:nth-child(4) { animation-delay: 0.2s; }
+        .data-card:nth-child(5) { animation-delay: 0.25s; }
+        .data-card:nth-child(6) { animation-delay: 0.3s; }
+        .data-card:nth-child(7) { animation-delay: 0.35s; }
+        .data-card:nth-child(8) { animation-delay: 0.4s; }
+        .data-card:nth-child(9) { animation-delay: 0.45s; }
+        .data-card:nth-child(10) { animation-delay: 0.5s; }
+        .data-card:nth-child(11) { animation-delay: 0.55s; }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Dinneroo Data Types Map</h1>
+            <p class="subtitle">Visual guide to our data sources: what they are, whether they're quantitative or qualitative, and whether they come from internal systems, research, or LLM processing.</p>
+        </header>
+        
+        <!-- Legend -->
+        <div class="legend-section">
+            <div class="legend-group">
+                <div class="legend-title">Data Nature</div>
+                <div class="legend-items">
+                    <div class="legend-item"><span class="legend-dot quant"></span> Quantitative</div>
+                    <div class="legend-item"><span class="legend-dot qual"></span> Qualitative</div>
+                    <div class="legend-item"><span class="legend-dot mixed"></span> Mixed (Quant + Qual)</div>
+                    <div class="legend-item"><span class="legend-dot derived"></span> LLM-Derived</div>
+                    <div class="legend-item"><span class="legend-dot ref"></span> Reference</div>
+                </div>
+            </div>
+            <div class="legend-group">
+                <div class="legend-title">Source Type</div>
+                <div class="legend-items">
+                    <div class="legend-item"><span class="legend-dot internal"></span> Internal</div>
+                    <div class="legend-item"><span class="legend-dot research"></span> Research</div>
+                    <div class="legend-item"><span class="legend-dot llm"></span> LLM</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Filters -->
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">All Types</button>
+            <button class="filter-btn" data-filter="quant">Quantitative</button>
+            <button class="filter-btn" data-filter="qual">Qualitative</button>
+            <button class="filter-btn" data-filter="mixed">Mixed</button>
+            <button class="filter-btn" data-filter="internal">Internal</button>
+            <button class="filter-btn" data-filter="research">Research</button>
+            <button class="filter-btn" data-filter="llm">LLM-Derived</button>
+        </div>
+        
+        <!-- Data Cards Grid -->
+        <div class="viz-grid" id="dataGrid">
+            <!-- Card 1: Reference configs -->
+            <div class="data-card ref" data-nature="ref" data-source="internal">
+                <div class="card-header">
+                    <h3 class="card-title">Reference Configs & Taxonomies</h3>
+                    <div class="card-badges">
+                        <span class="badge ref">Reference</span>
+                        <span class="badge internal">Internal</span>
+                    </div>
+                </div>
+                <p class="card-description">Rules of the game: definitions, thresholds, scoring frameworks, taxonomy mappings, and evidence standards.</p>
+                <div class="card-path">config/*.json, config/dish_taxonomy.csv, DOCUMENTATION/SHARED/*</div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">✓</span>
+                        <span class="stat-label">Refreshable</span>
+                    </div>
+                </div>
+                <div class="card-uses">
+                    <div class="uses-title">Used For</div>
+                    <div class="uses-list">
+                        <span class="use-tag">MVP thresholds</span>
+                        <span class="use-tag">Scoring weights</span>
+                        <span class="use-tag">Dish taxonomy</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2: Supply / Ground Truth -->
+            <div class="data-card quant" data-nature="quant" data-source="internal">
+                <div class="card-header">
+                    <h3 class="card-title">Supply / Ground Truth (Anna)</h3>
+                    <div class="card-badges">
+                        <span class="badge quant">Quant</span>
+                        <span class="badge internal">Internal</span>
+                    </div>
+                </div>
+                <p class="card-description">What we have: dishes, partners, zone coverage. The definitive source for supply-side metrics.</p>
+                <div class="card-path">DATA/1_SOURCE/anna_slides/*.csv → DATA/3_ANALYSIS/anna_*.csv</div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">26</span>
+                        <span class="stat-label">Files</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">14</span>
+                        <span class="stat-label">CSVs</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">Semi</span>
+                        <span class="stat-label">Refreshable</span>
+                    </div>
+                </div>
+                <div class="card-uses">
+                    <div class="uses-title">Used For</div>
+                    <div class="uses-list">
+                        <span class="use-tag">Zone coverage</span>
+                        <span class="use-tag">Partner counts</span>
+                        <span class="use-tag">Dish availability</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3: Behavioral Performance -->
+            <div class="data-card quant" data-nature="quant" data-source="internal">
+                <div class="card-header">
+                    <h3 class="card-title">Behavioral Performance (Snowflake)</h3>
+                    <div class="card-badges">
+                        <span class="badge quant">Quant</span>
+                        <span class="badge internal">Internal</span>
+                    </div>
+                </div>
+                <p class="card-description">Revealed preference: demand, repeat rates, volume, occasion filters. The truth of what customers actually do.</p>
+                <div class="card-path">DATA/1_SOURCE/snowflake/FULL_ORDER_HISTORY.csv</div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">805,804</span>
+                        <span class="stat-label">Orders</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">✓</span>
+                        <span class="stat-label">Refreshable</span>
+                    </div>
+                </div>
+                <div class="card-uses">
+                    <div class="uses-title">Used For</div>
+                    <div class="uses-list">
+                        <span class="use-tag">Repeat rate</span>
+                        <span class="use-tag">Order volume</span>
+                        <span class="use-tag">Benchmarking</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4: Quality / Feedback -->
+            <div class="data-card mixed" data-nature="mixed" data-source="internal">
+                <div class="card-header">
+                    <h3 class="card-title">Quality / Feedback at Scale</h3>
+                    <div class="card-badges">
+                        <span class="badge mixed">Mixed</span>
+                        <span class="badge internal">Internal</span>
+                    </div>
+                </div>
+                <p class="card-description">Ratings KPIs + open-text evidence (sentiment, pain points, dish mentions). Quantitative scores with qualitative context.</p>
+                <div class="card-path">DATA/1_SOURCE/snowflake/DINNEROO_RATINGS.csv</div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">10,713</span>
+                        <span class="stat-label">Ratings</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">✓</span>
+                        <span class="stat-label">Refreshable</span>
+                    </div>
+                </div>
+                <div class="card-uses">
+                    <div class="uses-title">Used For</div>
+                    <div class="uses-list">
+                        <span class="use-tag">Rating KPIs</span>
+                        <span class="use-tag">Sentiment</span>
+                        <span class="use-tag">Pain points</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5: Menu Catalog -->
+            <div class="data-card quant" data-nature="quant" data-source="internal">
+                <div class="card-header">
+                    <h3 class="card-title">Menu Catalog (Availability Truth)</h3>
+                    <div class="card-badges">
+                        <span class="badge quant">Quant</span>
+                        <span class="badge internal">Internal</span>
+                    </div>
+                </div>
+                <p class="card-description">Check if a dish/cuisine is actually on Dinneroo. Prevents "partner serves it elsewhere" mistakes.</p>
+                <div class="card-path">DATA/1_SOURCE/snowflake/DINNEROO_MENU_CATALOG.csv</div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">65,312</span>
+                        <span class="stat-label">Menu Items</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">✓</span>
+                        <span class="stat-label">Refreshable</span>
+                    </div>
+                </div>
+                <div class="card-uses">
+                    <div class="uses-title">Used For</div>
+                    <div class="uses-list">
+                        <span class="use-tag">Dish verification</span>
+                        <span class="use-tag">Gap analysis</span>
+                        <span class="use-tag">Availability checks</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6: Post-order Survey -->
+            <div class="data-card mixed" data-nature="mixed" data-source="research">
+                <div class="card-header">
+                    <h3 class="card-title">Post-order Survey</h3>
+                    <div class="card-badges">
+                        <span class="badge mixed">Mixed</span>
+                        <span class="badge research">Research</span>
+                    </div>
+                </div>
+                <p class="card-description">Satisfaction, "kids happy", reorder intent. Open-text for improvements and latent demand discovery.</p>
+                <div class="card-path">DATA/1_SOURCE/surveys/POST_ORDER_SURVEY-CONSOLIDATED.csv</div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">n=1,599</span>
+                        <span class="stat-label">Responses</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">✗</span>
+                        <span class="stat-label">Refreshable</span>
+                    </div>
+                </div>
+                <div class="card-uses">
+                    <div class="uses-title">Used For</div>
+                    <div class="uses-list">
+                        <span class="use-tag">Satisfaction</span>
+                        <span class="use-tag">Reorder intent</span>
+                        <span class="use-tag">Latent demand</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 7: Dropoff Survey -->
+            <div class="data-card mixed" data-nature="mixed" data-source="research">
+                <div class="card-header">
+                    <h3 class="card-title">Dropoff Survey</h3>
+                    <div class="card-badges">
+                        <span class="badge mixed">Mixed</span>
+                        <span class="badge research">Research</span>
+                    </div>
+                </div>
+                <p class="card-description">Barriers to conversion, unmet demand, missing options. Open-text "what do you want?" insights.</p>
+                <div class="card-path">DATA/1_SOURCE/surveys/dropoff_LATEST.csv</div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">n=838</span>
+                        <span class="stat-label">Responses</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">✗</span>
+                        <span class="stat-label">Refreshable</span>
+                    </div>
+                </div>
+                <div class="card-uses">
+                    <div class="uses-title">Used For</div>
+                    <div class="uses-list">
+                        <span class="use-tag">Barriers</span>
+                        <span class="use-tag">Unmet demand</span>
+                        <span class="use-tag">Missing options</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 8: OG Survey -->
+            <div class="data-card mixed" data-nature="mixed" data-source="research">
+                <div class="card-header">
+                    <h3 class="card-title">OG Pre-launch Survey ⚠️</h3>
+                    <div class="card-badges">
+                        <span class="badge mixed">Mixed</span>
+                        <span class="badge research">Research</span>
+                    </div>
+                </div>
+                <p class="card-description">Demographics/context + hypotheses only. <strong>Must be triangulated</strong> — never use alone for recommendations.</p>
+                <div class="card-path">DATA/1_SOURCE/historical_surveys/og_survey/*</div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">~n=400</span>
+                        <span class="stat-label">Responses</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">✗</span>
+                        <span class="stat-label">Refreshable</span>
+                    </div>
+                </div>
+                <div class="card-uses">
+                    <div class="uses-title">Used For</div>
+                    <div class="uses-list">
+                        <span class="use-tag">Context only</span>
+                        <span class="use-tag">Hypotheses</span>
+                        <span class="use-tag">Demographics</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 9: Qual Transcripts -->
+            <div class="data-card qual" data-nature="qual" data-source="research">
+                <div class="card-header">
+                    <h3 class="card-title">Customer Interview Transcripts</h3>
+                    <div class="card-badges">
+                        <span class="badge qual">Qual</span>
+                        <span class="badge research">Research</span>
+                    </div>
+                </div>
+                <p class="card-description">"Why" context: unprompted dish/cuisine mentions. High value for discovery and understanding motivations.</p>
+                <div class="card-path">DATA/1_SOURCE/qual_research/transcripts/customer_interviews/*.docx</div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">n=88</span>
+                        <span class="stat-label">Transcripts</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">✗</span>
+                        <span class="stat-label">Refreshable</span>
+                    </div>
+                </div>
+                <div class="card-uses">
+                    <div class="uses-title">Used For</div>
+                    <div class="uses-list">
+                        <span class="use-tag">Discovery</span>
+                        <span class="use-tag">Motivations</span>
+                        <span class="use-tag">Unprompted mentions</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 10: Qual Synth -->
+            <div class="data-card qual" data-nature="qual" data-source="research">
+                <div class="card-header">
+                    <h3 class="card-title">Qual Synth / Ops Notes</h3>
+                    <div class="card-badges">
+                        <span class="badge qual">Qual</span>
+                        <span class="badge research">Research</span>
+                    </div>
+                </div>
+                <p class="card-description">Constraints, operational feasibility, context for interpreting metrics. WBRs, Pascal reports, external reports.</p>
+                <div class="card-path">DATA/1_SOURCE/qual_research/*, DATA/1_SOURCE/external/*</div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">89+</span>
+                        <span class="stat-label">Files</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">✗</span>
+                        <span class="stat-label">Refreshable</span>
+                    </div>
+                </div>
+                <div class="card-uses">
+                    <div class="uses-title">Used For</div>
+                    <div class="uses-list">
+                        <span class="use-tag">Constraints</span>
+                        <span class="use-tag">Feasibility</span>
+                        <span class="use-tag">Context</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 11: LLM-derived -->
+            <div class="data-card derived" data-nature="derived" data-source="llm">
+                <div class="card-header">
+                    <h3 class="card-title">LLM-Derived Extraction</h3>
+                    <div class="card-badges">
+                        <span class="badge derived">Derived</span>
+                        <span class="badge llm">LLM</span>
+                    </div>
+                </div>
+                <p class="card-description">Turns qual/open-text into structured mentions + audit trail. Assistive structure, not ground truth.</p>
+                <div class="card-path">DATA/3_ANALYSIS/transcript_mentions.json, llm_extraction_log.json</div>
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">88</span>
+                        <span class="stat-label">Processed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">✓</span>
+                        <span class="stat-label">Re-runnable</span>
+                    </div>
+                </div>
+                <div class="card-uses">
+                    <div class="uses-title">Used For</div>
+                    <div class="uses-list">
+                        <span class="use-tag">Latent demand</span>
+                        <span class="use-tag">Mention counts</span>
+                        <span class="use-tag">Structured extraction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Data Flow Section -->
+        <div class="flow-section">
+            <h2 class="flow-title">How Data Flows Through the System</h2>
+            <div class="flow-diagram">
+                <div class="flow-stage">
+                    <div class="stage-header">📥 Sources</div>
+                    <div class="stage-items">
+                        <div class="stage-item internal">Anna supply data (Internal)</div>
+                        <div class="stage-item internal">Snowflake orders (Internal)</div>
+                        <div class="stage-item research">Surveys (Research)</div>
+                        <div class="stage-item research">Transcripts (Research)</div>
+                    </div>
+                </div>
+                <div class="flow-stage">
+                    <div class="stage-header">🔄 Processing</div>
+                    <div class="stage-items">
+                        <div class="stage-item internal">Enrichment & cleaning</div>
+                        <div class="stage-item llm">LLM extraction (Gemini)</div>
+                        <div class="stage-item internal">Validation scripts</div>
+                    </div>
+                </div>
+                <div class="flow-stage">
+                    <div class="stage-header">📊 Analysis</div>
+                    <div class="stage-items">
+                        <div class="stage-item internal">Zone MVP status</div>
+                        <div class="stage-item internal">Dish prioritization</div>
+                        <div class="stage-item internal">Gap analysis</div>
+                        <div class="stage-item llm">Latent demand scores</div>
+                    </div>
+                </div>
+                <div class="flow-stage">
+                    <div class="stage-header">📈 Outputs</div>
+                    <div class="stage-items">
+                        <div class="stage-item output">Master dashboard</div>
+                        <div class="stage-item output">Reports & tables</div>
+                        <div class="stage-item output">Slide-ready data</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Summary Stats -->
+        <div class="summary-section">
+            <div class="summary-card">
+                <div class="summary-value quant">4</div>
+                <div class="summary-label">Pure Quant Sources</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value qual">2</div>
+                <div class="summary-label">Pure Qual Sources</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value mixed">4</div>
+                <div class="summary-label">Mixed Sources</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value internal">5</div>
+                <div class="summary-label">Internal Sources</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value research">5</div>
+                <div class="summary-label">Research Sources</div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-value llm">1</div>
+                <div class="summary-label">LLM-Derived</div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Dinneroo Data Types Map • Generated from DATA_TYPES_MAP.md • Last updated: Jan 2026</p>
+            <p style="margin-top: 8px; font-size: 0.75rem;">Supply ≠ Performance • Open-text is Mixed • LLM outputs are derived (assistive, not ground truth)</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const dataCards = document.querySelectorAll('.data-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                dataCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.classList.remove('hidden');
+                    } else if (filter === 'quant') {
+                        card.classList.toggle('hidden', card.dataset.nature !== 'quant');
+                    } else if (filter === 'qual') {
+                        card.classList.toggle('hidden', card.dataset.nature !== 'qual');
+                    } else if (filter === 'mixed') {
+                        card.classList.toggle('hidden', card.dataset.nature !== 'mixed');
+                    } else if (filter === 'internal') {
+                        card.classList.toggle('hidden', card.dataset.source !== 'internal');
+                    } else if (filter === 'research') {
+                        card.classList.toggle('hidden', card.dataset.source !== 'research');
+                    } else if (filter === 'llm') {
+                        card.classList.toggle('hidden', card.dataset.source !== 'llm');
+                    }
+                });
+                
+                // Re-trigger animation for visible cards
+                let delay = 0;
+                dataCards.forEach(card => {
+                    if (!card.classList.contains('hidden')) {
+                        card.style.animation = 'none';
+                        card.offsetHeight; // Trigger reflow
+                        card.style.animation = `fadeInUp 0.5s ease forwards ${delay}s`;
+                        delay += 0.05;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

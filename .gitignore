@@ -15,5 +15,9 @@ env/
 # Temporary files
 *.tmp
 *.bak
+*.orig
+*_backup.*
+*.backup
 
-
+# Archive folder (deprecated files)
+ARCHIVE/

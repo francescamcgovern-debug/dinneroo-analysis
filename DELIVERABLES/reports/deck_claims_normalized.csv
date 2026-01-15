@@ -1,0 +1,220 @@
+claim_id,slide_index,area,claim_type,metric,value,unit,entity,text,needs_visual_review,confidence
+s03_percent_1,3,B_SCORING,percent,percent_claim,50.0,%,,50%,True,low
+s05_percent_1,5,B_SCORING,percent,percent_claim,25.0,%,,25%,True,low
+s05_percent_2,5,B_SCORING,percent,percent_claim,17.0,%,,17%,True,low
+s05_percent_3,5,B_SCORING,percent,percent_claim,15.0,%,,15%,True,low
+s05_percent_4,5,B_SCORING,percent,percent_claim,99.0,%,,99%,True,low
+s05_percent_5,5,B_SCORING,percent,percent_claim,21.0,%,,21%,True,low
+s05_percent_6,5,B_SCORING,percent,percent_claim,21.0,%,,21%,True,low
+s05_percent_7,5,B_SCORING,percent,percent_claim,16.0,%,,16%,True,low
+s05_percent_8,5,B_SCORING,percent,percent_claim,11.0,%,,11%,True,low
+s05_percent_9,5,B_SCORING,percent,percent_claim,31.0,%,,31%,True,low
+s05_percent_10,5,B_SCORING,percent,percent_claim,31.0,%,,31%,True,low
+s05_percent_11,5,B_SCORING,percent,percent_claim,19.0,%,,19%,True,low
+s05_percent_12,5,B_SCORING,percent,percent_claim,19.0,%,,19%,True,low
+s05_percent_13,5,B_SCORING,percent,percent_claim,11.0,%,,11%,True,low
+s05_percent_14,5,B_SCORING,percent,percent_claim,44.0,%,,44%,True,low
+s05_percent_15,5,B_SCORING,percent,percent_claim,20.0,%,,20%,True,low
+s05_percent_16,5,B_SCORING,percent,percent_claim,11.0,%,,11%,True,low
+s05_percent_17,5,B_SCORING,percent,percent_claim,10.0,%,,10%,True,low
+s05_percent_18,5,B_SCORING,percent,percent_claim,28.0,%,,28%,True,low
+s05_percent_19,5,B_SCORING,percent,percent_claim,16.0,%,,16%,True,low
+s05_percent_20,5,B_SCORING,percent,percent_claim,15.0,%,,15%,True,low
+s07_threshold_1,7,A_MVP,threshold,partners_min,5.0,+,,5+ px,False,high
+s07_threshold_2,7,A_MVP,threshold,cuisines_min,4.0,+,,4+ cuisines,False,high
+s07_threshold_3,7,A_MVP,threshold,dishes_min,10.0,+,,10+ dishes,False,high
+s07_percent_4,7,A_MVP,percent,percent_claim,100.0,%,,100%,False,low
+s07_percent_5,7,A_MVP,percent,percent_claim,75.0,%,,75%,False,low
+s07_percent_6,7,A_MVP,percent,percent_claim,50.0,%,,50%,False,low
+s07_definition_zone_mvp,7,A_MVP,definition,zone_mvp_definition,,,zone,Deck defines zone MVP in terms of partners/cuisines/dishes thresholds.,False,high
+s07_dish_group_core_drivers_dishes,7,B_SCORING,classification,dish_group_core_drivers.dishes,,,dish_type,"Noodles, Indian curry",False,medium
+s07_dish_group_core_drivers_coverage_target,7,B_SCORING,threshold,dish_group_core_drivers.coverage_target_percent,100.0,%,coverage,Core Drivers coverage target,False,high
+s07_dish_group_demand_boosters_dishes,7,B_SCORING,classification,dish_group_demand_boosters.dishes,,,dish_type,"Katsu, Sushi, Pho, Biryani, Pizza, Pasta, Lasagne, Protein & Veg",False,medium
+s07_dish_group_demand_boosters_coverage_target,7,B_SCORING,threshold,dish_group_demand_boosters.coverage_target_percent,75.0,%,coverage,Demand Boosters coverage target,False,high
+s07_dish_group_preference_drivers_dishes,7,B_SCORING,classification,dish_group_preference_drivers.dishes,,,dish_type,"Shepherd's Pie, Grain Bowl, Fajitas, Quesadillas, Shawarma, Rice Bowl, Fried Rice, East Asian Curry",False,medium
+s07_dish_group_preference_drivers_coverage_target,7,B_SCORING,threshold,dish_group_preference_drivers.coverage_target_percent,50.0,%,coverage,Preference Drivers coverage target,False,high
+s09_threshold_1,9,A_MVP,threshold,partners_min,5.0,+,,5+ px,False,high
+s09_threshold_2,9,A_MVP,threshold,cuisines_min,4.0,+,,4+ cuisines,False,high
+s09_threshold_3,9,A_MVP,threshold,dishes_min,10.0,+,,10+ dishes,False,high
+s09_percent_4,9,A_MVP,percent,percent_claim,41.0,%,,41%,False,low
+s09_percent_5,9,A_MVP,percent,percent_claim,70.0,%,,70%,False,low
+s09_percent_6,9,A_MVP,percent,percent_claim,54.0,%,,54%,False,low
+s09_percent_7,9,A_MVP,percent,percent_claim,54.0,%,,54%,False,low
+s09_percent_8,9,A_MVP,percent,percent_claim,41.0,%,,41%,False,low
+s09_coverage_partners_pct,9,A_MVP,percent,coverage_percent_partners_threshold,70.0,%,zone,Deck: % of active zones meeting partners threshold,False,medium
+s09_coverage_cuisines_pct,9,A_MVP,percent,coverage_percent_cuisines_threshold,54.0,%,zone,Deck: % of active zones meeting cuisines threshold,False,medium
+s09_coverage_dishes_pct,9,A_MVP,percent,coverage_percent_dishes_threshold,54.0,%,zone,Deck: % of active zones meeting dishes threshold,False,medium
+s09_coverage_all3_pct,9,A_MVP,percent,coverage_percent_all3_thresholds,41.0,%,zone,Deck: % of active zones meeting all 3 thresholds,False,medium
+s09_proposal_zone_mvp,9,A_MVP,definition,zone_mvp_proposed_thresholds,,,zone,Deck proposes zone MVP thresholds (partners/cuisines/dishes).,False,high
+s10_percent_1,10,A_MVP,percent,percent_claim,100.0,%,,100%,False,low
+s10_percent_2,10,A_MVP,percent,percent_claim,75.0,%,,75%,False,low
+s10_percent_3,10,A_MVP,percent,percent_claim,50.0,%,,50%,False,low
+s10_percent_4,10,A_MVP,percent,percent_claim,0.0,%,,0%,False,low
+s10_percent_5,10,A_MVP,percent,percent_claim,0.0,%,,0%,False,low
+s10_dish_group_core_drivers_dishes,10,B_SCORING,classification,dish_group_core_drivers.dishes,,,dish_type,"Noodles, Indian curry",False,medium
+s10_dish_group_core_drivers_coverage_target,10,B_SCORING,threshold,dish_group_core_drivers.coverage_target_percent,100.0,%,coverage,Noodles group coverage target,False,high
+s10_dish_group_demand_boosters_dishes,10,B_SCORING,classification,dish_group_demand_boosters.dishes,,,dish_type,"Katsu, Sushi, Pho, Biryani, Pizza, Pasta, Lasagne, Protein & Veg",False,medium
+s10_dish_group_demand_boosters_coverage_target,10,B_SCORING,threshold,dish_group_demand_boosters.coverage_target_percent,75.0,%,coverage,Katsu group coverage target,False,high
+s10_dish_group_preference_drivers_dishes,10,B_SCORING,classification,dish_group_preference_drivers.dishes,,,dish_type,"Shepherd's Pie, Grain Bowl, Rice Bowl, Fried Rice, East Asian Curry, Fajitas, Quesadillas, Shawarma",False,medium
+s10_dish_group_preference_drivers_coverage_target,10,B_SCORING,threshold,dish_group_preference_drivers.coverage_target_percent,50.0,%,coverage,Shepherd group coverage target,False,high
+s10_dish_group_test_and_learn_dishes,10,B_SCORING,classification,dish_group_test_and_learn.dishes,,,dish_type,"Pastry Pie, Fish & Chips, Roast, Casserole, Mezze",False,medium
+s10_dish_group_test_and_learn_coverage_target,10,B_SCORING,threshold,dish_group_test_and_learn.coverage_target_percent,0.0,%,coverage,Pastry Pie group coverage target,False,high
+s10_dish_group_deprioritised_dishes,10,B_SCORING,classification,dish_group_deprioritised.dishes,,,dish_type,"Poke, Chilli, Tacos, Burritos, Nachos",False,medium
+s11_definition_scoring_inputs,11,B_SCORING,definition,scoring_inputs_list,,,dish,"Deck lists demand indicators (avg sales per dish, % zones top3, open-text requests) and preference indicators (rating, meal satisfaction, repeat intent, family suitability).",False,high
+s12_percent_1,12,B_SCORING,percent,percent_claim,45.0,%,,45%,False,low
+s12_percent_2,12,B_SCORING,percent,percent_claim,93.0,%,,93%,False,low
+s12_percent_3,12,B_SCORING,percent,percent_claim,85.0,%,,85%,False,low
+s12_percent_4,12,B_SCORING,percent,percent_claim,16.0,%,,16%,False,low
+s12_percent_5,12,B_SCORING,percent,percent_claim,88.0,%,,88%,False,low
+s12_percent_6,12,B_SCORING,percent,percent_claim,88.0,%,,88%,False,low
+s12_percent_7,12,B_SCORING,percent,percent_claim,86.0,%,,86%,False,low
+s12_percent_8,12,B_SCORING,percent,percent_claim,92.0,%,,92%,False,low
+s12_percent_9,12,B_SCORING,percent,percent_claim,89.0,%,,89%,False,low
+s12_percent_10,12,B_SCORING,percent,percent_claim,33.0,%,,33%,False,low
+s12_percent_11,12,B_SCORING,percent,percent_claim,81.0,%,,81%,False,low
+s12_percent_12,12,B_SCORING,percent,percent_claim,75.0,%,,75%,False,low
+s12_percent_13,12,B_SCORING,percent,percent_claim,14.0,%,,14%,False,low
+s12_percent_14,12,B_SCORING,percent,percent_claim,78.0,%,,78%,False,low
+s12_percent_15,12,B_SCORING,percent,percent_claim,74.0,%,,74%,False,low
+s12_percent_16,12,B_SCORING,percent,percent_claim,38.0,%,,38%,False,low
+s12_percent_17,12,B_SCORING,percent,percent_claim,91.0,%,,91%,False,low
+s12_percent_18,12,B_SCORING,percent,percent_claim,83.0,%,,83%,False,low
+s12_percent_19,12,B_SCORING,percent,percent_claim,33.0,%,,33%,False,low
+s12_percent_20,12,B_SCORING,percent,percent_claim,87.0,%,,87%,False,low
+s12_percent_21,12,B_SCORING,percent,percent_claim,85.0,%,,85%,False,low
+s12_percent_22,12,B_SCORING,percent,percent_claim,42.0,%,,42%,False,low
+s12_percent_23,12,B_SCORING,percent,percent_claim,93.0,%,,93%,False,low
+s12_percent_24,12,B_SCORING,percent,percent_claim,81.0,%,,81%,False,low
+s12_percent_25,12,B_SCORING,percent,percent_claim,38.0,%,,38%,False,low
+s12_percent_26,12,B_SCORING,percent,percent_claim,71.0,%,,71%,False,low
+s12_percent_27,12,B_SCORING,percent,percent_claim,19.0,%,,19%,False,low
+s12_percent_28,12,B_SCORING,percent,percent_claim,77.0,%,,77%,False,low
+s12_percent_29,12,B_SCORING,percent,percent_claim,75.0,%,,75%,False,low
+s12_methodology_indexing,12,B_SCORING,methodology,scoring_method_index_to_1_mean,,,,Demand strength calculated by indexing metrics to avg=1 and taking mean; same for Cx preference (deck footnote).,False,medium
+s13_percent_1,13,B_SCORING,percent,percent_claim,24.0,%,,24%,False,low
+s13_percent_2,13,B_SCORING,percent,percent_claim,84.0,%,,84%,False,low
+s13_percent_3,13,B_SCORING,percent,percent_claim,77.0,%,,77%,False,low
+s13_percent_4,13,B_SCORING,percent,percent_claim,9.0,%,,9%,False,low
+s13_percent_5,13,B_SCORING,percent,percent_claim,79.0,%,,79%,False,low
+s13_percent_6,13,B_SCORING,percent,percent_claim,81.0,%,,81%,False,low
+s13_percent_7,13,B_SCORING,percent,percent_claim,20.0,%,,20%,False,low
+s13_percent_8,13,B_SCORING,percent,percent_claim,87.0,%,,87%,False,low
+s13_percent_9,13,B_SCORING,percent,percent_claim,84.0,%,,84%,False,low
+s13_percent_10,13,B_SCORING,percent,percent_claim,8.0,%,,8%,False,low
+s13_percent_11,13,B_SCORING,percent,percent_claim,91.0,%,,91%,False,low
+s13_percent_12,13,B_SCORING,percent,percent_claim,100.0,%,,100%,False,low
+s13_percent_13,13,B_SCORING,percent,percent_claim,11.0,%,,11%,False,low
+s13_percent_14,13,B_SCORING,percent,percent_claim,86.0,%,,86%,False,low
+s13_percent_15,13,B_SCORING,percent,percent_claim,90.0,%,,90%,False,low
+s13_percent_16,13,B_SCORING,percent,percent_claim,5.0,%,,5%,False,low
+s13_percent_17,13,B_SCORING,percent,percent_claim,90.0,%,,90%,False,low
+s13_percent_18,13,B_SCORING,percent,percent_claim,86.0,%,,86%,False,low
+s13_percent_19,13,B_SCORING,percent,percent_claim,5.0,%,,5%,False,low
+s13_percent_20,13,B_SCORING,percent,percent_claim,96.0,%,,96%,False,low
+s13_percent_21,13,B_SCORING,percent,percent_claim,100.0,%,,100%,False,low
+s13_percent_22,13,B_SCORING,percent,percent_claim,0.0,%,,0%,False,low
+s13_percent_23,13,B_SCORING,percent,percent_claim,3.0,%,,3%,False,low
+s13_percent_24,13,B_SCORING,percent,percent_claim,9.0,%,,9%,False,low
+s13_percent_25,13,B_SCORING,percent,percent_claim,0.0,%,,0%,False,low
+s13_percent_26,13,B_SCORING,percent,percent_claim,0.0,%,,0%,False,low
+s13_percent_27,13,B_SCORING,percent,percent_claim,0.0,%,,0%,False,low
+s13_percent_28,13,B_SCORING,percent,percent_claim,20.0,%,,20%,False,low
+s13_percent_29,13,B_SCORING,percent,percent_claim,86.0,%,,86%,False,low
+s13_percent_30,13,B_SCORING,percent,percent_claim,85.0,%,,85%,False,low
+s15_threshold_1,15,A_MVP,threshold,dishes_min,9.0,+,,9+ dishes,True,high
+s15_percent_2,15,B_SCORING,percent,percent_claim,97.0,%,,97%,True,low
+s15_percent_3,15,B_SCORING,percent,percent_claim,75.0,%,,75%,True,low
+s17_percent_1,17,B_SCORING,percent,percent_claim,50.0,%,,50%,True,low
+s20_percent_1,20,B_SCORING,percent,percent_claim,91.0,%,,91%,False,low
+s20_percent_2,20,B_SCORING,percent,percent_claim,89.0,%,,89%,False,low
+s20_percent_3,20,B_SCORING,percent,percent_claim,52.0,%,,52%,False,low
+s20_percent_4,20,B_SCORING,percent,percent_claim,43.0,%,,43%,False,low
+s20_percent_5,20,B_SCORING,percent,percent_claim,42.0,%,,42%,False,low
+s20_percent_6,20,B_SCORING,percent,percent_claim,41.0,%,,41%,False,low
+s20_percent_7,20,B_SCORING,percent,percent_claim,37.0,%,,37%,False,low
+s20_percent_8,20,B_SCORING,percent,percent_claim,32.0,%,,32%,False,low
+s20_percent_9,20,B_SCORING,percent,percent_claim,32.0,%,,32%,False,low
+s20_percent_10,20,B_SCORING,percent,percent_claim,25.0,%,,25%,False,low
+s20_percent_11,20,B_SCORING,percent,percent_claim,23.0,%,,23%,False,low
+s20_percent_12,20,B_SCORING,percent,percent_claim,18.0,%,,18%,False,low
+s20_percent_13,20,B_SCORING,percent,percent_claim,17.0,%,,17%,False,low
+s20_percent_14,20,B_SCORING,percent,percent_claim,15.0,%,,15%,False,low
+s20_percent_15,20,B_SCORING,percent,percent_claim,14.0,%,,14%,False,low
+s20_percent_16,20,B_SCORING,percent,percent_claim,12.0,%,,12%,False,low
+s20_percent_17,20,B_SCORING,percent,percent_claim,9.0,%,,9%,False,low
+s20_percent_18,20,B_SCORING,percent,percent_claim,8.0,%,,8%,False,low
+s20_percent_19,20,B_SCORING,percent,percent_claim,8.0,%,,8%,False,low
+s20_percent_20,20,B_SCORING,percent,percent_claim,7.0,%,,7%,False,low
+s20_percent_21,20,B_SCORING,percent,percent_claim,7.0,%,,7%,False,low
+s20_percent_22,20,B_SCORING,percent,percent_claim,6.0,%,,6%,False,low
+s21_percent_1,21,B_SCORING,percent,percent_claim,25.0,%,,25%,True,low
+s21_percent_2,21,B_SCORING,percent,percent_claim,17.0,%,,17%,True,low
+s21_percent_3,21,B_SCORING,percent,percent_claim,15.0,%,,15%,True,low
+s21_percent_4,21,B_SCORING,percent,percent_claim,99.0,%,,99%,True,low
+s21_percent_5,21,B_SCORING,percent,percent_claim,21.0,%,,21%,True,low
+s21_percent_6,21,B_SCORING,percent,percent_claim,21.0,%,,21%,True,low
+s21_percent_7,21,B_SCORING,percent,percent_claim,16.0,%,,16%,True,low
+s21_percent_8,21,B_SCORING,percent,percent_claim,11.0,%,,11%,True,low
+s21_percent_9,21,B_SCORING,percent,percent_claim,31.0,%,,31%,True,low
+s21_percent_10,21,B_SCORING,percent,percent_claim,31.0,%,,31%,True,low
+s21_percent_11,21,B_SCORING,percent,percent_claim,19.0,%,,19%,True,low
+s21_percent_12,21,B_SCORING,percent,percent_claim,19.0,%,,19%,True,low
+s21_percent_13,21,B_SCORING,percent,percent_claim,11.0,%,,11%,True,low
+s21_percent_14,21,B_SCORING,percent,percent_claim,44.0,%,,44%,True,low
+s21_percent_15,21,B_SCORING,percent,percent_claim,20.0,%,,20%,True,low
+s21_percent_16,21,B_SCORING,percent,percent_claim,11.0,%,,11%,True,low
+s21_percent_17,21,B_SCORING,percent,percent_claim,10.0,%,,10%,True,low
+s21_percent_18,21,B_SCORING,percent,percent_claim,28.0,%,,28%,True,low
+s21_percent_19,21,B_SCORING,percent,percent_claim,16.0,%,,16%,True,low
+s21_percent_20,21,B_SCORING,percent,percent_claim,15.0,%,,15%,True,low
+s22_percent_1,22,B_SCORING,percent,percent_claim,74.0,%,,74%,False,low
+s22_percent_2,22,B_SCORING,percent,percent_claim,25.0,%,,25%,False,low
+s22_percent_3,22,B_SCORING,percent,percent_claim,17.0,%,,17%,False,low
+s22_percent_4,22,B_SCORING,percent,percent_claim,15.0,%,,15%,False,low
+s22_percent_5,22,B_SCORING,percent,percent_claim,21.0,%,,21%,False,low
+s22_percent_6,22,B_SCORING,percent,percent_claim,48.0,%,,48%,False,low
+s22_percent_7,22,B_SCORING,percent,percent_claim,4.0,%,,4%,False,low
+s22_percent_8,22,B_SCORING,percent,percent_claim,3.0,%,,3%,False,low
+s22_percent_9,22,B_SCORING,percent,percent_claim,79.0,%,,79%,False,low
+s22_percent_10,22,B_SCORING,percent,percent_claim,25.0,%,,25%,False,low
+s22_percent_11,22,B_SCORING,percent,percent_claim,17.0,%,,17%,False,low
+s22_percent_12,22,B_SCORING,percent,percent_claim,15.0,%,,15%,False,low
+s22_percent_13,22,B_SCORING,percent,percent_claim,5.0,%,,5%,False,low
+s22_percent_14,22,B_SCORING,percent,percent_claim,63.0,%,,63%,False,low
+s22_percent_15,22,B_SCORING,percent,percent_claim,93.0,%,,93%,False,low
+s22_percent_16,22,B_SCORING,percent,percent_claim,99.0,%,,99%,False,low
+s22_percent_17,22,B_SCORING,percent,percent_claim,21.0,%,,21%,False,low
+s22_percent_18,22,B_SCORING,percent,percent_claim,21.0,%,,21%,False,low
+s22_percent_19,22,B_SCORING,percent,percent_claim,16.0,%,,16%,False,low
+s22_percent_20,22,B_SCORING,percent,percent_claim,11.0,%,,11%,False,low
+s22_percent_21,22,B_SCORING,percent,percent_claim,8.0,%,,8%,False,low
+s22_percent_22,22,B_SCORING,percent,percent_claim,12.0,%,,12%,False,low
+s22_percent_23,22,B_SCORING,percent,percent_claim,42.0,%,,42%,False,low
+s22_percent_24,22,B_SCORING,percent,percent_claim,3.0,%,,3%,False,low
+s22_percent_25,22,B_SCORING,percent,percent_claim,57.0,%,,57%,False,low
+s22_percent_26,22,B_SCORING,percent,percent_claim,99.0,%,,99%,False,low
+s22_percent_27,22,B_SCORING,percent,percent_claim,21.0,%,,21%,False,low
+s22_percent_28,22,B_SCORING,percent,percent_claim,21.0,%,,21%,False,low
+s22_percent_29,22,B_SCORING,percent,percent_claim,16.0,%,,16%,False,low
+s22_percent_30,22,B_SCORING,percent,percent_claim,11.0,%,,11%,False,low
+s22_percent_31,22,B_SCORING,percent,percent_claim,76.0,%,,76%,False,low
+s22_percent_32,22,B_SCORING,percent,percent_claim,28.0,%,,28%,False,low
+s22_percent_33,22,B_SCORING,percent,percent_claim,16.0,%,,16%,False,low
+s22_percent_34,22,B_SCORING,percent,percent_claim,15.0,%,,15%,False,low
+s22_percent_35,22,B_SCORING,percent,percent_claim,57.0,%,,57%,False,low
+s22_percent_36,22,B_SCORING,percent,percent_claim,44.0,%,,44%,False,low
+s22_percent_37,22,B_SCORING,percent,percent_claim,20.0,%,,20%,False,low
+s22_percent_38,22,B_SCORING,percent,percent_claim,11.0,%,,11%,False,low
+s22_percent_39,22,B_SCORING,percent,percent_claim,10.0,%,,10%,False,low
+s22_percent_40,22,B_SCORING,percent,percent_claim,68.0,%,,68%,False,low
+s22_percent_41,22,B_SCORING,percent,percent_claim,31.0,%,,31%,False,low
+s22_percent_42,22,B_SCORING,percent,percent_claim,31.0,%,,31%,False,low
+s22_percent_43,22,B_SCORING,percent,percent_claim,19.0,%,,19%,False,low
+s22_percent_44,22,B_SCORING,percent,percent_claim,19.0,%,,19%,False,low
+s22_percent_45,22,B_SCORING,percent,percent_claim,11.0,%,,11%,False,low
+s22_percent_46,22,B_SCORING,percent,percent_claim,99.0,%,,99%,False,low
+s22_percent_47,22,B_SCORING,percent,percent_claim,31.0,%,,31%,False,low
+s22_percent_48,22,B_SCORING,percent,percent_claim,31.0,%,,31%,False,low
+s22_percent_49,22,B_SCORING,percent,percent_claim,19.0,%,,19%,False,low
+s22_percent_50,22,B_SCORING,percent,percent_claim,19.0,%,,19%,False,low
+s22_percent_51,22,B_SCORING,percent,percent_claim,11.0,%,,11%,False,low

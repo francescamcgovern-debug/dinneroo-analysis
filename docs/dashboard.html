@@ -990,7 +990,7 @@
     
     <div class="container">
         <nav>
-            <button class="nav-btn active" onclick="showSection('thresholds')">MVP Thresholds</button>
+            <button class="nav-btn active" onclick="showSection('thresholds')">Overview</button>
             <button class="nav-btn" onclick="showSection('zones')">Zones</button>
             <button class="nav-btn" onclick="showSection('dishes')">Dishes</button>
             <button class="nav-btn" onclick="showSection('gaps')">Cuisines</button>
@@ -1003,6 +1003,7 @@
             <div class="section-header">
                 <div style="text-align: center; margin-bottom: 2rem;">
                     <h2 class="section-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Dinneroo Zone Analysis</h2>
+                    <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 0.5rem;">£25 family meal bundles · Midweek dinner solution</p>
                     <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem;">82,350 orders · 201 zones · Sep-Dec 2025</p>
                     
                     <!-- HERO METRICS -->
@@ -1066,10 +1067,10 @@
             </div>
             
             <!-- Role-Based Quick Start - ADDED BY FEEDBACK FIX -->
-            <div style="margin-bottom: 1.5rem; padding: 1rem; background: var(--bg-secondary); border-radius: 0.75rem; border: 1px solid var(--border);">
-                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
-                    <span style="font-size: 1rem;">🎯</span>
-                    <span style="font-weight: 600; color: var(--text-secondary);">Quick Start by Role</span>
+            <!-- NAVIGATION HUB -->
+            <div style="margin-bottom: 1.5rem; padding: 1.25rem; background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card)); border-radius: 1rem; border: 1px solid var(--border);">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Navigate by Role</span>
                 </div>
                 <div class="step-content">
                     <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem;">
@@ -1176,6 +1177,8 @@
                         </div>
                     </div>
                 </div>
+                
+                
             </div>
             
             
@@ -1619,6 +1622,19 @@
         <section id="zones" class="section">
             <div class="section-header">
                 <div style="text-align: center; margin-bottom: 2rem;">
+                    <!-- HEADLINE -->
+                    <div style="background: linear-gradient(135deg, var(--success), var(--accent-teal)); padding: 1.5rem; border-radius: 1rem; margin-bottom: 1rem; text-align: center;">
+                        <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.8); margin-bottom: 0.25rem;">Key Insight</div>
+                        <div style="font-size: 1.75rem; font-weight: 700; color: white;">31 zones are just 1 cuisine away from MVP</div>
+                        <div style="font-size: 0.9rem; color: rgba(255,255,255,0.9); margin-top: 0.5rem;">Norwich, Guildford, York, Reading are top priorities</div>
+                    </div>
+                    
+                    <!-- CONTEXT -->
+                    <div style="background: var(--bg-secondary); padding: 0.75rem 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; border-left: 3px solid var(--accent-teal);">
+                        <strong style="color: var(--accent-teal);">This tab answers:</strong> Which zones need attention and what do they need?<br>
+                        <span style="color: var(--text-muted); font-size: 0.85rem;"><strong>MVP Ready</strong> = 5+ partners, 5+ cuisines, 4.0+ rating</span>
+                    </div>
+                    
                     <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 1rem;">Zone Health & MVP Status</h2>
                     
                     <!-- Zone Hero Stats -->
@@ -1643,6 +1659,7 @@
                     </p>
                 </div>
             </div>
+            
             
             
             <!-- Zone Progression Funnel -->
@@ -1931,19 +1948,46 @@
                     <strong>Core Drivers:</strong> 8 dish types (Pho, Indian Curry, Biryani, Fried Rice, Sushi, Katsu, Rice Bowl, Noodles).
                 </div>
             </div>
+
+                <!-- SO WHAT -->
+                <div style="margin-top: 2rem; padding: 1.25rem; background: linear-gradient(135deg, rgba(0, 212, 170, 0.05), rgba(0, 212, 170, 0.1)); border-radius: 1rem; border: 1px solid var(--accent-teal);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <strong style="color: var(--accent-teal); font-size: 1rem;">So What?</strong>
+                            <ul style="margin: 0.5rem 0 0 1rem; padding: 0; font-size: 0.9rem; color: var(--text-secondary);">
+                                <li>Target the 31 Near MVP zones for quick wins</li>
+                                <li>Focus on filling their missing cuisine (usually Indian or Healthy)</li>
+                                <li>Priority cities: Norwich, Guildford, York, Reading</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Deep Dive Data</span>
+                            <a href="data/zone_priority_queue.json" download style="display: inline-block; padding: 0.5rem 1rem; background: var(--accent-teal); color: white; text-decoration: none; border-radius: 0.5rem; font-size: 0.85rem; font-weight: 600;">📥 zone_priority_queue.json</a><br>
+                            <a href="data/zone_mvp_status.json" download style="display: inline-block; padding: 0.5rem 1rem; background: var(--bg-secondary); color: var(--text-secondary); text-decoration: none; border-radius: 0.5rem; font-size: 0.85rem; margin-top: 0.5rem;">📄 zone_mvp_status.json</a>
+                        </div>
+                    </div>
+                </div>
+
         </section>
         
         <!-- Dishes Section -->
         <section id="dishes" class="section">
             <div class="section-header">
                 <div style="text-align: center; margin-bottom: 2rem;">
+                    <!-- HEADLINE -->
+                    <div style="background: linear-gradient(135deg, var(--accent-purple), #6366f1); padding: 1.5rem; border-radius: 1rem; margin-bottom: 1rem; text-align: center;">
+                        <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.8); margin-bottom: 0.25rem;">Key Insight</div>
+                        <div style="font-size: 1.75rem; font-weight: 700; color: white;">5 dishes drive 81% of all orders</div>
+                        <div style="font-size: 0.9rem; color: rgba(255,255,255,0.9); margin-top: 0.5rem;">Katsu · Noodles · Curry · Fried Rice · Pho</div>
+                    </div>
+                    
+                    <!-- CONTEXT -->
+                    <div style="background: var(--bg-secondary); padding: 0.75rem 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; border-left: 3px solid var(--accent-purple);">
+                        <strong style="color: var(--accent-purple);">This tab answers:</strong> What dishes should we recruit? What should we promote?<br>
+                        <span style="color: var(--text-muted); font-size: 0.85rem;">Gaps in veggie options identified (87 survey mentions)</span>
+                    </div>
+                    
                     <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 0.5rem;">Dish Strategy</h2>
-                    <p style="font-size: 1.5rem; font-weight: 700; color: var(--accent-teal); margin-bottom: 0.5rem;">
-                        5 dishes = 81% of orders
-                    </p>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary);">
-                        Katsu · Noodles · Curry · Fried Rice · Pho
-                    </p>
                 </div>
             </div>
             
@@ -2338,16 +2382,45 @@
                     </table>
                 </div>
             </div>
+
+                <!-- SO WHAT -->
+                <div style="margin-top: 2rem; padding: 1.25rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(139, 92, 246, 0.1)); border-radius: 1rem; border: 1px solid var(--accent-purple);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <strong style="color: var(--accent-purple); font-size: 1rem;">So What?</strong>
+                            <ul style="margin: 0.5rem 0 0 1rem; padding: 0; font-size: 0.9rem; color: var(--text-secondary);">
+                                <li><strong>Promote:</strong> Katsu, Noodles, Curry (proven winners)</li>
+                                <li><strong>Recruit:</strong> Veggie options (87 survey mentions)</li>
+                                <li><strong>Segment:</strong> Couples want Sushi; Families want variety</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Deep Dive Data</span>
+                            <a href="dish_three_lists.json" download style="display: inline-block; padding: 0.5rem 1rem; background: var(--accent-purple); color: white; text-decoration: none; border-radius: 0.5rem; font-size: 0.85rem; font-weight: 600;">📥 dish_three_lists.json</a>
+                        </div>
+                    </div>
+                </div>
+
         </section>
         
         <!-- Cuisines Section -->
         <section id="gaps" class="section">
             <div class="section-header">
                 <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <!-- HEADLINE -->
+                    <div style="background: linear-gradient(135deg, var(--warning), #f59e0b); padding: 1.5rem; border-radius: 1rem; margin-bottom: 1rem; text-align: center;">
+                        <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.8); margin-bottom: 0.25rem;">Key Insight</div>
+                        <div style="font-size: 1.75rem; font-weight: 700; color: white;">Indian and Healthy are the biggest gaps</div>
+                        <div style="font-size: 0.9rem; color: rgba(255,255,255,0.9); margin-top: 0.5rem;">Filling these two cuisines unlocks 50+ zones</div>
+                    </div>
+                    
+                    <!-- CONTEXT -->
+                    <div style="background: var(--bg-secondary); padding: 0.75rem 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; border-left: 3px solid var(--warning);">
+                        <strong style="color: var(--warning);">This tab answers:</strong> Which cuisines are underrepresented across zones?<br>
+                        <span style="color: var(--text-muted); font-size: 0.85rem;"><strong>Core 7:</strong> Asian · Italian · Indian · Healthy · Mexican · Middle Eastern · British</span>
+                    </div>
+                    
                     <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 0.5rem;">Cuisines & Gaps</h2>
-                    <p style="font-size: 1.25rem; color: var(--accent-purple);">
-                        <strong>Core 7:</strong> Asian · Italian · Indian · Healthy · Mexican · Middle Eastern · British
-                    </p>
                 </div>
                 <p class="section-description">
                     Identify missing cuisines and prioritize partner recruitment. 
@@ -2639,6 +2712,44 @@
                     </div>
                 </div>
             </div>
+
+                <!-- SO WHAT -->
+                <div style="margin-top: 2rem; padding: 1.25rem; background: linear-gradient(135deg, rgba(251, 191, 36, 0.05), rgba(251, 191, 36, 0.1)); border-radius: 1rem; border: 1px solid var(--warning);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <strong style="color: var(--warning); font-size: 1rem;">So What?</strong>
+                            <ul style="margin: 0.5rem 0 0 1rem; padding: 0; font-size: 0.9rem; color: var(--text-secondary);">
+                                <li><strong>Priority 1:</strong> Recruit Indian cuisine partners</li>
+                                <li><strong>Priority 2:</strong> Add Healthy options</li>
+                                <li>These two fill the Core 7 gap in most Near MVP zones</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Deep Dive Data</span>
+                            <a href="data/zone_gaps.json" download style="display: inline-block; padding: 0.5rem 1rem; background: var(--warning); color: white; text-decoration: none; border-radius: 0.5rem; font-size: 0.85rem; font-weight: 600;">📥 zone_gaps.json</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SO WHAT -->
+                <div style="margin-top: 2rem; padding: 1.25rem; background: linear-gradient(135deg, rgba(251, 191, 36, 0.05), rgba(251, 191, 36, 0.1)); border-radius: 1rem; border: 1px solid var(--warning);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <strong style="color: var(--warning); font-size: 1rem;">So What?</strong>
+                            <ul style="margin: 0.5rem 0 0 1rem; padding: 0; font-size: 0.9rem; color: var(--text-secondary);">
+                                <li><strong>Priority 1:</strong> Recruit Indian cuisine partners</li>
+                                <li><strong>Priority 2:</strong> Add Healthy options</li>
+                                <li>These two fill the Core 7 gap in most Near MVP zones</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Deep Dive Data</span>
+                            <a href="data/zone_gaps.json" download style="display: inline-block; padding: 0.5rem 1rem; background: var(--warning); color: white; text-decoration: none; border-radius: 0.5rem; font-size: 0.85rem; font-weight: 600;">📥 zone_gaps.json</a>
+                        </div>
+                    </div>
+                </div>
+
         </section>
         
         <!-- Partners Section -->
@@ -2800,11 +2911,42 @@
                     </div>
                 </div>
             </div>
+                <!-- SO WHAT -->
+                <div style="margin-top: 2rem; padding: 1.25rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(16, 185, 129, 0.1)); border-radius: 1rem; border: 1px solid var(--success);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <strong style="color: var(--success); font-size: 1rem;">So What?</strong>
+                            <ul style="margin: 0.5rem 0 0 1rem; padding: 0; font-size: 0.9rem; color: var(--text-secondary);">
+                                <li><strong>Indian:</strong> Dishoom, Mowgli, local curry houses</li>
+                                <li><strong>Healthy:</strong> Leon, Crussh, Itsu</li>
+                                <li>Prioritize partners with multi-site coverage for scale</li>
+                            </ul>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Deep Dive Data</span>
+                            <a href="partner_coverage.json" download style="display: inline-block; padding: 0.5rem 1rem; background: var(--success); color: white; text-decoration: none; border-radius: 0.5rem; font-size: 0.85rem; font-weight: 600;">📥 partner_coverage.json</a>
+                        </div>
+                    </div>
+                </div>
+
         </section>
         
         <section id="methodology" class="section">
             <div class="section-header">
                 <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <!-- HEADLINE -->
+                    <div style="background: var(--bg-secondary); padding: 1.25rem; border-radius: 1rem; margin-bottom: 1rem; text-align: center; border: 1px solid var(--border);">
+                        <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.25rem;">Reference Section</div>
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--text-secondary);">How this analysis was built</div>
+                        <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Data sources, scoring weights, known limitations</div>
+                    </div>
+                    
+                    <!-- CONTEXT -->
+                    <div style="background: var(--bg-secondary); padding: 0.75rem 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; border-left: 3px solid var(--text-muted);">
+                        <strong style="color: var(--text-muted);">This tab answers:</strong> How was this analysis done? Can I trust it?<br>
+                        <span style="color: var(--text-muted); font-size: 0.85rem;">For data team, auditors, and anyone who wants to verify the methodology</span>
+                    </div>
+                    
                     <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-secondary);">📚 Reference: Methodology</h2>
                     <p style="font-size: 0.9rem; color: var(--text-muted);">
                         Data sources, sample sizes, and definitions for transparency

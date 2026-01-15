@@ -14,4 +14,13 @@ from .definitions import (
     normalize_cuisine,
 )
 
+# Gemini client for LLM-based extraction (optional import)
+try:
+    from .gemini_client import GeminiClient, DishMention, ExtractionResult
+except ImportError:
+    # google-generativeai not installed
+    GeminiClient = None
+    DishMention = None
+    ExtractionResult = None
+
 

@@ -43,6 +43,9 @@ PHASE 3: SYNTHESIS (scripts/phase3_synthesis/) → Generate reports, export
 DELIVERABLES (docs/, DELIVERABLES/)     → Dashboards and reports
 ```
 
+For a full end-to-end view (including dashboard sync rules), see:
+- `DOCUMENTATION/ARCHITECTURE_DIAGRAM.md`
+
 ---
 
 ## File Structure

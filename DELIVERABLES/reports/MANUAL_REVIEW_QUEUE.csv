@@ -1,0 +1,11 @@
+area,item_id,issue_type,severity,recommended_action,owner,notes
+dish_mapping,Grain Bowl,low_sample_size,MED,Review confidence of kids_happy metric (n=19),Francesca,Limited research data for full validation.; low kids happy 68% (n=19)
+dish_mapping,Biryani,low_sample_size,MED,Review confidence of kids_happy metric (n=12),Francesca,Limited research data for full validation.
+dish_mapping,Fried Rice,low_sample_size,MED,Review confidence of kids_happy metric (n=11),Francesca,Research directionally supports Unknown: kids full & happy 100% (n=11).  OPPORTUNITY: Exceptional ki
+dish_mapping,Protein & Veg,low_sample_size,MED,Review confidence of kids_happy metric (n=4),Francesca,Research directionally supports Demand Boosters: suitability 3.525/5. small survey sample (n=4) OPPO
+dish_mapping,Chilli,low_sample_size,MED,Review confidence of kids_happy metric (n=3),Francesca,Research supports deprioritisation. small survey sample (n=3) OPPORTUNITY: Exceptional kids happy ra
+dish_mapping,Fajitas,low_sample_size,MED,Review confidence of kids_happy metric (n=10),Francesca,Research directionally supports Preference Drivers: kids full & happy 80% (n=10).
+dish_mapping,Lasagne,low_sample_size,MED,Review confidence of kids_happy metric (n=13),Francesca,"Deprioritised but research signals positive: suitability 3.275/5, kids full & happy 85% (n=13). Cons"
+dish_mapping,Shawarma,low_sample_size,MED,Review confidence of kids_happy metric (n=9),Francesca,Limited research data for full validation.; small survey sample (n=9)
+dish_mapping,Shepherd's Pie,low_sample_size,MED,Review confidence of kids_happy metric (n=1),Francesca,Research directionally supports Preference Drivers: suitability 4.4/5. small survey sample (n=1) OPP
+dish_mapping,Sushi,low_sample_size,MED,Review confidence of kids_happy metric (n=12),Francesca,Research directionally supports Core Drivers: kids full & happy 83% (n=12).

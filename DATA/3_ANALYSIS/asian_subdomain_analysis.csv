@@ -1,0 +1,9 @@
+dish_type,sub_cuisine,current_tier,looker_demand_index,looker_preference_index,kids_full_and_happy_pct,kids_n,family_suitability,coverage_gap_pct,validation_status
+Rice Bowl,Mixed (Japanese/Korean/Chinese),Core Drivers,1.2,1.0,73.7,38.0,2.525,0.12,✓ Confirmed
+Noodles,Mixed (Thai/Chinese/Japanese),Core Drivers,1.2,1.0,74.3,35.0,2.275,0.21,⚠️ Query
+East Asian Curry,Thai/Japanese,Preference Drivers,0.9,1.0,72.9,48.0,3.6,0.03,✓ Confirmed
+Katsu,Japanese,Core Drivers,1.2,1.0,80.8,151.0,2.85,0.05,✓ Confirmed
+Fried Rice,Chinese,Unknown,1.0,1.0,100.0,11.0,2.5,0.42,💡 Opportunity
+Pho,Vietnamese,Core Drivers,4.2,1.1,88.7,62.0,2.175,0.48,⚠️ Query
+Poke,Hawaiian/Japanese,Deprioritised,0.1,,,,,0.63,✓ Confirmed
+Sushi,Japanese,Core Drivers,1.5,1.0,83.3,12.0,,0.63,✓ Confirmed

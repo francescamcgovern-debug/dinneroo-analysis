@@ -150,9 +150,27 @@ def run_full_pipeline() -> bool:
 
 
 def run_dashboards_only() -> bool:
-    """Run only the dashboard export script."""
-    script_path = SCRIPTS_DIR / 'phase3_synthesis/03_export_dashboard_data.py'
-    return run_script(script_path)
+    """
+    Update dashboard data + sync GitHub Pages outputs.
+
+    Note:
+    - Historically this pointed at `phase3_synthesis/03_export_dashboard_data.py`, which is currently a no-op.
+    - The real dashboard update flow is:
+        1) generate `docs/data/zone_analysis.json` (+ refresh `docs/data/zone_mvp_status.json`)
+        2) update embedded metrics inside the master dashboard HTML
+        3) sync `zone_data.js` + copy master dashboard → `docs/dashboard.html`
+    """
+    steps = [
+        SCRIPTS_DIR / 'generate_zone_dashboard_data.py',
+        SCRIPTS_DIR / 'update_master_dashboard.py',
+        SCRIPTS_DIR / 'sync_zone_data.py',
+    ]
+
+    success = True
+    for script_path in steps:
+        if not run_script(script_path):
+            success = False
+    return success
 
 
 def run_validation_only() -> bool:

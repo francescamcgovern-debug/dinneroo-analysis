@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-06T16:14:38.079414",
+  "generated_at": "2026-01-12T10:53:37.209186",
   "project_root": "/Users/francescamcgovern/Desktop/NEW_PROJECT",
   "sources": {
     "snowflake": {
@@ -32,7 +32,7 @@
       },
       "DINNEROO_MENU_CATALOG.csv": {
         "path": "DATA/1_SOURCE/snowflake/DINNEROO_MENU_CATALOG.csv",
-        "rows": 64379,
+        "rows": 65312,
         "columns": [
           "PARTNER_NAME",
           "PARTNER_ID",
@@ -41,12 +41,12 @@
           "MENU_ITEM"
         ],
         "column_count": 5,
-        "file_size_kb": 13073.1298828125,
+        "file_size_kb": 13261.2275390625,
         "status": "valid"
       },
       "FULL_ORDER_HISTORY.csv": {
         "path": "DATA/1_SOURCE/snowflake/FULL_ORDER_HISTORY.csv",
-        "rows": 799935,
+        "rows": 805804,
         "columns": [
           "ORDER_ID",
           "CUSTOMER_ID",
@@ -60,7 +60,7 @@
           "ZONE_NAME"
         ],
         "column_count": 10,
-        "file_size_kb": 93083.2919921875,
+        "file_size_kb": 93767.1005859375,
         "status": "valid"
       }
     },
@@ -692,12 +692,12 @@
     "total_sources": 12,
     "valid_sources": 8,
     "missing_sources": 4,
-    "total_rows": 880947,
+    "total_rows": 887749,
     "by_category": {
       "snowflake": {
         "valid": 3,
         "missing": 1,
-        "rows": 875027
+        "rows": 881829
       },
       "surveys": {
         "valid": 5,

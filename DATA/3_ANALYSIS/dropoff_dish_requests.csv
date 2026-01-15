@@ -1,0 +1,25 @@
+dish_type,dropoff_requests,dropoff_request_share,dropoff_demand_signal
+Pasta,9,0.06818181818181818,High
+Pizza,9,0.06818181818181818,High
+Noodles,8,0.06060606060606061,High
+South Asian / Indian Curry,4,0.030303030303030304,Medium
+Sushi,4,0.030303030303030304,Medium
+Katsu,3,0.022727272727272728,Medium
+Lasagne,3,0.022727272727272728,Medium
+Protein & Veg,3,0.022727272727272728,Medium
+Pho,2,0.015151515151515152,Low
+Shepherd's Pie,2,0.015151515151515152,Low
+East Asian Curry,1,0.007575757575757576,Low
+Shawarma,1,0.007575757575757576,Low
+Tacos,1,0.007575757575757576,Low
+Biryani,0,0.0,None
+Burrito / Burrito Bowl,0,0.0,None
+Chilli,0,0.0,None
+Fajitas,0,0.0,None
+Fried Rice,0,0.0,None
+Grain Bowl,0,0.0,None
+Nachos,0,0.0,None
+Other,0,0.0,None
+Poke,0,0.0,None
+Quesadilla,0,0.0,None
+Rice Bowl,0,0.0,None

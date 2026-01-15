@@ -1,0 +1,5 @@
+zone_denominator_type,denominator,partners_min,cuisines_min_core7,dishes_min,pct_partners_min,pct_cuisines_min,pct_dishes_min,pct_all3,source,notes
+total_zones,1306,5,5,21,15.8,8.6,16.3,8.3,docs/data/zone_mvp_status.json + config/mvp_thresholds.json,Computed from established per-zone fields; MVP status labels not recalculated.
+supply_zones,434,5,5,21,47.7,25.8,49.1,25.1,docs/data/zone_mvp_status.json + config/mvp_thresholds.json,Computed from established per-zone fields; MVP status labels not recalculated.
+live_zones_with_orders,201,5,5,21,64.7,34.8,63.7,34.8,docs/data/zone_mvp_status.json + config/mvp_thresholds.json,Computed from established per-zone fields; MVP status labels not recalculated.
+analysis_zones_best_effort,201,5,5,21,64.7,34.8,63.7,34.8,docs/data/zone_mvp_status.json + config/mvp_thresholds.json,Computed from established per-zone fields; MVP status labels not recalculated.
